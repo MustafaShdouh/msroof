@@ -1,0 +1,10 @@
+{
+  "inputSha256": {
+    "data\\annotations\\businesses_200.jsonl": "ce221fa6cee2e3bb1feb09edd49633e8d0e3d94313c0f0af5e3317f0dcc26b94",
+    "data\\annotations\\category_annotation_schema.json": "530a0925185d1f514ab32273bba593e53b40f1328ee56fb83268d816b99806c8",
+    "data\\annotations\\merchant_reviews.jsonl": "37f7f4598b6d560c427c32c126c3759b4f46f5f8dcf1b8b15b60dd9124d0b329",
+    "data\\sources\\businesses\\brand_families.json": "34950f9c65e4982fa0df9af3699a3f2979e8b9d07d13251d5d34efa78ac9c66a",
+    "data\\training\\splits\\category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d"
+  },
+  "scope": "Exact original inputs for the completed v1 merchant-category experiment; immutable provenance snapshot, not new training examples."
+}

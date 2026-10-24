@@ -1,0 +1,32 @@
+{
+  "arabicCanonicalNames": 8,
+  "deferredCandidates": [
+    {
+      "name": "متحف الأطفال الأردن",
+      "reason": "Official institution describes educational learning-through-play programs and recreational birthday packages. Retain service-level context; do not admit an unconditional Education/Entertainment label in this collection.",
+      "sourceUrl": "https://cmj.jo/birthdays/?lang=ar"
+    }
+  ],
+  "finalTestInferencePerformed": false,
+  "inputSha256": {
+    "data/annotations/businesses_200.jsonl": "81f0b434dc4b2549eedef5a1fc0bfec871bcd32f635ec10916a28fb3e74f8d13",
+    "data/annotations/category_annotation_schema.json": "530a0925185d1f514ab32273bba593e53b40f1328ee56fb83268d816b99806c8",
+    "data/sources/businesses/jordan_arabic_collection.json": "0b946bee2a018c62683ea4b3f93f4619f236a30aa04f0c7229de5b848239c3df",
+    "data/sources/businesses/jordan_training_extension.json": "6f8d63afef0572668cec76154e329e49aa495639793a3c88a8be7dbe19852c61",
+    "data/sources/businesses/jordan_training_round3.json": "e3220aa43f0d22daa1d5aabdaff81886ae35806a9bd83b6096598802c70fdc48",
+    "data/training/splits/category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d"
+  },
+  "leakageAuditScope": "Exact aliases/features and conservative prefixes against original200; duplicate aliases/features against all25 existing additions. Corporate ownership audit is bounded, not exhaustive.",
+  "modelsTrained": false,
+  "newBusinesses": 8,
+  "newCategoryCounts": {
+    "Education": 4,
+    "Entertainment": 1,
+    "Health": 2,
+    "Transportation": 1
+  },
+  "outputSha256": "689f859133fdc42c267e9cfa14d8edc7e7425ddbd456547aa01dde50ed07c9de",
+  "rawSmsProvenance": "See data/sources/transactions/jordan_context_evidence.json; seed originals versus Gemini descendants not identified record by record. No independent SMS admitted.",
+  "scope": "Prospective Arabic training-only metadata; not fitted, not real SMS or independent human truth.",
+  "version": "1.0.0"
+}

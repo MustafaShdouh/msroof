@@ -1,0 +1,25 @@
+{
+  "version": "merchant-name-category-1.0.0",
+  "normalizationCases": [
+    {"raw": " LC Waikiki ", "expected": "lc waikiki"},
+    {"raw": "مقهى هِيل ١٢", "expected": "مقهى هيل 12"},
+    {"raw": "H&M", "expected": "h m"},
+    {"raw": "Caffé Vergnano", "expected": "caffé vergnano"},
+    {"raw": "ＦＯＯＤ ۱۲", "expected": "food 12"},
+    {"raw": "!!!", "expected": ""}
+  ],
+  "model": {
+    "contractVersion": "merchant-name-category-1.0.0",
+    "classes": ["Food", "Shopping"],
+    "features": ["c3:^a$", "w:a"],
+    "weights": [1, -1, 2, -2],
+    "bias": [0, 0],
+    "classBusinessSupport": [3, 3],
+    "abstention": {"minScore": 0.6, "minMargin": 0.15, "minKnownFeatureFraction": 0.15, "minClassBusinesses": 3}
+  },
+  "scoreCase": {"raw": "A!", "expectedFeatures": ["c3:^a$", "w:a"], "expectedLogits": [2.1213203435596424, -2.1213203435596424], "expectedCategory": "Food"},
+  "abstentionCases": [
+    {"raw": "!!!", "reason": "no_features"},
+    {"raw": "zzzz", "reason": "insufficient_feature_evidence"}
+  ]
+}

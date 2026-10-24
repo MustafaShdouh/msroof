@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "candidateSha256": "ac4a108d72f96d3410344fe6c4b1d917bf11b86fa74a6db0d3c8a6fdf629078f",
+  "selectionMethod": "ambiguous real-business names and category boundaries; editorial selection, not model confidence",
+  "categories": [
+    "Telecom",
+    "Water and Electricity",
+    "Food",
+    "Groceries",
+    "Transportation",
+    "Subscriptions",
+    "Shopping",
+    "Health",
+    "Entertainment",
+    "Education",
+    "Travel",
+    "Cash Withdrawals",
+    "Installments",
+    "Fees",
+    "Other"
+  ],
+  "candidates": []
+}

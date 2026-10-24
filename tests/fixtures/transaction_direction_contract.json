@@ -1,0 +1,13 @@
+{
+  "contractVersion": "1.0.0",
+  "preprocessingVersion": "1.1.0",
+  "featureEncoding": "unigrams_then_adjacent_bigrams",
+  "score": "intercept + sum(weight(feature) for feature in emitted features)",
+  "activation": "sigmoid(logit)",
+  "transactionThreshold": 0.7,
+  "incomeThreshold": 0.5,
+  "labels": {
+    "transaction": ["NOT_TRANSACTION", "TRANSACTION"],
+    "direction": ["EXPENSE", "INCOME"]
+  }
+}

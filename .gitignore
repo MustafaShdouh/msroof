@@ -1,0 +1,15 @@
+# Local runtimes and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+
+# Private source messages and verified local merge backups
+/DATA_YOU_WANT/
+/data/raw/*.txt
+/.local-backups/
+
+# Local credentials
+.env
+.env.*
+!.env.example

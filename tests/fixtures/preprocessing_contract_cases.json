@@ -1,0 +1,11 @@
+[
+  {"id":"literal-routing-newline","raw":"JO\\nPurchase JOD 12.500 at CAFE","normalized":"purchase jod 12.500 at cafe","features":["purchase","jod","12.500","at","cafe","purchase jod","jod 12.500","12.500 at","at cafe"]},
+  {"id":"actual-routing-newline","raw":"JO\nYour account *1234 was credited JOD 8.000","normalized":"your account *1234 was credited jod 8.000","features":["your","account","*1234","was","credited","jod","8.000","your account","account *1234","*1234 was","was credited","credited jod","jod 8.000"]},
+  {"id":"arabic-diacritics-and-long-id","raw":"إشعار شراء بِمبلغ 123456 دِينار","normalized":"إشعار شراء بمبلغ  num_long  دينار","features":["إشعار","شراء","بمبلغ","num_long","دينار","إشعار شراء","شراء بمبلغ","بمبلغ num_long","num_long دينار"]},
+  {"id":"spaces-and-punctuation","raw":"  Payment---REF  987654321\r\nJOD 3.25  ","normalized":"payment---ref  num_long  jod 3.25","features":["payment---ref","num_long","jod","3.25","payment---ref num_long","num_long jod","jod 3.25"]},
+  {"id":"arabic-indic-decimal","raw":"تم دفع ١٢٫٥٠ JOD","normalized":"تم دفع 12.50 jod","features":["تم","دفع","12.50","jod","تم دفع","دفع 12.50","12.50 jod"]},
+  {"id":"persian-decimal","raw":"تم دفع ۱۲٫۵۰ JOD","normalized":"تم دفع 12.50 jod","features":["تم","دفع","12.50","jod","تم دفع","دفع 12.50","12.50 jod"]},
+  {"id":"arabic-reference","raw":"رقم المرجع ١٢٣٤٥٦٧","normalized":"رقم المرجع  num_long","features":["رقم","المرجع","num_long","رقم المرجع","المرجع num_long"]},
+  {"id":"ascii-number-arabic-boundary","raw":"مرجع123456","normalized":"مرجع num_long","features":["مرجع","num_long","مرجع num_long"]},
+  {"id":"grouped-jordanian-dinar","raw":"دفعة ١٬٢٣٤٫٥٠٠ دينار","normalized":"دفعة 1,234.500 دينار","features":["دفعة","1","234.500","دينار","دفعة 1","1 234.500","234.500 دينار"]}
+]

@@ -1,0 +1,57 @@
+{
+  "datasetSha256": "92cf7e92fdc9559f7a39c0123209697dc4fbe50d2803887218ae32cafdf5d9ef",
+  "entityExactSpanMetrics": {
+    "ACCT": {
+      "f1": 0.9545454545454546,
+      "falseNegatives": 1,
+      "falsePositives": 1,
+      "precision": 0.9545454545454546,
+      "recall": 0.9545454545454546,
+      "truePositives": 21
+    },
+    "AMT": {
+      "f1": 0.5128205128205129,
+      "falseNegatives": 15,
+      "falsePositives": 4,
+      "precision": 0.7142857142857143,
+      "recall": 0.4,
+      "truePositives": 10
+    },
+    "BAL": {
+      "f1": 0.43750000000000006,
+      "falseNegatives": 17,
+      "falsePositives": 1,
+      "precision": 0.875,
+      "recall": 0.2916666666666667,
+      "truePositives": 7
+    },
+    "CURR": {
+      "f1": 0.6557377049180328,
+      "falseNegatives": 5,
+      "falsePositives": 16,
+      "precision": 0.5555555555555556,
+      "recall": 0.8,
+      "truePositives": 20
+    },
+    "MERCHANT": {
+      "f1": 0.6511627906976745,
+      "falseNegatives": 11,
+      "falsePositives": 4,
+      "precision": 0.7777777777777778,
+      "recall": 0.56,
+      "truePositives": 14
+    }
+  },
+  "evaluationScope": "held-out source-category groups; coarse grouping proxy, not template isolation",
+  "exactSequenceAccuracy": 0.04,
+  "reportVersion": "1.0.0",
+  "seed": 20261024,
+  "tokenAccuracy": 0.8767334360554699,
+  "trainingExampleCount": 58,
+  "validationExampleCount": 25,
+  "validationFractionTarget": 0.2,
+  "validationSourceCategories": [
+    "EDGE_CASE_TYPOS",
+    "POSITIVE_PURCHASE"
+  ]
+}

@@ -1,0 +1,810 @@
+{
+  "businessAssignments": {
+    "business-000492753b7a4c3e": "test",
+    "business-0114743ae9f5e84f": "validation",
+    "business-043a227708cbe2ce": "train",
+    "business-086ee7dac5285d36": "train",
+    "business-08a444860a89cd3d": "validation",
+    "business-08bb42a30ca57f34": "train",
+    "business-08f701edeef895a1": "train",
+    "business-09a101f8fd8696f2": "train",
+    "business-0bdc61b372aba1c9": "train",
+    "business-0dcfafab5f8035e7": "train",
+    "business-108aa4d1b22a62ff": "train",
+    "business-11ddda72fae1fe62": "train",
+    "business-14ee6d09a6b98430": "train",
+    "business-1a637788c9e469bd": "train",
+    "business-1b4c9133da73a711": "train",
+    "business-1e60bed1be4a2604": "validation",
+    "business-1ebd4be2e41d766c": "train",
+    "business-1f9e4b3ed3829a51": "train",
+    "business-21833d95822dc1ab": "train",
+    "business-21b747de22dbb757": "train",
+    "business-259dbe8cfc8c4e77": "train",
+    "business-25fbbc50fa102d03": "test",
+    "business-26efac787b8d99d1": "train",
+    "business-282320a8fd15e556": "validation",
+    "business-2900fd16f635a703": "train",
+    "business-2ae8e3db9922e385": "train",
+    "business-2d96abc68876ce17": "train",
+    "business-301b23f91f2d5f90": "train",
+    "business-30fc311b10581d2f": "train",
+    "business-3144127596e0299d": "train",
+    "business-318e7c73bb60cb58": "validation",
+    "business-324cad6e4a8a02bf": "train",
+    "business-329f7ed703b629fc": "train",
+    "business-33c1a99510b39686": "train",
+    "business-34a15267b4026711": "test",
+    "business-35a70053deeceefd": "validation",
+    "business-383a998a7954f6dc": "train",
+    "business-39c1060c8250481c": "train",
+    "business-3a675c66be82508c": "train",
+    "business-3ad18121b865b478": "test",
+    "business-3c528d3a0450e7a4": "train",
+    "business-3d43020a3ae8b7a9": "train",
+    "business-3f2c3cafbb19eb29": "test",
+    "business-41166e5a9a66d87d": "train",
+    "business-414567029a6d74bf": "test",
+    "business-417207aade006d37": "validation",
+    "business-4222eabbc7017ffa": "test",
+    "business-42f8b4e755fbfd47": "train",
+    "business-43bf54570624d5ac": "test",
+    "business-43dbc11dd055aa71": "train",
+    "business-4557dbc7393280be": "train",
+    "business-4657adb02457f191": "train",
+    "business-47a521380f1c0dba": "train",
+    "business-47afad612b1f9cc8": "train",
+    "business-47bb9f3a84b8d01d": "train",
+    "business-47e6250760e8416a": "train",
+    "business-48d2375b66baf75a": "train",
+    "business-48ee1899cd6fe788": "test",
+    "business-497b07c882294c98": "train",
+    "business-4a9c33ca6b25fa10": "test",
+    "business-4ba8deed0050e28b": "train",
+    "business-4d4a9db74f12025e": "test",
+    "business-4de7ee7d82499823": "validation",
+    "business-4fe81d3ad746c7eb": "train",
+    "business-52af0bfbfd0db794": "train",
+    "business-52dbf67393761044": "train",
+    "business-54a0c60d65912456": "train",
+    "business-55677c3bb5af2b78": "train",
+    "business-55d8d6689b98271b": "train",
+    "business-579df02a3a8e9c81": "validation",
+    "business-57d3821ce8c70a67": "train",
+    "business-58a226568132d747": "train",
+    "business-592e99aa47f9b42b": "train",
+    "business-5947969be62ef693": "train",
+    "business-5a4678b1389b99a2": "train",
+    "business-5a7b2e919d9eb13c": "test",
+    "business-5b50ac9aeb19d243": "train",
+    "business-5c0acb2bb1bc55bd": "validation",
+    "business-5dd95c98aff2e783": "train",
+    "business-5e472fba5dec9295": "train",
+    "business-621c52f97816ab53": "validation",
+    "business-64cc18ff5fd9692e": "train",
+    "business-64fea336b111aab3": "train",
+    "business-66a6ec3a3a17d0cb": "validation",
+    "business-6815f3c300383519": "train",
+    "business-693b286515bd1dd0": "train",
+    "business-69ee8f15b5443c3e": "test",
+    "business-6a3d9a1447daaeeb": "train",
+    "business-6cabb757b31cbc2e": "train",
+    "business-6dc5fad630e03878": "validation",
+    "business-6ede337e4ec914bf": "train",
+    "business-702aaf3346725108": "train",
+    "business-7137c33a3649c5ab": "test",
+    "business-71e9d6d570223080": "train",
+    "business-74bc218e6671d480": "train",
+    "business-74e2e11eaa71e86c": "train",
+    "business-74f3a21a1f4c16f8": "test",
+    "business-766415e9195b9181": "test",
+    "business-7722aba40e28d98f": "train",
+    "business-77c5ac46ceecb212": "train",
+    "business-798d86cc5c0b499f": "train",
+    "business-7a8e6833f97b9104": "train",
+    "business-7b73badabe873e5f": "train",
+    "business-7e8ab6c16aead9cb": "train",
+    "business-813f87167add25a6": "train",
+    "business-81e6394c5599fe4d": "train",
+    "business-8364d838c0d2139c": "train",
+    "business-83f596bba48e1871": "train",
+    "business-85a42d51d9e920c7": "test",
+    "business-87bd49da1ecbe2f3": "validation",
+    "business-89e5771cc0f63240": "test",
+    "business-92db603fa7a35430": "train",
+    "business-932645de7a3cd8de": "validation",
+    "business-95d7a40f6c0b96c9": "validation",
+    "business-962aa18bdbf0ac6d": "train",
+    "business-96858dbbaeefd108": "train",
+    "business-9a20e03d60e37d37": "train",
+    "business-9a2b1fc87772f356": "train",
+    "business-9baf3a40312f3984": "train",
+    "business-9d44ec3a1a4c6f9c": "train",
+    "business-9e887b1f23a476c9": "test",
+    "business-9e98bf4fc074a67d": "train",
+    "business-9fa084576fb8be68": "train",
+    "business-a065f8149cbd25d0": "train",
+    "business-a2d289fd14bb494f": "train",
+    "business-a531ad32bad27627": "test",
+    "business-a5e7a0d9a9b2427b": "train",
+    "business-a8765bfdd501b52c": "train",
+    "business-a88325c047605450": "train",
+    "business-a897c935fdff241f": "train",
+    "business-a8d6fae07e30d92a": "train",
+    "business-aa1a61658d9211de": "train",
+    "business-aad492b5bced8a45": "train",
+    "business-ab63db208d169ffb": "train",
+    "business-ac726e89cf345d71": "train",
+    "business-ae6548eba3b952ad": "train",
+    "business-b08416e37939d783": "train",
+    "business-b21492b15d85500e": "validation",
+    "business-b3a9de800ab6147c": "train",
+    "business-b3e2e423ea1bc5c4": "train",
+    "business-b82e2178ecf4d0c5": "test",
+    "business-b8824e908b95056c": "test",
+    "business-bb2f2efc6e319898": "validation",
+    "business-bc038c62c44e501a": "validation",
+    "business-bcaccdf44d62395c": "train",
+    "business-c01bc5ac16fd3d32": "train",
+    "business-c10f146bf26237e2": "validation",
+    "business-c22956a5be4e4a5c": "train",
+    "business-c408bdafc631634b": "train",
+    "business-c42905f5b1c1eaa5": "train",
+    "business-c446d82fedadc0aa": "validation",
+    "business-c492ed7fb70f1c42": "train",
+    "business-c67786b35182c892": "train",
+    "business-c7067c678b24f959": "train",
+    "business-c96433fa103e7a36": "train",
+    "business-cb2c2e3d979ca252": "train",
+    "business-cc6d5bac3bacd1ba": "test",
+    "business-ce12d2de6ca76a22": "test",
+    "business-ce7bb99828c2b0ba": "train",
+    "business-cf43e029efe6476e": "train",
+    "business-cfc1afd7ea9201fb": "train",
+    "business-d0323dcec3cd5180": "test",
+    "business-d0a371371323892f": "validation",
+    "business-d1874d08b9847b1b": "train",
+    "business-d1c43dc89132539d": "train",
+    "business-d1e14a1b8d1120d2": "train",
+    "business-d2336bc8df4e99f3": "train",
+    "business-d4ed090ee3a6a3dd": "train",
+    "business-d56c1d8a5710b24f": "train",
+    "business-d594e8e3ec2c1971": "test",
+    "business-d69947d5eac06039": "validation",
+    "business-d6d6d7fb6eefd8c1": "train",
+    "business-d6fdd6cad3c36620": "train",
+    "business-d8fc57d50eea1cd4": "train",
+    "business-d944bfb18e1258bf": "validation",
+    "business-d97a7643a9b1a4e3": "test",
+    "business-db5957b36a73b416": "train",
+    "business-db750d1f6e9a88b4": "test",
+    "business-dd55fcba16712c3c": "train",
+    "business-e203120a667bd3ea": "train",
+    "business-e2173a3ce1e30e06": "train",
+    "business-e250507bad730ae7": "train",
+    "business-e2ec3acb77d3945e": "validation",
+    "business-e362a236871983fc": "train",
+    "business-e444c5aa0941eacf": "validation",
+    "business-e5c0810559d83cb4": "train",
+    "business-e783aea2aa6929fe": "test",
+    "business-e7ad16e473249c85": "validation",
+    "business-e967e07ca1f6d3d3": "train",
+    "business-ec696a9e3cba9ddd": "validation",
+    "business-ecb1e2e3596353e5": "train",
+    "business-ed86648290e2e377": "train",
+    "business-eefa3980fdf345e9": "train",
+    "business-f00d686163b0c06b": "train",
+    "business-f3a35c80504bd4ab": "validation",
+    "business-f43b0112860a9caf": "train",
+    "business-f7f66065960aba06": "train",
+    "business-f8d280dcb41a3bdc": "train",
+    "business-f922894345507118": "train",
+    "business-ff0cf4fe4c6abe2e": "train"
+  },
+  "geographicScope": "Jordan",
+  "grouping": "Existing brand groups, exact normalized name/alias overlap, and conservative whole-token canonical-name prefix overlap containing at least four characters. Prefix grouping prevents possible leakage and does not assert common ownership. Audit unrelated-looking names with common ownership before training.",
+  "leakageGroups": {
+    "business-000492753b7a4c3e": [
+      "business-000492753b7a4c3e"
+    ],
+    "business-0114743ae9f5e84f": [
+      "business-0114743ae9f5e84f"
+    ],
+    "business-043a227708cbe2ce": [
+      "business-043a227708cbe2ce"
+    ],
+    "business-086ee7dac5285d36": [
+      "business-086ee7dac5285d36"
+    ],
+    "business-08a444860a89cd3d": [
+      "business-08a444860a89cd3d"
+    ],
+    "business-08bb42a30ca57f34": [
+      "business-08bb42a30ca57f34"
+    ],
+    "business-08f701edeef895a1": [
+      "business-08f701edeef895a1"
+    ],
+    "business-09a101f8fd8696f2": [
+      "business-09a101f8fd8696f2"
+    ],
+    "business-0bdc61b372aba1c9": [
+      "business-0bdc61b372aba1c9"
+    ],
+    "business-0dcfafab5f8035e7": [
+      "business-0dcfafab5f8035e7"
+    ],
+    "business-108aa4d1b22a62ff": [
+      "business-108aa4d1b22a62ff"
+    ],
+    "business-11ddda72fae1fe62": [
+      "business-11ddda72fae1fe62"
+    ],
+    "business-14ee6d09a6b98430": [
+      "business-14ee6d09a6b98430"
+    ],
+    "business-1a637788c9e469bd": [
+      "business-1a637788c9e469bd",
+      "business-d1e14a1b8d1120d2"
+    ],
+    "business-1b4c9133da73a711": [
+      "business-1b4c9133da73a711"
+    ],
+    "business-1e60bed1be4a2604": [
+      "business-1e60bed1be4a2604"
+    ],
+    "business-1ebd4be2e41d766c": [
+      "business-1ebd4be2e41d766c"
+    ],
+    "business-1f9e4b3ed3829a51": [
+      "business-1f9e4b3ed3829a51"
+    ],
+    "business-21833d95822dc1ab": [
+      "business-21833d95822dc1ab"
+    ],
+    "business-21b747de22dbb757": [
+      "business-21b747de22dbb757"
+    ],
+    "business-259dbe8cfc8c4e77": [
+      "business-259dbe8cfc8c4e77"
+    ],
+    "business-25fbbc50fa102d03": [
+      "business-25fbbc50fa102d03"
+    ],
+    "business-26efac787b8d99d1": [
+      "business-26efac787b8d99d1"
+    ],
+    "business-282320a8fd15e556": [
+      "business-282320a8fd15e556"
+    ],
+    "business-2900fd16f635a703": [
+      "business-2900fd16f635a703"
+    ],
+    "business-2ae8e3db9922e385": [
+      "business-2ae8e3db9922e385"
+    ],
+    "business-2d96abc68876ce17": [
+      "business-2d96abc68876ce17"
+    ],
+    "business-301b23f91f2d5f90": [
+      "business-301b23f91f2d5f90"
+    ],
+    "business-30fc311b10581d2f": [
+      "business-30fc311b10581d2f"
+    ],
+    "business-3144127596e0299d": [
+      "business-3144127596e0299d"
+    ],
+    "business-318e7c73bb60cb58": [
+      "business-318e7c73bb60cb58"
+    ],
+    "business-324cad6e4a8a02bf": [
+      "business-324cad6e4a8a02bf"
+    ],
+    "business-329f7ed703b629fc": [
+      "business-329f7ed703b629fc"
+    ],
+    "business-33c1a99510b39686": [
+      "business-33c1a99510b39686"
+    ],
+    "business-34a15267b4026711": [
+      "business-34a15267b4026711"
+    ],
+    "business-35a70053deeceefd": [
+      "business-35a70053deeceefd"
+    ],
+    "business-383a998a7954f6dc": [
+      "business-383a998a7954f6dc"
+    ],
+    "business-39c1060c8250481c": [
+      "business-39c1060c8250481c"
+    ],
+    "business-3a675c66be82508c": [
+      "business-3a675c66be82508c"
+    ],
+    "business-3ad18121b865b478": [
+      "business-3ad18121b865b478"
+    ],
+    "business-3c528d3a0450e7a4": [
+      "business-3c528d3a0450e7a4"
+    ],
+    "business-3d43020a3ae8b7a9": [
+      "business-3d43020a3ae8b7a9"
+    ],
+    "business-3f2c3cafbb19eb29": [
+      "business-3f2c3cafbb19eb29"
+    ],
+    "business-41166e5a9a66d87d": [
+      "business-41166e5a9a66d87d"
+    ],
+    "business-414567029a6d74bf": [
+      "business-414567029a6d74bf"
+    ],
+    "business-417207aade006d37": [
+      "business-417207aade006d37"
+    ],
+    "business-4222eabbc7017ffa": [
+      "business-4222eabbc7017ffa"
+    ],
+    "business-42f8b4e755fbfd47": [
+      "business-42f8b4e755fbfd47"
+    ],
+    "business-43bf54570624d5ac": [
+      "business-43bf54570624d5ac"
+    ],
+    "business-43dbc11dd055aa71": [
+      "business-43dbc11dd055aa71"
+    ],
+    "business-4557dbc7393280be": [
+      "business-4557dbc7393280be"
+    ],
+    "business-4657adb02457f191": [
+      "business-4657adb02457f191"
+    ],
+    "business-47a521380f1c0dba": [
+      "business-47a521380f1c0dba"
+    ],
+    "business-47afad612b1f9cc8": [
+      "business-47afad612b1f9cc8"
+    ],
+    "business-47bb9f3a84b8d01d": [
+      "business-47bb9f3a84b8d01d"
+    ],
+    "business-47e6250760e8416a": [
+      "business-47e6250760e8416a"
+    ],
+    "business-48d2375b66baf75a": [
+      "business-48d2375b66baf75a"
+    ],
+    "business-48ee1899cd6fe788": [
+      "business-48ee1899cd6fe788"
+    ],
+    "business-497b07c882294c98": [
+      "business-497b07c882294c98"
+    ],
+    "business-4a9c33ca6b25fa10": [
+      "business-4a9c33ca6b25fa10"
+    ],
+    "business-4ba8deed0050e28b": [
+      "business-4ba8deed0050e28b"
+    ],
+    "business-4d4a9db74f12025e": [
+      "business-4d4a9db74f12025e"
+    ],
+    "business-4de7ee7d82499823": [
+      "business-4de7ee7d82499823"
+    ],
+    "business-4fe81d3ad746c7eb": [
+      "business-4fe81d3ad746c7eb"
+    ],
+    "business-52af0bfbfd0db794": [
+      "business-52af0bfbfd0db794"
+    ],
+    "business-52dbf67393761044": [
+      "business-52dbf67393761044"
+    ],
+    "business-54a0c60d65912456": [
+      "business-54a0c60d65912456"
+    ],
+    "business-55677c3bb5af2b78": [
+      "business-55677c3bb5af2b78"
+    ],
+    "business-55d8d6689b98271b": [
+      "business-55d8d6689b98271b"
+    ],
+    "business-579df02a3a8e9c81": [
+      "business-579df02a3a8e9c81"
+    ],
+    "business-57d3821ce8c70a67": [
+      "business-57d3821ce8c70a67"
+    ],
+    "business-58a226568132d747": [
+      "business-58a226568132d747"
+    ],
+    "business-592e99aa47f9b42b": [
+      "business-592e99aa47f9b42b"
+    ],
+    "business-5947969be62ef693": [
+      "business-5947969be62ef693"
+    ],
+    "business-5a4678b1389b99a2": [
+      "business-5a4678b1389b99a2"
+    ],
+    "business-5a7b2e919d9eb13c": [
+      "business-5a7b2e919d9eb13c"
+    ],
+    "business-5b50ac9aeb19d243": [
+      "business-5b50ac9aeb19d243"
+    ],
+    "business-5c0acb2bb1bc55bd": [
+      "business-5c0acb2bb1bc55bd"
+    ],
+    "business-5dd95c98aff2e783": [
+      "business-5dd95c98aff2e783"
+    ],
+    "business-5e472fba5dec9295": [
+      "business-5e472fba5dec9295"
+    ],
+    "business-621c52f97816ab53": [
+      "business-621c52f97816ab53"
+    ],
+    "business-64cc18ff5fd9692e": [
+      "business-64cc18ff5fd9692e"
+    ],
+    "business-64fea336b111aab3": [
+      "business-64fea336b111aab3"
+    ],
+    "business-66a6ec3a3a17d0cb": [
+      "business-66a6ec3a3a17d0cb"
+    ],
+    "business-6815f3c300383519": [
+      "business-6815f3c300383519"
+    ],
+    "business-693b286515bd1dd0": [
+      "business-693b286515bd1dd0"
+    ],
+    "business-69ee8f15b5443c3e": [
+      "business-69ee8f15b5443c3e"
+    ],
+    "business-6a3d9a1447daaeeb": [
+      "business-6a3d9a1447daaeeb"
+    ],
+    "business-6cabb757b31cbc2e": [
+      "business-6cabb757b31cbc2e"
+    ],
+    "business-6dc5fad630e03878": [
+      "business-6dc5fad630e03878"
+    ],
+    "business-6ede337e4ec914bf": [
+      "business-6ede337e4ec914bf"
+    ],
+    "business-702aaf3346725108": [
+      "business-702aaf3346725108"
+    ],
+    "business-7137c33a3649c5ab": [
+      "business-7137c33a3649c5ab"
+    ],
+    "business-71e9d6d570223080": [
+      "business-71e9d6d570223080"
+    ],
+    "business-74bc218e6671d480": [
+      "business-74bc218e6671d480"
+    ],
+    "business-74e2e11eaa71e86c": [
+      "business-74e2e11eaa71e86c"
+    ],
+    "business-74f3a21a1f4c16f8": [
+      "business-74f3a21a1f4c16f8"
+    ],
+    "business-766415e9195b9181": [
+      "business-766415e9195b9181"
+    ],
+    "business-7722aba40e28d98f": [
+      "business-7722aba40e28d98f"
+    ],
+    "business-77c5ac46ceecb212": [
+      "business-77c5ac46ceecb212"
+    ],
+    "business-798d86cc5c0b499f": [
+      "business-798d86cc5c0b499f"
+    ],
+    "business-7a8e6833f97b9104": [
+      "business-7a8e6833f97b9104"
+    ],
+    "business-7b73badabe873e5f": [
+      "business-7b73badabe873e5f"
+    ],
+    "business-7e8ab6c16aead9cb": [
+      "business-7e8ab6c16aead9cb"
+    ],
+    "business-813f87167add25a6": [
+      "business-813f87167add25a6"
+    ],
+    "business-81e6394c5599fe4d": [
+      "business-81e6394c5599fe4d"
+    ],
+    "business-8364d838c0d2139c": [
+      "business-8364d838c0d2139c"
+    ],
+    "business-83f596bba48e1871": [
+      "business-83f596bba48e1871"
+    ],
+    "business-85a42d51d9e920c7": [
+      "business-85a42d51d9e920c7"
+    ],
+    "business-87bd49da1ecbe2f3": [
+      "business-87bd49da1ecbe2f3"
+    ],
+    "business-89e5771cc0f63240": [
+      "business-89e5771cc0f63240"
+    ],
+    "business-92db603fa7a35430": [
+      "business-92db603fa7a35430"
+    ],
+    "business-932645de7a3cd8de": [
+      "business-932645de7a3cd8de"
+    ],
+    "business-95d7a40f6c0b96c9": [
+      "business-95d7a40f6c0b96c9"
+    ],
+    "business-962aa18bdbf0ac6d": [
+      "business-962aa18bdbf0ac6d"
+    ],
+    "business-96858dbbaeefd108": [
+      "business-96858dbbaeefd108"
+    ],
+    "business-9a20e03d60e37d37": [
+      "business-9a20e03d60e37d37"
+    ],
+    "business-9a2b1fc87772f356": [
+      "business-9a2b1fc87772f356"
+    ],
+    "business-9baf3a40312f3984": [
+      "business-9baf3a40312f3984"
+    ],
+    "business-9d44ec3a1a4c6f9c": [
+      "business-9d44ec3a1a4c6f9c"
+    ],
+    "business-9e887b1f23a476c9": [
+      "business-9e887b1f23a476c9"
+    ],
+    "business-9e98bf4fc074a67d": [
+      "business-9e98bf4fc074a67d"
+    ],
+    "business-9fa084576fb8be68": [
+      "business-9fa084576fb8be68"
+    ],
+    "business-a065f8149cbd25d0": [
+      "business-a065f8149cbd25d0"
+    ],
+    "business-a2d289fd14bb494f": [
+      "business-a2d289fd14bb494f"
+    ],
+    "business-a531ad32bad27627": [
+      "business-a531ad32bad27627"
+    ],
+    "business-a5e7a0d9a9b2427b": [
+      "business-a5e7a0d9a9b2427b"
+    ],
+    "business-a8765bfdd501b52c": [
+      "business-a8765bfdd501b52c"
+    ],
+    "business-a88325c047605450": [
+      "business-a88325c047605450"
+    ],
+    "business-a897c935fdff241f": [
+      "business-a897c935fdff241f"
+    ],
+    "business-a8d6fae07e30d92a": [
+      "business-a8d6fae07e30d92a"
+    ],
+    "business-aa1a61658d9211de": [
+      "business-aa1a61658d9211de"
+    ],
+    "business-aad492b5bced8a45": [
+      "business-aad492b5bced8a45"
+    ],
+    "business-ab63db208d169ffb": [
+      "business-ab63db208d169ffb"
+    ],
+    "business-ac726e89cf345d71": [
+      "business-ac726e89cf345d71"
+    ],
+    "business-ae6548eba3b952ad": [
+      "business-ae6548eba3b952ad"
+    ],
+    "business-b08416e37939d783": [
+      "business-b08416e37939d783"
+    ],
+    "business-b21492b15d85500e": [
+      "business-b21492b15d85500e"
+    ],
+    "business-b3a9de800ab6147c": [
+      "business-b3a9de800ab6147c"
+    ],
+    "business-b3e2e423ea1bc5c4": [
+      "business-b3e2e423ea1bc5c4"
+    ],
+    "business-b82e2178ecf4d0c5": [
+      "business-b82e2178ecf4d0c5"
+    ],
+    "business-b8824e908b95056c": [
+      "business-b8824e908b95056c"
+    ],
+    "business-bb2f2efc6e319898": [
+      "business-bb2f2efc6e319898"
+    ],
+    "business-bc038c62c44e501a": [
+      "business-bc038c62c44e501a"
+    ],
+    "business-bcaccdf44d62395c": [
+      "business-bcaccdf44d62395c"
+    ],
+    "business-c01bc5ac16fd3d32": [
+      "business-c01bc5ac16fd3d32"
+    ],
+    "business-c10f146bf26237e2": [
+      "business-c10f146bf26237e2"
+    ],
+    "business-c22956a5be4e4a5c": [
+      "business-c22956a5be4e4a5c"
+    ],
+    "business-c408bdafc631634b": [
+      "business-c408bdafc631634b"
+    ],
+    "business-c42905f5b1c1eaa5": [
+      "business-c42905f5b1c1eaa5"
+    ],
+    "business-c446d82fedadc0aa": [
+      "business-c446d82fedadc0aa"
+    ],
+    "business-c492ed7fb70f1c42": [
+      "business-c492ed7fb70f1c42"
+    ],
+    "business-c67786b35182c892": [
+      "business-c67786b35182c892"
+    ],
+    "business-c7067c678b24f959": [
+      "business-c7067c678b24f959"
+    ],
+    "business-c96433fa103e7a36": [
+      "business-c96433fa103e7a36"
+    ],
+    "business-cb2c2e3d979ca252": [
+      "business-cb2c2e3d979ca252"
+    ],
+    "business-cc6d5bac3bacd1ba": [
+      "business-cc6d5bac3bacd1ba"
+    ],
+    "business-ce12d2de6ca76a22": [
+      "business-ce12d2de6ca76a22"
+    ],
+    "business-ce7bb99828c2b0ba": [
+      "business-ce7bb99828c2b0ba"
+    ],
+    "business-cf43e029efe6476e": [
+      "business-cf43e029efe6476e"
+    ],
+    "business-cfc1afd7ea9201fb": [
+      "business-cfc1afd7ea9201fb"
+    ],
+    "business-d0323dcec3cd5180": [
+      "business-d0323dcec3cd5180"
+    ],
+    "business-d0a371371323892f": [
+      "business-d0a371371323892f"
+    ],
+    "business-d1874d08b9847b1b": [
+      "business-d1874d08b9847b1b"
+    ],
+    "business-d1c43dc89132539d": [
+      "business-d1c43dc89132539d"
+    ],
+    "business-d2336bc8df4e99f3": [
+      "business-d2336bc8df4e99f3"
+    ],
+    "business-d4ed090ee3a6a3dd": [
+      "business-d4ed090ee3a6a3dd"
+    ],
+    "business-d56c1d8a5710b24f": [
+      "business-d56c1d8a5710b24f"
+    ],
+    "business-d594e8e3ec2c1971": [
+      "business-d594e8e3ec2c1971"
+    ],
+    "business-d69947d5eac06039": [
+      "business-d69947d5eac06039"
+    ],
+    "business-d6d6d7fb6eefd8c1": [
+      "business-d6d6d7fb6eefd8c1"
+    ],
+    "business-d6fdd6cad3c36620": [
+      "business-d6fdd6cad3c36620"
+    ],
+    "business-d8fc57d50eea1cd4": [
+      "business-d8fc57d50eea1cd4"
+    ],
+    "business-d944bfb18e1258bf": [
+      "business-d944bfb18e1258bf"
+    ],
+    "business-d97a7643a9b1a4e3": [
+      "business-d97a7643a9b1a4e3"
+    ],
+    "business-db5957b36a73b416": [
+      "business-db5957b36a73b416"
+    ],
+    "business-db750d1f6e9a88b4": [
+      "business-db750d1f6e9a88b4"
+    ],
+    "business-dd55fcba16712c3c": [
+      "business-dd55fcba16712c3c"
+    ],
+    "business-e203120a667bd3ea": [
+      "business-e203120a667bd3ea"
+    ],
+    "business-e2173a3ce1e30e06": [
+      "business-e2173a3ce1e30e06"
+    ],
+    "business-e250507bad730ae7": [
+      "business-e250507bad730ae7"
+    ],
+    "business-e2ec3acb77d3945e": [
+      "business-e2ec3acb77d3945e"
+    ],
+    "business-e362a236871983fc": [
+      "business-e362a236871983fc"
+    ],
+    "business-e444c5aa0941eacf": [
+      "business-e444c5aa0941eacf"
+    ],
+    "business-e5c0810559d83cb4": [
+      "business-e5c0810559d83cb4"
+    ],
+    "business-e783aea2aa6929fe": [
+      "business-e783aea2aa6929fe"
+    ],
+    "business-e7ad16e473249c85": [
+      "business-e7ad16e473249c85"
+    ],
+    "business-e967e07ca1f6d3d3": [
+      "business-e967e07ca1f6d3d3"
+    ],
+    "business-ec696a9e3cba9ddd": [
+      "business-ec696a9e3cba9ddd"
+    ],
+    "business-ecb1e2e3596353e5": [
+      "business-ecb1e2e3596353e5"
+    ],
+    "business-ed86648290e2e377": [
+      "business-ed86648290e2e377"
+    ],
+    "business-eefa3980fdf345e9": [
+      "business-eefa3980fdf345e9"
+    ],
+    "business-f00d686163b0c06b": [
+      "business-f00d686163b0c06b"
+    ],
+    "business-f3a35c80504bd4ab": [
+      "business-f3a35c80504bd4ab"
+    ],
+    "business-f43b0112860a9caf": [
+      "business-f43b0112860a9caf"
+    ],
+    "business-f7f66065960aba06": [
+      "business-f7f66065960aba06"
+    ],
+    "business-f8d280dcb41a3bdc": [
+      "business-f8d280dcb41a3bdc"
+    ],
+    "business-f922894345507118": [
+      "business-f922894345507118"
+    ],
+    "business-ff0cf4fe4c6abe2e": [
+      "business-ff0cf4fe4c6abe2e"
+    ]
+  },
+  "method": "Hash-sort groups within Arabic-name-available / other strata; reserve 15% each for validation and test, remainder training. Existing assignments are frozen on rebuild. No category labels used for allocation.",
+  "scope": "Prospective merchant-metadata holdout reservation; not independent real SMS or measured accuracy.",
+  "seed": "masroof-jordan-category-holdout-v1",
+  "version": "1.0.0"
+}

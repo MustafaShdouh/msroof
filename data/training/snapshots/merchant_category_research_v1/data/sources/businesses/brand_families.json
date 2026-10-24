@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "scope": "Bounded offline leakage audit; not an exhaustive corporate ownership registry or runtime merchant map.",
+  "families": [
+    {
+      "familyId": "inditex",
+      "members": ["Lefties", "Massimo Dutti", "Oysho", "Stradivarius", "ZARA", "ZARA Home"],
+      "url": "https://annualreport.inditex.com/anrpxxvui/en/our-drivers",
+      "publisher": "Inditex annual report 2025",
+      "accessedOn": "2026-10-24",
+      "evidence": "The company report discusses all six brands among its retail concepts. Common ownership is conservatively checked for fold overlap; it does not make them identical merchants."
+    }
+  ]
+}

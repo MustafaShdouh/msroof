@@ -1,0 +1,2 @@
+# Preserve exact artifact bytes: frozen fixtures and model provenance use SHA-256.
+* -text

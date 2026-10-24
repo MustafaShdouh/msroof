@@ -1,0 +1,16 @@
+{
+  "version": "1.1.0",
+  "input": "raw SMS body string",
+  "normalization": [
+    "convert Arabic-Indic U+0660..U+0669 and Persian U+06F0..U+06F9 digits to ASCII; U+066B decimal separator to dot; U+066C grouping separator to comma; preserve Arabic comma U+060C",
+    "decode literal backslash-n to newline",
+    "remove carriage returns",
+    "remove a leading two-uppercase-letter routing prefix followed by whitespace or newline",
+    "remove Arabic diacritics U+064B through U+065F and U+0670",
+    "collapse whitespace to one space",
+    "replace ASCII digit runs of six or more characters with NUM_LONG using ASCII word boundaries [A-Za-z0-9_] in both languages",
+    "trim and lowercase"
+  ],
+  "tokenPattern": "[A-Za-z0-9_\\u0621-\\u064A\\u0660-\\u0669*.-]+",
+  "features": "all unigrams followed by adjacent unigram bigrams in source order"
+}

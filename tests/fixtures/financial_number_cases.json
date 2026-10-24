@@ -1,0 +1,12 @@
+[
+  {"id":"western-unchanged","raw":"12.500","normalized":"12.500","value":12.5},
+  {"id":"arabic-decimal","raw":"١٢٫٥٠٠","normalized":"12.500","value":12.5},
+  {"id":"persian-decimal","raw":"۱۲٫۵۰۰","normalized":"12.500","value":12.5},
+  {"id":"jod-fils","raw":"٠٫٠٠١","normalized":"0.001","value":0.001},
+  {"id":"arabic-grouping-and-decimal","raw":"١٬٢٣٤٫٥٦٧","normalized":"1,234.567","value":1234.567},
+  {"id":"persian-grouping-and-decimal","raw":"۱٬۲۳۴٫۵۶۷","normalized":"1,234.567","value":1234.567},
+  {"id":"grouping-only","raw":"١٬٢٣٤","normalized":"1,234","value":1234},
+  {"id":"mixed-scripts","raw":"١2۳٫٤5۶","normalized":"123.456","value":123.456},
+  {"id":"arabic-comma-preserved","raw":"دفعة، ١٢٫٥٠ دينار","normalized":"دفعة، 12.50 دينار"},
+  {"id":"phone-and-mask","raw":"٠٧٩١٢٣٤٥٦٧ *۱۲۳۴","normalized":"0791234567 *1234"}
+]

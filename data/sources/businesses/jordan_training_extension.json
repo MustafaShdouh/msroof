@@ -1,0 +1,391 @@
+{
+  "version": "1.0.0",
+  "scope": "15 source-backed new identities relative to the frozen 200-business corpus; assistant-reviewed Jordan merchant metadata, not SMS, popularity ranking or independent gold.",
+  "purpose": "Training-only coverage expansion; preserve original 200-business and holdout assignments. No eligibility for fitting until identity/provenance validation passes.",
+  "limitations": [
+    "Name/default labels do not identify every transaction type.",
+    "Cash Withdrawals, Installments and Fees require transaction-context evidence; no bank identities are relabeled to manufacture these classes.",
+    "Historical source dates are disclosed. Public source evidence does not itself establish a dataset reuse license.",
+    "Digital services have Jordan-region/service evidence and no inferred local physical branches."
+  ],
+  "businesses": [
+    {
+      "name": "أمنية",
+      "aliases": [
+        "Umniah"
+      ],
+      "category": "Telecom",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Telecom provider default; consistent with the user's monthly-mobile Telecom decision, not a generic recurring-bill Subscriptions rule.",
+      "sources": [
+        {
+          "url": "https://www.umniah.com/ar/معلومات-عنا/",
+          "publisher": "Umniah Jordan",
+          "evidence": "Official bilingual-branded company page identifies a Jordanian telecom and internet operator.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "شركة الكهرباء الأردنية",
+      "aliases": [
+        "JEPCO"
+      ],
+      "category": "Water and Electricity",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Electricity-provider merchant default; not the held-out Irbid electricity company.",
+      "sources": [
+        {
+          "url": "https://www.jepco.com.jo/ar/Home",
+          "publisher": "JEPCO",
+          "evidence": "Official page names the electricity distribution company, JEPCO acronym and Amman origin.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "مياهنا",
+      "aliases": [],
+      "category": "Water and Electricity",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Water-provider default. Historical source establishes identity/activity, not current branch status or bank descriptor spelling.",
+      "sources": [
+        {
+          "url": "https://www.miyahuna.com.jo/ebv4.0/root_storage/ar/eb_list_page/تقرير_الطاقة_الكهربائية_2022.pdf",
+          "publisher": "Miyahuna official 2022 report",
+          "evidence": "Company report names مياهنا and documents its Amman water/wastewater activity. Historical identity evidence.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "شركة مياه اليرموك",
+      "aliases": [],
+      "category": "Water and Electricity",
+      "cities": [
+        "Irbid"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Water utility, distinct from Yarmouk University and the held-out Irbid electricity provider.",
+      "sources": [
+        {
+          "url": "https://www.yw.com.jo/Abutus.aspx",
+          "publisher": "Yarmouk Water Company",
+          "evidence": "Official contact page names the water company and Irbid headquarters.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://yw.com.jo/",
+          "publisher": "Yarmouk Water Company",
+          "evidence": "Official site describes water services, distribution and subscriber services.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "باص رؤية",
+      "aliases": [],
+      "category": "Transportation",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Public-transport fares/top-ups default to Transportation; not proof that a monthly commuting pass should override the user's Subscriptions boundary.",
+      "sources": [
+        {
+          "url": "https://www.ammanbus.jo/",
+          "publisher": "مشغل باص رؤية",
+          "evidence": "Current operator page brands the public bus service باص رؤية and describes Amman transport and stored-value ticketing.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "Uber",
+      "aliases": [
+        "أوبر"
+      ],
+      "category": "Transportation",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Ride-service default for Jordan; not a universal category for unrelated services or generic platform payments. No Careem alias or separate Careem brand is counted.",
+      "sources": [
+        {
+          "url": "https://www.uber.com/jo/ar/newsroom/uber-obtains-license-in-jordan-and-aims/",
+          "publisher": "Uber Jordan",
+          "evidence": "Official Jordan article names أوبر and its licensed local ride service. Historical licensing evidence.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "جوبترول",
+      "aliases": [
+        "JoPetrol"
+      ],
+      "category": "Transportation",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Motor-fuel station default follows the user's Transportation choice for Manaseer. Explicit household heating fuel or a concession cafe purchase needs context.",
+      "sources": [
+        {
+          "url": "https://jppmc.jo/ar/service_station",
+          "publisher": "JoPetrol operator",
+          "evidence": "Official page describes the Jordanian company's local fuel-station service under جوبترول.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://www.jppmc.jo/en/who-we-are",
+          "publisher": "JoPetrol operator",
+          "evidence": "English company page uses JoPetrol and describes fuel-station and vehicle services in Jordan.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "جامعة العلوم والتكنولوجيا الأردنية",
+      "aliases": [
+        "جامعة العلوم و التكنولوجيا الأردنية",
+        "Jordan University of Science and Technology",
+        "JUST"
+      ],
+      "category": "Education",
+      "cities": [
+        "Irbid"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Education default for university payments; not Health because medical programs are offered.",
+      "sources": [
+        {
+          "url": "https://www.just.edu.jo/ar/Deanships/DeanshipofStudentsAffairs/Pages/contacts.aspx",
+          "publisher": "Jordan University of Science and Technology",
+          "evidence": "Official Arabic contact page names the university in Irbid.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://www.just.edu.jo/aboutjust/Pages/welcome.aspx",
+          "publisher": "Jordan University of Science and Technology",
+          "evidence": "Official English welcome page names the university and uses JUST.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "الجامعة الأردنية",
+      "aliases": [
+        "The University of Jordan"
+      ],
+      "category": "Education",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Education default for the university identity. Administrative/personal transfers mentioning a university need transaction-level evidence.",
+      "sources": [
+        {
+          "url": "https://yearbook1.ju.edu.jo/2025-2026/",
+          "publisher": "University of Jordan",
+          "evidence": "Official yearbook identifies الجامعة الأردنية.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://ipmd.ju.edu.jo/Documents/Language%20center.pdf",
+          "publisher": "University of Jordan international unit",
+          "evidence": "Official university brochure names The University of Jordan and its Amman address.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "جامعة عمان العربية",
+      "aliases": [
+        "AMMAN ARAB UNIVERSITY"
+      ],
+      "category": "Education",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Education default; distinct from the University of Jordan and Yarmouk University. Historical 2024 report is name/activity evidence.",
+      "sources": [
+        {
+          "url": "https://www.aau.edu.jo/sites/default/files/2024-10/تقرير%20الاستدامة%20لجامعة%20عمان%20العربية%20-2024.pdf",
+          "publisher": "Amman Arab University",
+          "evidence": "Official sustainability report pairs Arabic and English university names and describes its Jordanian higher-education activity.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "الأردنية للطيران",
+      "aliases": [
+        "Jordan Aviation",
+        "JAV"
+      ],
+      "category": "Travel",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Airline travel default; distinct from Royal Jordanian, not an extra branch or invented translation of that existing brand.",
+      "sources": [
+        {
+          "url": "https://www.jordanaviation.jo/home_ar.aspx",
+          "publisher": "Jordan Aviation",
+          "evidence": "Official Arabic page names Jordan Aviation, الأردنية للطيران and JAV, and describes its Jordanian airline operations.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "دالاس للسياحة والسفر",
+      "aliases": [
+        "Dallas Travel & Tourism"
+      ],
+      "category": "Travel",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Travel-agency default; historical membership evidence, not current license verification or an observed SMS descriptor.",
+      "sources": [
+        {
+          "url": "https://www.jsta.org.jo/ebv4.0/root_storage/ar/eb_list_page/المكاتب_المجددة_عضويتها_جمعية_حتى_تاريخ_31-03-2024.pdf",
+          "publisher": "Jordan Society of Tourism and Travel Agents",
+          "evidence": "2024 association membership table pairs Arabic/English Dallas names, travel business and Amman address.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "Netflix",
+      "aliases": [
+        "نتفليكس"
+      ],
+      "category": "Subscriptions",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Subscription-provider default consistent with the user's exact Netflix renewal label; not a human-reviewed new business label.",
+      "sources": [
+        {
+          "url": "https://www.netflix.com/jo-ar/browse/genre/83",
+          "publisher": "Netflix Jordan service page",
+          "evidence": "Official Jordan-region page offers Netflix subscription access.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://about.netflix.com/ar/news/love-is-blind-habibi-is-back-on-netflix-season-2-arrives-on-november-12",
+          "publisher": "Netflix official Arabic newsroom",
+          "evidence": "Company announcement uses نتفليكس and includes Jordan among the regional audience.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "Spotify",
+      "aliases": [
+        "Spotify Premium"
+      ],
+      "category": "Subscriptions",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Paid music-subscription default. No Arabic transliteration is invented; gift-card/refund/payment details can require context.",
+      "sources": [
+        {
+          "url": "https://www.spotify.com/jo-ar/premium/?checkout-offer=recurring_premium-trial",
+          "publisher": "Spotify Jordan",
+          "evidence": "Official Jordan Premium page identifies recurring paid subscription plans.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "name": "MBC Shahid",
+      "aliases": [
+        "MBC شاهد",
+        "شاهد"
+      ],
+      "category": "Subscriptions",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name",
+      "notes": "Paid streaming-subscription default; Jordan service evidence does not establish an Amman/Irbid physical branch.",
+      "sources": [
+        {
+          "url": "https://shahid.mbc.net/en/hub/promo/sh",
+          "publisher": "MBC Shahid",
+          "evidence": "Official subscription page describes the service and lists Jordan customer support.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://shahid.mbc.net/ar/hub/web-promo",
+          "publisher": "MBC Shahid",
+          "evidence": "Official Arabic promotion names MBC شاهد and subscription offerings.",
+          "accessedOn": "2026-10-24"
+        }
+      ]
+    }
+  ]
+}

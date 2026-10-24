@@ -1,0 +1,283 @@
+{
+  "version": "1.0.0",
+  "scope": "Training-only data expansion after v2 validation diagnosis. New distinct source-observed businesses, not generated descriptors, popularity ranking, human gold or independent evaluation.",
+  "collectionRationale": "V2 memorizes canonical training names while validation has low feature evidence and spurious confident errors. Collect grocery/hospital/vehicle-fuel diversity because original training has only six groceries, six health businesses and three transport providers. No thresholds/features changed; no final-test inference or holdout enrichment.",
+  "businesses": [
+    {
+      "name": "Safeway",
+      "aliases": [
+        "سيفوي"
+      ],
+      "category": "Groceries",
+      "sources": [
+        {
+          "url": "https://www.talabat.com/jordan/safewayalsahl",
+          "publisher": "Talabat Jordan",
+          "evidence": "Merchant page identifies Safeway as a supermarket/grocery retailer offering grocery products.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://www.talabat.com/ar/jordan/safewayalsahl",
+          "publisher": "Talabat Jordan",
+          "evidence": "Arabic version of the same merchant page gives the observed name سيفوي and grocery retail activity.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Groceries merchant default from the platform's actual grocery assortment; not every payment context. Observed bilingual names are views of one business, not independent businesses. No physical city branch inferred from site-wide navigation.",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "Kareem Hyper Market",
+      "aliases": [
+        "كريم هايبر ماركت"
+      ],
+      "category": "Groceries",
+      "sources": [
+        {
+          "url": "https://www.talabat.com/jordan/kareem-hyper-market",
+          "publisher": "Talabat Jordan",
+          "evidence": "Merchant page identifies Kareem Hyper Market as a supermarket/grocery retailer offering grocery products.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://www.talabat.com/ar/jordan/kareem-hyper-market",
+          "publisher": "Talabat Jordan",
+          "evidence": "Arabic version of the same merchant page gives the observed name كريم هايبر ماركت and grocery retail activity.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Groceries merchant default from the platform's actual grocery assortment; not every payment context. Observed bilingual names are views of one business, not independent businesses. No physical city branch inferred from site-wide navigation.",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "Corner Supermarket",
+      "aliases": [
+        "سوبر ماركت كورنر"
+      ],
+      "category": "Groceries",
+      "sources": [
+        {
+          "url": "https://www.talabat.com/jordan/corner-supermarket",
+          "publisher": "Talabat Jordan",
+          "evidence": "Merchant page identifies Corner Supermarket as a supermarket/grocery retailer offering grocery products.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://www.talabat.com/ar/jordan/corner-supermarket",
+          "publisher": "Talabat Jordan",
+          "evidence": "Arabic version of the same merchant page gives the observed name سوبر ماركت كورنر and grocery retail activity.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Groceries merchant default from the platform's actual grocery assortment; not every payment context. Observed bilingual names are views of one business, not independent businesses. No physical city branch inferred from site-wide navigation. Similar branch names in unrelated directories are not asserted to share ownership.",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "Mega Super Market",
+      "aliases": [
+        "سوبر ماركت ميجا"
+      ],
+      "category": "Groceries",
+      "sources": [
+        {
+          "url": "https://www.talabat.com/jordan/mega-super-market",
+          "publisher": "Talabat Jordan",
+          "evidence": "Merchant page identifies Mega Super Market as a supermarket/grocery retailer offering grocery products.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://www.talabat.com/ar/jordan/mega-super-market",
+          "publisher": "Talabat Jordan",
+          "evidence": "Arabic version of the same merchant page gives the observed name سوبر ماركت ميجا and grocery retail activity.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Groceries merchant default from the platform's actual grocery assortment; not every payment context. Observed bilingual names are views of one business, not independent businesses. No physical city branch inferred from site-wide navigation.",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "City mart",
+      "aliases": [
+        "سيتي مارت"
+      ],
+      "category": "Groceries",
+      "sources": [
+        {
+          "url": "https://www.talabat.com/jordan/city-mart",
+          "publisher": "Talabat Jordan",
+          "evidence": "Merchant page identifies City mart as a supermarket/grocery retailer offering grocery products.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://www.talabat.com/ar/jordan/city-mart",
+          "publisher": "Talabat Jordan",
+          "evidence": "Arabic version of the same merchant page gives the observed name سيتي مارت and grocery retail activity.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Groceries merchant default from the platform's actual grocery assortment; not every payment context. Observed bilingual names are views of one business, not independent businesses. No physical city branch inferred from site-wide navigation. Refers only to the Jordan platform identity, not similarly named Egyptian merchants.",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "Sawa Supermarket",
+      "aliases": [],
+      "category": "Groceries",
+      "sources": [
+        {
+          "url": "https://www.talabat.com/jordan/restaurants?_pxhc=1636088400278&page=28",
+          "publisher": "Talabat Jordan",
+          "evidence": "Merchant index explicitly lists Sawa Supermarket as Grocery and Supermarket.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Groceries merchant default from the platform's actual grocery assortment; not every payment context. Observed bilingual names are views of one business, not independent businesses. No physical city branch inferred from site-wide navigation. No unverified Arabic transliteration added.",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "هايبر ماركت سامح مول",
+      "aliases": [
+        "Sameh Mall"
+      ],
+      "category": "Groceries",
+      "sources": [
+        {
+          "url": "https://visitamman.jo/destinations/283",
+          "publisher": "Visit Amman",
+          "evidence": "Listing identifies هايبر ماركت سامح مول, describes food and household retail and locates multiple Amman outlets.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://www.talabat.com/jordan/restaurants?_pxhc=1636088400278&page=28",
+          "publisher": "Talabat Jordan",
+          "evidence": "Index lists Sameh Mall as Grocery and Hypermarket.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "This is the named hypermarket operator's grocery default, not rent or arbitrary shops in a mall. Branches pooled into one identity.",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "TotalEnergies",
+      "aliases": [
+        "توتال للطاقات"
+      ],
+      "category": "Transportation",
+      "sources": [
+        {
+          "url": "https://totalenergies.jo/ar",
+          "publisher": "TotalEnergies Jordan",
+          "evidence": "Official Arabic site identifies توتال للطاقات and vehicle fuel/card/car-care services.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://totalenergies.jo/en/service-stations/total-fuels",
+          "publisher": "TotalEnergies Jordan",
+          "evidence": "Official Jordan fuel page identifies TotalEnergies and vehicle gasoline/diesel services.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://totalenergies.com/jordan",
+          "publisher": "TotalEnergies",
+          "evidence": "Parent country page states marketing company was acquired by Vivo Energy on 1 July 2026.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Vehicle-fuel merchant default; heating oil and on-site grocery/cafe purchases need context. TotalEnergies and Arabic branding are observed names, not a claim that ownership stayed unchanged. Do not add Vivo or Engen as extra independent training businesses.",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "مستشفى الأردن",
+      "aliases": [],
+      "category": "Health",
+      "sources": [
+        {
+          "url": "https://www.jordan-hospital.com/contact.html",
+          "publisher": "Jordan Hospital",
+          "evidence": "Official Arabic contact page gives مستشفى الأردن, patient/appointment/emergency services and Amman address.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Medical-service merchant default, not salary or a transfer to an employee. No English brand alias inferred from domain alone.",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "المستشفى التخصصي",
+      "aliases": [
+        "The Specialty Hospital"
+      ],
+      "category": "Health",
+      "sources": [
+        {
+          "url": "https://www.specialty-hospital.com/index.php",
+          "publisher": "The Specialty Hospital",
+          "evidence": "Official homepage explicitly pairs المستشفى التخصصي and The Specialty Hospital and describes clinical services.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://www.specialty-hospital.com/ar/search/",
+          "publisher": "The Specialty Hospital",
+          "evidence": "Official contact section locates hospital in Shmeisani, Amman, Jordan.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Medical-service merchant default; no claims about efficacy or patient outcomes.",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    }
+  ]
+}

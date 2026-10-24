@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.1.0",
+  "recordFields": {
+    "id": "Stable, non-empty unique identifier",
+    "text": "Sanitized completed transaction SMS text",
+    "category": "One value from allowedCategories",
+    "labeler": "Human reviewer identifier or role",
+    "reviewed": "Boolean; must be true before training"
+  },
+  "allowedCategories": [
+    "Telecom",
+    "Water and Electricity",
+    "Food",
+    "Groceries",
+    "Transportation",
+    "Subscriptions",
+    "Shopping",
+    "Health",
+    "Entertainment",
+    "Education",
+    "Travel",
+    "Cash Withdrawals",
+    "Installments",
+    "Fees",
+    "Other"
+  ],
+  "sourceRequirement": "Manually reviewed completed bank or wallet transactions only"
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Masroof · Merchant Review</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;background:#f5f6f8;color:#17252b;margin:0}main{max-width:900px;margin:auto;padding:30px 20px}h1{margin:0}p{max-width:760px}article{background:white;border:1px solid #dce1e5;border-radius:14px;padding:22px;margin:18px 0}h2{font-size:21px;margin:0 0 8px}.muted,small{color:#56656e}label{display:block;margin:12px 0 4px}input,select,textarea{font:inherit;border:1px solid #a9b5bd;border-radius:7px;padding:9px;box-sizing:border-box;width:100%;background:white}textarea{min-height:60px}button{background:#126052;color:white;border:0;border-radius:8px;padding:12px 20px;font:inherit;cursor:pointer}button.secondary{background:#e6eceb;color:#17252b}footer{position:sticky;bottom:0;background:#f5f6f8;padding:16px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}a{color:#126052}.note{background:#fff6d9;padding:10px;border-radius:6px}#message{font-weight:600}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:600px){.row{display:block}}article.done{border-color:#126052}
+</style></head><body><main>
+<h1>Merchant review</h1>
+<p>Check a few names and choose their categories. Leave unfamiliar names untouched, or choose <strong>Needs transaction context</strong>. Your choices can be downloaded and imported into the local dataset.</p>
+<p class="muted" id="batch-method"></p>
+<p class="muted">Illustrative examples are written for this review and are not real bank messages. Choose the category you want Masroof to use. If the text is insufficient, select Needs transaction context; use Other only if you want a genuine catch-all category.</p>
+<label for="reviewer">Reviewed by</label><input id="reviewer" placeholder="Your name or initials" autocomplete="off">
+<div id="cards"></div>
+<footer><button id="download">Download my decisions</button><button class="secondary" id="restore">Load a saved review</button><input id="file" type="file" accept=".json,application/json" hidden><span id="message" role="status" aria-live="polite"></span></footer>
+</main><script>
+const batch=__BATCH_JSON__;
+document.getElementById('batch-method').textContent=batch.selectionMethod+'. No model confidence score is available yet.';
+const cards=document.getElementById('cards');
+const elements=new Map();
+function node(tag,text){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;return el;}
+function labeled(parent,text,control){const label=node('label',text);control.id=parent.id+'-'+text.replace(/\W/g,'');label.htmlFor=control.id;parent.append(label,control);}
+for(const item of batch.candidates){
+ const card=node('article');card.id=item.id;card.append(node('h2',item.name));
+ const contextual=item.labelScope==='illustrative_transaction';
+ card.append(node('p',contextual?'Category boundary review · illustrative example':(item.cities.length?item.cities.join(' · '):'Location not verified')+' · Suggested: '+(item.proposedCategory||'No category yet')));
+ if(contextual){const example=node('blockquote',item.exampleText);example.dir='auto';card.append(example);}
+ if(item.reviewQuestion){const question=node('p',item.reviewQuestion);question.className='note';card.append(question);card.append(node('p','Categories to consider: '+item.possibleCategories.join(' / ')));}
+ const sources=node('div');sources.className='muted';
+ for(const origin of item.origins){
+  const p=node('p');
+  if(origin.url){const a=node('a',origin.publisher);a.href=origin.url;a.target='_blank';a.rel='noopener noreferrer';p.append(a);}
+  else p.textContent=origin.kind==='illustrative_scenario'?'Illustrative scenario':'Existing generated-data name; business existence not verified';
+  if(origin.evidence)p.append(node('small',' — '+origin.evidence));sources.append(p);
+  if(origin.note){const note=node('p',origin.note);note.className='note';sources.append(note);}
+ }card.append(sources);
+ const status=node('select');for(const [value,text] of [['','Not reviewed'],['approved','Confirm category below'],['needs_context','Needs transaction context'],['skipped','Skip — I do not know this business']]){const option=node('option',text);option.value=value;status.append(option);}labeled(card,'Decision',status);
+ const category=node('select');const empty=node('option','Choose a category');empty.value='';category.append(empty);for(const value of batch.categories){const option=node('option',value);option.value=value;category.append(option);}category.value=item.reviewMode==='ambiguity'?'':(item.proposedCategory||'');labeled(card,'Category',category);
+ const group=node('input');group.value=item.brandGroup||item.id;group.readOnly=true;
+ const notes=node('textarea');notes.placeholder='Optional explanation';labeled(card,'Notes',notes);
+ function changed(){const approved=status.value==='approved';category.disabled=!approved;group.disabled=!approved;card.classList.toggle('done',!!status.value);}status.addEventListener('change',changed);changed();
+ elements.set(item.id,{item,status,category,group,notes,changed});cards.append(card);
+}
+document.getElementById('download').onclick=()=>{
+ const reviewer=document.getElementById('reviewer').value.trim(),reviews=[];const message=document.getElementById('message');
+ if(!reviewer){message.textContent='Enter your name or initials first.';return;}
+ for(const [id,el] of elements){if(!el.status.value)continue;
+ if(el.status.value==='approved'&&!el.category.value){message.textContent='Choose a category for '+el.item.name;return;}
+ const row={id,name:el.item.name,status:el.status.value,category:el.status.value==='approved'?el.category.value:null,brandGroup:el.group.value.trim()||null,reviewer,notes:el.notes.value};if(el.item.labelScope==='illustrative_transaction'){row.exampleText=el.item.exampleText;row.labelScope=el.item.labelScope;}reviews.push(row);}
+ if(!reviews.length){message.textContent='Make at least one decision first.';return;}
+ const content={schemaVersion:'1.0.0',candidateSha256:batch.candidateSha256,reviews};
+ const url=URL.createObjectURL(new Blob([JSON.stringify(content,null,2)+'\n'],{type:'application/json;charset=utf-8'}));const a=node('a');a.href=url;a.download='masroof-merchant-review-'+new Date().toISOString().replace(/[:.]/g,'-')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);message.textContent='Downloaded '+reviews.length+' decisions. Keep the file until it is imported.';
+};
+document.getElementById('restore').onclick=()=>document.getElementById('file').click();
+document.getElementById('file').onchange=async event=>{try{
+ const file=event.target.files[0];if(!file)return;const payload=JSON.parse(await file.text());
+ if(payload.schemaVersion!=='1.0.0'||!Array.isArray(payload.reviews))throw Error('Unsupported review file');
+ let count=0;for(const row of payload.reviews){const el=elements.get(row.id);if(!el||row.name!==el.item.name)continue;if(el.item.labelScope==='illustrative_transaction'&&row.exampleText!==el.item.exampleText)continue;
+ if(!['approved','needs_context','skipped'].includes(row.status))continue;
+ el.status.value=row.status;el.category.value=batch.categories.includes(row.category)?row.category:(el.item.proposedCategory||'');if(!el.item.brandGroup)el.group.value=row.brandGroup||'';el.notes.value=row.notes||'';el.changed();document.getElementById('reviewer').value=row.reviewer||'';count++;}
+ document.getElementById('message').textContent='Restored '+count+' decisions in this batch.';
+ }catch(error){document.getElementById('message').textContent='Could not load review: '+error.message;}};
+</script></body></html>

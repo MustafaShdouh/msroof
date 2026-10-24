@@ -1,0 +1,5736 @@
+{
+  "inputSha256": {
+    "data\\annotations\\businesses_200.jsonl": "ce221fa6cee2e3bb1feb09edd49633e8d0e3d94313c0f0af5e3317f0dcc26b94",
+    "data\\annotations\\category_annotation_schema.json": "530a0925185d1f514ab32273bba593e53b40f1328ee56fb83268d816b99806c8",
+    "data\\annotations\\merchant_reviews.jsonl": "37f7f4598b6d560c427c32c126c3759b4f46f5f8dcf1b8b15b60dd9124d0b329",
+    "data\\sources\\businesses\\brand_families.json": "34950f9c65e4982fa0df9af3699a3f2979e8b9d07d13251d5d34efa78ac9c66a",
+    "data\\training\\splits\\category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d"
+  },
+  "limitations": [
+    "Only five human validation businesses, including two classes absent from training; selection is a small-sample pilot, not confidence calibration.",
+    "Synthetic forms inherit a base label; labelReviewerType identifies the base label reviewer, not approval of the generated spelling. They are not real bank descriptors or new identities/labels.",
+    "Raw softmax scores are uncalibrated; classes with fewer than three training businesses always abstain when top-ranked.",
+    "No SMS training, historical SMS reuse, runtime integration, or final test evaluation."
+  ],
+  "missingTrainingCategories": [
+    "Water and Electricity",
+    "Transportation",
+    "Subscriptions",
+    "Cash Withdrawals",
+    "Installments",
+    "Fees"
+  ],
+  "runtimePromotionAllowed": false,
+  "scope": "Merchant-name research only; assistant labels are weak supervision, not independent truth.",
+  "selectedResearchVariant": "baseline",
+  "selectionRule": "Fixed thresholds. Prefer baseline; switch only for strictly more correct answered HUMAN validation businesses with no increase in wrong answers. No tuning or selection against assistant labels/test.",
+  "syntheticTrainingViews": [
+    {
+      "baseName": "Layl & Nhar",
+      "businessId": "business-043a227708cbe2ce",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "laylnhar"
+    },
+    {
+      "baseName": "Lefties",
+      "businessId": "business-086ee7dac5285d36",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "leftties"
+    },
+    {
+      "baseName": "Adidas",
+      "businessId": "business-08bb42a30ca57f34",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "adidaas"
+    },
+    {
+      "baseName": "Dose Coffee",
+      "businessId": "business-08f701edeef895a1",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "dosecoffee"
+    },
+    {
+      "baseName": "chocolatte",
+      "businessId": "business-09a101f8fd8696f2",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "chhocolatte"
+    },
+    {
+      "baseName": "Dallea' Karshak",
+      "businessId": "business-0bdc61b372aba1c9",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "dalleakarshak"
+    },
+    {
+      "baseName": "CROWN",
+      "businessId": "business-0dcfafab5f8035e7",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "crowwn"
+    },
+    {
+      "baseName": "Bizantino Coffee Roaster",
+      "businessId": "business-108aa4d1b22a62ff",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "bizantinocoffee roaster"
+    },
+    {
+      "baseName": "Kids karting – Gorace",
+      "businessId": "business-11ddda72fae1fe62",
+      "businessWeight": 0.5,
+      "category": "Entertainment",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "kidskarting gorace"
+    },
+    {
+      "baseName": "Marcat",
+      "businessId": "business-14ee6d09a6b98430",
+      "businessWeight": 0.3333333333333333,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "marrcat"
+    },
+    {
+      "baseName": "Orange",
+      "businessId": "business-1b4c9133da73a711",
+      "businessWeight": 0.3333333333333333,
+      "category": "Telecom",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "orangge"
+    },
+    {
+      "baseName": "Arabian Oud",
+      "businessId": "business-1ebd4be2e41d766c",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "arabianoud"
+    },
+    {
+      "baseName": "Hummus & Chapati",
+      "businessId": "business-1f9e4b3ed3829a51",
+      "businessWeight": 0.3333333333333333,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "hummuschapati"
+    },
+    {
+      "baseName": "Hashem Restaurant",
+      "businessId": "business-21833d95822dc1ab",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "hashemrestaurant"
+    },
+    {
+      "baseName": "Garage",
+      "businessId": "business-21b747de22dbb757",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "garaage"
+    },
+    {
+      "baseName": "Al-Rayhan",
+      "businessId": "business-26efac787b8d99d1",
+      "businessWeight": 0.5,
+      "category": "Groceries",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "alrayhan"
+    },
+    {
+      "baseName": "EYFEL Perfume",
+      "businessId": "business-2900fd16f635a703",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "eyfelperfume"
+    },
+    {
+      "baseName": "Massimo Dutti",
+      "businessId": "business-2ae8e3db9922e385",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "massimodutti"
+    },
+    {
+      "baseName": "Grill Mark",
+      "businessId": "business-2d96abc68876ce17",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "grillmark"
+    },
+    {
+      "baseName": "Charly",
+      "businessId": "business-301b23f91f2d5f90",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "chaarly"
+    },
+    {
+      "baseName": "Shawarmeje",
+      "businessId": "business-30fc311b10581d2f",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "shawaarmeje"
+    },
+    {
+      "baseName": "Sallat As Sayyad Seafood",
+      "businessId": "business-3144127596e0299d",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "sallatas sayyad seafood"
+    },
+    {
+      "baseName": "Hip Hop world",
+      "businessId": "business-324cad6e4a8a02bf",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "hiphop world"
+    },
+    {
+      "baseName": "Catpuccino Coffee House",
+      "businessId": "business-329f7ed703b629fc",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "catpuccinocoffee house"
+    },
+    {
+      "baseName": "Al Domary Restaurant",
+      "businessId": "business-33c1a99510b39686",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "aldomary restaurant"
+    },
+    {
+      "baseName": "Stradivarius",
+      "businessId": "business-383a998a7954f6dc",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "sttradivarius"
+    },
+    {
+      "baseName": "Elegant ladies",
+      "businessId": "business-39c1060c8250481c",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "elegantladies"
+    },
+    {
+      "baseName": "The Body Shop",
+      "businessId": "business-3a675c66be82508c",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "thebody shop"
+    },
+    {
+      "baseName": "Bath & Body Works",
+      "businessId": "business-3c528d3a0450e7a4",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "bathbody works"
+    },
+    {
+      "baseName": "Hardees",
+      "businessId": "business-3d43020a3ae8b7a9",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "haardees"
+    },
+    {
+      "baseName": "جامعة اليرموك",
+      "businessId": "business-41166e5a9a66d87d",
+      "businessWeight": 0.5,
+      "category": "Education",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "جامعةاليرموك"
+    },
+    {
+      "baseName": "Al Kamal Cafe",
+      "businessId": "business-42f8b4e755fbfd47",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "alkamal cafe"
+    },
+    {
+      "baseName": "VRCADE",
+      "businessId": "business-43dbc11dd055aa71",
+      "businessWeight": 0.5,
+      "category": "Entertainment",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "vrccade"
+    },
+    {
+      "baseName": "AL-Hamwi Roastery",
+      "businessId": "business-4557dbc7393280be",
+      "businessWeight": 0.5,
+      "category": "Groceries",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "alhamwi roastery"
+    },
+    {
+      "baseName": "Yaseen Al Fawwal",
+      "businessId": "business-4657adb02457f191",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "yaseenal fawwal"
+    },
+    {
+      "baseName": "CIEL ROOF TOP",
+      "businessId": "business-47a521380f1c0dba",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "cielroof top"
+    },
+    {
+      "baseName": "Ocean",
+      "businessId": "business-47afad612b1f9cc8",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "occean"
+    },
+    {
+      "baseName": "Royal Candy",
+      "businessId": "business-47bb9f3a84b8d01d",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "royalcandy"
+    },
+    {
+      "baseName": "HAKUNA MATATA",
+      "businessId": "business-47e6250760e8416a",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "hakunamatata"
+    },
+    {
+      "baseName": "Hadra Maut",
+      "businessId": "business-48d2375b66baf75a",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "hadramaut"
+    },
+    {
+      "baseName": "Burgerizz",
+      "businessId": "business-497b07c882294c98",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "burrgerizz"
+    },
+    {
+      "baseName": "Foot Print",
+      "businessId": "business-4ba8deed0050e28b",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "footprint"
+    },
+    {
+      "baseName": "Cortina.D Coffee House",
+      "businessId": "business-4fe81d3ad746c7eb",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "cortinad coffee house"
+    },
+    {
+      "baseName": "ASTROLABE",
+      "businessId": "business-52af0bfbfd0db794",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "astrolabbe"
+    },
+    {
+      "baseName": "Planet Donuts",
+      "businessId": "business-52dbf67393761044",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "planetdonuts"
+    },
+    {
+      "baseName": "Hatan Coffee",
+      "businessId": "business-54a0c60d65912456",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "hatancoffee"
+    },
+    {
+      "baseName": "So Burger",
+      "businessId": "business-55677c3bb5af2b78",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "soburger"
+    },
+    {
+      "baseName": "Moments Cafe",
+      "businessId": "business-55d8d6689b98271b",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "momentscafe"
+    },
+    {
+      "baseName": "Brick House",
+      "businessId": "business-57d3821ce8c70a67",
+      "businessWeight": 0.5,
+      "category": "Entertainment",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "brickhouse"
+    },
+    {
+      "baseName": "Palestine Restaurant",
+      "businessId": "business-58a226568132d747",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "palestinerestaurant"
+    },
+    {
+      "baseName": "Happy Times",
+      "businessId": "business-592e99aa47f9b42b",
+      "businessWeight": 0.5,
+      "category": "Entertainment",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "happytimes"
+    },
+    {
+      "baseName": "La Vigor",
+      "businessId": "business-5947969be62ef693",
+      "businessWeight": 0.3333333333333333,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "lavigor"
+    },
+    {
+      "baseName": "Skechers",
+      "businessId": "business-5a4678b1389b99a2",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "skeechers"
+    },
+    {
+      "baseName": "Crepello",
+      "businessId": "business-5b50ac9aeb19d243",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "creppello"
+    },
+    {
+      "baseName": "Icc cafe",
+      "businessId": "business-64cc18ff5fd9692e",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "icccafe"
+    },
+    {
+      "baseName": "Koton",
+      "businessId": "business-64fea336b111aab3",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "kotton"
+    },
+    {
+      "baseName": "Mango",
+      "businessId": "business-6815f3c300383519",
+      "businessWeight": 0.3333333333333333,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "manggo"
+    },
+    {
+      "baseName": "Astra",
+      "businessId": "business-693b286515bd1dd0",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "astrra"
+    },
+    {
+      "baseName": "The Study House",
+      "businessId": "business-6a3d9a1447daaeeb",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "thestudy house"
+    },
+    {
+      "baseName": "CAV Cafe",
+      "businessId": "business-6cabb757b31cbc2e",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "cavcafe"
+    },
+    {
+      "baseName": "Calliope",
+      "businessId": "business-6ede337e4ec914bf",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "callliope"
+    },
+    {
+      "baseName": "Al Tamimi Optics",
+      "businessId": "business-702aaf3346725108",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "altamimi optics"
+    },
+    {
+      "baseName": "Calamantina",
+      "businessId": "business-71e9d6d570223080",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "calamanntina"
+    },
+    {
+      "baseName": "Darb Karting",
+      "businessId": "business-74bc218e6671d480",
+      "businessWeight": 0.5,
+      "category": "Entertainment",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "darbkarting"
+    },
+    {
+      "baseName": "Arafa restaurant",
+      "businessId": "business-74e2e11eaa71e86c",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "arafarestaurant"
+    },
+    {
+      "baseName": "Buffalo Wings & Rings",
+      "businessId": "business-77c5ac46ceecb212",
+      "businessWeight": 0.3333333333333333,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "buffalowings rings"
+    },
+    {
+      "baseName": "CASERECCIO PRONTO",
+      "businessId": "business-798d86cc5c0b499f",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "caserecciopronto"
+    },
+    {
+      "baseName": "C-Town",
+      "businessId": "business-7a8e6833f97b9104",
+      "businessWeight": 0.5,
+      "category": "Groceries",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "ctown"
+    },
+    {
+      "baseName": "Green Tea Cafe",
+      "businessId": "business-7b73badabe873e5f",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "greentea cafe"
+    },
+    {
+      "baseName": "LC Waikiki",
+      "businessId": "business-7e8ab6c16aead9cb",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "lcwaikiki"
+    },
+    {
+      "baseName": "Blueline",
+      "businessId": "business-813f87167add25a6",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "blueliine"
+    },
+    {
+      "baseName": "Firefly Burger",
+      "businessId": "business-81e6394c5599fe4d",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "fireflyburger"
+    },
+    {
+      "baseName": "Chixter",
+      "businessId": "business-8364d838c0d2139c",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "chixtter"
+    },
+    {
+      "baseName": "Alqebali Jewelry",
+      "businessId": "business-83f596bba48e1871",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "alqebalijewelry"
+    },
+    {
+      "baseName": "Defacto",
+      "businessId": "business-92db603fa7a35430",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "defactto"
+    },
+    {
+      "baseName": "Habibah Sweets",
+      "businessId": "business-962aa18bdbf0ac6d",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "habibahsweets"
+    },
+    {
+      "baseName": "Dr. Nutrition",
+      "businessId": "business-96858dbbaeefd108",
+      "businessWeight": 0.25,
+      "category": "Health",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "drnutrition"
+    },
+    {
+      "baseName": "Alpha Optical",
+      "businessId": "business-9a20e03d60e37d37",
+      "businessWeight": 0.3333333333333333,
+      "category": "Health",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "alphaoptical"
+    },
+    {
+      "baseName": "Bzuriyah Kabatilo",
+      "businessId": "business-9a2b1fc87772f356",
+      "businessWeight": 0.5,
+      "category": "Groceries",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "bzuriyahkabatilo"
+    },
+    {
+      "baseName": "Lebnani Snack",
+      "businessId": "business-9d44ec3a1a4c6f9c",
+      "businessWeight": 0.3333333333333333,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "lebnanisnack"
+    },
+    {
+      "baseName": "Larva",
+      "businessId": "business-9e98bf4fc074a67d",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "larrva"
+    },
+    {
+      "baseName": "Key Restaurant",
+      "businessId": "business-9fa084576fb8be68",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "keyrestaurant"
+    },
+    {
+      "baseName": "Design Shop",
+      "businessId": "business-a065f8149cbd25d0",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "designshop"
+    },
+    {
+      "baseName": "Prime Cinemas",
+      "businessId": "business-a2d289fd14bb494f",
+      "businessWeight": 0.3333333333333333,
+      "category": "Entertainment",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "primecinemas"
+    },
+    {
+      "baseName": "Jobedu",
+      "businessId": "business-a5e7a0d9a9b2427b",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "jobbedu"
+    },
+    {
+      "baseName": "Al Maseyah Pharmacy",
+      "businessId": "business-a8765bfdd501b52c",
+      "businessWeight": 0.5,
+      "category": "Health",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "almaseyah pharmacy"
+    },
+    {
+      "baseName": "Al-kubbeh Al Safra'a Pharmacy",
+      "businessId": "business-a88325c047605450",
+      "businessWeight": 0.5,
+      "category": "Health",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "alkubbeh al safra a pharmacy"
+    },
+    {
+      "baseName": "Hawana",
+      "businessId": "business-a897c935fdff241f",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "hawwana"
+    },
+    {
+      "baseName": "Amyal Gym",
+      "businessId": "business-a8d6fae07e30d92a",
+      "businessWeight": 0.5,
+      "category": "Health",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "amyalgym"
+    },
+    {
+      "baseName": "Azul Pastry",
+      "businessId": "business-aa1a61658d9211de",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "azulpastry"
+    },
+    {
+      "baseName": "Archies",
+      "businessId": "business-aad492b5bced8a45",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "archiees"
+    },
+    {
+      "baseName": "Hello Kids",
+      "businessId": "business-ab63db208d169ffb",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "hellokids"
+    },
+    {
+      "baseName": "Shelter Coffee",
+      "businessId": "business-ac726e89cf345d71",
+      "businessWeight": 0.25,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "sheltercoffee"
+    },
+    {
+      "baseName": "Gifts Center",
+      "businessId": "business-ae6548eba3b952ad",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "giftscenter"
+    },
+    {
+      "baseName": "Dima Pharmacy",
+      "businessId": "business-b08416e37939d783",
+      "businessWeight": 0.5,
+      "category": "Health",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "dimapharmacy"
+    },
+    {
+      "baseName": "YUMMY BITES",
+      "businessId": "business-b3a9de800ab6147c",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "yummybites"
+    },
+    {
+      "baseName": "Girli Girli",
+      "businessId": "business-b3e2e423ea1bc5c4",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "girligirli"
+    },
+    {
+      "baseName": "Jaka Men",
+      "businessId": "business-bcaccdf44d62395c",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "jakamen"
+    },
+    {
+      "baseName": "Choo Choo Train",
+      "businessId": "business-c01bc5ac16fd3d32",
+      "businessWeight": 0.5,
+      "category": "Entertainment",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "choochoo train"
+    },
+    {
+      "baseName": "Gravity Trampoline",
+      "businessId": "business-c22956a5be4e4a5c",
+      "businessWeight": 0.5,
+      "category": "Entertainment",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "gravitytrampoline"
+    },
+    {
+      "baseName": "Kuadu",
+      "businessId": "business-c408bdafc631634b",
+      "businessWeight": 0.3333333333333333,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "kuaadu"
+    },
+    {
+      "baseName": "Caffé Vergnano",
+      "businessId": "business-c42905f5b1c1eaa5",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "caffévergnano"
+    },
+    {
+      "baseName": "Royal Jordanian",
+      "businessId": "business-c492ed7fb70f1c42",
+      "businessWeight": 0.5,
+      "category": "Travel",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "royaljordanian"
+    },
+    {
+      "baseName": "Marie France",
+      "businessId": "business-c67786b35182c892",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "mariefrance"
+    },
+    {
+      "baseName": "B1-200 Laser Tag Arena",
+      "businessId": "business-c96433fa103e7a36",
+      "businessWeight": 0.5,
+      "category": "Entertainment",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "b1200 laser tag arena"
+    },
+    {
+      "baseName": "Season Restaurant and Cafe",
+      "businessId": "business-cb2c2e3d979ca252",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "seasonrestaurant and cafe"
+    },
+    {
+      "baseName": "Greyder",
+      "businessId": "business-ce7bb99828c2b0ba",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "greeyder"
+    },
+    {
+      "baseName": "Golden spoon",
+      "businessId": "business-cfc1afd7ea9201fb",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "goldenspoon"
+    },
+    {
+      "baseName": "Yousef Afandi",
+      "businessId": "business-d1874d08b9847b1b",
+      "businessWeight": 0.5,
+      "category": "Other",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "yousefafandi"
+    },
+    {
+      "baseName": "Gifty",
+      "businessId": "business-d1c43dc89132539d",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "giifty"
+    },
+    {
+      "baseName": "ZARA Home",
+      "businessId": "business-d1e14a1b8d1120d2",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "zarahome"
+    },
+    {
+      "baseName": "Bowling & Skating Center",
+      "businessId": "business-d2336bc8df4e99f3",
+      "businessWeight": 0.5,
+      "category": "Entertainment",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "bowlingskating center"
+    },
+    {
+      "baseName": "Abdul Samad Al Qurashi",
+      "businessId": "business-d4ed090ee3a6a3dd",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "remove_one_word_separator",
+      "text": "abdulsamad al qurashi"
+    },
+    {
+      "baseName": "SmartBuy",
+      "businessId": "business-d56c1d8a5710b24f",
+      "businessWeight": 0.3333333333333333,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "smarrtbuy"
+    },
+    {
+      "baseName": "Al Mousalli",
+      "businessId": "business-d6d6d7fb6eefd8c1",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "almousalli"
+    },
+    {
+      "baseName": "Rawan Cake",
+      "businessId": "business-d6fdd6cad3c36620",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "rawancake"
+    },
+    {
+      "baseName": "Concorde",
+      "businessId": "business-d8fc57d50eea1cd4",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "concoorde"
+    },
+    {
+      "baseName": "Hail Cafe",
+      "businessId": "business-db5957b36a73b416",
+      "businessWeight": 0.3333333333333333,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "hailcafe"
+    },
+    {
+      "baseName": "AJDA Coffee & Bakery",
+      "businessId": "business-dd55fcba16712c3c",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "ajdacoffee bakery"
+    },
+    {
+      "baseName": "Faces",
+      "businessId": "business-e203120a667bd3ea",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "human",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "facees"
+    },
+    {
+      "baseName": "Donuttery",
+      "businessId": "business-e2173a3ce1e30e06",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "donutttery"
+    },
+    {
+      "baseName": "Julnar",
+      "businessId": "business-e250507bad730ae7",
+      "businessWeight": 0.25,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "julnaar"
+    },
+    {
+      "baseName": "La Familia",
+      "businessId": "business-e5c0810559d83cb4",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "lafamilia"
+    },
+    {
+      "baseName": "Oysho",
+      "businessId": "business-e967e07ca1f6d3d3",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "oyysho"
+    },
+    {
+      "baseName": "Irbid Mall Hypermarket",
+      "businessId": "business-ecb1e2e3596353e5",
+      "businessWeight": 0.5,
+      "category": "Groceries",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "irbidmall hypermarket"
+    },
+    {
+      "baseName": "HyperMax",
+      "businessId": "business-ed86648290e2e377",
+      "businessWeight": 0.3333333333333333,
+      "category": "Groceries",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "hypermmax"
+    },
+    {
+      "baseName": "Zanjabeel",
+      "businessId": "business-f43b0112860a9caf",
+      "businessWeight": 0.3333333333333333,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "zanjabeeel"
+    },
+    {
+      "baseName": "Milavitsa",
+      "businessId": "business-f8d280dcb41a3bdc",
+      "businessWeight": 0.5,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "repeat_one_internal_latin_letter",
+      "text": "miilavitsa"
+    },
+    {
+      "baseName": "K-Reine",
+      "businessId": "business-f922894345507118",
+      "businessWeight": 0.3333333333333333,
+      "category": "Shopping",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "kreine"
+    },
+    {
+      "baseName": "Crispy Chicken",
+      "businessId": "business-ff0cf4fe4c6abe2e",
+      "businessWeight": 0.5,
+      "category": "Food",
+      "dataKind": "synthetic_name_perturbation",
+      "labelReviewerType": "assistant",
+      "method": "remove_one_word_separator",
+      "text": "crispychicken"
+    }
+  ],
+  "testInferencePerformed": false,
+  "testMetrics": null,
+  "variants": {
+    "aliases": {
+      "businessCount": 141,
+      "featureCount": 4073,
+      "methodCounts": {
+        "canonical_name": 141,
+        "source_observed_alias": 26
+      },
+      "modelPath": "data\\models\\merchant_category_research_aliases.json",
+      "modelSha256": "4aaa7b4d3d44647660bd8a6e3fd4ba3d5642cf93bb542e83d16d7573a7c82be7",
+      "trainingDiagnosticsNotHoldout": {
+        "arabicObservedNames": {
+          "allFormsAbstained": 3,
+          "allFormsCorrect": 14,
+          "businessCount": 17,
+          "records": [
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-9a20e03d60e37d37",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-77c5ac46ceecb212",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-96858dbbaeefd108",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-db5957b36a73b416",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-1f9e4b3ed3829a51",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-ed86648290e2e377",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-eefa3980fdf345e9",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-c408bdafc631634b",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-5947969be62ef693",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-9d44ec3a1a4c6f9c",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-6815f3c300383519",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-9baf3a40312f3984",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-1b4c9133da73a711",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-d56c1d8a5710b24f",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-259dbe8cfc8c4e77",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-f43b0112860a9caf",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-41166e5a9a66d87d",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            }
+          ]
+        },
+        "assistantLabelsOnly": {
+          "abstained": 0,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 110,
+          "businessCount": 110,
+          "correctAnswered": 110,
+          "correctIncludingAbstentionsAsMisses": 1.0,
+          "coverage": 1.0,
+          "top1AccuracyBeforeAbstention": 1.0,
+          "top1Confusion": [
+            {
+              "count": 7,
+              "expected": "Entertainment",
+              "predicted": "Entertainment"
+            },
+            {
+              "count": 56,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 2,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 1,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 44,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 0
+        },
+        "combinedResearchLabels": {
+          "abstained": 5,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 136,
+          "businessCount": 141,
+          "correctAnswered": 136,
+          "correctIncludingAbstentionsAsMisses": 0.9645390070921985,
+          "coverage": 0.9645390070921985,
+          "top1AccuracyBeforeAbstention": 1.0,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Education",
+              "predicted": "Education"
+            },
+            {
+              "count": 10,
+              "expected": "Entertainment",
+              "predicted": "Entertainment"
+            },
+            {
+              "count": 60,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 6,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 6,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 1,
+              "expected": "Other",
+              "predicted": "Other"
+            },
+            {
+              "count": 54,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 2,
+              "expected": "Telecom",
+              "predicted": "Telecom"
+            },
+            {
+              "count": 1,
+              "expected": "Travel",
+              "predicted": "Travel"
+            }
+          ],
+          "wrongAnswered": 0
+        },
+        "humanLabelsOnly": {
+          "abstained": 5,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 26,
+          "businessCount": 31,
+          "correctAnswered": 26,
+          "correctIncludingAbstentionsAsMisses": 0.8387096774193549,
+          "coverage": 0.8387096774193549,
+          "top1AccuracyBeforeAbstention": 1.0,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Education",
+              "predicted": "Education"
+            },
+            {
+              "count": 3,
+              "expected": "Entertainment",
+              "predicted": "Entertainment"
+            },
+            {
+              "count": 4,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 4,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 5,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 1,
+              "expected": "Other",
+              "predicted": "Other"
+            },
+            {
+              "count": 10,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 2,
+              "expected": "Telecom",
+              "predicted": "Telecom"
+            },
+            {
+              "count": 1,
+              "expected": "Travel",
+              "predicted": "Travel"
+            }
+          ],
+          "wrongAnswered": 0
+        }
+      },
+      "validation": {
+        "arabicObservedNames": {
+          "allFormsAbstained": 3,
+          "allFormsCorrect": 0,
+          "businessCount": 3,
+          "records": [
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-318e7c73bb60cb58",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-e2ec3acb77d3945e",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-d944bfb18e1258bf",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            }
+          ]
+        },
+        "assistantLabelsOnly": {
+          "abstained": 13,
+          "accuracyAmongAnswered": 0.7,
+          "answered": 10,
+          "businessCount": 23,
+          "correctAnswered": 7,
+          "correctIncludingAbstentionsAsMisses": 0.30434782608695654,
+          "coverage": 0.43478260869565216,
+          "top1AccuracyBeforeAbstention": 0.6521739130434783,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Entertainment",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 9,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 4,
+              "expected": "Food",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 1,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 3,
+              "expected": "Shopping",
+              "predicted": "Food"
+            },
+            {
+              "count": 5,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 3
+        },
+        "combinedResearchLabels": {
+          "abstained": 17,
+          "accuracyAmongAnswered": 0.7272727272727273,
+          "answered": 11,
+          "businessCount": 28,
+          "correctAnswered": 8,
+          "correctIncludingAbstentionsAsMisses": 0.2857142857142857,
+          "coverage": 0.39285714285714285,
+          "top1AccuracyBeforeAbstention": 0.6428571428571429,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Entertainment",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 11,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 4,
+              "expected": "Food",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 1,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 1,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 3,
+              "expected": "Shopping",
+              "predicted": "Food"
+            },
+            {
+              "count": 5,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Food"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 3
+        },
+        "humanLabelsOnly": {
+          "abstained": 4,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 1,
+          "businessCount": 5,
+          "correctAnswered": 1,
+          "correctIncludingAbstentionsAsMisses": 0.2,
+          "coverage": 0.2,
+          "top1AccuracyBeforeAbstention": 0.6,
+          "top1Confusion": [
+            {
+              "count": 2,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 1,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Food"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 0
+        },
+        "records": [
+          {
+            "businessId": "business-6dc5fad630e03878",
+            "expectedCategory": "Food",
+            "name": "99GRILL",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.3157894736842105,
+              "logits": [
+                -0.4173886082394506,
+                3.9557233872119064,
+                -0.24969295489312715,
+                2.3851983086743656,
+                -0.14572270262281603,
+                0.1695558508188716,
+                -1.871372984889557,
+                -1.948689695368104,
+                -1.8776106006920867
+              ],
+              "margin": 0.6172107678245695,
+              "reason": "accepted",
+              "scores": [
+                0.009827765724675825,
+                0.7792435272963604,
+                0.011622086195233049,
+                0.16203275947179083,
+                0.012895488512086403,
+                0.017675085973396242,
+                0.002296134920894561,
+                0.0021252948160289274,
+                0.0022818570895337914
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.7792435272963604
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-d0a371371323892f",
+            "expectedCategory": "Shopping",
+            "name": "America Today",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.13157894736842105,
+              "logits": [
+                -0.4372766322043202,
+                2.5627001337797144,
+                0.28234550697856897,
+                2.227692800599562,
+                0.5513457513778856,
+                0.5425120434902584,
+                -1.8809358914008705,
+                -1.9601127416172757,
+                -1.8882709711376873
+              ],
+              "margin": 0.1312988535699805,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.022964141339120347,
+                0.46123639227800683,
+                0.04716047115965956,
+                0.32993753870802633,
+                0.06171680812080599,
+                0.0611740208080617,
+                0.005420969466978207,
+                0.005008306418287253,
+                0.005381351701053793
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.46123639227800683
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-ec696a9e3cba9ddd",
+            "expectedCategory": "Shopping",
+            "name": "Bata",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.6,
+              "logits": [
+                -0.41829760857576953,
+                2.9433645592127218,
+                0.057775334296057766,
+                3.0902712941352695,
+                -0.13803817128094867,
+                0.16816182363012316,
+                -1.873624990686378,
+                -1.9509880804977362,
+                -1.8786241601925153
+              ],
+              "margin": 0.0664729156524706,
+              "reason": "low_model_score",
+              "scores": [
+                0.014566688680750678,
+                0.42006081250939,
+                0.02344858771178603,
+                0.4865337281618606,
+                0.019278621005077132,
+                0.026185262615161718,
+                0.0033987575643394563,
+                0.0031457327527957346,
+                0.0033818089988387353
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.4865337281618606
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-d69947d5eac06039",
+            "expectedCategory": "Food",
+            "name": "BLACK SKILLET",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.18421052631578946,
+              "logits": [
+                -0.41639205723920736,
+                2.8655053076012886,
+                -0.027738193594561325,
+                2.7163394680456086,
+                -0.13283335173181454,
+                0.6947467555481752,
+                -1.8716496821730488,
+                -1.9493649812600544,
+                -1.8786132652341827
+              ],
+              "margin": 0.0646358483918017,
+              "reason": "low_model_score",
+              "scores": [
+                0.017517920493324707,
+                0.4664364342424386,
+                0.025838826112635594,
+                0.4018005858506369,
+                0.023261115194336986,
+                0.05321621791661988,
+                0.0040876358053684135,
+                0.003781994292599986,
+                0.00405927009203904
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.4664364342424386
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-417207aade006d37",
+            "expectedCategory": "Entertainment",
+            "name": "Butterfly Fun Kids",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.3888888888888889,
+              "logits": [
+                -0.504276605866636,
+                2.9766891062744163,
+                -0.2549164597044581,
+                3.380557608136244,
+                -0.2763393506325167,
+                0.49557010627411596,
+                -1.9118815823170687,
+                -1.9888408624708205,
+                -1.9165619597805645
+              ],
+              "margin": 0.1834706427571498,
+              "reason": "low_model_score",
+              "scores": [
+                0.0113479104396346,
+                0.3687059109147563,
+                0.014561685099184131,
+                0.5521765536719061,
+                0.014253049445237947,
+                0.03084209065861823,
+                0.00277715951537399,
+                0.002571448523988202,
+                0.002764191731300472
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.5521765536719061
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-e7ad16e473249c85",
+            "expectedCategory": "Shopping",
+            "name": "Charles & Keith",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.2894736842105263,
+              "logits": [
+                -0.5001329593592573,
+                4.671303780851501,
+                -0.36993618532266115,
+                1.6182261151166828,
+                0.0745463563152661,
+                0.3212937111336947,
+                -1.9105472595050759,
+                -1.9875049477092506,
+                -1.9172486114002958
+              ],
+              "margin": 0.8770202332465332,
+              "reason": "accepted",
+              "scores": [
+                0.005225014855043387,
+                0.9204791789442763,
+                0.005951566218710291,
+                0.043458945697743105,
+                0.009282556154864905,
+                0.011880332614668566,
+                0.0012751238877739448,
+                0.0011806742251710561,
+                0.001266607401748444
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9204791789442763
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-c446d82fedadc0aa",
+            "expectedCategory": "Food",
+            "name": "Cinnabon",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.13636363636363635,
+              "logits": [
+                -0.4269935615522447,
+                2.9749994859316926,
+                -0.24212424885322037,
+                2.860464613045162,
+                0.0961016946773257,
+                0.4512810631014088,
+                -1.8770116555337688,
+                -1.954273652910547,
+                -1.8824437378480727
+              ],
+              "margin": 0.050942721502368116,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.015678740476163983,
+                0.47073661435159986,
+                0.018862484410634855,
+                0.41979389284923174,
+                0.026453829783510834,
+                0.03773470807703571,
+                0.0036777001256015182,
+                0.0034042532086425853,
+                0.0036577767175789426
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.47073661435159986
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-95d7a40f6c0b96c9",
+            "expectedCategory": "Groceries",
+            "name": "Fouad Supermarket",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.52,
+              "logits": [
+                -0.5302278779284342,
+                1.903198423823358,
+                2.5277315644222704,
+                2.1793377333869626,
+                -0.10650755137959658,
+                -0.12961459065455624,
+                -1.9207121164738208,
+                -1.9968093124007504,
+                -1.9263962726385424
+              ],
+              "margin": 0.11937198309947078,
+              "reason": "low_model_score",
+              "scores": [
+                0.019064947089183087,
+                0.2172997463044938,
+                0.4057798862014647,
+                0.28640790310199393,
+                0.029124267011122182,
+                0.028459007122837866,
+                0.00474630860188799,
+                0.004398528193759843,
+                0.004719406373256638
+              ],
+              "topClass": "Groceries",
+              "uncalibratedModelScore": 0.4057798862014647
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-f3a35c80504bd4ab",
+            "expectedCategory": "Food",
+            "name": "FUEL Coffee House",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.7450980392156863,
+              "logits": [
+                -0.7157543258561291,
+                6.324149002680338,
+                -0.7512524331503257,
+                0.4112589629408825,
+                -0.6073927023639318,
+                1.0356834303610252,
+                -2.0245025200954427,
+                -2.101889215855184,
+                -1.570300199099229
+              ],
+              "margin": 0.9838518311047106,
+              "reason": "accepted",
+              "scores": [
+                0.0008664371317184545,
+                0.9888450063519123,
+                0.000836219756319002,
+                0.0026741927579080026,
+                0.0009656014541509938,
+                0.004993175247201712,
+                0.00023407494878008862,
+                0.00021664382860919168,
+                0.000368648523400121
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9888450063519123
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-c10f146bf26237e2",
+            "expectedCategory": "Shopping",
+            "name": "Gissah Abaya",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.11428571428571428,
+              "logits": [
+                -0.44700644349999996,
+                2.2908497491,
+                0.4213325554499999,
+                3.22864281875,
+                0.1916827499,
+                0.0629439746,
+                -1.8884938819500001,
+                -1.9660757333499999,
+                -1.8938757891500002
+              ],
+              "margin": 0.3839522926717329,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.01598438673624798,
+                0.2470198281764898,
+                0.03808998610795846,
+                0.6309721208482227,
+                0.03027437394324064,
+                0.026617338717538904,
+                0.0037815159657545797,
+                0.003499230639247758,
+                0.003761218865299085
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.6309721208482227
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-5c0acb2bb1bc55bd",
+            "expectedCategory": "Health",
+            "name": "Hayatona Pharmacy",
+            "prediction": {
+              "category": "Health",
+              "knownFeatureFraction": 0.56,
+              "logits": [
+                -0.6528090683672534,
+                1.6060558787888743,
+                -0.5114959298176971,
+                0.764534229433774,
+                5.101510989754144,
+                -0.2362022271847939,
+                -1.9960320303641867,
+                -2.0732154241303453,
+                -2.002346417715651
+              ],
+              "margin": 0.9169828493329439,
+              "reason": "accepted",
+              "scores": [
+                0.002996884582380687,
+                0.0286868326182488,
+                0.0034517674875678877,
+                0.012365577129685548,
+                0.9456696819511927,
+                0.004545692665758826,
+                0.0007821961916385458,
+                0.000724094710734132,
+                0.0007772726627928579
+              ],
+              "topClass": "Health",
+              "uncalibratedModelScore": 0.9456696819511927
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-08a444860a89cd3d",
+            "expectedCategory": "Food",
+            "name": "Jabal Coffee",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.6571428571428571,
+              "logits": [
+                -0.6404516884033113,
+                6.177040257967869,
+                -0.17679707668375952,
+                1.1266742198114053,
+                -0.17786271256865027,
+                -0.45148765496790555,
+                -1.9828816356281096,
+                -1.8811592565325885,
+                -1.99307445326601
+              ],
+              "margin": 0.9806608555016844,
+              "reason": "accepted",
+              "scores": [
+                0.0010802174257665623,
+                0.9869844528647627,
+                0.0017174093315036104,
+                0.006323597363078264,
+                0.0017155801732723346,
+                0.0013048999542991557,
+                0.00028216377726105504,
+                0.0003123767688990155,
+                0.0002793023411572883
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9869844528647627
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-1e60bed1be4a2604",
+            "expectedCategory": "Shopping",
+            "name": "JACK & JONES",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.1724137931034483,
+              "logits": [
+                -0.2951681436442805,
+                2.509456676157679,
+                -0.36065834646762407,
+                2.9675831044488588,
+                -0.15271132463296577,
+                0.7425617117924566,
+                -1.9096300299716222,
+                -1.5848326603568308,
+                -1.9166009873256709
+              ],
+              "margin": 0.19502493398099652,
+              "reason": "low_model_score",
+              "scores": [
+                0.020314191352626264,
+                0.3356082452641207,
+                0.019026438661030015,
+                0.5306331792451172,
+                0.023424360836539464,
+                0.05734293119226691,
+                0.004042477865019762,
+                0.005593779666312173,
+                0.004014395916967503
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.5306331792451172
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-318e7c73bb60cb58",
+            "expectedCategory": "Transportation",
+            "name": "JETT",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.0,
+              "logits": [
+                -0.3617478829,
+                2.837211781,
+                -0.1286597169,
+                3.0070072559,
+                -0.0407369344,
+                0.3135214947,
+                -1.8476938207,
+                -1.9257220303,
+                -1.8531801464
+              ],
+              "margin": 0.07582186443576672,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.0167180499535264,
+                0.409709607835025,
+                0.021106417418167548,
+                0.48553147227079174,
+                0.02304617748228961,
+                0.03284364755405938,
+                0.0037830971783095126,
+                0.003499131601598425,
+                0.0037623987062324507
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.48553147227079174
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-282320a8fd15e556",
+            "expectedCategory": "Food",
+            "name": "Karak Delights",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.12195121951219512,
+              "logits": [
+                -0.46962186411487683,
+                2.5909923415464644,
+                -0.30646459859440606,
+                3.6371000080333067,
+                -0.2114484411346095,
+                0.5246300945949888,
+                -1.8940895399017028,
+                -1.9713754969330417,
+                -1.8997225034514014
+              ],
+              "margin": 0.4429445904288566,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.011240367621327959,
+                0.2398768714612005,
+                0.013232405933469202,
+                0.6828214618900571,
+                0.014551367470598079,
+                0.03037936239115317,
+                0.0027048430127644945,
+                0.0025036706565145683,
+                0.0026896495629148798
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.6828214618900571
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-579df02a3a8e9c81",
+            "expectedCategory": "Shopping",
+            "name": "kiko Milano",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.28125,
+              "logits": [
+                -0.42932359903333334,
+                2.8381606639999992,
+                -0.2416733650666667,
+                3.4108546507333335,
+                -0.1520841378,
+                0.29678703756666663,
+                -1.880041556433334,
+                -1.957320563533333,
+                -1.8853591304999997
+              ],
+              "margin": 0.25663356543283755,
+              "reason": "low_model_score",
+              "scores": [
+                0.012649189547335717,
+                0.3319808905747573,
+                0.01526012747993539,
+                0.5886144560075949,
+                0.016690381692588012,
+                0.026146197852162774,
+                0.0029649945321511247,
+                0.002744492513587887,
+                0.0029492697998868725
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.5886144560075949
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-0114743ae9f5e84f",
+            "expectedCategory": "Food",
+            "name": "La Capitale",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.25,
+              "logits": [
+                -0.49089390243295106,
+                4.070106305235947,
+                -0.3463792003585881,
+                2.8478095628215887,
+                -0.2573226231527097,
+                0.002642271506683967,
+                -1.911644849424571,
+                -1.9967984514816277,
+                -1.9175191125723494
+              ],
+              "margin": 0.5207190923778668,
+              "reason": "accepted",
+              "scores": [
+                0.007714749216023936,
+                0.738140500772955,
+                0.008914228262050693,
+                0.21742140839508817,
+                0.009744521781544403,
+                0.012637519826429711,
+                0.0018633632098349672,
+                0.0017112591254249171,
+                0.001852449410648183
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.738140500772955
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-e2ec3acb77d3945e",
+            "expectedCategory": "Shopping",
+            "name": "La Vie En Rose",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.37209302325581395,
+              "logits": [
+                -0.4890383662500001,
+                4.0091579874250005,
+                -0.17511387439999995,
+                2.5071463577749986,
+                -0.25192596257500005,
+                0.20434358027500002,
+                -1.9065870628250001,
+                -1.9841097706000004,
+                -1.9138728889
+              ],
+              "margin": 0.6010423485319418,
+              "reason": "accepted",
+              "scores": [
+                0.00860526714015582,
+                0.7732255780970948,
+                0.011778772441512292,
+                0.17218322956515297,
+                0.010907895421500112,
+                0.017214575202317985,
+                0.002085118685988498,
+                0.001929581364091211,
+                0.0020699820821862874
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.7732255780970948
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-e444c5aa0941eacf",
+            "expectedCategory": "Food",
+            "name": "Malabarai Indian Restaurant",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.5185185185185185,
+              "logits": [
+                -0.49877978512040133,
+                5.5576009860535605,
+                -0.4585795864027683,
+                1.9695845065757256,
+                -0.5325652178218407,
+                -0.28637788028272737,
+                -1.987390039671145,
+                -1.920018433516828,
+                -1.8434745503382026
+              ],
+              "margin": 0.9355766230199052,
+              "reason": "accepted",
+              "scores": [
+                0.002254267191634808,
+                0.9621840195289892,
+                0.0023467353473442054,
+                0.026607396509084023,
+                0.0021793780043596208,
+                0.0027877277975119747,
+                0.0005087567345538626,
+                0.0005442134712536273,
+                0.0005875054152686827
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9621840195289892
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-bb2f2efc6e319898",
+            "expectedCategory": "Transportation",
+            "name": "Manaseer Gas Station",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.35,
+              "logits": [
+                -0.5196409019278008,
+                2.9784487834596476,
+                -0.23521705495717435,
+                2.733320451188728,
+                0.5651324461660652,
+                0.30096630281013553,
+                -1.9116797963867205,
+                -1.9938749184767899,
+                -1.917455311832447
+              ],
+              "margin": 0.1069205720451169,
+              "reason": "low_model_score",
+              "scores": [
+                0.014880203607474695,
+                0.4918242307048948,
+                0.019775732596761762,
+                0.3849036586597779,
+                0.04402708711275091,
+                0.033806020818394046,
+                0.003698742208288622,
+                0.003406882656019744,
+                0.00367744163563755
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.4918242307048948
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-66a6ec3a3a17d0cb",
+            "expectedCategory": "Food",
+            "name": "Marouf Coffee",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.5,
+              "logits": [
+                -0.6132019940865475,
+                5.980168055267698,
+                -0.4842251683763901,
+                2.01080858443624,
+                -0.45402327247157925,
+                -0.43593927060198323,
+                -1.9726218504509416,
+                -2.0485155185255444,
+                -1.9824495654433112
+              ],
+              "margin": 0.9561778420092754,
+              "reason": "accepted",
+              "scores": [
+                0.0013346111936044828,
+                0.9745833614126886,
+                0.0015183387877339988,
+                0.018405519403413322,
+                0.0015648950018983844,
+                0.0015934520001957076,
+                0.00034274112729863943,
+                0.00031769181042077253,
+                0.0003393892627461344
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9745833614126886
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-d944bfb18e1258bf",
+            "expectedCategory": "Food",
+            "name": "McDonald's",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.10344827586206896,
+              "logits": [
+                -0.4105509715453304,
+                3.2135213038221715,
+                -0.23168283482484994,
+                3.05989130785721,
+                -0.13117657445875203,
+                0.19100449417514018,
+                -1.8691805902204834,
+                -1.9467529563795465,
+                -1.8750731784832937
+              ],
+              "margin": 0.0705625136554266,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.01321650884878024,
+                0.4954859478763534,
+                0.015805134494336615,
+                0.4249234342209268,
+                0.017476220277895093,
+                0.0241195371990276,
+                0.0030735618470574236,
+                0.0028441513666637905,
+                0.003055503868958955
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.4954859478763534
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-35a70053deeceefd",
+            "expectedCategory": "Shopping",
+            "name": "Mikyajy",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.05263157894736842,
+              "logits": [
+                -0.3860516972,
+                2.6066754428000003,
+                -0.1692981712,
+                3.4490444883,
+                -0.0819701517,
+                0.24456932320000002,
+                -1.8598923512,
+                -1.9376198389,
+                -1.8654570441
+              ],
+              "margin": 0.3641458303670779,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.013815437717233064,
+                0.27547965603524693,
+                0.01715929772445715,
+                0.6396254864023249,
+                0.018725162124951792,
+                0.025956126294812358,
+                0.0031643446991410852,
+                0.0029277040066796028,
+                0.003146784995153186
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.6396254864023249
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-bc038c62c44e501a",
+            "expectedCategory": "Food",
+            "name": "Reyad BBQ",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.19230769230769232,
+              "logits": [
+                -0.4033185809446701,
+                2.901960406246128,
+                -0.21083344334701595,
+                3.1196721284061057,
+                0.07043558660625075,
+                0.20390213041123117,
+                -1.8659841040507457,
+                -1.944038365586817,
+                -1.871795757740467
+              ],
+              "margin": 0.09825595357060796,
+              "reason": "low_model_score",
+              "scores": [
+                0.014821077305444116,
+                0.4039654268082041,
+                0.01796697674259987,
+                0.502221380378812,
+                0.0238028299114632,
+                0.027201470144103367,
+                0.003432829289116951,
+                0.0031750726858345655,
+                0.0034129367344218663
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.502221380378812
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-621c52f97816ab53",
+            "expectedCategory": "Food",
+            "name": "Sakura Sushi",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.2,
+              "logits": [
+                -0.4300808544245433,
+                3.149012668275403,
+                -0.2542834433288691,
+                3.141639057124232,
+                -0.03369504549604884,
+                0.14893555373157868,
+                -1.8792609751981277,
+                -1.957347426817835,
+                -1.8849195338279932
+              ],
+              "margin": 0.0033945602537068242,
+              "reason": "low_model_score",
+              "scores": [
+                0.01289207724227568,
+                0.462065417844644,
+                0.015369889474256658,
+                0.4586708575909372,
+                0.019163333973112873,
+                0.023003108606032708,
+                0.00302657868488085,
+                0.002799235608736518,
+                0.0030095009751234954
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.462065417844644
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-4de7ee7d82499823",
+            "expectedCategory": "Food",
+            "name": "Shawarma Reem",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.5789473684210527,
+              "logits": [
+                -0.5158008991569641,
+                4.4268382523388,
+                -0.15508324337319807,
+                1.5963045383547456,
+                0.5649040741716872,
+                -0.07588000159054561,
+                -1.9196233078448022,
+                -1.996911264239587,
+                -1.924748148681451
+              ],
+              "margin": 0.8450406675084963,
+              "reason": "accepted",
+              "scores": [
+                0.00640794059500282,
+                0.898006306203701,
+                0.009191283553048437,
+                0.05296563869520474,
+                0.018882638700091315,
+                0.009948868606807704,
+                0.0015741501362200488,
+                0.001457070006138401,
+                0.0015661035037855652
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.898006306203701
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-b21492b15d85500e",
+            "expectedCategory": "Food",
+            "name": "Starbucks",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.16,
+              "logits": [
+                -0.41258176209999997,
+                2.95301316795,
+                -0.2191683358,
+                3.006012072,
+                -0.1253529611,
+                0.49841360875,
+                -1.8722861814,
+                -1.9497877328500002,
+                -1.8782618754499998
+              ],
+              "margin": 0.023806985821059612,
+              "reason": "low_model_score",
+              "scores": [
+                0.01510841218865362,
+                0.43739934787764867,
+                0.018332310673909523,
+                0.4612063336987083,
+                0.02013542070472236,
+                0.037571547861390275,
+                0.003509758627381408,
+                0.003248020443742774,
+                0.0034888479238430353
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.4612063336987083
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-87bd49da1ecbe2f3",
+            "expectedCategory": "Food",
+            "name": "Zarooba",
+            "prediction": {
+              "category": "Shopping",
+              "knownFeatureFraction": 0.21052631578947367,
+              "logits": [
+                0.22978567395000007,
+                2.3278316320000005,
+                -0.3207089894,
+                3.7638305066500006,
+                -0.23906022640000002,
+                0.032201358999999985,
+                -1.9004144869,
+                -1.98775306045,
+                -1.9057124085
+              ],
+              "margin": 0.5703626507670734,
+              "reason": "accepted",
+              "scores": [
+                0.021842895237546945,
+                0.17802458628714904,
+                0.012596021933731173,
+                0.7483872370542224,
+                0.013667623770370166,
+                0.01792670307199491,
+                0.002595231044288383,
+                0.0023781835298116167,
+                0.002581518070885453
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.7483872370542224
+            },
+            "reviewerType": "assistant"
+          }
+        ]
+      },
+      "viewCount": 167
+    },
+    "augmented": {
+      "businessCount": 141,
+      "featureCount": 5242,
+      "methodCounts": {
+        "canonical_name": 141,
+        "remove_one_word_separator": 89,
+        "repeat_one_internal_latin_letter": 41,
+        "source_observed_alias": 26
+      },
+      "modelPath": "data\\models\\merchant_category_research_augmented.json",
+      "modelSha256": "bbd416815106314ff9956b3c4d499b09866099729603ad8ea0b652332731bce1",
+      "trainingDiagnosticsNotHoldout": {
+        "arabicObservedNames": {
+          "allFormsAbstained": 4,
+          "allFormsCorrect": 13,
+          "businessCount": 17,
+          "records": [
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-9a20e03d60e37d37",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-77c5ac46ceecb212",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-96858dbbaeefd108",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-db5957b36a73b416",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-1f9e4b3ed3829a51",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-ed86648290e2e377",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-eefa3980fdf345e9",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-c408bdafc631634b",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-5947969be62ef693",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-9d44ec3a1a4c6f9c",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-6815f3c300383519",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-9baf3a40312f3984",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-1b4c9133da73a711",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-d56c1d8a5710b24f",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-259dbe8cfc8c4e77",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": false,
+              "allFormsCorrect": true,
+              "businessId": "business-f43b0112860a9caf",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-41166e5a9a66d87d",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            }
+          ]
+        },
+        "assistantLabelsOnly": {
+          "abstained": 0,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 110,
+          "businessCount": 110,
+          "correctAnswered": 110,
+          "correctIncludingAbstentionsAsMisses": 1.0,
+          "coverage": 1.0,
+          "top1AccuracyBeforeAbstention": 1.0,
+          "top1Confusion": [
+            {
+              "count": 7,
+              "expected": "Entertainment",
+              "predicted": "Entertainment"
+            },
+            {
+              "count": 56,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 2,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 1,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 44,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 0
+        },
+        "combinedResearchLabels": {
+          "abstained": 5,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 136,
+          "businessCount": 141,
+          "correctAnswered": 136,
+          "correctIncludingAbstentionsAsMisses": 0.9645390070921985,
+          "coverage": 0.9645390070921985,
+          "top1AccuracyBeforeAbstention": 1.0,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Education",
+              "predicted": "Education"
+            },
+            {
+              "count": 10,
+              "expected": "Entertainment",
+              "predicted": "Entertainment"
+            },
+            {
+              "count": 60,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 6,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 6,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 1,
+              "expected": "Other",
+              "predicted": "Other"
+            },
+            {
+              "count": 54,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 2,
+              "expected": "Telecom",
+              "predicted": "Telecom"
+            },
+            {
+              "count": 1,
+              "expected": "Travel",
+              "predicted": "Travel"
+            }
+          ],
+          "wrongAnswered": 0
+        },
+        "humanLabelsOnly": {
+          "abstained": 5,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 26,
+          "businessCount": 31,
+          "correctAnswered": 26,
+          "correctIncludingAbstentionsAsMisses": 0.8387096774193549,
+          "coverage": 0.8387096774193549,
+          "top1AccuracyBeforeAbstention": 1.0,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Education",
+              "predicted": "Education"
+            },
+            {
+              "count": 3,
+              "expected": "Entertainment",
+              "predicted": "Entertainment"
+            },
+            {
+              "count": 4,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 4,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 5,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 1,
+              "expected": "Other",
+              "predicted": "Other"
+            },
+            {
+              "count": 10,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 2,
+              "expected": "Telecom",
+              "predicted": "Telecom"
+            },
+            {
+              "count": 1,
+              "expected": "Travel",
+              "predicted": "Travel"
+            }
+          ],
+          "wrongAnswered": 0
+        }
+      },
+      "validation": {
+        "arabicObservedNames": {
+          "allFormsAbstained": 3,
+          "allFormsCorrect": 0,
+          "businessCount": 3,
+          "records": [
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-318e7c73bb60cb58",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-e2ec3acb77d3945e",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-d944bfb18e1258bf",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            }
+          ]
+        },
+        "assistantLabelsOnly": {
+          "abstained": 13,
+          "accuracyAmongAnswered": 0.7,
+          "answered": 10,
+          "businessCount": 23,
+          "correctAnswered": 7,
+          "correctIncludingAbstentionsAsMisses": 0.30434782608695654,
+          "coverage": 0.43478260869565216,
+          "top1AccuracyBeforeAbstention": 0.6521739130434783,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Entertainment",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 10,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 3,
+              "expected": "Food",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 1,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 4,
+              "expected": "Shopping",
+              "predicted": "Food"
+            },
+            {
+              "count": 4,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 3
+        },
+        "combinedResearchLabels": {
+          "abstained": 17,
+          "accuracyAmongAnswered": 0.7272727272727273,
+          "answered": 11,
+          "businessCount": 28,
+          "correctAnswered": 8,
+          "correctIncludingAbstentionsAsMisses": 0.2857142857142857,
+          "coverage": 0.39285714285714285,
+          "top1AccuracyBeforeAbstention": 0.6428571428571429,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Entertainment",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 12,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 3,
+              "expected": "Food",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 1,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 1,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 4,
+              "expected": "Shopping",
+              "predicted": "Food"
+            },
+            {
+              "count": 4,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Food"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 3
+        },
+        "humanLabelsOnly": {
+          "abstained": 4,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 1,
+          "businessCount": 5,
+          "correctAnswered": 1,
+          "correctIncludingAbstentionsAsMisses": 0.2,
+          "coverage": 0.2,
+          "top1AccuracyBeforeAbstention": 0.6,
+          "top1Confusion": [
+            {
+              "count": 2,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 1,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Food"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 0
+        },
+        "records": [
+          {
+            "businessId": "business-6dc5fad630e03878",
+            "expectedCategory": "Food",
+            "name": "99GRILL",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.3157894736842105,
+              "logits": [
+                -0.5193951960646636,
+                4.204993877923278,
+                -0.2073093832387323,
+                2.1193027718612427,
+                -0.17996242940246301,
+                0.1516223503348706,
+                -1.8219483108695578,
+                -1.9168118917487482,
+                -1.8304917884502783
+              ],
+              "margin": 0.7408973329380675,
+              "reason": "accepted",
+              "scores": [
+                0.00750909360834437,
+                0.845986871514285,
+                0.010259463829247605,
+                0.10508953857621747,
+                0.010543900423938966,
+                0.01468949060968073,
+                0.0020412485447644326,
+                0.0018565094252408069,
+                0.00202388346828078
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.845986871514285
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-d0a371371323892f",
+            "expectedCategory": "Shopping",
+            "name": "America Today",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.15789473684210525,
+              "logits": [
+                -0.530692676358889,
+                2.447509927037814,
+                0.11687215532029227,
+                2.3285072157703444,
+                0.6447972336466044,
+                0.5840347685214107,
+                -1.8282013023120112,
+                -1.9243690865704615,
+                -1.8384582350367535
+              ],
+              "margin": 0.04682194721182781,
+              "reason": "low_model_score",
+              "scores": [
+                0.021235404369715327,
+                0.4173279692128728,
+                0.04057834856843089,
+                0.370506022001045,
+                0.06879697088903086,
+                0.06474116549694013,
+                0.005801759190298298,
+                0.005269805189745216,
+                0.005742555081921383
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.4173279692128728
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-ec696a9e3cba9ddd",
+            "expectedCategory": "Shopping",
+            "name": "Bata",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.6,
+              "logits": [
+                -0.5176878071636398,
+                2.999852805176479,
+                0.13782023340519892,
+                2.967218415974169,
+                -0.17331522989980266,
+                0.15877292602174758,
+                -1.8234421318217704,
+                -1.9184375161514355,
+                -1.8307816955225955
+              ],
+              "margin": 0.014739875782726675,
+              "reason": "low_model_score",
+              "scores": [
+                0.01362188009014435,
+                0.4590769956280183,
+                0.026237386799624063,
+                0.4443371198452916,
+                0.019221893337063797,
+                0.026792930443703608,
+                0.0036910944222025136,
+                0.0033565968590264146,
+                0.0036641025749252253
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.4590769956280183
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-d69947d5eac06039",
+            "expectedCategory": "Food",
+            "name": "BLACK SKILLET",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.18421052631578946,
+              "logits": [
+                -0.5047578610194005,
+                2.979863742839219,
+                0.0523618142861063,
+                2.682996128542639,
+                -0.14987828794383337,
+                0.4926466533162474,
+                -1.8162741546817718,
+                -1.9118365512309252,
+                -1.8251214840082808
+              ],
+              "margin": 0.12984624061255273,
+              "reason": "low_model_score",
+              "scores": [
+                0.015501902615543668,
+                0.5055183657451724,
+                0.02706069865343172,
+                0.37567212513261966,
+                0.02210585131485495,
+                0.042029312020790965,
+                0.0041763868054611655,
+                0.003795757803274204,
+                0.004139599908851242
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.5055183657451724
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-417207aade006d37",
+            "expectedCategory": "Entertainment",
+            "name": "Butterfly Fun Kids",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.3888888888888889,
+              "logits": [
+                -0.5910925859800699,
+                2.9322406917040142,
+                -0.17510880724270028,
+                3.3274382158223994,
+                -0.29666363880280544,
+                0.4784193614527364,
+                -1.8580002296873537,
+                -1.9522587609609525,
+                -1.8649742461398033
+              ],
+              "margin": 0.17894092044093096,
+              "reason": "low_model_score",
+              "scores": [
+                0.010891624940217351,
+                0.36919590738407654,
+                0.01651019251757266,
+                0.5481368278250075,
+                0.014620477097082415,
+                0.03173772661269384,
+                0.0030681859650282116,
+                0.002792194832307113,
+                0.0030468628260143012
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.5481368278250075
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-e7ad16e473249c85",
+            "expectedCategory": "Shopping",
+            "name": "Charles & Keith",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.2894736842105263,
+              "logits": [
+                -0.5751448634609715,
+                4.404365747103893,
+                -0.2841071732027627,
+                1.6663256681191418,
+                0.11924009749350918,
+                0.3230175559802619,
+                -1.850204502799697,
+                -1.9447091558224505,
+                -1.8587833732807737
+              ],
+              "margin": 0.8373295520264387,
+              "reason": "accepted",
+              "scores": [
+                0.00615701372987106,
+                0.8952495322983358,
+                0.008236945357462536,
+                0.05791998027189711,
+                0.01232927895856543,
+                0.01511600770677015,
+                0.0017203577038349517,
+                0.0015652218693966756,
+                0.0017056621038662677
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.8952495322983358
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-c446d82fedadc0aa",
+            "expectedCategory": "Food",
+            "name": "Cinnabon",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.13636363636363635,
+              "logits": [
+                -0.5314317007579218,
+                2.889485240313128,
+                -0.2015506541045386,
+                2.7290104495625545,
+                0.1798081618691465,
+                0.5246502388891587,
+                -1.8291449555413604,
+                -1.9239180039209187,
+                -1.8369087762092484
+              ],
+              "margin": 0.07005637714291779,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.015443163279899764,
+                0.4725215433683193,
+                0.021478392846329162,
+                0.4024651662254015,
+                0.031450228917026125,
+                0.04440039380588407,
+                0.004218388337136074,
+                0.0038369588860970413,
+                0.00418576433390699
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.4725215433683193
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-95d7a40f6c0b96c9",
+            "expectedCategory": "Groceries",
+            "name": "Fouad Supermarket",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.52,
+              "logits": [
+                -0.6244074873564387,
+                1.904560573987589,
+                2.6305339013558737,
+                2.059414638880451,
+                -0.11481584947229784,
+                -0.13841982168885156,
+                -1.8718669943652646,
+                -1.9651244399633163,
+                -1.8798745215719226
+              ],
+              "margin": 0.19368616355984647,
+              "reason": "low_model_score",
+              "scores": [
+                0.017175099604424985,
+                0.2153853391035855,
+                0.44514586999247,
+                0.25145970643262355,
+                0.028589864741767456,
+                0.027922932458948623,
+                0.004933265443068254,
+                0.004494002296910324,
+                0.004893919926201206
+              ],
+              "topClass": "Groceries",
+              "uncalibratedModelScore": 0.44514586999247
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-f3a35c80504bd4ab",
+            "expectedCategory": "Food",
+            "name": "FUEL Coffee House",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.7450980392156863,
+              "logits": [
+                -0.7963871031763256,
+                6.320016175506792,
+                -0.7079725983144816,
+                0.2521796301374192,
+                -0.6279642988117441,
+                1.0358706628664067,
+                -1.9707753595285176,
+                -2.06307539894191,
+                -1.4418917097836363
+              ],
+              "margin": 0.9841505430448351,
+              "reason": "accepted",
+              "scores": [
+                0.000802887932599209,
+                0.9891669685553127,
+                0.0008771075757332203,
+                0.00229108750451422,
+                0.000950167179633916,
+                0.005016425510477705,
+                0.00024809875857512853,
+                0.00022622426891139374,
+                0.0004210327142423669
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9891669685553127
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-c10f146bf26237e2",
+            "expectedCategory": "Shopping",
+            "name": "Gissah Abaya",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.11428571428571428,
+              "logits": [
+                -0.53434794225,
+                2.1272546074,
+                0.37267848565,
+                3.35922071925,
+                0.19323128260000003,
+                0.08317268839999997,
+                -1.8327956672999999,
+                -1.92790906445,
+                -1.84050510915
+              ],
+              "margin": 0.48557753811269705,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.013966811854501666,
+                0.19999382341903665,
+                0.034595041460940855,
+                0.6855713615317337,
+                0.028912185746216585,
+                0.025899005341535615,
+                0.0038123134457207254,
+                0.003466421560634025,
+                0.003783035639680144
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.6855713615317337
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-5c0acb2bb1bc55bd",
+            "expectedCategory": "Health",
+            "name": "Hayatona Pharmacy",
+            "prediction": {
+              "category": "Health",
+              "knownFeatureFraction": 0.56,
+              "logits": [
+                -0.7398356797089193,
+                1.537128682201915,
+                -0.47124456718161134,
+                0.5643728710171486,
+                5.259865744684404,
+                -0.2190401739473265,
+                -1.943288292856678,
+                -2.036146569324676,
+                -1.951812014727561
+              ],
+              "margin": 0.9334880021004112,
+              "reason": "accepted",
+              "scores": [
+                0.002371899821262175,
+                0.02311901891161799,
+                0.0031027299683202875,
+                0.008739909169436344,
+                0.9566070210120291,
+                0.003992776095029029,
+                0.0007119401950791194,
+                0.000648807223091385,
+                0.0007058976041345979
+              ],
+              "topClass": "Health",
+              "uncalibratedModelScore": 0.9566070210120291
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-08a444860a89cd3d",
+            "expectedCategory": "Food",
+            "name": "Jabal Coffee",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.6571428571428571,
+              "logits": [
+                -0.7022230570803657,
+                6.149726257252293,
+                -0.20531481318821732,
+                1.1902797299101926,
+                -0.2611172886194927,
+                -0.4060684845777901,
+                -1.9200280996347057,
+                -1.9128045284755955,
+                -1.9324497153612081
+              ],
+              "margin": 0.9794524044670619,
+              "reason": "accepted",
+              "scores": [
+                0.0010429840402860714,
+                0.9863736009798343,
+                0.001714281629699514,
+                0.006921196512772382,
+                0.0016212405740390033,
+                0.00140247768394856,
+                0.0003085969666809399,
+                0.00031083420954248456,
+                0.0003047874031967202
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9863736009798343
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-1e60bed1be4a2604",
+            "expectedCategory": "Shopping",
+            "name": "JACK & JONES",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.1724137931034483,
+              "logits": [
+                -0.3725236109248603,
+                2.5631829344462305,
+                -0.2980072858418279,
+                3.0731032176803366,
+                -0.18918668829550672,
+                0.6706211220833543,
+                -1.8546915642506396,
+                -1.7290146843359357,
+                -1.8634834403717087
+              ],
+              "margin": 0.2196980357315182,
+              "reason": "low_model_score",
+              "scores": [
+                0.017536378442400725,
+                0.3302942873101346,
+                0.01889304408516034,
+                0.5499923230416528,
+                0.021065031989674386,
+                0.04977048931892612,
+                0.003983295684568728,
+                0.004516721586727525,
+                0.003948428540754727
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.5499923230416528
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-318e7c73bb60cb58",
+            "expectedCategory": "Transportation",
+            "name": "JETT",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.0,
+              "logits": [
+                -0.4553464921,
+                2.7800517251,
+                -0.0614880946,
+                2.9538967686,
+                -0.062988707,
+                0.3301425977,
+                -1.7934875367,
+                -1.8894592371,
+                -1.8013210238
+              ],
+              "margin": 0.07711944321093028,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.01598045935519165,
+                0.40616720214064106,
+                0.023694076567851732,
+                0.48328664535157134,
+                0.02365854760701418,
+                0.035052809786367635,
+                0.00419219993775495,
+                0.0038085705711145084,
+                0.0041594886824929626
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.48328664535157134
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-282320a8fd15e556",
+            "expectedCategory": "Food",
+            "name": "Karak Delights",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.14634146341463414,
+              "logits": [
+                -0.5634760577290671,
+                2.4922193314036245,
+                -0.25162752064667054,
+                3.6433340409852173,
+                -0.24082177010360745,
+                0.5499118114254444,
+                -1.842235999089691,
+                -1.9371409850003987,
+                -1.8501628511448511
+              ],
+              "margin": 0.47830234068277955,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.010419151568661803,
+                0.22126055717389267,
+                0.014232017026833823,
+                0.6995628978566723,
+                0.014386638548828875,
+                0.03172273063999622,
+                0.002900507345155912,
+                0.0026378935010530945,
+                0.002877606338905424
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.6995628978566723
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-579df02a3a8e9c81",
+            "expectedCategory": "Shopping",
+            "name": "kiko Milano",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.28125,
+              "logits": [
+                -0.5226777266000001,
+                2.8094013100666664,
+                -0.1830522631,
+                3.339957442666667,
+                -0.17798322390000004,
+                0.31762726849999995,
+                -1.826803202066667,
+                -1.9219278118,
+                -1.8345417937333337
+              ],
+              "margin": 0.23748233840538568,
+              "reason": "low_model_score",
+              "scores": [
+                0.012120088919812864,
+                0.3393199114237868,
+                0.017021713278360794,
+                0.5768022498291725,
+                0.017108216068010624,
+                0.028083137642836434,
+                0.003289510737675455,
+                0.0029910192991448046,
+                0.003264152801199649
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.5768022498291725
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-0114743ae9f5e84f",
+            "expectedCategory": "Food",
+            "name": "La Capitale",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.25,
+              "logits": [
+                -0.5583858294582682,
+                3.824449970702696,
+                -0.2473074117397912,
+                2.80992104914902,
+                -0.24273255627652,
+                0.05955928250545467,
+                -1.8460205674788408,
+                -1.9451877147124979,
+                -1.8542962227680293
+              ],
+              "margin": 0.44192367681630207,
+              "reason": "accepted",
+              "scores": [
+                0.00865915555232448,
+                0.69329320621562,
+                0.011818848933217016,
+                0.2513695293993179,
+                0.011873042327783197,
+                0.01606370402345096,
+                0.002389257070652161,
+                0.0021636904842314776,
+                0.0023695659934028844
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.69329320621562
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-e2ec3acb77d3945e",
+            "expectedCategory": "Shopping",
+            "name": "La Vie En Rose",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.37209302325581395,
+              "logits": [
+                -0.556567979775,
+                3.6179929161250004,
+                -0.05543316177499999,
+                2.5564959053750007,
+                -0.23825892612499994,
+                0.3084718188250002,
+                -1.8424105191500004,
+                -1.9373582094249993,
+                -1.8529318439749995
+              ],
+              "margin": 0.4489980713630026,
+              "reason": "accepted",
+              "scores": [
+                0.010559333276976637,
+                0.6864758427144962,
+                0.017429165089933113,
+                0.23747777135149362,
+                0.014516982823578259,
+                0.025079478904967527,
+                0.0029187854858671496,
+                0.002654403369845044,
+                0.002888236982842502
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.6864758427144962
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-e444c5aa0941eacf",
+            "expectedCategory": "Food",
+            "name": "Malabarai Indian Restaurant",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.5185185185185185,
+              "logits": [
+                -0.5516395127501412,
+                5.539710213996762,
+                -0.3923791729341206,
+                1.8302012406044006,
+                -0.557433441671644,
+                -0.2963384897314792,
+                -1.9367970155884502,
+                -1.8658617465018097,
+                -1.7694620754778219
+              ],
+              "margin": 0.9412327050054975,
+              "reason": "accepted",
+              "scores": [
+                0.002182858113708273,
+                0.9648617300896252,
+                0.002559713707578699,
+                0.023629025084127703,
+                0.0021702473571434786,
+                0.0028177426973122087,
+                0.0005463352812952523,
+                0.0005864973352911294,
+                0.0006458503339181235
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9648617300896252
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-bb2f2efc6e319898",
+            "expectedCategory": "Transportation",
+            "name": "Manaseer Gas Station",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.35,
+              "logits": [
+                -0.6268706562431468,
+                2.8028519062546726,
+                -0.19271045146404622,
+                2.666289604128992,
+                0.7693279926233884,
+                0.2877683005086319,
+                -1.8668701633678264,
+                -1.9649645013296473,
+                -1.8748220311855952
+              ],
+              "margin": 0.05818951105846876,
+              "reason": "low_model_score",
+              "scores": [
+                0.01476797692831694,
+                0.45585905780705493,
+                0.0227968261030322,
+                0.3976695467485862,
+                0.0596598798009601,
+                0.03685900921629432,
+                0.004273621560305018,
+                0.0038743087910743106,
+                0.004239773044376047
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.45585905780705493
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-66a6ec3a3a17d0cb",
+            "expectedCategory": "Food",
+            "name": "Marouf Coffee",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.5,
+              "logits": [
+                -0.707928187766863,
+                5.956619805330097,
+                -0.45118121437676256,
+                2.0262030485397355,
+                -0.49244184035928046,
+                -0.45707647962798087,
+                -1.922897647144497,
+                -2.0159010021280084,
+                -1.9353964822058514
+              ],
+              "margin": 0.9547045671129235,
+              "reason": "accepted",
+              "scores": [
+                0.001241952540702725,
+                0.9738261177976679,
+                0.0016054943962195787,
+                0.01912155068474442,
+                0.001540598717077376,
+                0.0015960574249500666,
+                0.00036851101048818174,
+                0.0003357837109936905,
+                0.0003639337171559008
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9738261177976679
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-d944bfb18e1258bf",
+            "expectedCategory": "Food",
+            "name": "McDonald's",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.13793103448275862,
+              "logits": [
+                -0.5045355847999999,
+                3.2681600614999997,
+                -0.17458485804999999,
+                2.9248730469500006,
+                -0.15973245975,
+                0.1991549819,
+                -1.81658442695,
+                -1.9119814725500002,
+                -1.8247692882
+              ],
+              "margin": 0.15611040448062297,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.012351707439399147,
+                0.5372641935252641,
+                0.017179984845769304,
+                0.38115378904464114,
+                0.01743705313820085,
+                0.024965250411878068,
+                0.0033259171330750634,
+                0.0030232983974406505,
+                0.0032988060643316343
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.5372641935252641
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-35a70053deeceefd",
+            "expectedCategory": "Shopping",
+            "name": "Mikyajy",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.05263157894736842,
+              "logits": [
+                -0.4804622313,
+                2.5128674922,
+                -0.1067440771,
+                3.4516898375,
+                -0.1070952862,
+                0.2527320963,
+                -1.8065160759,
+                -1.9020687207,
+                -1.8144030347
+              ],
+              "margin": 0.3996665354914104,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.01286564017472596,
+                0.2566953386467058,
+                0.018695415991273816,
+                0.6563618741381162,
+                0.01868885114393394,
+                0.026782656514687544,
+                0.0034161232683362153,
+                0.003104813707663929,
+                0.0033892864145565952
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.6563618741381162
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-bc038c62c44e501a",
+            "expectedCategory": "Food",
+            "name": "Reyad BBQ",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.19230769230769232,
+              "logits": [
+                -0.49375399042481694,
+                2.95823906887007,
+                -0.13979797938972413,
+                2.9348881775698086,
+                0.06196229234859929,
+                0.21715259773474907,
+                -1.81153885473065,
+                -1.9072485618433728,
+                -1.8199027500793852
+              ],
+              "margin": 0.010500286407694681,
+              "reason": "low_model_score",
+              "scores": [
+                0.014413745863396561,
+                0.4549444776708215,
+                0.020535155835359534,
+                0.44444419126312684,
+                0.02512588545847157,
+                0.029344023979884573,
+                0.0038589590108911585,
+                0.0035067432357552917,
+                0.003826817682293039
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.4549444776708215
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-621c52f97816ab53",
+            "expectedCategory": "Food",
+            "name": "Sakura Sushi",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.2,
+              "logits": [
+                -0.5184425983749427,
+                3.096087112629886,
+                -0.18267726236459356,
+                3.0567890622035367,
+                -0.043879585712384865,
+                0.16728586551279218,
+                -1.8238388666470648,
+                -1.9194657933730672,
+                -1.8318579336607728
+              ],
+              "margin": 0.017973927102711174,
+              "reason": "low_model_score",
+              "scores": [
+                0.012560507295592872,
+                0.466420347595993,
+                0.017572283964017252,
+                0.4484464204932818,
+                0.020188649946678103,
+                0.024935338492193586,
+                0.0034047151568583497,
+                0.0030942153587185176,
+                0.0033775216966665093
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.466420347595993
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-4de7ee7d82499823",
+            "expectedCategory": "Food",
+            "name": "Shawarma Reem",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.5789473684210527,
+              "logits": [
+                -0.5906520816889045,
+                4.126372520559233,
+                -0.1177942403072074,
+                1.7033095835269179,
+                0.5951269953521947,
+                -0.03485595717532469,
+                -1.8598204357075947,
+                -1.954450203830735,
+                -1.8672361806925393
+              ],
+              "margin": 0.7828864237565962,
+              "reason": "accepted",
+              "scores": [
+                0.007681316362705533,
+                0.8590400424708255,
+                0.012325234859043509,
+                0.07615361871422938,
+                0.025142760718280355,
+                0.01339105649495566,
+                0.0021589512682812667,
+                0.0019640188580097987,
+                0.002143000253668887
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.8590400424708255
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-b21492b15d85500e",
+            "expectedCategory": "Food",
+            "name": "Starbucks",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.16,
+              "logits": [
+                -0.5097069304499999,
+                2.89171231095,
+                -0.16230780514999998,
+                2.9440993130999997,
+                -0.1555199549,
+                0.5569025812999999,
+                -1.8205518421,
+                -1.9157307833,
+                -1.82889688935
+              ],
+              "margin": 0.02333683621497895,
+              "reason": "low_model_score",
+              "scores": [
+                0.014460238998348215,
+                0.433903424972609,
+                0.020466755157538593,
+                0.4572402611875879,
+                0.02060615299725379,
+                0.042014393274324116,
+                0.003898367334027045,
+                0.0035444354398986174,
+                0.0038659706384126555
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.4572402611875879
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-87bd49da1ecbe2f3",
+            "expectedCategory": "Food",
+            "name": "Zarooba",
+            "prediction": {
+              "category": "Shopping",
+              "knownFeatureFraction": 0.21052631578947367,
+              "logits": [
+                0.14012156269999998,
+                2.28190203815,
+                -0.27260304715000006,
+                3.7606124368,
+                -0.27019345905,
+                0.024859576800000005,
+                -1.8507353425000002,
+                -1.95569429575,
+                -1.85826946985
+              ],
+              "margin": 0.5828647526821622,
+              "reason": "accepted",
+              "scores": [
+                0.02020936729418821,
+                0.17207435842290592,
+                0.013375459060907043,
+                0.7549391111050681,
+                0.013407727268824414,
+                0.018009227014169626,
+                0.0027601618495578448,
+                0.0024851434044305264,
+                0.0027394445799483577
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.7549391111050681
+            },
+            "reviewerType": "assistant"
+          }
+        ]
+      },
+      "viewCount": 297
+    },
+    "baseline": {
+      "businessCount": 141,
+      "featureCount": 3572,
+      "methodCounts": {
+        "canonical_name": 141
+      },
+      "modelPath": "data\\models\\merchant_category_research_baseline.json",
+      "modelSha256": "a5eaa1c49cb4c93411083cfd6767f4c80aec14be5501975d55644576e3c91aed",
+      "trainingDiagnosticsNotHoldout": {
+        "arabicObservedNames": {
+          "allFormsAbstained": 17,
+          "allFormsCorrect": 0,
+          "businessCount": 17,
+          "records": [
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-9a20e03d60e37d37",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-77c5ac46ceecb212",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-96858dbbaeefd108",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-db5957b36a73b416",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-1f9e4b3ed3829a51",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-ed86648290e2e377",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-eefa3980fdf345e9",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-c408bdafc631634b",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-5947969be62ef693",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-9d44ec3a1a4c6f9c",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-6815f3c300383519",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-9baf3a40312f3984",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-1b4c9133da73a711",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-d56c1d8a5710b24f",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-259dbe8cfc8c4e77",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-f43b0112860a9caf",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-41166e5a9a66d87d",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            }
+          ]
+        },
+        "assistantLabelsOnly": {
+          "abstained": 0,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 110,
+          "businessCount": 110,
+          "correctAnswered": 110,
+          "correctIncludingAbstentionsAsMisses": 1.0,
+          "coverage": 1.0,
+          "top1AccuracyBeforeAbstention": 1.0,
+          "top1Confusion": [
+            {
+              "count": 7,
+              "expected": "Entertainment",
+              "predicted": "Entertainment"
+            },
+            {
+              "count": 56,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 2,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 1,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 44,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 0
+        },
+        "combinedResearchLabels": {
+          "abstained": 5,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 136,
+          "businessCount": 141,
+          "correctAnswered": 136,
+          "correctIncludingAbstentionsAsMisses": 0.9645390070921985,
+          "coverage": 0.9645390070921985,
+          "top1AccuracyBeforeAbstention": 1.0,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Education",
+              "predicted": "Education"
+            },
+            {
+              "count": 10,
+              "expected": "Entertainment",
+              "predicted": "Entertainment"
+            },
+            {
+              "count": 60,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 6,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 6,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 1,
+              "expected": "Other",
+              "predicted": "Other"
+            },
+            {
+              "count": 54,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 2,
+              "expected": "Telecom",
+              "predicted": "Telecom"
+            },
+            {
+              "count": 1,
+              "expected": "Travel",
+              "predicted": "Travel"
+            }
+          ],
+          "wrongAnswered": 0
+        },
+        "humanLabelsOnly": {
+          "abstained": 5,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 26,
+          "businessCount": 31,
+          "correctAnswered": 26,
+          "correctIncludingAbstentionsAsMisses": 0.8387096774193549,
+          "coverage": 0.8387096774193549,
+          "top1AccuracyBeforeAbstention": 1.0,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Education",
+              "predicted": "Education"
+            },
+            {
+              "count": 3,
+              "expected": "Entertainment",
+              "predicted": "Entertainment"
+            },
+            {
+              "count": 4,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 4,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 5,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 1,
+              "expected": "Other",
+              "predicted": "Other"
+            },
+            {
+              "count": 10,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 2,
+              "expected": "Telecom",
+              "predicted": "Telecom"
+            },
+            {
+              "count": 1,
+              "expected": "Travel",
+              "predicted": "Travel"
+            }
+          ],
+          "wrongAnswered": 0
+        }
+      },
+      "validation": {
+        "arabicObservedNames": {
+          "allFormsAbstained": 3,
+          "allFormsCorrect": 0,
+          "businessCount": 3,
+          "records": [
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-318e7c73bb60cb58",
+              "observedFormCount": 1,
+              "reviewerType": "human"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-e2ec3acb77d3945e",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            },
+            {
+              "allFormsAbstained": true,
+              "allFormsCorrect": false,
+              "businessId": "business-d944bfb18e1258bf",
+              "observedFormCount": 1,
+              "reviewerType": "assistant"
+            }
+          ]
+        },
+        "assistantLabelsOnly": {
+          "abstained": 12,
+          "accuracyAmongAnswered": 0.7272727272727273,
+          "answered": 11,
+          "businessCount": 23,
+          "correctAnswered": 8,
+          "correctIncludingAbstentionsAsMisses": 0.34782608695652173,
+          "coverage": 0.4782608695652174,
+          "top1AccuracyBeforeAbstention": 0.6086956521739131,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Entertainment",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 8,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 5,
+              "expected": "Food",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 1,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 3,
+              "expected": "Shopping",
+              "predicted": "Food"
+            },
+            {
+              "count": 5,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 3
+        },
+        "combinedResearchLabels": {
+          "abstained": 16,
+          "accuracyAmongAnswered": 0.75,
+          "answered": 12,
+          "businessCount": 28,
+          "correctAnswered": 9,
+          "correctIncludingAbstentionsAsMisses": 0.32142857142857145,
+          "coverage": 0.42857142857142855,
+          "top1AccuracyBeforeAbstention": 0.6071428571428571,
+          "top1Confusion": [
+            {
+              "count": 1,
+              "expected": "Entertainment",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 10,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 5,
+              "expected": "Food",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 1,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 1,
+              "expected": "Health",
+              "predicted": "Health"
+            },
+            {
+              "count": 3,
+              "expected": "Shopping",
+              "predicted": "Food"
+            },
+            {
+              "count": 5,
+              "expected": "Shopping",
+              "predicted": "Shopping"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Food"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 3
+        },
+        "humanLabelsOnly": {
+          "abstained": 4,
+          "accuracyAmongAnswered": 1.0,
+          "answered": 1,
+          "businessCount": 5,
+          "correctAnswered": 1,
+          "correctIncludingAbstentionsAsMisses": 0.2,
+          "coverage": 0.2,
+          "top1AccuracyBeforeAbstention": 0.6,
+          "top1Confusion": [
+            {
+              "count": 2,
+              "expected": "Food",
+              "predicted": "Food"
+            },
+            {
+              "count": 1,
+              "expected": "Groceries",
+              "predicted": "Groceries"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Food"
+            },
+            {
+              "count": 1,
+              "expected": "Transportation",
+              "predicted": "Shopping"
+            }
+          ],
+          "wrongAnswered": 0
+        },
+        "records": [
+          {
+            "businessId": "business-6dc5fad630e03878",
+            "expectedCategory": "Food",
+            "name": "99GRILL",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.3157894736842105,
+              "logits": [
+                -1.1163409021125434,
+                4.025581371164896,
+                -0.25191960397065716,
+                2.578293635752906,
+                -0.4212759670220825,
+                0.34694988723043324,
+                -1.705183991153093,
+                -1.743362586963069,
+                -1.7127418426818448
+              ],
+              "margin": 0.5876277168256344,
+              "reason": "accepted",
+              "scores": [
+                0.004492107154461097,
+                0.7683490824971124,
+                0.010662609572957954,
+                0.18072136567147798,
+                0.009001460358175192,
+                0.019406589637796224,
+                0.002492980049897675,
+                0.0023995955594359438,
+                0.0024742094986854855
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.7683490824971124
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-d0a371371323892f",
+            "expectedCategory": "Shopping",
+            "name": "America Today",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.13157894736842105,
+              "logits": [
+                -1.1342647462607816,
+                2.630094974667531,
+                0.273367963277845,
+                2.3715894009800174,
+                0.36403592019242015,
+                0.6983511462576673,
+                -1.7179747657549105,
+                -1.758488238242963,
+                -1.7267116551168253
+              ],
+              "margin": 0.1046419656793568,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.010649286883843452,
+                0.4593684684741012,
+                0.04351586743435749,
+                0.3547265027947444,
+                0.047645757766546434,
+                0.06656033457503314,
+                0.005940438256187832,
+                0.0057045804432217925,
+                0.005888763371964201
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.4593684684741012
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-ec696a9e3cba9ddd",
+            "expectedCategory": "Shopping",
+            "name": "Bata",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.6,
+              "logits": [
+                -1.1138528734045414,
+                3.0853026274037423,
+                0.06316505056766457,
+                3.177921266865634,
+                -0.4083440749848419,
+                0.3574251130914917,
+                -1.7056782855683148,
+                -1.7439186978445336,
+                -1.712020126126301
+              ],
+              "margin": 0.04254334373589874,
+              "reason": "low_model_score",
+              "scores": [
+                0.00657954803860815,
+                0.4383955375539407,
+                0.02134855337587532,
+                0.4809388812898394,
+                0.013322773368080543,
+                0.028652595783858856,
+                0.003640571386609604,
+                0.0035039826844044724,
+                0.003617556518782951
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.4809388812898394
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-d69947d5eac06039",
+            "expectedCategory": "Food",
+            "name": "BLACK SKILLET",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.18421052631578946,
+              "logits": [
+                -1.1168318702137185,
+                2.9927279725463376,
+                -0.047288236143766295,
+                2.873165205993824,
+                -0.413459964882888,
+                0.8790163890404638,
+                -1.7067872120663856,
+                -1.7454416078285842,
+                -1.7151006762940972
+              ],
+              "margin": 0.05284753913640805,
+              "reason": "low_model_score",
+              "scores": [
+                0.007697925879471702,
+                0.4689568542592839,
+                0.022432135702557043,
+                0.41610931512287586,
+                0.015554077635336255,
+                0.05664474301356812,
+                0.004267360919032444,
+                0.004105556042469491,
+                0.004232031425405123
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.4689568542592839
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-417207aade006d37",
+            "expectedCategory": "Entertainment",
+            "name": "Butterfly Fun Kids",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.3888888888888889,
+              "logits": [
+                -1.179138682763899,
+                3.096388840541151,
+                -0.247338793118525,
+                3.531026289714657,
+                -0.5349151336887611,
+                0.6157140440926395,
+                -1.745798416208817,
+                -1.7841519335975444,
+                -1.7517862148399717
+              ],
+              "margin": 0.19962660678014665,
+              "reason": "low_model_score",
+              "scores": [
+                0.0050987049159260415,
+                0.36668900563949647,
+                0.012945994808019282,
+                0.5663156124196431,
+                0.009710522763580868,
+                0.030687005650778174,
+                0.002893094920858006,
+                0.0027842354698839056,
+                0.0028758234118141704
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.5663156124196431
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-e7ad16e473249c85",
+            "expectedCategory": "Shopping",
+            "name": "Charles & Keith",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.2894736842105263,
+              "logits": [
+                -1.1804301524263219,
+                4.732376884043063,
+                -0.3706631951601443,
+                1.7885846342966232,
+                -0.17342048049046957,
+                0.48640436043944546,
+                -1.7455142306960123,
+                -1.7837945114309506,
+                -1.7535433083038732
+              ],
+              "margin": 0.8709399468233362,
+              "reason": "accepted",
+              "scores": [
+                0.0024864827298074566,
+                0.9193585421203626,
+                0.005588081973414261,
+                0.048418595297026384,
+                0.006806505360330706,
+                0.013166867896901286,
+                0.0014130988733204372,
+                0.0013600273292199672,
+                0.001401798419616799
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9193585421203626
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-c446d82fedadc0aa",
+            "expectedCategory": "Food",
+            "name": "Cinnabon",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.13636363636363635,
+              "logits": [
+                -1.1352435642401846,
+                2.9528314190807925,
+                -0.2728016428861665,
+                2.899737381146706,
+                0.049755304459378646,
+                0.7062516191702546,
+                -1.7185671492885382,
+                -1.7567680028500827,
+                -1.7251953646498952
+              ],
+              "margin": 0.02357841320506443,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.007647484855932145,
+                0.45598130008960325,
+                0.01811642052139212,
+                0.4324028868845388,
+                0.025012499638989952,
+                0.04822473193705504,
+                0.004267606928000068,
+                0.004107655296165393,
+                0.0042394138483232615
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.45598130008960325
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-95d7a40f6c0b96c9",
+            "expectedCategory": "Groceries",
+            "name": "Fouad Supermarket",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.52,
+              "logits": [
+                -1.2072396185030985,
+                1.9338329722367233,
+                2.6318658158825134,
+                2.3012150616621567,
+                -0.371491540356637,
+                0.042154147731276646,
+                -1.7618683329408433,
+                -1.799642470311355,
+                -1.7688260352242342
+              ],
+              "margin": 0.11737288579337962,
+              "reason": "low_model_score",
+              "scores": [
+                0.008968488729283833,
+                0.20742913682077782,
+                0.4168900907402706,
+                0.299517204946891,
+                0.020686167898533028,
+                0.03128413022933457,
+                0.005150472545469613,
+                0.004959546620975862,
+                0.005114761468463661
+              ],
+              "topClass": "Groceries",
+              "uncalibratedModelScore": 0.4168900907402706
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-f3a35c80504bd4ab",
+            "expectedCategory": "Food",
+            "name": "FUEL Coffee House",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.7450980392156863,
+              "logits": [
+                -1.3401646225782118,
+                6.296740521494489,
+                -0.7271403021548108,
+                0.5732518109492111,
+                -0.8272839898510166,
+                1.1880680877051546,
+                -1.8569136190471789,
+                -1.8970103682977533,
+                -1.4095475176845575
+              ],
+              "margin": 0.9816803418158461,
+              "reason": "accepted",
+              "scores": [
+                0.0004763621164406356,
+                0.987649797482513,
+                0.0008793672671517283,
+                0.0032279248464857553,
+                0.0007955700856690029,
+                0.005969455666666987,
+                0.0002841292719060121,
+                0.00027296199365545355,
+                0.0004444312695114659
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.987649797482513
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-c10f146bf26237e2",
+            "expectedCategory": "Shopping",
+            "name": "Gissah Abaya",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.11428571428571428,
+              "logits": [
+                -1.1395371868000002,
+                2.3773358463499994,
+                0.4224288964,
+                3.3709687068500003,
+                -0.07152663274999996,
+                0.25447617524999994,
+                -1.7229368807999998,
+                -1.7615704555,
+                -1.72963846915
+              ],
+              "margin": 0.41213635390120285,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.007194003110691852,
+                0.24228647591875885,
+                0.034302349860379035,
+                0.6544228298199617,
+                0.020931565523469798,
+                0.028998993999843584,
+                0.004014240178051699,
+                0.0038621132546865587,
+                0.003987428334156834
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.6544228298199617
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-5c0acb2bb1bc55bd",
+            "expectedCategory": "Health",
+            "name": "Hayatona Pharmacy",
+            "prediction": {
+              "category": "Health",
+              "knownFeatureFraction": 0.56,
+              "logits": [
+                -1.3125250830771993,
+                1.6228679150295702,
+                -0.5007617166944519,
+                0.8246185072040809,
+                5.030004938912223,
+                -0.10199086653399488,
+                -1.838377921837181,
+                -1.877810712545794,
+                -1.8460250611375901
+              ],
+              "margin": 0.9097749248776346,
+              "reason": "accepted",
+              "scores": [
+                0.0016559329664820347,
+                0.031179398557425624,
+                0.003728954659932614,
+                0.014034353793423679,
+                0.9409543234350601,
+                0.005556113163634462,
+                0.0009787409650863202,
+                0.0009408975174076422,
+                0.0009712849415474721
+              ],
+              "topClass": "Health",
+              "uncalibratedModelScore": 0.9409543234350601
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-08a444860a89cd3d",
+            "expectedCategory": "Food",
+            "name": "Jabal Coffee",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.6571428571428571,
+              "logits": [
+                -1.294667138170511,
+                6.333909520615751,
+                -0.18156520885959765,
+                1.2204493233686429,
+                -0.42015416647183057,
+                -0.30773003353382494,
+                -1.8247653995781528,
+                -1.6894758735851518,
+                -1.8360010234308533
+              ],
+              "margin": 0.9828296997653851,
+              "reason": "accepted",
+              "scores": [
+                0.0004808944836354776,
+                0.988777426349597,
+                0.001463739595260944,
+                0.005947726584211783,
+                0.0011530441938718597,
+                0.0012902418777825419,
+                0.0002830290707574419,
+                0.0003240309843354791,
+                0.0002798668605474449
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.988777426349597
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-1e60bed1be4a2604",
+            "expectedCategory": "Shopping",
+            "name": "JACK & JONES",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.1724137931034483,
+              "logits": [
+                -1.1664726348065164,
+                2.739514977575301,
+                -0.33895678448359845,
+                3.202418044694707,
+                -0.515524750051195,
+                0.9322708575827445,
+                -1.738719491884331,
+                -1.3674855159207244,
+                -1.7470447025722238
+              ],
+              "margin": 0.2032322108087981,
+              "reason": "low_model_score",
+              "scores": [
+                0.006946481461782523,
+                0.34523414889451304,
+                0.015890971491289662,
+                0.5484663597033111,
+                0.01331888764706736,
+                0.056654915836033076,
+                0.003919595304449401,
+                0.005681540358108771,
+                0.003887099303444943
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.5484663597033111
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-318e7c73bb60cb58",
+            "expectedCategory": "Transportation",
+            "name": "JETT",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.0,
+              "logits": [
+                -1.0753545818,
+                2.9348319106,
+                -0.1387645986,
+                3.202820139,
+                -0.3296227918,
+                0.4951105755,
+                -1.6812068289,
+                -1.7197888106,
+                -1.6880250134
+              ],
+              "margin": 0.12165034544375275,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.007176357272670938,
+                0.39582745756280724,
+                0.018308801378604068,
+                0.51747780300656,
+                0.015127642519334569,
+                0.034510273695365724,
+                0.003915486798404217,
+                0.0037672966748685845,
+                0.003888881091384619
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.51747780300656
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-282320a8fd15e556",
+            "expectedCategory": "Food",
+            "name": "Karak Delights",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.0975609756097561,
+              "logits": [
+                -1.16226174885,
+                2.73247999215,
+                -0.318226192,
+                3.74837474935,
+                -0.48948204474999996,
+                0.72904307605,
+                -1.73151163505,
+                -1.76992089305,
+                -1.7384953038000002
+              ],
+              "margin": 0.4362820461971683,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.005038922055138126,
+                0.24762956061120717,
+                0.011719190808352837,
+                0.6839116068083755,
+                0.009874660054751462,
+                0.033398033004223886,
+                0.0028517769609525743,
+                0.002744319220391657,
+                0.0028319304766067127
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.6839116068083755
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-579df02a3a8e9c81",
+            "expectedCategory": "Shopping",
+            "name": "kiko Milano",
+            "prediction": {
+              "category": "Shopping",
+              "knownFeatureFraction": 0.28125,
+              "logits": [
+                -1.1254366594333336,
+                2.9329098866333325,
+                -0.24553308593333337,
+                3.579208139566667,
+                -0.4269567798666666,
+                0.4720357180333334,
+                -1.7137952698333334,
+                -1.7519935412666665,
+                -1.7204384077999997
+              ],
+              "margin": 0.291562094936845,
+              "reason": "accepted",
+              "scores": [
+                0.005545060190579911,
+                0.32093994607169146,
+                0.013367294961920202,
+                0.6125020410085364,
+                0.01114941862441701,
+                0.027395529773699252,
+                0.0030788275695278725,
+                0.0029634395203032285,
+                0.003058442279324606
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.6125020410085364
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-0114743ae9f5e84f",
+            "expectedCategory": "Food",
+            "name": "La Capitale",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.25,
+              "logits": [
+                -1.1805185264877005,
+                4.286328252314309,
+                -0.36182615591575207,
+                2.9466351482465183,
+                -0.5357696871888364,
+                0.1515240183645724,
+                -1.7505473381830876,
+                -1.7978949845463503,
+                -1.7579307268158062
+              ],
+              "margin": 0.5647842997146052,
+              "reason": "accepted",
+              "scores": [
+                0.0032326697765075138,
+                0.7652136920414522,
+                0.007330184767386724,
+                0.20042939232684698,
+                0.006159879350022131,
+                0.012247855946194512,
+                0.0018281043219865107,
+                0.0017435650456664844,
+                0.001814656423936913
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.7652136920414522
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-e2ec3acb77d3945e",
+            "expectedCategory": "Shopping",
+            "name": "La Vie En Rose",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.37209302325581395,
+              "logits": [
+                -1.1826516589500002,
+                4.378966469674999,
+                -0.20331335607500006,
+                2.519612493249999,
+                -0.542399634475,
+                0.3257728335749999,
+                -1.7493769642249999,
+                -1.78848359615,
+                -1.7581265868499998
+              ],
+              "margin": 0.7029708976384267,
+              "reason": "accepted",
+              "scores": [
+                0.0031996182372445634,
+                0.8326801796534224,
+                0.00851960352132508,
+                0.12970928201499574,
+                0.0060695442889812335,
+                0.014461009019618285,
+                0.0018154006670548803,
+                0.0017457767134678275,
+                0.0017995858838900515
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.8326801796534224
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-e444c5aa0941eacf",
+            "expectedCategory": "Food",
+            "name": "Malabarai Indian Restaurant",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.5185185185185185,
+              "logits": [
+                -1.0983738384008157,
+                5.584052661110501,
+                -0.46986157128510575,
+                2.153613643364323,
+                -0.7827420086699843,
+                -0.14761491723932665,
+                -1.8277556323467017,
+                -1.7244125613708603,
+                -1.6869057755632215
+              ],
+              "margin": 0.9278211487438445,
+              "reason": "accepted",
+              "scores": [
+                0.0012011996909748336,
+                0.9588621291984973,
+                0.0022520323315240055,
+                0.031040980454652884,
+                0.0016469953528290913,
+                0.003108311712348571,
+                0.0005792269008898868,
+                0.0006422883562416998,
+                0.000666836002041581
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9588621291984973
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-bb2f2efc6e319898",
+            "expectedCategory": "Transportation",
+            "name": "Manaseer Gas Station",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.35,
+              "logits": [
+                -1.2063660346300846,
+                2.884648624494516,
+                -0.28175806321887836,
+                2.8844199138152713,
+                0.6379980095281341,
+                0.40690056340026637,
+                -1.7602371044934049,
+                -1.7983507485940153,
+                -1.767255160476381
+              ],
+              "margin": 0.00010044391418245757,
+              "reason": "low_model_score",
+              "scores": [
+                0.007344830126135908,
+                0.4392247937436362,
+                0.01851543397040288,
+                0.43912434982945375,
+                0.04644926890287544,
+                0.03686502536768374,
+                0.004221226018952106,
+                0.004063367110930912,
+                0.004191704929929047
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.4392247937436362
+            },
+            "reviewerType": "human"
+          },
+          {
+            "businessId": "business-66a6ec3a3a17d0cb",
+            "expectedCategory": "Food",
+            "name": "Marouf Coffee",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.5,
+              "logits": [
+                -1.2832851005937633,
+                6.061677662483585,
+                -0.5137523555706377,
+                2.2651608692533025,
+                -0.7249806426751032,
+                -0.30602966088350836,
+                -1.816751620268821,
+                -1.8544733705093268,
+                -1.827565780822777
+              ],
+              "margin": 0.9505072604072946,
+              "reason": "accepted",
+              "scores": [
+                0.0006279703529815617,
+                0.9723350442733301,
+                0.0013556356012563386,
+                0.021827783866035417,
+                0.001097507978519355,
+                0.0016686136257898889,
+                0.00036834737143499923,
+                0.00035471146587367364,
+                0.0003643854647787226
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.9723350442733301
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-d944bfb18e1258bf",
+            "expectedCategory": "Food",
+            "name": "McDonald's",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.10344827586206896,
+              "logits": [
+                -1.1111779095735608,
+                3.306839408119311,
+                -0.23714552735530375,
+                3.2383559136614783,
+                -0.4110378053110239,
+                0.36927110904351,
+                -1.7031600580049653,
+                -1.7415670025763346,
+                -1.7103781280608472
+              ],
+              "margin": 0.03194925265151305,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.005820233201307517,
+                0.48268180492792156,
+                0.013948510273183131,
+                0.4507325522764085,
+                0.011722152575741648,
+                0.025579451375256353,
+                0.0032199253674024633,
+                0.003098602603788638,
+                0.0031967673989901396
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.48268180492792156
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-35a70053deeceefd",
+            "expectedCategory": "Shopping",
+            "name": "Mikyajy",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.05263157894736842,
+              "logits": [
+                -1.0933595283000002,
+                2.7064241307,
+                -0.1770941512,
+                3.6304469883,
+                -0.36576898459999996,
+                0.4249782594,
+                -1.6934399696,
+                -1.7318509037,
+                -1.7003358409
+              ],
+              "margin": 0.4016971808101394,
+              "reason": "insufficient_feature_evidence",
+              "scores": [
+                0.005915617548025189,
+                0.26437790943743367,
+                0.014788668901949312,
+                0.666075090247573,
+                0.012245841860444983,
+                0.027002614196346388,
+                0.00324629859805546,
+                0.003123969660880361,
+                0.0032239895492916382
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.666075090247573
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-bc038c62c44e501a",
+            "expectedCategory": "Food",
+            "name": "Reyad BBQ",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.19230769230769232,
+              "logits": [
+                -1.105971846565157,
+                3.0018147248109845,
+                -0.21755653850202233,
+                3.2893708333203016,
+                -0.20583754462272535,
+                0.383512721807279,
+                -1.6997782330423874,
+                -1.7386369331186742,
+                -1.706917184087599
+              ],
+              "margin": 0.1316963638675101,
+              "reason": "low_model_score",
+              "scores": [
+                0.006500172190864497,
+                0.39528824732321705,
+                0.015803698193371248,
+                0.5269846111907271,
+                0.01598999108636919,
+                0.028827022711710837,
+                0.003589533612024713,
+                0.003452724332087862,
+                0.0035639993596274476
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.5269846111907271
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-621c52f97816ab53",
+            "expectedCategory": "Food",
+            "name": "Sakura Sushi",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.2,
+              "logits": [
+                -1.1268772846443387,
+                3.2519757204096873,
+                -0.25759391059361114,
+                3.2924155098531345,
+                -0.30266436006769165,
+                0.32782742819545907,
+                -1.7130281614825105,
+                -1.7520428463603233,
+                -1.7200120954231959
+              ],
+              "margin": 0.01887308486017536,
+              "reason": "low_model_score",
+              "scores": [
+                0.005734708250714244,
+                0.4573229807997702,
+                0.013678431533305705,
+                0.47619606565994554,
+                0.013075624897920624,
+                0.024563008468235482,
+                0.0031911648303776683,
+                0.003069059969517098,
+                0.003168955590213412
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.47619606565994554
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-4de7ee7d82499823",
+            "expectedCategory": "Food",
+            "name": "Shawarma Reem",
+            "prediction": {
+              "category": "Food",
+              "knownFeatureFraction": 0.5789473684210527,
+              "logits": [
+                -1.195173370704368,
+                4.454383995310782,
+                -0.12676394119940343,
+                1.7734681121015612,
+                0.3244016484802111,
+                0.08494168299388591,
+                -1.7567218897681507,
+                -1.7953950341756577,
+                -1.7631412033373413
+              ],
+              "margin": 0.8339775143172117,
+              "reason": "accepted",
+              "scores": [
+                0.003150649364947535,
+                0.8953063455234395,
+                0.009170740254569699,
+                0.061328831206227764,
+                0.014399357656204679,
+                0.011333054502135972,
+                0.001796894792915475,
+                0.0017287297940149554,
+                0.0017853969055444349
+              ],
+              "topClass": "Food",
+              "uncalibratedModelScore": 0.8953063455234395
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-b21492b15d85500e",
+            "expectedCategory": "Food",
+            "name": "Starbucks",
+            "prediction": {
+              "category": null,
+              "knownFeatureFraction": 0.16,
+              "logits": [
+                -1.1147060854500002,
+                3.05075797175,
+                -0.22530947034999999,
+                3.1856851402,
+                -0.4054624215,
+                0.67292330655,
+                -1.7060918459499999,
+                -1.7444029066000002,
+                -1.7133936887
+              ],
+              "margin": 0.061536452341901804,
+              "reason": "low_model_score",
+              "scores": [
+                0.006612513092017786,
+                0.42599509591723156,
+                0.016092613729753864,
+                0.48753154825913336,
+                0.013439625108883803,
+                0.039511555327871616,
+                0.003660420445267567,
+                0.0035228381449882475,
+                0.003633789974852092
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.48753154825913336
+            },
+            "reviewerType": "assistant"
+          },
+          {
+            "businessId": "business-87bd49da1ecbe2f3",
+            "expectedCategory": "Food",
+            "name": "Zarooba",
+            "prediction": {
+              "category": "Shopping",
+              "knownFeatureFraction": 0.21052631578947367,
+              "logits": [
+                -0.29798099965000013,
+                2.4196033127999996,
+                -0.34256438980000004,
+                3.84294214315,
+                -0.514646143,
+                0.16318540324999997,
+                -1.7422808422499998,
+                -1.77933275225,
+                -1.74892573225
+              ],
+              "margin": 0.5745616171121506,
+              "reason": "accepted",
+              "scores": [
+                0.012040993117762654,
+                0.1823451343356764,
+                0.011515955760715303,
+                0.756906751447827,
+                0.009695402247092194,
+                0.019096084694890467,
+                0.002840605059903087,
+                0.00273728121022468,
+                0.0028217921259080956
+              ],
+              "topClass": "Shopping",
+              "uncalibratedModelScore": 0.756906751447827
+            },
+            "reviewerType": "assistant"
+          }
+        ]
+      },
+      "viewCount": 141
+    }
+  },
+  "version": "1.0.0"
+}

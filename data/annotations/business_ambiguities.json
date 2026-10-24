@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "purpose": "Editorial selection of business-name and taxonomy ambiguity, not measured model uncertainty. Questions do not establish business services beyond the cited directory evidence.",
+  "businesses": [
+    {"name":"Yousef Afandi","question":"The source describes a men's grooming business, but our taxonomy has no Personal Care category. Which existing category should it use?","categories":["Other","Health","Shopping"]},
+    {"name":"Amyal Gym","question":"For a gym name without payment details, should the default be Health, Entertainment, or should membership payment details be required? Recurring membership may need a separate Subscriptions rule.","categories":["Health","Entertainment","Subscriptions"]},
+    {"name":"Dr. Nutrition","question":"Health supplements overlap with food/grocery products. What merchant default do you want when the purchased item is not stated?","categories":["Health","Groceries","Shopping"]},
+    {"name":"Al-Rayhan","question":"The directory mentions nuts, spices, coffee and dates. Should this retailer default to Groceries or Food?","categories":["Groceries","Food"]},
+    {"name":"AL-Hamwi Roastery","question":"A roastery name does not distinguish take-home coffee from a prepared drink. Do you want one merchant default or transaction context?","categories":["Groceries","Food"]},
+    {"name":"The Body Shop","question":"Beauty and personal-care retail has no dedicated category. Should this merchant default to Shopping, Health, or Other?","categories":["Shopping","Health","Other"]},
+    {"name":"Alpha Optical","question":"Optical merchants overlap medical needs and fashion purchases. Which default should apply when the message gives no item details?","categories":["Health","Shopping"]},
+    {"name":"Arkan Lab","question":"The directory uses broad wellness wording without a clear medical-laboratory service description. Do you recognize this business well enough to label it? Otherwise skip it or require context.","categories":["Health","Shopping","Other"]},
+    {"name":"Halib Halab","question":"The directory describes dairy products. Should a payment default to Groceries or Food when the message does not identify the purchase?","categories":["Groceries","Food"]},
+    {"name":"Brick House","question":"The mall places this business under Entertainment, although the name could suggest home retail. Do you recognize it and agree with that mapping?","categories":["Entertainment","Shopping","Other"]},
+    {"name":"Garage","question":"The directory places this name in fashion retail; the word alone could suggest automotive services. Can you confirm the actual merchant category?","categories":["Shopping","Transportation","Other"]},
+    {"name":"Ocean","question":"The cited mall directories put this name under dining, but the name alone gives little signal. Do you recognize the business and confirm its category?","categories":["Food","Shopping","Other"]},
+    {"name":"The Study House","question":"The source lists this as a food/cafe venue, but the name sounds educational. What should the merchant default be?","categories":["Food","Education","Other"]},
+    {"name":"Ar Rassam","question":"The source lists this among restaurants/cafes, while the name means artist. Can you confirm the actual merchant type?","categories":["Food","Entertainment","Shopping","Other"]},
+    {"name":"Faces","question":"The directory places this under perfumes/cosmetics. Without a Personal Care category, should it default to Shopping, Health, or Other?","categories":["Shopping","Health","Other"]},
+    {"name":"Calamantina","question":"The directory gives only a shop name and no useful description. I cannot justify a precise category from that evidence. Label it only if you recognize it; otherwise skip or require context.","categories":["Shopping","Food","Other"]},
+    {"name":"Klin","question":"The directory places this name in children's fashion, but it is opaque on its own. Do you recognize the business and confirm Shopping?","categories":["Shopping","Health","Other"]},
+    {"name":"Astra","question":"The directory places this under cosmetics, but the name itself is ambiguous. Should the merchant default be Shopping, Health, or Other?","categories":["Shopping","Health","Other"]},
+    {"name":"Bzuriyah Kabatilo","question":"Should a specialty food/roastery merchant use Groceries for take-home products or Food as a merchant default?","categories":["Groceries","Food"]},
+    {"name":"Mother Care","question":"Should baby/child retail use Shopping as the merchant default, with Health reserved for explicit medical transactions?","categories":["Shopping","Health","Other"]}
+  ]
+}

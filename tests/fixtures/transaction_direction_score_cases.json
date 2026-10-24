@@ -1,0 +1,14 @@
+{
+  "model": {
+    "contractVersion": "1.0.0",
+    "preprocessingVersion": "1.1.0",
+    "featureEncoding": "unigrams_then_adjacent_bigrams",
+    "transaction": {"intercept": -1.0, "threshold": 0.7, "weights": {"purchase": 2.0, "credited": 2.0, "otp": -5.0}},
+    "direction": {"intercept": -1.0, "incomeThreshold": 0.5, "weights": {"purchase": -2.0, "credited": 3.0}}
+  },
+  "cases": [
+    {"id": "expense-purchase", "raw": "JO\\nPurchase JOD 12.500", "transactionLogit": 1.0, "transactionProbability": 0.7310585786300049, "isTransaction": true, "directionLogit": -3.0, "incomeProbability": 0.04742587317756678, "type": "EXPENSE"},
+    {"id": "income-credit", "raw": "JO\\nJOD 12.500 credited to account *1234", "transactionLogit": 1.0, "transactionProbability": 0.7310585786300049, "isTransaction": true, "directionLogit": 2.0, "incomeProbability": 0.8807970779778823, "type": "INCOME"},
+    {"id": "otp-noise", "raw": "JO\\nYour OTP is 123456", "transactionLogit": -6.0, "transactionProbability": 0.0024726231566347743, "isTransaction": false, "directionLogit": -1.0, "incomeProbability": 0.2689414213699951, "type": "EXPENSE"}
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "version": "1.0.0",
+  "scope": "Jordan; source-observed Arabic aliases for existing business identities only",
+  "limitations": [
+    "Directory identity matches are research mappings, not merchant confirmations.",
+    "Aliases inherit the existing brand group; they do not add category approvals or independent examples.",
+    "Do not use aliases of a held-out brand in training. These spellings are not verified bank SMS descriptors."
+  ],
+  "aliases": [
+    {
+      "businessName": "Kuadu",
+      "alias": "كوادو",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Alpha Optical",
+      "alias": "ألفا للبصريات",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Max",
+      "alias": "ماكس",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "La Vie En Rose",
+      "alias": "لا في ان روز",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Dr. Nutrition",
+      "alias": "د. نيوترشن",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Mango",
+      "alias": "مانجو",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "H&M",
+      "alias": "اتش اند إم",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Popeyes",
+      "alias": "بوبايز",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Lebnani Snack",
+      "alias": "لبناني سناك",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Buffalo Wings & Rings",
+      "alias": "بافلو وينجز اند رينجز",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "McDonald's",
+      "alias": "ماكدونالدز",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "KFC",
+      "alias": "كنتاكي",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "La Vigor",
+      "alias": "لافيجور",
+      "publisher": "Time Out Amman",
+      "type": "directory_arabic_name",
+      "url": "https://www.timeoutamman.com/إربد-سيتي-سنتر/",
+      "identityEvidence": "Arabic Irbid City Center directory name matched to the existing English mall tenant identity; directory evidence, not merchant confirmation.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Hummus & Chapati",
+      "alias": "حمص وشباتي",
+      "publisher": "Hummus & Chapati",
+      "type": "official_arabic_name",
+      "url": "https://hummuschapati.com/faq/",
+      "identityEvidence": "Official bilingual FAQ names both brands and the Amman/Irbid branches.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Zanjabeel",
+      "alias": "زنجبيل",
+      "publisher": "Zanjabeel",
+      "type": "official_arabic_name",
+      "url": "https://www.zanjabeel-jo.com/",
+      "identityEvidence": "Official site title pairs Zanjabeel with the Arabic name.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Orange",
+      "alias": "أورنج",
+      "publisher": "Orange Jordan",
+      "type": "official_arabic_name",
+      "url": "https://orange.jo/ar/pages/orange-installments",
+      "identityEvidence": "Official Jordan operator page uses this Arabic brand spelling.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Zain",
+      "alias": "زين",
+      "publisher": "Zain Jordan",
+      "type": "official_arabic_name",
+      "url": "https://eshop.jo.zain.com/ar/",
+      "identityEvidence": "Official Jordan eShop uses the Arabic brand name.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "JETT",
+      "alias": "جت",
+      "publisher": "JETT",
+      "type": "official_arabic_name",
+      "url": "https://jett.com.jo/ar/برنامج-ولاء-جت-31",
+      "identityEvidence": "Official loyalty page names the operator in Arabic and the Irbid/Amman routes.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "SmartBuy",
+      "alias": "سمارت باي",
+      "publisher": "SmartBuy Jordan",
+      "type": "official_arabic_name",
+      "url": "https://smartbuy-me.com/ar/pages/find-store",
+      "identityEvidence": "Official Arabic store locator names SmartBuy and its Jordan branches.",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Hashem Restaurant",
+      "alias": "مطعم هاشم",
+      "url": "https://hashemrestaurants.com/",
+      "publisher": "Hashem Restaurants",
+      "identityEvidence": "Official restaurant title and Amman history pair the Arabic name with the existing identity.",
+      "type": "official_arabic_name",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Habibah Sweets",
+      "alias": "حلويات حبيبة",
+      "url": "https://habibahsweets.com/global/ar/about-us-2/",
+      "publisher": "Habibah Sweets",
+      "identityEvidence": "Official Arabic title and Amman family history identify the same Habibah sweets business.",
+      "type": "official_arabic_name",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Habibah Sweets",
+      "alias": "حلويات الحاج محمود حبيبة وأولاده",
+      "url": "https://habibahsweets.com/global/ar/about-us-2/",
+      "publisher": "Habibah Sweets",
+      "identityEvidence": "Official Arabic history gives this full business name, not an invented category prefix.",
+      "type": "official_arabic_name",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "AL-Hamwi Roastery",
+      "alias": "الحموي",
+      "url": "https://al-hamawi.com/",
+      "publisher": "Al-Hamawi Group",
+      "identityEvidence": "Official site Arabic name and contact 0799700707 match the existing mall merchant contact; founding-date claims differ and are not used to assert history.",
+      "type": "official_arabic_name",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "AL-Hamwi Roastery",
+      "alias": "مجموعة الحموي",
+      "url": "https://al-hamawi.com/",
+      "publisher": "Al-Hamawi Group",
+      "identityEvidence": "Official bilingual site title and matching mall contact connect this Arabic group spelling to the existing merchant.",
+      "type": "official_arabic_name",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Dima Pharmacy",
+      "alias": "صيدلية ديما",
+      "url": "https://www.arabbank.jo/docs/librariesprovider2/default-document-library/mobicash-merchants-sheet-a-1.pdf?sfvrsn=6c00319f_0",
+      "publisher": "Arab Bank historical Arabic merchant sheet",
+      "identityEvidence": "Historical Arabic PDF names the pharmacy at Al Hashmi Al Shamali, matching the bank English Dima Pharmacy location. Spelling evidence, not a bank SMS descriptor.",
+      "type": "directory_arabic_name",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Al Maseyah Pharmacy",
+      "alias": "صيدلية الماسية",
+      "url": "https://www.arabbank.jo/docs/librariesprovider2/default-document-library/mobicash-merchants-sheet-a-1.pdf?sfvrsn=6c00319f_0",
+      "publisher": "Arab Bank historical Arabic merchant sheet",
+      "identityEvidence": "Historical Arabic PDF names the pharmacy at Al Rabieh, matching the bank English Al Maseyah Pharmacy location. Spelling evidence, not a bank SMS descriptor.",
+      "type": "directory_arabic_name",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Rawan Cake",
+      "alias": "روان كيك",
+      "url": "https://5bmalls.com/shops-بالعربيه/",
+      "publisher": "5B Mall",
+      "identityEvidence": "Operator Arabic page pairs Rawan Cake heading with its Arabic brand in the description.",
+      "type": "directory_arabic_name",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Yousef Afandi",
+      "alias": "يوسف أفندي",
+      "url": "https://5bmalls.com/shops-بالعربيه/",
+      "publisher": "5B Mall",
+      "identityEvidence": "Operator Arabic page pairs the Yousef Afandi heading with the Arabic business name.",
+      "type": "directory_arabic_name",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Al Samah",
+      "alias": "السماح",
+      "url": "https://5bmalls.com/en/shops/",
+      "publisher": "5B Mall",
+      "identityEvidence": "Operator bilingual heading pairs السماح with Alsamah, an existing alias of Al Samah.",
+      "type": "directory_arabic_name",
+      "accessedOn": "2026-10-24"
+    },
+    {
+      "businessName": "Royal Jordanian",
+      "alias": "الملكية الأردنية",
+      "url": "https://www.rj.com/ar/meet-rj/our-standards/profile",
+      "publisher": "Royal Jordanian",
+      "identityEvidence": "Official Arabic airline profile names the same national airline; no new business or branch is counted.",
+      "type": "official_arabic_name",
+      "accessedOn": "2026-10-24"
+    }
+  ]
+}

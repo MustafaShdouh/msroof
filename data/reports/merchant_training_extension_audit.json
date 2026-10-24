@@ -1,0 +1,55 @@
+{
+  "combinedLabeledTrainingBusinesses": 156,
+  "combinedRepresentedTrainingCategories": 12,
+  "combinedTrainingCategoryCounts": {
+    "Cash Withdrawals": 0,
+    "Education": 4,
+    "Entertainment": 10,
+    "Fees": 0,
+    "Food": 60,
+    "Groceries": 6,
+    "Health": 6,
+    "Installments": 0,
+    "Other": 1,
+    "Shopping": 54,
+    "Subscriptions": 3,
+    "Telecom": 3,
+    "Transportation": 3,
+    "Travel": 3,
+    "Water and Electricity": 3
+  },
+  "extensionArabicNameOrAliasBusinesses": 14,
+  "extensionBusinessCount": 15,
+  "extensionCategoryCounts": {
+    "Education": 3,
+    "Subscriptions": 3,
+    "Telecom": 1,
+    "Transportation": 3,
+    "Travel": 2,
+    "Water and Electricity": 3
+  },
+  "inputSha256": {
+    "data\\annotations\\businesses_200.jsonl": "81f0b434dc4b2549eedef5a1fc0bfec871bcd32f635ec10916a28fb3e74f8d13",
+    "data\\annotations\\category_annotation_schema.json": "530a0925185d1f514ab32273bba593e53b40f1328ee56fb83268d816b99806c8",
+    "data\\sources\\businesses\\jordan_training_extension.json": "6f8d63afef0572668cec76154e329e49aa495639793a3c88a8be7dbe19852c61",
+    "data\\training\\splits\\category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d"
+  },
+  "limitations": [
+    "Do not concatenate these into the original 200-business shortlist or reshuffle holdouts.",
+    "No model was trained by this preparation step. Existing v1 exports/reports remain historical snapshots.",
+    "Exact names/features and conservative whole-token prefixes were checked; this is not an exhaustive corporate ownership audit.",
+    "Digital subscriptions have Jordan service availability evidence; no physical Amman/Irbid branch is inferred.",
+    "JoPetrol fuel, Uber rides and bus fares are defaults; household heating, refunds or explicit recurring passes need payment context.",
+    "Source names and assistant category judgments are separate evidence; no measured correctness probability or SMS descriptor coverage is established."
+  ],
+  "missingTrainingCategories": [
+    "Cash Withdrawals",
+    "Installments",
+    "Fees"
+  ],
+  "originalBusinessCount": 200,
+  "originalLabeledTrainingBusinesses": 141,
+  "outputSha256": "cc18c89ecf6b07aa318d7ceb0487a8c527e7647f7e925577b0b085d2ac62d31e",
+  "scope": "Prospective training extension; assistant research labels, not independent SMS truth or new holdout businesses.",
+  "version": "1.0.0"
+}

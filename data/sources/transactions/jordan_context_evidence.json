@@ -1,0 +1,104 @@
+{
+  "version": "1.0.0",
+  "geographicScope": "Jordan",
+  "scope": "Documentary evidence for annotation design. Zero collected completed-transaction SMS. Paraphrases and assistant inferences are not message examples or ground-truth labels.",
+  "records": [
+    {
+      "id": "cardless_otp_precedes_cash",
+      "sourceUrl": "https://www.arabbank.com.jo/mainmenu/home/ways-to-bank/cardless-withdrawal",
+      "publisher": "Arab Bank Jordan",
+      "observedFact": "The documented mobile flow issues an OTP after a successful request screen; customers subsequently enter phone, OTP and amount at the ATM before taking cash.",
+      "implication": "Inference: request success, an amount and an OTP do not by themselves prove that cash was dispensed.",
+      "accessedOn": "2026-10-24",
+      "sourceKind": "official_service_documentation_not_sms",
+      "reviewerType": "assistant",
+      "trainingEligible": false,
+      "evaluationEligible": false,
+      "smsText": null,
+      "isCompletedTransaction": null
+    },
+    {
+      "id": "same_channel_multiple_services",
+      "sourceUrl": "https://orange.jo/ar/orange-money/faqs?field_om_faqs_target_id=214",
+      "publisher": "Orange Jordan",
+      "observedFact": "The wallet FAQ lists cash withdrawal through agents, ATMs and selected Total stations; it also distinguishes an in-app transfer confirmation before completion.",
+      "implication": "Inference: an Orange-branded channel or a fuel-station location alone cannot establish Telecom or Transportation, and pre-completion confirmation is not a completed debit.",
+      "accessedOn": "2026-10-24",
+      "sourceKind": "official_service_documentation_not_sms",
+      "reviewerType": "assistant",
+      "trainingEligible": false,
+      "evaluationEligible": false,
+      "smsText": null,
+      "isCompletedTransaction": null
+    },
+    {
+      "id": "tuition_installment_is_still_tuition",
+      "sourceUrl": "https://inu.edu.jo/en/irbid-national-university-reduces-semester-fees-for-bachelors-and-masters-students-from-370-to-350-dinars/",
+      "publisher": "Irbid National University",
+      "observedFact": "Official university announcement describes semester tuition and installment payment arrangements.",
+      "implication": "User taxonomy applies Education to tuition installments. This publication supports service context, not a real payment record or a universal Installments classification.",
+      "accessedOn": "2026-10-24",
+      "sourceKind": "official_service_documentation_not_sms",
+      "reviewerType": "assistant",
+      "trainingEligible": false,
+      "evaluationEligible": false,
+      "smsText": null,
+      "isCompletedTransaction": null
+    },
+    {
+      "id": "bill_payment_rail_is_not_category",
+      "sourceUrl": "https://www.uop.edu.jo/Ar/Announcements/Pages/طرق-الدفع-الإلكتروني-الجديدة-رسوم-الدراسية.aspx",
+      "publisher": "University of Petra",
+      "observedFact": "Official announcement offers tuition payment through cards and eFAWATEERcom.",
+      "implication": "Inference: a billing channel is separate from expense purpose. This source does not supply a completed SMS, amount or settlement outcome.",
+      "accessedOn": "2026-10-24",
+      "sourceKind": "official_service_documentation_not_sms",
+      "reviewerType": "assistant",
+      "trainingEligible": false,
+      "evaluationEligible": false,
+      "smsText": null,
+      "isCompletedTransaction": null
+    },
+    {
+      "id": "driver_income_vs_passenger_spending",
+      "sourceUrl": "https://www.jeeny.me/ar/driver",
+      "publisher": "Jeeny",
+      "observedFact": "Official Jordan driver material describes drivers receiving earnings for trips.",
+      "implication": "Inference: the provider name alone does not determine expense direction; driver income is distinct from passenger ride fares.",
+      "accessedOn": "2026-10-24",
+      "sourceKind": "official_service_documentation_not_sms",
+      "reviewerType": "assistant",
+      "trainingEligible": false,
+      "evaluationEligible": false,
+      "smsText": null,
+      "isCompletedTransaction": null
+    }
+  ],
+  "localRawProvenance": {
+    "reportedBy": "user",
+    "reportedOn": "2026-10-24",
+    "reportedOriginalFolder": "DATA_YOU_WANT in C:/Users/mustafa/Desktop/msroof (user supplied location)",
+    "folderLookupStatus": "Located and preserved during repository merge on 2026-10-24.",
+    "reportedOriginalSeedCountsApproximate": {
+      "Arab Bank": 20,
+      "Capital Bank": 10
+    },
+    "derivation": "User supplied real seed messages to Gemini Flash to generate further messages based on them.",
+    "recordLevelOrigins": "User identifies DATA_YOU_WANT originals as real seed messages. Both bank files exactly match their data/raw copies; per-message boundaries, annotations and generated descendant families still require audit. Other raw files remain unresolved.",
+    "admissionStatus": "development_exposed_seed_families_not_fresh_independent_evaluation; record-level_identity_pending",
+    "permissions": "No public sharing, redistribution permission or license inferred from source availability.",
+    "requiredNext": "Identify/sanitize message records in the located real seed files and trace generated descendants/template overlap. Seeds remain development-exposed, not a fresh independent benchmark. Acquire unexposed new families for independent evaluation.",
+    "verifiedOriginalCopies": [
+      {
+        "original": "DATA_YOU_WANT/ARAB_BANK.txt",
+        "existingRawCopy": "data/raw/ARAB_BANK.txt",
+        "sha256": "75251acd848654274d89f6c739d4de9f2f7f7006459caef8694a6d83f053880c"
+      },
+      {
+        "original": "DATA_YOU_WANT/CAPITAL_BANK.txt",
+        "existingRawCopy": "data/raw/CAPITAL_BANK.txt",
+        "sha256": "12396aef7c4ec1597b704f3fa736dd982b497190363dd268e5b256af53d876ea"
+      }
+    ]
+  }
+}

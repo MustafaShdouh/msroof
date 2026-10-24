@@ -1,0 +1,103 @@
+{
+  "accuracy": null,
+  "businessCorpusSha256": "81f0b434dc4b2549eedef5a1fc0bfec871bcd32f635ec10916a28fb3e74f8d13",
+  "categoryModelReady": false,
+  "folds": {
+    "test": {
+      "assistantReviewedMerchantDefaults": 19,
+      "businessCount": 29,
+      "businessesWithArabicNameOrAlias": 3,
+      "categoriesWithoutReviewedExamples": [
+        "Telecom",
+        "Transportation",
+        "Subscriptions",
+        "Education",
+        "Travel",
+        "Cash Withdrawals",
+        "Installments",
+        "Fees",
+        "Other"
+      ],
+      "humanReviewedMerchantDefaults": 10,
+      "leakageGroupCount": 29,
+      "reviewedCategoryCounts": {
+        "Entertainment": 1,
+        "Food": 4,
+        "Groceries": 1,
+        "Health": 1,
+        "Shopping": 2,
+        "Water and Electricity": 1
+      }
+    },
+    "train": {
+      "assistantReviewedMerchantDefaults": 110,
+      "businessCount": 142,
+      "businessesWithArabicNameOrAlias": 26,
+      "categoriesWithoutReviewedExamples": [
+        "Water and Electricity",
+        "Transportation",
+        "Subscriptions",
+        "Cash Withdrawals",
+        "Installments",
+        "Fees"
+      ],
+      "humanReviewedMerchantDefaults": 31,
+      "leakageGroupCount": 141,
+      "reviewedCategoryCounts": {
+        "Education": 1,
+        "Entertainment": 3,
+        "Food": 4,
+        "Groceries": 4,
+        "Health": 5,
+        "Other": 1,
+        "Shopping": 10,
+        "Telecom": 2,
+        "Travel": 1
+      }
+    },
+    "validation": {
+      "assistantReviewedMerchantDefaults": 23,
+      "businessCount": 29,
+      "businessesWithArabicNameOrAlias": 3,
+      "categoriesWithoutReviewedExamples": [
+        "Telecom",
+        "Water and Electricity",
+        "Subscriptions",
+        "Shopping",
+        "Health",
+        "Entertainment",
+        "Education",
+        "Travel",
+        "Cash Withdrawals",
+        "Installments",
+        "Fees",
+        "Other"
+      ],
+      "humanReviewedMerchantDefaults": 5,
+      "leakageGroupCount": 29,
+      "reviewedCategoryCounts": {
+        "Food": 2,
+        "Groceries": 1,
+        "Transportation": 2
+      }
+    }
+  },
+  "geographicScope": "Jordan",
+  "independentSmsEvaluationReady": false,
+  "limitations": [
+    "This reserves metadata identities only. No independent SMS set was collected or validated by this script.",
+    "Frozen regression messages were used in development; numeral transformations and authored boundary scenarios cannot become independent test evidence.",
+    "Human labels here are merchant defaults, not transaction-context labels. Source proposals and aliases are not new gold examples.",
+    "User-authorized assistant reviews are separate research labels, not independent human gold. Do not score category accuracy against the assistant's own judgments.",
+    "All names and aliases of held-out businesses are forbidden in model fitting, augmentation, vocabulary/feature selection and calibration. Validation is for tuning; test is for final evaluation.",
+    "Existing human labels and public listings were visible during research; this is a prospective holdout, not a blind external benchmark.",
+    "Cash Withdrawals, Fees and Installments need transaction-context data; merchant-name coverage cannot establish readiness for all 15 categories."
+  ],
+  "requiredNext": [
+    "Resolve remaining ambiguous merchant labels without fitting against held-out results.",
+    "Acquire independently sourced, sanitized Jordanian Arabic bank/wallet SMS with provenance and human-reviewed transaction, amount, direction and category labels; do not generate substitutes.",
+    "Audit source/template and business overlap with existing training and frozen regression fixtures before admitting SMS to evaluation.",
+    "Before category training, audit remaining related-brand families, then use only train assignments; report business-level English/Arabic metrics and context-required abstentions separately."
+  ],
+  "version": "1.0.0"
+}

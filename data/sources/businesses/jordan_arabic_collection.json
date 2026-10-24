@@ -1,0 +1,217 @@
+{
+  "version": "1.0.0",
+  "scope": "Arabic merchant-name acquisition only. Assistant reviewed defaults, not independent human gold or bank SMS. Not fitted in any model.",
+  "businesses": [
+    {
+      "name": "جامعة جدارا",
+      "aliases": [],
+      "category": "Education",
+      "sources": [
+        {
+          "url": "https://jadara.edu.jo/",
+          "publisher": "Jadara University",
+          "evidence": "Official Arabic university page identifies جامعة جدارا and academic programs.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://jadara.edu.jo/registration.php?type=mod_registration&unid=4",
+          "publisher": "Jadara University",
+          "evidence": "Official admission/registration page describes degrees and university fee structures.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Tuition/admission default is Education, consistent with the user's tuition-installment decision. Salary, refunds, transport passes and unrelated university services require payment context. Public fee information is not a completed transaction or real SMS.",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "جامعة إربد الأهلية",
+      "aliases": [
+        "Irbid National University"
+      ],
+      "category": "Education",
+      "sources": [
+        {
+          "url": "https://inu.edu.jo/en/irbid-national-university-reduces-semester-fees-for-bachelors-and-masters-students-from-370-to-350-dinars/",
+          "publisher": "Irbid National University",
+          "evidence": "Official 6 October 2026 university announcement identifies Arabic/English institution and semester tuition installments.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Tuition/admission default is Education, consistent with the user's tuition-installment decision. Salary, refunds, transport passes and unrelated university services require payment context. Public fee information is not a completed transaction or real SMS.",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "جامعة البترا",
+      "aliases": [
+        "University of Petra"
+      ],
+      "category": "Education",
+      "sources": [
+        {
+          "url": "https://www.uop.edu.jo/Ar/AdmissionsAndRegistration/Pages/default.aspx",
+          "publisher": "University of Petra",
+          "evidence": "Official university admissions page identifies جامعة البترا and gives Amman/Jordan contact location.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://uop.edu.jo/Ar/AdmissionsAndRegistration/Documents/القواعد%20الاكاديمية%202023-2024%2020230829.pdf",
+          "publisher": "University of Petra",
+          "evidence": "Official bilingual academic rules identify University of Petra and جامعة البترا; historical identity evidence.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Tuition/admission default is Education, consistent with the user's tuition-installment decision. Salary, refunds, transport passes and unrelated university services require payment context. Public fee information is not a completed transaction or real SMS.",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "جامعة فيلادلفيا",
+      "aliases": [
+        "PHILADELPHIA UNIVERSITY"
+      ],
+      "category": "Education",
+      "sources": [
+        {
+          "url": "https://www.philadelphia.edu.jo/announce/new-intake-fees.pdf",
+          "publisher": "Philadelphia University",
+          "evidence": "Official historical 2015 fee notice explicitly pairs جامعة فيلادلفيا and PHILADELPHIA UNIVERSITY in Jordan.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://www.philadelphia.edu.jo/ar/admission-and-registration",
+          "publisher": "Philadelphia University",
+          "evidence": "Official admission department describes university registration/tuition and Jordan contact location.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Tuition/admission default is Education, consistent with the user's tuition-installment decision. Salary, refunds, transport passes and unrelated university services require payment context. Public fee information is not a completed transaction or real SMS. Do not interpret historical fee notices as current prices.",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "مستشفى ابن الهيثم",
+      "aliases": [
+        "مستشفى إبن الهيثم"
+      ],
+      "category": "Health",
+      "sources": [
+        {
+          "url": "https://sdc.com.jo/index.php/ar/companyInfo?member_info=131279&pres=1&repTrade=2",
+          "publisher": "Jordan Securities Depository Center",
+          "evidence": "Primary company record identifies مستشفى إبن الهيثم, alternative spelling مستشفى ابن الهيثم, Amman/Jordan and ihh.com.jo official website.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Clinical-service merchant default is Health; payroll, refunds or unrelated purchases need context. No clinical-outcome claim or English transliteration inferred.",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "مستشفى الاستقلال",
+      "aliases": [
+        "مستشفى الإستقلال"
+      ],
+      "category": "Health",
+      "sources": [
+        {
+          "url": "https://www.istiklalhospital.com/ar-article-11",
+          "publisher": "Istiklal Hospital",
+          "evidence": "Official hospital history identifies مستشفى الاستقلال in Amman and clinical/diagnostic services.",
+          "accessedOn": "2026-10-24"
+        },
+        {
+          "url": "https://www.istiklalhospital.com/home_ar.aspx",
+          "publisher": "Istiklal Hospital",
+          "evidence": "Official Arabic homepage also uses مستشفى الإستقلال and gives Amman location.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Clinical-service merchant default is Health; payroll, refunds or unrelated purchases need context. No clinical-outcome claim or English transliteration inferred.",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "جيني",
+      "aliases": [
+        "Jeeny"
+      ],
+      "category": "Transportation",
+      "sources": [
+        {
+          "url": "https://www.jeeny.me/ar/driver",
+          "publisher": "Jeeny",
+          "evidence": "Official Arabic driver page identifies جيني, Jordan operations and passenger-trip earnings; English page title is Jeeny.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Passenger ride-fare default is Transportation. Driver earnings are incoming income; driver wallet top-ups, commissions and unsettled trip amounts need context. Do not classify every message mentioning Jeeny as an outgoing ride expense.",
+      "cities": [],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    },
+    {
+      "name": "متحف السيارات الملكي",
+      "aliases": [],
+      "category": "Entertainment",
+      "sources": [
+        {
+          "url": "https://museums.visitjordan.com/ar/Museum/58",
+          "publisher": "Jordan Tourism Board",
+          "evidence": "Official tourism museum page identifies متحف السيارات الملكي in Amman and its visitor exhibits.",
+          "accessedOn": "2026-10-24"
+        }
+      ],
+      "notes": "Visitor-admission default is Entertainment, an assistant category judgment from recreational museum use. School-course fees, shop purchases, memberships and donations need context; cultural/educational content does not establish tuition.",
+      "cities": [
+        "Amman"
+      ],
+      "geographicScope": "Jordan",
+      "reviewer": "Codex",
+      "reviewerType": "assistant",
+      "status": "approved",
+      "labelScope": "merchant_name"
+    }
+  ],
+  "deferredCandidates": [
+    {
+      "name": "متحف الأطفال الأردن",
+      "sourceUrl": "https://cmj.jo/birthdays/?lang=ar",
+      "reason": "Official institution describes educational learning-through-play programs and recreational birthday packages. Retain service-level context; do not admit an unconditional Education/Entertainment label in this collection."
+    }
+  ]
+}
