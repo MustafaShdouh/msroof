@@ -1,0 +1,76 @@
+{
+  "corpusVersion": "sanitized-corpus-1.0.0",
+  "status": "prepared_synthetic_version_not_promoted_or_published",
+  "builderSha256": "b2a4abed5c9ec9f1e8327a4635bffb7a10323f22e69fe44cd251d4c0dfa27753",
+  "sourceArchiveManifestSha256": "c5111c695f6314602805e6e82310646b109765b6a51f5f03876729d51d446981",
+  "historicalInputsArchivedPrivately": true,
+  "activeLegacyGateChanged": false,
+  "currentRepositoryPrivacyRemediationComplete": false,
+  "remoteHistoryChanged": false,
+  "syntheticTrainingRows": 2120,
+  "compatibilityCases": 226,
+  "tracedGeneratorTemplateExpressions": 102,
+  "globalGroups": 102,
+  "trainRows": 1702,
+  "validationRows": 418,
+  "labelCounts": {
+    "ANNOUNCEMENT": {
+      "train": 121,
+      "validation": 39
+    },
+    "CHAT_NOISE": {
+      "train": 280,
+      "validation": 70
+    },
+    "DECLINED": {
+      "train": 101,
+      "validation": 19
+    },
+    "OTP": {
+      "train": 187,
+      "validation": 53
+    },
+    "PROMO": {
+      "train": 98,
+      "validation": 22
+    },
+    "TRANSACTION_CREDIT": {
+      "train": 310,
+      "validation": 65
+    },
+    "TRANSACTION_DEBIT": {
+      "train": 605,
+      "validation": 150
+    }
+  },
+  "checks": {
+    "knownPersonalPhraseSurvivors": 0,
+    "crossPartitionOverlapCounts": {
+      "historical_sourceTemplate": 0,
+      "historical_normalizedText": 0,
+      "historical_numericProxy": 0,
+      "historical_slotProxy": 0,
+      "sanitized_sourceTemplate": 0,
+      "sanitized_normalizedText": 0,
+      "sanitized_numericProxy": 0,
+      "sanitized_slotProxy": 0
+    },
+    "historicalLabelsAndMissingnessPreserved": true,
+    "independentEvaluationEligible": false
+  },
+  "runtimeAcceptanceEvidence": "data/reports/sanitized_corpus_v1_legacy_v1_evaluation.json",
+  "artifactSha256": {
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/training/splits/transaction_direction_sanitized_v1.json": "512af5213d2c34ab3f6f8a501163e261102e3dbf5e7cf52d0439735b204a4668",
+    "tests/fixtures/sanitized_v1/qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+    "tests/fixtures/sanitized_v1/test_corpus_manifest.json": "456dd0519ed8e2b1ab554b067b1ca88edc8649739f77e83831e466a9c32b61e6",
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7"
+  },
+  "limits": [
+    "Synthetic transformation, not newly collected messages, approved real labels, or an independent test set.",
+    "Known person strings are removed and values regenerated; this is not a certification of complete repository anonymization.",
+    "Legacy tracked files and prior Git history still contain old data; migration/retirement and separately approved history cleanup remain.",
+    "Source-expression and exact/slot proxies are grouped globally; arbitrary semantic paraphrase relationships remain unproven.",
+    "No category dataset/split change or merchant final-test inference."
+  ]
+}

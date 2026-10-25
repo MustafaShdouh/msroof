@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "geographicScope": "Jordan",
   "scope": "Documentary evidence for annotation design. Zero collected completed-transaction SMS. Paraphrases and assistant inferences are not message examples or ground-truth labels.",
   "records": [
@@ -84,10 +84,13 @@
       "Capital Bank": 10
     },
     "derivation": "User supplied real seed messages to Gemini Flash to generate further messages based on them.",
-    "recordLevelOrigins": "User identifies DATA_YOU_WANT originals as real seed messages. Both bank files exactly match their data/raw copies; per-message boundaries, annotations and generated descendant families still require audit. Other raw files remain unresolved.",
-    "admissionStatus": "development_exposed_seed_families_not_fresh_independent_evaluation; record-level_identity_pending",
+    "recordLevelOrigins": "User identifies DATA_YOU_WANT originals as real seed messages. Hash-bound block audit finds 16 Arab Bank and 10 Capital blocks, with matching data/raw copies. These are user-attested file blocks, not bank-authenticated packet boundaries; labels and exact Gemini parents remain unresolved. Other raw files remain unresolved.",
+    "admissionStatus": "development_exposed_seeds_audited_as_private_drafts_not_admitted_for_training_or_independent_evaluation",
+    "sourceAuditManifest": "data/sources/transactions/seed_audit_manifest.json",
+    "sourceAuditSummary": "data/reports/real_sms_provenance_audit.json",
+    "generationHistoryEvidence": "data/sources/transactions/generation_history.json",
     "permissions": "No public sharing, redistribution permission or license inferred from source availability.",
-    "requiredNext": "Identify/sanitize message records in the located real seed files and trace generated descendants/template overlap. Seeds remain development-exposed, not a fresh independent benchmark. Acquire unexposed new families for independent evaluation.",
+    "requiredNext": "Review private sanitization drafts and labels, resolve other raw origins and parent links where evidence exists, repair cross-provider duplicate/template isolation in a new development version, and acquire fresh unexposed families for independent evaluation. Existing seeds remain development-exposed.",
     "verifiedOriginalCopies": [
       {
         "original": "DATA_YOU_WANT/ARAB_BANK.txt",

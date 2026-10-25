@@ -1,0 +1,201 @@
+{
+  "auditVersion": "1.0.0",
+  "scope": "Source/content exposure audit only; no model inference, admission, or independent evaluation",
+  "sourceFiles": [
+    {
+      "sourceId": "arab-seeds",
+      "blocks": 16,
+      "rawCopyByteIdentical": true
+    },
+    {
+      "sourceId": "capital-seeds",
+      "blocks": 10,
+      "rawCopyByteIdentical": true
+    }
+  ],
+  "seedBlockCount": 26,
+  "sourceAuthentication": "user_attested_not_independently_authenticated",
+  "independentEvaluationEligibleCount": 0,
+  "trainingAdmittedCount": 0,
+  "confirmedGeminiParentEdges": 0,
+  "unresolvedOtherRawBlockCount": 85,
+  "scriptCoverage": {
+    "arabicScriptPresent": 5,
+    "latinOnly": 21,
+    "interpretation": "Script probes, not reviewed language or performance labels"
+  },
+  "currentTrainingSplitProxyOverlap": {
+    "normalized": {
+      "crossPartitionGroups": 16,
+      "rowsInThoseGroups": 150,
+      "groupsAcrossProviderMetadata": 16,
+      "groupsWithConflictingExistingLabels": 0,
+      "rowsByPartition": {
+        "train": 109,
+        "validation": 41
+      }
+    },
+    "masked": {
+      "crossPartitionGroups": 50,
+      "rowsInThoseGroups": 424,
+      "groupsAcrossProviderMetadata": 38,
+      "groupsWithConflictingExistingLabels": 0,
+      "rowsByPartition": {
+        "train": 300,
+        "validation": 124
+      }
+    }
+  },
+  "corpora": {
+    "legacy_transaction_data": {
+      "recordsScanned": 2120,
+      "seedBlocksWithAnyCandidate": 19,
+      "seedBlocksWithObservedTextOverlap": 0,
+      "linksByStrongestMethod": {
+        "number_masked": 24,
+        "similarity_candidate": 329
+      },
+      "distinctMatchedCorpusRecords": 263
+    },
+    "bio_training": {
+      "recordsScanned": 83,
+      "seedBlocksWithAnyCandidate": 14,
+      "seedBlocksWithObservedTextOverlap": 7,
+      "linksByStrongestMethod": {
+        "normalized_text": 7,
+        "number_masked": 4,
+        "similarity_candidate": 21
+      },
+      "distinctMatchedCorpusRecords": 19
+    },
+    "frozen_regression": {
+      "recordsScanned": 178,
+      "seedBlocksWithAnyCandidate": 23,
+      "seedBlocksWithObservedTextOverlap": 16,
+      "linksByStrongestMethod": {
+        "exact_text": 1,
+        "normalized_text": 15,
+        "number_masked": 4,
+        "similarity_candidate": 28
+      },
+      "distinctMatchedCorpusRecords": 32
+    },
+    "frozen_adversarial": {
+      "recordsScanned": 48,
+      "seedBlocksWithAnyCandidate": 5,
+      "seedBlocksWithObservedTextOverlap": 0,
+      "linksByStrongestMethod": {
+        "similarity_candidate": 6
+      },
+      "distinctMatchedCorpusRecords": 3
+    },
+    "unresolved_raw:BANK_AL_ETIHAD": {
+      "recordsScanned": 12,
+      "seedBlocksWithAnyCandidate": 0,
+      "seedBlocksWithObservedTextOverlap": 0,
+      "linksByStrongestMethod": {},
+      "distinctMatchedCorpusRecords": 0
+    },
+    "unresolved_raw:CHAT_NOISE": {
+      "recordsScanned": 17,
+      "seedBlocksWithAnyCandidate": 0,
+      "seedBlocksWithObservedTextOverlap": 0,
+      "linksByStrongestMethod": {},
+      "distinctMatchedCorpusRecords": 0
+    },
+    "unresolved_raw:HOUSING_BANK": {
+      "recordsScanned": 11,
+      "seedBlocksWithAnyCandidate": 0,
+      "seedBlocksWithObservedTextOverlap": 0,
+      "linksByStrongestMethod": {},
+      "distinctMatchedCorpusRecords": 0
+    },
+    "unresolved_raw:ORANGE_MONEY": {
+      "recordsScanned": 11,
+      "seedBlocksWithAnyCandidate": 0,
+      "seedBlocksWithObservedTextOverlap": 0,
+      "linksByStrongestMethod": {},
+      "distinctMatchedCorpusRecords": 0
+    },
+    "unresolved_raw:REFLECT": {
+      "recordsScanned": 12,
+      "seedBlocksWithAnyCandidate": 0,
+      "seedBlocksWithObservedTextOverlap": 0,
+      "linksByStrongestMethod": {},
+      "distinctMatchedCorpusRecords": 0
+    },
+    "unresolved_raw:UWALLET": {
+      "recordsScanned": 11,
+      "seedBlocksWithAnyCandidate": 0,
+      "seedBlocksWithObservedTextOverlap": 0,
+      "linksByStrongestMethod": {},
+      "distinctMatchedCorpusRecords": 0
+    },
+    "unresolved_raw:ZAIN_CASH": {
+      "recordsScanned": 11,
+      "seedBlocksWithAnyCandidate": 0,
+      "seedBlocksWithObservedTextOverlap": 0,
+      "linksByStrongestMethod": {},
+      "distinctMatchedCorpusRecords": 0
+    }
+  },
+  "bioRowsVerifiedAsFixtureCopies": 83,
+  "previouslyPublishedFixtureExposure": {
+    "commit": "f840390df1a7c6cbca668eb38bdf363297156f64",
+    "path": "tests/fixtures/test_suite_cases.json",
+    "gitBlobSha1": "71fee3899db733d70507291671f9f6b65778d379",
+    "seedBlocksWithObservedTextOverlap": 16,
+    "currentFixtureMatchesHistoricalBlobEvidence": true,
+    "currentRemoteVisibilityOrRevisionChecked": false
+  },
+  "bioRowsScanned": 83,
+  "csvProjection": {
+    "exactFieldEquality": false,
+    "equalAfterTextLineEndingNormalization": true,
+    "textLineEndingDifferenceRows": 1463
+  },
+  "generationHistory": {
+    "historicalAiReportedRows": 1950,
+    "currentRows": 2120,
+    "currentGeneratorReproductionEvidenceMatchesHashes": true,
+    "perRecordGeminiParentsConfirmed": false
+  },
+  "categoryBusinessMentionCandidates": {
+    "train": {
+      "mentions": 2,
+      "seedBlocks": 2
+    },
+    "validation": {
+      "mentions": 0,
+      "seedBlocks": 0
+    },
+    "test": {
+      "mentions": 0,
+      "seedBlocks": 0
+    }
+  },
+  "qualityFlagCounts": {
+    "direction_needs_review": 2,
+    "garbled_or_wrapped_party_text": 1,
+    "non_monetary_reward_wording": 2,
+    "nonnumeric_balance_field": 1,
+    "sensitive_voucher_token": 1,
+    "transfer_ownership_not_established": 1,
+    "truncated_balance_field": 1
+  },
+  "sanitization": {
+    "draftCount": 26,
+    "humanReviewedCount": 0,
+    "allDraftsPrivate": true
+  },
+  "limits": [
+    "File blocks are not authenticated SMS packet boundaries.",
+    "Exact/normalized overlap establishes content reuse, not historical parentage.",
+    "Number masking/similarity are candidate evidence only; unmatched rows do not prove independence.",
+    "Current train/validation normalized duplicates cross provider metadata; provider-local grouping is not content isolation.",
+    "The previously pushed fixture snapshot embeds original-seed text; ignoring raw/private files does not remove those historical copies. Versioned sanitization and separately authorized remote-history remediation are needed.",
+    "Other raw files have unresolved origins. A user-pasted historical AI account supplies no per-row Gemini ancestry.",
+    "Sanitized drafts are private and unadmitted; no new labels or public message text.",
+    "The existing merchant final-test reservation remains separate and unevaluated."
+  ]
+}

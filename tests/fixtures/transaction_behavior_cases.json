@@ -1,0 +1,912 @@
+{
+  "contractVersion": "1.0.0",
+  "dataKind": "authored_policy_contract_examples",
+  "trainingEligible": false,
+  "evaluationEligible": false,
+  "description": "Policy consistency examples only; not observed SMS, model measurements, or independent truth.",
+  "cases": [
+    {
+      "id": "purchase_balance_separation",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Card purchase completed for a restaurant meal: JOD 12.50. Available balance JOD 900.00."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 12.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": "Food",
+        "categoryStatus": "assigned"
+      }
+    },
+    {
+      "id": "arabic_indic_amount",
+      "language": "arabic",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "تم خصم مبلغ ١٥٫٧٥ د.أ من حسابك مقابل وجبة مطعم. الرصيد ٢٠٠ د.أ."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 15.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": "Food",
+        "categoryStatus": "assigned"
+      }
+    },
+    {
+      "id": "mixed_persian_amount",
+      "language": "mixed",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Purchase completed for groceries: ۳۲٫۴۰۰ JOD. الرصيد المتاح ١٠٠ دينار."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 32.4,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": "Groceries",
+        "categoryStatus": "assigned"
+      }
+    },
+    {
+      "id": "p2p_outgoing",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "JOD 20.00 debited. Transfer to another person's wallet completed."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "category_unresolved",
+          "completed_transaction"
+        ],
+        "amount": 20,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "uncertain"
+      }
+    },
+    {
+      "id": "p2p_incoming",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Incoming transfer from another person's account completed. JOD 30.00 credited to your account."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 30,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_p2p_outgoing",
+      "language": "arabic",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "تم تحويل ٢٥ د.أ بنجاح من حسابك إلى محفظة شخص آخر."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "category_unresolved",
+          "completed_transaction"
+        ],
+        "amount": 25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "uncertain"
+      }
+    },
+    {
+      "id": "p2p_known_food_purpose",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "JOD 8.00 debited. Completed transfer to another person as payment for a restaurant meal."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 8,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "merchantOrCounterparty": null,
+        "expenseCategory": "Food",
+        "categoryStatus": "assigned"
+      }
+    },
+    {
+      "id": "own_accounts_english",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Transfer of JOD 75.00 between your own accounts completed."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "completed_transaction",
+          "own_account_transfer"
+        ],
+        "amount": 75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "own_accounts_arabic",
+      "language": "arabic",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "تم تحويل ٧٥ د.أ بنجاح بين حساباتك الشخصية."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "completed_transaction",
+          "own_account_transfer"
+        ],
+        "amount": 75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "two_masks_unknown_ownership",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Transfer of JOD 40.00 completed from account *1111 to account *2222. Account ownership is unspecified."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ],
+        "amount": 40,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "unknown",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "contact_metadata_alone",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Your card purchase of JOD 12.50 for a restaurant meal completed.",
+        "sender": "Saved financial notifications",
+        "isContact": true
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 12.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": "Food",
+        "categoryStatus": "assigned"
+      }
+    },
+    {
+      "id": "phone_sender_metadata_alone",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Your card purchase of JOD 12.50 for a restaurant meal completed.",
+        "sender": "+962700000000"
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 12.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": "Food",
+        "categoryStatus": "assigned"
+      }
+    },
+    {
+      "id": "default_missing_currency",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Your card purchase of 12.50 for a restaurant meal completed."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 12.5,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": "Food",
+        "categoryStatus": "assigned"
+      }
+    },
+    {
+      "id": "default_ambiguous_currency",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Your card purchase of 10 dollars completed. Country/currency type is unspecified."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "category_unresolved",
+          "completed_transaction"
+        ],
+        "amount": 10,
+        "currency": "JOD",
+        "currencyResolution": "default_ambiguous",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "uncertain"
+      }
+    },
+    {
+      "id": "explicit_foreign_currency",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Your card purchase of USD 14.99 for a restaurant meal completed."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 14.99,
+        "currency": "USD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": "Food",
+        "categoryStatus": "assigned"
+      }
+    },
+    {
+      "id": "completed_missing_amount",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Your restaurant card purchase completed. The amount is missing from this notification."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "completed_ambiguous_amount",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Card purchase completed. Amount field corrupted: JOD 10 or JOD 20."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "completed_unknown_direction",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "A transaction of JOD 10 completed on your account. Debit or credit information is unavailable."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completed_transaction",
+          "direction_unresolved"
+        ],
+        "amount": 10,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "completion_unclear",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Payment of JOD 10: processing confirmation is unavailable; completion cannot be determined."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved"
+        ],
+        "amount": 10,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "opaque_merchant_category",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Card purchase of JOD 50.00 at OPAQUE MERCHANT completed."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "category_unresolved",
+          "completed_transaction"
+        ],
+        "amount": 50,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": "OPAQUE MERCHANT",
+        "expenseCategory": null,
+        "categoryStatus": "uncertain"
+      }
+    },
+    {
+      "id": "understood_other_expense",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Card payment of JOD 15.00 for garden landscaping service completed."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 15,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": "Other",
+        "categoryStatus": "assigned"
+      }
+    },
+    {
+      "id": "refund_incoming",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Refund completed. JOD 12.50 credited back to your card."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 12.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "otp_not_completed",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Use OTP 123456 to authorize a JOD 10 payment."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "otp_or_authorization"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "declined_not_completed",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Your purchase of JOD 10 was declined."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "declined_or_failed"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_declined",
+      "language": "arabic",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "تم رفض عملية شراء بقيمة ١٠ د.أ لعدم كفاية الرصيد."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "declined_or_failed"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "payment_request",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Please approve a requested payment of JOD 10; no money has moved."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "pending_or_requested"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "balance_only",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Available balance JOD 100.00."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "balance_only"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "personal_chat",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "I just sent you 10 JOD. Check your account."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_personal_chat",
+      "language": "arabic",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "حولتلك عشرة دنانير، شيك عحسابك."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "promotion",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": "Earn cashback when you spend JOD 100 next month."
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "empty_message",
+      "language": "english",
+      "labelSource": "assistant_authored_contract_example",
+      "input": {
+        "text": ""
+      },
+      "expected": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "empty_or_malformed"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      }
+    }
+  ],
+  "reviewedCategoryPolicies": [
+    {
+      "reviewId": "edge-apple-bill-unknown",
+      "text": "Purchase USD 4.99 at APPLE.COM/BILL.",
+      "reviewer": "Mustafa",
+      "expectedCategory": null,
+      "categoryStatus": "uncertain",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-atm-cash",
+      "text": "تم سحب مبلغ 100 دينار نقداً من الصراف الآلي. الرصيد المتاح 250 دينار.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Cash Withdrawals",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-atm-separate-fee",
+      "text": "تم خصم عمولة سحب من صراف بنك آخر بقيمة دينار واحد. هذه الرسالة للعمولة فقط ولا تتضمن مبلغ السحب.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Fees",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-bill-aggregator-unknown",
+      "text": "تم تسديد فاتورة بقيمة 25 دينار عبر إي فواتيركم. الرصيد المتاح 100 دينار.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Fees",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-education-installment",
+      "text": "تم تسديد قسط الرسوم الجامعية بقيمة 200 دينار، القسط الثاني من أربعة.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Education",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-hypermax-electronics",
+      "text": "Paid JOD 200.00 at HyperMax for a television.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Groceries",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-hypermax-unknown",
+      "text": "Purchase JOD 200.00 at HYPERMAX.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Groceries",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-jett-international",
+      "text": "Paid JOD 30.00 to JETT for an international bus ticket for a holiday.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Travel",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-jett-monthly-pass",
+      "text": "JETT Amman–Irbid monthly commuting pass paid: JOD 60.00.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Subscriptions",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-netflix-recurring",
+      "text": "Netflix monthly subscription renewed. USD 9.99 paid.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Subscriptions",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-orange-device",
+      "text": "Paid JOD 150.00 to Orange eShop for a tablet, paid in full.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Telecom",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-orange-installment",
+      "text": "تم دفع قسط جهاز لوحي لدى أورنج بقيمة 15 دينار، القسط الثالث من 12.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Installments",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-orange-mixed-bill",
+      "text": "Paid JOD 35.00 to Orange: internet service JOD 25.00 and device installment JOD 10.00 in one payment.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Telecom",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-pharmacy-cosmetics",
+      "text": "Paid JOD 20.00 at a pharmacy for lipstick and cosmetics; no medication purchased.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Health",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-talabat-groceries",
+      "text": "Paid JOD 24.50 to Talabat Mart for grocery order.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Groceries",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-talabat-meal",
+      "text": "Paid JOD 9.50 via Talabat for a restaurant meal including delivery.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Food",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-talabat-unknown",
+      "text": "Purchase JOD 18.50 at TALABAT.",
+      "reviewer": "Mustafa",
+      "expectedCategory": null,
+      "categoryStatus": "uncertain",
+      "scope": "exact_reviewed_scenario_only"
+    },
+    {
+      "reviewId": "edge-telecom-recurring",
+      "text": "تم تجديد اشتراك خط الهاتف الشهري وخصم 10 دنانير من حسابك.",
+      "reviewer": "Mustafa",
+      "expectedCategory": "Telecom",
+      "categoryStatus": "assigned",
+      "scope": "exact_reviewed_scenario_only"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "corpusVersion": "sanitized-corpus-1.0.0",
+  "dataKind": "synthetic_privacy_transformed_regression",
+  "independentEvaluationEligible": false,
+  "fixtures": {
+    "test_suite_cases.json": {
+      "sha256": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+      "caseCount": 178,
+      "validCaseCount": 83,
+      "invalidCaseCount": 95
+    },
+    "qa_adversarial_cases.json": {
+      "sha256": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+      "caseCount": 48,
+      "validCaseCount": 23,
+      "invalidCaseCount": 25
+    }
+  }
+}

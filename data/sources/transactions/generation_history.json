@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "userSuppliedHistoricalAccount": {
+    "reportedOn": "2026-10-25",
+    "evidenceKind": "user_pasted_prior_ai_response_not_original_output_artifact",
+    "reportedArtifactName": "dataset_expanded.json",
+    "reportedGeneratedRows": 1950,
+    "reportedApproximateMasterPatterns": 80,
+    "originalPromptOrGeneratedVersionProvided": false,
+    "summary": "The pasted response describes template augmentation using merchants, names, amounts, masks and billers, and claims generation/training/evaluation of a 1950-row dataset. The user has no exact generated version to compare.",
+    "unverifiedClaims": ["real seed status for all providers", "balanced samples", "high statistical confidence from sample count", "practically zero false positives", "100 percent held-out accuracy", "runtime latency under 0.1ms"],
+    "perRecordParentLinksProvided": false
+  },
+  "currentGeneratorReproduction": {
+    "verifiedOn": "2026-10-25",
+    "generatorPath": "training/expand_dataset.py",
+    "generatorSha256": "908433443a5a2dd3c71c555fc9e06eb7a8e1c64db4c1d22cb66df07318f25cfe",
+    "datasetPath": "data/training/dataset_expanded.json",
+    "datasetSha256": "9b76d5610d1f1de0330c13e57c44156c7ee6285bbcaec454d517c2d00418f792",
+    "rows": 2120,
+    "allRecordValuesAndOrderEqual": true,
+    "method": "Ran the inspected generate_samples function in an isolated Python process; compared the returned list to the current JSON without rewriting either artifact.",
+    "limit": "Proves current artifact reproduction from the current synthetic generator, not original Gemini version identity, seed authenticity, or per-row ancestry. The historical 1950-row version is unavailable."
+  }
+}

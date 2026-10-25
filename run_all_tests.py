@@ -37,7 +37,8 @@ def main() -> int:
         return 1
     category_suite = unittest.defaultTestLoader.loadTestsFromNames([
         "tests.python.test_merchant_category", "tests.python.test_merchant_training_extension",
-        "tests.python.test_arabic_collection"])
+        "tests.python.test_arabic_collection", "tests.python.test_transaction_behavior_contract",
+        "tests.python.test_sms_provenance", "tests.python.test_sanitized_corpus"])
     if not unittest.TextTestRunner(verbosity=1).run(category_suite).wasSuccessful():
         return 1
 
@@ -143,7 +144,8 @@ def main() -> int:
 
     print("\n" + "=" * 70)
     if all_passed:
-        print("OVERALL STATUS: ALL TESTS PASSED (100% ACCURACY, 0 FALSE POSITIVES, 0 DEFECTS)")
+        print("ACTIVE BASELINE AND CONTRACT CHECKS PASSED")
+        print("Prepared sanitized cases have a separate compatibility diagnostic before gate migration.")
     else:
         print("OVERALL STATUS: DEFECTS DETECTED")
     print("=" * 70)

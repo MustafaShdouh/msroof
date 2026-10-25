@@ -1,0 +1,47 @@
+{
+  "corpusVersion": "sanitized-corpus-1.0.0",
+  "scope": "Legacy-model development compatibility diagnostic; no independent accuracy claim",
+  "inputSha256": {
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+    "tests/fixtures/sanitized_v1/qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "src/python/verify_engine.py": "4a640f94b6f890cb26aa68b96072856b8e06f4cddeb5b373f5b65207003b7c88",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "src/typescript/MasroofEngine.ts": "837d50d37f46da5e719904d53d759e50ac995afb7dc5811bb628add65465cd9d",
+    "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+    "tools/evaluation/probe_sanitized_corpus.ts": "dec0cfdcb13b5b4cc2a674b18ba736ec38b4cebbc77e498047c47e6f3b2ec9d0",
+    "training/evaluate_sanitized_corpus.py": "03cc0d6b5f578998ae388e4d02596afc2430188c5cc58522ee379a81bd4d5431"
+  },
+  "python": {
+    "cases": 226,
+    "classificationCorrect": 225,
+    "falsePositive": 1,
+    "falseNegative": 0,
+    "entityMismatches": 0,
+    "failures": [
+      {
+        "caseId": "TC_EDGE_MAINTENANCE_TRAP_001",
+        "field": "classification",
+        "kind": "falsePositive"
+      }
+    ]
+  },
+  "typescript": {
+    "cases": 226,
+    "classificationCorrect": 225,
+    "falsePositive": 1,
+    "falseNegative": 0,
+    "entityMismatches": 0,
+    "failures": [
+      {
+        "caseId": "TC_EDGE_MAINTENANCE_TRAP_001",
+        "field": "classification",
+        "kind": "falsePositive"
+      }
+    ]
+  },
+  "runtimeMetricParity": true,
+  "migrationGatePassed": false,
+  "runtimeOrModelModified": false,
+  "finalTestInferred": false
+}

@@ -1,0 +1,44 @@
+{
+  "auditVersion": "1.0.0",
+  "sourceAttestation": "data/sources/transactions/jordan_context_evidence.json",
+  "scope": "User-attested seed files; text-block boundaries and exposure audit, not authenticated bank records or reviewed labels",
+  "sources": [
+    {
+      "id": "arab-seeds",
+      "path": "DATA_YOU_WANT/ARAB_BANK.txt",
+      "rawCopy": "data/raw/ARAB_BANK.txt",
+      "sha256": "75251acd848654274d89f6c739d4de9f2f7f7006459caef8694a6d83f053880c",
+      "expectedBlocks": 16
+    },
+    {
+      "id": "capital-seeds",
+      "path": "DATA_YOU_WANT/CAPITAL_BANK.txt",
+      "rawCopy": "data/raw/CAPITAL_BANK.txt",
+      "sha256": "12396aef7c4ec1597b704f3fa736dd982b497190363dd268e5b256af53d876ea",
+      "expectedBlocks": 10
+    }
+  ],
+  "boundaryPolicy": "One nonblank block; keep routing-prefix and wrapped lines together. Offsets are Unicode code points after utf-8-sig decoding, end-exclusive; lines are one-based inclusive. These are file blocks, not provider-verified SMS packet boundaries.",
+  "previouslyPublishedFixtureEvidence": {
+    "commit": "f840390df1a7c6cbca668eb38bdf363297156f64",
+    "fixturePath": "tests/fixtures/test_suite_cases.json",
+    "gitBlobSha1": "71fee3899db733d70507291671f9f6b65778d379",
+    "fixtureSha256": "fc9458ec4f01dbf8a45929c74641ba679d49d0cb3a824b51a91658d6a454ef94",
+    "verification": "Local git ls-tree of the previously verified pushed snapshot and git hash-object of the current fixture match. This establishes historical snapshot contents, not current remote visibility or current remote revision."
+  },
+  "similarityCandidatePolicy": {
+    "minimumSharedTokens": 8,
+    "minimumTokenJaccard": 0.70,
+    "minimumTokenSequenceRatio": 0.82,
+    "interpretation": "Candidate only. Numeric masking and lexical similarity do not establish ancestry, common ownership, correctness, or independent evaluation. No parent is inferred automatically."
+  },
+  "observations": [
+    {"sourceId":"arab-seeds","block":8,"flags":["non_monetary_reward_wording"],"note":"Points reward notice; not automatically a money-movement label."},
+    {"sourceId":"arab-seeds","block":9,"flags":["non_monetary_reward_wording","sensitive_voucher_token"],"note":"Points/voucher notice; token requires redaction, not a financial-status assumption."},
+    {"sourceId":"arab-seeds","block":11,"flags":["truncated_balance_field"],"note":"Balance currency appears without a following balance value; preserve missingness."},
+    {"sourceId":"arab-seeds","block":16,"flags":["transfer_ownership_not_established"],"note":"Debit/credit account masks alone do not prove common ownership."},
+    {"sourceId":"capital-seeds","block":1,"flags":["direction_needs_review"],"note":"Wrapped transfer wording needs a reviewed direction label."},
+    {"sourceId":"capital-seeds","block":2,"flags":["nonnumeric_balance_field"],"note":"Balance ends in an alphabetic glyph; do not silently turn it into zero."},
+    {"sourceId":"capital-seeds","block":3,"flags":["garbled_or_wrapped_party_text","direction_needs_review"],"note":"Mixed wrapped party text is unclear; no correction or direction truth inferred."}
+  ]
+}

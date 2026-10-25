@@ -1,0 +1,3213 @@
+{
+  "metadata": {
+    "corpusVersion": "sanitized-corpus-1.0.0",
+    "dataKind": "synthetic_privacy_transformed_regression",
+    "independentEvaluationEligible": false
+  },
+  "testCases": [
+    {
+      "id": "TC_POS_ARAB_001",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nYou have a purchase transaction on account 2282*848 from ZAIN MARKET - ROSARY SIST amount JOD 6.286 on 08/01/2001 19:26. Balance JOD 10.601.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 6.286,
+        "currency": "JOD",
+        "accountMask": "2282*848",
+        "merchantOrParty": "ZAIN MARKET - ROSARY SIST",
+        "balance": 10.601
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ARAB_002",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nYou have a purchase transaction on account 1429*394 from BLK amount JOD 4.671 on 16/04/2001 14:28. Balance JOD 66.223.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 4.671,
+        "currency": "JOD",
+        "accountMask": "1429*394",
+        "merchantOrParty": "BLK",
+        "balance": 66.223
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ARAB_003",
+      "category": "POSITIVE_CLIQ_OUTWARD",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_OUTWARD compatibility case",
+      "body": "JO\nJOD3.097 has been debited from 5544*646 to ORCGV JCULZ PUMJDSE XZNUJOYR as CliQ transfer Balance 44.956JOD",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 3.097,
+        "currency": "JOD",
+        "accountMask": "5544*646",
+        "merchantOrParty": "ORCGV JCULZ PUMJDSE XZNUJOYR",
+        "balance": 44.956
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ARAB_004",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "JO\nJOD1.820 has been credited to 9014*834from MJZS VKQEQTS KEREJU FZFBK as CliQ transfer Balance 82.094JOD",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 1.82,
+        "currency": "JOD",
+        "accountMask": "9014*834",
+        "merchantOrParty": "MJZS VKQEQTS KEREJU FZFBK",
+        "balance": 82.094
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ARAB_005",
+      "category": "POSITIVE_ATM_WITHDRAWAL",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed POSITIVE_ATM_WITHDRAWAL compatibility case",
+      "body": "JO\n71JOD has been debited from your account 3308*810 as an ATM Withdrawal from Al-Thaqafa Br on 16/10/2001 06:15. Available balance 40.640.\nREF 132647734136",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 71.0,
+        "currency": "JOD",
+        "accountMask": "3308*810",
+        "merchantOrParty": "Al-Thaqafa Br",
+        "balance": 40.64
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ARAB_006",
+      "category": "POSITIVE_ATM_DEPOSIT",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed POSITIVE_ATM_DEPOSIT compatibility case",
+      "body": "JO\nJOD 60.592 has been credited to  4477*767 on 25/03/2001 as an Online ATM Deposit. Available balance 60.592.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 60.592,
+        "currency": "JOD",
+        "accountMask": "4477*767",
+        "merchantOrParty": null,
+        "balance": 60.592
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ARAB_007",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nYou have a purchase transaction on account 8460*917 from SHEIN.COM amount JOD 66.430 on 19/01/2001 14:36.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 66.43,
+        "currency": "JOD",
+        "accountMask": "8460*917",
+        "merchantOrParty": "SHEIN.COM",
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ARAB_008",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nYou have a purchase transaction on account 5786*839 from AMAZON.COM amount USD 60.17 on 25/03/2001 19:52. Balance USD 160.20.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 60.17,
+        "currency": "USD",
+        "accountMask": "5786*839",
+        "merchantOrParty": "AMAZON.COM",
+        "balance": 160.2
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ARAB_009",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nYou have a purchase transaction on account 4082*965 from BOOKING.COM amount EUR 28.10 on 25/10/2001 00:51. Balance EUR 449.12.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 28.1,
+        "currency": "EUR",
+        "accountMask": "4082*965",
+        "merchantOrParty": "BOOKING.COM",
+        "balance": 449.12
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ARAB_010",
+      "category": "POSITIVE_REFUND_REVERSAL",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed POSITIVE_REFUND_REVERSAL compatibility case",
+      "body": "JO\nA refund of JOD 71.142 from SHEIN.COM has been credited to your account 7524*430. Available balance JOD 21.136.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 71.142,
+        "currency": "JOD",
+        "accountMask": "7524*430",
+        "merchantOrParty": "SHEIN.COM",
+        "balance": 21.136
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAP_001",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Capital Bank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "JO\nتم قيد دفعة كليك 39.339JOD لحساب FZPJR SCJNYDX من 3184*934 39.339JOD الرصيد",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 39.339,
+        "currency": "JOD",
+        "accountMask": "3184*934",
+        "merchantOrParty": "FZPJR SCJNYDX",
+        "balance": 39.339
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAP_002",
+      "category": "POSITIVE_CLIQ_OUTWARD",
+      "provider": "Capital Bank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_OUTWARD compatibility case",
+      "body": "Outward Cliq of JOD 2.411 debited from Acc. No xxxx943 on 27/10/2001 to OODMH BDFHR TVCYWI QEVNJZQ. Available balance JOD 0.000",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 2.411,
+        "currency": "JOD",
+        "accountMask": "xxxx943",
+        "merchantOrParty": "OODMH BDFHR TVCYWI QEVNJZQ",
+        "balance": 0.0
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAP_003",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Capital Bank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JOD 2.131 debited from Acc. xxxx069 at GOOGLE*GOOGLE ONE MOUNTAIN VIEWUS on 26/02/7001. Available balance JOD 0.409",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 2.131,
+        "currency": "JOD",
+        "accountMask": "xxxx069",
+        "merchantOrParty": "GOOGLE*GOOGLE ONE MOUNTAIN VIEWUS",
+        "balance": 0.409
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAP_004",
+      "category": "POSITIVE_REFUND_REVERSAL",
+      "provider": "Capital Bank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed POSITIVE_REFUND_REVERSAL compatibility case",
+      "body": "A reversal of JOD 4.898 has been processed on your card ending with xxxx856 from GOOGLE*GOOGLE ONE MOUNTAIN VIEWUS. Your available balance is JOD 3.387.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 4.898,
+        "currency": "JOD",
+        "accountMask": "xxxx856",
+        "merchantOrParty": "GOOGLE*GOOGLE ONE MOUNTAIN VIEWUS",
+        "balance": 3.387
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAP_005",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Capital Bank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "Inward Cliq of JOD 5.058 credited to Acc.xxxx524 on 03/03/2001 from JMKRP VITYJIL. Available balance JOD 3.138",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 5.058,
+        "currency": "JOD",
+        "accountMask": "xxxx524",
+        "merchantOrParty": "JMKRP VITYJIL",
+        "balance": 3.138
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAP_006",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Capital Bank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "SAR 424.25 debited from Acc. xxxx983 at JARIR BOOKSTORE RIYADH on 09/06/3039. Available balance SAR 376.36",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 424.25,
+        "currency": "SAR",
+        "accountMask": "xxxx983",
+        "merchantOrParty": "JARIR BOOKSTORE RIYADH",
+        "balance": 376.36
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAP_007",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Capital Bank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "EUR 86.98 debited from Acc. xxxx015 at STEAM GAMES on 16/07/3339. Available balance EUR 293.19",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 86.98,
+        "currency": "EUR",
+        "accountMask": "xxxx015",
+        "merchantOrParty": "STEAM GAMES",
+        "balance": 293.19
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_REF_001",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nYou have a purchase transaction on Reflect card 6487*050 at STARBUCKS - ABDALI amount JOD 3.828 on 18/06/2001 16:17. Available balance JOD 54.999.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 3.828,
+        "currency": "JOD",
+        "accountMask": "6487*050",
+        "merchantOrParty": "STARBUCKS - ABDALI",
+        "balance": 54.999
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_REF_002",
+      "category": "POSITIVE_CLIQ_OUTWARD",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_OUTWARD compatibility case",
+      "body": "JO\nOutward CliQ of JOD 34.293 debited from Reflect account 3191*450 to KYTA CHMTTA NP-SLJYC. Available balance JOD 98.844.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 34.293,
+        "currency": "JOD",
+        "accountMask": "3191*450",
+        "merchantOrParty": "KYTA CHMTTA NP-SLJYC",
+        "balance": 98.844
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_REF_003",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "JO\nInward CliQ of JOD 34.358 credited to Reflect account 8508*723 from RKRMJ EUAUL JDCZ. Available balance JOD 16.934.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 34.358,
+        "currency": "JOD",
+        "accountMask": "8508*723",
+        "merchantOrParty": "RKRMJ EUAUL JDCZ",
+        "balance": 16.934
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_REF_004",
+      "category": "POSITIVE_REFUND_REVERSAL",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed POSITIVE_REFUND_REVERSAL compatibility case",
+      "body": "JO\nA refund of JOD 40.862 from AMAZON.COM has been credited to your Reflect card 6583*221. Available balance JOD 17.762.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 40.862,
+        "currency": "JOD",
+        "accountMask": "6583*221",
+        "merchantOrParty": "AMAZON.COM",
+        "balance": 17.762
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_REF_005",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "JO\nتم قيد دفعة كليك بمبلغ 29.863JOD إلى حسابك في ريفلكت 4656*237 من HDQ FZWVGHLV. الرصيد 85.134JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 29.863,
+        "currency": "JOD",
+        "accountMask": "4656*237",
+        "merchantOrParty": "HDQ FZWVGHLV",
+        "balance": 85.134
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_REF_006",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nYou have a purchase transaction on Reflect card 6311*328 at AL-BAIK RIYADH amount SAR 99.58 on 22/10/6428. Available balance SAR 343.17.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 99.58,
+        "currency": "SAR",
+        "accountMask": "6311*328",
+        "merchantOrParty": "AL-BAIK RIYADH",
+        "balance": 343.17
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ETI_001",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nYou have made a purchase of JOD 1.125 with card ending in 3631 at CARREFOUR - CITY MALL on 02/11/4663. Available balance is JOD 973.651.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 1.125,
+        "currency": "JOD",
+        "accountMask": "ending in 3631",
+        "merchantOrParty": "CARREFOUR - CITY MALL",
+        "balance": 973.651
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ETI_002",
+      "category": "POSITIVE_CLIQ_OUTWARD",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_OUTWARD compatibility case",
+      "body": "JO\nOutward CliQ of JOD 26.651 debited from Acc. *5958 on 24/05/2001 to XDLRP LIBXTH TT-VTUDQ. Available balance JOD 460.960.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 26.651,
+        "currency": "JOD",
+        "accountMask": "*5958",
+        "merchantOrParty": "XDLRP LIBXTH TT-VTUDQ",
+        "balance": 460.96
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ETI_003",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "JO\nInward CliQ of USD 30.92 credited to Acc. *2482 on 20/05/2001 from QGBP OQACLM. Available balance USD 883.68.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 30.92,
+        "currency": "USD",
+        "accountMask": "*2482",
+        "merchantOrParty": "QGBP OQACLM",
+        "balance": 883.68
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ETI_004",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nYou have made a purchase of EUR 97.31 with card ending in 5621 at ZARA on 02/01/9658. Available balance is EUR 303.14.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 97.31,
+        "currency": "EUR",
+        "accountMask": "ending in 5621",
+        "merchantOrParty": "ZARA",
+        "balance": 303.14
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ETI_005",
+      "category": "POSITIVE_ATM_WITHDRAWAL",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed POSITIVE_ATM_WITHDRAWAL compatibility case",
+      "body": "JO\nATM cash withdrawal of JOD 34.005 from card ending 6894 at Shmeisani Branch on 23/09/2768. Available balance JOD 55.373.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 34.005,
+        "currency": "JOD",
+        "accountMask": "ending 6894",
+        "merchantOrParty": "Shmeisani Branch",
+        "balance": 55.373
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ETI_006",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nتم خصم مبلغ 4.207 JOD من بطاقتك المنتهية بـ 4397 لدى TAJ CINEMAS. الرصيد المتاح هو 85.461 JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 4.207,
+        "currency": "JOD",
+        "accountMask": "4397",
+        "merchantOrParty": "TAJ CINEMAS",
+        "balance": 85.461
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ETI_007",
+      "category": "POSITIVE_REFUND_REVERSAL",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed POSITIVE_REFUND_REVERSAL compatibility case",
+      "body": "JO\nCashback of JOD 5.119 credited to your account *2857 for monthly card spending. Available balance JOD 28.527.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 5.119,
+        "currency": "JOD",
+        "accountMask": "*2857",
+        "merchantOrParty": null,
+        "balance": 28.527
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_HOU_001",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Housing Bank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nتمت حركة شراء بمبلغ 9.547 دينار على بطاقتك *7333 لدى أسواق السلام في 16/11/2757. الرصيد المتاح 316.084 دينار.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 9.547,
+        "currency": "JOD",
+        "accountMask": "*7333",
+        "merchantOrParty": "أسواق السلام",
+        "balance": 316.084
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_HOU_002",
+      "category": "POSITIVE_CLIQ_OUTWARD",
+      "provider": "Housing Bank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_OUTWARD compatibility case",
+      "body": "JO\nOutward Cliq of JOD 50.557 debited from Acc *6137 to BWYOI QNAGQ via CliQ. Available balance JOD 271.754.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 50.557,
+        "currency": "JOD",
+        "accountMask": "*6137",
+        "merchantOrParty": "BWYOI QNAGQ",
+        "balance": 271.754
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_HOU_003",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Housing Bank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "JO\nتم قيد حوالة كليك بمبلغ 27.231 د.أ لحسابك *6896 من GYCZQ JC-UUX. رصيدك المتاح هو 343.345 د.أ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 27.231,
+        "currency": "JOD",
+        "accountMask": "*6896",
+        "merchantOrParty": "GYCZQ JC-UUX",
+        "balance": 343.345
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_HOU_004",
+      "category": "POSITIVE_ATM_WITHDRAWAL",
+      "provider": "Housing Bank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed POSITIVE_ATM_WITHDRAWAL compatibility case",
+      "body": "JO\nتم سحب مبلغ 55.051 دينار من صراف آلي فرع الجاردنز بواسطة بطاقتك. الرصيد المتاح 968.445 دينار.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 55.051,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "صراف آلي فرع الجاردنز",
+        "balance": 968.445
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_HOU_005",
+      "category": "POSITIVE_BILL_PAYMENT",
+      "provider": "Housing Bank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed POSITIVE_BILL_PAYMENT compatibility case",
+      "body": "JO\nتم تسديد فاتورة عبر إي فواتيركم بمبلغ 49.416 د.أ من حسابك *9251 بنجاح. الرصيد المتاح 117.715 د.أ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 49.416,
+        "currency": "JOD",
+        "accountMask": "*9251",
+        "merchantOrParty": "إي فواتيركم",
+        "balance": 117.715
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_HOU_006",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Housing Bank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nتمت حركة شراء بمبلغ 28.71 د.إ على بطاقتك *1235 لدى DUBAI MALL في 08/09/7323. الرصيد المتاح 212.53 د.إ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 28.71,
+        "currency": "AED",
+        "accountMask": "*1235",
+        "merchantOrParty": "DUBAI MALL",
+        "balance": 212.53
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ORA_001",
+      "category": "POSITIVE_CLIQ_OUTWARD",
+      "provider": "Orange Money",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_OUTWARD compatibility case",
+      "body": "JO\nتم تحويل مبلغ 66.534 JOD بنجاح إلى محفظة 0778919396 (VEKQK IDDUV) عبر كليك. رصيدك الحالي هو 79.458 JOD. رقم الحركة: 9173582.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 66.534,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "VEKQK IDDUV",
+        "balance": 79.458
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ORA_002",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Orange Money",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "JO\nتم استلام مبلغ 49.213 JOD بنجاح إلى محفظتك من 0772180603 (PRTCKU DM-AKL) كليك. رصيدك الحالي هو 89.492 JOD. رقم المرجع: 1243244.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 49.213,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "PRTCKU DM-AKL",
+        "balance": 89.492
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ORA_003",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Orange Money",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nتم دفع مبلغ 3.093 JOD بنجاح إلى تاجر CARREFOUR EXPRESS بواسطة محفظة أورنج موني. رصيدك المتبقي 32.070 JOD. رقم العملية: 399433.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 3.093,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "CARREFOUR EXPRESS",
+        "balance": 32.07
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ORA_004",
+      "category": "POSITIVE_BILL_PAYMENT",
+      "provider": "Orange Money",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed POSITIVE_BILL_PAYMENT compatibility case",
+      "body": "JO\nتم دفع فاتورة زين بنجاح بقيمة 85.153 JOD عبر إي فواتيركم من محفظتك. الرصيد المتاح 58.629 JOD. رقم الفاتورة: 4039997.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 85.153,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "زين",
+        "balance": 58.629
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ORA_005",
+      "category": "POSITIVE_ATM_DEPOSIT",
+      "provider": "Orange Money",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed POSITIVE_ATM_DEPOSIT compatibility case",
+      "body": "JO\nتم إيداع مبلغ 64.929 JOD في محفظتك عبر وكيل أورنج موني (الاتصالات السريعة). رصيدك الجديد 41.124 JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 64.929,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": 41.124
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ORA_006",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Orange Money",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "JO\nتم استلام حوالة واردة بمبلغ 304.40 SAR بنجاح إلى محفظتك. رصيدك الجديد 304.40 SAR.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 304.4,
+        "currency": "SAR",
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": 304.4
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ZAI_001",
+      "category": "POSITIVE_CLIQ_OUTWARD",
+      "provider": "Zain Cash",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_OUTWARD compatibility case",
+      "body": "JO\nتم تحويل مبلغ 46.97 JOD بنجاح إلى 0796102425 (ZNMJK BGDEMDC) عبر كليك. رصيدك الحالي هو 92.37 JOD. الرقم المرجعي: 7247194.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 46.97,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "ZNMJK BGDEMDC",
+        "balance": 92.37
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ZAI_002",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Zain Cash",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "JO\nتم استلام مبلغ 70.62 JOD في محفظتك بنجاح من ثزعج صاجم عبر كليك. رصيدك الحالي هو 24.73 JOD. الرقم المرجعي: 5161335.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 70.62,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "ثزعج صاجم",
+        "balance": 24.73
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ZAI_003",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Zain Cash",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nتمت عملية الشراء بنجاح بقيمة 5.95 JOD لدى تاجر COZMO سوبرماركت باستخدام بطاقة زين كاش. رصيدك المتبقي 44.21 JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 5.95,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "COZMO",
+        "balance": 44.21
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ZAI_004",
+      "category": "POSITIVE_BILL_PAYMENT",
+      "provider": "Zain Cash",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed POSITIVE_BILL_PAYMENT compatibility case",
+      "body": "JO\nتم دفع فاتورة الكهرباء بنجاح بقيمة 82.088 JOD من خلال خدمة إي فواتيركم. رصيدك الحالي هو 67.55 JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 82.088,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "الكهرباء",
+        "balance": 67.55
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_ZAI_005",
+      "category": "POSITIVE_ATM_WITHDRAWAL",
+      "provider": "Zain Cash",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed POSITIVE_ATM_WITHDRAWAL compatibility case",
+      "body": "JO\nتم سحب مبلغ 53.30 JOD نقداً من صراف آلي بنك القاهرة عمان بواسطة محفظتك. رصيدك الحالي 53.26 JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 53.3,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "صراف آلي بنك القاهرة عمان",
+        "balance": 53.26
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_UWA_001",
+      "category": "POSITIVE_CLIQ_OUTWARD",
+      "provider": "UWallet",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_OUTWARD compatibility case",
+      "body": "JO\nتم تحويل مبلغ 47.250 JOD بنجاح إلى محفظة 0788380043 (KKIWKZC HEJT) عبر كليك. رصيدك الحالي هو 62.527 JOD. رقم المرجع: 8636129.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 47.25,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "KKIWKZC HEJT",
+        "balance": 62.527
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_UWA_002",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "UWallet",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "JO\nتم استلام دفعة كليك بمبلغ 48.974 JOD إلى محفظة UWallet الخاصة بك من مضجذ طثوض. رصيدك الحالي هو 33.631 JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 48.974,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "مضجذ طثوض",
+        "balance": 33.631
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_UWA_003",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "UWallet",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "JO\nYou have completed a purchase of JOD 6.515 with your UWallet Mastercard at MILES SUPERMARKET. Available balance JOD 75.413.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 6.515,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "MILES SUPERMARKET",
+        "balance": 75.413
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_UWA_004",
+      "category": "POSITIVE_BILL_PAYMENT",
+      "provider": "UWallet",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed POSITIVE_BILL_PAYMENT compatibility case",
+      "body": "JO\nتم تسديد فاتورة أمنية إنترنت بنجاح بقيمة 46.640 JOD عبر إي فواتيركم من محفظتك. الرصيد المتاح 65.203 JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 46.64,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "أمنية إنترنت",
+        "balance": 65.203
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_UWA_005",
+      "category": "POSITIVE_ATM_WITHDRAWAL",
+      "provider": "UWallet",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed POSITIVE_ATM_WITHDRAWAL compatibility case",
+      "body": "JO\nتم سحب مبلغ 18.693 JOD نقداً من محفظة UWallet عبر وكيل معتمد بنجاح. رصيدك المتبقي 85.632 JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 18.693,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "وكيل معتمد",
+        "balance": 85.632
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_JIB_001",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Jordan Islamic Bank",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "تمت حركة شراء بمبلغ 77.058 د.أ بواسطة بطاقتك المنتهية بـ *1191 لدى CARREFOUR. الرصيد المتاح: 306.363 د.أ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 77.058,
+        "currency": "JOD",
+        "accountMask": "*1191",
+        "merchantOrParty": "CARREFOUR",
+        "balance": 306.363
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_JIB_002",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Jordan Islamic Bank",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "تم قيد حوالة كليك واردة بمبلغ 92.155 د.أ لحسابك *9709 من RILNX VVLTU. رصيدك المتاح 159.794 د.أ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 92.155,
+        "currency": "JOD",
+        "accountMask": "*9709",
+        "merchantOrParty": "RILNX VVLTU",
+        "balance": 159.794
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_JIB_003",
+      "category": "POSITIVE_CLIQ_OUTWARD",
+      "provider": "Jordan Islamic Bank",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_OUTWARD compatibility case",
+      "body": "تم تحويل دفعة كليك صادرة بمبلغ 37.038 د.أ من حسابك *7167 إلى NNJT DMLUBT. الرصيد المتاح 227.367 د.أ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 37.038,
+        "currency": "JOD",
+        "accountMask": "*7167",
+        "merchantOrParty": "NNJT DMLUBT",
+        "balance": 227.367
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_JIB_004",
+      "category": "POSITIVE_ATM_WITHDRAWAL",
+      "provider": "Jordan Islamic Bank",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed POSITIVE_ATM_WITHDRAWAL compatibility case",
+      "body": "تم قيد حركة سحب نقدي بمبلغ 56.458 د.أ من بطاقتك المنتهية برقم *2548 من صراف آلي فرع الشميساني. الرصيد المتاح 586.088 د.أ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 56.458,
+        "currency": "JOD",
+        "accountMask": "*2548",
+        "merchantOrParty": "صراف آلي فرع الشميساني",
+        "balance": 586.088
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_JIB_005",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Jordan Islamic Bank",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "تمت حركة شراء دولية بمبلغ 15.62 USD على بطاقتك *3292 لدى AMAZON.COM في 27/07/1191. الرصيد المتاح 970.51 USD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 15.62,
+        "currency": "USD",
+        "accountMask": "*3292",
+        "merchantOrParty": "AMAZON.COM",
+        "balance": 970.51
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_JIB_006",
+      "category": "POSITIVE_REFUND_REVERSAL",
+      "provider": "Jordan Islamic Bank",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed POSITIVE_REFUND_REVERSAL compatibility case",
+      "body": "تم قيد حركة استرداد / إعادة قيد بمبلغ 85.863 د.أ إلى بطاقتك *0929 من CARREFOUR. الرصيد المتاح: 495.971 د.أ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 85.863,
+        "currency": "JOD",
+        "accountMask": "*0929",
+        "merchantOrParty": "CARREFOUR",
+        "balance": 495.971
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAB_001",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Cairo Amman Bank",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "You have a debit transaction of JOD 92.930 on card ending in 5719 at SAFEWAY on 20/08/3572. Available balance JOD 104.836.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 92.93,
+        "currency": "JOD",
+        "accountMask": "ending in 5719",
+        "merchantOrParty": "SAFEWAY",
+        "balance": 104.836
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAB_002",
+      "category": "POSITIVE_CLIQ_INWARD",
+      "provider": "Cairo Amman Bank",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_INWARD compatibility case",
+      "body": "تم قيد دفعة كليك بمبلغ 30.964 JOD لحسابك *8367 من JMLXX OERDRC. الرصيد 802.483 JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 30.964,
+        "currency": "JOD",
+        "accountMask": "*8367",
+        "merchantOrParty": "JMLXX OERDRC",
+        "balance": 802.483
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAB_003",
+      "category": "POSITIVE_CLIQ_OUTWARD",
+      "provider": "Cairo Amman Bank",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed POSITIVE_CLIQ_OUTWARD compatibility case",
+      "body": "Outward CliQ transfer of JOD 56.457 debited from Acc *0119 to VNJYJ OKJO. Available balance JOD 720.027.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 56.457,
+        "currency": "JOD",
+        "accountMask": "*0119",
+        "merchantOrParty": "VNJYJ OKJO",
+        "balance": 720.027
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAB_004",
+      "category": "POSITIVE_PURCHASE",
+      "provider": "Cairo Amman Bank",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed POSITIVE_PURCHASE compatibility case",
+      "body": "CAB Alert: Purchase of AED 96.50 at DUBAI DUTY FREE on card ending 9665. Available balance AED 318.64.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 96.5,
+        "currency": "AED",
+        "accountMask": "ending 9665",
+        "merchantOrParty": "DUBAI DUTY FREE",
+        "balance": 318.64
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAB_005",
+      "category": "POSITIVE_ATM_WITHDRAWAL",
+      "provider": "Cairo Amman Bank",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed POSITIVE_ATM_WITHDRAWAL compatibility case",
+      "body": "تم سحب مبلغ 47.568 دينار من بطاقتك *1196 من صراف آلي فرع الدوار السابع. الرصيد المتاح 127.832 دينار.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 47.568,
+        "currency": "JOD",
+        "accountMask": "*1196",
+        "merchantOrParty": "صراف آلي فرع الدوار السابع",
+        "balance": 127.832
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_POS_CAB_006",
+      "category": "POSITIVE_REFUND_REVERSAL",
+      "provider": "Cairo Amman Bank",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed POSITIVE_REFUND_REVERSAL compatibility case",
+      "body": "A refund of JOD 76.384 from SAFEWAY has been credited to your card ending in 8312. Available balance JOD 858.188.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 76.384,
+        "currency": "JOD",
+        "accountMask": "ending in 8312",
+        "merchantOrParty": "SAFEWAY",
+        "balance": 858.188
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_001",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "hey I just cliq-ed you 54 JOD check your balance",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_002",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "حولتلك 29 دينار كليك شيك عليها بالله وصلتك ولا لسا؟",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_003",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "did you finish the purchase at Zara? How much was the total?",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_004",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "ابعثلي رقم الكليك تبعك ضروري عشان احولك حق الغدا 41 دينار",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_005",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "can you send me 32 JOD on cliq to pay the driver now?",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_006",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "check your account, I just sent 64 JOD on Zain Cash",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_007",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "معي 36 دينار كاش مين بده كليك ويبعتلي اياهم؟",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_008",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "حولت 8 دنانير بالغلط رجعلي اياهم على كليك لو سمحت",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_009",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "I transferred you 58 JOD for yesterday's dinner at Reem Shawerma",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_010",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "اشتريت من زارا ب 87 دينار مبارح طلع السعر غالي",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_011",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "the bill was 94.9 JOD each at Starbucks, let me know when you cliq",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_012",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "رحت على كارفور واشتريت أغراض ب 82 ليرة وما كفى الكاش",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_013",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "send me the transaction receipt or screenshot from Arab Bank app",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_014",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "كم رصيدك هسا في المحفظة؟ بدي احولك 10 دينار",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_015",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "دفعت الحساب للمطعم 87 دينار ولا ادفع انا؟",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_016",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "can you transfer 38 USD to my paypal or bank account please?",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_017",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "مين يحولي 3 ليرات كليك وابعثلو رصيد زين هسا؟",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_018",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "عملت سحب من الصراف وما طلع مصاري بس انخصمت من الحساب",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_019",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "حولتلك 979 دينار من بنك الاتحاد لحسابك بالاسكان شيك عليها",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_020",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "did you receive the transfer of JOD 20.381 on CliQ?",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_021",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "someone just told me to cliq 38 JOD to this number",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_022",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "did you deposit the cash into the ATM machine yesterday?",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_023",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "شو صار بموضوع الحوالة؟ حولتلي ولا لسا بتستنى؟",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_024",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "I am standing at the cashier at H&M, send 43 JOD quickly",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_CHAT_025",
+      "category": "ADVERSARIAL_CHAT_NOISE",
+      "provider": "Personal / Conversational",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_CHAT_NOISE compatibility case",
+      "body": "الرصيد عندي صفر وما بقدر احول اي شي كليك",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_001",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "+346372191098",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "JO\nYou have a purchase transaction on account 6756*244 from ZAIN MARKET amount JOD 9.616 on 24/05/5639. Balance JOD 24.282.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_002",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "0765505411",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "JO\nتم تحويل مبلغ 25.146 JOD بنجاح إلى محفظة 0778881652 (PDTLU ISGPI) عبر كليك. رصيدك الحالي هو 40.438 JOD.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_003",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "00699448493606",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "JO\nYou have made a purchase of JOD 2.959 with card ending in 0580 at CARREFOUR. Available balance is JOD 181.194.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_004",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "+216885715603",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "JO\nتم استلام مبلغ 66.396 JOD بنجاح إلى محفظتك من IHAJUX QR-OCW كليك. رصيدك الحالي هو 68.771 JOD.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_005",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "072-217-2115",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "Outward Cliq of JOD 6.584 debited from Acc. No xxxx110 to SZCNP QBKKNGQ. Available balance JOD 0.000",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_006",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "+457 4 9560 6054",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "JO\nJOD9.145 has been debited from 5069*876 to BAKER NASIM as CliQ transfer Balance 33.752JOD",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_007",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "+17967879723",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "You have a debit transaction of JOD 98.975 on card ending in 4188 at SAFEWAY. Available balance JOD 135.652.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_008",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "0762298497",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "تمت حركة شراء بمبلغ 61.809 د.أ بواسطة بطاقتك المنتهية بـ *9995 لدى CARREFOUR. الرصيد المتاح: 559.114 د.أ.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_009",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "+803050333932",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "JO\n97JOD has been debited from your account 1137*729 as an ATM Withdrawal. Available balance 83.966.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_010",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "00465906096035",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "JO\nتمت حركة شراء بمبلغ 3.810 دينار على بطاقتك *3282 لدى أسواق السلام. الرصيد المتاح 895.082 دينار.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_011",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "+550439742008",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "Inward Cliq of JOD 16.601 credited to Acc. *1397 on 18/01/2001 from SDBR SMPFVF. Available balance JOD 975.761.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_SND_012",
+      "category": "ADVERSARIAL_PERSONAL_SENDER",
+      "provider": "Personal Phone Number",
+      "sender": "0701478720",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_PERSONAL_SENDER compatibility case",
+      "body": "JO\nتم دفع مبلغ 2.392 JOD بنجاح إلى تاجر CARREFOUR EXPRESS. رصيدك المتبقي 22.633 JOD.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_001",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "ArabiBank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "JO\nDO NOT SHARE THIS CODE.\nOne Time Password: 130804\nPurpose: Purchase of amount 6 JOD from PRIME CINEMAS AL ABDALI\nFees apply on international transactions.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_002",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "CapitalBank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "Your OTP is 861111 for transfer JOD 5.361 Please dont share.\nSYNTHETICTOKEN",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_003",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "EtihadBank",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "JO\nOne-Time Password: 545751 for your online purchase of JOD 29.245 at SHEIN.COM. Valid for 4 mins. Never share your OTP.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_004",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "JO\nOne Time Password (OTP): 638571 for online purchase of JOD 23.781 at SHEIN.COM. Valid for 6 mins. Do not share.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_005",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "HousingBank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "JO\nOne Time Password (OTP) for online purchase of JOD 53.750 at SHEIN is 340215. Do not share.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_006",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "OrangeMoney",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "JO\nرمز التأكيد لعملية الشراء عبر الإنترنت هو: 669456 بمبلغ 13.763 JOD لدى CARREFOUR. لا تشارك الرمز لحماية حسابك.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_007",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "ZainCash",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "JO\nرمز الأمان لعملية الشراء عبر الإنترنت هو: 635037 بمبلغ 32.19 JOD من TALABAT. صالح لمدة دقيقتين.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_008",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "UWallet",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "JO\nYour OTP for online payment is 512093 for amount JOD 58.061 at TALABAT. Valid for 9 minutes. Do not share.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_009",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "JIB",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "رمز الأمان لعملية الشراء عبر الإنترنت هو: 970637 بمبلغ 48.043 USD من متجر AMAZON.COM. لا تفصح عن هذا الرمز.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_010",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "CAB",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "One Time Password: 940065 for online transaction of JOD 96.848 at TALABAT. Valid for 4 mins. Do not share.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_011",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "EtihadBank",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "JO\nDO NOT DISCLOSE. OTP 529224 for online transaction of EUR 26.98 at ASOS UK. Valid for 8 minutes.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_3DS_012",
+      "category": "ADVERSARIAL_OTP_3DS_PURCHASE",
+      "provider": "ArabiBank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_3DS_PURCHASE compatibility case",
+      "body": "JO\nYour Arabi Online authorization passcode is 885519 for transfer of JOD 915.465 to CliQ contact. Never share.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_LOG_001",
+      "category": "ADVERSARIAL_OTP_LOGIN",
+      "provider": "ArabiBank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_LOGIN compatibility case",
+      "body": "JO\nTo continue with your account login process, enter the code 547381. Please ensure not to share your activation code with anyone.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_LOG_002",
+      "category": "ADVERSARIAL_OTP_LOGIN",
+      "provider": "CapitalBank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_LOGIN compatibility case",
+      "body": "524503 هو رمز المرور لمرة واحدة (OTP) لإضافة البطاقة الخاصة بك إلى المحفظة الرقمية، يرجى عدم مشاركته مع أي شخص، صالح لمدة 8 دقائق.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_LOG_003",
+      "category": "ADVERSARIAL_OTP_LOGIN",
+      "provider": "EtihadBank",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_LOGIN compatibility case",
+      "body": "JO\nYour verification code is 755065 to log in to Bank al Etihad mobile banking. Please do not share this code.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_LOG_004",
+      "category": "ADVERSARIAL_OTP_LOGIN",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_LOGIN compatibility case",
+      "body": "JO\nYour Reflect verification code is 230914. Do not share this code with anyone, including Reflect support.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_LOG_005",
+      "category": "ADVERSARIAL_OTP_LOGIN",
+      "provider": "HousingBank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_LOGIN compatibility case",
+      "body": "JO\nرمز التحقق لمرة واحدة (OTP) لتسجيل الدخول إلى تطبيق إسكان موبايل هو: 384397. لا تشارك هذا الرمز مطلقاً.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_LOG_006",
+      "category": "ADVERSARIAL_OTP_LOGIN",
+      "provider": "OrangeMoney",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_LOGIN compatibility case",
+      "body": "JO\nرمز التحقق لمرة واحدة (OTP) لتسجيل الدخول إلى محفظة Orange Money هو: 956359. يرجى عدم مشاركة هذا الرمز مع أي شخص.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_LOG_007",
+      "category": "ADVERSARIAL_OTP_LOGIN",
+      "provider": "ZainCash",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_LOGIN compatibility case",
+      "body": "JO\nرمز التحقق لمرة واحدة في زين كاش هو: 365684 لإتمام عملية تسجيل الدخول. لا تشارك هذا الرمز مع أي كان.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_LOG_008",
+      "category": "ADVERSARIAL_OTP_LOGIN",
+      "provider": "UWallet",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_LOGIN compatibility case",
+      "body": "JO\nرمز التحقق الخاص بك في محفظة UWallet هو: 542050 لإتمام تسجيل الدخول. لا تفصح عن هذا الرمز لأي جهة كانت.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_LOG_009",
+      "category": "ADVERSARIAL_OTP_LOGIN",
+      "provider": "JIB",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_LOGIN compatibility case",
+      "body": "رمز التحقق لمرة واحدة (OTP) لتسجيل الدخول إلى تطبيق إسلامي موبايل هو: 495359. لا تشارك هذا الرمز مع أحد.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_LOG_010",
+      "category": "ADVERSARIAL_OTP_LOGIN",
+      "provider": "CAB",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_OTP_LOGIN compatibility case",
+      "body": "CAB: Your OTP for mobile banking login is 503515. Do not share with anyone.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_001",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "CapitalBank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "حركة مرفوضة على بطاقتك المنتهية ب 7812 بقيمة JOD 1.107 بسبب عدم كفاية الرصيد, للمزيد اتصل على 068551888",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_002",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "EtihadBank",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "JO\nTransaction declined: purchase of JOD 390.337 on card ending 7725 at IKEA due to insufficient funds.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_003",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "JO\nTransaction declined on Reflect card 9563*532 for amount JOD 47.887 at ZARA due to insufficient funds.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_004",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "HousingBank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "JO\nحركة شراء مرفوضة بقيمة 969.533 د.أ على بطاقتك *3681 بسبب عدم كفاية الرصيد.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_005",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "OrangeMoney",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "JO\nفشلت عملية الدفع بمبلغ 29.992 JOD بسبب عدم توفر رصيد كافٍ في محفظة أورنج موني الخاصة بك.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_006",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "ZainCash",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "JO\nحركة غير مكتملة: تم رفض عملية التحويل بمبلغ 60.58 JOD بسبب عدم كفاية الرصيد في محفظة زين كاش.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_007",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "UWallet",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "JO\nتم رفض عملية الشراء بقيمة 33.000 JOD على بطاقة UWallet لعدم توفر رصيد كافٍ في المحفظة.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_008",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "CAB",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "حركة مرفوضة: تم رفض حركة شراء بمبلغ 801.785 JOD على بطاقتك المنتهية بـ 4224 بسبب تجاوز السقف أو عدم كفاية الرصيد.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_009",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "JIB",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "حركة شراء مرفوضة على بطاقتك المنتهية بـ *5565 بقيمة 641.949 د.أ لعدم كفاية الرصيد.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_010",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "ArabiBank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "JO\nTransaction failed: Insufficient funds for debit of JOD 213.827 on account 8977*222 at LEADERS.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_011",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "EtihadBank",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "JO\nDeclined: Your CliQ transfer of JOD 54.454 was unsuccessful due to recipient account restriction.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_DEC_012",
+      "category": "ADVERSARIAL_DECLINED_FAILED",
+      "provider": "OrangeMoney",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_DECLINED_FAILED compatibility case",
+      "body": "JO\nنعتذر، لم تتم عملية الشراء بمبلغ 78.583 JOD لعدم كفاية الرصيد.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_001",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "CapitalBank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "يرجى العلم بأن خدمة كليك ستتوقف مؤقتاً لغايات تحديث الأنظمة يوم الجمعة 15/1 من الساعة 6:53 وحتى 1:40 بعد منتصف الليل, مستعدون لخدمتكم.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_002",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "EtihadBank",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "JO\nPlease note that CliQ services will be temporarily unavailable on Friday from 01:00 to 11:44 AM for scheduled maintenance.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_003",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "JO\nReflect services including CliQ transfers will undergo scheduled system maintenance on Friday from 19:16 AM to 20:20 AM.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_004",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "HousingBank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "JO\nيرجى العلم بأن خدمة كليك ستكون غير متاحة مؤقتاً يوم الجمعة من 15:42 إلى 01:45 صباحاً لغايات الصيانة الدورية.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_005",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "OrangeMoney",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "JO\nيرجى العلم بأن خدمات كليك ستخضع لأعمال تحديث وتطوير يوم السبت من الساعة 11:43 ولغاية 09:26 صباحاً.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_006",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "ZainCash",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "JO\nتنويه: ستتوقف خدمات التحويل والدفع عبر كليك مؤقتاً لتحديث الأنظمة فجر يوم الجمعة من 10:01 حتى 14:22 صباحاً.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_007",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "UWallet",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "JO\nيرجى العلم بأنه سيتم إجراء تحديث لأنظمة خدمة كليك يوم السبت القادم من 14:46 إلى 23:37 فجراً.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_008",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "ArabiBank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "Your eStatement has been issued for Account 5199*389. Please login to Arabi Online or Arab Bank App to view it.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_009",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "EtihadBank",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "JO\nYour card ending in 8468 was successfully added to Apple Pay. If you did not make this request, call +00613445280.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_010",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "HousingBank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "صدر كشف حسابك الإلكتروني لشهر أيلول، يمكنك الاطلاع عليه عبر تطبيق إسكان أونلاين.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_011",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "JIB",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "يرجى العلم بأن القنوات الرقمية ستخضع لأعمال صيانة مبرمجة يوم السبت من الساعة 14:59 إلى 7:46 فجراً.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_ANN_012",
+      "category": "ADVERSARIAL_MAINTENANCE_DOWNTIME",
+      "provider": "CAB",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MAINTENANCE_DOWNTIME compatibility case",
+      "body": "تم تفعيل بطاقتك بنجاح على Apple Pay. إذا لم تقم بهذه العملية يرجى التواصل فوراً مع مركز الاتصال.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_001",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "ArabiBank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "JO\n16 Points were redeemed from your \"Arabi Points\" account as a reward voucher. For more information, login to Arab Bank app or the online banking service",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_002",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "ArabiBank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "Your Talabat Voucher Code is : SYNTHCODE806837. 16 Points from your Arabi Points were redeemed as a Talabat voucher. For more information, please visit our website: www.arabbank.jo",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_003",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "JO\nCongratulations! You have received 86 bonus Reflect Coins for completing 6 CliQ transfers this week. View rewards in app.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_004",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "OrangeMoney",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "اشحن خطك الخلوي بقيمة 2 دنانير أو أكثر عبر تطبيق Orange Money واحصل على 41% رصيد مجاني إضافي! العرض ساري حتى نهاية الشهر.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_005",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "ZainCash",
+      "sender": "ZainCash",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "استخدم بطاقة زين كاش ماستركارد في مشترياتك واحصل على خصم فوري 82% لدى المحال المشاركة طيلة عطلة نهاية الأسبوع!",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_006",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "UWallet",
+      "sender": "UWallet",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "ادفع فواتيرك عبر إي فواتيركم باستخدام محفظة UWallet وادخل السحب على جوائز أسبوعية قيّمة تصل إلى 762 دينار!",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_007",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "EtihadBank",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "استمتع باسترداد نقدي لغاية 88% عند استخدام بطاقتك الائتمانية في المطاعم خلال عطلة نهاية الأسبوع! للمزيد زوروا موقعنا.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_008",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "HousingBank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "احصل على تمويل شخصي يصل إلى 39735 دينار بفترة سداد ميسرة وبدون تحويل راتب! قدم طلبك الآن عبر التطبيق.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_009",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "JIB",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "استفد من تمويل مرابحة السيارات بنسب أرباح منافسة وإجراءات سريعة. تفضل بزيارة أقرب فرع للبنك الإسلامي الأردني.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_010",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "CAB",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "قدم على بطاقتك الائتمانية الآن واحصل على استرداد نقدي 1% على جميع مشترياتك لمدة ثلاثة أشهر!",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_011",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "JO\nDouble your reward points every Tuesday when you shop with your Reflect debit card. Tap to learn more!",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_ADV_PRM_012",
+      "category": "ADVERSARIAL_MARKETING_PROMO",
+      "provider": "OrangeMoney",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed ADVERSARIAL_MARKETING_PROMO compatibility case",
+      "body": "وفر 59% على اشتراكك الشهري عند الدفع بواسطة Orange Money! للاشتراك زوروا موقعنا.",
+      "expected": {
+        "isValidTransaction": false,
+        "type": null,
+        "amount": null,
+        "currency": null,
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_DEC_001",
+      "category": "EDGE_CASE_DECIMAL_FORMATS",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_DECIMAL_FORMATS compatibility case",
+      "body": "JO\nYou have a purchase transaction on account 7165*759 from ZAIN MARKET amount 79JOD on 15/09/5458. Balance 36.505JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 79.0,
+        "currency": "JOD",
+        "accountMask": "7165*759",
+        "merchantOrParty": "ZAIN MARKET",
+        "balance": 36.505
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_DEC_002",
+      "category": "EDGE_CASE_DECIMAL_FORMATS",
+      "provider": "Housing Bank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_DECIMAL_FORMATS compatibility case",
+      "body": "JO\nتمت حركة شراء بمبلغ 88.9 د.أ على بطاقتك *2150 لدى أسواق السلام في 01/05/2253. الرصيد المتاح 720.8 د.أ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 88.9,
+        "currency": "JOD",
+        "accountMask": "*2150",
+        "merchantOrParty": "أسواق السلام",
+        "balance": 720.8
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_DEC_003",
+      "category": "EDGE_CASE_DECIMAL_FORMATS",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_DECIMAL_FORMATS compatibility case",
+      "body": "JO\nYou have made a purchase of JOD7.894 with card ending in 3051 at TALABAT on 15/03/6123. Available balance is JOD375.723.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 7.894,
+        "currency": "JOD",
+        "accountMask": "ending in 3051",
+        "merchantOrParty": "TALABAT",
+        "balance": 375.723
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_DEC_004",
+      "category": "EDGE_CASE_DECIMAL_FORMATS",
+      "provider": "Cairo Amman Bank",
+      "sender": "CAB",
+      "description": "Synthetic privacy-transformed EDGE_CASE_DECIMAL_FORMATS compatibility case",
+      "body": "تم سحب مبلغ 35دينار من بطاقتك *2555 من صراف آلي فرع الدوار السابع. الرصيد المتاح: 744دينار.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 35.0,
+        "currency": "JOD",
+        "accountMask": "*2555",
+        "merchantOrParty": "صراف آلي فرع الدوار السابع",
+        "balance": 744.0
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_DEC_005",
+      "category": "EDGE_CASE_DECIMAL_FORMATS",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed EDGE_CASE_DECIMAL_FORMATS compatibility case",
+      "body": "JO\nYou have a purchase transaction on Reflect card 8533*826 at NETFLIX.COM amount USD 14.93 on 11/06/3761. Available balance USD 895.33.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 14.93,
+        "currency": "USD",
+        "accountMask": "8533*826",
+        "merchantOrParty": "NETFLIX.COM",
+        "balance": 895.33
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_DEC_006",
+      "category": "EDGE_CASE_DECIMAL_FORMATS",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_DECIMAL_FORMATS compatibility case",
+      "body": "JO\nYou have made a purchase of $46.12 with card ending in 6289 at AMAZON on 08/09/5212. Available balance is $776.31.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 46.12,
+        "currency": "$",
+        "accountMask": "ending in 6289",
+        "merchantOrParty": "AMAZON",
+        "balance": 776.31
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_DEC_007",
+      "category": "EDGE_CASE_DECIMAL_FORMATS",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_DECIMAL_FORMATS compatibility case",
+      "body": "JO\nYou have made a purchase of €51.50 with card ending in 1297 at STEAM on 07/01/8282. Available balance is €23.00.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 51.5,
+        "currency": "€",
+        "accountMask": "ending in 1297",
+        "merchantOrParty": "STEAM",
+        "balance": 23.0
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_WSP_001",
+      "category": "EDGE_CASE_WHITESPACE_NEWLINES",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_WHITESPACE_NEWLINES compatibility case",
+      "body": "\n\n   JO\n\n\nYou have a purchase transaction on account 8706*088 from ZAIN MARKET amount JOD 5.657 on 24/02/3870.\n\n\nBalance JOD 28.684.   \n\n",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 5.657,
+        "currency": "JOD",
+        "accountMask": "8706*088",
+        "merchantOrParty": "ZAIN MARKET",
+        "balance": 28.684
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_WSP_002",
+      "category": "EDGE_CASE_WHITESPACE_NEWLINES",
+      "provider": "Capital Bank",
+      "sender": "CapitalBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_WHITESPACE_NEWLINES compatibility case",
+      "body": "JO\r\nOutward Cliq of\tJOD 12.189\tdebited from Acc. No xxxx325\r\non 17/06/2001 to\tUNSSQ MMLZBTK.\r\nAvailable balance JOD 80.085",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 12.189,
+        "currency": "JOD",
+        "accountMask": "xxxx325",
+        "merchantOrParty": "UNSSQ MMLZBTK",
+        "balance": 80.085
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_WSP_003",
+      "category": "EDGE_CASE_WHITESPACE_NEWLINES",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_WHITESPACE_NEWLINES compatibility case",
+      "body": "JO\nYou have made a purchase of  jod 45.443  with card ending in 2122 at  CARREFOUR  on 28/11/1264. Available balance is jod 735.919.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 45.443,
+        "currency": "JOD",
+        "accountMask": "ending in 2122",
+        "merchantOrParty": "CARREFOUR",
+        "balance": 735.919
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_DIA_001",
+      "category": "EDGE_CASE_ARABIC_DIACRITICS",
+      "provider": "Housing Bank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_ARABIC_DIACRITICS compatibility case",
+      "body": "JO\nتَمَّتْ حَرَكَةُ شِرَاءٍ بِمَبْلَغِ 5.874 دِينَارٍ عَلَى بِطَاقَتِكَ *7495 لَدَى أَسْوَاقِ السَّلَامِ فِي 05/04/6474. الرَّصِيدُ الْمُتَاحُ 550.530 دِينَارٍ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 5.874,
+        "currency": "JOD",
+        "accountMask": "*7495",
+        "merchantOrParty": "أَسْوَاقِ السَّلَامِ",
+        "balance": 550.53
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_DIA_002",
+      "category": "EDGE_CASE_ARABIC_DIACRITICS",
+      "provider": "Orange Money",
+      "sender": "OrangeMoney",
+      "description": "Synthetic privacy-transformed EDGE_CASE_ARABIC_DIACRITICS compatibility case",
+      "body": "JO\nتَمَّ اسْتِلَامُ مَبْلَغِ 85.690 JOD بِنَجَاحٍ إِلَى مَحْفَظَتِكَ مِنْ 0776167959 كِلِيكْ. رَصِيدُكَ الْحَالِي هُوَ 10.757 JOD.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "INCOME",
+        "amount": 85.69,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": null,
+        "balance": 10.757
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_DIA_003",
+      "category": "EDGE_CASE_ARABIC_DIACRITICS",
+      "provider": "Jordan Islamic Bank",
+      "sender": "JIB",
+      "description": "Synthetic privacy-transformed EDGE_CASE_ARABIC_DIACRITICS compatibility case",
+      "body": "تَمَّ خَصْمُ مَبْلَغِ 50.028 د.أ بِوَاسِطَةِ بِطَاقَتِكَ الْمُنْتَهِيَةِ بِـ *4605 لَدَى CARREFOUR. الرَّصِيدُ الْمُتَاحُ: 746.436 د.أ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 50.028,
+        "currency": "JOD",
+        "accountMask": "*4605",
+        "merchantOrParty": "CARREFOUR",
+        "balance": 746.436
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_TYP_001",
+      "category": "EDGE_CASE_TYPOS",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_TYPOS compatibility case",
+      "body": "JO\nYou have a purshase transaction on account 5048*136 from ZAIN MARKET amount JOD 2.996 on 06/09/7082. Balnce JOD 99.324.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 2.996,
+        "currency": "JOD",
+        "accountMask": "5048*136",
+        "merchantOrParty": "ZAIN MARKET",
+        "balance": 99.324
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_TYP_002",
+      "category": "EDGE_CASE_TYPOS",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_TYPOS compatibility case",
+      "body": "JO\nOutward CliQ of JOD 35.122 debited from Acc. *5376 on 21/09/2001 to GHWGG HEKIFI FW-MJTON as cliq tranfer. Available balance JOD 519.584.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 35.122,
+        "currency": "JOD",
+        "accountMask": "*5376",
+        "merchantOrParty": "GHWGG HEKIFI FW-MJTON",
+        "balance": 519.584
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_TYP_003",
+      "category": "EDGE_CASE_TYPOS",
+      "provider": "Housing Bank",
+      "sender": "HousingBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_TYPOS compatibility case",
+      "body": "JO\nتمت حركة شراء بمبلغ 11.374 د.أ من حسابكك *8434 لدى أسواق السلام. الرصيدد المتاح 755.325 د.أ.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 11.374,
+        "currency": "JOD",
+        "accountMask": "*8434",
+        "merchantOrParty": "أسواق السلام",
+        "balance": 755.325
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_MIS_001",
+      "category": "EDGE_CASE_MISSING_OPTIONAL_FIELDS",
+      "provider": "Arab Bank",
+      "sender": "ArabiBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_MISSING_OPTIONAL_FIELDS compatibility case",
+      "body": "JO\nJOD 6368.367 has been debited from 5213*030 on 17/05/2001 as Deposit_Student_Credit Payment Ref # 866827980788",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 6368.367,
+        "currency": "JOD",
+        "accountMask": "5213*030",
+        "merchantOrParty": null,
+        "balance": null
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_MIS_002",
+      "category": "EDGE_CASE_MISSING_OPTIONAL_FIELDS",
+      "provider": "Reflect",
+      "sender": "Reflect",
+      "description": "Synthetic privacy-transformed EDGE_CASE_MISSING_OPTIONAL_FIELDS compatibility case",
+      "body": "JO\nPurchase transaction of JOD 59.095 on your Reflect card 5251*204 on 26/03/7909. Available balance JOD 14.818.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 59.095,
+        "currency": "JOD",
+        "accountMask": "5251*204",
+        "merchantOrParty": null,
+        "balance": 14.818
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    },
+    {
+      "id": "TC_EDG_MIS_003",
+      "category": "EDGE_CASE_MISSING_OPTIONAL_FIELDS",
+      "provider": "Bank al Etihad",
+      "sender": "EtihadBank",
+      "description": "Synthetic privacy-transformed EDGE_CASE_MISSING_OPTIONAL_FIELDS compatibility case",
+      "body": "JO\nYou have made a purchase of JOD 21.227 at CARREFOUR on 21/05/4140. Available balance is JOD 76.745.",
+      "expected": {
+        "isValidTransaction": true,
+        "type": "EXPENSE",
+        "amount": 21.227,
+        "currency": "JOD",
+        "accountMask": null,
+        "merchantOrParty": "CARREFOUR",
+        "balance": 76.745
+      },
+      "dataKind": "synthetic_privacy_transformed_legacy_case"
+    }
+  ]
+}

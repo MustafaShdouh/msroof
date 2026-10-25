@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Private source/provenance ledger, not inference labels or automatic data admission",
+  "recordFields": {
+    "id": "Stable source ID plus one-based block index; bound to the attested whole-file hash",
+    "sourcePath": "Repository-relative private original; never substitute a generated view",
+    "sourceLocator": "One-based inclusive startLine/endLine; zero-based, end-exclusive Unicode startChar/endChar after utf-8-sig decoding",
+    "textSha256": "Exact decoded block-content hash, private",
+    "normalizedSha256": "Whitespace/NFKC/digit/case normalized hash, private; does not establish ancestry",
+    "origin": "User-attested real seed, known generated artifact, or unresolved; never inferred from a bank filename",
+    "originVerification": "What establishes the claim; user statement is not bank authentication",
+    "sender": "Actual envelope sender or null; do not synthesize it from provider/file names",
+    "receivedAt": "Actual envelope time or null; transaction time in the text is not collection time",
+    "collectionDate": "Known collection date or null",
+    "templateProxyId": "Heuristic fingerprint, never a verified source-template family",
+    "verifiedTemplateFamilyId": "Reviewed family ID or null",
+    "parentRecordIds": "Confirmed parents or null when untraceable; do not convert similarity into ancestry",
+    "sanitizedTextDraft": "Private redaction draft; preserve financial values and useful context",
+    "redactions": "Original and sanitized character spans plus placeholder type; no raw sensitive values copied into metadata",
+    "sanitizationReviewStatus": "Draft versus reviewed status; automatic replacement does not certify anonymization",
+    "labels": "Null until explicitly annotated and reviewed, with reviewer/origin per field",
+    "trainingEligible": "False until development admission gates pass",
+    "evaluationEligible": "False for development-exposed seeds and descendants, even after sanitization"
+  },
+  "admissionGates": {
+    "development": ["known record origin", "reviewed sanitization", "reviewed field labels", "family/exposure audit", "separate admission decision"],
+    "independentEvaluation": ["fresh unexposed source families", "reviewed sanitization and truth", "duplicate/template/alias isolation", "frozen records and hashes", "explicit evaluation approval"]
+  },
+  "privacy": "Store all record-level output under ignored data/private/. Public reports contain aggregate counts and methods only."
+}

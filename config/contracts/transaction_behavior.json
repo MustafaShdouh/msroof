@@ -1,0 +1,88 @@
+{
+  "contractVersion": "1.0.0",
+  "scope": "Jordan bank/wallet notification understanding; target contract, not the legacy runtime API",
+  "defaultCurrency": "JOD",
+  "taxonomySource": "data/annotations/category_annotation_schema.json",
+  "input": {
+    "required": ["text"],
+    "optional": ["sender", "isContact", "receivedAt"]
+  },
+  "resultFields": [
+    "contractVersion", "transactionStatus", "trackingDecision", "reasonCodes",
+    "amount", "currency", "currencyResolution", "direction", "transferRelationship",
+    "merchantOrCounterparty", "expenseCategory", "categoryStatus"
+  ],
+  "fieldTypes": {
+    "contractVersion": ["string"],
+    "transactionStatus": ["string"],
+    "trackingDecision": ["string"],
+    "reasonCodes": ["array_of_unique_strings"],
+    "amount": ["finite_positive_number", "null"],
+    "currency": ["three_uppercase_letters", "null"],
+    "currencyResolution": ["string"],
+    "direction": ["string"],
+    "transferRelationship": ["string"],
+    "merchantOrCounterparty": ["nonempty_string", "null"],
+    "expenseCategory": ["canonical_category", "null"],
+    "categoryStatus": ["string"]
+  },
+  "enums": {
+    "transactionStatus": ["completed", "non_transaction", "uncertain"],
+    "trackingDecision": ["include", "exclude", "review"],
+    "currencyResolution": ["explicit", "default_missing", "default_ambiguous", "not_applicable"],
+    "direction": ["incoming", "outgoing", "uncertain", "not_applicable"],
+    "transferRelationship": ["not_transfer", "own_accounts", "other_person", "unknown", "not_applicable"],
+    "categoryStatus": ["assigned", "uncertain", "not_applicable"]
+  },
+  "reasonCodes": [
+    "completed_transaction", "own_account_transfer", "completion_unresolved",
+    "amount_unresolved", "direction_unresolved", "transfer_ownership_unresolved", "category_unresolved",
+    "otp_or_authorization", "declined_or_failed", "pending_or_requested", "balance_only",
+    "personal_conversation", "promotion_or_administration", "empty_or_malformed"
+  ],
+  "nonTransactionReasonCodes": [
+    "otp_or_authorization", "declined_or_failed", "pending_or_requested", "balance_only",
+    "personal_conversation", "promotion_or_administration", "empty_or_malformed"
+  ],
+  "categories": [
+    "Telecom", "Water and Electricity", "Food", "Groceries", "Transportation",
+    "Subscriptions", "Shopping", "Health", "Entertainment", "Education", "Travel",
+    "Cash Withdrawals", "Installments", "Fees", "Other"
+  ],
+  "rules": {
+    "completedOwnAccountTransfer": "completed + exclude; direction/category not_applicable",
+    "completedPersonTransfer": "include when amount and direction resolve; category may remain uncertain",
+    "unknownTransferOwnership": "review; two account masks alone do not establish ownership",
+    "missingAmountOrDirection": "review without changing completed status when completion is clear",
+    "unclearCompletion": "uncertain + review",
+    "categoryEligibility": "completed + include + outgoing only",
+    "categoryUncertainty": "null label + uncertain; Other is an understood expense outside the taxonomy",
+    "currencyDefault": "missing/ambiguous currency becomes JOD with a visible resolution marker",
+    "senderMetadata": "context only; contact membership/phone formatting alone cannot settle status",
+    "humanCategoryPolicy": "exact reviewed scenarios take precedence over generic suggestions; do not broaden their scope",
+    "modelScores": "uncalibrated scores must not be presented as measured correctness probabilities"
+  },
+  "evaluation": {
+    "independentFinalEvaluationAvailable": false,
+    "releaseThresholds": null,
+    "thresholdStatus": "pending independent data and explicit threshold approval",
+    "proposedTargetsOnly": {
+      "ordinaryMessageFalseInclusionRateMax": 0.01,
+      "eligibleTransactionMissOrReviewRateMax": 0.05,
+      "acceptedAmountCurrencyExactRateMin": 0.99,
+      "acceptedDirectionExactRateMin": 0.99,
+      "assignedCategoryAccuracyMin": 0.90,
+      "outgoingCategoryCoverageMin": 0.70
+    },
+    "requiredReports": [
+      "completion_status_confusion_counts", "tracking_decision_confusion_counts",
+      "ordinary_message_false_inclusion_rate", "eligible_transaction_miss_or_review_rate",
+      "own_account_transfer_leakage", "person_to_person_transfer_coverage",
+      "amount_currency_exact_all_eligible_and_accepted", "explicit_currency_vs_default_resolution",
+      "direction_exact_all_eligible_and_accepted", "category_accuracy_coverage_and_unsupported_assignments",
+      "arabic_english_mixed_language_slices", "source_template_family_slices",
+      "sample_counts_and_uncertainty_intervals", "frozen_regression_results_separately"
+    ],
+    "finalTestRequires": ["audited independent provenance", "reviewed truth", "family isolation", "frozen candidate", "approved thresholds", "owner final-test authorization"]
+  }
+}

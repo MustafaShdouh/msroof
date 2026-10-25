@@ -6,6 +6,11 @@ The project focuses on Jordanian bank/wallet transactions and local merchants, i
 
 Arabic-Indic and Persian digits and Arabic decimal/group separators are canonicalized under preprocessing contract 1.1.0 in training, both runtimes, and the optional browser tester. Example: `١٬٢٣٤٫٥٦٧` becomes `1,234.567` and parses as 1234.567 JOD.
 
+The target transaction, transfer, uncertainty, category, and evaluation rules are in
+[`docs/TRANSACTION_BEHAVIOR.md`](docs/TRANSACTION_BEHAVIOR.md), version 1.0.0.
+This target contract is validated separately from the legacy runtime. Its authored
+examples are policy checks, not training data or independent accuracy evidence.
+
 ## Directory layout
 
 | Directory or file | Purpose |
@@ -30,6 +35,8 @@ Run this from the repository root:
 ```powershell
 py run_all_tests.py
 ```
+
+Validate the target behavior contract alone with `py tools/contracts/validate_transaction_behavior.py`.
 
 The command validates the frozen 226-case corpus, both cross-language contracts, and the Python and TypeScript regression engines.
 
@@ -80,5 +87,17 @@ sourced aliases and bounded synthetic perturbations. Results are in
 `data/reports/merchant_category_research.md` and its JSON companion. Human and assistant
 label metrics are separate, scores are uncalibrated, and final test inference is
 disabled during development. These candidates do not change the active SMS engine.
+
+The SMS source audit is in `data/reports/REAL_SMS_PROVENANCE_AUDIT.md`.
+Run `py training/audit_sms_provenance.py --check` after generating its private
+local outputs; originals are required and remain ignored. The current synthetic
+split has normalized-text duplicates across providers in train and validation;
+use a new version with global content/template isolation before further model
+comparisons. Source rules: `data/annotations/REAL_SMS_INTAKE.md`.
+
+The prepared sanitized replacement and new grouped split are described in
+[`docs/SANITIZED_CORPUS.md`](docs/SANITIZED_CORPUS.md). Their separate compatibility
+diagnostic records one maintenance-notice false positive; migration is blocked.
+The existing engine and frozen baseline remain active pending that fix.
 
 Workspace: `C:/Users/mustafa/Desktop/msroof` is authoritative. Original SMS inputs under `DATA_YOU_WANT/` and `data/raw/*.txt` stay local; `.local-backups/` contains verified pre-merge archives and is not published.
