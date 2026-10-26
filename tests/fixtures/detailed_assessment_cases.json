@@ -1,39 +1,1223 @@
 {
-  "dataKind":"assistant_authored_development_controls",
-  "trainingEligible":false,
-  "independentEvaluationEligible":false,
-  "cases":[
-    {"id":"ar_cash_withdrawal","input":{"text":"تم سحب نقدي بمبلغ ٢٠٫٥٠٠ دينار من حسابك *6284. الرصيد ١٧٠٫١٢٥ دينار."},"expect":{"transactionStatus":"completed","trackingDecision":"include","amount":20.5,"direction":"outgoing","expenseCategory":"Cash Withdrawals"}},
-    {"id":"ar_cash_deposit","input":{"text":"تم إيداع مبلغ ۲۰٫۵۰۰ دينار في حسابك *6284. الرصيد ۱۷۰٫۱۲۵ دينار."},"expect":{"transactionStatus":"completed","trackingDecision":"include","amount":20.5,"direction":"incoming","categoryStatus":"not_applicable"}},
-    {"id":"atm_activity","input":{"text":"ATM activity of JOD 20.500 on account *6284. New balance JOD 170.125."},"expect":{"transactionStatus":"uncertain","trackingDecision":"review","amount":20.5,"direction":"uncertain","categoryStatus":"not_applicable"}},
-    {"id":"ar_atm_activity","input":{"text":"حركة صراف آلي بقيمة 20.500 دينار على حسابكم 9234567 - 002. ليصبح رصيدكم 170.125 دينار."},"expect":{"transactionStatus":"uncertain","trackingDecision":"review","amount":20.5,"direction":"uncertain"}},
-    {"id":"authorization","input":{"text":"Authorization of JOD 12.50 at SAMPLE SHOP. Available balance JOD 170.125."},"expect":{"transactionStatus":"uncertain","trackingDecision":"review","amount":12.5,"expenseCategory":null}},
-    {"id":"ar_authorization","input":{"text":"تفويض حركة بقيمة 12.500 دينار على حسابكم. الرصيد المتوفر 170.125 دينار."},"expect":{"transactionStatus":"uncertain","trackingDecision":"review","amount":12.5}},
-    {"id":"future_debit","input":{"text":"JOD 20 will be debited from your account tomorrow."},"expect":{"transactionStatus":"non_transaction","trackingDecision":"exclude","amount":null}},
-    {"id":"negated_completion","input":{"text":"Your payment of JOD 20 was not completed."},"expect":{"transactionStatus":"non_transaction","trackingDecision":"exclude","amount":null}},
-    {"id":"conflicting_events","input":{"text":"Your card purchase of JOD 18.750 completed. A separate payment of JOD 20 was declined."},"expect":{"transactionStatus":"uncertain","trackingDecision":"review","amount":null}},
-    {"id":"two_equal_debits","input":{"text":"JOD 20 debited at LOCAL SHOP. JOD 20 debited at ANOTHER SHOP."},"expect":{"transactionStatus":"uncertain","trackingDecision":"review","amount":null}},
-    {"id":"unmarked_amount_alternative","input":{"text":"Card purchase completed. Amount field corrupted: JOD 10 or 20."},"expect":{"transactionStatus":"completed","trackingDecision":"review","amount":null}},
-    {"id":"atm_balance_inquiry","input":{"text":"ATM balance inquiry: Available balance JOD 170.125."},"expect":{"transactionStatus":"non_transaction","trackingDecision":"exclude","amount":null}},
-    {"id":"identifiers_not_amounts","input":{"text":"Your card purchase completed. Account *6284, date 20/10/2026, reference 684291."},"expect":{"transactionStatus":"completed","trackingDecision":"review","amount":null,"currencyResolution":"default_missing"}},
-    {"id":"zero_not_positive_amount","input":{"text":"JOD 0 debited from account *6284."},"expect":{"transactionStatus":"completed","trackingDecision":"review","amount":null}},
-    {"id":"conflicting_currencies","input":{"text":"Card purchase completed. Corrupted amount: USD 10 or JOD 20."},"expect":{"transactionStatus":"completed","trackingDecision":"review","amount":null,"currency":"JOD","currencyResolution":"default_ambiguous"}},
-    {"id":"foreign_currency","input":{"text":"USD 12.750 debited from account *6284. Available balance USD 170.125."},"expect":{"transactionStatus":"completed","trackingDecision":"include","amount":12.75,"currency":"USD","currencyResolution":"explicit"}},
-    {"id":"saved_contact","input":{"text":"JOD 20 debited from account *6284 at LOCAL SHOP.","sender":"Personal contact","isContact":true},"expect":{"transactionStatus":"completed","trackingDecision":"include","amount":20}},
-    {"id":"phone_sender","input":{"text":"JOD 20 debited from account *6284 at LOCAL SHOP.","sender":"+962700000000"},"expect":{"transactionStatus":"completed","trackingDecision":"include","amount":20}},
-    {"id":"external_two_masks","input":{"text":"Transfer of JOD 20 completed from your account *6284 to another person's account *8156."},"expect":{"transactionStatus":"completed","trackingDecision":"include","transferRelationship":"other_person","direction":"outgoing"}},
-    {"id":"unknown_two_masks","input":{"text":"Transfer of JOD 20 completed from account *6284 to account *8156."},"expect":{"transactionStatus":"completed","trackingDecision":"review","transferRelationship":"unknown"}},
-    {"id":"own_transfer","input":{"text":"Transfer of JOD 20 between your own accounts *6284 and *8156 completed."},"expect":{"transactionStatus":"completed","trackingDecision":"exclude","transferRelationship":"own_accounts","direction":"not_applicable"}},
-    {"id":"merchant_keyword","input":{"text":"Card purchase of JOD 20 at CARD FACTORY completed."},"expect":{"transactionStatus":"completed","trackingDecision":"include","merchantOrCounterparty":"CARD FACTORY","categoryStatus":"uncertain"}},
-    {"id":"ar_exact_name","input":{"text":"تم خصم مبلغ ٢٠ دينار من حسابك *6284 لدى مَتْجَر ١٢. الرصيد ١٧٠ دينار."},"expect":{"transactionStatus":"completed","trackingDecision":"include","merchantOrCounterparty":"مَتْجَر ١٢"}},
-    {"id":"code_metadata","input":{"text":"JOD 20 debited from your account *6284. Verification code 684291."},"expect":{"transactionStatus":"completed","trackingDecision":"include"}},
-    {"id":"quoted_receipt","input":{"text":"Example: Your card purchase of JOD 20 completed."},"expect":{"transactionStatus":"non_transaction","trackingDecision":"exclude","amount":null}},
-    {"id":"conditional_completion","input":{"text":"If your payment of JOD 20 is completed, a receipt will arrive."},"expect":{"transactionStatus":"non_transaction","trackingDecision":"exclude","amount":null}},
-    {"id":"conflicting_completion_claims","input":{"text":"Payment of JOD 20 completed but it was not completed according to the second notice."},"expect":{"transactionStatus":"uncertain","trackingDecision":"review"}},
-    {"id":"unknown_category_not_other","input":{"text":"JOD 20 debited at LOCAL SHOP."},"expect":{"transactionStatus":"completed","trackingDecision":"include","expenseCategory":null,"categoryStatus":"uncertain"}},
-    {"id":"mixed_purpose","input":{"text":"Card purchase of JOD 20 for a restaurant meal and groceries completed."},"expect":{"transactionStatus":"completed","trackingDecision":"include","expenseCategory":null,"categoryStatus":"uncertain"}},
-    {"id":"ar_missing_currency","input":{"text":"تم خصم مبلغ ٢٠ من حسابك *6284."},"expect":{"transactionStatus":"completed","trackingDecision":"include","amount":20,"currency":"JOD","currencyResolution":"default_missing"}},
-    {"id":"ar_requested_transfer","input":{"text":"يرجى تحويل مبلغ ٢٠ دينار إلى شخص آخر."},"expect":{"transactionStatus":"non_transaction","trackingDecision":"exclude","amount":null}},
-    {"id":"own_transfer_incomplete_amount","input":{"text":"Transfer between your own accounts completed. Amount is unreadable."},"expect":{"transactionStatus":"completed","trackingDecision":"exclude","amount":null,"direction":"not_applicable"}}
+  "dataKind": "assistant_authored_development_controls",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "cases": [
+    {
+      "id": "direction_received_payment",
+      "input": {
+        "text": "تم استلام دفعة كليك بمبلغ 12.375 JOD إلى محفظتك من LOCAL PERSON."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "direction_received_diacritics",
+      "input": {
+        "text": "تَمَّ اسْتِلَامُ دَفْعَةِ كِلِيك بِمَبْلَغِ 12.375 دينار من LOCAL PERSON."
+      },
+      "expect": {
+        "direction": "incoming",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "direction_payment_noun_unbound",
+      "input": {
+        "text": "تم قيد دفعة كليك بمبلغ 12.375 JOD لحساب LOCAL PERSON من *6284."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "direction_payments_plural",
+      "input": {
+        "text": "تم قيد دفعات كليك بمبلغ 12.375 JOD للمستفيد LOCAL PERSON."
+      },
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "id": "direction_embedded_word",
+      "input": {
+        "text": "تم قيد حوالة بمبلغ 12.375 JOD من شركة مندفع."
+      },
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "id": "direction_paid_verb",
+      "input": {
+        "text": "تم دفع مبلغ 12.375 JOD لدى LOCAL SHOP."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "direction_definite_payment",
+      "input": {
+        "text": "تم الدفع بمبلغ 12.375 دينار لدى LOCAL SHOP."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "direction_owner_account_recipient",
+      "input": {
+        "text": "تم قيد حوالة كليك بمبلغ 12.375 JOD لحسابك *6284 من LOCAL PERSON."
+      },
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "direction_owner_wallet_recipient",
+      "input": {
+        "text": "تم تحويل مبلغ 12.375 JOD بنجاح إلى محفظتك من LOCAL PERSON."
+      },
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "direction_owner_account_source",
+      "input": {
+        "text": "تم تحويل مبلغ 12.375 JOD بنجاح من حسابك *6284 إلى LOCAL PERSON."
+      },
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "direction_owner_wallet_source",
+      "input": {
+        "text": "تم تحويل مبلغ 12.375 JOD بنجاح من محفظتك إلى LOCAL PERSON."
+      },
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "direction_passive_transfer_unbound",
+      "input": {
+        "text": "تم تحويل مبلغ 12.375 JOD بنجاح إلى LOCAL PERSON."
+      },
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "direction_named_accounts_unbound",
+      "input": {
+        "text": "تم تحويل مبلغ 12.375 JOD من حساب LOCAL PERSON إلى حساب SECOND NAME."
+      },
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "direction_explicit_own_accounts",
+      "input": {
+        "text": "تم تحويل مبلغ 12.375 JOD من حسابك *6284 إلى حسابك *8156 بنجاح."
+      },
+      "expect": {
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts"
+      }
+    },
+    {
+      "id": "direction_atm_owner_account",
+      "input": {
+        "text": "حركة صراف آلي بقيمة 12.375 JOD لحسابك *6284."
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      }
+    },
+    {
+      "id": "direction_requested_transfer",
+      "input": {
+        "text": "يرجى تحويل مبلغ 12.375 JOD من حسابك إلى LOCAL PERSON."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "direction_english_inward",
+      "input": {
+        "text": "Inward CliQ of JOD 12.375 credited to account *6284 from LOCAL PERSON."
+      },
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "direction_mixed_inward",
+      "input": {
+        "text": "JOD 12.375 credited to account *6284. تم استلام دفعة كليك من LOCAL PERSON."
+      },
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "purchase_truncated_party_optional",
+      "input": {
+        "text": "تمت حركة شراء بمبلغ 12.375 دينار على بطاقتك *6284 لدى"
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.375,
+        "merchantOrCounterparty": null,
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "purchase_receipt_account",
+      "input": {
+        "text": "You have a purchase transaction on account *6284 from LOCAL SHOP amount JOD 12.375 on 23/10/2026."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.375,
+        "direction": "outgoing",
+        "merchantOrCounterparty": "LOCAL SHOP"
+      }
+    },
+    {
+      "id": "purchase_receipt_header",
+      "input": {
+        "text": "JO\nYou have a purchase transaction on account *6284 from LOCAL SHOP amount JOD 12.375. Balance JOD 198.125."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375
+      }
+    },
+    {
+      "id": "purchase_receipt_card",
+      "input": {
+        "text": "You have a purchase transaction on everyday card *6284 at LOCAL SHOP amount JOD 12.375."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375
+      }
+    },
+    {
+      "id": "purchase_made_purchase",
+      "input": {
+        "text": "You have made a purchase of JOD 12.375 with card ending in 6284 at LOCAL SHOP."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.375
+      }
+    },
+    {
+      "id": "purchase_past_purchase",
+      "input": {
+        "text": "You made a purchase of JOD 12.375 at LOCAL SHOP."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375
+      }
+    },
+    {
+      "id": "purchase_completed_purchase",
+      "input": {
+        "text": "You have completed a purchase of JOD 12.375 with your card at LOCAL SHOP."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.375
+      }
+    },
+    {
+      "id": "purchase_ar_completed_movement",
+      "input": {
+        "text": "تمت حركة شراء بمبلغ ١٢٫٣٧٥ دينار على بطاقتك *6284 لدى متجر الساحة."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.375,
+        "merchantOrCounterparty": "متجر الساحة"
+      }
+    },
+    {
+      "id": "purchase_ar_completed_diacritics",
+      "input": {
+        "text": "تَمَّتْ حَرَكَةُ شِرَاءٍ بِمَبْلَغِ ۱۲٫۳۷۵ دينار لدى مَتْجَر الساحة."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.375,
+        "merchantOrCounterparty": "مَتْجَر الساحة"
+      }
+    },
+    {
+      "id": "purchase_ar_international_movement",
+      "input": {
+        "text": "تمت حركة شراء دولية بمبلغ USD 12.375 لدى LOCAL SHOP."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "purchase_receipt_authorization_only",
+      "input": {
+        "text": "You have a purchase transaction on account *6284 from LOCAL SHOP amount JOD 12.375. Authorization only; settlement unknown."
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "purchase_authorization_completed",
+      "input": {
+        "text": "You have completed a purchase authorization of JOD 12.375 at LOCAL SHOP."
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "purchase_pending",
+      "input": {
+        "text": "You have a purchase transaction on account *6284 from LOCAL SHOP amount JOD 12.375 pending approval."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null
+      }
+    },
+    {
+      "id": "purchase_declined",
+      "input": {
+        "text": "You have a purchase transaction on account *6284 from LOCAL SHOP amount JOD 12.375 declined."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null
+      }
+    },
+    {
+      "id": "purchase_conditional",
+      "input": {
+        "text": "If you have a purchase transaction on account *6284 for JOD 12.375, contact support."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "purchase_ar_conditional",
+      "input": {
+        "text": "إذا تمت حركة شراء بمبلغ 12.375 دينار ستصلك رسالة."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "purchase_quoted",
+      "input": {
+        "text": "Example: You have a purchase transaction on account *6284 from LOCAL SHOP amount JOD 12.375."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "purchase_question",
+      "input": {
+        "text": "You have made a purchase of JOD 12.375 at LOCAL SHOP?"
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "purchase_missing_amount",
+      "input": {
+        "text": "You have a purchase transaction on account *6284 from LOCAL SHOP. Amount is unreadable."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "purchase_named_transfer_unknown",
+      "input": {
+        "text": "JOD 12.375 has been debited from *6284 to LOCAL PERSON as CliQ transfer."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "purchase_named_transfer_inward_unknown",
+      "input": {
+        "text": "Inward CliQ of JOD 12.375 credited to account *6284 from LOCAL PERSON."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "transferRelationship": "unknown",
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "purchase_contradictory_events",
+      "input": {
+        "text": "You have made a purchase of JOD 12.375 at LOCAL SHOP. A separate payment of JOD 15 was declined."
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "parsing_name_after_card_ending",
+      "input": {
+        "text": "Card purchase of JOD 12.375 completed from card ending 6284 at CENTRAL BRANCH on 23/10/2026."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "CENTRAL BRANCH"
+      }
+    },
+    {
+      "id": "parsing_ar_date_boundary",
+      "input": {
+        "text": "JOD 12.375 debited at LOCAL STORE في 23/10/2026."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "LOCAL STORE"
+      }
+    },
+    {
+      "id": "parsing_transfer_channel_boundary",
+      "input": {
+        "text": "Outward transfer of JOD 12.375 debited from account *6284 to LOCAL PERSON via CliQ."
+      },
+      "expect": {
+        "trackingDecision": "review",
+        "merchantOrCounterparty": "LOCAL PERSON",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "parsing_ar_current_balance",
+      "input": {
+        "text": "تم خصم مبلغ 12.375 JOD من حسابك *6284 لدى متجر الساحة. رصيدك الحالي هو 198.125 JOD."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375,
+        "merchantOrCounterparty": "متجر الساحة"
+      }
+    },
+    {
+      "id": "parsing_ar_remaining_balance",
+      "input": {
+        "text": "تم خصم مبلغ 12.375 JOD. رصيدك المتبقي 198.125 JOD."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375
+      }
+    },
+    {
+      "id": "parsing_ar_new_balance",
+      "input": {
+        "text": "تم إيداع مبلغ 12.375 JOD في حسابك *6284. رصيدك الجديد 198.125 JOD."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375,
+        "direction": "incoming",
+        "merchantOrCounterparty": null
+      }
+    },
+    {
+      "id": "parsing_ar_suffix_balance",
+      "input": {
+        "text": "تم خصم مبلغ 12.375 JOD من حسابك *6284. 198.125JOD الرصيد"
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375
+      }
+    },
+    {
+      "id": "parsing_ar_equal_suffix_balance",
+      "input": {
+        "text": "تم خصم مبلغ 12.375 JOD من حسابك *6284. 12.375JOD الرصيد"
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375
+      }
+    },
+    {
+      "id": "parsing_ar_balance_prefix_priority",
+      "input": {
+        "text": "تم خصم مبلغ 12.375 JOD الرصيد 198.125 JOD."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375
+      }
+    },
+    {
+      "id": "parsing_ar_balance_unavailable",
+      "input": {
+        "text": "تم خصم مبلغ 12.375 JOD الرصيد غير متاح."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375
+      }
+    },
+    {
+      "id": "parsing_ar_negative_balance",
+      "input": {
+        "text": "تم خصم مبلغ 12.375 JOD. رصيدك الحالي هو JOD -198.125."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375
+      }
+    },
+    {
+      "id": "parsing_unrelated_second_amount",
+      "input": {
+        "text": "تم خصم مبلغ 12.375 JOD. رسوم إضافية 1.500 JOD."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "parsing_ar_only_balance_known",
+      "input": {
+        "text": "تم الخصم. مبلغ العملية غير مقروء. رصيدك الحالي هو 198.125 JOD."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "parsing_ar_foreign_balance",
+      "input": {
+        "text": "تم خصم مبلغ 12.375 JOD. رصيدك المتاح هو 200.50 USD."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "amount": 12.375,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "parsing_refund_dotted_name",
+      "input": {
+        "text": "A refund of JOD 12.375 from MARKET.EXAMPLE has been credited to your account *6284. Balance JOD 198.125."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "MARKET.EXAMPLE"
+      }
+    },
+    {
+      "id": "parsing_name_after_acc",
+      "input": {
+        "text": "JOD 12.375 debited from Acc. xxxx482 at LOCAL BOOK SHOP on 23/10/2026. Available balance JOD 198.125."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "LOCAL BOOK SHOP"
+      }
+    },
+    {
+      "id": "parsing_no_party_on_account_deposit",
+      "input": {
+        "text": "JOD 12.375 credited to 8123*419 on 23/10/2026 as an Online ATM Deposit."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": null
+      }
+    },
+    {
+      "id": "parsing_ar_atm_instrument_boundary",
+      "input": {
+        "text": "تم سحب مبلغ 12.375 JOD من صراف آلي فرع السوق بواسطة بطاقتك."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "صراف آلي فرع السوق"
+      }
+    },
+    {
+      "id": "parsing_ar_raw_name_instrument_boundary",
+      "input": {
+        "text": "تم خصم مبلغ 12.375 JOD لدى مَتْجَر   ١٢ بواسطة بطاقتك المنتهية بـ 6284."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "مَتْجَر   ١٢"
+      }
+    },
+    {
+      "id": "parsing_ar_named_biller",
+      "input": {
+        "text": "تم تسديد فاتورة شركة المياه المحلية بنجاح بقيمة 12.375 JOD عبر بوابة الدفع من محفظتك."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "شركة المياه المحلية"
+      }
+    },
+    {
+      "id": "parsing_ar_channel_without_biller",
+      "input": {
+        "text": "تم تسديد فاتورة عبر بوابة الدفع بمبلغ 12.375 JOD من محفظتك بنجاح."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": null
+      }
+    },
+    {
+      "id": "parsing_ar_generic_bill_type",
+      "input": {
+        "text": "تم دفع فاتورة الكهرباء بنجاح بقيمة 12.375 JOD."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": null
+      }
+    },
+    {
+      "id": "parsing_explicit_party_label",
+      "input": {
+        "text": "JOD 12.375 debited from Acc. xxxx482. Recipient: LOCAL PARTY."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "LOCAL PARTY"
+      }
+    },
+    {
+      "id": "parsing_name_prepositions_instrument",
+      "input": {
+        "text": "JOD 12.375 debited at From Farm To Table with your card *6284."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "From Farm To Table"
+      }
+    },
+    {
+      "id": "parsing_name_balance_word",
+      "input": {
+        "text": "JOD 12.375 debited at Green Balance Cafe. Available balance JOD 198.125."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "Green Balance Cafe"
+      }
+    },
+    {
+      "id": "parsing_name_leading_digit",
+      "input": {
+        "text": "JOD 12.375 debited at 7 Corner Cafe with card xxxx482."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "7 Corner Cafe"
+      }
+    },
+    {
+      "id": "parsing_party_after_modified_account",
+      "input": {
+        "text": "Outward transfer of JOD 12.375 debited from personal account *6284 to LOCAL PERSON as CliQ transfer. Available balance JOD 198.125."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "merchantOrCounterparty": "LOCAL PERSON",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "parsing_ar_explicit_party_label",
+      "input": {
+        "text": "تم تحويل مبلغ 12.375 JOD بنجاح إلى حساب *6284. المستفيد: سَارَة ١٢."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "merchantOrCounterparty": "سَارَة ١٢",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "ar_cash_withdrawal",
+      "input": {
+        "text": "تم سحب نقدي بمبلغ ٢٠٫٥٠٠ دينار من حسابك *6284. الرصيد ١٧٠٫١٢٥ دينار."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 20.5,
+        "direction": "outgoing",
+        "expenseCategory": "Cash Withdrawals"
+      }
+    },
+    {
+      "id": "ar_cash_deposit",
+      "input": {
+        "text": "تم إيداع مبلغ ۲۰٫۵۰۰ دينار في حسابك *6284. الرصيد ۱۷۰٫۱۲۵ دينار."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 20.5,
+        "direction": "incoming",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "atm_activity",
+      "input": {
+        "text": "ATM activity of JOD 20.500 on account *6284. New balance JOD 170.125."
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 20.5,
+        "direction": "uncertain",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "ar_atm_activity",
+      "input": {
+        "text": "حركة صراف آلي بقيمة 20.500 دينار على حسابكم 9234567 - 002. ليصبح رصيدكم 170.125 دينار."
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 20.5,
+        "direction": "uncertain"
+      }
+    },
+    {
+      "id": "authorization",
+      "input": {
+        "text": "Authorization of JOD 12.50 at SAMPLE SHOP. Available balance JOD 170.125."
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 12.5,
+        "expenseCategory": null
+      }
+    },
+    {
+      "id": "ar_authorization",
+      "input": {
+        "text": "تفويض حركة بقيمة 12.500 دينار على حسابكم. الرصيد المتوفر 170.125 دينار."
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 12.5
+      }
+    },
+    {
+      "id": "future_debit",
+      "input": {
+        "text": "JOD 20 will be debited from your account tomorrow."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null
+      }
+    },
+    {
+      "id": "negated_completion",
+      "input": {
+        "text": "Your payment of JOD 20 was not completed."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null
+      }
+    },
+    {
+      "id": "conflicting_events",
+      "input": {
+        "text": "Your card purchase of JOD 18.750 completed. A separate payment of JOD 20 was declined."
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "two_equal_debits",
+      "input": {
+        "text": "JOD 20 debited at LOCAL SHOP. JOD 20 debited at ANOTHER SHOP."
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "unmarked_amount_alternative",
+      "input": {
+        "text": "Card purchase completed. Amount field corrupted: JOD 10 or 20."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "atm_balance_inquiry",
+      "input": {
+        "text": "ATM balance inquiry: Available balance JOD 170.125."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null
+      }
+    },
+    {
+      "id": "identifiers_not_amounts",
+      "input": {
+        "text": "Your card purchase completed. Account *6284, date 20/10/2026, reference 684291."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "zero_not_positive_amount",
+      "input": {
+        "text": "JOD 0 debited from account *6284."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "conflicting_currencies",
+      "input": {
+        "text": "Card purchase completed. Corrupted amount: USD 10 or JOD 20."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_ambiguous"
+      }
+    },
+    {
+      "id": "foreign_currency",
+      "input": {
+        "text": "USD 12.750 debited from account *6284. Available balance USD 170.125."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.75,
+        "currency": "USD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "saved_contact",
+      "input": {
+        "text": "JOD 20 debited from account *6284 at LOCAL SHOP.",
+        "sender": "Personal contact",
+        "isContact": true
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 20
+      }
+    },
+    {
+      "id": "phone_sender",
+      "input": {
+        "text": "JOD 20 debited from account *6284 at LOCAL SHOP.",
+        "sender": "+962700000000"
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 20
+      }
+    },
+    {
+      "id": "external_two_masks",
+      "input": {
+        "text": "Transfer of JOD 20 completed from your account *6284 to another person's account *8156."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "transferRelationship": "other_person",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "unknown_two_masks",
+      "input": {
+        "text": "Transfer of JOD 20 completed from account *6284 to account *8156."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "transferRelationship": "unknown"
+      }
+    },
+    {
+      "id": "own_transfer",
+      "input": {
+        "text": "Transfer of JOD 20 between your own accounts *6284 and *8156 completed."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "transferRelationship": "own_accounts",
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "merchant_keyword",
+      "input": {
+        "text": "Card purchase of JOD 20 at CARD FACTORY completed."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "CARD FACTORY",
+        "categoryStatus": "uncertain"
+      }
+    },
+    {
+      "id": "ar_exact_name",
+      "input": {
+        "text": "تم خصم مبلغ ٢٠ دينار من حسابك *6284 لدى مَتْجَر ١٢. الرصيد ١٧٠ دينار."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "مَتْجَر ١٢"
+      }
+    },
+    {
+      "id": "code_metadata",
+      "input": {
+        "text": "JOD 20 debited from your account *6284. Verification code 684291."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include"
+      }
+    },
+    {
+      "id": "quoted_receipt",
+      "input": {
+        "text": "Example: Your card purchase of JOD 20 completed."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null
+      }
+    },
+    {
+      "id": "conditional_completion",
+      "input": {
+        "text": "If your payment of JOD 20 is completed, a receipt will arrive."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null
+      }
+    },
+    {
+      "id": "conflicting_completion_claims",
+      "input": {
+        "text": "Payment of JOD 20 completed but it was not completed according to the second notice."
+      },
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown_category_not_other",
+      "input": {
+        "text": "JOD 20 debited at LOCAL SHOP."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "expenseCategory": null,
+        "categoryStatus": "uncertain"
+      }
+    },
+    {
+      "id": "mixed_purpose",
+      "input": {
+        "text": "Card purchase of JOD 20 for a restaurant meal and groceries completed."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "expenseCategory": null,
+        "categoryStatus": "uncertain"
+      }
+    },
+    {
+      "id": "ar_missing_currency",
+      "input": {
+        "text": "تم خصم مبلغ ٢٠ من حسابك *6284."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 20,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "ar_requested_transfer",
+      "input": {
+        "text": "يرجى تحويل مبلغ ٢٠ دينار إلى شخص آخر."
+      },
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null
+      }
+    },
+    {
+      "id": "own_transfer_incomplete_amount",
+      "input": {
+        "text": "Transfer between your own accounts completed. Amount is unreadable."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "processed_reversal",
+      "input": {
+        "text": "A reversal of JOD 18.750 has been processed on your card. Available balance JOD 170.125."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 18.75,
+        "direction": "incoming",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "refund_of_purchase",
+      "input": {
+        "text": "Refund of your card purchase of JOD 18.750 completed."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 18.75,
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "ar_reversal",
+      "input": {
+        "text": "تم عكس عملية شراء بقيمة ١٨٫٧٥٠ دينار. الرصيد ١٧٠٫١٢٥ دينار."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 18.75,
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "account_not_counterparty",
+      "input": {
+        "text": "تم تحويل مبلغ ٢٠ دينار بنجاح بين حساباتك من الحساب الجاري *6284 إلى حساب التوفير *8156."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "merchantOrCounterparty": null
+      }
+    },
+    {
+      "id": "name_after_account",
+      "input": {
+        "text": "JOD 20 debited. Transfer from your account *6284 to another person completed. Recipient: سَارَة ١٢."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "سَارَة ١٢"
+      }
+    },
+    {
+      "id": "name_internal_preposition",
+      "input": {
+        "text": "Card purchase of JOD 20 at Farm To Table completed."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "merchantOrCounterparty": "Farm To Table"
+      }
+    },
+    {
+      "id": "malformed_money",
+      "input": {
+        "text": "Card purchase of 12.5.6 JOD completed."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "date_not_money",
+      "input": {
+        "text": "Card purchase completed. Date 20/10/2026 JOD."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "reference_not_money",
+      "input": {
+        "text": "Card purchase completed. Reference 684291 JOD."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "malformed_grouping",
+      "input": {
+        "text": "Card purchase of 1,2,3 JOD completed."
+      },
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    }
   ]
 }

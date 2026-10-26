@@ -57,6 +57,10 @@ def evaluate():
         predictions[case["id"]], legacy[case["id"]] = result, prior
     policy_diffs = [{"caseId": c["id"], "fields": differences(c["expected"], predictions["policy:" + c["id"]])} for c in policy]
     policy_diffs = [row for row in policy_diffs if row["fields"]]
+    policy_slices = {}
+    for language in ("arabic", "english", "mixed"):
+        selected = [case for case in policy if case["language"] == language]
+        policy_slices[language] = {"caseCount": len(selected), "trackingMatches": sum(predictions["policy:" + case["id"]]["trackingDecision"] == case["expected"]["trackingDecision"] for case in selected)}
     control_diffs = [{"caseId": c["id"], "fields": differences(c["expect"], predictions["control:" + c["id"]])} for c in controls]
     control_diffs = [row for row in control_diffs if row["fields"]]
     auth_failures = []
@@ -68,11 +72,14 @@ def evaluate():
     counts, legacy_counts = Counter(), Counter()
     legacy_misses = []
     field_changes = []
+    script_slices = {}
     fields = {"amount": "amount", "currency": "currency", "direction": "direction", "merchantOrCounterparty": "merchantOrParty"}
     for case in regressions:
         key = "regression:" + case["id"]
         result, prior = predictions[key], legacy[key]
         counts[result["trackingDecision"]] += 1
+        script = "arabic_script_present" if re.search(r"[\u0621-\u064a]", case["body"]) else "no_arabic_script"
+        script_slices.setdefault(script, Counter())[result["trackingDecision"]] += 1
         legacy_counts[str(prior["isValidTransaction"])] += 1
         expected_included = case.get("isTransaction", case.get("isValidTransaction"))
         # Frozen fixture classification lives in its expected transaction flag.
@@ -99,12 +106,13 @@ def evaluate():
             "inputSha256": hashes, "modelFitted": False, "modelPromoted": False, "reservedMerchantTestInferred": False,
             "legacyCallerMigrated": False, "contractValidResults": len(cases), "detailedThreeRuntimeParity": len(cases), "legacyThreeRuntimeParity": len(cases),
             "policy": {"caseCount": len(policy), "trackingMatches": sum(predictions["policy:" + c["id"]]["trackingDecision"] == c["expected"]["trackingDecision"] for c in policy),
-                       "exactAllFields": len(policy) - len(policy_diffs), "disagreements": policy_diffs,
+                       "exactAllFields": len(policy) - len(policy_diffs), "disagreements": policy_diffs, "languageSlices": policy_slices,
                        "annotationIssue": "completed_missing_amount has no currency token; explicit in frozen annotation, default_missing from evidence"},
             "contextualControls": {"caseCount": len(controls), "matchingExpectedFields": len(controls) - len(control_diffs), "disagreements": control_diffs},
             "authorizationControls": {"caseCount": len(auth), "failures": auth_failures},
             "frozenCompatibility": {"caseCount": len(regressions), "legacyIncluded": legacy_counts["True"], "legacyExcluded": legacy_counts["False"],
                                     "legacyClassificationDisagreements": legacy_misses, "detailedDecisionCounts": dict(counts),
+                                    "detailedScriptSlices": {key: dict(value) for key, value in script_slices.items()},
                                     "changedIncludeProjection": compatibility, "includedFieldChanges": field_changes,
                                     "meaning": "Changes against legacy behavior, not correctness adjudications or label edits; category vocabularies not mapped"},
             "nextGate": "Owner reviews compatibility differences before Slice2 caller migration; deployment thresholds and final evaluation remain unapproved"}

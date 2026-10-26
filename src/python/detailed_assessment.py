@@ -13,11 +13,19 @@ RX = {key: re.compile(value, re.I | re.ASCII) for key, value in RULES["patterns"
 PURPOSE = {key: re.compile(value, re.I | re.ASCII) for key, value in RULES["purpose"].items()}
 ALIASES = {key.upper(): value for key, value in RULES["currencyAliases"].items()}
 currency = r"(?<![A-Za-z\u0621-\u064A])(?:" + "|".join(re.escape(key) for key in sorted(ALIASES, key=len, reverse=True)) + r")(?![A-Za-z\u0621-\u064A])"
-number = r"(?<![0-9*])" + RULES["number"] + r"(?![0-9]|[.,][0-9])"
+number = r"(?<![0-9*.,'’])" + RULES["number"] + r"(?![0-9]|[.,][0-9])"
 MONEY = re.compile("(" + currency + r")\s*(" + number + ")|(" + number + r")\s*(" + currency + ")", re.I | re.ASCII)
 CURRENCY = re.compile(currency, re.I | re.ASCII)
-BALANCE = re.compile("(?:" + RULES["patterns"]["balance"] + ")" + RULES["patterns"]["balanceJoin"] + "(?:" + currency + r"\s*)?" + number + "(?:\\s*" + currency + ")?", re.I | re.ASCII)
+balance_value = "(?:" + currency + r"\s*)?[+-]?" + number + "(?:\\s*" + currency + ")?"
+BALANCE = re.compile("(?:" + RULES["patterns"]["balance"] + ")" + RULES["patterns"]["balanceJoin"] + balance_value, re.I | re.ASCII)
+BALANCE_SUFFIX = re.compile(balance_value + RULES["patterns"]["balanceSuffix"], re.I | re.ASCII)
 UNMARKED = re.compile("(?:" + RULES["patterns"]["amountAnchor"] + ")(" + number + ")", re.I | re.ASCII)
+
+
+def mask_balances(text):
+    # Prefixes win: in "20 JOD الرصيد 100 JOD", only 100 is a balance.
+    working = BALANCE.sub(lambda match: " " * len(match.group()), text)
+    return BALANCE_SUFFIX.sub(lambda match: " " * len(match.group()), working)
 
 
 def non_transaction(reasons):
@@ -30,7 +38,9 @@ def non_transaction(reasons):
 def amounts(text, extracted, parse_number):
     # Mask balances before looking for monetary mentions. Bare identifiers/dates
     # never become amounts: a currency or a financial amount introducer is needed.
-    working = BALANCE.sub(lambda match: " " * len(match.group()), text)
+    working = mask_balances(text)
+    for pattern in (RX["date"], RX["identifier"]):
+        working = pattern.sub(lambda match: " " * len(match.group()), working)
     pairs = []
     for match in MONEY.finditer(working):
         value = parse_number(match[2] or match[3])
@@ -60,17 +70,26 @@ def amounts(text, extracted, parse_number):
 
 def exact_party(raw):
     source = EntityText(raw)
-    for anchor in RX["partyAnchor"].finditer(source.text):
-        match = RX["partyValue"].search(source.text[anchor.end():])
-        if not match:
-            continue
-        candidate = match[1].rstrip(" .;,")
-        if not candidate or RX["partyReject"].search(candidate):
-            continue
-        chosen = source.exact(anchor.end(), anchor.end() + len(candidate))
-        if chosen and not RX["alignedLocation"].search(chosen):
-            return chosen
+    for key in ("partyLabelAnchor", "partyAnchor"):
+        for anchor in RX[key].finditer(source.text):
+            match = RX["partyValue"].search(source.text[anchor.end():])
+            if not match:
+                continue
+            candidate = match[1].rstrip(" .;,")
+            if not candidate or RX["partyReject"].search(candidate) or RX["partyAccountRole"].search(candidate):
+                continue
+            chosen = source.exact(anchor.end(), anchor.end() + len(candidate))
+            if chosen and not RX["alignedLocation"].search(chosen):
+                return chosen
     return None
+
+
+def completed_clause(clause, allow_purchase):
+    if RX["completionDenied"].search(clause) or RX["reportedSpeech"].search(clause):
+        return False
+    purchase = allow_purchase and RX["purchaseEvidence"].search(clause) and not any(
+        RX[key].search(clause) for key in ("purchaseUnsettled", "purchaseConditional", "deferred", "declined", "chat"))
+    return bool(RX["completion"].search(clause) or purchase)
 
 
 def assess(input_value, extract, parse_number, financial_candidate):
@@ -79,17 +98,16 @@ def assess(input_value, extract, parse_number, financial_candidate):
         return non_transaction(["empty_or_malformed"])
     text = EntityText(raw).text
     clauses = [part for part in RX["sentence"].split(text) if part.strip()]
-    has_completion = any(RX["completion"].search(part) and not RX["completionDenied"].search(part)
-                         and not RX["reportedSpeech"].search(part) for part in clauses)
+    allow_purchase = not RX["purchaseQualification"].search(text)
+    has_completion = any(completed_clause(part, allow_purchase) for part in clauses)
     completed, negative, relevant = [], [], []
     for clause in clauses:
-        complete = bool(RX["completion"].search(clause) and not RX["completionDenied"].search(clause)
-                        and not RX["reportedSpeech"].search(clause))
+        complete = completed_clause(clause, allow_purchase)
         reasons = []
         if RX["chat"].search(clause) or RX["reportedSpeech"].search(clause): reasons.append("personal_conversation")
         if is_authorization_request(clause) or RX["otpRequest"].search(clause) or (RX["otp"].search(clause) and not has_completion): reasons.append("otp_or_authorization")
         if RX["declined"].search(clause): reasons.append("declined_or_failed")
-        if RX["deferred"].search(clause) or RX["completionDenied"].search(clause): reasons.append("pending_or_requested")
+        if RX["deferred"].search(clause) or RX["completionDenied"].search(clause) or RX["purchaseConditional"].search(clause): reasons.append("pending_or_requested")
         if RX["promotion"].search(clause) or (RX["serviceScope"].search(clause) and is_service_notice(clause)): reasons.append("promotion_or_administration")
         if complete: completed.append(clause)
         if reasons: negative.extend(reasons)
@@ -104,7 +122,11 @@ def assess(input_value, extract, parse_number, financial_candidate):
         if not financial_candidate(text): return non_transaction(["personal_conversation"])
     status = "completed" if completed and not conflicts else "uncertain"
     semantic = " ".join(relevant)
-    incoming, outgoing = bool(RX["incoming"].search(semantic)), bool(RX["outgoing"].search(semantic))
+    incoming = any(RX["incoming"].search(part) or
+                   (RX["transfer"].search(part) and RX["transferOwnerRecipient"].search(part)) for part in relevant)
+    outgoing = any((RX["outgoing"].search(part) or
+                    (RX["transfer"].search(part) and RX["transferOwnerSource"].search(part)))
+                   and not RX["returnMovement"].search(part) for part in relevant)
     direction = "uncertain" if incoming == outgoing or RX["directionDenied"].search(text) else ("incoming" if incoming else "outgoing")
     relation = "not_transfer"
     if RX["transfer"].search(semantic):
@@ -112,7 +134,7 @@ def assess(input_value, extract, parse_number, financial_candidate):
     if relation == "own_accounts": direction = "not_applicable"
     extracted = extract(raw, "INCOME" if direction == "incoming" else "EXPENSE")
     amount, unit, resolution = amounts(text, extracted, parse_number)
-    if sum(bool(MONEY.search(BALANCE.sub(" ", part))) for part in completed) > 1:
+    if sum(bool(MONEY.search(mask_balances(part))) for part in completed) > 1:
         status, amount = "uncertain", None
     decision = "review"
     if status == "completed":

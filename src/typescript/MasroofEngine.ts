@@ -334,7 +334,7 @@ export class MasroofEngine {
   private static readonly RE_PAREN_PARTY = /(?:محفظة|من|إلى|كليك)?\s*0[7-9][0-9]{8}\s*\(([A-Za-z0-9\u0600-\u06FF\s\.\-_]+?)\)/i;
   private static readonly RE_BILL_PARTY = /(?:دفع|تسديد)\s+فاتورة\s+(?:عبر\s+)?([A-Za-z0-9\u0600-\u06FF\s\.\-_]+?)(?=[.,;]?\s+(?:بنجاح|بقيمة|بمبلغ|عبر|من|في|\n|$))/i;
 
-  private static readonly DELIMS = '(?:amount|on\\b|at\\b|to\\b|from\\b|via|through|as\\s+cliq|has\\s+been|with\\s+card|is|bal(?:[a-z]?nce|\\b)|your\\b|avail|\\d{1,2}[/-]\\d{1,2}|ref\\s*#|بمبلغ|بقيمة|في\\s+\\d|لدى|إلى|من|عبر|بواسطة|باستخدام|بالبطاقة|بالبطاقه|رصيدك|الرصيد|بتاريخ|تم(?![\\u0621-\\u064A])|رقم|$)';
+  private static readonly DELIMS = '(?:amount|on\\b|at\\b|to\\b|from\\b|via|through|as\\s+cliq|has\\s+been|with\\s+card|is|bal(?:[a-z]?nce|\\b)|your\\b|avail|\\d{1,2}[/-]\\d{1,2}|ref\\s*#|بمبلغ|بقيمة|في\\s+\\d|لدى|إلى|من(?=\\s|[.,;]|$)|عبر|بواسطة|باستخدام|بالبطاقة|بالبطاقه|رصيدك|الرصيد|بتاريخ|تم(?![\\u0621-\\u064A])|رقم|$)';
   private static readonly RE_PARTY = new RegExp('(?:from|at|to|لدى|إلى|من|لحساب|عبر)\\s+([A-Za-z0-9\\u0600-\\u06FF\\s\\.\\-_*&/\'’]+?)(?=[.,;]?\\s+' + MasroofEngine.DELIMS + '|\\n|$)', 'gi');
   private static readonly RE_ADMIN_ALERT = /\bcredit\s+limit\b.*?\b(?:increased|decreased|adjusted)\b|\b(?:did\s+you\s+(?:attempt|make)\s+(?:a\s+|this\s+)?purchase|security\s+alert|refund\s+request)\b|تم\s+(?:زيادة|تعديل|رفع)\s+سقف\s+(?:الائتمان|البطاقة)|هل\s+قمت\s+(?:بإجراء|بمحاولة)|هل\s+حاولت|طلب\s+استرداد/i;
   private static readonly RE_CLAUSE_TARGET = /^(?:account|acc\.?|card|wallet|حساب|بطاق|محفظ|your\s+account|your\s+card|[0-9x\*]{3,}|\d{1,2}:\d{2}|your\\b|avail|bal[a-z]?nce|رصيد)/i;

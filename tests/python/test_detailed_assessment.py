@@ -1,6 +1,7 @@
 """Contract conformance, contextual counterexamples and complete runtime parity."""
 import json
 from pathlib import Path
+import re
 import subprocess
 import unittest
 from unittest.mock import patch
@@ -47,7 +48,8 @@ class DetailedAssessmentTests(unittest.TestCase):
 
     def test_contextual_controls_and_browser_review_display(self):
         cases = load("detailed_assessment_cases.json")["cases"]
-        outputs = probe(cases, cases[2]["input"])
+        ui_case = next(case for case in cases if case["id"] == "atm_activity")
+        outputs = probe(cases, ui_case["input"])
         self.assertEqual(outputs["ui"]["title"], "Review required")
         self.assertEqual(outputs["ui"]["assessment"]["trackingDecision"], "review")
         engine = MasroofEngine()
@@ -89,6 +91,30 @@ class DetailedAssessmentTests(unittest.TestCase):
             self.assertEqual(actual, expected)
             self.assertEqual(actual, other["typescript"])
             self.assertEqual(actual, other["browser"])
+
+    def test_parsing_repairs_preserve_raw_names_and_numeric_scripts(self):
+        controls = [case for case in load("detailed_assessment_cases.json")["cases"]
+                    if case["id"].startswith(("parsing_", "purchase_", "direction_"))]
+        cases = []
+        for case in controls:
+            for script, digits in enumerate(("0123456789", "٠١٢٣٤٥٦٧٨٩", "۰۱۲۳۴۵۶۷۸۹")):
+                def variant(text):
+                    if script:
+                        text = re.sub(r"(?<=[0-9])[.,](?=[0-9])", lambda match: "٫" if match[0] == "." else "٬", text)
+                    return text.translate(str.maketrans("0123456789", digits))
+                cases.append({"id": case["id"] + ":" + str(script),
+                              "input": {"text": variant(case["input"]["text"])},
+                              "expect": {key: variant(value) if isinstance(value, str) else value
+                                         for key, value in case["expect"].items()}})
+        engine = MasroofEngine()
+        for case, other in zip(cases, probe(cases)["rows"]):
+            with self.subTest(case=case["id"]):
+                result = engine.predict_detailed(case["input"])
+                validate_result(result)
+                self.assertEqual(result, other["typescript"])
+                self.assertEqual(result, other["browser"])
+                for key, expected in case["expect"].items():
+                    self.assertEqual(result[key], expected, key)
 
     def test_malformed_input_and_clear_otp_do_not_need_model_scoring(self):
         engine = MasroofEngine()

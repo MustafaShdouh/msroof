@@ -24,11 +24,19 @@ const PURPOSE = Object.entries(rules.purpose).map(([label, value]) => ({ label, 
 const ALIASES: Record<string, string> = Object.fromEntries(Object.entries(rules.currencyAliases).map(([key, value]) => [key.toUpperCase(), value]));
 function escape(value: string) { return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 const currency = '(?<![A-Za-z\\u0621-\\u064A])(?:' + Object.keys(ALIASES).sort((a, b) => b.length - a.length).map(escape).join('|') + ')(?![A-Za-z\\u0621-\\u064A])';
-const number = '(?<![0-9*])' + rules.number + '(?![0-9]|[.,][0-9])';
+const number = "(?<![0-9*.,'’])" + rules.number + '(?![0-9]|[.,][0-9])';
 const MONEY = new RegExp('(' + currency + ')\\s*(' + number + ')|(' + number + ')\\s*(' + currency + ')', 'gi');
 const CURRENCY = new RegExp(currency, 'gi');
-const BALANCE = new RegExp('(?:' + rules.patterns.balance + ')' + rules.patterns.balanceJoin + '(?:' + currency + '\\s*)?' + number + '(?:\\s*' + currency + ')?', 'gi');
+const balanceValue = '(?:' + currency + '\\s*)?[+-]?' + number + '(?:\\s*' + currency + ')?';
+const BALANCE = new RegExp('(?:' + rules.patterns.balance + ')' + rules.patterns.balanceJoin + balanceValue, 'gi');
+const BALANCE_SUFFIX = new RegExp(balanceValue + rules.patterns.balanceSuffix, 'gi');
 const UNMARKED = new RegExp('(?:' + rules.patterns.amountAnchor + ')(' + number + ')', 'gi');
+
+function maskBalances(text: string): string {
+  // Prefixes win: in "20 JOD الرصيد 100 JOD", only 100 is a balance.
+  return text.replace(BALANCE, match => ' '.repeat(match.length))
+    .replace(BALANCE_SUFFIX, match => ' '.repeat(match.length));
+}
 
 function nonTransaction(reasons: string[]): DetailedResult {
   return { contractVersion: '1.0.0', transactionStatus: 'non_transaction', trackingDecision: 'exclude',
@@ -38,7 +46,8 @@ function nonTransaction(reasons: string[]): DetailedResult {
 }
 
 function amounts(text: string, extracted: Extracted, parseNumber: (value: string) => number | null): [number | null, string, DetailedResult['currencyResolution']] {
-  const working = text.replace(BALANCE, match => ' '.repeat(match.length));
+  let working = maskBalances(text);
+  for (const key of ['date', 'identifier']) working = working.replace(new RegExp(rules.patterns[key], 'gi'), match => ' '.repeat(match.length));
   const pairs: [number, string][] = [];
   for (const match of working.matchAll(MONEY)) {
     const value = parseNumber(match[2] || match[3]);
@@ -71,16 +80,25 @@ function amounts(text: string, extracted: Extracted, parseNumber: (value: string
 
 function exactParty(raw: string): string | null {
   const source = new EntityText(raw);
-  for (const anchor of source.text.matchAll(new RegExp(rules.patterns.partyAnchor, 'gi'))) {
-    const start = anchor.index! + anchor[0].length;
-    const match = RX.partyValue.exec(source.text.slice(start));
-    if (!match) continue;
-    const candidate = match[1].replace(/[ .;,]+$/, '');
-    if (!candidate || RX.partyReject.test(candidate)) continue;
-    const chosen = source.exact(start, start + candidate.length);
-    if (chosen && !RX.alignedLocation.test(chosen)) return chosen;
+  for (const key of ['partyLabelAnchor', 'partyAnchor']) {
+    for (const anchor of source.text.matchAll(new RegExp(rules.patterns[key], 'gi'))) {
+      const start = anchor.index! + anchor[0].length;
+      const match = RX.partyValue.exec(source.text.slice(start));
+      if (!match) continue;
+      const candidate = match[1].replace(/[ .;,]+$/, '');
+      if (!candidate || RX.partyReject.test(candidate) || RX.partyAccountRole.test(candidate)) continue;
+      const chosen = source.exact(start, start + candidate.length);
+      if (chosen && !RX.alignedLocation.test(chosen)) return chosen;
+    }
   }
   return null;
+}
+
+function completedClause(clause: string, allowPurchase: boolean): boolean {
+  if (RX.completionDenied.test(clause) || RX.reportedSpeech.test(clause)) return false;
+  const purchase = allowPurchase && RX.purchaseEvidence.test(clause) && !RX.purchaseUnsettled.test(clause) &&
+    !RX.purchaseConditional.test(clause) && !RX.deferred.test(clause) && !RX.declined.test(clause) && !RX.chat.test(clause);
+  return RX.completion.test(clause) || purchase;
 }
 
 export function assess(input: DetailedInput, extract: (body: string, type: 'INCOME' | 'EXPENSE') => Extracted,
@@ -89,15 +107,16 @@ export function assess(input: DetailedInput, extract: (body: string, type: 'INCO
   if (typeof raw !== 'string' || !raw.trim()) return nonTransaction(['empty_or_malformed']);
   const text = new EntityText(raw).text;
   const clauses = text.split(RX.sentence).filter(part => part.trim());
-  const hasCompletion = clauses.some(part => RX.completion.test(part) && !RX.completionDenied.test(part) && !RX.reportedSpeech.test(part));
+  const allowPurchase = !RX.purchaseQualification.test(text);
+  const hasCompletion = clauses.some(clause => completedClause(clause, allowPurchase));
   const completed: string[] = [], negative: string[] = [], relevant: string[] = [];
   for (const clause of clauses) {
-    const complete = RX.completion.test(clause) && !RX.completionDenied.test(clause) && !RX.reportedSpeech.test(clause);
+    const complete = completedClause(clause, allowPurchase);
     const reasons: string[] = [];
     if (RX.chat.test(clause) || RX.reportedSpeech.test(clause)) reasons.push('personal_conversation');
     if (isAuthorizationRequest(clause) || RX.otpRequest.test(clause) || (RX.otp.test(clause) && !hasCompletion)) reasons.push('otp_or_authorization');
     if (RX.declined.test(clause)) reasons.push('declined_or_failed');
-    if (RX.deferred.test(clause) || RX.completionDenied.test(clause)) reasons.push('pending_or_requested');
+    if (RX.deferred.test(clause) || RX.completionDenied.test(clause) || RX.purchaseConditional.test(clause)) reasons.push('pending_or_requested');
     if (RX.promotion.test(clause) || (RX.serviceScope.test(clause) && isServiceNotice(clause))) reasons.push('promotion_or_administration');
     if (complete) completed.push(clause);
     negative.push(...reasons);
@@ -112,14 +131,17 @@ export function assess(input: DetailedInput, extract: (body: string, type: 'INCO
   }
   let status: DetailedResult['transactionStatus'] = completed.length && !conflicts ? 'completed' : 'uncertain';
   const semantic = relevant.join(' ');
-  const incoming = RX.incoming.test(semantic), outgoing = RX.outgoing.test(semantic);
+  const incoming = relevant.some(part => RX.incoming.test(part) ||
+    (RX.transfer.test(part) && RX.transferOwnerRecipient.test(part)));
+  const outgoing = relevant.some(part => (RX.outgoing.test(part) ||
+    (RX.transfer.test(part) && RX.transferOwnerSource.test(part))) && !RX.returnMovement.test(part));
   let direction: DetailedResult['direction'] = incoming === outgoing || RX.directionDenied.test(text) ? 'uncertain' : (incoming ? 'incoming' : 'outgoing');
   let relation: DetailedResult['transferRelationship'] = 'not_transfer';
   if (RX.transfer.test(semantic)) relation = RX.own.test(semantic) ? 'own_accounts' : (RX.otherPerson.test(semantic) ? 'other_person' : 'unknown');
   if (relation === 'own_accounts') direction = 'not_applicable';
   const extracted = extract(raw, direction === 'incoming' ? 'INCOME' : 'EXPENSE');
   let [amount, unit, resolution] = amounts(text, extracted, parseNumber);
-  if (completed.filter(part => [...part.replace(BALANCE, ' ').matchAll(MONEY)].length > 0).length > 1) {
+  if (completed.filter(part => [...maskBalances(part).matchAll(MONEY)].length > 0).length > 1) {
     status = 'uncertain'; amount = null;
   }
   let decision: DetailedResult['trackingDecision'] = 'review';

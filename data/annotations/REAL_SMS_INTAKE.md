@@ -9,6 +9,16 @@ The files in `data/raw/` do not acquire real/synthetic labels based on their ban
 filename, realistic wording, dates or masked accounts. Until traced, origin is
 unresolved. Do not modify those files or count every row as a real bank message.
 
+Owner clarification,2026-10-26: the four original Arab Bank “You have a purchase
+transaction” blocks (`arab-seeds-001`,002,004,011) were actual purchases with money
+deducted. Named Capital transfers remain **Mixed or unknown** for ownership;
+no per-record own/external labels were assigned. Supplemental private evidence
+and before/after diagnostics are `data/private/sms_provenance/completion_transfer_evidence_v1.json`
+and `completion_transfer_after_v1.json`. All26 original blocks have three-runtime
+parity; the four confirmed purchases now include. Original source bytes/audit
+labels and admission flags remain unchanged; this clarification does not make
+the exposed seeds an independent evaluation set or authenticate arbitrary SMS.
+
 The original seeds can support development once individually identified, sanitized
 and checked. They are already development-exposed through generated descendants;
 they do not become a fresh independent test just because the originals are found.
@@ -120,6 +130,14 @@ inputs are preserved in deduplicated private snapshots. Public authored controls
 and the shared grammar are described in `docs/BEHAVIOR_EVALUATION.md`. All four
 source examples remain diagnostic-only. The broader uncertain/review API remains
 a separately scoped contract gap.
+
+Detailed API replay after parsing repair,2026-10-26:
+`data/private/entity_intake/web_review_v1/detailed_parsing_v2.json` confirms
+the OTP as non_transaction/exclude and the other three as uncertain/review in
+Python, TypeScript and the browser. The legacy path is still retained separately.
+This resolves output representation in the new API, not source authenticity or
+the unresolved C TOWN name boundary. All four remain exposed development
+diagnostics, with no training or independent-evaluation admission.
 
 Repository merge: msroof is the authoritative workspace. DATA_YOU_WANT, raw text inputs and .local-backups are local-only and excluded from GitHub. Earlier Git history containing raw inputs is retained locally; the published main branch begins with a clean project snapshot.
 

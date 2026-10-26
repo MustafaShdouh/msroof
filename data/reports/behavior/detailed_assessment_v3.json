@@ -1,0 +1,1026 @@
+{
+  "version": "1.0.0",
+  "scope": "Approved Slice1 structural assessment; exposed development diagnostics, not independent accuracy",
+  "inputSha256": {
+    "tests/fixtures/transaction_behavior_cases.json": "68b8e87d29fcc2513886d26efd37adc26934ba74c396f373acbcf78034476bc5",
+    "tests/fixtures/detailed_assessment_cases.json": "5d381da979074e3e4f4d2a7e0892aea59c552b9baf8ed914f00cee437e1e9c76",
+    "tests/fixtures/authorization_request_cases.json": "35eccc4e56634a1fbd8229ed175640050c5804203f0be222464ad586bdf04ace",
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+    "tests/fixtures/sanitized_v1/qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "config/contracts/transaction_behavior.json": "e06693e71398f60a220488a779902fc2d38d2ba7c19570df395fddf551e2bf4b",
+    "src/python/verify_engine.py": "8d6c45d39fa21ba97fff02bd04b7a7fef5a1f7d5ad300235fc65cff945164350",
+    "src/python/detailed_assessment.py": "1930802643d86ab3c231eb4cfe6bff9a92a87aa2102159dfa0e090ec73adb8bb",
+    "src/python/entity_text.py": "688fcf0e4bda7dac395815589464d3f9f88f073d31b58aeadc798c83f3b98948",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "src/python/authorization_request.py": "fa8f7a4598e46c3e637e74d4c485029d008a0486bfb25696851e8d024b333814",
+    "src/python/service_notice.py": "92cf27f5255e9a37f53f267063ba12913638c4cc1bfbc75652c2931c6f6136d3",
+    "src/python/legacy_transaction_model.py": "911c45201bc21c1926ec4b03ef6e340376a5b292491225c0a81f7a1f97f32100",
+    "tools/evaluation/probe_detailed.ts": "c9ece078cfc51b85f0b56ff86b3a3fad4f0828bd0e2a215218f5eebe245393dc",
+    "tools/browser/tester.html": "c17cc1d89056451d0ba9e40a0b2bc4bd4cc4c4d0e3dcb61ce43021e824ca5d2a",
+    "tools/browser/build_tester_ui.py": "f5ca7416fef715193ac308feb7b96debb869d10a218c7657e613b0d3e50dcce2",
+    "tools/browser/bundle_engine.mjs": "45284623bfeed0f4905c71faa139aa588d3405acb75deebdef3e9c5ec53369c3",
+    "tools/contracts/validate_transaction_behavior.py": "a915648f5132394f522947d4dfba94113a78b37ac0314e8fc3fe06274b8e9af2",
+    "training/corpus_io.py": "3b24a9ea6ba2de041d6f709caa0a60b8b9b7ea6a42327f94fc13e7b7ff04387a",
+    "training/evaluate_behavior.py": "3cfcbb8193a8d0ed1aaf54758a9a4d7833bb3e597141637eebb9e337554506d7",
+    "training/evaluate_detailed.py": "d2dd74d21938d988d8b957df852dffd5e4a1e50341269de735cf97408943b216",
+    "src/typescript/MasroofEngine.ts": "c38df8f2568d90f773b356ac3d48f0a2454c965ba14004cfe50f543df9fdfeff",
+    "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+    "src/typescript/ServiceNotice.ts": "a6e9976cd5f62e18d926260a2681cac6c0834ab317eeeb33df609d7bf8c907c5",
+    "config/contracts/service_notice.json": "1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3",
+    "src/typescript/AuthorizationRequest.ts": "0c45b2b8c327e53576495a3a7b2fa0ec3b7757197eb6fd0cab9571a212b281c2",
+    "config/contracts/authorization_request.json": "d927714265710faf8f80a1053a1b17bfbe9a0eff56208b820295dd616f7b555b",
+    "src/typescript/LegacyTransactionModel.ts": "5f060dd375f4a3f568971282339c0c389fdaeb54951ffa80f83642193a7d0f59",
+    "src/typescript/EntityText.ts": "99fdd47bce69d1df5096ab9533158fbf525cd471b36caaa9ce7026b4c355dc7e",
+    "src/typescript/DetailedAssessment.ts": "ce29918aa5a3133eeff1e4be6d33e795a8aa11d8556f86fcf3de145171cb7c49",
+    "config/contracts/transaction_evidence.json": "4f7b8e94e9741d5fe4395198c4ebbf53cf5f87d9527969b2b8e77b6b80db4318"
+  },
+  "modelFitted": false,
+  "modelPromoted": false,
+  "reservedMerchantTestInferred": false,
+  "legacyCallerMigrated": false,
+  "contractValidResults": 321,
+  "detailedThreeRuntimeParity": 321,
+  "legacyThreeRuntimeParity": 321,
+  "policy": {
+    "caseCount": 31,
+    "trackingMatches": 31,
+    "exactAllFields": 30,
+    "disagreements": [
+      {
+        "caseId": "completed_missing_amount",
+        "fields": [
+          "currencyResolution"
+        ]
+      }
+    ],
+    "languageSlices": {
+      "arabic": {
+        "caseCount": 5,
+        "trackingMatches": 5
+      },
+      "english": {
+        "caseCount": 25,
+        "trackingMatches": 25
+      },
+      "mixed": {
+        "caseCount": 1,
+        "trackingMatches": 1
+      }
+    },
+    "annotationIssue": "completed_missing_amount has no currency token; explicit in frozen annotation, default_missing from evidence"
+  },
+  "contextualControls": {
+    "caseCount": 42,
+    "matchingExpectedFields": 42,
+    "disagreements": []
+  },
+  "authorizationControls": {
+    "caseCount": 22,
+    "failures": []
+  },
+  "frozenCompatibility": {
+    "caseCount": 226,
+    "legacyIncluded": 106,
+    "legacyExcluded": 120,
+    "legacyClassificationDisagreements": [],
+    "detailedDecisionCounts": {
+      "review": 113,
+      "include": 25,
+      "exclude": 88
+    },
+    "detailedScriptSlices": {
+      "no_arabic_script": {
+        "review": 61,
+        "include": 13,
+        "exclude": 41
+      },
+      "arabic_script_present": {
+        "review": 52,
+        "include": 12,
+        "exclude": 47
+      }
+    },
+    "changedIncludeProjection": [
+      {
+        "caseId": "TC_POS_ARAB_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ARAB_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ARAB_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ARAB_004",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ARAB_007",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ARAB_008",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ARAB_009",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CAP_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CAP_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CAP_005",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_REF_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_REF_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_REF_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_REF_005",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_REF_006",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ETI_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ETI_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ETI_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ETI_004",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ETI_005",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ETI_006",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction"
+        ]
+      },
+      {
+        "caseId": "TC_POS_HOU_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_HOU_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_HOU_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "direction_unresolved",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_HOU_006",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ORA_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "direction_unresolved",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ORA_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ORA_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ORA_005",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ORA_006",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ZAI_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "direction_unresolved",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ZAI_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ZAI_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ZAI_004",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction"
+        ]
+      },
+      {
+        "caseId": "TC_POS_UWA_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "direction_unresolved",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_UWA_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "direction_unresolved",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_UWA_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_UWA_005",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction"
+        ]
+      },
+      {
+        "caseId": "TC_POS_JIB_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_JIB_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_JIB_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_JIB_005",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_JIB_006",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "direction_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CAB_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CAB_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CAB_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CAB_004",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_ADV_SND_009",
+        "legacyIncluded": false,
+        "detailedDecision": "include",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_DEC_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_DEC_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_DEC_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_DEC_005",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_DEC_006",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_DEC_007",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_WSP_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_WSP_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_WSP_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_DIA_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_DIA_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_TYP_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_TYP_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_TYP_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_MIS_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_MIS_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_ADV_CURR_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_ADV_CURR_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_ADV_CURR_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_ADV_CURR_004",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_ADV_CURR_005",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_ADV_CURR_006",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction"
+        ]
+      },
+      {
+        "caseId": "TC_ADV_CURR_008",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "direction_unresolved",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CLIQ_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CLIQ_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CLIQ_003",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CLIQ_004",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "direction_unresolved",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CLIQ_005",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CLIQ_006",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CLIQ_007",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "direction_unresolved",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CLIQ_008",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completed_transaction",
+          "direction_unresolved",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDGE_DIACRITICS_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "completed",
+        "reasonCodes": [
+          "completed_transaction",
+          "transfer_ownership_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDGE_DECIMAL_COMMA_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDGE_THOUSANDS_COMMA_002",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      },
+      {
+        "caseId": "TC_EDGE_MULTILINE_HEADER_001",
+        "legacyIncluded": true,
+        "detailedDecision": "review",
+        "transactionStatus": "uncertain",
+        "reasonCodes": [
+          "completion_unresolved"
+        ]
+      }
+    ],
+    "includedFieldChanges": [
+      {
+        "caseId": "TC_POS_ARAB_005",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ARAB_006",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ARAB_010",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CAP_003",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CAP_006",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CAP_007",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_REF_004",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_HOU_004",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_HOU_005",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ORA_004",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_ZAI_005",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_UWA_004",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_POS_CAB_006",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_EDG_MIS_001",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_ADV_CURR_007",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "caseId": "TC_EDGE_EFAWATEERCOM_001",
+        "fields": [
+          "merchantOrCounterparty"
+        ]
+      }
+    ],
+    "meaning": "Changes against legacy behavior, not correctness adjudications or label edits; category vocabularies not mapped"
+  },
+  "nextGate": "Owner reviews compatibility differences before Slice2 caller migration; deployment thresholds and final evaluation remain unapproved"
+}

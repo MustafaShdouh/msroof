@@ -11,6 +11,10 @@ specification checks nor exposed regression results establish independent accura
 
 Required: message `text`. Optional: `sender` (text/null), `isContact` (boolean), and `receivedAt` (timestamp with UTC offset/null). Missing sender information must not prevent text analysis. Sender formatting or saved-contact membership is context, not proof that a transaction occurred or did not occur. This system classifies notification evidence; it cannot authenticate bank origin from text alone.
 
+An optional ownership-context interface is proposed at the end of this document.
+It is a separate opt-in request/response wrapper; the active1.0.0 input above
+does not accept those proposed fields yet.
+
 Support Jordanian Arabic, English, and mixed-language messages, Western/Arabic-Indic/Persian digits, and Arabic decimal/group separators. Preserve explicit foreign currencies used by Jordanian customers. Numeric preprocessing contract 1.1.0 remains the shared normalization contract; do not apply account-number masking before extracting amounts.
 
 ## Result fields
@@ -114,8 +118,10 @@ Run `py tools/contracts/validate_transaction_behavior.py` to validate the exampl
 
 ## Proposed uncertainty implementation,2026-10-26
 
-Status: concrete design for owner approval; no runtime/API change implemented by
-this proposal. The existing JSON contract1.0.0 supplies the result fields and
+Status: owner approved2026-10-26; Slice1 is implemented, with subsequent parsing
+and source-supported purchase/direction repairs measured in `data/reports/behavior/arabic_direction_v1.json`.
+Slice2 caller migration awaits
+review of the differences. The existing JSON contract1.0.0 supplies the result fields and
 approved product rules. This implements that contract without training another
 model or admitting source examples to training. The current classifier remains
 an imperfect source of evidence; its score cannot establish settlement,
@@ -249,9 +255,197 @@ override canonical category uncertainty or the JOD policy.
   path must retain its measured gate; intentional new-path differences require
   visible review before Slice2. Preserve new report inputs under new run IDs.
 
-No new numeric confidence threshold is proposed. No independent dataset,
-meaningful accuracy target or safe deployment claim is implied. Implementation
-of Slice1 requires owner approval of this concrete API design under Project
-Control; Slice2 waits for review of its measured compatibility differences.
+No new numeric confidence threshold is introduced. The existing classifier's0.70
+cutoff is reused only to send otherwise unrecognized candidate text to review;
+it never establishes completion, direction or ownership. No independent dataset,
+meaningful accuracy target or safe deployment claim is implied. Slice1 approval
+was given2026-10-26 and implementation is complete; Slice2 waits for review of its
+measured compatibility differences. See `docs/BEHAVIOR_EVALUATION.md` for results.
 Training, final-test evaluation, promotion/publication and legacy deletion remain
 separate decisions.
+
+## Proposed ownership context,2026-10-26
+
+Status: concrete design for owner review; not implemented. The latest measured
+runtime is `data/reports/behavior/arabic_direction_v1.json`. It leaves37 transfer
+relationships unresolved among the legacy-included development cases. The owner
+answered **Mixed or unknown** for the original named Capital transfers; no
+individual ownership label follows from that answer. A context interface cannot
+resolve these records until actual ownership information is supplied.
+
+### Recommended first slice
+
+Accept an explicit human confirmation of the relationship for one particular
+message. A confirmation says either “between my own accounts”, “with another
+person”, or “I do not know”. It supplies ownership only. It does not establish
+completion, amount, direction, sender authenticity or purchase category.
+
+Keep `analyzeDetailed` / `predict_detailed` and their existing input/result contract
+unchanged. Add a separate opt-in TypeScript `analyzeWithOwnership(request)` and
+Python `predict_with_ownership(request)`. Their proposed wrapper version is1.0.0;
+the nested assessment retains the existing transaction contract1.0.0. The active
+JSON schema, validator, weights and default callers are unchanged by this design.
+
+```typescript
+interface OwnershipRequest {
+  ownerScopeId: string; // Opaque caller profile ID; not a bank or legal name.
+  messageId: string;    // Stable caller ID for this specific message.
+  message: DetailedInput;
+  ownershipContext?: {
+    schemaVersion: '1.0.0';
+    ownerScopeId: string;
+    messageId: string;
+    text: string;       // Exact original message.text, including whitespace.
+    evidence: 'user_confirmed';
+    relationship: 'own_accounts' | 'other_person' | 'unknown';
+  } | null;
+}
+
+interface OwnershipResponse {
+  ownershipContractVersion: '1.0.0';
+  assessment: DetailedResult; // Existing exact field set and reason codes.
+  contextStatus: 'absent' | 'applied' | 'unresolved' |
+    'not_applicable' | 'invalid' | 'conflict';
+  contextReason: string;      // Closed vocabulary specified below.
+}
+```
+
+IDs must be nonempty strings, compared exactly without trimming or case folding;
+whitespace-only IDs are invalid. Require the exact wrapper/context keys/types/enums and
+reject unknown fields or unsupported versions. Binding requires equality of
+ownerScopeId, messageId and the exact raw text. Normalize neither names nor the
+text for this comparison. Thus a confirmation cannot silently follow an edited
+amount, another digit script, another message with similar wording, or another
+owner profile. Same IDs with changed text must also fail binding.
+
+Exact text is deliberately included instead of adding a new hashing dependency
+to the offline runtime. The caller must assign distinct IDs to distinct received
+messages, even when their bodies match. These IDs/text comparisons are consistency
+checks, not authentication. The engine cannot verify that the caller's
+`user_confirmed` claim was actually made by a human; trusted caller code must
+construct it from an explicit review, never from SMS content, a model score,
+assistant guessing, sender name, or presence/absence in an account list.
+
+The engine performs no context storage, automatic reuse, network request, logging
+of source text, or account enrollment. A future caller can persist confirmations
+privately; persistence and mobile UI are outside this slice. A mistaken human
+confirmation remains possible: return its provenance diagnostic without calling
+it a correctness probability or treating it as training truth.
+
+### Resolution order and conflict behavior
+
+1. Validate the wrapper's required IDs and message envelope, then produce the
+   same message evidence as the current detailed path. For a valid wrapper,
+   missing/null context returns the exact current assessment with absent/not_provided.
+   This must hold field-for-field, including names, reason ordering and defaults.
+2. Validate supplied context and binding. Missing/non-string message text retains
+   the existing empty_or_malformed assessment. Other malformed wrapper/context
+   fields use the invalid diagnostic behavior below. Invalid context must never
+   promote a transaction or trigger an own-account exclusion. For a recognized
+   financial transfer, use ownership unknown + review, preserving independently
+   known completion/amount/currency and physical direction. If the body had only
+   own-account direction not_applicable, change that to uncertain. For ordinary
+   messages and non-transfer events, preserve the body assessment. Use a stable
+   diagnostic reason; do not throw on user-supplied malformed context or echo it.
+3. For a valid context on non_transaction content or an event with not_transfer,
+   keep the assessment unchanged and return not_applicable. Context cannot turn
+   chat, OTP, requests, failed attempts or a purchase into a completed transfer.
+   An unrecognized paired debit/credit message also needs a separate transfer
+   event-detection improvement; a relationship label is not a shortcut for it.
+4. Valid relationship unknown adds no fact: preserve the exact body assessment,
+   with unresolved/confirmation_unknown. It does not contradict an explicit own
+   or external relationship already established by the text.
+5. Valid own_accounts/other_person can resolve a recognized unknown transfer or
+   agree with the body's explicit relationship. Then derive decision/category
+   using existing rules. Own-account movement has direction not_applicable and
+   is excluded only when completion is established; uncertain completion still
+   requires review. Other-person movement requires completed status, positive
+   unique amount and a resolved body direction to include. Context never fills
+   a missing amount or direction, and cannot assign a category by itself.
+6. If a valid confirmation contradicts an explicit own/external relationship in
+   the body, retain completion/amount/currency facts but require review with
+   transferRelationship unknown and direction uncertain. Category becomes
+   not_applicable. Return conflict/text_context_conflict. Do not silently favor
+   either assertion or classify the conflict as an ordinary non-transaction.
+
+The existing canonical reason codes are recomputed from the final evidence state.
+For example, a completed ownership conflict requires completed_transaction,
+transfer_ownership_unresolved and direction_unresolved, plus amount_unresolved
+when appropriate. Context-specific diagnostics live in the wrapper, so the
+canonical validator needs no new reason codes or version change.
+
+Closed diagnostic pairs:
+
+| contextStatus | Permitted contextReason |
+| --- | --- |
+| absent | not_provided |
+| applied | confirmed_relationship |
+| unresolved | confirmation_unknown |
+| not_applicable | non_transaction, not_a_transfer |
+| invalid | invalid_request, invalid_context, unsupported_version, owner_mismatch, message_mismatch, untrusted_evidence |
+| conflict | text_context_conflict |
+
+For invalid diagnostics, structural request errors take precedence over context
+shape/version, then evidence, then owner binding, then message ID/text binding.
+For valid context, non-transaction/non-transfer applicability is checked before
+unknown/agreement/conflict resolution. No-context requests still validate the
+wrapper's required fields; malformed wrappers use invalid_request rather than
+the absent fast path. This gives both languages a deterministic error order.
+
+### Proposed acceptance cases
+
+These are authored design cases, not source labels, training rows, or accuracy
+measurements. Add executable controls only when this API slice is approved.
+
+| Message evidence / context | Required assessment and diagnostic |
+| --- | --- |
+| Unknown transfer, context omitted or null | Exact current result; absent |
+| Completed transfer, amount/direction known, user confirms other person | Include; other_person; applied |
+| Completed transfer, user confirms own accounts | Exclude; own_accounts; direction/category not_applicable; applied |
+| Completed own transfer, amount unreadable | Exclude; amount null; applied |
+| Completion uncertain, user confirms own accounts | Still uncertain + review; applied |
+| Completed external confirmation, amount or direction unresolved | Review; preserve the unresolved field; applied |
+| User says unknown, even after seeing a party name | Exact body result; unresolved |
+| Source text says own accounts, confirmation says other person (or reverse) | Completed status retained when known; review; relationship/direction uncertain; conflict |
+| Context copied to different owner/message ID | No ownership promotion/exclusion; invalid |
+| Amount, whitespace or digit script differs from bound original text | No ownership promotion/exclusion; invalid |
+| Wrong types, extra keys, unsupported version or machine-derived evidence | No ownership promotion/exclusion; invalid |
+| Two distinct records have identical bodies but different IDs | Confirmation applies only to its bound ID |
+| OTP/chat/request/decline with a valid confirmation | Existing non-transaction exclusion; not_applicable |
+| Completed purchase/non-transfer with valid confirmation | Exact body result; not_applicable |
+| An array of two contrary confirmations instead of one context object | invalid_context; no implicit merge or last-record-wins rule |
+
+The API accepts already-parsed objects; it cannot detect duplicate JSON keys that
+a caller's parser discarded. Strict duplicate-key handling at serialization is
+the caller's responsibility. The object schema itself has one value per field.
+
+### Why account-list automation is deferred
+
+The current canonical result has one party field and does not expose separately
+bound source/destination account identifiers and spans. A reliable account-list
+resolver first needs an endpoint-role contract. Only positive, uniquely matched
+ownership facts could then be used: a known own source plus an unknown recipient
+still leaves ownership unknown; an absent registry match does not mean external.
+Names and shared last digits are insufficient. Matching masks needs explicit
+scope, identifier type and collision handling; Unicode digit normalization alone
+does not make `*6284`, `xxxx6284` and a full account number equivalent. No account
+alias inference, bank registry, person-name ownership registry or completeness
+assumption belongs in this first slice.
+
+### Implementation and review boundary
+
+After approval, define a separate versioned wrapper schema/validator and authored
+controls. Refactor internal evidence collection/finalization just enough to
+apply ownership before the existing decision/category stage. Both old detailed
+methods must call the unchanged no-context path; new methods return the wrapper.
+Re-evaluate purpose after a reviewed transfer becomes included outgoing; do not
+leave a formerly not_applicable category state on an included expense. Preserve
+raw names, numeric handling, negative-event guards and the approved tester layout.
+
+Verify Python/TypeScript/browser equality including wrapper diagnostics, all
+acceptance cases and numeral/name contrasts, current no-context measurements,
+and the frozen legacy gate. Separate context-aided results from body-only
+measurements, report their coverage/abstentions, and preserve new source hashes
+under a new report ID. No promotion or accuracy claim follows from passing these
+authored cases. A developer-only opt-in comparison control can be considered
+after the engine contract works; default caller migration remains a separate gate.
