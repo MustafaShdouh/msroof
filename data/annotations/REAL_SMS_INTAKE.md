@@ -143,7 +143,7 @@ Repository merge: msroof is the authoritative workspace. DATA_YOU_WANT, raw text
 
 ## Audited records and reproducible exposure report
 
-Run `py -X utf8 training/audit_sms_provenance.py`; use `--check` to recompute and
+Run `py -X utf8 -m training.corpus.audit`; use `--check` to recompute and
 compare saved outputs without writing. Source hashes/counts are frozen in
 `data/sources/transactions/seed_audit_manifest.json`; a changed original or raw
 copy requires explicit source review. Original messages, models, frozen fixtures,

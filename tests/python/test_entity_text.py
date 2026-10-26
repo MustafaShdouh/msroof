@@ -3,8 +3,9 @@ import json
 import subprocess
 import unittest
 from src.python.entity_text import EntityText
-from src.python.verify_engine import MasroofEngine
-from training.evaluate_behavior import ROOT, canonical_result
+from src.python.engine import MasroofEngine
+from training.evaluation.behavior import ROOT, canonical_result
+from tools.node_runtime import node_executable
 
 
 class EntityTextTests(unittest.TestCase):
@@ -30,7 +31,7 @@ class EntityTextTests(unittest.TestCase):
                 self.assertEqual(result["data"]["merchantOrParty"], case["name"])
                 self.assertIn(result["data"]["merchantOrParty"], case["text"])
                 outputs.append(canonical_result(result))
-        process = subprocess.run([r"C:\Program Files\nodejs\node.exe", str(ROOT / "tests/typescript/test_entity_text.ts")], capture_output=True, text=True, encoding="utf-8")
+        process = subprocess.run([node_executable(), str(ROOT / "tests/typescript/test_entity_text.ts")], capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(process.returncode, 0, process.stderr)
         self.assertEqual(json.loads(process.stdout), outputs)
 

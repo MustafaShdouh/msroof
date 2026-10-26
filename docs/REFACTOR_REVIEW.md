@@ -1,5 +1,12 @@
 # Masroof ML engine — codebase review and proposed refactor
 
+Historical assessment: later detailed-API repairs and the2026-10-26 cleanup
+supersede its implementation-status statements and line numbers. Use
+`docs/ARCHITECTURE.md` for the current file map and `docs/BEHAVIOR_EVALUATION.md`
+for current evidence. The stale root brain, unused skills lock and unsupported
+legacy exporter are now retired; active model behavior and unique safeguards
+remain preserved. The pre-cleanup GitHub checkpoint is documented in README.
+
 **Review date:** 2026-10-25
 **Review scope:** current ML engine, training/data workflows, tests, developer tester, and project documentation.
 **Status:** review and proposal only. No runtime code was changed and tests were not run for this review.
@@ -69,9 +76,9 @@ The frozen runners compare transaction validity and several entity fields, but t
 | Change | Active category contract and evaluation | Move from eight legacy labels toward the agreed 15 only with transaction-context evidence. |
 | Change | Browser tester internals | Keep the optional UI; replace its hand-maintained inference implementation after canonical bundling and equivalence checks exist. |
 | Change | `expand_dataset.py` and adversarial generator | Separate templates/data from CLI writes; add stable provenance/template IDs; do not silently regenerate frozen fixtures. |
-| Retire later | `MSROOF_BRAIN.md` | It repeats README/state/handoff content and contains visibly stale Arabic coverage/review counts. First move any unique current facts to the canonical docs. |
+| Retired in cleanup | `MSROOF_BRAIN.md` | Canonical scope, evidence and continuation live in README, docs, STATE and HANDOFF. |
 | Retire later | `tests/legacy/run_test_suite.py` | Only after confirming and migrating any unique assertions or workflows; the handoff already calls out this condition. |
-| Retire later | `train_and_export.py` and `masroof_model.json` legacy path | Only after a replacement passes both held-out and frozen-behavior gates. Current v2 candidate fails, so preserve these now. |
+| Split decision in cleanup | Old `train_and_export.py` / active `masroof_model.json` | Retire the incompatible experimental exporter; preserve active weights and caller behavior until a replacement passes its gates. |
 | Do not delete | V1/V2 reports, snapshots, source records, or the browser tester | Historical evidence and reproducibility are more useful than small storage savings. |
 
 ## Recommended implementation order

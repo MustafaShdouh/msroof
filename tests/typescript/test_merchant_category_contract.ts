@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
-import { normalizeMerchantName, merchantNameFeatures, loadMerchantCategoryModel, predictMerchantCategory } from '../../src/typescript/MerchantCategory.ts';
+import { normalizeMerchantName, merchantNameFeatures, loadMerchantCategoryModel, predictMerchantCategory } from '../../src/typescript/research/MerchantCategory.ts';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const fixture = JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/merchant_category_contract.json'), 'utf8'));

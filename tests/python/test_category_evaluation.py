@@ -4,7 +4,7 @@ import copy
 import json
 import unittest
 
-from training import prepare_category_evaluation as evaluation
+from training.categories import split as evaluation
 
 
 def business(key, name, aliases=None, group=None):

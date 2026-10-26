@@ -7,7 +7,7 @@ from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
-spec = importlib.util.spec_from_file_location("build_business_shortlist", ROOT / "training/build_business_shortlist.py")
+spec = importlib.util.spec_from_file_location("build_business_shortlist", ROOT / "training/categories/shortlist.py")
 builder = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(builder)
 

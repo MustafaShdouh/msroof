@@ -1,0 +1,5 @@
+# Development/research dependencies in the verified Python 3.14 environment.
+# The core SMS runtime uses only the Python standard library.
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1

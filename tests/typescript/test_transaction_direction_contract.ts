@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PREPROCESSING_CONTRACT_VERSION, preprocessMessage, tokenizeFeatures } from '../../src/typescript/Preprocessing.ts';
-import { evaluateTransactionDirectionModel, TRANSACTION_DIRECTION_CONTRACT_VERSION } from '../../src/typescript/TransactionDirection.ts';
+import { evaluateTransactionDirectionModel, TRANSACTION_DIRECTION_CONTRACT_VERSION } from '../../src/typescript/research/TransactionDirection.ts';
 
 const fixtureRoot = path.join(process.cwd(), 'tests', 'fixtures');
 const contract = JSON.parse(fs.readFileSync(path.join(fixtureRoot, 'transaction_direction_contract.json'), 'utf-8'));

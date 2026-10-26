@@ -6,10 +6,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src" / "python"))
+sys.path.insert(0, str(ROOT))
 
-from preprocessing import PREPROCESSING_CONTRACT_VERSION, preprocess_message, tokenize_features
-from transaction_direction import CONTRACT_VERSION, evaluate_model
+from src.python.preprocessing import PREPROCESSING_CONTRACT_VERSION, preprocess_message, tokenize_features
+from src.python.research.transaction_direction import CONTRACT_VERSION, evaluate_model
 
 
 def main() -> int:

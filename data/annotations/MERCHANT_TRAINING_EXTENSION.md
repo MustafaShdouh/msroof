@@ -5,7 +5,7 @@ bank SMS, measured certainty, human gold labels, or a popularity ranking.
 
 `data/sources/businesses/jordan_training_extension.json` records 15 distinct
 providers/services with public source URLs, observed names, rationale and reviewer
-provenance. Run `py -X utf8 training/prepare_merchant_training_extension.py` to
+provenance. Run `py -X utf8 -m training.categories.extend_training` to
 validate and write `data/annotations/merchant_training_extension.jsonl` and
 `data/reports/merchant_training_extension_audit.json`.
 
@@ -36,7 +36,7 @@ Manual tester: tools/browser/tester.html. Rebuild with py -X utf8 tools/browser/
 Round3 is now the tester candidate. Ten additional distinct providers (7 grocery,
 2 hospital,1 fuel) are recorded separately in
 `data/sources/businesses/jordan_training_round3.json`; prior sources remain intact.
-Run `py -X utf8 training/train_merchant_category.py --run-id jordan_data_v3 --include-extension --additional-source data/sources/businesses/jordan_training_round3.json`.
+Run `py -X utf8 -m training.categories.train --run-id jordan_data_v3 --include-extension --additional-source data/sources/businesses/jordan_training_round3.json`.
 All additions are revalidated together against reserved identities before fitting;
 the extra source is hashed. No thresholds/features or final-test assignments change.
 This gives166 training businesses; baseline human validation2 correct,0 wrong,

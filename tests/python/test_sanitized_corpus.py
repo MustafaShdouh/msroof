@@ -9,8 +9,8 @@ from decimal import Decimal
 from pathlib import Path
 from unittest.mock import patch
 
-from training import prepare_sanitized_corpus as corpus
-from training import audit_sms_provenance as source_audit
+from training.corpus import prepare as corpus
+from training.corpus import audit as source_audit
 from tests.python.validate_test_corpus import validate_baseline
 
 

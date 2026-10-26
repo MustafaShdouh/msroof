@@ -108,8 +108,8 @@ private snapshots, as described below. These results do not measure real-world a
 Run from `C:/Users/mustafa/Desktop/msroof`:
 
 ```powershell
-py -X utf8 training/prepare_sanitized_corpus.py --check
-py -X utf8 training/evaluate_sanitized_corpus.py --run-id canonical_exact_names_v1 --check
+py -X utf8 -m training.corpus.prepare --check
+py -X utf8 -m training.evaluation.regression --run-id canonical_exact_names_v1 --check
 py -X utf8 -m unittest tests.python.test_sanitized_corpus
 py -X utf8 run_all_tests.py
 ```
@@ -162,17 +162,14 @@ without originals; private-evidence tests skip when unavailable. Never recover
 private evidence from old Git history just to run public-clone tests.
 
 ```powershell
-py -X utf8 training/prepare_transaction_direction_split.py
-py -X utf8 training/train_transaction_direction_v2.py --check-inputs
-py -X utf8 training/train_sequence_tagger.py --check-inputs
-py -X utf8 training/evaluate_bio_sequence_tagger.py --check-inputs
-py -X utf8 training/train_and_export.py --check-inputs
-py -X utf8 training/retire_legacy_corpus.py --check
-py -X utf8 training/check_seed_copies.py --check
-py -X utf8 training/audit_sms_provenance.py --check
+py -X utf8 -m training.transactions.split
+py -X utf8 -m training.transactions.train --check-inputs
+py -X utf8 -m training.corpus.retire --check
+py -X utf8 -m training.corpus.scan --check
+py -X utf8 -m training.corpus.audit --check
 ```
 
-All 79 current safeguards and the 226-case Python/TS gate pass; behavior/refactor
+At the sanitization milestone,79 safeguards and the226-case Python/TS gate passed; current behavior/refactor
 details are in `docs/BEHAVIOR_EVALUATION.md`. The sanitized Arabic
 diagnostic passes 111 Arabic-containing cases (49 accepted transactions with
 correct amount/currency/direction), plus three eight-case digit/separator groups

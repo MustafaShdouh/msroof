@@ -1,7 +1,7 @@
 /** Experimental tagger only; never invokes merchant category final-fold models. */
 import fs from 'node:fs';
 import { MasroofEngine } from '../../src/typescript/MasroofEngine.ts';
-import { normalizeBioToken } from '../../src/typescript/BioNormalization.ts';
+import { normalizeBioToken } from '../../src/typescript/research/BioNormalization.ts';
 const input = JSON.parse(fs.readFileSync(0, 'utf8'));
 if (!MasroofEngine.loadSequenceTaggerModel(input.model)) throw new Error('BIO model rejected');
 const predictions = input.examples.map((tokens: string[]) => {

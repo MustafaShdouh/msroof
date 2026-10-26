@@ -2,6 +2,7 @@
 import hashlib
 import json
 import re
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,6 +32,34 @@ def historical_path(relative, root=ROOT):
             raise ValueError("Historical input missing or changed: " + relative)
         return path
     raise FileNotFoundError("Private historical snapshot required for " + relative + "; routine development uses sanitized_v1")
+
+
+def recorded_source(relative, expected, root=ROOT):
+    """Read exact historical source bytes after a producer is retired or moved."""
+    target = (root / relative).resolve()
+    if not target.is_relative_to(root.resolve()) or not re.fullmatch(r"[0-9a-f]{64}", expected):
+        raise ValueError("Invalid recorded source path or checksum")
+    blob = root / "data/private/report_inputs/blobs" / expected
+    for candidate in (target, blob):
+        if candidate.is_file():
+            raw = candidate.read_bytes()
+            if hashlib.sha256(raw).hexdigest() == expected:
+                return raw
+            if candidate == blob:
+                raise ValueError("Recorded source blob was modified")
+    try:
+        archived = historical_path(relative, root).read_bytes()
+        if hashlib.sha256(archived).hexdigest() == expected:
+            return archived
+    except FileNotFoundError:
+        pass
+    # Public source producers are recoverable from the pushed cleanup checkpoint.
+    # No network access, working-tree restoration or unchecked fallback bytes.
+    result = subprocess.run(["git", "show", "checkpoint/pre-cleanup-2026-10-26:" + relative],
+                            cwd=root, capture_output=True)
+    if result.returncode == 0 and hashlib.sha256(result.stdout).hexdigest() == expected:
+        return result.stdout
+    raise FileNotFoundError("Checksum-matching source snapshot required for " + relative)
 
 
 def write_immutable(path, content):

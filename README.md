@@ -1,112 +1,77 @@
-# Masroof ML Engine
+# Masroof
 
-Masroof analyzes bank and wallet SMS messages. It decides whether a message is a real transaction, extracts transaction details, determines incoming or outgoing direction, and assigns an expense category when possible.
+An offline engine for Jordanian bank and wallet SMS, in Arabic and English. It identifies completed transactions, extracts amounts and direction, preserves exact party names, and categorizes spending when the message supplies enough context. Missing or ambiguous currency defaults to JOD with a visible marker.
 
-The project focuses on Jordanian bank/wallet transactions and local merchants, in Arabic and English. JOD is the default; foreign-currency purchases made by Jordanian users remain supported. The mobile app is maintained elsewhere.
+Person-to-person transfers count. Own-account transfers are excluded. Unclear completion, direction or ownership requires review. The mobile app is maintained separately.
 
-Arabic-Indic and Persian digits and Arabic decimal/group separators are canonicalized under preprocessing contract 1.1.0 in training, both runtimes, and the optional browser tester. Example: `١٬٢٣٤٫٥٦٧` becomes `1,234.567` and parses as 1234.567 JOD.
+## Start here
 
-The target transaction, transfer, uncertainty, category, and evaluation rules are in
-[`docs/TRANSACTION_BEHAVIOR.md`](docs/TRANSACTION_BEHAVIOR.md), version 1.0.0.
-This target contract is validated separately from the legacy runtime. Its authored
-examples are policy checks, not training data or independent accuracy evidence.
+- [Architecture and file map](docs/ARCHITECTURE.md): where code belongs, active versus research components, and recovery.
+- [Transaction contract](docs/TRANSACTION_BEHAVIOR.md): current rules and the proposed optional ownership API.
+- [Measured behavior](docs/BEHAVIOR_EVALUATION.md): development results, known gaps and rejected candidates.
+- [Entity research](docs/BIO_EVALUATION.md): corrected BIO labels and isolated experiments.
 
-Current behavior measurements and candidate decisions are in
-[`docs/BEHAVIOR_EVALUATION.md`](docs/BEHAVIOR_EVALUATION.md). The tester bundles the
-canonical TypeScript engine, and extracted names preserve exact source text.
-Two newly trained research candidates regressed and were kept out of the runtime.
+## Layout
 
-## Directory layout
-
-| Directory or file | Purpose |
-| --- | --- |
-| `src/typescript/` | TypeScript runtime engine and shared contracts. |
-| `src/python/` | Python mirror for parity and regression evaluation. |
-| `training/` | Offline dataset, split, legacy-model, and BIO tooling. |
-| `data/raw/` | Source SMS samples. |
-| `data/training/` | Generated training data and deterministic split artifacts. |
-| `data/models/` | Runtime model artifacts. |
-| `data/annotations/` | Human-reviewed category-labeling contract and future category corpus. |
-| `tests/fixtures/` | Frozen regression corpus and versioned contracts. |
-| `tests/python/`, `tests/typescript/` | Regression and contract runners. |
-| `tools/` | Corpus generators, optional browser tester, and retired developer utilities. |
-| `data/reports/behavior/` | Versioned behavior/parity and candidate comparison evidence. |
-| `STATE.md` | Concise current status. |
-| `.agents/HANDOFF.md` | Detailed continuation record for a new coding model. |
-
-## Verify the baseline
-
-Run this from the repository root:
-
-```powershell
-py run_all_tests.py
+```text
+src/
+  python/engine.py          Python reference engine
+  typescript/MasroofEngine.ts  TypeScript engine
+  */research/              Isolated candidate scorers
+training/
+  corpus/                  Privacy, provenance and corpus preparation
+  transactions/            Transaction/direction candidates
+  entities/                BIO labels, learner and evaluation
+  categories/              Merchant collection, review and research
+  evaluation/              Runtime behavior and compatibility reports
+  corpus_io.py             Frozen inputs, immutable outputs and snapshots
+tools/
+  browser/                 Offline tester and review pages
+  evaluation/              TypeScript/browser diagnostic bridges
+  contracts/               Target-contract validation
+tests/                     Discovered Python/TypeScript safeguards and frozen fixtures
+data/                      Versioned inputs, annotations, models and evidence
+config/                    Shared contracts and development dependencies
+docs/                      Specifications, architecture and evaluation notes
 ```
 
-Validate the target behavior contract alone with `py tools/contracts/validate_transaction_behavior.py`.
+## Set up and verify
 
-The command validates the frozen sanitized 226-case corpus, both cross-language contracts, and the Python and TypeScript regression engines.
-
-## Developer commands
+The checked development environment uses Python 3.14 and Node.js 24. The Python runtime engine itself uses the standard library; training and the full research checks also need:
 
 ```powershell
-# Architecture checks
-py tests/python/test_new_architectural_features.py
-& 'C:\Program Files\nodejs\node.exe' tests/typescript/test_new_architectural_features.ts
-
-# Rebuild sanitized heuristic BIO drafts, then validate without fitting
-py training/build_bio_training_set.py
-py training/train_sequence_tagger.py --check-inputs
-py training/evaluate_bio_sequence_tagger.py --check-inputs
-
-# Validate the frozen global transaction/direction split
-py training/prepare_transaction_direction_split.py
-
-# Validate candidate inputs; future fitting requires a fresh --run-id
-py training/train_transaction_direction_v2.py --check-inputs
-
-# Audit and train standalone merchant-name category research candidates
-py training/audit_category_corpus.py
-py training/train_merchant_category.py
-
-# Rebuild the optional browser playground
-py tools/browser/build_tester_ui.py
-
-# Prepare a review batch from the existing reviewed candidate registry
-py training/merchant_review.py batch --size 12
-
-# Review ambiguous category boundaries using clearly marked illustrative examples
-py training/merchant_review.py batch --edge-cases --size 18
-
-# Build the sourced 200-business corpus and review a small batch
-py training/build_business_shortlist.py
-py training/merchant_review.py batch --businesses --size 20
+py -m pip install -r config/requirements-dev.txt
+py -X utf8 run_all_tests.py
 ```
 
-Open `tools/browser/merchant_review.html` to review the batch. It downloads decisions for import with `py training/merchant_review.py import <downloaded-file>`. See `data/annotations/MERCHANT_REVIEW.md` for the workflow.
+The runner discovers all Python test modules and TypeScript suites, then checks the frozen 226-case legacy corpus. It does not train or promote a production candidate. Development results are not independent real-world accuracy.
 
-The legacy transaction/direction trainer remains available at `training/train_and_export.py`. The v2 candidate is written to `data/models/masroof_transaction_direction_v2.json` with its report in `data/reports/`. Do not replace `data/models/masroof_model.json` until a candidate has passed the documented held-out and frozen-baseline gates in `.agents/HANDOFF.md`.
+```powershell
+# Validate the transaction contract
+py -X utf8 tools/contracts/validate_transaction_behavior.py
 
-Merchant-category research uses only labeled training businesses and preserves the
-reserved validation/test split. Three separate flat exports compare canonical names,
-sourced aliases and bounded synthetic perturbations. Results are in
-`data/reports/merchant_category_research.md` and its JSON companion. Human and assistant
-label metrics are separate, scores are uncalibrated, and final test inference is
-disabled during development. These candidates do not change the active SMS engine.
+# Reproduce the current source-bound layout/behavior measurement
+py -X utf8 -m training.evaluation.detailed --run-id cleanup_layout_v1 --check
 
-The SMS source audit is in `data/reports/REAL_SMS_PROVENANCE_AUDIT.md`.
-Run `py training/audit_sms_provenance.py --check` after generating its private
-local outputs; originals and private historical snapshots are required and remain
-ignored. The archived historical split has cross-provider duplicates; routine
-development uses the new globally grouped sanitized split.
-Source rules: `data/annotations/REAL_SMS_INTAKE.md`.
+# Check transaction candidate inputs without fitting
+py -X utf8 -m training.transactions.train --check-inputs
 
-The sanitized corpus and new grouped split are described in
-[`docs/SANITIZED_CORPUS.md`](docs/SANITIZED_CORPUS.md). After the shared service-notice
-repair, Python and TypeScript pass all 226 sanitized compatibility cases. These
-fixtures are now the active gate; the earlier failing diagnostic is preserved.
-Model weights are unchanged. Data tools now use sanitized inputs or checked private
-historical snapshots; 12 legacy working files are retired. Details and recovery:
-[`docs/SANITIZED_CORPUS.md`](docs/SANITIZED_CORPUS.md). Old Git objects and legacy
-learned vocabulary remain; no independent accuracy or complete privacy claim follows.
+# Rebuild the standalone offline tester
+py -X utf8 tools/browser/build_tester_ui.py
+```
 
-Workspace: `C:/Users/mustafa/Desktop/msroof` is authoritative. Original SMS inputs under `DATA_YOU_WANT/` and `data/raw/*.txt` stay local; `.local-backups/` contains verified pre-merge archives and is not published.
+Open [the tester](tools/browser/tester.html). It uses the canonical TypeScript bundle. Its detailed assessment comparison supports review/uncertainty; the default legacy caller path is retained while compatibility is evaluated.
+
+For merchant review, use `py -m training.categories.review --help` and [the labeling workflow](data/annotations/MERCHANT_REVIEW.md). Merchant-name research is separate from transaction-purpose classification; its reserved final identities must remain untouched.
+
+## Runtime versus research
+
+Python callers import `MasroofEngine` from `src.python.engine`. TypeScript callers use `src/typescript/MasroofEngine.ts`. The active weights remain `data/models/masroof_model.json`. Research models, reports and reservations retain their original paths and bytes so prior results remain auditable; they are not automatically loaded as replacements.
+
+Historical reports bind their original code hashes. Run historical reproduction from those recorded sources, not by overwriting frozen artifacts to match relocated code. The new cleanup report records the current paths. Training, final evaluation and model promotion remain separate decisions.
+
+## Private files and recovery
+
+`STATE.md`, `.agents/`, `DATA_YOU_WANT/`, `data/raw/*.txt`, `data/private/` and `.local-backups/` stay local and ignored. Real seeds are development-exposed and cannot serve as an independent final test. See [source intake](data/annotations/REAL_SMS_INTAKE.md) and [corpus provenance](docs/SANITIZED_CORPUS.md).
+
+Before this cleanup, all publishable work was pushed at `fbb96e19293cb61a140ecfe6a65551613d93d9b9`, tagged **`checkpoint/pre-cleanup-2026-10-26`**. The checkpoint preserves the old source layout and removed public files. Private source archives need their own local backup and were preserved.

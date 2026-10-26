@@ -8,8 +8,8 @@ import unittest
 from unittest.mock import Mock
 from unittest.mock import patch
 
-from training import prepare_merchant_training_extension as extension
-from training import train_merchant_category as trainer
+from training.categories import extend_training as extension
+from training.categories import train as trainer
 
 
 class MerchantTrainingExtensionTests(unittest.TestCase):

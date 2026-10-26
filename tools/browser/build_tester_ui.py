@@ -1,7 +1,12 @@
 import json
 import subprocess
+import sys
 from pathlib import Path
-from merchant_lab import build_merchant_lab
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+from tools.browser.merchant_lab import build_merchant_lab
+from tools.node_runtime import node_executable
 
 def build():
     root = Path(__file__).resolve().parents[2]
@@ -221,7 +226,7 @@ def build():
     final_html = final_html.replace("__MODEL_DATA__", model_json_str)
     presets = json.loads((root / "tools/browser/presets.json").read_text(encoding="utf-8"))["presets"]
     final_html = final_html.replace("__TESTER_PRESETS__", json.dumps(presets, ensure_ascii=False))
-    bundle = subprocess.run([r"C:\Program Files\nodejs\node.exe", str(root / "tools/browser/bundle_engine.mjs")],
+    bundle = subprocess.run([node_executable(), str(root / "tools/browser/bundle_engine.mjs")],
                             capture_output=True, text=True, encoding="utf-8", check=True)
     final_html = final_html.replace("__ENGINE_BUNDLE__", bundle.stdout)
     markup, script = build_merchant_lab(root)

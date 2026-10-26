@@ -3,8 +3,8 @@
 import copy
 import unittest
 
-from training import audit_category_corpus as auditor
-from training.prepare_category_evaluation import prepare
+from training.categories import audit as auditor
+from training.categories.split import prepare
 
 
 class CategoryAuditTests(unittest.TestCase):

@@ -147,8 +147,8 @@ not replace the name text. Do not generate thousands of repeated merchants or
 introduce augmentation into this first controlled comparison.
 
 Separate versioned multi-feature flat-array export and isolated Python/TypeScript
-research scorers are in `src/python/bio_context.py` and
-`src/typescript/BioContext.ts`; feature/score schema is
+research scorers are in `src/python/research/bio_context.py` and
+`src/typescript/research/BioContext.ts`; feature/score schema is
 `config/contracts/bio_context_model.json`. They pin normalization, feature ordering,
 transition legality, tie handling, dimensions and float32 operations with shared
 vectors. Keep the deployed version-1 loader/API and browser tester unchanged.
@@ -167,9 +167,9 @@ test. More data may still be needed if this controlled experiment fails.
 From the authoritative `C:/Users/mustafa/Desktop/msroof` repository:
 
 ```powershell
-py -X utf8 training/prepare_bio_labels.py --check
-py -X utf8 training/evaluate_bio_labels.py --run-id labels_v2_word_v1 --check
-py -X utf8 training/train_bio_context.py --run-id labels_v2_context_v1 --check
+py -X utf8 -m training.entities.prepare_labels --check
+py -X utf8 -m training.entities.evaluate --run-id labels_v2_word_v1 --check
+py -X utf8 -m training.entities.train_context --run-id labels_v2_context_v1 --check
 py -X utf8 -m unittest tests.python.test_bio_labels -v
 py -X utf8 -m unittest tests.python.test_bio_context -v
 py -X utf8 run_all_tests.py

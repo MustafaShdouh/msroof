@@ -6,11 +6,12 @@ import subprocess
 import unittest
 from unittest.mock import patch
 
-from src.python.verify_engine import MasroofEngine
+from src.python.engine import MasroofEngine
 from tools.contracts.validate_transaction_behavior import validate_result
+from tools.node_runtime import node_executable
 
 ROOT = Path(__file__).resolve().parents[2]
-NODE = r"C:\Program Files\nodejs\node.exe"
+NODE = node_executable()
 
 
 def load(name):

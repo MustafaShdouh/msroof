@@ -6,9 +6,10 @@ import subprocess
 import unittest
 
 from training.corpus_io import BIO, ROOT, sha256
-from training import prepare_bio_labels as preparation
-from training.evaluate_bio_labels import decode_spans, metrics, slots, same_slot
-from src.python.bio_sequence import FlatBioModel, TAGS, normalize_token
+from training.entities import prepare_labels as preparation
+from training.entities.evaluate import decode_spans, metrics, slots, same_slot
+from src.python.research.bio_sequence import FlatBioModel, TAGS, normalize_token
+from tools.node_runtime import node_executable
 
 
 def blank_model():
@@ -107,13 +108,13 @@ class BioLabelsTests(unittest.TestCase):
         examples = [words, ["unseen", "آخر"], []]
         expected = [FlatBioModel(model).predict(tokens) for tokens in examples]
         self.assertEqual(expected[0], [0] * len(words))
-        process = subprocess.run([r"C:\Program Files\nodejs\node.exe", str(ROOT / "tools/evaluation/probe_bio_model.ts")],
+        process = subprocess.run([node_executable(), str(ROOT / "tools/evaluation/probe_bio_model.ts")],
                                  input=json.dumps({"model": model, "examples": examples}), capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(process.returncode, 0, process.stderr)
         self.assertEqual(json.loads(process.stdout), expected)
         # Give distinct positive weights to test feature normalization too.
         model["emissionWeights"] = [float(tag == index % len(TAGS)) for index in range(len(words)) for tag in range(len(TAGS))]
-        process = subprocess.run([r"C:\Program Files\nodejs\node.exe", str(ROOT / "tools/evaluation/probe_bio_model.ts")],
+        process = subprocess.run([node_executable(), str(ROOT / "tools/evaluation/probe_bio_model.ts")],
                                  input=json.dumps({"model": model, "examples": [words]}), capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(process.returncode, 0, process.stderr)
         self.assertEqual(json.loads(process.stdout), [FlatBioModel(model).predict(words)])

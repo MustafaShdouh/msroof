@@ -7,9 +7,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src" / "python"))
+sys.path.insert(0, str(ROOT))
 
-from preprocessing import PREPROCESSING_CONTRACT_VERSION, preprocess_message, tokenize_features
+from src.python.preprocessing import PREPROCESSING_CONTRACT_VERSION, preprocess_message, tokenize_features
 
 
 def main() -> int:

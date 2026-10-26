@@ -5,7 +5,8 @@ import unittest
 from pathlib import Path
 
 from src.python.service_notice import is_service_notice, SERVICE_NOTICE_REASON
-from src.python.verify_engine import MasroofEngine
+from src.python.engine import MasroofEngine
+from tools.node_runtime import node_executable
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -29,7 +30,7 @@ class ServiceNoticeTests(unittest.TestCase):
                     for alias, canonical in (("merchant_or_party", "merchantOrParty"), ("account_mask", "accountMask"), ("category_confidence", "categoryConfidence")):
                         self.assertEqual(result["data"].pop(alias), result["data"][canonical])
                 outputs.append({"id": case["id"], "notice": notice, "result": result})
-        process = subprocess.run([r"C:\Program Files\nodejs\node.exe", str(ROOT / "tests/typescript/test_service_notice.ts")],
+        process = subprocess.run([node_executable(), str(ROOT / "tests/typescript/test_service_notice.ts")],
                                  capture_output=True, text=True, encoding="utf-8", cwd=ROOT)
         self.assertEqual(process.returncode, 0, process.stderr)
         self.assertEqual(json.loads(process.stdout), outputs)

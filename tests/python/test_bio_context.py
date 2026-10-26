@@ -4,9 +4,10 @@ import subprocess
 import unittest
 
 from training.corpus_io import ROOT
-from src.python.bio_sequence import TAGS
-from src.python.bio_context import ContextBioModel, FEATURE_CONTRACT, sequence_features
-from training.train_bio_context import fit
+from src.python.research.bio_sequence import TAGS
+from src.python.research.bio_context import ContextBioModel, FEATURE_CONTRACT, sequence_features
+from training.entities.train_context import fit
+from tools.node_runtime import node_executable
 
 
 def model_with(weights):
@@ -18,7 +19,7 @@ def model_with(weights):
 
 
 def probe(examples, model=None):
-    return subprocess.run([r"C:\Program Files\nodejs\node.exe", str(ROOT / "tools/evaluation/probe_bio_context.ts")],
+    return subprocess.run([node_executable(), str(ROOT / "tools/evaluation/probe_bio_context.ts")],
                           input=json.dumps({"examples": examples, "model": model}), capture_output=True, text=True, encoding="utf-8")
 
 

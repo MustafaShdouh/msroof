@@ -2,7 +2,7 @@
 
 The prospective business reservation is `data/training/splits/category_brand_split.json`.
 The current evidence and gaps are in `data/reports/category_evaluation_readiness.json`.
-Rebuild both with `py -X utf8 training/prepare_category_evaluation.py`.
+Rebuild both with `py -X utf8 -m training.categories.split`.
 
 This is a preparation contract, not an accuracy result or a newly collected SMS dataset.
 The 200 sourced businesses produce 199 leakage groups: ZARA and ZARA Home share a
@@ -64,7 +64,7 @@ real-world data and small ambiguity reviews, not hundreds of manually typed mess
 
 ## Coverage audit and augmentation
 
-Run `py -X utf8 training/audit_category_corpus.py` for the current coverage table,
+Run `py -X utf8 -m training.categories.audit` for the current coverage table,
 known-family checks, exact alias/preprocessing collisions and lexical held-out-name
 mentions in historical SMS files. Outputs are `data/reports/category_corpus_audit.json`
 and `data/reports/CATEGORY_CORPUS_AUDIT.md`. This audit never moves reserved assignments.
@@ -88,7 +88,7 @@ change financial meaning. Compare augmentation versus the unchanged training bas
 on unchanged validation businesses before touching the final test. Generic text
 augmentation literature is a reason to test, not evidence of benefit on this corpus.
 
-The bounded experiment is now implemented by `training/train_merchant_category.py`.
+The bounded experiment is now implemented by `training/categories/train.py`.
 It fits three separate flat exports: canonical names, observed aliases, then aliases
 plus one synthetic spelling/spacing form per eligible business. All use the same seed,
 optimization settings and fixed abstention thresholds. Each business has total weight

@@ -3,7 +3,7 @@ import copy
 import json
 import unittest
 
-from training import evaluate_behavior as evaluation
+from training.evaluation import behavior as evaluation
 
 
 class BehaviorEvaluationTests(unittest.TestCase):

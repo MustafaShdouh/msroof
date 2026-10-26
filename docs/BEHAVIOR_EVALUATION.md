@@ -4,7 +4,7 @@ This is development evidence. The 31 authored contract probes, 226 exposed
 regression cases, synthetic validation split and exact human category-policy
 snapshots have different roles. None supplies independent real-world accuracy.
 Legacy measurements: `data/reports/behavior/canonical_exact_names_v1.json`/`.md`.
-Current detailed measurement: `data/reports/behavior/arabic_direction_v1.json`.
+Current detailed measurement: `data/reports/behavior/cleanup_layout_v1.json`.
 
 ## Measured gaps
 
@@ -96,10 +96,10 @@ evidence. No reserved merchant final-test inference occurred.
 ```powershell
 py -X utf8 run_all_tests.py
 py -X utf8 -m unittest tests.python.test_detailed_assessment tests.python.test_runtime_parity
-py -X utf8 training/evaluate_detailed.py --run-id arabic_direction_v1 --check
+py -X utf8 -m training.evaluation.detailed --run-id cleanup_layout_v1 --check
 ```
 
-Current checks: 102 unit safeguards, the 226-case Python/TS gate, 299 legacy full-output parity
+Current checks:146 discovered Python tests, nine TypeScript suites, the226-case gate,299 legacy full-output parity
 probes plus three prototype-word boundary inputs,22 authored authorization-request
 controls across Python/TS/browser, and678 numeric variants per runtime.
 Report inputs are preserved privately under
@@ -453,3 +453,30 @@ the owner's Mixed or unknown answer confirmed. A separate input/contract proposa
 should describe what trusted owner facts are needed and how missing/ambiguous
 context preserves review, before implementation or a default caller switch.
 The mobile app and trained models remain outside that design task.
+
+### Repository cleanup verification,2026-10-26
+
+Publishable work was pushed before cleanup at
+`fbb96e19293cb61a140ecfe6a65551613d93d9b9`, recovery tag
+`checkpoint/pre-cleanup-2026-10-26`. Current source boundaries and retired entry
+points are described in `docs/ARCHITECTURE.md`. Runtime versus research code and
+offline workflow domains are now explicit; stale root notes, obsolete exporters
+and superseded BIO command paths are removed. Reusable learner, tokenizer and
+historical grouping logic remain in the supported entity workflow.
+
+`cleanup_layout_v1.json` records current source paths/hashes. Its measured fields
+match arabic_direction_v1 exactly after excluding the intentionally changed input
+hash map. There is no changed model, data, split, final-test exposure or default
+caller policy. The original106 tracked data/model/fixture checksums are unchanged.
+Source-bound historical reports retain their original paths and are reproduced
+with their recorded sources or the recovery checkpoint.
+
+Private `data/private/cleanup_v1/verification.json` records complete comparison
+with the saved pre-cleanup Python engine/assessment:419 detailed and419 legacy
+results match Python/TypeScript/browser exactly (389 development controls,26
+original blocks,4 web examples). This is compatibility evidence, not independent
+accuracy.146 Python safeguards now participate in automatic discovery; nine
+TypeScript suites and both226-case compatibility runners pass. The expanded
+coverage includes existing tests omitted by the former manual list. Three new
+checks protect the shared Node resolver; recorded-source tampering/path guards
+are also exercised. No candidate fitting or promotion occurred.

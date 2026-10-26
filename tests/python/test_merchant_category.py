@@ -8,9 +8,10 @@ import subprocess
 import unittest
 from unittest.mock import patch
 
-from src.python import merchant_category as scorer
-from training import train_merchant_category as trainer
-from training.prepare_category_evaluation import prepare
+from src.python.research import merchant_category as scorer
+from training.categories import train as trainer
+from training.categories.split import prepare
+from tools.node_runtime import node_executable
 
 ROOT = Path(__file__).resolve().parents[2]
 FIXTURE = json.loads((ROOT / "tests/fixtures/merchant_category_contract.json").read_text(encoding="utf-8"))
@@ -120,7 +121,7 @@ class MerchantCategoryTests(unittest.TestCase):
         texts += [name for row in json.loads((ROOT / "data/sources/businesses/jordan_training_round3.json").read_text(encoding="utf-8"))["businesses"]
                   for name in [row["name"]] + row["aliases"]]
         paths = [str(path.relative_to(ROOT)) for path in sorted((ROOT / "data/models").glob("merchant_category_research_*.json"))]
-        process = subprocess.run([r"C:\Program Files\nodejs\node.exe", str(ROOT / "tests/typescript/test_merchant_category_contract.ts"), '--parity-input'],
+        process = subprocess.run([node_executable(), str(ROOT / "tests/typescript/test_merchant_category_contract.ts"), '--parity-input'],
                                  input=json.dumps({"models": paths, "texts": texts}), capture_output=True, text=True, encoding="utf-8", check=True)
         outputs = json.loads(process.stdout)
         for path, predictions in zip(paths, outputs):

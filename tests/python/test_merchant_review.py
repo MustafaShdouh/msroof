@@ -9,7 +9,7 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
-spec = importlib.util.spec_from_file_location("merchant_review", ROOT / "training" / "merchant_review.py")
+spec = importlib.util.spec_from_file_location("merchant_review", ROOT / "training/categories/review.py")
 review = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(review)
 

@@ -6,10 +6,11 @@ import subprocess
 import unittest
 from unittest.mock import patch
 
-from training.compare_transaction_candidate import CandidateEngine
+from training.transactions.compare import CandidateEngine
 from training.corpus_io import ROOT, sha256
-from src.python.transaction_direction import evaluate_model, score_head
-from src.python.verify_engine import MasroofEngine
+from src.python.research.transaction_direction import evaluate_model, score_head
+from src.python.engine import MasroofEngine
+from tools.node_runtime import node_executable
 
 
 class CandidateComparisonTests(unittest.TestCase):
@@ -38,7 +39,7 @@ class CandidateComparisonTests(unittest.TestCase):
         features = [["purchase", "paid", "paid"], ["تم", "خصم", "تم خصم"], ["unknown", "constructor", "__proto__"]]
         for filename in ("transaction_direction_jordan_sanitized_v1_candidate.json", "transaction_direction_jordan_sanitized_liblinear_v1_candidate.json"):
             model = json.loads((ROOT / "data/models" / filename).read_text(encoding="utf-8"))
-            process = subprocess.run([r"C:\Program Files\nodejs\node.exe", str(ROOT / "tools/evaluation/probe_candidate_heads.ts")],
+            process = subprocess.run([node_executable(), str(ROOT / "tools/evaluation/probe_candidate_heads.ts")],
                                      input=json.dumps({"model": model, "features": features}), capture_output=True, text=True, encoding="utf-8")
             self.assertEqual(process.returncode, 0, process.stderr)
             actual = json.loads(process.stdout)
@@ -55,7 +56,7 @@ class CandidateComparisonTests(unittest.TestCase):
     def test_liblinear_export_matches_estimator_logits_without_hidden_scaling(self):
         from sklearn.linear_model import LogisticRegression
         from sklearn.feature_extraction import DictVectorizer
-        from training import train_transaction_direction_v2 as trainer
+        from training.transactions import train as trainer
         classifiers, vectorizers = [], []
         def classifier_factory(*args, **kwargs):
             classifier = LogisticRegression(*args, **kwargs)

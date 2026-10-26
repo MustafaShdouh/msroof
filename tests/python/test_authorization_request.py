@@ -6,11 +6,12 @@ import unittest
 from unittest.mock import patch
 
 from src.python.authorization_request import is_authorization_request, AUTHORIZATION_REQUEST_REASON
-from src.python.verify_engine import MasroofEngine
-from training.evaluate_behavior import canonical_result
+from src.python.engine import MasroofEngine
+from training.evaluation.behavior import canonical_result
+from tools.node_runtime import node_executable
 
 ROOT = Path(__file__).resolve().parents[2]
-NODE = r"C:\Program Files\nodejs\node.exe"
+NODE = node_executable()
 
 
 class AuthorizationRequestTests(unittest.TestCase):

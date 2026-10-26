@@ -815,14 +815,7 @@ class MasroofEngine {
 
           static          RE_DECLINED = /\b(?:declined|failed|rejected|unsuccessful|insufficient\s+funds)\b|\bcard\b.*?\b(?:locked|blocked)\b|مرفوض(?:ة)?|تم\s+رفض|فشل(?:ت)?\s+(?:عملية|الحركة|الدفع)|تعذر\s+(?:إرسال|تنفيذ|إتمام)|لم\s+تتم\s+عملية|نأسف\s+لعدم\s+إتمام|غير\s+مكتمل(?:ة)?|تم\s+إلغاء\s+عملية|عدم\s+كفاية\s+الرصيد|عدم\s+توفر\s+رصيد|لتجاوز\s+الحد\s+المسموح/i;
 
-          static          RE_PREPROCESS_NL = /\\n/g;
-          static          RE_PREPROCESS_CR = /\\r/g;
-          static          RE_PREPROCESS_ROUTING = /^[A-Z]{2}(\r?\n|\s+)/;
-          static          RE_PREPROCESS_DIACRITICS = /[\u064B-\u065F\u0670]/g;
-          static          RE_PREPROCESS_SPACES = /\s+/g;
-          static          RE_PREPROCESS_NUM_LONG = /\b\d{6,}\b/g;
 
-          static          RE_TOKENIZE = /[\w\u0621-\u064A\u0660-\u0669\*\.\-]+/g;
 
           static          RE_INTERNAL_1 = /between (?:(?:your|my)(?: own)?|own) accounts|transfer between accounts|internal transfer|own account transfer/i;
           static          RE_INTERNAL_2 = /تحويل بين حسابات(?:ك|كم|ي)|بين حسابات(?:ك|كم|ي)|تحويل داخلي|بين الحسابات/i;
@@ -839,7 +832,6 @@ class MasroofEngine {
           static          RE_INCOME_DIR = /\b(?:refund|reversal|inward|deposit|cashback)\b|استرجاع|واردة|استلام|إيداع|حوالة\s+واردة/i;
 
           static          RE_NORM_DIACRITICS = /[\u064B-\u065F\u0670]/g;
-          static          RE_NORM_WHITESPACE = /[\r\n\t]+/g;
           static          RE_NORM_SPACES = /\s+/g;
 
           static          AMT_PATTERN = '([0-9]{1,3}(?:,[0-9]{3})+(?:\\.[0-9]{1,3})?|[0-9]{1,2}(?:,[0-9]{2})*,[0-9]{3}(?:\\.[0-9]{1,3})?|[0-9]{1,3}(?:[\'’][0-9]{3})+(?:[\\.,][0-9]{1,3})?|[0-9]+(?:[\\.,][0-9]{1,3})?)';
@@ -1480,7 +1472,7 @@ class MasroofEngine {
 
 return {MasroofEngine};
 })();
-return { ...__modules[0], preprocessing: __modules[1], serviceNotice: __modules[2], sourceSha256: {"src/typescript/MasroofEngine.ts":"a30656f8d073eaf3b9a6235807a7f5c28621245f5547cffdb488b53b85228264","src/typescript/Preprocessing.ts":"da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54","src/typescript/ServiceNotice.ts":"a6e9976cd5f62e18d926260a2681cac6c0834ab317eeeb33df609d7bf8c907c5","config/contracts/service_notice.json":"1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3","src/typescript/AuthorizationRequest.ts":"0c45b2b8c327e53576495a3a7b2fa0ec3b7757197eb6fd0cab9571a212b281c2","config/contracts/authorization_request.json":"d927714265710faf8f80a1053a1b17bfbe9a0eff56208b820295dd616f7b555b","src/typescript/LegacyTransactionModel.ts":"5f060dd375f4a3f568971282339c0c389fdaeb54951ffa80f83642193a7d0f59","src/typescript/EntityText.ts":"99fdd47bce69d1df5096ab9533158fbf525cd471b36caaa9ce7026b4c355dc7e","src/typescript/DetailedAssessment.ts":"e5cc6414d322df09295ed110a74241640c0f170096acee85ee72aa11bb5bd534","config/contracts/transaction_evidence.json":"1a38a660bd63d58fa9526e11bbcb8abd3d45ea8210b62b380e2259f20402d405"} };
+return { ...__modules[0], preprocessing: __modules[1], serviceNotice: __modules[2], sourceSha256: {"src/typescript/MasroofEngine.ts":"2b85a91593916327e825519fc19937f01643cb5dbd5f1ae59a9eb718c0a40533","src/typescript/Preprocessing.ts":"da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54","src/typescript/ServiceNotice.ts":"a6e9976cd5f62e18d926260a2681cac6c0834ab317eeeb33df609d7bf8c907c5","config/contracts/service_notice.json":"1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3","src/typescript/AuthorizationRequest.ts":"0c45b2b8c327e53576495a3a7b2fa0ec3b7757197eb6fd0cab9571a212b281c2","config/contracts/authorization_request.json":"d927714265710faf8f80a1053a1b17bfbe9a0eff56208b820295dd616f7b555b","src/typescript/LegacyTransactionModel.ts":"5f060dd375f4a3f568971282339c0c389fdaeb54951ffa80f83642193a7d0f59","src/typescript/EntityText.ts":"99fdd47bce69d1df5096ab9533158fbf525cd471b36caaa9ce7026b4c355dc7e","src/typescript/DetailedAssessment.ts":"e5cc6414d322df09295ed110a74241640c0f170096acee85ee72aa11bb5bd534","config/contracts/transaction_evidence.json":"1a38a660bd63d58fa9526e11bbcb8abd3d45ea8210b62b380e2259f20402d405"} };
 })();
 
     MasroofRuntime.MasroofEngine.init(MODEL);

@@ -14,7 +14,7 @@ if sys.stdout.encoding.lower() != 'utf-8':
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
-from src.python.verify_engine import MasroofEngine
+from src.python.engine import MasroofEngine
 
 def normalize_str(s):
     if s is None:

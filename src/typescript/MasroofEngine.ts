@@ -246,14 +246,7 @@ export class MasroofEngine {
 
   private static readonly RE_DECLINED = /\b(?:declined|failed|rejected|unsuccessful|insufficient\s+funds)\b|\bcard\b.*?\b(?:locked|blocked)\b|مرفوض(?:ة)?|تم\s+رفض|فشل(?:ت)?\s+(?:عملية|الحركة|الدفع)|تعذر\s+(?:إرسال|تنفيذ|إتمام)|لم\s+تتم\s+عملية|نأسف\s+لعدم\s+إتمام|غير\s+مكتمل(?:ة)?|تم\s+إلغاء\s+عملية|عدم\s+كفاية\s+الرصيد|عدم\s+توفر\s+رصيد|لتجاوز\s+الحد\s+المسموح/i;
 
-  private static readonly RE_PREPROCESS_NL = /\\n/g;
-  private static readonly RE_PREPROCESS_CR = /\\r/g;
-  private static readonly RE_PREPROCESS_ROUTING = /^[A-Z]{2}(\r?\n|\s+)/;
-  private static readonly RE_PREPROCESS_DIACRITICS = /[\u064B-\u065F\u0670]/g;
-  private static readonly RE_PREPROCESS_SPACES = /\s+/g;
-  private static readonly RE_PREPROCESS_NUM_LONG = /\b\d{6,}\b/g;
 
-  private static readonly RE_TOKENIZE = /[\w\u0621-\u064A\u0660-\u0669\*\.\-]+/g;
 
   private static readonly RE_INTERNAL_1 = /between (?:(?:your|my)(?: own)?|own) accounts|transfer between accounts|internal transfer|own account transfer/i;
   private static readonly RE_INTERNAL_2 = /تحويل بين حسابات(?:ك|كم|ي)|بين حسابات(?:ك|كم|ي)|تحويل داخلي|بين الحسابات/i;
@@ -270,7 +263,6 @@ export class MasroofEngine {
   private static readonly RE_INCOME_DIR = /\b(?:refund|reversal|inward|deposit|cashback)\b|استرجاع|واردة|استلام|إيداع|حوالة\s+واردة/i;
 
   private static readonly RE_NORM_DIACRITICS = /[\u064B-\u065F\u0670]/g;
-  private static readonly RE_NORM_WHITESPACE = /[\r\n\t]+/g;
   private static readonly RE_NORM_SPACES = /\s+/g;
 
   private static readonly AMT_PATTERN = '([0-9]{1,3}(?:,[0-9]{3})+(?:\\.[0-9]{1,3})?|[0-9]{1,2}(?:,[0-9]{2})*,[0-9]{3}(?:\\.[0-9]{1,3})?|[0-9]{1,3}(?:[\'’][0-9]{3})+(?:[\\.,][0-9]{1,3})?|[0-9]+(?:[\\.,][0-9]{1,3})?)';

@@ -3,7 +3,7 @@ import copy
 import json
 import unittest
 
-from training import audit_sms_provenance as audit
+from training.corpus import audit as audit
 
 
 class SmsProvenanceTests(unittest.TestCase):

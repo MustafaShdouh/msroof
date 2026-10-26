@@ -2,8 +2,8 @@
 import copy
 import json
 import unittest
-from training import prepare_arabic_collection as collection
-from training import prepare_merchant_training_extension as extension
+from training.categories import collect_arabic as collection
+from training.categories import extend_training as extension
 
 
 class ArabicCollectionTests(unittest.TestCase):

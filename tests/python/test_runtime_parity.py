@@ -4,13 +4,14 @@ import math
 import subprocess
 import unittest
 
-from training import evaluate_behavior as evaluation
+from training.evaluation import behavior as evaluation
 from training.corpus_io import sha256
 from src.python.legacy_transaction_model import score_legacy_transaction_model
-from src.python.verify_engine import MasroofEngine
+from src.python.engine import MasroofEngine
+from tools.node_runtime import node_executable
 
 ROOT = evaluation.ROOT
-NODE = r"C:\Program Files\nodejs\node.exe"
+NODE = node_executable()
 
 
 class RuntimeParityTests(unittest.TestCase):

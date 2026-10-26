@@ -1,13 +1,14 @@
 """Current consumers use sanitized inputs; historical evidence stays reproducible."""
 import json
+import hashlib
 import tempfile
 import unittest
 from pathlib import Path
 
 from training import corpus_io
-from training.retire_legacy_corpus import checked_targets
-from training.check_seed_copies import contains_seed
-from src.python.verify_engine import MasroofEngine
+from training.corpus.retire import checked_targets
+from training.corpus.scan import contains_seed
+from src.python.engine import MasroofEngine
 
 ROOT = corpus_io.ROOT
 
@@ -76,7 +77,13 @@ class CorpusMigrationTests(unittest.TestCase):
             corpus_io.snapshot_report_inputs("two", hashes, root)
             blobs = root / "data/private/report_inputs/blobs"
             self.assertEqual(len(list(blobs.iterdir())), 1)
+            source.write_text("version two", encoding="utf-8")
+            self.assertEqual(corpus_io.recorded_source("source.py", expected, root), b"version one")
+            with self.assertRaises(ValueError):
+                corpus_io.recorded_source("../../outside.py", expected, root)
             (blobs / expected).write_text("tampered", encoding="utf-8")
+            with self.assertRaises(ValueError):
+                corpus_io.recorded_source("source.py", expected, root)
             with self.assertRaises(ValueError):
                 corpus_io.snapshot_report_inputs("three", hashes, root)
 
@@ -85,7 +92,8 @@ class CorpusMigrationTests(unittest.TestCase):
         meta = bio["metadata"]
         source = ROOT / meta["source"]
         self.assertEqual(meta["sourceSha256"], corpus_io.sha256(source))
-        self.assertEqual(meta["builderSha256"], corpus_io.sha256(ROOT / "training/build_bio_training_set.py"))
+        builder = corpus_io.recorded_source("training/build_bio_training_set.py", meta["builderSha256"])
+        self.assertEqual(meta["builderSha256"], hashlib.sha256(builder).hexdigest())
         self.assertFalse(meta["humanReviewed"])
         self.assertFalse(meta["independentEvaluationEligible"])
         originals = {row["id"]: row["body"] for row in json.loads(source.read_text(encoding="utf-8"))["testCases"]}

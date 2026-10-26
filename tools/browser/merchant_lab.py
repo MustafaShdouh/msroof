@@ -2,6 +2,7 @@
 import hashlib
 import json
 import subprocess
+from tools.node_runtime import node_executable
 
 
 def build_merchant_lab(root):
@@ -17,8 +18,8 @@ def build_merchant_lab(root):
     transpile = """import fs from 'node:fs'; import {stripTypeScriptTypes} from 'node:module';
 const source=fs.readFileSync(process.argv[1],'utf8').replace(/^import .*;\\r?\\n/gm,'');
 process.stdout.write(stripTypeScriptTypes(source).replace(/^export /gm,''));"""
-    process = subprocess.run([r"C:\Program Files\nodejs\node.exe", "--input-type=module", "-e", transpile,
-                              str(root / "src/typescript/MerchantCategory.ts")],
+    process = subprocess.run([node_executable(), "--input-type=module", "-e", transpile,
+                              str(root / "src/typescript/research/MerchantCategory.ts")],
                              capture_output=True, text=True, encoding="utf-8", check=True)
     script = "const MerchantResearch = (() => {\n" + process.stdout + "\nreturn {loadMerchantCategoryModel,predictMerchantCategory};})();\n"
     summary = {key: {"human": item["validation"]["humanLabelsOnly"],

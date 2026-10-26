@@ -2,7 +2,7 @@
 
 Use this folder for category-data preparation. `category_labels.jsonl` holds manually reviewed, completed bank or wallet transactions. `merchant_candidates.jsonl` holds a separate merchant-name research collection assembled from the existing synthetic source list and public Amman/Irbid listings. Merchant-name learning can bootstrap category suggestions, but must be evaluated separately from real transaction SMS.
 
-Regenerate merchant candidates with `py training/prepare_merchant_candidates.py`. Public evidence and proposed categories are recorded in `local_merchant_sources.json`; proposals have not been human reviewed. Confidence is intentionally null until a model is fitted and evaluated. Review approvals must be saved separately from generated candidates so regeneration cannot overwrite them. Keep aliases and branches of one brand together when splitting training and evaluation. Fees, installments, cash withdrawals, and ambiguous merchants need transaction context. Public listings do not by themselves establish a redistribution or model-training license.
+Regenerate merchant candidates with `py -m training.categories.candidates`. Public evidence and proposed categories are recorded in `local_merchant_sources.json`; proposals have not been human reviewed. Confidence is intentionally null until a model is fitted and evaluated. Review approvals must be saved separately from generated candidates so regeneration cannot overwrite them. Keep aliases and branches of one brand together when splitting training and evaluation. Fees, installments, cash withdrawals, and ambiguous merchants need transaction context. Public listings do not by themselves establish a redistribution or model-training license.
 
 ## Allowed categories
 
