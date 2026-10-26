@@ -8,6 +8,8 @@ the production entity extractor remains regex-based until a later A/B gate.
 from __future__ import annotations
 
 import json
+import sys
+import argparse
 import math
 import random
 import re
@@ -17,25 +19,17 @@ from typing import DefaultDict, Dict, Iterable, List, Sequence, Tuple
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_PATH = ROOT / "data" / "training" / "bio_training_data.json"
+sys.path.insert(0, str(ROOT))
+from training.corpus_io import BIO, write_immutable, sha256
+from src.python.bio_sequence import TAGS, normalize_token
+DATA_PATH = BIO
 MODEL_PATH = ROOT / "data" / "models" / "masroof_sequence_tagger.json"
 EPOCHS = 25
 SEED = 20261024
-TAGS = (
-    "O", "B-AMT", "I-AMT", "B-CURR", "I-CURR", "B-MERCHANT",
-    "I-MERCHANT", "B-ACCT", "I-ACCT", "B-BAL", "I-BAL",
-)
 TAG_TO_INDEX = {tag: index for index, tag in enumerate(TAGS)}
-ARABIC_DIACRITICS = re.compile(r"[\u0610-\u061a\u064b-\u065f\u0670\u06d6-\u06ed]")
-ARABIC_NORMALIZATION = str.maketrans({"أ": "ا", "إ": "ا", "آ": "ا", "ى": "ي", "ة": "ه", "ـ": ""})
 
 FeatureKey = Tuple[str, int]
 TransitionKey = Tuple[int, int]
-
-
-def normalize_token(token: str) -> str:
-    """Match the compact Arabic and Latin normalization used for model keys."""
-    return ARABIC_DIACRITICS.sub("", token.lower()).translate(ARABIC_NORMALIZATION)
 
 
 class AveragedWeights:
@@ -197,6 +191,13 @@ def evaluate(examples: Iterable[dict], model: dict) -> Tuple[int, int, int, int]
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run-id", help="New candidate/report version, required to fit")
+    parser.add_argument("--check-inputs", action="store_true")
+    args = parser.parse_args()
+    import re
+    if not args.check_inputs and (not args.run_id or not re.fullmatch(r"[a-z0-9_]{1,40}", args.run_id)):
+        parser.error("A new --run-id is required to fit")
     dataset = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     examples = dataset["examples"]
     if not examples:
@@ -206,9 +207,18 @@ def main() -> None:
     if any(tag not in TAG_TO_INDEX for example in examples for tag in example["tags"]):
         raise ValueError("Training set contains an unsupported BIO tag")
 
+    if args.check_inputs:
+        print(f"Sanitized BIO drafts valid: {len(examples)} examples; labels remain unreviewed; no fitting")
+        return 0
+    global MODEL_PATH
+    MODEL_PATH = ROOT / f"data/models/bio_{args.run_id}_candidate.json"
+    if MODEL_PATH.exists():
+        raise ValueError("Candidate output exists; select a new run ID")
+
     emission, transition = train(examples)
     model = export_model(examples, emission, transition)
-    MODEL_PATH.write_text(json.dumps(model, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    model["trainingSource"] = {"datasetSha256": sha256(DATA_PATH), "scope": "Unreviewed heuristic labels from development regression, not independent evaluation"}
+    write_immutable(MODEL_PATH, json.dumps(model, ensure_ascii=False, separators=(",", ":")))
 
     exact_sequences, total_sequences, correct_tokens, total_tokens = evaluate(examples, model)
     print(f"Exported {MODEL_PATH.name}: {len(model['featureIndex'])} features, "

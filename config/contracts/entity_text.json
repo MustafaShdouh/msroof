@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "ownerDecision": "Preserve the exact name text",
+  "merchantOrCounterparty": {
+    "representation": "contiguous_exact_source_name_span_or_null",
+    "preserve": ["case", "Arabic diacritics", "internal whitespace", "digit script", "name descriptors"],
+    "exclude": ["message introducers", "account masks preceding the name", "following balance or transaction clauses"],
+    "doNot": ["shorten to a brand", "rewrite spelling", "silently fabricate a missing name"]
+  },
+  "matchingView": "Normalize financial digits, Arabic diacritics and whitespace only for matching; project the chosen name span back to the original input",
+  "financialNumberPolicy": "Amounts, balances and account identifiers retain the numeric preprocessing contract; exact source-name text intentionally follows the input script",
+  "annotationPolicy": "Existing mixed-convention legacy labels stay frozen; future entity labels must identify exact source spans and their review provenance"
+}

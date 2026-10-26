@@ -1,4 +1,5 @@
 import json
+import argparse
 import os
 import re
 import sys
@@ -6,6 +7,9 @@ import numpy as np
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from training.corpus_io import DATASET, load_development_split, write_immutable, sha256
+from src.python.preprocessing import preprocess_message
 
 # Ensure UTF-8 output on Windows consoles
 if sys.stdout.encoding.lower() != 'utf-8':
@@ -13,25 +17,31 @@ if sys.stdout.encoding.lower() != 'utf-8':
         sys.stdout.reconfigure(encoding='utf-8')
     except Exception:
         pass
-from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 def preprocess_text(text):
-    # Normalize Arabic text and punctuation
-    text = text.replace("JO\n", " ").replace("JO", " ")
-    # Replace newlines with spaces
-    text = re.sub(r'\s+', ' ', text)
-    # Remove isolated numbers/phone numbers to avoid memorizing specific amounts or accounts
-    text = re.sub(r'\b\d{6,}\b', ' NUM_LONG ', text)
-    return text.strip().lower()
+    return preprocess_message(text)
 
 def main():
-    dataset_path = ROOT / "data" / "training" / "dataset_expanded.json"
+    parser = argparse.ArgumentParser(description="Legacy TF-IDF experiment on sanitized grouped data; export math remains unsuitable for runtime promotion")
+    parser.add_argument("--output", type=Path, help="New candidate JSON output; existing files cannot be replaced")
+    parser.add_argument("--check-inputs", action="store_true")
+    args = parser.parse_args()
+    dataset_path = DATASET
     with open(dataset_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
+    train_indices, validation_indices, split = load_development_split(data)
+    if args.check_inputs:
+        print(f"Sanitized legacy-experiment inputs valid: {len(train_indices)} train / {len(validation_indices)} validation; no fitting")
+        return
+    if args.output is None:
+        parser.error("--output is required; the active runtime model cannot be overwritten")
+    export_path = args.output.resolve()
+    if export_path.exists():
+        raise ValueError("Output exists; choose a new candidate path")
     texts = []
     binary_labels = [] # 1 = VALID TRANSACTION (DEBIT/CREDIT), 0 = NOISE/OTP/DECLINED/PROMO/CHAT
     type_labels = []   # 1 = CREDIT (Income), 0 = DEBIT (Expense), -1 = None
@@ -54,9 +64,11 @@ def main():
     print(f"Transactions: {sum(binary_labels)}, Non-transactions (Noise/OTP/Declined): {len(binary_labels) - sum(binary_labels)}")
 
     # 1. Train / Test Split
-    X_train_raw, X_test_raw, y_train, y_test, det_train, det_test = train_test_split(
-        texts, binary_labels, detailed_labels, test_size=0.2, random_state=42, stratify=detailed_labels
-    )
+    X_train_raw = [texts[i] for i in train_indices]
+    X_test_raw = [texts[i] for i in validation_indices]
+    y_train = [binary_labels[i] for i in train_indices]
+    y_test = [binary_labels[i] for i in validation_indices]
+    det_test = [detailed_labels[i] for i in validation_indices]
 
     # 2. Vectorization (Word unigrams & bigrams, capturing Arabic and English)
     # Using token_pattern that supports Arabic Unicode characters
@@ -71,7 +83,7 @@ def main():
 
     print(f"\nVocabulary size: {len(vectorizer.vocabulary_)} features")
 
-    # 3. Model 1: Is Transaction Classifier (Logistic Regression with calibrated probabilities)
+    # 3. Model 1: Is Transaction Classifier (Logistic Regression with uncalibrated scores)
     clf = LogisticRegression(C=5.0, max_iter=1000, random_state=42)
     clf.fit(X_train, y_train)
 
@@ -120,7 +132,7 @@ def main():
         print(f"  - {feature_names[idx]:20s} (weight: {coefs[idx]:.3f})")
 
     # 4. Model 2: Transaction Type Classifier (DEBIT vs CREDIT)
-    tx_indices = [i for i, y in enumerate(binary_labels) if y == 1]
+    tx_indices = [i for i in train_indices if binary_labels[i] == 1]
     X_tx_raw = [texts[i] for i in tx_indices]
     y_tx_type = [type_labels[i] for i in tx_indices] # 1 = CREDIT, 0 = DEBIT
 
@@ -142,7 +154,10 @@ def main():
     model_export = {
         "metadata": {
             "name": "Masroof ML Transaction Classifier",
-            "version": "1.0.0",
+            "version": "legacy-sanitized-experiment",
+            "scope": "Synthetic grouped development only; TF-IDF export/runtime math not reconciled; do not promote",
+            "datasetSha256": sha256(DATASET),
+            "splitSha256": sha256(ROOT / "data/training/splits/transaction_direction_sanitized_v1.json"),
             "language": "Arabic + English (Jordanian Ecosystem)",
             "accuracy": f"{acc * 100:.2f}%",
             "intercept_tx": tx_intercept,
@@ -159,9 +174,7 @@ def main():
         if abs(w_tx) > 0.05 or abs(w_type) > 0.05:
             model_export["features"][token] = [idf_val, w_tx, w_type]
 
-    export_path = ROOT / "data" / "models" / "masroof_model.json"
-    with open(export_path, "w", encoding="utf-8") as f:
-        json.dump(model_export, f, ensure_ascii=False, separators=(',', ':'))
+    write_immutable(export_path, json.dumps(model_export, ensure_ascii=False, separators=(',', ':')))
 
     file_size_kb = os.path.getsize(export_path) / 1024
     print(f"\n================ EXPORT COMPLETE ================")

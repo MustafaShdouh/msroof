@@ -1,0 +1,194 @@
+{
+  "baselineArabicCaseCount": 111,
+  "categoryCorpus": {
+    "approvedArabicMerchantNames": 2,
+    "arabicCanonicalNames": 2,
+    "businessCount": 200,
+    "businessesWithArabicNameOrAlias": 32,
+    "reviewRecordCount": 220
+  },
+  "digitProbeSourceProviders": [
+    "Capital Bank",
+    "Reflect",
+    "Bank al Etihad",
+    "Housing Bank",
+    "Orange Money",
+    "Zain Cash",
+    "UWallet",
+    "Jordan Islamic Bank"
+  ],
+  "geographicScope": "Jordan",
+  "inputSha256": {
+    "data\\models\\masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "src\\python\\verify_engine.py": "d70be4bfd8f3c56e7d5f5ea6065b9c14204bec6bc1836fded9360ce1fd89cc51",
+    "src\\typescript\\MasroofEngine.ts": "27f53f08817dbd208e461d3b65b89581739805f6e79a09aeda65f21b17733a6d",
+    "tests\\fixtures\\sanitized_v1\\qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+    "tests\\fixtures\\sanitized_v1\\test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7"
+  },
+  "nextWork": [
+    "Continue source-verified Arabic alias collection; see categoryCorpus for current coverage, which does not establish category accuracy.",
+    "Prepare independent Jordan-specific Arabic evaluation; hold out entire brands including all Arabic and English aliases.",
+    "Standalone merchant-name candidates are research only; no validated full-taxonomy SMS categorizer or independent Arabic category accuracy is established. See merchant_category_research.json for the separate candidate experiment."
+  ],
+  "preprocessingParityProbes": [
+    {
+      "parity": true,
+      "python": {
+        "features": [
+          "رقم",
+          "المرجع",
+          "num_long",
+          "رقم المرجع",
+          "المرجع num_long"
+        ],
+        "normalized": "رقم المرجع  num_long"
+      },
+      "raw": "رقم المرجع ١٢٣٤٥٦٧",
+      "typescript": {
+        "features": [
+          "رقم",
+          "المرجع",
+          "num_long",
+          "رقم المرجع",
+          "المرجع num_long"
+        ],
+        "normalized": "رقم المرجع  num_long"
+      }
+    },
+    {
+      "parity": true,
+      "python": {
+        "features": [
+          "رقم",
+          "المرجع",
+          "num_long",
+          "رقم المرجع",
+          "المرجع num_long"
+        ],
+        "normalized": "رقم المرجع  num_long"
+      },
+      "raw": "رقم المرجع ۱۲۳۴۵۶۷",
+      "typescript": {
+        "features": [
+          "رقم",
+          "المرجع",
+          "num_long",
+          "رقم المرجع",
+          "المرجع num_long"
+        ],
+        "normalized": "رقم المرجع  num_long"
+      }
+    },
+    {
+      "parity": true,
+      "python": {
+        "features": [
+          "مرجع",
+          "num_long",
+          "مرجع num_long"
+        ],
+        "normalized": "مرجع num_long"
+      },
+      "raw": "مرجع123456",
+      "typescript": {
+        "features": [
+          "مرجع",
+          "num_long",
+          "مرجع num_long"
+        ],
+        "normalized": "مرجع num_long"
+      }
+    },
+    {
+      "parity": true,
+      "python": {
+        "features": [
+          "تم",
+          "دفع",
+          "12.50",
+          "دينار",
+          "تم دفع",
+          "دفع 12.50",
+          "12.50 دينار"
+        ],
+        "normalized": "تم دفع 12.50 دينار"
+      },
+      "raw": "تم دفع ١٢٫٥٠ دينار",
+      "typescript": {
+        "features": [
+          "تم",
+          "دفع",
+          "12.50",
+          "دينار",
+          "تم دفع",
+          "دفع 12.50",
+          "12.50 دينار"
+        ],
+        "normalized": "تم دفع 12.50 دينار"
+      }
+    }
+  ],
+  "preprocessingVersion": "1.1.0",
+  "python": {
+    "arabicIndicDigits": {
+      "amountCurrencyDirectionCorrect": 8,
+      "caseCount": 8,
+      "classificationCorrect": 8,
+      "failures": [],
+      "validTransactionCount": 8
+    },
+    "arabicIndicDigitsAndSeparators": {
+      "amountCurrencyDirectionCorrect": 8,
+      "caseCount": 8,
+      "classificationCorrect": 8,
+      "failures": [],
+      "validTransactionCount": 8
+    },
+    "frozenArabicText": {
+      "amountCurrencyDirectionCorrect": 49,
+      "caseCount": 111,
+      "classificationCorrect": 111,
+      "failures": [],
+      "validTransactionCount": 49
+    },
+    "persianDigits": {
+      "amountCurrencyDirectionCorrect": 8,
+      "caseCount": 8,
+      "classificationCorrect": 8,
+      "failures": [],
+      "validTransactionCount": 8
+    }
+  },
+  "scope": "Existing Arabic-containing fixture text plus diagnostic digit-format transformations; not independent generalization evidence.",
+  "typescript": {
+    "arabicIndicDigits": {
+      "amountCurrencyDirectionCorrect": 8,
+      "caseCount": 8,
+      "classificationCorrect": 8,
+      "failures": [],
+      "validTransactionCount": 8
+    },
+    "arabicIndicDigitsAndSeparators": {
+      "amountCurrencyDirectionCorrect": 8,
+      "caseCount": 8,
+      "classificationCorrect": 8,
+      "failures": [],
+      "validTransactionCount": 8
+    },
+    "frozenArabicText": {
+      "amountCurrencyDirectionCorrect": 49,
+      "caseCount": 111,
+      "classificationCorrect": 111,
+      "failures": [],
+      "validTransactionCount": 49
+    },
+    "persianDigits": {
+      "amountCurrencyDirectionCorrect": 8,
+      "caseCount": 8,
+      "classificationCorrect": 8,
+      "failures": [],
+      "validTransactionCount": 8
+    }
+  },
+  "version": "1.2.0-sanitized"
+}

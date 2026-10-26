@@ -1,0 +1,177 @@
+{
+  "candidateModelPath": "data/models/transaction_direction_jordan_sanitized_liblinear_v1_candidate.json",
+  "candidateModelSha256": "50aee39b74e5c4cad0be6151ea9117c309a249577ae7a7d5d0aaebfb6bad463d",
+  "evaluationScope": "candidate only; the legacy runtime remains active",
+  "frozenCorpus": {
+    "directionOnActualTransactions": {
+      "accuracy": 0.8113207547169812,
+      "correct": 86,
+      "expenseAsIncome": 17,
+      "expenseCorrect": 61,
+      "incomeAsExpense": 3,
+      "incomeCorrect": 25,
+      "incomePredicted": 42,
+      "incomeTrue": 28,
+      "total": 106
+    },
+    "scope": "model-only shared-contract scoring; it excludes runtime sender and regex guards",
+    "transaction": {
+      "accuracy": 0.8451327433628318,
+      "f1": 0.8309178743961353,
+      "falseNegatives": 20,
+      "falsePositives": 15,
+      "precision": 0.8514851485148515,
+      "recall": 0.8113207547169812,
+      "total": 226,
+      "trueNegatives": 105,
+      "truePositives": 86
+    }
+  },
+  "groupedValidation": {
+    "directionOnActualTransactions": {
+      "accuracy": 0.46511627906976744,
+      "correct": 100,
+      "expenseAsIncome": 70,
+      "expenseCorrect": 80,
+      "incomeAsExpense": 45,
+      "incomeCorrect": 20,
+      "incomePredicted": 90,
+      "incomeTrue": 65,
+      "total": 215
+    },
+    "providerBreakdown": {
+      "ARAB_BANK": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "falseNegatives": 0,
+        "falsePositives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "total": 35,
+        "trueNegatives": 15,
+        "truePositives": 20
+      },
+      "BANK_AL_ETIHAD": {
+        "accuracy": 1.0,
+        "f1": 0.0,
+        "falseNegatives": 0,
+        "falsePositives": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "total": 14,
+        "trueNegatives": 14,
+        "truePositives": 0
+      },
+      "CAPITAL_BANK": {
+        "accuracy": 1.0,
+        "f1": 0.0,
+        "falseNegatives": 0,
+        "falsePositives": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "total": 19,
+        "trueNegatives": 19,
+        "truePositives": 0
+      },
+      "HOUSING_BANK": {
+        "accuracy": 0.18181818181818182,
+        "f1": 0.0,
+        "falseNegatives": 45,
+        "falsePositives": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "total": 55,
+        "trueNegatives": 10,
+        "truePositives": 0
+      },
+      "ORANGE_MONEY": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "falseNegatives": 0,
+        "falsePositives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "total": 57,
+        "trueNegatives": 12,
+        "truePositives": 45
+      },
+      "PERSONAL": {
+        "accuracy": 1.0,
+        "f1": 0.0,
+        "falseNegatives": 0,
+        "falsePositives": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "total": 70,
+        "trueNegatives": 70,
+        "truePositives": 0
+      },
+      "REFLECT": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "falseNegatives": 0,
+        "falsePositives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "total": 101,
+        "trueNegatives": 21,
+        "truePositives": 80
+      },
+      "UWALLET": {
+        "accuracy": 1.0,
+        "f1": 0.0,
+        "falseNegatives": 0,
+        "falsePositives": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "total": 22,
+        "trueNegatives": 22,
+        "truePositives": 0
+      },
+      "ZAIN_CASH": {
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "falseNegatives": 0,
+        "falsePositives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "total": 45,
+        "trueNegatives": 20,
+        "truePositives": 25
+      }
+    },
+    "transaction": {
+      "accuracy": 0.8923444976076556,
+      "f1": 0.8831168831168831,
+      "falseNegatives": 45,
+      "falsePositives": 0,
+      "precision": 1.0,
+      "recall": 0.7906976744186046,
+      "total": 418,
+      "trueNegatives": 203,
+      "truePositives": 170
+    }
+  },
+  "reportVersion": "1.0.0",
+  "training": {
+    "corpusVersion": "sanitized-corpus-1.0.0",
+    "datasetSha256": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "minimumDocumentFrequency": 2,
+    "optimizer": "liblinear",
+    "optimizerParameters": {
+      "C": 1.0,
+      "maxIterations": 2000,
+      "solver": "liblinear"
+    },
+    "scope": "Synthetic development candidate; no independent accuracy claim",
+    "seed": 20261024,
+    "sklearnVersion": "1.9.1",
+    "splitSeed": 20261025,
+    "splitSha256": "512af5213d2c34ab3f6f8a501163e261102e3dbf5e7cf52d0439735b204a4668",
+    "splitVersion": "1.0.0",
+    "trainRecordCount": 1702,
+    "trainerVersion": "1.0.0",
+    "validationRecordCount": 418,
+    "vocabularySize": 2005
+  }
+}

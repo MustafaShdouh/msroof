@@ -1,0 +1,94 @@
+[
+  {
+    "id": "intercepts",
+    "model": {
+      "metadata": {
+        "intercept_tx": -0.4,
+        "intercept_credit": 0.7
+      },
+      "features": {}
+    },
+    "tokens": [],
+    "transactionLogit": -0.4,
+    "incomingLogit": 0.7
+  },
+  {
+    "id": "repeat_idf",
+    "model": {
+      "metadata": {
+        "intercept_tx": 0,
+        "intercept_credit": 0
+      },
+      "features": {
+        "x": [
+          2,
+          0.3,
+          -0.2
+        ],
+        "y": [
+          0.5,
+          -0.4,
+          0.6
+        ]
+      }
+    },
+    "tokens": [
+      "x",
+      "x",
+      "y",
+      "unknown"
+    ],
+    "transactionLogit": 1,
+    "incomingLogit": -0.5
+  },
+  {
+    "id": "prototype_words_unknown",
+    "model": {
+      "metadata": {
+        "intercept_tx": 0.1,
+        "intercept_credit": -0.3
+      },
+      "features": {}
+    },
+    "tokens": [
+      "constructor",
+      "__proto__"
+    ],
+    "transactionLogit": 0.1,
+    "incomingLogit": -0.3
+  },
+  {
+    "id": "own_constructor_feature",
+    "model": {
+      "metadata": {
+        "intercept_tx": 0,
+        "intercept_credit": 0
+      },
+      "features": {
+        "constructor": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "tokens": [
+      "constructor"
+    ],
+    "transactionLogit": 1,
+    "incomingLogit": 1
+  },
+  {
+    "id": "extreme_logits",
+    "model": {
+      "metadata": {
+        "intercept_tx": -1000,
+        "intercept_credit": 1000
+      },
+      "features": {}
+    },
+    "tokens": [],
+    "transactionLogit": -1000,
+    "incomingLogit": 1000
+  }
+]

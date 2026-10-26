@@ -1,0 +1,27 @@
+{
+  "scope": "Authored development safeguards, not training data or independent accuracy evidence",
+  "cases": [
+    {"id":"en_code_first","body":"Your code to complete the purchase for JOD 17.350 is 684291. Keep it private.","request":true},
+    {"id":"en_code_value_first","body":"Your verification code is 684291 to confirm this payment of JOD 17.350.","request":true},
+    {"id":"en_imperative","body":"Use code 684291 to authorize the transfer of JOD 17.350.","request":true},
+    {"id":"en_reverse","body":"To complete this withdrawal, please enter your security code 684291. Requested amount JOD 30.","request":true},
+    {"id":"en_british_spelling","body":"The code for authorising your card purchase of JOD 17.350 is 684291.","request":true},
+    {"id":"en_colon","body":"Verification code: 684291 to approve your online payment of JOD 17.350.","request":true},
+    {"id":"en_mixed_script","body":"YOUR CODE\nTO COMPLETE YOUR TRANSACTION OF ١٧٫٣٥٠ JOD IS ٦٨٤٢٩١.","request":true},
+    {"id":"ar_code_first","body":"رمز التحقق لإتمام عملية الدفع بقيمة 17.350 دينار هو 684291. لا تشاركه.","request":true},
+    {"id":"ar_arabic_indic","body":"رمز التأكيد ٦٨٤٢٩١ لتأكيد التحويل بقيمة ١٧٫٣٥٠ دينار.","request":true},
+    {"id":"ar_persian_digits","body":"رمز التحقق هو ۶۸۴۲۹۱ لتنفيذ الحوالة بقيمة ۱۷٫۳۵۰ دينار.","request":true},
+    {"id":"ar_reverse","body":"لإتمام عملية الشراء، يرجى إدخال رمز التحقق 684291. المبلغ 17.350 دينار.","request":true},
+    {"id":"ar_diacritics","body":"رَمْزُ التَّحَقُّقِ لِإِتْمَامِ عَمَلِيَّةِ الدَّفْعِ بقيمة ١٧٫٣٥٠ دينار هو ٦٨٤٢٩١.","request":true},
+    {"id":"ar_alef_variant","body":"كود التاكيد لاتمام المعاملة بقيمة 17.350 دينار هو 684291.","request":true},
+    {"id":"en_completed_code","body":"JOD 17.350 debited from account *3402 at LOCAL SHOP. Available balance JOD 91.500. Authorization code 684291.","request":false,"accepted":true},
+    {"id":"en_completed_authorization","body":"Payment authorization completed. JOD 17.350 debited from account *3402 at LOCAL SHOP. Available balance JOD 91.500.","request":false,"accepted":true},
+    {"id":"en_code_merchant","body":"JOD 17.350 debited from account *3402 at CODE TO COMPLETE PAYMENT. Available balance JOD 91.500.","request":false,"accepted":true},
+    {"id":"en_completed_credit","body":"JOD 17.350 credited to account *3402 from LOCAL PERSON. Available balance JOD 91.500. Reference code 684291.","request":false,"accepted":true},
+    {"id":"ar_completed_code","body":"تم خصم مبلغ 17.350 دينار من حسابك *3402 لدى المتجر المحلي. الرصيد المتاح 91.500 دينار. رمز التفويض 684291.","request":false,"accepted":true},
+    {"id":"ar_completed_purchase","body":"تم تنفيذ عملية الشراء بقيمة 17.350 دينار من حسابك *3402 لدى المتجر المحلي. الرصيد المتاح 91.500 دينار. رمز التحقق 684291.","request":false,"accepted":true},
+    {"id":"nonfinancial_goal","body":"Your code to complete this delivery is 684291.","request":false},
+    {"id":"bare_authorization","body":"Authorization code 684291. Purchase JOD 17.350.","request":false},
+    {"id":"amount_without_code_request","body":"Your transaction amount is JOD 17.350 and your available balance is JOD 91.500.","request":false}
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "2.0.0",
+  "scope": "Assistant-reviewed policy corrections to existing synthetic development records; no independent or human-gold claim",
+  "sourceBioSha256": "3c315fdac92fdf9b147c2c8c4d38628ed71c3ba2b50c74ff5bfb5b9edd7ea13c",
+  "sourceFixtureSha256": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+  "ownerRule": "Preserve exact source name text, reconfirmed 2026-10-26",
+  "reviewerType": "assistant",
+  "merchantSpanCorrections": [
+    {
+      "recordId": "TC_POS_ZAI_003",
+      "sourceTextSha256": "8c49036f33549a41ba964995e3e47aea71c6d757425b611aa8a53ef1fea72bf4",
+      "start": 50,
+      "end": 65,
+      "text": "COZMO سوبرماركت",
+      "basis": "Full source name includes the adjacent supermarket descriptor before the instrument clause"
+    }
+  ],
+  "merchantAbsenceReviews": [
+    {
+      "recordId": "TC_POS_ARAB_006",
+      "basis": "ATM deposit notification gives no named counterparty"
+    },
+    {
+      "recordId": "TC_POS_ETI_007",
+      "basis": "Monthly cashback notification gives no named counterparty"
+    },
+    {
+      "recordId": "TC_POS_ORA_006",
+      "basis": "Incoming transfer notification omits its counterparty"
+    },
+    {
+      "recordId": "TC_EDG_MIS_001",
+      "basis": "Student-credit payment purpose/reference is not a named merchant"
+    },
+    {
+      "recordId": "TC_EDG_MIS_002",
+      "basis": "Card purchase notification omits its merchant"
+    }
+  ],
+  "balanceAbsenceReviews": [
+    {
+      "recordId": "TC_POS_ARAB_007",
+      "basis": "Purchase receipt has no balance clause"
+    },
+    {
+      "recordId": "TC_EDG_MIS_001",
+      "basis": "Payment notification has no balance clause"
+    }
+  ],
+  "needsReview": [
+    {
+      "recordId": "TC_POS_ORA_005",
+      "reason": "Named cash-in agent/outlet is present, but its counterparty role is not adjudicated in the old annotation"
+    },
+    {
+      "recordId": "TC_EDG_DIA_002",
+      "reason": "Phone-only counterparty identifier versus name-only slot is unresolved; do not label the payment-channel suffix as a name"
+    }
+  ]
+}

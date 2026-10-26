@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "scope": "Working-copy retirement only; archives stay private; old Git objects remain",
+  "layoutSha256": "9aa4c9f93b952545d0862d14fd14d5e18f015eeee3f88f236a4c3861f72f7ec0",
+  "privateArchiveManifestSha256": {
+    "data/private/historical_corpus_v1": "c5111c695f6314602805e6e82310646b109765b6a51f5f03876729d51d446981",
+    "data/private/legacy_tools_v1": "7ac6a2774eff9ae0750352f16256f430be9ef8e03e41047e48300398ad6ba761"
+  },
+  "retiredWorkingPaths": [
+    "data/training/dataset_expanded.json",
+    "data/training/dataset_expanded.csv",
+    "data/training/bio_training_data.json",
+    "data/training/splits/transaction_direction_split.json",
+    "tests/fixtures/test_suite_cases.json",
+    "tests/fixtures/qa_adversarial_cases.json",
+    "tests/fixtures/test_corpus_manifest.json",
+    "training/expand_dataset.py",
+    "tools/generators/generate_test_suite.py",
+    "tools/generators/build_qa_adversarial_cases.py",
+    "tests/legacy/run_test_suite.py",
+    "data/reports/arabic_support_probe_inputs.json"
+  ],
+  "activeDatasetSha256": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+  "activeSplitSha256": "512af5213d2c34ab3f6f8a501163e261102e3dbf5e7cf52d0439735b204a4668",
+  "activeBioSha256": "3c315fdac92fdf9b147c2c8c4d38628ed71c3ba2b50c74ff5bfb5b9edd7ea13c",
+  "activeModelSha256": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+  "remoteHistoryChanged": false,
+  "modelFittedOrPromoted": false,
+  "remainingLimit": "Old commits and legacy model vocabulary remain; no complete anonymization or independent-accuracy claim"
+}

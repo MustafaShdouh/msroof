@@ -8,6 +8,7 @@ It is an evaluation candidate and never replaces the legacy runtime model.
 from __future__ import annotations
 
 from collections import Counter, defaultdict
+import argparse
 import hashlib
 import json
 import math
@@ -18,17 +19,19 @@ from typing import Any, Iterable
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src" / "python"))
 
 from preprocessing import PREPROCESSING_CONTRACT_VERSION, preprocess_message, tokenize_features
 from transaction_direction import CONTRACT_VERSION, evaluate_model, validate_model
+from training.corpus_io import DATASET, SPLIT, FIXTURES, load_development_split, write_immutable
 
 
-DATASET_PATH = ROOT / "data" / "training" / "dataset_expanded.json"
-SPLIT_PATH = ROOT / "data" / "training" / "splits" / "transaction_direction_split.json"
+DATASET_PATH = DATASET
+SPLIT_PATH = SPLIT
 FROZEN_FIXTURE_PATHS = (
-    ROOT / "tests" / "fixtures" / "test_suite_cases.json",
-    ROOT / "tests" / "fixtures" / "qa_adversarial_cases.json",
+    FIXTURES / "test_suite_cases.json",
+    FIXTURES / "qa_adversarial_cases.json",
 )
 MODEL_PATH = ROOT / "data" / "models" / "masroof_transaction_direction_v2.json"
 REPORT_PATH = ROOT / "data" / "reports" / "transaction_direction_v2_evaluation.json"
@@ -43,6 +46,7 @@ MIN_DOCUMENT_FREQUENCY = 2
 TRANSACTION_THRESHOLD = 0.7
 INCOME_THRESHOLD = 0.5
 TRANSACTION_LABELS = {"TRANSACTION_DEBIT", "TRANSACTION_CREDIT"}
+OPTIMIZER = "sgd"
 
 
 def _sha256(path: Path) -> str:
@@ -61,26 +65,7 @@ def _feature_counts(text: str, vocabulary: set[str] | None = None) -> Counter[st
 
 
 def _load_split(records: list[dict[str, Any]]) -> tuple[list[int], list[int], dict[str, Any]]:
-    split = _load_json(SPLIT_PATH)
-    if split.get("splitVersion") != "1.0.0":
-        raise ValueError("unsupported transaction/direction split version")
-    if split.get("preprocessingVersion") != PREPROCESSING_CONTRACT_VERSION:
-        raise ValueError("split preprocessing version does not match runtime contract")
-    if split.get("recordCount") != len(records):
-        raise ValueError("split record count does not match dataset")
-    if split.get("datasetSha256") != _sha256(DATASET_PATH):
-        raise ValueError("split dataset hash does not match current dataset")
-
-    train_indices = split.get("trainIndices")
-    validation_indices = split.get("validationIndices")
-    if not isinstance(train_indices, list) or not isinstance(validation_indices, list):
-        raise ValueError("split indices must be lists")
-    all_indices = train_indices + validation_indices
-    if any(type(index) is not int or not 0 <= index < len(records) for index in all_indices):
-        raise ValueError("split contains an invalid record index")
-    if len(set(all_indices)) != len(records) or len(all_indices) != len(records):
-        raise ValueError("split must cover every dataset record exactly once")
-    return train_indices, validation_indices, split
+    return load_development_split(records, DATASET_PATH, SPLIT_PATH)
 
 
 def _build_vocabulary(records: list[dict[str, Any]], indices: Iterable[int]) -> set[str]:
@@ -99,6 +84,23 @@ def _train_head(
     seed_offset: int,
 ) -> tuple[float, dict[str, float]]:
     """Fit deterministic L2-regularized logistic regression with sparse SGD."""
+    if OPTIMIZER == "liblinear":
+        import numpy as np
+        from sklearn.feature_extraction import DictVectorizer
+        from sklearn.linear_model import LogisticRegression
+        vectorizer = DictVectorizer(sort=True)
+        matrix = vectorizer.fit_transform([dict(features) for features, _ in examples])
+        if matrix.nnz >= 2 ** 31 or max(matrix.shape) >= 2 ** 31:
+            raise ValueError("liblinear candidate exceeds 32-bit sparse index capacity")
+        matrix.indices = matrix.indices.astype(np.int32)
+        matrix.indptr = matrix.indptr.astype(np.int32)
+        labels = [label for _, label in examples]
+        classifier = LogisticRegression(solver="liblinear", C=1.0, max_iter=2000, random_state=SEED + seed_offset)
+        classifier.fit(matrix, labels)
+        learned = dict(zip(vectorizer.get_feature_names_out(), classifier.coef_[0].tolist()))
+        # The exported head scores exactly the same counted features; there is
+        # no TF-IDF normalization or training-only scaling hidden in this path.
+        return float(classifier.intercept_[0]), {feature: float(learned.get(feature, 0)) for feature in sorted(vocabulary)}
     weights: defaultdict[str, float] = defaultdict(float)
     intercept = 0.0
     ordering = list(range(len(examples)))
@@ -238,6 +240,13 @@ def _evaluate_frozen_corpus(model: dict[str, Any]) -> dict[str, Any]:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run-id", help="New candidate version; required to fit (letters/digits/underscores)")
+    parser.add_argument("--check-inputs", action="store_true", help="Validate corpus and split without fitting")
+    parser.add_argument("--optimizer", choices=("sgd", "liblinear"), default="sgd")
+    args = parser.parse_args()
+    global OPTIMIZER
+    OPTIMIZER = args.optimizer
     records = _load_json(DATASET_PATH)
     if not isinstance(records, list) or not records:
         raise ValueError("dataset must be a non-empty list")
@@ -247,6 +256,17 @@ def main() -> int:
         raise ValueError("dataset records do not match the supported transaction/direction schema")
 
     train_indices, validation_indices, split = _load_split(records)
+    if args.check_inputs:
+        print(f"Sanitized inputs valid: {len(train_indices)} train / {len(validation_indices)} validation; no fitting")
+        return 0
+    import re
+    if not args.run_id or not re.fullmatch(r"[a-z0-9_]{1,40}", args.run_id):
+        parser.error("A new --run-id is required to fit a candidate")
+    global MODEL_PATH, REPORT_PATH
+    MODEL_PATH = ROOT / f"data/models/transaction_direction_{args.run_id}_candidate.json"
+    REPORT_PATH = ROOT / f"data/reports/transaction_direction_{args.run_id}_evaluation.json"
+    if MODEL_PATH.exists() or REPORT_PATH.exists():
+        raise ValueError("Candidate outputs already exist; select a new run ID")
     vocabulary = _build_vocabulary(records, train_indices)
     cached_features = {
         index: _feature_counts(record["text"], vocabulary)
@@ -280,6 +300,12 @@ def main() -> int:
             "weights": direction_weights,
         },
         "training": {
+            "optimizer": OPTIMIZER,
+            "optimizerParameters": ({"solver": "liblinear", "C": 1.0, "maxIterations": 2000} if OPTIMIZER == "liblinear" else
+                                    {"epochs": EPOCHS, "learningRate": LEARNING_RATE, "l2Penalty": L2_PENALTY}),
+            "corpusVersion": split["corpusVersion"],
+            "splitSha256": _sha256(SPLIT_PATH),
+            "scope": "Synthetic development candidate; no independent accuracy claim",
             "trainerVersion": TRAINER_VERSION,
             "seed": SEED,
             "epochs": EPOCHS,
@@ -294,10 +320,16 @@ def main() -> int:
             "vocabularySize": len(vocabulary),
         },
     }
+    if OPTIMIZER == "liblinear":
+        import sklearn
+        model["training"]["sklearnVersion"] = sklearn.__version__
+        # The old SGD fields are not the optimizer settings for this candidate.
+        for key in ("epochs", "learningRate", "l2Penalty"):
+            del model["training"][key]
     validate_model(model)
 
     MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
-    MODEL_PATH.write_text(json.dumps(model, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    write_immutable(MODEL_PATH, json.dumps(model, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
     report = {
         "reportVersion": "1.0.0",
         "candidateModelPath": str(MODEL_PATH.relative_to(ROOT)).replace("\\", "/"),
@@ -308,7 +340,7 @@ def main() -> int:
         "frozenCorpus": _evaluate_frozen_corpus(model),
     }
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    REPORT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    write_immutable(REPORT_PATH, json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
 
     validation = report["groupedValidation"]
     print(f"Wrote candidate model: {MODEL_PATH}")

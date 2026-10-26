@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "status": "approved_research_only_2026-10-26",
+  "featureContract": "bio-context-1.0.0",
+  "baseWordNormalization": "bio-word-1.0.0",
+  "financialNumbers": "preprocessing-1.1.0",
+  "input": "Raw, label-independent source tokens; output tag indexes use the existing 11-tag order",
+  "featuresInOrder": ["bias", "w0", "s0 (class, digit count, optional final decimal-part length)", "w-2", "w-1", "w1", "w2", "s-1", "s1"],
+  "numericWords": "Numeric strings and masks are replaced with <NUMBER>/<MASK> in all word features; digits canonicalized across ASCII, Arabic-Indic and Persian",
+  "shapes": "mask; number plus digits capped at 8 and final decimal-part length capped at 4 when present; Arabic/Latin word; punctuation; mixed; BOS/EOS",
+  "numericInterpretation": "Separator shapes are structural only; a final comma group is not assumed semantically decimal",
+  "weights": "Contiguous featureIndex; row-major emissionWeights[feature*11+tag], transitionWeights[previous*11+tag]; bias is a learned feature",
+  "scoring": "Float32 weights and zeroed scores; add each known feature in declared order, rounding after each addition; add transition last except at start",
+  "decoding": "Greedy, smallest tag index wins ties; I-label allowed only after B-label or I-label of same type; no I-label at start",
+  "training": "Averaged perceptron, 25 epochs, seed 20261024; no early stopping or validation-based feature search",
+  "scope": "Already-valid synthetic development messages; isolated scorers, no active runtime integration or promotion",
+  "reservedMerchantTestInferred": false
+}

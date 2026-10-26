@@ -19,6 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from training.audit_sms_provenance import canonical, digest, number_masked, protected_hashes
+from training.corpus_io import historical_path
 from src.python.preprocessing import normalize_financial_numbers
 
 VERSION = "sanitized-corpus-1.0.0"
@@ -526,7 +527,7 @@ def build(root=ROOT):
     split = json.loads(outputs[SPLIT])
     artifact_hashes = {path: digest(content.encode("utf-8")) for path, content in sorted(outputs.items())}
     report = {"corpusVersion": VERSION, "status": "prepared_synthetic_version_not_promoted_or_published",
-              "builderSha256": digest(Path(__file__).read_bytes()),
+              "builderSha256": digest(historical_path("training/prepare_sanitized_corpus.py", root).read_bytes()),
               "sourceArchiveManifestSha256": digest((root / ARCHIVE / "manifest.json").read_bytes()),
               "historicalInputsArchivedPrivately": True, "activeLegacyGateChanged": False,
               "currentRepositoryPrivacyRemediationComplete": False, "remoteHistoryChanged": False,
@@ -561,6 +562,16 @@ def build(root=ROOT):
 
 def archive_inputs(root):
     archive = root / ARCHIVE
+    # A closed snapshot identifies historical versions; current code may evolve.
+    if (archive / "manifest.json").exists():
+        manifest = json.loads((archive / "manifest.json").read_text(encoding="utf-8"))
+        if set(manifest["filesSha256"]) != set(HISTORICAL):
+            raise ValueError("Private historical manifest changed")
+        for relative, expected in manifest["filesSha256"].items():
+            path = (archive / relative).resolve()
+            if not path.is_relative_to(archive.resolve()) or digest(path.read_bytes()) != expected:
+                raise ValueError("Private historical snapshot integrity failed")
+        return
     hashes = {}
     for relative in HISTORICAL:
         raw = (root / relative).read_bytes()

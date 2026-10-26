@@ -36,7 +36,7 @@ def normalize_curr(c):
 
 def run_python_suite(test_cases_path=None):
     if test_cases_path is None:
-        test_cases_path = ROOT / "tests" / "fixtures" / "test_suite_cases.json"
+        test_cases_path = ROOT / "tests" / "fixtures" / "sanitized_v1" / "test_suite_cases.json"
     with open(test_cases_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -265,7 +265,7 @@ def run_python_suite(test_cases_path=None):
     return results
 
 if __name__ == "__main__":
-    suite_file = sys.argv[1] if len(sys.argv) > 1 else ROOT / "tests" / "fixtures" / "test_suite_cases.json"
+    suite_file = sys.argv[1] if len(sys.argv) > 1 else ROOT / "tests" / "fixtures" / "sanitized_v1" / "test_suite_cases.json"
     res = run_python_suite(suite_file)
     print("======================================================")
     print("           MASROOF PYTHON ENGINE TEST REPORT          ")

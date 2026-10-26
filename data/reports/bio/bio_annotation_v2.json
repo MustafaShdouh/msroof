@@ -1,0 +1,362 @@
+{
+  "version": "2.0.0",
+  "scope": "BIO policy correction and split audit; no model fitting or independent accuracy",
+  "inputSha256": {
+    "data/training/sanitized_v1/bio_training_data.json": "3c315fdac92fdf9b147c2c8c4d38628ed71c3ba2b50c74ff5bfb5b9edd7ea13c",
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+    "data/annotations/entities/bio_v2_review.json": "a4654cdaff6e5504da7d3399de5f7ae331d189d0a5cdbd95099619bbb811adc2",
+    "config/contracts/bio_annotations.json": "5ca6e922aa2f52daf3442a281b668029e82dbce57178410523b8404a09eb2c33",
+    "data/annotations/businesses_200.jsonl": "81f0b434dc4b2549eedef5a1fc0bfec871bcd32f635ec10916a28fb3e74f8d13",
+    "data/training/splits/category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d",
+    "data/sources/businesses/brand_families.json": "34950f9c65e4982fa0df9af3699a3f2979e8b9d07d13251d5d34efa78ac9c66a",
+    "training/prepare_bio_labels.py": "e78607a8bd027d6d7b3a22f0c0b2ee44dd7b1f653b874d1adf723a8d7220c098",
+    "training/build_bio_training_set.py": "cf41c9f880c3ae21e4bba18a6d70d8342063e436c0972de04e99304ce5dc9136",
+    "training/evaluate_bio_sequence_tagger.py": "f5033be57f4ac797271f74f2927577708b40fa7528bc93850adb7cf9fbc6a23e",
+    "training/train_sequence_tagger.py": "88b724eda2e8352c2eafd44facd964d048fd4b69173d4e0c858e456755a08b70",
+    "src/python/entity_text.py": "688fcf0e4bda7dac395815589464d3f9f88f073d31b58aeadc798c83f3b98948",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "src/python/bio_sequence.py": "638d4e92693164ba468ca81c1b3646a01e1bf2c34efd14f64e829c41588e01fe",
+    "src/python/verify_engine.py": "f38f9e90caf681feda35f12827154fe2b1dbf841e3492d1e2abbb730f9164f7f",
+    "training/corpus_io.py": "3b24a9ea6ba2de041d6f709caa0a60b8b9b7ea6a42327f94fc13e7b7ff04387a"
+  },
+  "recordCount": 83,
+  "changedEntitySpans": [
+    {
+      "recordId": "TC_POS_ETI_001",
+      "label": "ACCT",
+      "before": {
+        "label": "ACCT",
+        "start": 51,
+        "end": 65,
+        "text": "ending in 3631"
+      },
+      "after": {
+        "label": "ACCT",
+        "start": 61,
+        "end": 65,
+        "text": "3631"
+      },
+      "reviewerType": "assistant"
+    },
+    {
+      "recordId": "TC_POS_ETI_004",
+      "label": "ACCT",
+      "before": {
+        "label": "ACCT",
+        "start": 51,
+        "end": 65,
+        "text": "ending in 5621"
+      },
+      "after": {
+        "label": "ACCT",
+        "start": 61,
+        "end": 65,
+        "text": "5621"
+      },
+      "reviewerType": "assistant"
+    },
+    {
+      "recordId": "TC_POS_ETI_005",
+      "label": "ACCT",
+      "before": {
+        "label": "ACCT",
+        "start": 47,
+        "end": 58,
+        "text": "ending 6894"
+      },
+      "after": {
+        "label": "ACCT",
+        "start": 54,
+        "end": 58,
+        "text": "6894"
+      },
+      "reviewerType": "assistant"
+    },
+    {
+      "recordId": "TC_POS_ZAI_003",
+      "label": "MERCHANT",
+      "before": {
+        "label": "MERCHANT",
+        "start": 50,
+        "end": 55,
+        "text": "COZMO"
+      },
+      "after": {
+        "label": "MERCHANT",
+        "start": 50,
+        "end": 65,
+        "text": "COZMO سوبرماركت"
+      },
+      "reviewerType": "assistant"
+    },
+    {
+      "recordId": "TC_POS_CAB_001",
+      "label": "ACCT",
+      "before": {
+        "label": "ACCT",
+        "start": 51,
+        "end": 65,
+        "text": "ending in 5719"
+      },
+      "after": {
+        "label": "ACCT",
+        "start": 61,
+        "end": 65,
+        "text": "5719"
+      },
+      "reviewerType": "assistant"
+    },
+    {
+      "recordId": "TC_POS_CAB_004",
+      "label": "ACCT",
+      "before": {
+        "label": "ACCT",
+        "start": 60,
+        "end": 71,
+        "text": "ending 9665"
+      },
+      "after": {
+        "label": "ACCT",
+        "start": 67,
+        "end": 71,
+        "text": "9665"
+      },
+      "reviewerType": "assistant"
+    },
+    {
+      "recordId": "TC_POS_CAB_006",
+      "label": "ACCT",
+      "before": {
+        "label": "ACCT",
+        "start": 67,
+        "end": 81,
+        "text": "ending in 8312"
+      },
+      "after": {
+        "label": "ACCT",
+        "start": 77,
+        "end": 81,
+        "text": "8312"
+      },
+      "reviewerType": "assistant"
+    },
+    {
+      "recordId": "TC_EDG_DEC_003",
+      "label": "ACCT",
+      "before": {
+        "label": "ACCT",
+        "start": 50,
+        "end": 64,
+        "text": "ending in 3051"
+      },
+      "after": {
+        "label": "ACCT",
+        "start": 60,
+        "end": 64,
+        "text": "3051"
+      },
+      "reviewerType": "assistant"
+    },
+    {
+      "recordId": "TC_EDG_DEC_006",
+      "label": "ACCT",
+      "before": {
+        "label": "ACCT",
+        "start": 48,
+        "end": 62,
+        "text": "ending in 6289"
+      },
+      "after": {
+        "label": "ACCT",
+        "start": 58,
+        "end": 62,
+        "text": "6289"
+      },
+      "reviewerType": "assistant"
+    },
+    {
+      "recordId": "TC_EDG_DEC_007",
+      "label": "ACCT",
+      "before": {
+        "label": "ACCT",
+        "start": 48,
+        "end": 62,
+        "text": "ending in 1297"
+      },
+      "after": {
+        "label": "ACCT",
+        "start": 58,
+        "end": 62,
+        "text": "1297"
+      },
+      "reviewerType": "assistant"
+    },
+    {
+      "recordId": "TC_EDG_WSP_003",
+      "label": "ACCT",
+      "before": {
+        "label": "ACCT",
+        "start": 54,
+        "end": 68,
+        "text": "ending in 2122"
+      },
+      "after": {
+        "label": "ACCT",
+        "start": 64,
+        "end": 68,
+        "text": "2122"
+      },
+      "reviewerType": "assistant"
+    }
+  ],
+  "artifactSha256": {
+    "data/training/sanitized_v2/bio_training_data.json": "fe5aa5f0012499f27a7505504c494d734bfc60d1c4546b670b91534c4a770f42",
+    "data/training/splits/bio_sanitized_v2.json": "4fdc75b9386ba111fb4275b31d091ac2a89a6fbc477285eda681f032f2d73b7c"
+  },
+  "unresolvedAnnotationRecords": [
+    {
+      "id": "TC_POS_ORA_005",
+      "reasons": [
+        "Named cash-in agent/outlet is present, but its counterparty role is not adjudicated in the old annotation"
+      ]
+    },
+    {
+      "id": "TC_EDG_DIA_002",
+      "reasons": [
+        "Phone-only counterparty identifier versus name-only slot is unresolved; do not label the payment-channel suffix as a name"
+      ]
+    }
+  ],
+  "oldSplit": {
+    "train": 58,
+    "validation": 25,
+    "jointGroupsCrossingFolds": 7,
+    "recordsInCrossingGroups": 27
+  },
+  "oldValidationTokenCoverage": {
+    "B-ACCT": {
+      "total": 22,
+      "unseen": 18
+    },
+    "B-AMT": {
+      "total": 25,
+      "unseen": 25
+    },
+    "B-BAL": {
+      "total": 24,
+      "unseen": 24
+    },
+    "B-CURR": {
+      "total": 25,
+      "unseen": 4
+    },
+    "B-MERCHANT": {
+      "total": 25,
+      "unseen": 11
+    },
+    "I-ACCT": {
+      "total": 7,
+      "unseen": 4
+    },
+    "I-MERCHANT": {
+      "total": 41,
+      "unseen": 19
+    },
+    "O": {
+      "total": 480,
+      "unseen": 47
+    }
+  },
+  "topicGroupingSensitivity": {
+    "note": "Source topics are not verified template families; this conservative stress grouping is not the selected split",
+    "groupSizes": [
+      58,
+      13,
+      10,
+      2
+    ]
+  },
+  "newSplit": {
+    "status": "prepared_development_only",
+    "groupSizes": [
+      7,
+      6,
+      5,
+      3,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "train": 63,
+    "validation": 16,
+    "quarantined": 4,
+    "quarantineReasons": {
+      "unresolved_annotation": 2,
+      "protected_merchant_category_identity": 2
+    }
+  },
+  "currencyAliasesAreNotAnnotationErrors": true,
+  "modelFitted": false,
+  "activeDataOrWeightsChanged": false,
+  "limits": [
+    "Assistant review is not human gold; all records remain synthetic development-exposed.",
+    "Known business/alias grouping is bounded, not verified exhaustive identity resolution.",
+    "Quarantine preserves the existing merchant-category reservation; no test-identity fitting or inference.",
+    "Current word-only tagger can memorize numeric tokens; richer features require a separate reviewed model change."
+  ]
+}

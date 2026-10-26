@@ -1,0 +1,62 @@
+{
+  "dataKind": "synthetic_privacy_transformed_developer_examples",
+  "independentEvaluationEligible": false,
+  "presets": {
+    "arab_pos": {
+      "sender": "ArabiBank",
+      "body": "JO\nYou have a purchase transaction on account 9289*040 from ZAIN MARKET - ROSARY SIST amount JOD 5.862 on 09/08/2001 21:50. Balance JOD 38.205."
+    },
+    "cliq_in": {
+      "sender": "ArabiBank",
+      "body": "JO\nJOD9.864 has been credited to 7588*671from QEAP VKTPPFE JKHFGO QHKWA as CliQ transfer Balance 35.653JOD"
+    },
+    "cliq_out": {
+      "sender": "Etihad",
+      "body": "JO\nOutward CliQ of JOD 97.843 debited from Acc. *2545 on 12/06/2001 to ONCBL GWDVGM DV-DFFLN. Available balance JOD 556.239."
+    },
+    "orange_wallet": {
+      "sender": "OrangeMoney",
+      "body": "JO\nتم دفع مبلغ 8.343 JOD بنجاح إلى تاجر CARREFOUR EXPRESS بواسطة محفظة أورنج موني. رصيدك المتبقي 99.876 JOD. رقم العملية: 528566."
+    },
+    "zain_bill": {
+      "sender": "ZainCash",
+      "body": "JO\nتم تسديد فاتورة كهرباء إربد بنجاح بقيمة 23.768 JOD من خلال خدمة إي فواتيركم. رصيدك الحالي هو 48.75 JOD."
+    },
+    "fx_usd_jod": {
+      "sender": "ArabiBank",
+      "body": "Purchase of USD 50.47 billed as JOD 89.23 on card *4089 at AMAZON. Avail bal JOD 678."
+    },
+    "farm_to_table": {
+      "sender": "Chase",
+      "body": "Purchase of $32.01 at FARM TO TABLE CAFE on card ending 6965. Available balance: $943.32."
+    },
+    "balance_inquiry": {
+      "sender": "ArabiBank",
+      "body": "JOdson 10/07/2001 13:01. Balance JOD 14.768."
+    },
+    "incomplete_tx": {
+      "sender": "ArabiBank",
+      "body": "You have a purchase transaction on account 3685*605 from ZAIN MARKET"
+    },
+    "internal_transfer": {
+      "sender": "ArabiBank",
+      "body": "JO\nJOD 7.333 has been debited from 8452*834 and has been credited to 1741*349 on 09/05/2001 . Balance JOD 43.353"
+    },
+    "trap_otp": {
+      "sender": "ArabiBank",
+      "body": "JO\nDO NOT SHARE THIS CODE.\nOne Time Password: 564181\nPurpose: Purchase of amount 3 JOD from PRIME CINEMAS AL ABDALI\nFees apply on international transactions."
+    },
+    "declined": {
+      "sender": "CapitalBank",
+      "body": "حركة مرفوضة على بطاقتك المنتهية ب 2739 بقيمة JOD 1.932 بسبب عدم كفاية الرصيد, للمزيد اتصل على 063194439"
+    },
+    "chat_noise": {
+      "sender": "+522285334302",
+      "body": "حولتلك 25 دنانير على كليك شيك عليها بالله"
+    },
+    "gibberish": {
+      "sender": "Unknown",
+      "body": "BLAAAAH IANBDWANID"
+    }
+  }
+}

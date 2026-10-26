@@ -1,6 +1,7 @@
 """Assert equivalent numeric scripts preserve Jordan SMS behavior and guards."""
 
 import json
+import copy
 from pathlib import Path
 import sys
 
@@ -22,7 +23,7 @@ def main() -> int:
         raise AssertionError("Contact guard must run before message normalization")
     equivalent_cases = 0
     for name in ("test_suite_cases.json", "qa_adversarial_cases.json"):
-        payload = json.loads((ROOT / "tests/fixtures" / name).read_text(encoding="utf-8"))
+        payload = json.loads((ROOT / "tests/fixtures/sanitized_v1" / name).read_text(encoding="utf-8"))
         cases = payload["testCases"] if isinstance(payload, dict) else payload
         for case in cases:
             baseline = engine.predict(case["sender"], case["body"])
@@ -30,7 +31,15 @@ def main() -> int:
                 body = case["body"].translate(str.maketrans("0123456789", digits))
                 if separators:
                     body = body.replace(".", "٫").replace(",", "٬")
-                if engine.predict(case["sender"], body) != baseline:
+                expected = copy.deepcopy(baseline)
+                # Exact source names now intentionally retain the input script;
+                # financial values/decisions must still remain identical.
+                if expected.get("data"):
+                    for field in ("merchantOrParty", "merchant_or_party"):
+                        if isinstance(expected["data"].get(field), str):
+                            name = expected["data"][field].translate(str.maketrans("0123456789", digits))
+                            expected["data"][field] = name.replace(".", "٫").replace(",", "٬") if separators else name
+                if engine.predict(case["sender"], body) != expected:
                     raise AssertionError(f"Numeric script changed a structured result: {case['id']}")
                 equivalent_cases += 1
     for sender in ("+٩٦٢٧٩١٢٣٤٥٦٧", "٠٧٩١٢٣٤٥٦٧", "+۹۶۲۷۹۱۲۳۴۵۶۷"):

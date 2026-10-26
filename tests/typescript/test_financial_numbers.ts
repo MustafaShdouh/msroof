@@ -26,15 +26,23 @@ for (const testCase of vectors) {
 }
 let equivalentCases = 0;
 for (const name of ['test_suite_cases.json', 'qa_adversarial_cases.json']) {
-  const payload = read(`tests/fixtures/${name}`);
+  const payload = read(`tests/fixtures/sanitized_v1/${name}`);
   for (const testCase of Array.isArray(payload) ? payload : payload.testCases) {
     const baseline = MasroofEngine.analyze({ sender: testCase.sender, body: testCase.body });
-    const browserBaseline = JSON.stringify(browser.analyze(testCase.sender, testCase.body, false).result);
+    const browserBaseline = browser.analyze(testCase.sender, testCase.body, false).result;
     for (const [digits, separators] of [['٠١٢٣٤٥٦٧٨٩', false], ['۰۱۲۳۴۵۶۷۸۹', false], ['٠١٢٣٤٥٦٧٨٩', true]] as const) {
       let body = testCase.body.replace(/[0-9]/g, (digit: string) => digits[Number(digit)]);
       if (separators) body = body.replace(/\./g, '٫').replace(/,/g, '٬');
-      assert.deepEqual(MasroofEngine.analyze({ sender: testCase.sender, body }), baseline, testCase.id);
-      assert.equal(JSON.stringify(browser.analyze(testCase.sender, body, false).result), browserBaseline, `Browser: ${testCase.id}`);
+      const expected = structuredClone(baseline);
+      const expectedBrowser = JSON.parse(JSON.stringify(browserBaseline));
+      for (const output of [expected, expectedBrowser]) {
+        if (typeof output.data?.merchantOrParty === 'string') {
+          output.data.merchantOrParty = output.data.merchantOrParty.replace(/[0-9]/g, (digit: string) => digits[Number(digit)]);
+          if (separators) output.data.merchantOrParty = output.data.merchantOrParty.replace(/\./g, '٫').replace(/,/g, '٬');
+        }
+      }
+      assert.deepEqual(MasroofEngine.analyze({ sender: testCase.sender, body }), expected, testCase.id);
+      assert.equal(JSON.stringify(browser.analyze(testCase.sender, body, false).result), JSON.stringify(expectedBrowser), `Browser: ${testCase.id}`);
       equivalentCases++;
     }
   }

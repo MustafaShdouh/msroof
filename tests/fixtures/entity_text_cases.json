@@ -1,0 +1,60 @@
+{
+  "scope": "Authored source-name policy safeguards; not independent evaluation or training",
+  "cases": [
+    {
+      "id": "diacritics_and_spacing",
+      "text": "You have a purchase transaction on account *6842 from أَسْوَاقِ  السَّلَامِ amount JOD 12.500. Balance JOD 90.000.",
+      "name": "أَسْوَاقِ  السَّلَامِ"
+    },
+    {
+      "id": "joined_mask",
+      "text": "JOD 3.600 has been credited to 9014*834from SYNTHETIC FULL NAME as CliQ transfer Balance JOD 90.000.",
+      "name": "SYNTHETIC FULL NAME"
+    },
+    {
+      "id": "next_sentence",
+      "text": "You have a purchase transaction on account *6842 from SYNTHETIC SHOP. Your available balance is JOD 90.000. Amount JOD 12.500.",
+      "name": "SYNTHETIC SHOP"
+    },
+    {
+      "id": "arabic_word_boundary",
+      "text": "تم قيد حوالة كليك بمبلغ 12.500 د.أ لحسابك *6842 من شكن تمسظ ذفاشكفح نذكذ. رصيدك المتاح هو 90.000 د.أ.",
+      "name": "شكن تمسظ ذفاشكفح نذكذ"
+    },
+    {
+      "id": "emoji_before_name",
+      "text": "🧾 You have a purchase transaction on account *6842 from RAW  SHOP amount JOD 12.500. Balance JOD 90.000.",
+      "name": "RAW  SHOP"
+    },
+    {
+      "id": "name_digits",
+      "text": "You have a purchase transaction on account *6842 from Cafe ۷ amount JOD 12.500. Balance JOD 90.000.",
+      "name": "Cafe ۷"
+    },
+    {
+      "id": "company_descriptor",
+      "text": "تم تسديد فاتورة شركة الكهرباء الأردنية بنجاح بقيمة 12.500 JOD من محفظتك. الرصيد المتاح 90.000 JOD.",
+      "name": "شركة الكهرباء الأردنية"
+    },
+    {
+      "id": "repeated_name",
+      "text": "أسواق السلام reminder. You have a purchase transaction on account *6842 from أَسْوَاقِ  السَّلَامِ amount JOD 12.500. Balance JOD 90.000.",
+      "name": "أَسْوَاقِ  السَّلَامِ"
+    },
+    {
+      "id": "escaped_break",
+      "text": "You have a purchase transaction on account *6842 from RAW\\nNAME amount JOD 12.500. Balance JOD 90.000.",
+      "name": "RAW\\nNAME"
+    },
+    {
+      "id": "prototype_merchant",
+      "text": "You have a purchase transaction on account *6842 from constructor amount JOD 12.500. Balance JOD 90.000.",
+      "name": "constructor"
+    },
+    {
+      "id": "prototype_named_merchant",
+      "text": "You have a purchase transaction on account *6842 from __proto__ amount JOD 12.500. Balance JOD 90.000.",
+      "name": "__proto__"
+    }
+  ]
+}

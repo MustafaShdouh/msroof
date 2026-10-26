@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "reason": "Service availability notice (non-transaction)",
+  "servicePattern": "\\b(?:services?|transfers?|payments?|banking|cards?)\\b|(?:خدمات|خدمة|حوالات|حوالة|تحويلات|تحويل|التحويل|الدفع|بطاقات)",
+  "completionPattern": "\\b(?:has|have)\\s+been\\s+(?:debited|credited|paid|withdrawn)\\b|\\b(?:debited|credited)\\s+(?:from|to)\\b|\\byou\\s+have\\s+(?:a\\s+)?purchase\\s+transaction\\b|\\b(?:purchase|payment|transfer|withdrawal)\\s+(?:(?:was|has\\s+been)\\s+)?(?:completed|successful)\\b|(?:^|[^A-Za-z\\u0621-\\u064A])(?:تم|تمت)\\s+(?:خصم|قيد|استلام|تحويل|شراء|تسديد|دفع|[إا]يداع|سحب)",
+  "availabilityPattern": "\\b(?:will\\s+be|is|are|temporarily)\\s+(?:(?:temporarily|currently)\\s+)?(?:unavailable|not\\s+available|suspended|down)\\b|\\bwill\\s+(?:stop|be\\s+stopped)\\b|غير\\s+متاح(?:ة|ه)?|(?:سيتم|تم)\\s+(?:تعليق|[إا]يقاف)\\s+(?:الخدمة|الخدمات|التحويل|الحوالات)|ستتوقف|متوقف(?:ة|ه)|\\b(?:services?|transfers?|payments?)\\s+(?:are\\s+|is\\s+)?(?:available\\s+again|restored|resumed)\\b|\\bwill\\s+not\\s+be\\s+available\\b|تم\\s+استئناف\\s+(?:ال)?(?:خدمة|خدمات|تحويل)|عادت\\s+(?:الخدمة|الخدمات)"
+}

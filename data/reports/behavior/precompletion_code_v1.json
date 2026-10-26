@@ -1,0 +1,3112 @@
+{
+  "reportVersion": "1.0.0",
+  "scope": "Development behavior/conformance diagnostics only; no independent benchmark accuracy",
+  "inputSha256": {
+    "config/contracts/transaction_behavior.json": "e06693e71398f60a220488a779902fc2d38d2ba7c19570df395fddf551e2bf4b",
+    "tests/fixtures/transaction_behavior_cases.json": "68b8e87d29fcc2513886d26efd37adc26934ba74c396f373acbcf78034476bc5",
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+    "tests/fixtures/sanitized_v1/qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+    "tests/fixtures/service_notice_cases.json": "eb12912fe8fe97ecc73e5fc74a856e58834074751b6ee2dc37859ea1603826c2",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "tools/browser/presets.json": "d9fa497e8dd4627cd4fc83f30749f31aa6f07e1d0858143162d94c50808266b3",
+    "src/python/verify_engine.py": "ce733743b8909de09e6841ca8814873635544ebe52445e9cac90c06d3dfe3caf",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "src/python/service_notice.py": "92cf27f5255e9a37f53f267063ba12913638c4cc1bfbc75652c2931c6f6136d3",
+    "src/python/legacy_transaction_model.py": "911c45201bc21c1926ec4b03ef6e340376a5b292491225c0a81f7a1f97f32100",
+    "src/typescript/LegacyTransactionModel.ts": "5f060dd375f4a3f568971282339c0c389fdaeb54951ffa80f83642193a7d0f59",
+    "tools/browser/bundle_engine.mjs": "45284623bfeed0f4905c71faa139aa588d3405acb75deebdef3e9c5ec53369c3",
+    "src/python/entity_text.py": "688fcf0e4bda7dac395815589464d3f9f88f073d31b58aeadc798c83f3b98948",
+    "src/typescript/EntityText.ts": "99fdd47bce69d1df5096ab9533158fbf525cd471b36caaa9ce7026b4c355dc7e",
+    "config/contracts/entity_text.json": "a1d19d070521d50590b2ab9b1925507b936d0ffc19d85431198c4166fc1a1637",
+    "tests/fixtures/entity_text_cases.json": "30e344f1ab008c13ce15e49970d521c181313cb65cfe74c89cd54452e8204842",
+    "src/typescript/MasroofEngine.ts": "2409f9159ef2815c3f576cad6d5230a9c5c99da1507dd04fe0a3c61c9f9e1cc6",
+    "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+    "src/typescript/ServiceNotice.ts": "a6e9976cd5f62e18d926260a2681cac6c0834ab317eeeb33df609d7bf8c907c5",
+    "config/contracts/service_notice.json": "1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3",
+    "src/python/authorization_request.py": "fa8f7a4598e46c3e637e74d4c485029d008a0486bfb25696851e8d024b333814",
+    "src/typescript/AuthorizationRequest.ts": "0c45b2b8c327e53576495a3a7b2fa0ec3b7757197eb6fd0cab9571a212b281c2",
+    "config/contracts/authorization_request.json": "d927714265710faf8f80a1053a1b17bfbe9a0eff56208b820295dd616f7b555b",
+    "tools/browser/tester.html": "1f4747892d12fed0b6003f2199ec738454bd1595c8d502049bb8489e7820982c",
+    "tools/browser/build_tester_ui.py": "142da2f38aa4f1f731d41e65531f5174245b04921378e2711412fa6422652d18",
+    "tools/evaluation/probe_runtime.ts": "612047228bc45410d381484fde241cb1430a61ce6f9fe5d80d6c7d08670db21a",
+    "training/evaluate_behavior.py": "3cfcbb8193a8d0ed1aaf54758a9a4d7833bb3e597141637eebb9e337554506d7",
+    "training/corpus_io.py": "3b24a9ea6ba2de041d6f709caa0a60b8b9b7ea6a42327f94fc13e7b7ff04387a"
+  },
+  "inputAdapter": "text -> legacy body; absent/null sender -> empty string; contact flag preserved; no sender identity invented",
+  "runtimes": {
+    "python": {
+      "conformanceProbes": {
+        "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+        "caseCount": 31,
+        "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+        "trackingDecisionConfusion": {
+          "include": {
+            "include": 12,
+            "exclude": 3,
+            "review": 0,
+            "unsupported": 0
+          },
+          "exclude": {
+            "include": 1,
+            "exclude": 10,
+            "review": 0,
+            "unsupported": 0
+          },
+          "review": {
+            "include": 2,
+            "exclude": 3,
+            "review": 0,
+            "unsupported": 0
+          }
+        },
+        "trackingFailures": [
+          {
+            "caseId": "p2p_outgoing",
+            "expected": "include",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "two_masks_unknown_ownership",
+            "expected": "review",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "contact_metadata_alone",
+            "expected": "include",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "phone_sender_metadata_alone",
+            "expected": "include",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "completed_missing_amount",
+            "expected": "review",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "completed_ambiguous_amount",
+            "expected": "review",
+            "actual": "include"
+          },
+          {
+            "caseId": "completed_unknown_direction",
+            "expected": "review",
+            "actual": "include"
+          },
+          {
+            "caseId": "completion_unclear",
+            "expected": "review",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "payment_request",
+            "expected": "exclude",
+            "actual": "include"
+          }
+        ],
+        "completionStatusConfusion": {
+          "completed": {
+            "unsupported": 21
+          },
+          "non_transaction": {
+            "unsupported": 9
+          },
+          "uncertain": {
+            "unsupported": 1
+          }
+        },
+        "unsupportedContractFields": [
+          "contractVersion",
+          "transactionStatus",
+          "reasonCodes",
+          "currencyResolution",
+          "transferRelationship",
+          "categoryStatus"
+        ],
+        "trackingDecision": {
+          "correct": 22,
+          "total": 31,
+          "unsupported": 0
+        },
+        "ordinaryFalseInclusion": {
+          "correctOrCount": 1,
+          "total": 9,
+          "rate": 0.1111111111111111
+        },
+        "eligibleMissOrReview": {
+          "correctOrCount": 3,
+          "total": 15,
+          "rate": 0.2
+        },
+        "ownAccountLeakage": {
+          "correctOrCount": 0,
+          "total": 2,
+          "rate": 0.0
+        },
+        "ownAccountExclusions": {
+          "correctOrCount": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "p2pCoverage": {
+          "correctOrCount": 3,
+          "total": 4,
+          "rate": 0.75
+        },
+        "p2pByDirection": {
+          "incoming": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "outgoing": {
+            "correctOrCount": 2,
+            "total": 3,
+            "rate": 0.6666666666666666
+          }
+        },
+        "amountCurrencyAllEligible": {
+          "correctOrCount": 12,
+          "total": 15,
+          "rate": 0.8
+        },
+        "amountCurrencyAcceptedEligible": {
+          "correctOrCount": 12,
+          "total": 12,
+          "rate": 1.0
+        },
+        "directionAllEligible": {
+          "correctOrCount": 11,
+          "total": 15,
+          "rate": 0.7333333333333333
+        },
+        "directionAcceptedEligible": {
+          "correctOrCount": 11,
+          "total": 12,
+          "rate": 0.9166666666666666
+        },
+        "defaultCurrencyPolicy": {
+          "caseCount": 2,
+          "resolutionMarkerScorable": false,
+          "fallbackValueAgreementOnly": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          }
+        },
+        "category": {
+          "eligibleOutgoing": 13,
+          "legacyClaimedAssignments": 1,
+          "unsupportedTaxonomyAssignments": 1,
+          "canonicalCoverage": {
+            "correctOrCount": 0,
+            "total": 13,
+            "rate": 0.0
+          },
+          "canonicalAnsweredAgreement": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "unsupportedContextAssignments": 0,
+          "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+        },
+        "transferSlices": {
+          "not_transfer": {
+            "caseCount": 15,
+            "trackingCorrect": 9
+          },
+          "own_accounts": {
+            "caseCount": 2,
+            "trackingCorrect": 2
+          },
+          "other_person": {
+            "caseCount": 4,
+            "trackingCorrect": 3
+          },
+          "unknown": {
+            "caseCount": 1,
+            "trackingCorrect": 0
+          },
+          "not_applicable": {
+            "caseCount": 9,
+            "trackingCorrect": 8
+          }
+        }
+      },
+      "languageSlices": {
+        "english": {
+          "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+          "caseCount": 25,
+          "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+          "trackingDecisionConfusion": {
+            "include": {
+              "include": 9,
+              "exclude": 3,
+              "review": 0,
+              "unsupported": 0
+            },
+            "exclude": {
+              "include": 1,
+              "exclude": 7,
+              "review": 0,
+              "unsupported": 0
+            },
+            "review": {
+              "include": 2,
+              "exclude": 3,
+              "review": 0,
+              "unsupported": 0
+            }
+          },
+          "trackingFailures": [
+            {
+              "caseId": "p2p_outgoing",
+              "expected": "include",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "two_masks_unknown_ownership",
+              "expected": "review",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "contact_metadata_alone",
+              "expected": "include",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "phone_sender_metadata_alone",
+              "expected": "include",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "completed_missing_amount",
+              "expected": "review",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "completed_ambiguous_amount",
+              "expected": "review",
+              "actual": "include"
+            },
+            {
+              "caseId": "completed_unknown_direction",
+              "expected": "review",
+              "actual": "include"
+            },
+            {
+              "caseId": "completion_unclear",
+              "expected": "review",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "payment_request",
+              "expected": "exclude",
+              "actual": "include"
+            }
+          ],
+          "completionStatusConfusion": {
+            "completed": {
+              "unsupported": 17
+            },
+            "non_transaction": {
+              "unsupported": 7
+            },
+            "uncertain": {
+              "unsupported": 1
+            }
+          },
+          "unsupportedContractFields": [
+            "contractVersion",
+            "transactionStatus",
+            "reasonCodes",
+            "currencyResolution",
+            "transferRelationship",
+            "categoryStatus"
+          ],
+          "trackingDecision": {
+            "correct": 16,
+            "total": 25,
+            "unsupported": 0
+          },
+          "ordinaryFalseInclusion": {
+            "correctOrCount": 1,
+            "total": 7,
+            "rate": 0.14285714285714285
+          },
+          "eligibleMissOrReview": {
+            "correctOrCount": 3,
+            "total": 12,
+            "rate": 0.25
+          },
+          "ownAccountLeakage": {
+            "correctOrCount": 0,
+            "total": 1,
+            "rate": 0.0
+          },
+          "ownAccountExclusions": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "p2pCoverage": {
+            "correctOrCount": 2,
+            "total": 3,
+            "rate": 0.6666666666666666
+          },
+          "p2pByDirection": {
+            "incoming": {
+              "correctOrCount": 1,
+              "total": 1,
+              "rate": 1.0
+            },
+            "outgoing": {
+              "correctOrCount": 1,
+              "total": 2,
+              "rate": 0.5
+            }
+          },
+          "amountCurrencyAllEligible": {
+            "correctOrCount": 9,
+            "total": 12,
+            "rate": 0.75
+          },
+          "amountCurrencyAcceptedEligible": {
+            "correctOrCount": 9,
+            "total": 9,
+            "rate": 1.0
+          },
+          "directionAllEligible": {
+            "correctOrCount": 8,
+            "total": 12,
+            "rate": 0.6666666666666666
+          },
+          "directionAcceptedEligible": {
+            "correctOrCount": 8,
+            "total": 9,
+            "rate": 0.8888888888888888
+          },
+          "defaultCurrencyPolicy": {
+            "caseCount": 2,
+            "resolutionMarkerScorable": false,
+            "fallbackValueAgreementOnly": {
+              "correctOrCount": 2,
+              "total": 2,
+              "rate": 1.0
+            }
+          },
+          "category": {
+            "eligibleOutgoing": 10,
+            "legacyClaimedAssignments": 1,
+            "unsupportedTaxonomyAssignments": 1,
+            "canonicalCoverage": {
+              "correctOrCount": 0,
+              "total": 10,
+              "rate": 0.0
+            },
+            "canonicalAnsweredAgreement": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "unsupportedContextAssignments": 0,
+            "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+          },
+          "transferSlices": {
+            "not_transfer": {
+              "caseCount": 13,
+              "trackingCorrect": 7
+            },
+            "own_accounts": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "other_person": {
+              "caseCount": 3,
+              "trackingCorrect": 2
+            },
+            "unknown": {
+              "caseCount": 1,
+              "trackingCorrect": 0
+            },
+            "not_applicable": {
+              "caseCount": 7,
+              "trackingCorrect": 6
+            }
+          }
+        },
+        "arabic": {
+          "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+          "caseCount": 5,
+          "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+          "trackingDecisionConfusion": {
+            "include": {
+              "include": 2,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            },
+            "exclude": {
+              "include": 0,
+              "exclude": 3,
+              "review": 0,
+              "unsupported": 0
+            },
+            "review": {
+              "include": 0,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            }
+          },
+          "trackingFailures": [],
+          "completionStatusConfusion": {
+            "completed": {
+              "unsupported": 3
+            },
+            "non_transaction": {
+              "unsupported": 2
+            },
+            "uncertain": {
+              "unsupported": 0
+            }
+          },
+          "unsupportedContractFields": [
+            "contractVersion",
+            "transactionStatus",
+            "reasonCodes",
+            "currencyResolution",
+            "transferRelationship",
+            "categoryStatus"
+          ],
+          "trackingDecision": {
+            "correct": 5,
+            "total": 5,
+            "unsupported": 0
+          },
+          "ordinaryFalseInclusion": {
+            "correctOrCount": 0,
+            "total": 2,
+            "rate": 0.0
+          },
+          "eligibleMissOrReview": {
+            "correctOrCount": 0,
+            "total": 2,
+            "rate": 0.0
+          },
+          "ownAccountLeakage": {
+            "correctOrCount": 0,
+            "total": 1,
+            "rate": 0.0
+          },
+          "ownAccountExclusions": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "p2pCoverage": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "p2pByDirection": {
+            "incoming": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "outgoing": {
+              "correctOrCount": 1,
+              "total": 1,
+              "rate": 1.0
+            }
+          },
+          "amountCurrencyAllEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "amountCurrencyAcceptedEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "directionAllEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "directionAcceptedEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "defaultCurrencyPolicy": {
+            "caseCount": 0,
+            "resolutionMarkerScorable": false,
+            "fallbackValueAgreementOnly": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            }
+          },
+          "category": {
+            "eligibleOutgoing": 2,
+            "legacyClaimedAssignments": 0,
+            "unsupportedTaxonomyAssignments": 0,
+            "canonicalCoverage": {
+              "correctOrCount": 0,
+              "total": 2,
+              "rate": 0.0
+            },
+            "canonicalAnsweredAgreement": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "unsupportedContextAssignments": 0,
+            "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+          },
+          "transferSlices": {
+            "not_transfer": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "own_accounts": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "other_person": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "unknown": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "not_applicable": {
+              "caseCount": 2,
+              "trackingCorrect": 2
+            }
+          }
+        },
+        "mixed": {
+          "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+          "caseCount": 1,
+          "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+          "trackingDecisionConfusion": {
+            "include": {
+              "include": 1,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            },
+            "exclude": {
+              "include": 0,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            },
+            "review": {
+              "include": 0,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            }
+          },
+          "trackingFailures": [],
+          "completionStatusConfusion": {
+            "completed": {
+              "unsupported": 1
+            },
+            "non_transaction": {
+              "unsupported": 0
+            },
+            "uncertain": {
+              "unsupported": 0
+            }
+          },
+          "unsupportedContractFields": [
+            "contractVersion",
+            "transactionStatus",
+            "reasonCodes",
+            "currencyResolution",
+            "transferRelationship",
+            "categoryStatus"
+          ],
+          "trackingDecision": {
+            "correct": 1,
+            "total": 1,
+            "unsupported": 0
+          },
+          "ordinaryFalseInclusion": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "eligibleMissOrReview": {
+            "correctOrCount": 0,
+            "total": 1,
+            "rate": 0.0
+          },
+          "ownAccountLeakage": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "ownAccountExclusions": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "p2pCoverage": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "p2pByDirection": {
+            "incoming": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "outgoing": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            }
+          },
+          "amountCurrencyAllEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "amountCurrencyAcceptedEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "directionAllEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "directionAcceptedEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "defaultCurrencyPolicy": {
+            "caseCount": 0,
+            "resolutionMarkerScorable": false,
+            "fallbackValueAgreementOnly": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            }
+          },
+          "category": {
+            "eligibleOutgoing": 1,
+            "legacyClaimedAssignments": 0,
+            "unsupportedTaxonomyAssignments": 0,
+            "canonicalCoverage": {
+              "correctOrCount": 0,
+              "total": 1,
+              "rate": 0.0
+            },
+            "canonicalAnsweredAgreement": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "unsupportedContextAssignments": 0,
+            "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+          },
+          "transferSlices": {
+            "not_transfer": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "own_accounts": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "other_person": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "unknown": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "not_applicable": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            }
+          }
+        }
+      },
+      "frozenRegressionStrict": {
+        "cases": 226,
+        "classificationCorrect": 226,
+        "runtimeErrors": 0,
+        "falsePositive": 0,
+        "falseNegative": 0,
+        "fieldValues": {
+          "type": {
+            "allEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            }
+          },
+          "amount": {
+            "allEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            }
+          },
+          "currency": {
+            "allEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            }
+          },
+          "merchantOrParty": {
+            "allEligible": {
+              "correctOrCount": 96,
+              "total": 99,
+              "rate": 0.9696969696969697
+            },
+            "acceptedEligible": {
+              "correctOrCount": 96,
+              "total": 99,
+              "rate": 0.9696969696969697
+            }
+          },
+          "accountMask": {
+            "allEligible": {
+              "correctOrCount": 71,
+              "total": 81,
+              "rate": 0.8765432098765432
+            },
+            "acceptedEligible": {
+              "correctOrCount": 71,
+              "total": 81,
+              "rate": 0.8765432098765432
+            }
+          },
+          "balance": {
+            "allEligible": {
+              "correctOrCount": 104,
+              "total": 104,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 104,
+              "total": 104,
+              "rate": 1.0
+            }
+          }
+        },
+        "failures": [
+          {
+            "caseId": "TC_POS_ETI_001",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_ETI_004",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_ETI_005",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_ZAI_003",
+            "field": "merchantOrParty"
+          },
+          {
+            "caseId": "TC_POS_CAB_001",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_CAB_004",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_CAB_006",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_DEC_003",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_DEC_006",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_DEC_007",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_WSP_003",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDGE_DIACRITICS_001",
+            "field": "merchantOrParty"
+          },
+          {
+            "caseId": "TC_EDGE_DIACRITICS_002",
+            "field": "merchantOrParty"
+          }
+        ],
+        "comparison": "Decimal-exact numbers and normalized whole strings; no substring acceptance or money tolerance",
+        "exactCharacterSpans": {
+          "scorable": false,
+          "reason": "No independently reviewed span annotations available"
+        }
+      }
+    },
+    "typescript": {
+      "conformanceProbes": {
+        "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+        "caseCount": 31,
+        "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+        "trackingDecisionConfusion": {
+          "include": {
+            "include": 12,
+            "exclude": 3,
+            "review": 0,
+            "unsupported": 0
+          },
+          "exclude": {
+            "include": 1,
+            "exclude": 10,
+            "review": 0,
+            "unsupported": 0
+          },
+          "review": {
+            "include": 2,
+            "exclude": 3,
+            "review": 0,
+            "unsupported": 0
+          }
+        },
+        "trackingFailures": [
+          {
+            "caseId": "p2p_outgoing",
+            "expected": "include",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "two_masks_unknown_ownership",
+            "expected": "review",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "contact_metadata_alone",
+            "expected": "include",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "phone_sender_metadata_alone",
+            "expected": "include",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "completed_missing_amount",
+            "expected": "review",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "completed_ambiguous_amount",
+            "expected": "review",
+            "actual": "include"
+          },
+          {
+            "caseId": "completed_unknown_direction",
+            "expected": "review",
+            "actual": "include"
+          },
+          {
+            "caseId": "completion_unclear",
+            "expected": "review",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "payment_request",
+            "expected": "exclude",
+            "actual": "include"
+          }
+        ],
+        "completionStatusConfusion": {
+          "completed": {
+            "unsupported": 21
+          },
+          "non_transaction": {
+            "unsupported": 9
+          },
+          "uncertain": {
+            "unsupported": 1
+          }
+        },
+        "unsupportedContractFields": [
+          "contractVersion",
+          "transactionStatus",
+          "reasonCodes",
+          "currencyResolution",
+          "transferRelationship",
+          "categoryStatus"
+        ],
+        "trackingDecision": {
+          "correct": 22,
+          "total": 31,
+          "unsupported": 0
+        },
+        "ordinaryFalseInclusion": {
+          "correctOrCount": 1,
+          "total": 9,
+          "rate": 0.1111111111111111
+        },
+        "eligibleMissOrReview": {
+          "correctOrCount": 3,
+          "total": 15,
+          "rate": 0.2
+        },
+        "ownAccountLeakage": {
+          "correctOrCount": 0,
+          "total": 2,
+          "rate": 0.0
+        },
+        "ownAccountExclusions": {
+          "correctOrCount": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "p2pCoverage": {
+          "correctOrCount": 3,
+          "total": 4,
+          "rate": 0.75
+        },
+        "p2pByDirection": {
+          "incoming": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "outgoing": {
+            "correctOrCount": 2,
+            "total": 3,
+            "rate": 0.6666666666666666
+          }
+        },
+        "amountCurrencyAllEligible": {
+          "correctOrCount": 12,
+          "total": 15,
+          "rate": 0.8
+        },
+        "amountCurrencyAcceptedEligible": {
+          "correctOrCount": 12,
+          "total": 12,
+          "rate": 1.0
+        },
+        "directionAllEligible": {
+          "correctOrCount": 11,
+          "total": 15,
+          "rate": 0.7333333333333333
+        },
+        "directionAcceptedEligible": {
+          "correctOrCount": 11,
+          "total": 12,
+          "rate": 0.9166666666666666
+        },
+        "defaultCurrencyPolicy": {
+          "caseCount": 2,
+          "resolutionMarkerScorable": false,
+          "fallbackValueAgreementOnly": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          }
+        },
+        "category": {
+          "eligibleOutgoing": 13,
+          "legacyClaimedAssignments": 1,
+          "unsupportedTaxonomyAssignments": 1,
+          "canonicalCoverage": {
+            "correctOrCount": 0,
+            "total": 13,
+            "rate": 0.0
+          },
+          "canonicalAnsweredAgreement": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "unsupportedContextAssignments": 0,
+          "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+        },
+        "transferSlices": {
+          "not_transfer": {
+            "caseCount": 15,
+            "trackingCorrect": 9
+          },
+          "own_accounts": {
+            "caseCount": 2,
+            "trackingCorrect": 2
+          },
+          "other_person": {
+            "caseCount": 4,
+            "trackingCorrect": 3
+          },
+          "unknown": {
+            "caseCount": 1,
+            "trackingCorrect": 0
+          },
+          "not_applicable": {
+            "caseCount": 9,
+            "trackingCorrect": 8
+          }
+        }
+      },
+      "languageSlices": {
+        "english": {
+          "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+          "caseCount": 25,
+          "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+          "trackingDecisionConfusion": {
+            "include": {
+              "include": 9,
+              "exclude": 3,
+              "review": 0,
+              "unsupported": 0
+            },
+            "exclude": {
+              "include": 1,
+              "exclude": 7,
+              "review": 0,
+              "unsupported": 0
+            },
+            "review": {
+              "include": 2,
+              "exclude": 3,
+              "review": 0,
+              "unsupported": 0
+            }
+          },
+          "trackingFailures": [
+            {
+              "caseId": "p2p_outgoing",
+              "expected": "include",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "two_masks_unknown_ownership",
+              "expected": "review",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "contact_metadata_alone",
+              "expected": "include",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "phone_sender_metadata_alone",
+              "expected": "include",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "completed_missing_amount",
+              "expected": "review",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "completed_ambiguous_amount",
+              "expected": "review",
+              "actual": "include"
+            },
+            {
+              "caseId": "completed_unknown_direction",
+              "expected": "review",
+              "actual": "include"
+            },
+            {
+              "caseId": "completion_unclear",
+              "expected": "review",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "payment_request",
+              "expected": "exclude",
+              "actual": "include"
+            }
+          ],
+          "completionStatusConfusion": {
+            "completed": {
+              "unsupported": 17
+            },
+            "non_transaction": {
+              "unsupported": 7
+            },
+            "uncertain": {
+              "unsupported": 1
+            }
+          },
+          "unsupportedContractFields": [
+            "contractVersion",
+            "transactionStatus",
+            "reasonCodes",
+            "currencyResolution",
+            "transferRelationship",
+            "categoryStatus"
+          ],
+          "trackingDecision": {
+            "correct": 16,
+            "total": 25,
+            "unsupported": 0
+          },
+          "ordinaryFalseInclusion": {
+            "correctOrCount": 1,
+            "total": 7,
+            "rate": 0.14285714285714285
+          },
+          "eligibleMissOrReview": {
+            "correctOrCount": 3,
+            "total": 12,
+            "rate": 0.25
+          },
+          "ownAccountLeakage": {
+            "correctOrCount": 0,
+            "total": 1,
+            "rate": 0.0
+          },
+          "ownAccountExclusions": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "p2pCoverage": {
+            "correctOrCount": 2,
+            "total": 3,
+            "rate": 0.6666666666666666
+          },
+          "p2pByDirection": {
+            "incoming": {
+              "correctOrCount": 1,
+              "total": 1,
+              "rate": 1.0
+            },
+            "outgoing": {
+              "correctOrCount": 1,
+              "total": 2,
+              "rate": 0.5
+            }
+          },
+          "amountCurrencyAllEligible": {
+            "correctOrCount": 9,
+            "total": 12,
+            "rate": 0.75
+          },
+          "amountCurrencyAcceptedEligible": {
+            "correctOrCount": 9,
+            "total": 9,
+            "rate": 1.0
+          },
+          "directionAllEligible": {
+            "correctOrCount": 8,
+            "total": 12,
+            "rate": 0.6666666666666666
+          },
+          "directionAcceptedEligible": {
+            "correctOrCount": 8,
+            "total": 9,
+            "rate": 0.8888888888888888
+          },
+          "defaultCurrencyPolicy": {
+            "caseCount": 2,
+            "resolutionMarkerScorable": false,
+            "fallbackValueAgreementOnly": {
+              "correctOrCount": 2,
+              "total": 2,
+              "rate": 1.0
+            }
+          },
+          "category": {
+            "eligibleOutgoing": 10,
+            "legacyClaimedAssignments": 1,
+            "unsupportedTaxonomyAssignments": 1,
+            "canonicalCoverage": {
+              "correctOrCount": 0,
+              "total": 10,
+              "rate": 0.0
+            },
+            "canonicalAnsweredAgreement": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "unsupportedContextAssignments": 0,
+            "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+          },
+          "transferSlices": {
+            "not_transfer": {
+              "caseCount": 13,
+              "trackingCorrect": 7
+            },
+            "own_accounts": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "other_person": {
+              "caseCount": 3,
+              "trackingCorrect": 2
+            },
+            "unknown": {
+              "caseCount": 1,
+              "trackingCorrect": 0
+            },
+            "not_applicable": {
+              "caseCount": 7,
+              "trackingCorrect": 6
+            }
+          }
+        },
+        "arabic": {
+          "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+          "caseCount": 5,
+          "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+          "trackingDecisionConfusion": {
+            "include": {
+              "include": 2,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            },
+            "exclude": {
+              "include": 0,
+              "exclude": 3,
+              "review": 0,
+              "unsupported": 0
+            },
+            "review": {
+              "include": 0,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            }
+          },
+          "trackingFailures": [],
+          "completionStatusConfusion": {
+            "completed": {
+              "unsupported": 3
+            },
+            "non_transaction": {
+              "unsupported": 2
+            },
+            "uncertain": {
+              "unsupported": 0
+            }
+          },
+          "unsupportedContractFields": [
+            "contractVersion",
+            "transactionStatus",
+            "reasonCodes",
+            "currencyResolution",
+            "transferRelationship",
+            "categoryStatus"
+          ],
+          "trackingDecision": {
+            "correct": 5,
+            "total": 5,
+            "unsupported": 0
+          },
+          "ordinaryFalseInclusion": {
+            "correctOrCount": 0,
+            "total": 2,
+            "rate": 0.0
+          },
+          "eligibleMissOrReview": {
+            "correctOrCount": 0,
+            "total": 2,
+            "rate": 0.0
+          },
+          "ownAccountLeakage": {
+            "correctOrCount": 0,
+            "total": 1,
+            "rate": 0.0
+          },
+          "ownAccountExclusions": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "p2pCoverage": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "p2pByDirection": {
+            "incoming": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "outgoing": {
+              "correctOrCount": 1,
+              "total": 1,
+              "rate": 1.0
+            }
+          },
+          "amountCurrencyAllEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "amountCurrencyAcceptedEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "directionAllEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "directionAcceptedEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "defaultCurrencyPolicy": {
+            "caseCount": 0,
+            "resolutionMarkerScorable": false,
+            "fallbackValueAgreementOnly": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            }
+          },
+          "category": {
+            "eligibleOutgoing": 2,
+            "legacyClaimedAssignments": 0,
+            "unsupportedTaxonomyAssignments": 0,
+            "canonicalCoverage": {
+              "correctOrCount": 0,
+              "total": 2,
+              "rate": 0.0
+            },
+            "canonicalAnsweredAgreement": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "unsupportedContextAssignments": 0,
+            "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+          },
+          "transferSlices": {
+            "not_transfer": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "own_accounts": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "other_person": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "unknown": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "not_applicable": {
+              "caseCount": 2,
+              "trackingCorrect": 2
+            }
+          }
+        },
+        "mixed": {
+          "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+          "caseCount": 1,
+          "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+          "trackingDecisionConfusion": {
+            "include": {
+              "include": 1,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            },
+            "exclude": {
+              "include": 0,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            },
+            "review": {
+              "include": 0,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            }
+          },
+          "trackingFailures": [],
+          "completionStatusConfusion": {
+            "completed": {
+              "unsupported": 1
+            },
+            "non_transaction": {
+              "unsupported": 0
+            },
+            "uncertain": {
+              "unsupported": 0
+            }
+          },
+          "unsupportedContractFields": [
+            "contractVersion",
+            "transactionStatus",
+            "reasonCodes",
+            "currencyResolution",
+            "transferRelationship",
+            "categoryStatus"
+          ],
+          "trackingDecision": {
+            "correct": 1,
+            "total": 1,
+            "unsupported": 0
+          },
+          "ordinaryFalseInclusion": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "eligibleMissOrReview": {
+            "correctOrCount": 0,
+            "total": 1,
+            "rate": 0.0
+          },
+          "ownAccountLeakage": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "ownAccountExclusions": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "p2pCoverage": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "p2pByDirection": {
+            "incoming": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "outgoing": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            }
+          },
+          "amountCurrencyAllEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "amountCurrencyAcceptedEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "directionAllEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "directionAcceptedEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "defaultCurrencyPolicy": {
+            "caseCount": 0,
+            "resolutionMarkerScorable": false,
+            "fallbackValueAgreementOnly": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            }
+          },
+          "category": {
+            "eligibleOutgoing": 1,
+            "legacyClaimedAssignments": 0,
+            "unsupportedTaxonomyAssignments": 0,
+            "canonicalCoverage": {
+              "correctOrCount": 0,
+              "total": 1,
+              "rate": 0.0
+            },
+            "canonicalAnsweredAgreement": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "unsupportedContextAssignments": 0,
+            "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+          },
+          "transferSlices": {
+            "not_transfer": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "own_accounts": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "other_person": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "unknown": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "not_applicable": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            }
+          }
+        }
+      },
+      "frozenRegressionStrict": {
+        "cases": 226,
+        "classificationCorrect": 226,
+        "runtimeErrors": 0,
+        "falsePositive": 0,
+        "falseNegative": 0,
+        "fieldValues": {
+          "type": {
+            "allEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            }
+          },
+          "amount": {
+            "allEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            }
+          },
+          "currency": {
+            "allEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            }
+          },
+          "merchantOrParty": {
+            "allEligible": {
+              "correctOrCount": 96,
+              "total": 99,
+              "rate": 0.9696969696969697
+            },
+            "acceptedEligible": {
+              "correctOrCount": 96,
+              "total": 99,
+              "rate": 0.9696969696969697
+            }
+          },
+          "accountMask": {
+            "allEligible": {
+              "correctOrCount": 71,
+              "total": 81,
+              "rate": 0.8765432098765432
+            },
+            "acceptedEligible": {
+              "correctOrCount": 71,
+              "total": 81,
+              "rate": 0.8765432098765432
+            }
+          },
+          "balance": {
+            "allEligible": {
+              "correctOrCount": 104,
+              "total": 104,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 104,
+              "total": 104,
+              "rate": 1.0
+            }
+          }
+        },
+        "failures": [
+          {
+            "caseId": "TC_POS_ETI_001",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_ETI_004",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_ETI_005",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_ZAI_003",
+            "field": "merchantOrParty"
+          },
+          {
+            "caseId": "TC_POS_CAB_001",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_CAB_004",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_CAB_006",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_DEC_003",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_DEC_006",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_DEC_007",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_WSP_003",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDGE_DIACRITICS_001",
+            "field": "merchantOrParty"
+          },
+          {
+            "caseId": "TC_EDGE_DIACRITICS_002",
+            "field": "merchantOrParty"
+          }
+        ],
+        "comparison": "Decimal-exact numbers and normalized whole strings; no substring acceptance or money tolerance",
+        "exactCharacterSpans": {
+          "scorable": false,
+          "reason": "No independently reviewed span annotations available"
+        }
+      }
+    },
+    "browser": {
+      "conformanceProbes": {
+        "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+        "caseCount": 31,
+        "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+        "trackingDecisionConfusion": {
+          "include": {
+            "include": 12,
+            "exclude": 3,
+            "review": 0,
+            "unsupported": 0
+          },
+          "exclude": {
+            "include": 1,
+            "exclude": 10,
+            "review": 0,
+            "unsupported": 0
+          },
+          "review": {
+            "include": 2,
+            "exclude": 3,
+            "review": 0,
+            "unsupported": 0
+          }
+        },
+        "trackingFailures": [
+          {
+            "caseId": "p2p_outgoing",
+            "expected": "include",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "two_masks_unknown_ownership",
+            "expected": "review",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "contact_metadata_alone",
+            "expected": "include",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "phone_sender_metadata_alone",
+            "expected": "include",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "completed_missing_amount",
+            "expected": "review",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "completed_ambiguous_amount",
+            "expected": "review",
+            "actual": "include"
+          },
+          {
+            "caseId": "completed_unknown_direction",
+            "expected": "review",
+            "actual": "include"
+          },
+          {
+            "caseId": "completion_unclear",
+            "expected": "review",
+            "actual": "exclude"
+          },
+          {
+            "caseId": "payment_request",
+            "expected": "exclude",
+            "actual": "include"
+          }
+        ],
+        "completionStatusConfusion": {
+          "completed": {
+            "unsupported": 21
+          },
+          "non_transaction": {
+            "unsupported": 9
+          },
+          "uncertain": {
+            "unsupported": 1
+          }
+        },
+        "unsupportedContractFields": [
+          "contractVersion",
+          "transactionStatus",
+          "reasonCodes",
+          "currencyResolution",
+          "transferRelationship",
+          "categoryStatus"
+        ],
+        "trackingDecision": {
+          "correct": 22,
+          "total": 31,
+          "unsupported": 0
+        },
+        "ordinaryFalseInclusion": {
+          "correctOrCount": 1,
+          "total": 9,
+          "rate": 0.1111111111111111
+        },
+        "eligibleMissOrReview": {
+          "correctOrCount": 3,
+          "total": 15,
+          "rate": 0.2
+        },
+        "ownAccountLeakage": {
+          "correctOrCount": 0,
+          "total": 2,
+          "rate": 0.0
+        },
+        "ownAccountExclusions": {
+          "correctOrCount": 2,
+          "total": 2,
+          "rate": 1.0
+        },
+        "p2pCoverage": {
+          "correctOrCount": 3,
+          "total": 4,
+          "rate": 0.75
+        },
+        "p2pByDirection": {
+          "incoming": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "outgoing": {
+            "correctOrCount": 2,
+            "total": 3,
+            "rate": 0.6666666666666666
+          }
+        },
+        "amountCurrencyAllEligible": {
+          "correctOrCount": 12,
+          "total": 15,
+          "rate": 0.8
+        },
+        "amountCurrencyAcceptedEligible": {
+          "correctOrCount": 12,
+          "total": 12,
+          "rate": 1.0
+        },
+        "directionAllEligible": {
+          "correctOrCount": 11,
+          "total": 15,
+          "rate": 0.7333333333333333
+        },
+        "directionAcceptedEligible": {
+          "correctOrCount": 11,
+          "total": 12,
+          "rate": 0.9166666666666666
+        },
+        "defaultCurrencyPolicy": {
+          "caseCount": 2,
+          "resolutionMarkerScorable": false,
+          "fallbackValueAgreementOnly": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          }
+        },
+        "category": {
+          "eligibleOutgoing": 13,
+          "legacyClaimedAssignments": 1,
+          "unsupportedTaxonomyAssignments": 1,
+          "canonicalCoverage": {
+            "correctOrCount": 0,
+            "total": 13,
+            "rate": 0.0
+          },
+          "canonicalAnsweredAgreement": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "unsupportedContextAssignments": 0,
+          "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+        },
+        "transferSlices": {
+          "not_transfer": {
+            "caseCount": 15,
+            "trackingCorrect": 9
+          },
+          "own_accounts": {
+            "caseCount": 2,
+            "trackingCorrect": 2
+          },
+          "other_person": {
+            "caseCount": 4,
+            "trackingCorrect": 3
+          },
+          "unknown": {
+            "caseCount": 1,
+            "trackingCorrect": 0
+          },
+          "not_applicable": {
+            "caseCount": 9,
+            "trackingCorrect": 8
+          }
+        }
+      },
+      "languageSlices": {
+        "english": {
+          "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+          "caseCount": 25,
+          "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+          "trackingDecisionConfusion": {
+            "include": {
+              "include": 9,
+              "exclude": 3,
+              "review": 0,
+              "unsupported": 0
+            },
+            "exclude": {
+              "include": 1,
+              "exclude": 7,
+              "review": 0,
+              "unsupported": 0
+            },
+            "review": {
+              "include": 2,
+              "exclude": 3,
+              "review": 0,
+              "unsupported": 0
+            }
+          },
+          "trackingFailures": [
+            {
+              "caseId": "p2p_outgoing",
+              "expected": "include",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "two_masks_unknown_ownership",
+              "expected": "review",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "contact_metadata_alone",
+              "expected": "include",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "phone_sender_metadata_alone",
+              "expected": "include",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "completed_missing_amount",
+              "expected": "review",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "completed_ambiguous_amount",
+              "expected": "review",
+              "actual": "include"
+            },
+            {
+              "caseId": "completed_unknown_direction",
+              "expected": "review",
+              "actual": "include"
+            },
+            {
+              "caseId": "completion_unclear",
+              "expected": "review",
+              "actual": "exclude"
+            },
+            {
+              "caseId": "payment_request",
+              "expected": "exclude",
+              "actual": "include"
+            }
+          ],
+          "completionStatusConfusion": {
+            "completed": {
+              "unsupported": 17
+            },
+            "non_transaction": {
+              "unsupported": 7
+            },
+            "uncertain": {
+              "unsupported": 1
+            }
+          },
+          "unsupportedContractFields": [
+            "contractVersion",
+            "transactionStatus",
+            "reasonCodes",
+            "currencyResolution",
+            "transferRelationship",
+            "categoryStatus"
+          ],
+          "trackingDecision": {
+            "correct": 16,
+            "total": 25,
+            "unsupported": 0
+          },
+          "ordinaryFalseInclusion": {
+            "correctOrCount": 1,
+            "total": 7,
+            "rate": 0.14285714285714285
+          },
+          "eligibleMissOrReview": {
+            "correctOrCount": 3,
+            "total": 12,
+            "rate": 0.25
+          },
+          "ownAccountLeakage": {
+            "correctOrCount": 0,
+            "total": 1,
+            "rate": 0.0
+          },
+          "ownAccountExclusions": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "p2pCoverage": {
+            "correctOrCount": 2,
+            "total": 3,
+            "rate": 0.6666666666666666
+          },
+          "p2pByDirection": {
+            "incoming": {
+              "correctOrCount": 1,
+              "total": 1,
+              "rate": 1.0
+            },
+            "outgoing": {
+              "correctOrCount": 1,
+              "total": 2,
+              "rate": 0.5
+            }
+          },
+          "amountCurrencyAllEligible": {
+            "correctOrCount": 9,
+            "total": 12,
+            "rate": 0.75
+          },
+          "amountCurrencyAcceptedEligible": {
+            "correctOrCount": 9,
+            "total": 9,
+            "rate": 1.0
+          },
+          "directionAllEligible": {
+            "correctOrCount": 8,
+            "total": 12,
+            "rate": 0.6666666666666666
+          },
+          "directionAcceptedEligible": {
+            "correctOrCount": 8,
+            "total": 9,
+            "rate": 0.8888888888888888
+          },
+          "defaultCurrencyPolicy": {
+            "caseCount": 2,
+            "resolutionMarkerScorable": false,
+            "fallbackValueAgreementOnly": {
+              "correctOrCount": 2,
+              "total": 2,
+              "rate": 1.0
+            }
+          },
+          "category": {
+            "eligibleOutgoing": 10,
+            "legacyClaimedAssignments": 1,
+            "unsupportedTaxonomyAssignments": 1,
+            "canonicalCoverage": {
+              "correctOrCount": 0,
+              "total": 10,
+              "rate": 0.0
+            },
+            "canonicalAnsweredAgreement": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "unsupportedContextAssignments": 0,
+            "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+          },
+          "transferSlices": {
+            "not_transfer": {
+              "caseCount": 13,
+              "trackingCorrect": 7
+            },
+            "own_accounts": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "other_person": {
+              "caseCount": 3,
+              "trackingCorrect": 2
+            },
+            "unknown": {
+              "caseCount": 1,
+              "trackingCorrect": 0
+            },
+            "not_applicable": {
+              "caseCount": 7,
+              "trackingCorrect": 6
+            }
+          }
+        },
+        "arabic": {
+          "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+          "caseCount": 5,
+          "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+          "trackingDecisionConfusion": {
+            "include": {
+              "include": 2,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            },
+            "exclude": {
+              "include": 0,
+              "exclude": 3,
+              "review": 0,
+              "unsupported": 0
+            },
+            "review": {
+              "include": 0,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            }
+          },
+          "trackingFailures": [],
+          "completionStatusConfusion": {
+            "completed": {
+              "unsupported": 3
+            },
+            "non_transaction": {
+              "unsupported": 2
+            },
+            "uncertain": {
+              "unsupported": 0
+            }
+          },
+          "unsupportedContractFields": [
+            "contractVersion",
+            "transactionStatus",
+            "reasonCodes",
+            "currencyResolution",
+            "transferRelationship",
+            "categoryStatus"
+          ],
+          "trackingDecision": {
+            "correct": 5,
+            "total": 5,
+            "unsupported": 0
+          },
+          "ordinaryFalseInclusion": {
+            "correctOrCount": 0,
+            "total": 2,
+            "rate": 0.0
+          },
+          "eligibleMissOrReview": {
+            "correctOrCount": 0,
+            "total": 2,
+            "rate": 0.0
+          },
+          "ownAccountLeakage": {
+            "correctOrCount": 0,
+            "total": 1,
+            "rate": 0.0
+          },
+          "ownAccountExclusions": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "p2pCoverage": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "p2pByDirection": {
+            "incoming": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "outgoing": {
+              "correctOrCount": 1,
+              "total": 1,
+              "rate": 1.0
+            }
+          },
+          "amountCurrencyAllEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "amountCurrencyAcceptedEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "directionAllEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "directionAcceptedEligible": {
+            "correctOrCount": 2,
+            "total": 2,
+            "rate": 1.0
+          },
+          "defaultCurrencyPolicy": {
+            "caseCount": 0,
+            "resolutionMarkerScorable": false,
+            "fallbackValueAgreementOnly": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            }
+          },
+          "category": {
+            "eligibleOutgoing": 2,
+            "legacyClaimedAssignments": 0,
+            "unsupportedTaxonomyAssignments": 0,
+            "canonicalCoverage": {
+              "correctOrCount": 0,
+              "total": 2,
+              "rate": 0.0
+            },
+            "canonicalAnsweredAgreement": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "unsupportedContextAssignments": 0,
+            "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+          },
+          "transferSlices": {
+            "not_transfer": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "own_accounts": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "other_person": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "unknown": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "not_applicable": {
+              "caseCount": 2,
+              "trackingCorrect": 2
+            }
+          }
+        },
+        "mixed": {
+          "scope": "Authored conformance probes, not admitted benchmark data or independent accuracy",
+          "caseCount": 1,
+          "trackingDecisionProjection": "Legacy boolean -> include/exclude; review unavailable",
+          "trackingDecisionConfusion": {
+            "include": {
+              "include": 1,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            },
+            "exclude": {
+              "include": 0,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            },
+            "review": {
+              "include": 0,
+              "exclude": 0,
+              "review": 0,
+              "unsupported": 0
+            }
+          },
+          "trackingFailures": [],
+          "completionStatusConfusion": {
+            "completed": {
+              "unsupported": 1
+            },
+            "non_transaction": {
+              "unsupported": 0
+            },
+            "uncertain": {
+              "unsupported": 0
+            }
+          },
+          "unsupportedContractFields": [
+            "contractVersion",
+            "transactionStatus",
+            "reasonCodes",
+            "currencyResolution",
+            "transferRelationship",
+            "categoryStatus"
+          ],
+          "trackingDecision": {
+            "correct": 1,
+            "total": 1,
+            "unsupported": 0
+          },
+          "ordinaryFalseInclusion": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "eligibleMissOrReview": {
+            "correctOrCount": 0,
+            "total": 1,
+            "rate": 0.0
+          },
+          "ownAccountLeakage": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "ownAccountExclusions": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "p2pCoverage": {
+            "correctOrCount": 0,
+            "total": 0,
+            "rate": null
+          },
+          "p2pByDirection": {
+            "incoming": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "outgoing": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            }
+          },
+          "amountCurrencyAllEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "amountCurrencyAcceptedEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "directionAllEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "directionAcceptedEligible": {
+            "correctOrCount": 1,
+            "total": 1,
+            "rate": 1.0
+          },
+          "defaultCurrencyPolicy": {
+            "caseCount": 0,
+            "resolutionMarkerScorable": false,
+            "fallbackValueAgreementOnly": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            }
+          },
+          "category": {
+            "eligibleOutgoing": 1,
+            "legacyClaimedAssignments": 0,
+            "unsupportedTaxonomyAssignments": 0,
+            "canonicalCoverage": {
+              "correctOrCount": 0,
+              "total": 1,
+              "rate": 0.0
+            },
+            "canonicalAnsweredAgreement": {
+              "correctOrCount": 0,
+              "total": 0,
+              "rate": null
+            },
+            "unsupportedContextAssignments": 0,
+            "note": "Legacy taxonomy is not mapped to target categories; unsupported labels are not counted as abstentions"
+          },
+          "transferSlices": {
+            "not_transfer": {
+              "caseCount": 1,
+              "trackingCorrect": 1
+            },
+            "own_accounts": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "other_person": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "unknown": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            },
+            "not_applicable": {
+              "caseCount": 0,
+              "trackingCorrect": 0
+            }
+          }
+        }
+      },
+      "frozenRegressionStrict": {
+        "cases": 226,
+        "classificationCorrect": 226,
+        "runtimeErrors": 0,
+        "falsePositive": 0,
+        "falseNegative": 0,
+        "fieldValues": {
+          "type": {
+            "allEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            }
+          },
+          "amount": {
+            "allEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            }
+          },
+          "currency": {
+            "allEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 106,
+              "total": 106,
+              "rate": 1.0
+            }
+          },
+          "merchantOrParty": {
+            "allEligible": {
+              "correctOrCount": 96,
+              "total": 99,
+              "rate": 0.9696969696969697
+            },
+            "acceptedEligible": {
+              "correctOrCount": 96,
+              "total": 99,
+              "rate": 0.9696969696969697
+            }
+          },
+          "accountMask": {
+            "allEligible": {
+              "correctOrCount": 71,
+              "total": 81,
+              "rate": 0.8765432098765432
+            },
+            "acceptedEligible": {
+              "correctOrCount": 71,
+              "total": 81,
+              "rate": 0.8765432098765432
+            }
+          },
+          "balance": {
+            "allEligible": {
+              "correctOrCount": 104,
+              "total": 104,
+              "rate": 1.0
+            },
+            "acceptedEligible": {
+              "correctOrCount": 104,
+              "total": 104,
+              "rate": 1.0
+            }
+          }
+        },
+        "failures": [
+          {
+            "caseId": "TC_POS_ETI_001",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_ETI_004",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_ETI_005",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_ZAI_003",
+            "field": "merchantOrParty"
+          },
+          {
+            "caseId": "TC_POS_CAB_001",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_CAB_004",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_POS_CAB_006",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_DEC_003",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_DEC_006",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_DEC_007",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDG_WSP_003",
+            "field": "accountMask"
+          },
+          {
+            "caseId": "TC_EDGE_DIACRITICS_001",
+            "field": "merchantOrParty"
+          },
+          {
+            "caseId": "TC_EDGE_DIACRITICS_002",
+            "field": "merchantOrParty"
+          }
+        ],
+        "comparison": "Decimal-exact numbers and normalized whole strings; no substring acceptance or money tolerance",
+        "exactCharacterSpans": {
+          "scorable": false,
+          "reason": "No independently reviewed span annotations available"
+        }
+      }
+    }
+  },
+  "fullResultParity": {
+    "typescriptVsPython": {
+      "caseCount": 299,
+      "identical": 299,
+      "mismatches": []
+    },
+    "browserVsPython": {
+      "caseCount": 299,
+      "identical": 299,
+      "mismatches": []
+    }
+  },
+  "exactHumanCategoryPolicyProbes": [
+    {
+      "reviewId": "edge-apple-bill-unknown",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": null,
+      "expectedStatus": "uncertain",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-atm-cash",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Cash Withdrawals",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "Financial Services & Transfers",
+            "confidence": 0.33
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "Financial Services & Transfers",
+            "confidence": 0.33
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "Financial Services & Transfers",
+            "confidence": 0.33
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-atm-separate-fee",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Fees",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "Financial Services & Transfers",
+            "confidence": 0.33
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "Financial Services & Transfers",
+            "confidence": 0.33
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "Financial Services & Transfers",
+            "confidence": 0.33
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-bill-aggregator-unknown",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Fees",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "Utilities & Bills",
+            "confidence": 0.33
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "Utilities & Bills",
+            "confidence": 0.33
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "Utilities & Bills",
+            "confidence": 0.33
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-education-installment",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Education",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-hypermax-electronics",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Groceries",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-hypermax-unknown",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Groceries",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-jett-international",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Travel",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-jett-monthly-pass",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Subscriptions",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-netflix-recurring",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Subscriptions",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-orange-device",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Telecom",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-orange-installment",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Installments",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-orange-mixed-bill",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Telecom",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-pharmacy-cosmetics",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Health",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-talabat-groceries",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Groceries",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "Groceries & Supermarket",
+            "confidence": 0.33
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "Groceries & Supermarket",
+            "confidence": 0.33
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "Groceries & Supermarket",
+            "confidence": 0.33
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-talabat-meal",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Food",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "Dining & Food Delivery",
+            "confidence": 0.5
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "Dining & Food Delivery",
+            "confidence": 0.5
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "Dining & Food Delivery",
+            "confidence": 0.5
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-talabat-unknown",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": null,
+      "expectedStatus": "uncertain",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    },
+    {
+      "reviewId": "edge-telecom-recurring",
+      "scope": "exact_reviewed_scenario_only",
+      "expectedCategory": "Telecom",
+      "expectedStatus": "assigned",
+      "componentPredictions": {
+        "python": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0.0
+          }
+        },
+        "typescript": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        },
+        "browser": {
+          "result": {
+            "category": "General & Uncategorized",
+            "confidence": 0
+          }
+        }
+      }
+    }
+  ],
+  "browserBundleSources": {
+    "src/typescript/MasroofEngine.ts": "2409f9159ef2815c3f576cad6d5230a9c5c99da1507dd04fe0a3c61c9f9e1cc6",
+    "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+    "src/typescript/ServiceNotice.ts": "a6e9976cd5f62e18d926260a2681cac6c0834ab317eeeb33df609d7bf8c907c5",
+    "config/contracts/service_notice.json": "1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3",
+    "src/typescript/AuthorizationRequest.ts": "0c45b2b8c327e53576495a3a7b2fa0ec3b7757197eb6fd0cab9571a212b281c2",
+    "config/contracts/authorization_request.json": "d927714265710faf8f80a1053a1b17bfbe9a0eff56208b820295dd616f7b555b",
+    "src/typescript/LegacyTransactionModel.ts": "5f060dd375f4a3f568971282339c0c389fdaeb54951ffa80f83642193a7d0f59",
+    "src/typescript/EntityText.ts": "99fdd47bce69d1df5096ab9533158fbf525cd471b36caaa9ce7026b4c355dc7e"
+  },
+  "bundledModelMatchesSource": true,
+  "sourceTemplateSlices": {
+    "verifiedFamiliesAvailableForRegression": false,
+    "reason": "Legacy provider/category tags are not independently verified source/template family IDs"
+  },
+  "uncertaintyIntervals": {
+    "samplingInterval": null,
+    "reason": "Authored and correlated development examples are not independent samples"
+  },
+  "releaseDecision": "not_evaluated",
+  "independentFinalEvaluationAvailable": false,
+  "modelFitted": false,
+  "modelPromoted": false,
+  "reservedMerchantTestInferred": false
+}

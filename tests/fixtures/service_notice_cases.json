@@ -1,0 +1,94 @@
+{
+  "scope": "Authored development safeguards; not training or independent evaluation",
+  "cases": [
+    {
+      "id": "future_limit",
+      "body": "Transfers up to JOD 19,304 will be unavailable on Saturday due to a core banking upgrade.",
+      "isServiceNotice": true
+    },
+    {
+      "id": "present_status",
+      "body": "Payment services are temporarily unavailable from 06:50 to 11:13.",
+      "isServiceNotice": true
+    },
+    {
+      "id": "line_break",
+      "body": "Our transfer services\nwill be suspended for maintenance. Daily limit JOD 850.",
+      "isServiceNotice": true
+    },
+    {
+      "id": "arabic_notice",
+      "body": "خدمة التحويل غير متاحة مؤقتا بسبب الصيانة. الحد اليومي ١٩٬٣٠٤ دينار.",
+      "isServiceNotice": true
+    },
+    {
+      "id": "arabic_diacritics",
+      "body": "خِدمة التحويل غير مُتاحة مؤقتا. السقف ۱۹٬۳۰۴ دينار.",
+      "isServiceNotice": true
+    },
+    {
+      "id": "arabic_suspension",
+      "body": "سيتم إيقاف الخدمة مؤقتا لإجراء الصيانة. حد التحويل 500 دينار.",
+      "isServiceNotice": true
+    },
+    {
+      "id": "arabic_future",
+      "body": "ستتوقف خدمات الدفع يوم الجمعة. سقف الدفع ٢٠٠ دينار.",
+      "isServiceNotice": true
+    },
+    {
+      "id": "future_is_not_completed",
+      "body": "سيتم تحويل خدمات الدفع إلى النظام الجديد وستكون غير متاحة مؤقتا.",
+      "isServiceNotice": true
+    },
+    {
+      "id": "unrelated_availability",
+      "body": "Table 5 is unavailable at the restaurant.",
+      "isServiceNotice": false
+    },
+    {
+      "id": "maintenance_merchant",
+      "body": "You have a purchase transaction on account *6842 from MAINTENANCE SERVICES amount JOD 12.500. Balance JOD 90.000.",
+      "isServiceNotice": false,
+      "isValidTransaction": true
+    },
+    {
+      "id": "receipt_with_reminder",
+      "body": "JOD 12.500 has been credited to account *6842 from SYNTHETIC CLIENT as CliQ transfer. Balance JOD 90.000. Transfer services will be unavailable for maintenance tomorrow.",
+      "isServiceNotice": false,
+      "isValidTransaction": true
+    },
+    {
+      "id": "arabic_receipt_with_reminder",
+      "body": "تم استلام مبلغ 12.500 JOD في محفظتك بنجاح عبر كليك. رصيدك الحالي 90.000 JOD. خدمة التحويل غير متاحة غدا للصيانة.",
+      "isServiceNotice": false,
+      "isValidTransaction": true
+    },
+    {
+      "id": "paid_maintenance",
+      "body": "تم دفع مبلغ 12.500 دينار لدى مركز الصيانة. الرصيد 90.000 دينار.",
+      "isServiceNotice": false
+    },
+    {
+      "id": "restored_service",
+      "body": "Transfer services are available again after maintenance. Limit JOD 500.",
+      "isServiceNotice": true,
+      "isValidTransaction": false
+    },
+    {
+      "id": "empty",
+      "body": "",
+      "isServiceNotice": false
+    },
+    {
+      "id": "future_not_available",
+      "body": "Transfer services will not be available tomorrow. Limit JOD 540.",
+      "isServiceNotice": true
+    },
+    {
+      "id": "arabic_restoration",
+      "body": "تم استئناف خدمات التحويل. الحد اليومي ٥٠٠ دينار.",
+      "isServiceNotice": true
+    }
+  ]
+}

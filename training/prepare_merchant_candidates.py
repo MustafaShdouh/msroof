@@ -1,21 +1,23 @@
 """Build unreviewed merchant-name candidates without generating SMS or labels.
 
-Extract only the explicit MERCHANTS list from the synthetic source, avoiding
+Read only the extracted commercial-name list from the synthetic source, avoiding
 personal transfer recipients, then merge the public local-business seed file.
 """
 
 from __future__ import annotations
 
-import ast
 import hashlib
 import json
 from pathlib import Path
 import re
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "training" / "expand_dataset.py"
+sys.path.insert(0, str(ROOT))
+from training.corpus_io import write_immutable
+SOURCE = ROOT / "data/sources/transactions/synthetic_merchant_names_v1.json"
 LOCAL_SOURCE = ROOT / "data" / "annotations" / "local_merchant_sources.json"
-OUTPUT = ROOT / "data" / "annotations" / "merchant_candidates.jsonl"
+OUTPUT = ROOT / "data" / "annotations" / "merchant_candidates_sanitized_source_v1.jsonl"
 
 
 def prepare() -> list[dict]:
@@ -42,12 +44,7 @@ def prepare() -> list[dict]:
         if brand_group:
             row["brandGroup"] = brand_group
 
-    tree = ast.parse(SOURCE.read_text(encoding="utf-8"))
-    merchants = None
-    for node in tree.body:
-        if isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id == "MERCHANTS" for target in node.targets):
-            merchants = ast.literal_eval(node.value)
-            break
+    merchants = json.loads(SOURCE.read_text(encoding="utf-8"))["merchants"]
     if not isinstance(merchants, list) or not all(isinstance(name, str) and name.strip() for name in merchants):
         raise ValueError("Expected a literal list of merchant names in MERCHANTS")
     for name in merchants:
@@ -75,6 +72,6 @@ def prepare() -> list[dict]:
 
 if __name__ == "__main__":
     rows = prepare()
-    OUTPUT.write_text("".join(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n" for row in rows), encoding="utf-8")
+    write_immutable(OUTPUT, "".join(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n" for row in rows))
     public_count = sum(any(origin["kind"] == "public_business_listing" for origin in row["origins"]) for row in rows)
     print(f"Prepared {len(rows)} candidates, {public_count} with public source evidence: {OUTPUT}")

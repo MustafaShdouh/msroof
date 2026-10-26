@@ -113,9 +113,11 @@ def generate_samples():
             with patch.object(corpus, "HISTORICAL", ["one.txt"]):
                 corpus.archive_inputs(root)
                 (root / "one.txt").write_text("changed", encoding="utf-8")
+                corpus.archive_inputs(root)
+                self.assertEqual((root / corpus.ARCHIVE / "one.txt").read_text(encoding="utf-8"), "private historical value")
+                (root / corpus.ARCHIVE / "one.txt").write_text("tampered", encoding="utf-8")
                 with self.assertRaises(ValueError):
                     corpus.archive_inputs(root)
-                self.assertEqual((root / corpus.ARCHIVE / "one.txt").read_text(encoding="utf-8"), "private historical value")
 
     def test_prepared_public_artifact_hashes_and_partitions(self):
         report = json.loads((corpus.ROOT / corpus.REPORT).read_text(encoding="utf-8"))

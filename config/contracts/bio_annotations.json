@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "scope": "Primary entity slots in synthetic development receipts; not generic all-mentions NER or independent truth",
+  "spanOffsets": "zero-based Python Unicode code-point offsets; end exclusive",
+  "labels": ["AMT", "CURR", "MERCHANT", "ACCT", "BAL"],
+  "accountRule": "Label the masked/ending account identifier itself; introductory wording such as ending in is outside ACCT",
+  "merchantRule": "Preserve the exact contiguous source name, including descriptors, case, Arabic diacritics, spacing and digit script",
+  "absenceRule": "Do not treat unreviewed missing expected values as confirmed absence; unresolved role records are excluded from fitting and scoring",
+  "tokenRule": "Tokenization is independent of labels; tokens and entities retain exact source offsets and text",
+  "splitRule": "Keep normalized slot-template proxies, party forms, known business identities/aliases and known corporate families together; source-category topics are reporting slices, not verified template families",
+  "reservationRule": "Quarantine whole connected groups touching protected merchant-category validation/test identities or unresolved annotations",
+  "reviewProvenance": "Assistant-reviewed policy corrections only; not human gold",
+  "independentEvaluationEligible": false
+}

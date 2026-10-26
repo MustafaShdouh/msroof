@@ -1,0 +1,416 @@
+{
+  "allTargetCategoriesRepresentedInTraining": false,
+  "augmentationPolicy": {
+    "firstExperiment": "Compare unchanged names against source-observed training aliases, then at most one feature-changing format/noise variant per eligible training business.",
+    "maxSyntheticExtraFormsPerTrainingBusiness": 1,
+    "rules": [
+      "Generate only after frozen fold assignment; retain businessId, family, base record and reviewer type.",
+      "Never augment validation/test or the two unresolved identities; filter candidate forms against all held-out names and aliases before accepting them.",
+      "Deduplicate through the exact model preprocessing/features; casing, diacritics and digit variants already canonicalized are not new model evidence.",
+      "Source-observed Arabic/English aliases are preferred. Do not invent transliterations or merchant identities; record synthetic provenance for generated text.",
+      "Do not add category words such as restaurant to opaque names just because that is the label; this would leak the answer.",
+      "For future SMS augmentation protect negation, completion/decline/OTP cues, amount, currency, direction and entity spans; merchant defaults do not label every purchase.",
+      "A/B compare no-augmentation versus augmentation on unchanged validation businesses; keep test sealed until final evaluation.",
+      "Augmentation does not create missing categories, independent labels, source diversity or new unseen merchants."
+    ],
+    "sampling": "Keep each business's total weight equal; variants are not new businesses or new human labels.",
+    "status": "bounded_training_protocol_run_status_in_merchant_category_research_report",
+    "trainingBusinessLimit": 141
+  },
+  "businessCount": 200,
+  "crossBusinessFormCollisions": {
+    "identity": [],
+    "preprocessing": []
+  },
+  "distinctIdentityNormalizedForms": 245,
+  "distinctPreprocessedForms": 250,
+  "distinctRawNameForms": 255,
+  "evaluationOnlyCategories": {
+    "test": [
+      "Water and Electricity"
+    ],
+    "validation": [
+      "Transportation"
+    ]
+  },
+  "exactFormCrossFoldConflicts": 0,
+  "folds": {
+    "test": {
+      "arabicNameOrAliasBusinessCount": 3,
+      "businessCount": 29,
+      "categoriesWithoutTrainingOrEvaluationLabels": [
+        "Telecom",
+        "Transportation",
+        "Subscriptions",
+        "Education",
+        "Travel",
+        "Cash Withdrawals",
+        "Installments",
+        "Fees",
+        "Other"
+      ],
+      "categoryCounts": {
+        "assistant": {
+          "Cash Withdrawals": 0,
+          "Education": 0,
+          "Entertainment": 1,
+          "Fees": 0,
+          "Food": 7,
+          "Groceries": 1,
+          "Health": 1,
+          "Installments": 0,
+          "Other": 0,
+          "Shopping": 9,
+          "Subscriptions": 0,
+          "Telecom": 0,
+          "Transportation": 0,
+          "Travel": 0,
+          "Water and Electricity": 0
+        },
+        "combined": {
+          "Cash Withdrawals": 0,
+          "Education": 0,
+          "Entertainment": 2,
+          "Fees": 0,
+          "Food": 11,
+          "Groceries": 2,
+          "Health": 2,
+          "Installments": 0,
+          "Other": 0,
+          "Shopping": 11,
+          "Subscriptions": 0,
+          "Telecom": 0,
+          "Transportation": 0,
+          "Travel": 0,
+          "Water and Electricity": 1
+        },
+        "human": {
+          "Cash Withdrawals": 0,
+          "Education": 0,
+          "Entertainment": 1,
+          "Fees": 0,
+          "Food": 4,
+          "Groceries": 1,
+          "Health": 1,
+          "Installments": 0,
+          "Other": 0,
+          "Shopping": 2,
+          "Subscriptions": 0,
+          "Telecom": 0,
+          "Transportation": 0,
+          "Travel": 0,
+          "Water and Electricity": 1
+        }
+      },
+      "labeledBusinesses": 29
+    },
+    "train": {
+      "arabicNameOrAliasBusinessCount": 26,
+      "businessCount": 142,
+      "categoriesWithoutTrainingOrEvaluationLabels": [
+        "Water and Electricity",
+        "Transportation",
+        "Subscriptions",
+        "Cash Withdrawals",
+        "Installments",
+        "Fees"
+      ],
+      "categoryCounts": {
+        "assistant": {
+          "Cash Withdrawals": 0,
+          "Education": 0,
+          "Entertainment": 7,
+          "Fees": 0,
+          "Food": 56,
+          "Groceries": 2,
+          "Health": 1,
+          "Installments": 0,
+          "Other": 0,
+          "Shopping": 44,
+          "Subscriptions": 0,
+          "Telecom": 0,
+          "Transportation": 0,
+          "Travel": 0,
+          "Water and Electricity": 0
+        },
+        "combined": {
+          "Cash Withdrawals": 0,
+          "Education": 1,
+          "Entertainment": 10,
+          "Fees": 0,
+          "Food": 60,
+          "Groceries": 6,
+          "Health": 6,
+          "Installments": 0,
+          "Other": 1,
+          "Shopping": 54,
+          "Subscriptions": 0,
+          "Telecom": 2,
+          "Transportation": 0,
+          "Travel": 1,
+          "Water and Electricity": 0
+        },
+        "human": {
+          "Cash Withdrawals": 0,
+          "Education": 1,
+          "Entertainment": 3,
+          "Fees": 0,
+          "Food": 4,
+          "Groceries": 4,
+          "Health": 5,
+          "Installments": 0,
+          "Other": 1,
+          "Shopping": 10,
+          "Subscriptions": 0,
+          "Telecom": 2,
+          "Transportation": 0,
+          "Travel": 1,
+          "Water and Electricity": 0
+        }
+      },
+      "labeledBusinesses": 141
+    },
+    "validation": {
+      "arabicNameOrAliasBusinessCount": 3,
+      "businessCount": 29,
+      "categoriesWithoutTrainingOrEvaluationLabels": [
+        "Telecom",
+        "Water and Electricity",
+        "Subscriptions",
+        "Education",
+        "Travel",
+        "Cash Withdrawals",
+        "Installments",
+        "Fees",
+        "Other"
+      ],
+      "categoryCounts": {
+        "assistant": {
+          "Cash Withdrawals": 0,
+          "Education": 0,
+          "Entertainment": 1,
+          "Fees": 0,
+          "Food": 13,
+          "Groceries": 0,
+          "Health": 1,
+          "Installments": 0,
+          "Other": 0,
+          "Shopping": 8,
+          "Subscriptions": 0,
+          "Telecom": 0,
+          "Transportation": 0,
+          "Travel": 0,
+          "Water and Electricity": 0
+        },
+        "combined": {
+          "Cash Withdrawals": 0,
+          "Education": 0,
+          "Entertainment": 1,
+          "Fees": 0,
+          "Food": 15,
+          "Groceries": 1,
+          "Health": 1,
+          "Installments": 0,
+          "Other": 0,
+          "Shopping": 8,
+          "Subscriptions": 0,
+          "Telecom": 0,
+          "Transportation": 2,
+          "Travel": 0,
+          "Water and Electricity": 0
+        },
+        "human": {
+          "Cash Withdrawals": 0,
+          "Education": 0,
+          "Entertainment": 0,
+          "Fees": 0,
+          "Food": 2,
+          "Groceries": 1,
+          "Health": 0,
+          "Installments": 0,
+          "Other": 0,
+          "Shopping": 0,
+          "Subscriptions": 0,
+          "Telecom": 0,
+          "Transportation": 2,
+          "Travel": 0,
+          "Water and Electricity": 0
+        }
+      },
+      "labeledBusinesses": 28
+    }
+  },
+  "full15CategoryTrainingReady": false,
+  "geographicScope": "Jordan",
+  "historicalInputLocation": "Private hash-checked archives; original logical paths retained for comparison",
+  "historicalSmsExposure": {
+    "corpora": {
+      "data/training/dataset_expanded.json": {
+        "matchingRecordCount": 70,
+        "potentialHeldoutBusinessMentions": {
+          "business-9e887b1f23a476c9": [
+            "row-37",
+            "row-114",
+            "row-360",
+            "row-570",
+            "row-810",
+            "row-838",
+            "row-1327",
+            "row-1448",
+            "row-1509",
+            "row-1662",
+            "row-1688",
+            "row-1736",
+            "row-2008"
+          ],
+          "business-b21492b15d85500e": [
+            "row-138",
+            "row-152",
+            "row-164",
+            "row-272",
+            "row-457",
+            "row-662",
+            "row-697",
+            "row-784",
+            "row-822",
+            "row-860",
+            "row-905",
+            "row-962",
+            "row-981",
+            "row-1011",
+            "row-1126",
+            "row-1133",
+            "row-1141",
+            "row-1220",
+            "row-1343",
+            "row-1346",
+            "row-1523",
+            "row-1677",
+            "row-1683",
+            "row-1714",
+            "row-1718",
+            "row-1849",
+            "row-1923",
+            "row-2091"
+          ],
+          "business-b82e2178ecf4d0c5": [
+            "row-12",
+            "row-1273",
+            "row-1291",
+            "row-1729",
+            "row-1751",
+            "row-1769",
+            "row-1973"
+          ],
+          "business-bb2f2efc6e319898": [
+            "row-145",
+            "row-341",
+            "row-605",
+            "row-624",
+            "row-1035",
+            "row-1041",
+            "row-1364",
+            "row-1445",
+            "row-1577",
+            "row-1703",
+            "row-1841"
+          ],
+          "business-c446d82fedadc0aa": [
+            "row-206",
+            "row-280",
+            "row-471",
+            "row-673",
+            "row-1056",
+            "row-1066",
+            "row-1319",
+            "row-1382",
+            "row-1650",
+            "row-1944",
+            "row-2109"
+          ]
+        }
+      },
+      "tests/fixtures/qa_adversarial_cases.json": {
+        "matchingRecordCount": 1,
+        "potentialHeldoutBusinessMentions": {
+          "business-9e887b1f23a476c9": [
+            "TC_EDGE_MULTILINE_HEADER_001"
+          ]
+        }
+      },
+      "tests/fixtures/test_suite_cases.json": {
+        "matchingRecordCount": 4,
+        "potentialHeldoutBusinessMentions": {
+          "business-9e887b1f23a476c9": [
+            "TC_POS_ZAI_003"
+          ],
+          "business-b21492b15d85500e": [
+            "TC_POS_REF_001",
+            "TC_ADV_CHAT_011"
+          ],
+          "business-b82e2178ecf4d0c5": [
+            "TC_ADV_CHAT_024"
+          ]
+        }
+      }
+    },
+    "scope": "Lexical candidates in legacy training/regression only; generic words can match unrelated businesses. Not a template-similarity audit or evidence that a new name-only candidate used these records."
+  },
+  "inputSha256": {
+    "data/training/dataset_expanded.json": "9b76d5610d1f1de0330c13e57c44156c7ee6285bbcaec454d517c2d00418f792",
+    "data\\annotations\\businesses_200.jsonl": "81f0b434dc4b2549eedef5a1fc0bfec871bcd32f635ec10916a28fb3e74f8d13",
+    "data\\annotations\\category_annotation_schema.json": "530a0925185d1f514ab32273bba593e53b40f1328ee56fb83268d816b99806c8",
+    "data\\sources\\businesses\\brand_families.json": "34950f9c65e4982fa0df9af3699a3f2979e8b9d07d13251d5d34efa78ac9c66a",
+    "data\\training\\splits\\category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d",
+    "tests/fixtures/qa_adversarial_cases.json": "39f4b14e5dad12ffe77f59127d6f9a1da5eefb3f4b550623f60fa1f628bd9424",
+    "tests/fixtures/test_suite_cases.json": "fc9458ec4f01dbf8a45929c74641ba679d49d0cb3a824b51a91658d6a454ef94"
+  },
+  "knownFamilyCrossFoldConflicts": 0,
+  "labeledBusinesses": 198,
+  "limitations": [
+    "Family evidence is bounded, not an exhaustive parent/franchise ownership audit.",
+    "Template/source separation is not established by this name-only audit; historical SMS exposure is reported as lexical candidates only.",
+    "Assistant-reviewed labels are research supervision. Human evaluation is sparse; never call agreement with the same assistant independent accuracy.",
+    "Only three Arabic-name businesses are reserved per validation/test fold; results would be small-sample diagnostics.",
+    "A merchant-only research candidate may cover supported classes with abstention; this corpus cannot establish a full 15-category SMS classifier."
+  ],
+  "missingTrainingCategories": [
+    "Water and Electricity",
+    "Transportation",
+    "Subscriptions",
+    "Cash Withdrawals",
+    "Installments",
+    "Fees"
+  ],
+  "preprocessingVersion": "1.1.0",
+  "scope": "Merchant metadata only; exhaustive exact-form checks and bounded known-family evidence, not proof of unseen SMS generalization.",
+  "sparseTrainingCategories": {
+    "Education": 1,
+    "Other": 1,
+    "Telecom": 2,
+    "Travel": 1
+  },
+  "unresolvedBusinesses": [
+    "Juman",
+    "khuyoot.sharqieh"
+  ],
+  "verifiedFamilyChecks": [
+    {
+      "crossFold": false,
+      "familyId": "inditex",
+      "folds": [
+        "train"
+      ],
+      "members": [
+        "Lefties",
+        "Massimo Dutti",
+        "Oysho",
+        "Stradivarius",
+        "ZARA",
+        "ZARA Home"
+      ],
+      "sourceUrl": "https://annualreport.inditex.com/anrpxxvui/en/our-drivers"
+    }
+  ],
+  "version": "1.0.0"
+}

@@ -16,3 +16,17 @@ node_modules/
 !.env.example
 /STATE.md
 /.agents/
+
+# Retired source copies: use sanitized inputs or private historical snapshots
+/data/training/dataset_expanded.json
+/data/training/dataset_expanded.csv
+/data/training/bio_training_data.json
+/data/training/splits/transaction_direction_split.json
+/tests/fixtures/test_suite_cases.json
+/tests/fixtures/qa_adversarial_cases.json
+/tests/fixtures/test_corpus_manifest.json
+/training/expand_dataset.py
+/tools/generators/generate_test_suite.py
+/tools/generators/build_qa_adversarial_cases.py
+/tests/legacy/run_test_suite.py
+/data/reports/arabic_support_probe_inputs.json

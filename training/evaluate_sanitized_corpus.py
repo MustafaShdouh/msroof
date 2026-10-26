@@ -68,12 +68,23 @@ def evaluate():
     typescript = json.loads(process.stdout)
     evidence_paths = paths + ["data/models/masroof_model.json", "src/python/verify_engine.py", "src/python/preprocessing.py",
                              "src/typescript/MasroofEngine.ts", "src/typescript/Preprocessing.ts",
+                             "src/python/service_notice.py", "src/typescript/ServiceNotice.ts", "config/contracts/service_notice.json",
+                             "src/python/authorization_request.py", "src/typescript/AuthorizationRequest.ts", "config/contracts/authorization_request.json",
+                             "src/python/legacy_transaction_model.py", "src/typescript/LegacyTransactionModel.ts",
+                             "src/python/entity_text.py", "src/typescript/EntityText.ts", "config/contracts/entity_text.json",
                              "tools/evaluation/probe_sanitized_corpus.ts", "training/evaluate_sanitized_corpus.py"]
+    hashes = {path: digest((ROOT / path).read_bytes()) for path in evidence_paths}
+    baseline_path = "data/reports/sanitized_corpus_v1_legacy_v1_evaluation.json"
+    baseline = json.loads((ROOT / baseline_path).read_text(encoding="utf-8"))["inputSha256"]
+    runtime_paths = [path for path in hashes if path.startswith(("src/", "data/models/", "config/contracts/"))]
+    changed = [path for path in runtime_paths if hashes[path] != baseline.get(path)]
     return {"corpusVersion": VERSION, "scope": "Legacy-model development compatibility diagnostic; no independent accuracy claim",
-            "inputSha256": {path: digest((ROOT / path).read_bytes()) for path in evidence_paths},
+            "inputSha256": hashes, "comparisonBaseline": baseline_path,
             "python": python, "typescript": typescript, "runtimeMetricParity": python == typescript,
             "migrationGatePassed": python == typescript and not python["failures"] and not typescript["failures"],
-            "runtimeOrModelModified": False, "finalTestInferred": False}
+            "runtimeOrModelModified": bool(changed), "changedRuntimeOrModelInputs": changed,
+            "modelModified": hashes["data/models/masroof_model.json"] != baseline["data/models/masroof_model.json"],
+            "finalTestInferred": False}
 
 
 def main():

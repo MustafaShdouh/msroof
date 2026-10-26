@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "scope": "Working-copy retirement only; archives stay private; old Git objects remain",
+  "active": {
+    "dataset": "data/training/sanitized_v1/transactions.json",
+    "split": "data/training/splits/transaction_direction_sanitized_v1.json",
+    "fixtures": "tests/fixtures/sanitized_v1",
+    "bio": "data/training/sanitized_v1/bio_training_data.json"
+  },
+  "retired": [
+    {
+      "path": "data/training/dataset_expanded.json",
+      "historicalSha256": "9b76d5610d1f1de0330c13e57c44156c7ee6285bbcaec454d517c2d00418f792",
+      "replacement": "data/training/sanitized_v1/transactions.json"
+    },
+    {
+      "path": "data/training/dataset_expanded.csv",
+      "historicalSha256": "803d4401d548a14509bef205bdffaadbb57bd9eea2f62fe45b1d124f88849c51",
+      "replacement": "data/training/sanitized_v1/transactions.json"
+    },
+    {
+      "path": "data/training/bio_training_data.json",
+      "historicalSha256": "92cf7e92fdc9559f7a39c0123209697dc4fbe50d2803887218ae32cafdf5d9ef",
+      "replacement": "data/training/sanitized_v1/bio_training_data.json"
+    },
+    {
+      "path": "data/training/splits/transaction_direction_split.json",
+      "historicalSha256": "51207c296a9add55d62526b7e5255beea10845d1fb54a436e740677e911e8ab6",
+      "replacement": "data/training/splits/transaction_direction_sanitized_v1.json"
+    },
+    {
+      "path": "tests/fixtures/test_suite_cases.json",
+      "historicalSha256": "fc9458ec4f01dbf8a45929c74641ba679d49d0cb3a824b51a91658d6a454ef94",
+      "replacement": "tests/fixtures/sanitized_v1/test_suite_cases.json"
+    },
+    {
+      "path": "tests/fixtures/qa_adversarial_cases.json",
+      "historicalSha256": "39f4b14e5dad12ffe77f59127d6f9a1da5eefb3f4b550623f60fa1f628bd9424",
+      "replacement": "tests/fixtures/sanitized_v1/qa_adversarial_cases.json"
+    },
+    {
+      "path": "tests/fixtures/test_corpus_manifest.json",
+      "historicalSha256": "b159cbf72a372f92e0b6e92b1e59415b3bd5b487dc7fd2713ab747aebf2e7df0",
+      "replacement": "tests/fixtures/sanitized_v1/test_corpus_manifest.json"
+    },
+    {
+      "path": "training/expand_dataset.py",
+      "historicalSha256": "908433443a5a2dd3c71c555fc9e06eb7a8e1c64db4c1d22cb66df07318f25cfe",
+      "replacement": "training/prepare_sanitized_corpus.py"
+    },
+    {
+      "path": "tools/generators/generate_test_suite.py",
+      "historicalSha256": "cc95655f3affc1171565f932c61e4d722cb8ca67d652488d760ecffa025709f4",
+      "replacement": "tests/fixtures/sanitized_v1/test_corpus_manifest.json"
+    },
+    {
+      "path": "tools/generators/build_qa_adversarial_cases.py",
+      "historicalSha256": "c2dc27bfbaf0f86ba68914a00cb73d08cdc2a8a37d2a9e3c04bab0da47a8ccc4",
+      "replacement": "tests/fixtures/sanitized_v1/test_corpus_manifest.json"
+    },
+    {
+      "path": "tests/legacy/run_test_suite.py",
+      "historicalSha256": "48c05d7bedf737bf1fce0c58eeee54a2f82f28699cdb0b9d0cf17b9455a2bead",
+      "replacement": "tests/python/test_corpus_migration.py"
+    },
+    {
+      "path": "data/reports/arabic_support_probe_inputs.json",
+      "historicalSha256": "ea9a0cb8532787cc01611b0afaa47ad3d4b064d408fe0d2cfdfcf9d4a11d2197",
+      "replacement": "training/evaluate_arabic_support.py"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[2]
-FIXTURE_ROOT = ROOT / "tests" / "fixtures"
+FIXTURE_ROOT = ROOT / "tests" / "fixtures" / "sanitized_v1"
 MANIFEST_PATH = FIXTURE_ROOT / "test_corpus_manifest.json"
 REQUIRED_CASE_FIELDS = {
     "id", "category", "provider", "sender", "description", "body", "expected",

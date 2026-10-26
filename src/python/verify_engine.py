@@ -5,6 +5,10 @@ import sys
 from pathlib import Path
 
 from .preprocessing import normalize_financial_numbers, preprocess_message, tokenize_features
+from .service_notice import is_service_notice, SERVICE_NOTICE_REASON
+from .authorization_request import is_authorization_request, AUTHORIZATION_REQUEST_REASON
+from .legacy_transaction_model import score_legacy_transaction_model
+from .entity_text import EntityText
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
@@ -46,7 +50,7 @@ class MasroofEngine:
         re.I
     )
 
-    RE_INTERNAL_1 = re.compile(r'between (?:your|own|my) accounts|transfer between accounts|internal transfer|own account transfer', re.I)
+    RE_INTERNAL_1 = re.compile(r'between (?:(?:your|my)(?: own)?|own) accounts|transfer between accounts|internal transfer|own account transfer', re.I)
     RE_INTERNAL_2 = re.compile(r'تحويل بين حسابات(?:ك|كم|ي)|بين حسابات(?:ك|كم|ي)|تحويل داخلي|بين الحسابات', re.I)
     RE_INTERNAL_3 = re.compile(r'(?:transfer\s+from\s+your|from\s+your).*?(?:to\s+your|to\s+another)', re.I)
     RE_INTERNAL_4 = re.compile(r'(?:تحويل\s+من\s+حسابك|من\s+حسابك).*?(?:إلى\s+حسابك|إلى\s+بطاقتك|إلى\s+محفظتك)', re.I)
@@ -113,13 +117,13 @@ class MasroofEngine:
     RE_PAREN_PARTY = re.compile(r'(?:محفظة|من|إلى|كليك)?\s*0[7-9][0-9]{8}\s*\(([A-Za-z0-9\u0600-\u06FF\s\.\-_]+?)\)', re.I)
     RE_BILL_PARTY = re.compile(r'(?:دفع|تسديد)\s+فاتورة\s+(?:عبر\s+)?([A-Za-z0-9\u0600-\u06FF\s\.\-_]+?)(?=[.,;]?\s+(?:بنجاح|بقيمة|بمبلغ|عبر|من|في|\n|$))', re.I)
 
-    _DELIMS = r'(?:amount|on\b|at\b|to\b|from\b|via|through|as\s+cliq|has\s+been|with\s+card|is|bal(?:[a-z]?nce|\b)|avail|\d{1,2}[/-]\d{1,2}|ref\s*#|بمبلغ|بقيمة|في\s+\d|لدى|إلى|من\b|عبر|بواسطة|باستخدام|بالبطاقة|بالبطاقه|رصيدك|الرصيد|بتاريخ|تم|رقم|$)'
+    _DELIMS = r'(?:amount|on\b|at\b|to\b|from\b|via|through|as\s+cliq|has\s+been|with\s+card|is|bal(?:[a-z]?nce|\b)|your\b|avail|\d{1,2}[/-]\d{1,2}|ref\s*#|بمبلغ|بقيمة|في\s+\d|لدى|إلى|من\b|عبر|بواسطة|باستخدام|بالبطاقة|بالبطاقه|رصيدك|الرصيد|بتاريخ|تم(?![\u0621-\u064A])|رقم|$)'
     RE_PARTY = re.compile(r'(?:from|at|to|لدى|إلى|من|لحساب|عبر)\s+([A-Za-z0-9\u0600-\u06FF\s\.\-_*&/\'’]+?)(?=[.,;]?\s+' + _DELIMS + r'|\n|$)', re.I)
     RE_ADMIN_ALERT = re.compile(
         r'\bcredit\s+limit\b.*?\b(?:increased|decreased|adjusted)\b|\b(?:did\s+you\s+(?:attempt|make)\s+(?:a\s+|this\s+)?purchase|security\s+alert|refund\s+request)\b|تم\s+(?:زيادة|تعديل|رفع)\s+سقف\s+(?:الائتمان|البطاقة)|هل\s+قمت\s+(?:بإجراء|بمحاولة)|هل\s+حاولت|طلب\s+استرداد',
         re.I
     )
-    RE_CLAUSE_TARGET = re.compile(r'^(?:account|acc\.?|card|wallet|حساب|بطاق|محفظ|your\s+account|your\s+card|[0-9x\*]{3,}|\d{1,2}:\d{2}|avail|bal[a-z]?nce|رصيد)', re.I)
+    RE_CLAUSE_TARGET = re.compile(r'^(?:account|acc\.?|card|wallet|حساب|بطاق|محفظ|your\s+account|your\s+card|[0-9x\*]{3,}|\d{1,2}:\d{2}|your\b|avail|bal[a-z]?nce|رصيد)', re.I)
     RE_PREP_EXTENSION = re.compile(r'^(to|at|from|من|إلى)\s+([A-Za-z0-9\u0600-\u06FF\s\.\-_*&/\'’]+?)(?=[.,;]?\s+' + _DELIMS + r'|\n|$)', re.I)
 
     # 2. Semantic Micro-Embedding Subword Categorizer (Zero-Allocation Layer 2)
@@ -299,6 +303,9 @@ class MasroofEngine:
     def tokenize(self, text):
         return tokenize_features(text)
 
+    def _score_tokens(self, tokens):
+        return score_legacy_transaction_model(self.features, tokens, self.intercept_tx, self.intercept_credit)
+
     @classmethod
     def is_internal_transfer(cls, text):
         norm = text.lower()
@@ -316,6 +323,13 @@ class MasroofEngine:
                 return True
 
         return False
+
+    def predict_detailed(self, input_value):
+        from .detailed_assessment import assess
+        return assess(input_value,
+                      lambda body, direction: self.extract_entities(body, direction, categorize=False),
+                      self.parse_number,
+                      lambda text: self._score_tokens(self.tokenize(self.preprocess(text)))[0] >= 0.70)
 
     def predict(self, sender, body, is_contact=False, default_currency="JOD"):
         if is_contact:
@@ -336,6 +350,7 @@ class MasroofEngine:
                 "data": None
             }
 
+        original_body = body
         body = normalize_financial_numbers(body)
         # Check conversational chat noise spoofing
         if self.RE_CHAT_NOISE.search(body):
@@ -364,21 +379,27 @@ class MasroofEngine:
                 "data": None
             }
 
-        # Pure ML inference
+        if is_service_notice(body):
+            return {
+                "isValidTransaction": False,
+                "confidence": 0.0,
+                "reason": SERVICE_NOTICE_REASON,
+                "data": None
+            }
+
+        if is_authorization_request(body):
+            return {
+                "isValidTransaction": False,
+                "confidence": 0.0,
+                "reason": AUTHORIZATION_REQUEST_REASON,
+                "data": None
+            }
+
+        # ML inference
         cleaned = self.preprocess(body)
         tokens = self.tokenize(cleaned)
 
-        score_tx = self.intercept_tx
-        score_credit = self.intercept_credit
-
-        for tok in tokens:
-            if tok in self.features:
-                idf, w_tx, w_type = self.features[tok]
-                score_tx += w_tx * idf
-                score_credit += w_type * idf
-
-        prob_tx = 1.0 / (1.0 + pow(2.718281828459045, -score_tx))
-        prob_credit = 1.0 / (1.0 + pow(2.718281828459045, -score_credit))
+        prob_tx, prob_credit = self._score_tokens(tokens)
 
         is_valid = prob_tx >= 0.70
 
@@ -420,7 +441,7 @@ class MasroofEngine:
         else:
             tx_type = "INCOME" if prob_credit >= 0.50 else "EXPENSE"
 
-        extracted = self.extract_entities(body, tx_type, default_currency=default_currency)
+        extracted = self.extract_entities(original_body, tx_type, default_currency=default_currency)
 
         # INVIOLABLE FINANCIAL LAW: A transaction MUST have an actual monetary amount > 0!
         if not extracted or extracted.get("amount") is None or extracted["amount"] <= 0:
@@ -474,8 +495,8 @@ class MasroofEngine:
             return 'ILS'
         return upper
 
-    def extract_entities(self, text, tx_type, default_currency="JOD"):
-        text = normalize_financial_numbers(text)
+    def extract_entities(self, text, tx_type, default_currency="JOD", categorize=True):
+        view = EntityText(text)
         data = {
             "type": tx_type,
             "direction": "INCOMING" if tx_type == "INCOME" else "OUTGOING",
@@ -492,10 +513,7 @@ class MasroofEngine:
         }
 
         # Normalize whitespace and Arabic diacritics
-        norm_text = text.replace(r'\n', '\n').replace(r'\r', '')
-        norm_text = self.RE_NORM_DIACRITICS.sub('', norm_text)
-        norm_text = self.RE_NORM_WHITESPACE.sub(' ', norm_text)
-        norm_text = self.RE_NORM_SPACES.sub(' ', norm_text).strip()
+        norm_text = view.text
 
         # 1. Dynamic Balance Extraction FIRST + Masking
         m_bal_prefix = self.RE_BAL_PREFIX.search(norm_text)
@@ -614,7 +632,9 @@ class MasroofEngine:
         # Check wallet parenthesized party name first (e.g. "0771234567 (AHMAD SALEH)")
         m_paren = self.RE_PAREN_PARTY.search(norm_text)
         if m_paren and len(m_paren.group(1).strip()) > 2:
-            party_val = m_paren.group(1).strip()
+            matched = m_paren.group(1)
+            start = m_paren.start(1) + len(matched) - len(matched.lstrip())
+            party_val = view.exact(start, start + len(matched.strip()))
             data["merchantOrParty"] = party_val
             data["merchant_or_party"] = party_val
         else:
@@ -622,9 +642,10 @@ class MasroofEngine:
             m_bill = self.RE_BILL_PARTY.search(norm_text)
             if m_bill and len(m_bill.group(1).strip()) > 1:
                 cand = m_bill.group(1).strip()
-                cand = re.sub(r'^(?:خدمة|شركة)\s+', '', cand).strip()
-                data["merchantOrParty"] = cand
-                data["merchant_or_party"] = cand
+                start = m_bill.start(1) + m_bill.group(1).index(cand)
+                party_val = view.exact(start, start + len(cand))
+                data["merchantOrParty"] = party_val
+                data["merchant_or_party"] = party_val
             else:
                 for m in self.RE_PARTY.finditer(norm_text):
                     cand = m.group(1).strip()
@@ -638,28 +659,40 @@ class MasroofEngine:
                         continue
                     if len(cand) <= 2:
                         continue
+                    candidate_start = m.start(1) + m.group(1).index(cand)
+                    candidate_end = candidate_start + len(cand)
 
                     # Smart Preposition Chunker Extension: Check if candidate was cut by internal preposition
                     match_end = m.end()
-                    remaining = norm_text[match_end:].strip()
+                    match_end += len(norm_text[match_end:]) - len(norm_text[match_end:].lstrip())
+                    remaining = norm_text[match_end:]
                     m_prep = self.RE_PREP_EXTENSION.match(remaining)
                     while m_prep and m_prep.group(1) and m_prep.group(2):
                         prep_word = m_prep.group(1)
                         next_part = m_prep.group(2).strip()
                         if self.RE_CLAUSE_TARGET.search(next_part):
                             break
-                        cand = f"{cand} {prep_word} {next_part}".strip()
+                        candidate_end = match_end + len(m_prep.group(0).rstrip())
+                        cand = norm_text[candidate_start:candidate_end]
                         match_end += len(m_prep.group(0))
-                        remaining = norm_text[match_end:].strip()
+                        match_end += len(norm_text[match_end:]) - len(norm_text[match_end:].lstrip())
+                        remaining = norm_text[match_end:]
                         m_prep = self.RE_PREP_EXTENSION.match(remaining)
 
                     cand = re.sub(r'\s+بنجاح$', '', cand).strip()
-                    data["merchantOrParty"] = cand
-                    data["merchant_or_party"] = cand
+                    party_val = view.exact(candidate_start, candidate_start + len(cand))
+                    data["merchantOrParty"] = party_val
+                    data["merchant_or_party"] = party_val
                     break
 
+        if not categorize:
+            return data
+
         # 4. Semantic Micro-Embedding Categorization (Layer 2)
-        cat_res = self.classify_category(data.get("merchantOrParty"), norm_text)
+        scoring_party = data.get("merchantOrParty")
+        if scoring_party:
+            scoring_party = re.sub(r'\s+', ' ', self.RE_NORM_DIACRITICS.sub('', normalize_financial_numbers(scoring_party))).strip()
+        cat_res = self.classify_category(scoring_party, norm_text)
         data["category"] = cat_res["category"]
         data["categoryConfidence"] = cat_res["confidence"]
         data["category_confidence"] = cat_res["confidence"]
@@ -668,7 +701,7 @@ class MasroofEngine:
 
 def test_file(engine, file_path, sender="BANK_SERVICE"):
     print(f"\n========================================================")
-    print(f"Testing File (100% Pure ML): {os.path.basename(file_path)}")
+    print(f"Testing notification engine: {os.path.basename(file_path)}")
     print(f"========================================================")
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()

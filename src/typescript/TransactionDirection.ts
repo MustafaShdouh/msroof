@@ -59,7 +59,8 @@ export function sigmoid(logit: number): number {
 export function scoreHead(head: ScoreHead, features: readonly string[]): [number, number] {
   let logit = head.intercept;
   for (let index = 0; index < features.length; index++) {
-    logit += head.weights[features[index]] || 0;
+    const feature = features[index];
+    if (Object.prototype.hasOwnProperty.call(head.weights, feature)) logit += head.weights[feature];
   }
   return [logit, sigmoid(logit)];
 }

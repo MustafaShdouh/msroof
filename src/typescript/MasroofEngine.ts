@@ -1,13 +1,18 @@
 import { normalizeFinancialNumbers, preprocessMessage, tokenizeFeatures } from './Preprocessing.ts';
+import { isServiceNotice, SERVICE_NOTICE_REASON } from './ServiceNotice.ts';
+import { isAuthorizationRequest, AUTHORIZATION_REQUEST_REASON } from './AuthorizationRequest.ts';
+import { scoreLegacyTransactionModel } from './LegacyTransactionModel.ts';
+import { EntityText } from './EntityText.ts';
+import { assess } from './DetailedAssessment.ts';
+import type { DetailedInput, DetailedResult } from './DetailedAssessment.ts';
 
 /**
  * Masroof Financial Transaction Engine (React Native / TypeScript)
  *
- * 100% Machine Learning & Dynamic Extraction Engine
- * - No hardcoded keyword lists
- * - No hardcoded bank or store names
+ * Offline model scoring, structural guards, and regex entity extraction.
+ * - Legacy category scoring with optional user corrections
  * - Dynamic currency detection (JOD, USD, SAR, AED, EUR, etc.)
- * - Zero native bridges, executes in < 0.1ms
+ * - Bundled JSON weights; no native bridges
  */
 
 export interface MasroofInput {
@@ -85,6 +90,7 @@ interface SequenceTaggerRuntimeModel {
 
 export class MasroofEngine {
   private static model: ModelWeights | null = null;
+  private static readonly MODEL_SCORE_BUFFER = new Float64Array(2);
 
   // ===== MILESTONE 3: STRUCTURED BIO TAGGER (INFERENCE SKELETON) =====
   // The tagger is not wired into entity extraction until its trained accuracy
@@ -170,7 +176,7 @@ export class MasroofEngine {
 
   // ===== MILESTONE 2: ONLINE LEARNING LOOP (LAYER 3) — OVERLAY STORAGE =====
   // Pluggable storage adapter — zero dependency on AsyncStorage/MMKV in engine core
-  public static USER_OVERLAY: Record<string, number> = {};
+  public static USER_OVERLAY: Record<string, number> = Object.create(null);
 
   // Utility: category index lookup (aligned with CATEGORIES array)
   private static CATEGORY_TO_INDEX: Record<TransactionCategory, number> = {
@@ -190,7 +196,7 @@ export class MasroofEngine {
       const parsed = JSON.parse(jsonStr) as Record<string, unknown>;
       if (!parsed || typeof parsed !== 'object') return;
 
-      const overlay: Record<string, number> = {};
+      const overlay: Record<string, number> = Object.create(null);
       for (const key in parsed) {
         if (!Object.prototype.hasOwnProperty.call(parsed, key)) continue;
         const categoryIndex = parsed[key];
@@ -214,7 +220,7 @@ export class MasroofEngine {
   public static applyCorrection(merchantOrText: string, correctedCategory: TransactionCategory): void {
     const normMerchant = MasroofEngine.normalizeMerchant(merchantOrText);
     const categoryIndex = MasroofEngine.CATEGORY_TO_INDEX[correctedCategory];
-    if (!normMerchant || categoryIndex === undefined) return;
+    if (!normMerchant || typeof categoryIndex !== 'number') return;
     this.USER_OVERLAY[normMerchant] = categoryIndex;
   }
 
@@ -249,7 +255,7 @@ export class MasroofEngine {
 
   private static readonly RE_TOKENIZE = /[\w\u0621-\u064A\u0660-\u0669\*\.\-]+/g;
 
-  private static readonly RE_INTERNAL_1 = /between (?:your|own|my) accounts|transfer between accounts|internal transfer|own account transfer/i;
+  private static readonly RE_INTERNAL_1 = /between (?:(?:your|my)(?: own)?|own) accounts|transfer between accounts|internal transfer|own account transfer/i;
   private static readonly RE_INTERNAL_2 = /تحويل بين حسابات(?:ك|كم|ي)|بين حسابات(?:ك|كم|ي)|تحويل داخلي|بين الحسابات/i;
   private static readonly RE_INTERNAL_3 = /(?:transfer\s+from\s+your|from\s+your).*?(?:to\s+your|to\s+another)/i;
   private static readonly RE_INTERNAL_4 = /(?:تحويل\s+من\s+حسابك|من\s+حسابك).*?(?:إلى\s+حسابك|إلى\s+بطاقتك|إلى\s+محفظتك)/i;
@@ -328,10 +334,10 @@ export class MasroofEngine {
   private static readonly RE_PAREN_PARTY = /(?:محفظة|من|إلى|كليك)?\s*0[7-9][0-9]{8}\s*\(([A-Za-z0-9\u0600-\u06FF\s\.\-_]+?)\)/i;
   private static readonly RE_BILL_PARTY = /(?:دفع|تسديد)\s+فاتورة\s+(?:عبر\s+)?([A-Za-z0-9\u0600-\u06FF\s\.\-_]+?)(?=[.,;]?\s+(?:بنجاح|بقيمة|بمبلغ|عبر|من|في|\n|$))/i;
 
-  private static readonly DELIMS = '(?:amount|on\\b|at\\b|to\\b|from\\b|via|through|as\\s+cliq|has\\s+been|with\\s+card|is|bal(?:[a-z]?nce|\\b)|avail|\\d{1,2}[/-]\\d{1,2}|ref\\s*#|بمبلغ|بقيمة|في\\s+\\d|لدى|إلى|من|عبر|بواسطة|باستخدام|بالبطاقة|بالبطاقه|رصيدك|الرصيد|بتاريخ|تم|رقم|$)';
+  private static readonly DELIMS = '(?:amount|on\\b|at\\b|to\\b|from\\b|via|through|as\\s+cliq|has\\s+been|with\\s+card|is|bal(?:[a-z]?nce|\\b)|your\\b|avail|\\d{1,2}[/-]\\d{1,2}|ref\\s*#|بمبلغ|بقيمة|في\\s+\\d|لدى|إلى|من|عبر|بواسطة|باستخدام|بالبطاقة|بالبطاقه|رصيدك|الرصيد|بتاريخ|تم(?![\\u0621-\\u064A])|رقم|$)';
   private static readonly RE_PARTY = new RegExp('(?:from|at|to|لدى|إلى|من|لحساب|عبر)\\s+([A-Za-z0-9\\u0600-\\u06FF\\s\\.\\-_*&/\'’]+?)(?=[.,;]?\\s+' + MasroofEngine.DELIMS + '|\\n|$)', 'gi');
   private static readonly RE_ADMIN_ALERT = /\bcredit\s+limit\b.*?\b(?:increased|decreased|adjusted)\b|\b(?:did\s+you\s+(?:attempt|make)\s+(?:a\s+|this\s+)?purchase|security\s+alert|refund\s+request)\b|تم\s+(?:زيادة|تعديل|رفع)\s+سقف\s+(?:الائتمان|البطاقة)|هل\s+قمت\s+(?:بإجراء|بمحاولة)|هل\s+حاولت|طلب\s+استرداد/i;
-  private static readonly RE_CLAUSE_TARGET = /^(?:account|acc\.?|card|wallet|حساب|بطاق|محفظ|your\s+account|your\s+card|[0-9x\*]{3,}|\d{1,2}:\d{2}|avail|bal[a-z]?nce|رصيد)/i;
+  private static readonly RE_CLAUSE_TARGET = /^(?:account|acc\.?|card|wallet|حساب|بطاق|محفظ|your\s+account|your\s+card|[0-9x\*]{3,}|\d{1,2}:\d{2}|your\\b|avail|bal[a-z]?nce|رصيد)/i;
   private static readonly RE_PREP_EXTENSION = new RegExp('^(to|at|from|من|إلى)\\s+([A-Za-z0-9\\u0600-\\u06FF\\s\\.\\-_*&/\'’]+?)(?=[.,;]?\\s+' + MasroofEngine.DELIMS + '|\\n|$)', 'i');
 
   // 2. Semantic Micro-Embedding Subword Categorizer (Zero-Allocation Layer 2)
@@ -398,7 +404,7 @@ export class MasroofEngine {
         const w = mWords[i];
         if (w.length < 2) continue;
         const cat = MasroofEngine.SUBWORD_CATEGORY_MAP[w];
-        if (cat !== undefined) {
+        if (typeof cat === 'number') {
           MasroofEngine.CATEGORY_SCORE_BUFFER[cat] += 2.5;
         }
       }
@@ -410,7 +416,7 @@ export class MasroofEngine {
       const w = bWords[i];
       if (w.length < 2) continue;
       const cat = MasroofEngine.SUBWORD_CATEGORY_MAP[w];
-      if (cat !== undefined) {
+      if (typeof cat === 'number') {
         MasroofEngine.CATEGORY_SCORE_BUFFER[cat] += 1.0;
       }
     }
@@ -472,6 +478,17 @@ export class MasroofEngine {
   /**
    * Analyzes an incoming SMS payload from Apple Shortcuts
    */
+  public static analyzeDetailed(input: DetailedInput): DetailedResult {
+    return assess(input,
+      (body, type) => this.extractEntities(body, type, 'JOD', false),
+      value => this.parseNumber(value),
+      text => {
+        if (!this.model) return false;
+        scoreLegacyTransactionModel(this.model, this.tokenize(this.preprocess(text)), this.MODEL_SCORE_BUFFER);
+        return this.MODEL_SCORE_BUFFER[0] >= 0.70;
+      });
+  }
+
   public static analyze(input: MasroofInput): MasroofResult {
     const { sender, body, isContact } = input || {};
 
@@ -530,7 +547,25 @@ export class MasroofEngine {
       };
     }
 
-    // 3. Pure Machine Learning Inference (Evaluates semantic context statistically)
+    if (isServiceNotice(bodyStr)) {
+      return {
+        isValidTransaction: false,
+        confidence: 0.0,
+        reason: SERVICE_NOTICE_REASON,
+        data: null,
+      };
+    }
+
+    if (isAuthorizationRequest(bodyStr)) {
+      return {
+        isValidTransaction: false,
+        confidence: 0.0,
+        reason: AUTHORIZATION_REQUEST_REASON,
+        data: null,
+      };
+    }
+
+    // 3. Machine Learning Inference
     if (!this.model) {
       try {
         this.model = require('./masroof_model.json');
@@ -542,22 +577,9 @@ export class MasroofEngine {
     const cleaned = this.preprocess(bodyStr);
     const tokens = this.tokenize(cleaned);
 
-    let scoreTx = this.model!.metadata.intercept_tx;
-    let scoreCredit = this.model!.metadata.intercept_credit;
-
-    for (let i = 0; i < tokens.length; i++) {
-      const tok = tokens[i];
-      const feat = this.model!.features[tok];
-      if (feat) {
-        const [idf, wTx, wType] = feat;
-        scoreTx += wTx * idf;
-        scoreCredit += wType * idf;
-      }
-    }
-
-    // Calibrated logistic sigmoid probabilities
-    const probTx = 1.0 / (1.0 + Math.exp(-scoreTx));
-    const probCredit = 1.0 / (1.0 + Math.exp(-scoreCredit));
+    scoreLegacyTransactionModel(this.model!, tokens, this.MODEL_SCORE_BUFFER);
+    const probTx = this.MODEL_SCORE_BUFFER[0];
+    const probCredit = this.MODEL_SCORE_BUFFER[1];
 
     // Decision threshold for transactions
     const isValid = probTx >= 0.70;
@@ -606,7 +628,7 @@ export class MasroofEngine {
     }
 
     // 4. Dynamic Entity Extraction (Amounts, Currencies, Parties, Balances)
-    const extractedData = this.extractEntities(bodyStr, txType, input.defaultCurrency);
+    const extractedData = this.extractEntities(typeof body === 'string' ? body : '', txType, input.defaultCurrency);
 
     // INVIOLABLE FINANCIAL LAW: A transaction MUST have an actual monetary amount > 0!
     if (!extractedData || extractedData.amount === null || !Number.isFinite(extractedData.amount) || extractedData.amount <= 0) {
@@ -679,14 +701,9 @@ export class MasroofEngine {
     return upper;
   }
 
-  private static extractEntities(text: string, txType: TransactionType, defaultCurrency?: string): ParsedTransactionData {
-    const normText = text
-      .replace(this.RE_PREPROCESS_NL, '\n')
-      .replace(this.RE_PREPROCESS_CR, '')
-      .replace(this.RE_NORM_DIACRITICS, '')
-      .replace(this.RE_NORM_WHITESPACE, ' ')
-      .replace(this.RE_NORM_SPACES, ' ')
-      .trim();
+  private static extractEntities(text: string, txType: TransactionType, defaultCurrency?: string, categorize = true): ParsedTransactionData {
+    const view = new EntityText(text);
+    const normText = view.text;
 
     const data: ParsedTransactionData = {
       type: txType,
@@ -824,13 +841,14 @@ export class MasroofEngine {
     // 4. Dynamic Merchant / Recipient Party Extraction
     const mParen = normText.match(this.RE_PAREN_PARTY);
     if (mParen && mParen[1] && mParen[1].trim().length > 2) {
-      data.merchantOrParty = mParen[1].trim();
+      const start = mParen.index! + mParen[0].lastIndexOf(mParen[1]) + mParen[1].length - mParen[1].trimStart().length;
+      data.merchantOrParty = view.exact(start, start + mParen[1].trim().length);
     } else {
       const mBill = normText.match(this.RE_BILL_PARTY);
       if (mBill && mBill[1] && mBill[1].trim().length > 1) {
         let cand = mBill[1].trim();
-        cand = cand.replace(/^(?:خدمة|شركة)\s+/i, '').trim();
-        data.merchantOrParty = cand;
+        const start = mBill.index! + mBill[0].length - mBill[1].length + mBill[1].indexOf(cand);
+        data.merchantOrParty = view.exact(start, start + cand.length);
       } else {
         this.RE_PARTY.lastIndex = 0;
         let m: RegExpExecArray | null;
@@ -850,10 +868,13 @@ export class MasroofEngine {
           if (cand.length <= 2) {
             continue;
           }
+          const candidateStart = m.index + m[0].length - m[1].length + m[1].indexOf(cand);
+          let candidateEnd = candidateStart + cand.length;
 
           // Smart Preposition Chunker Extension: If candidate was prematurely cut by an internal preposition (e.g. Farm To Table, Subway At The Mall)
           let matchEnd = this.RE_PARTY.lastIndex;
-          let remaining = normText.slice(matchEnd).trim();
+          matchEnd += normText.slice(matchEnd).length - normText.slice(matchEnd).trimStart().length;
+          let remaining = normText.slice(matchEnd);
           let mPrep = remaining.match(MasroofEngine.RE_PREP_EXTENSION);
           while (mPrep && mPrep[1] && mPrep[2]) {
             const prepWord = mPrep[1];
@@ -861,21 +882,26 @@ export class MasroofEngine {
             if (MasroofEngine.RE_CLAUSE_TARGET.test(nextPart)) {
               break;
             }
-            cand = `${cand} ${prepWord} ${nextPart}`.trim();
+            candidateEnd = matchEnd + mPrep[0].trimEnd().length;
+            cand = normText.slice(candidateStart, candidateEnd);
             matchEnd += mPrep[0].length;
-            remaining = normText.slice(matchEnd).trim();
+            matchEnd += normText.slice(matchEnd).length - normText.slice(matchEnd).trimStart().length;
+            remaining = normText.slice(matchEnd);
             mPrep = remaining.match(MasroofEngine.RE_PREP_EXTENSION);
           }
 
           cand = cand.replace(/\s+بنجاح$/i, '').trim();
-          data.merchantOrParty = cand;
+          data.merchantOrParty = view.exact(candidateStart, candidateStart + cand.length);
           break;
         }
       }
     }
 
+    if (!categorize) return data;
+
     // 4. Semantic Micro-Embedding Categorization (Layer 2)
-    const catResult = MasroofEngine.classifyCategory(data.merchantOrParty, normText);
+    const scoringParty = data.merchantOrParty ? normalizeFinancialNumbers(data.merchantOrParty).replace(this.RE_NORM_DIACRITICS, '').replace(this.RE_NORM_SPACES, ' ').trim() : null;
+    const catResult = MasroofEngine.classifyCategory(scoringParty, normText);
     data.category = catResult.category;
     data.categoryConfidence = catResult.confidence;
 

@@ -12,6 +12,7 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+from training.corpus_io import historical_path, write_immutable
 from training.prepare_category_evaluation import FOLDS, prepare
 from training.build_business_shortlist import normalize
 from src.python.preprocessing import preprocess_message, PREPROCESSING_CONTRACT_VERSION
@@ -19,8 +20,8 @@ from src.python.preprocessing import preprocess_message, PREPROCESSING_CONTRACT_
 BUSINESSES = ROOT / "data/annotations/businesses_200.jsonl"
 SPLIT = ROOT / "data/training/splits/category_brand_split.json"
 FAMILIES = ROOT / "data/sources/businesses/brand_families.json"
-REPORT = ROOT / "data/reports/category_corpus_audit.json"
-READABLE = ROOT / "data/reports/CATEGORY_CORPUS_AUDIT.md"
+REPORT = ROOT / "data/reports/category_corpus_archive_audit_v1.json"
+READABLE = ROOT / "data/reports/CATEGORY_CORPUS_ARCHIVE_AUDIT_V1.md"
 TAXONOMY = ROOT / "data/annotations/category_annotation_schema.json"
 
 
@@ -151,14 +152,16 @@ def main():
     plan = json.loads(SPLIT.read_text(encoding="utf-8"))
     allowed = json.loads(TAXONOMY.read_text(encoding="utf-8"))["allowedCategories"]
     report = audit(rows, plan, allowed, json.loads(FAMILIES.read_text(encoding="utf-8"))["families"])
-    paths = [ROOT / "data/training/dataset_expanded.json", ROOT / "tests/fixtures/test_suite_cases.json", ROOT / "tests/fixtures/qa_adversarial_cases.json"]
+    historical = ["data/training/dataset_expanded.json", "tests/fixtures/test_suite_cases.json", "tests/fixtures/qa_adversarial_cases.json"]
+    paths = [historical_path(relative) for relative in historical]
     corpora = {}
-    for path in paths:
+    for relative, path in zip(historical, paths):
         payload = json.loads(path.read_text(encoding="utf-8"))
-        corpora[str(path.relative_to(ROOT))] = payload if isinstance(payload, list) else payload["testCases"]
+        corpora[relative] = payload if isinstance(payload, list) else payload["testCases"]
     report["historicalSmsExposure"] = historical_mentions(rows, plan, corpora)
-    report["inputSha256"] = {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest() for path in [BUSINESSES, SPLIT, FAMILIES, TAXONOMY] + paths}
-    REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    report["historicalInputLocation"] = "Private hash-checked archives; original logical paths retained for comparison"
+    report["inputSha256"] = {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest() for path in [BUSINESSES, SPLIT, FAMILIES, TAXONOMY]} | {relative: hashlib.sha256(path.read_bytes()).hexdigest() for relative, path in zip(historical, paths)}
+    write_immutable(REPORT, json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
     lines = ["# Jordan merchant-category corpus audit", "", "Metadata audit, not a model evaluation. All counts are distinct businesses; aliases do not increase sample size.", "",
              "| Category | Train human | Train assistant | Train total | Validation total | Test total |", "| --- | ---: | ---: | ---: | ---: | ---: |"]
     for category in allowed:
@@ -167,10 +170,10 @@ def main():
     lines += ["", "Missing training categories: " + ", ".join(report["missingTrainingCategories"]) + ".", "",
               f"Cross-fold exact-form conflicts: {report['exactFormCrossFoldConflicts']}. Verified-family cross-fold conflicts: {report['knownFamilyCrossFoldConflicts']}. Family coverage is bounded, not exhaustive.", "",
               "Known family: Inditex (Lefties, Massimo Dutti, Oysho, Stradivarius, ZARA, ZARA Home), all in training. Source: https://annualreport.inditex.com/anrpxxvui/en/our-drivers", "",
-              "Historical SMS mentions and input hashes are in category_corpus_audit.json. Generic names may produce false identity matches. Do not mix legacy SMS into new fitting data without auditing its held-out business and template overlap.", "",
+              "Historical SMS mentions and input hashes are in category_corpus_archive_audit_v1.json, read from private hash-checked archives. Earlier reports remain unchanged. Generic names may produce false identity matches. Do not mix legacy SMS into new fitting data without auditing its held-out business and template overlap.", "",
               "Bounded augmentation protocol: begin with observed training aliases, then at most one feature-changing synthetic variant per training business; keep equal business weight and untouched holdouts. It cannot create missing categories or independent test truth. This audit does not train models; see merchant_category_research.json for experiment status.", "",
               "Research basis: [EDA text augmentation paper](https://aclanthology.org/D19-1670/) and [scikit-learn leakage guidance](https://scikit-learn.org/stable/common_pitfalls.html). These do not establish effectiveness for Jordanian SMS; use a controlled local A/B experiment."]
-    READABLE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    write_immutable(READABLE, "\n".join(lines) + "\n")
     print(json.dumps({key: report[key] for key in ("labeledBusinesses", "missingTrainingCategories", "evaluationOnlyCategories", "sparseTrainingCategories", "exactFormCrossFoldConflicts", "knownFamilyCrossFoldConflicts")}, ensure_ascii=False, indent=2))
     print(json.dumps({key: value["matchingRecordCount"] for key, value in report["historicalSmsExposure"]["corpora"].items()}, indent=2))
 

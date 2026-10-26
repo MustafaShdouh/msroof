@@ -18,6 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from src.python.preprocessing import normalize_financial_numbers
+from training.corpus_io import historical_path, ARCHIVES
 
 MANIFEST = "data/sources/transactions/seed_audit_manifest.json"
 PRIVATE = "data/private/sms_provenance/seed_audit.json"
@@ -193,7 +194,24 @@ def protected_hashes(root):
               "data/training/bio_training_data.json", "data/training/splits/transaction_direction_split.json",
               "data/training/splits/category_brand_split.json", "tests/fixtures/test_corpus_manifest.json",
               "tests/fixtures/test_suite_cases.json", "tests/fixtures/qa_adversarial_cases.json")]
-    return {p.relative_to(root).as_posix(): digest(p.read_bytes()) for p in sorted(paths)}
+    result = {}
+    for path in sorted(paths):
+        relative = path.relative_to(root).as_posix()
+        if not path.exists():
+            path = historical_path(relative, root)
+        result[relative] = digest(path.read_bytes())
+    for directory in ARCHIVES:
+        manifest_path = root / directory / "manifest.json"
+        if not manifest_path.exists():
+            continue
+        result[directory + "/manifest.json"] = digest(manifest_path.read_bytes())
+        for relative, expected in json.loads(manifest_path.read_text(encoding="utf-8"))["filesSha256"].items():
+            archive = (root / directory).resolve()
+            path = (archive / relative).resolve()
+            if not path.is_relative_to(archive) or digest(path.read_bytes()) != expected:
+                raise ValueError("Historical archive integrity failed: " + relative)
+            result[directory + "/" + relative] = digest(path.read_bytes())
+    return result
 
 
 def build_audit(root=ROOT):
@@ -201,7 +219,15 @@ def build_audit(root=ROOT):
     inputs = {}
 
     def read(relative):
-        raw = (root / relative).read_bytes()
+        # The v1 audit describes historical exposure, including its original
+        # tool hashes. Retain its exact evidence after working-copy retirement.
+        archived = set(CORPORA.values()) | {
+            "training/audit_sms_provenance.py", "training/build_bio_training_set.py",
+            "training/expand_dataset.py", "data/training/dataset_expanded.csv",
+            "data/training/splits/transaction_direction_split.json",
+        }
+        path = historical_path(relative, root) if relative in archived else root / relative
+        raw = path.read_bytes()
         inputs[relative] = digest(raw)
         return raw.decode("utf-8-sig")
 

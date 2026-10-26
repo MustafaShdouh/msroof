@@ -18,7 +18,7 @@ if sys.stdout.encoding.lower() != 'utf-8':
 from tests.python.test_suite_runner import run_python_suite
 from tests.python.test_preprocessing_contract import main as run_python_preprocessing_contract
 from tests.python.test_transaction_direction_contract import main as run_python_transaction_direction_contract
-from tests.python.validate_test_corpus import validate_baseline
+from tests.python.validate_test_corpus import validate_baseline, FIXTURE_ROOT
 from tests.python.test_financial_numbers import main as run_python_financial_numbers
 
 def main() -> int:
@@ -38,7 +38,11 @@ def main() -> int:
     category_suite = unittest.defaultTestLoader.loadTestsFromNames([
         "tests.python.test_merchant_category", "tests.python.test_merchant_training_extension",
         "tests.python.test_arabic_collection", "tests.python.test_transaction_behavior_contract",
-        "tests.python.test_sms_provenance", "tests.python.test_sanitized_corpus"])
+        "tests.python.test_sms_provenance", "tests.python.test_sanitized_corpus",
+        "tests.python.test_service_notice", "tests.python.test_authorization_request", "tests.python.test_corpus_migration",
+        "tests.python.test_behavior_evaluation", "tests.python.test_runtime_parity", "tests.python.test_entity_text",
+        "tests.python.test_candidate_comparison", "tests.python.test_bio_labels", "tests.python.test_bio_context",
+        "tests.python.test_detailed_assessment"])
     if not unittest.TextTestRunner(verbosity=1).run(category_suite).wasSuccessful():
         return 1
 
@@ -97,8 +101,8 @@ def main() -> int:
     print(lab_process.stdout.strip())
 
     suites = [
-        ("Test Suite 1: QA Adversarial Edge Cases", ROOT / "tests" / "fixtures" / "qa_adversarial_cases.json"),
-        ("Test Suite 2: Regression Bank Test Cases", ROOT / "tests" / "fixtures" / "test_suite_cases.json"),
+        ("Test Suite 1: Sanitized QA Adversarial Edge Cases", FIXTURE_ROOT / "qa_adversarial_cases.json"),
+        ("Test Suite 2: Sanitized Regression Bank Test Cases", FIXTURE_ROOT / "test_suite_cases.json"),
     ]
 
     print("=" * 70)
@@ -145,7 +149,7 @@ def main() -> int:
     print("\n" + "=" * 70)
     if all_passed:
         print("ACTIVE BASELINE AND CONTRACT CHECKS PASSED")
-        print("Prepared sanitized cases have a separate compatibility diagnostic before gate migration.")
+        print("Active corpus: sanitized_v1 (226 development compatibility cases; not independent accuracy).")
     else:
         print("OVERALL STATUS: DEFECTS DETECTED")
     print("=" * 70)

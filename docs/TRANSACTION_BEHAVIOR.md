@@ -2,7 +2,10 @@
 
 The owner approved the refactoring plan on 2026-10-25. This is task 1: a target behavior specification that future data, models, and adapters must implement. The machine-readable contract is `config/contracts/transaction_behavior.json`. It does not change the legacy `MasroofEngine` API or claim that the current model satisfies these requirements.
 
-Implementation check: 31 authored scenarios and 18 exact saved category policies validate; 13 contract safeguards pass. The consolidated runner passes its 34 unit checks, existing preprocessing/scoring/browser checks, and all 226 frozen cases in both Python and TypeScript. These are specification/regression results, not new accuracy claims or final-test results.
+The 31 authored scenarios and 18 exact saved category policies validate separately
+from model measurements. Current runtime evidence and gaps are in
+`docs/BEHAVIOR_EVALUATION.md`; current work status is in `STATE.md`. Neither the
+specification checks nor exposed regression results establish independent accuracy.
 
 ## Inputs and scope
 
@@ -28,6 +31,11 @@ Support Jordanian Arabic, English, and mixed-language messages, Western/Arabic-I
 | `categoryStatus` | `assigned`, `uncertain`, or `not_applicable`. |
 
 These fields describe the target core result. Account masks, balance, and FX details in the old API remain outside this first contract; their later migration needs explicit contracts. A future adapter must preserve or version existing caller behavior. No compatibility adapter should silently turn an uncertain outcome into a binary certainty.
+
+The owner clarified on 2026-10-26 that merchant/counterparty names must preserve
+their exact source text, including Arabic diacritics, spacing, digit script and
+descriptors. The matching/source-projection convention is recorded separately in
+`config/contracts/entity_text.json`; old mixed-convention fixtures remain frozen.
 
 ## Money movement and recording policy
 
@@ -103,3 +111,147 @@ Task 1 is complete when:
 - The full regression runner retains the frozen baseline and checks the new target-contract artifacts independently of legacy inference.
 
 Run `py tools/contracts/validate_transaction_behavior.py` to validate the examples and snapshots; run `py -m unittest tests.python.test_transaction_behavior_contract` for semantic checks. These validate the specification, not model understanding. Task 2 is a read/provenance audit of the located real seeds and their development exposure, with fresh evaluation acquisition still required.
+
+## Proposed uncertainty implementation,2026-10-26
+
+Status: concrete design for owner approval; no runtime/API change implemented by
+this proposal. The existing JSON contract1.0.0 supplies the result fields and
+approved product rules. This implements that contract without training another
+model or admitting source examples to training. The current classifier remains
+an imperfect source of evidence; its score cannot establish settlement,
+direction or account ownership by itself.
+
+### Recommended interface
+
+Add `MasroofEngine.analyzeDetailed(input)` in TypeScript and
+`MasroofEngine.predict_detailed(input)` in Python. Both accept the contract's
+`text`, optional `sender`, `isContact` and `receivedAt`, and return exactly the
+contract's canonical result fields. Use `transactionStatus` to describe completion
+and `trackingDecision` to decide recording. An absent merchant/category does not
+block an otherwise complete external transaction. Metadata does not authenticate
+the sender; a saved contact or personal phone number alone does not settle the
+result. Canonical missing/ambiguous currency defaults to JOD regardless of the
+legacy API's optional caller currency default.
+
+Factor reusable extraction/scoring evidence from the current engines rather
+than deriving the new status from their boolean result or human-readable reason.
+The current sender gates, lexical direction override, fallback direction head
+and automatic own-transfer inference from two masks cannot serve as canonical
+truth. Preserve exact source names and tested financial-number handling. Identify
+candidate amounts, currencies and roles even when the old transaction threshold
+would reject; a clear debit with an unreadable amount is completed + review.
+The research BIO candidate remains isolated.
+
+The detailed result has no correctness probability. Keep uncalibrated model
+scores and legacy category suggestions in developer diagnostics outside the
+canonical result. Do not silently map eight legacy category labels onto the15
+purpose categories. Assign a canonical category only where an existing approved
+exact policy or unambiguous purpose supports it; otherwise included outgoing
+spending uses null + uncertain. Do not use Other for missing knowledge. Account,
+balance and FX diagnostics stay outside this first canonical contract; preserve
+the existing tested extraction behavior and report any ambiguity rather than
+choosing a convenient amount from multiple events.
+
+### Evidence and decision order
+
+1. Collect clause-level evidence for requested/pending/failed events, completed
+   money movement, direction, transfer relationship and field candidates. Use
+   shared Arabic/English structural patterns and existing number normalization;
+   no institution/name registry, source-row ID or fixture-specific override.
+2. Empty/malformed input or clear chat/OTP/request/decline/notice/balance-only
+   content with no conflicting completed event is non_transaction + exclude.
+   Clear code requests retain the repaired OTP behavior. If clauses describe
+   conflicting outcomes or inseparable events, use uncertain + review instead
+   of allowing a global word match to invent a single settled event.
+3. Financial-looking content without sufficient completion evidence is
+   uncertain + review. Authorization alone is not proof of settlement. Generic
+   ATM activity does not establish withdrawal direction. Recognizing a merchant
+   or having a high transaction score does not resolve either uncertainty.
+4. With explicit completed-movement evidence, keep completed status. A missing
+   unique amount, unclear direction or unresolved transfer ownership requires
+   review. Direction must come from the event and account-owner relationship;
+   a model's default expense choice is insufficient.
+5. Explicit own-account movement is completed + exclude, with direction/category
+   not_applicable. Two account masks alone do not prove common ownership. Clear
+   external/person transfer language permits inclusion when amount and direction
+   resolve; an unresolved transfer relationship remains unknown + review.
+6. Include only completed external movement with positive unique amount,
+   resolved direction and resolved transfer relationship. Resolve currency using
+   explicit evidence or the approved marked JOD default. Generate reason codes
+   from these evidence states and validate their consistency with the contract.
+
+Completion/direction evidence is interpreted in context: a word such as paid,
+debited or تم inside a request, quotation or failed attempt is not sufficient.
+When the first implementation cannot bind the evidence to a single event, it
+must review rather than infer a direction or settlement from the score. Preserve
+these unresolved cases for diagnostics without treating them as new gold data.
+
+| Message evidence | Completion status | Tracking decision | Field treatment |
+| --- | --- | --- | --- |
+| Code needed to complete payment | non_transaction | exclude | Financial fields null/not_applicable |
+| Generic ATM activity; direction not stated | uncertain | review | Visible amount/currency may remain; direction uncertain |
+| Card authorization; settlement not established | uncertain | review | Do not infer completed spending or assign a category |
+| Explicit debit, amount unreadable | completed | review | Amount null; preserve independently established direction |
+| Completed P2P receipt with amount and direction | completed | include | Preserve exact named counterparty when present |
+| Explicit completed transfer between own accounts | completed | exclude | No net direction or expense category |
+| Completed transfer, ownership relationship unclear | completed | review | Transfer relationship unknown |
+
+### Compatibility and small implementation slices
+
+**Slice1 — detailed core and evidence report.** Add the detailed methods,
+shared evidence grammar and parallel Python/TS decision code. Initially keep
+`analyze`/`predict` as the named legacy path while comparing results. The browser
+tester gets a developer comparison view with the canonical status, decision and
+reasons. Review/exclude results are never offered as loggable transactions in
+that view. Do not claim legacy callers are fixed by merely adding a new method.
+
+**Slice2 — safe caller projection after the comparison is reviewed.** Route
+normal `analyze`/`predict` through the approved detailed assessment. Return
+`isValidTransaction:true` and populated legacy `data` only for include. Both
+review and exclude return false + null legacy data, with the complete canonical
+result in an additive `assessment` field so callers can distinguish them.
+Existing legacy category fields remain explicitly deprecated suggestions;
+canonical purpose/category status is authoritative. The browser default shows
+canonical status and category, including Review required. No mobile app edits
+are part of these slices. Keep the old inference path explicitly available for
+development comparison while its replacement is measured; do not delete it as
+part of this uncertainty task.
+
+This is a compatibility migration: some previously accepted ambiguous messages
+will cease to be automatically loggable; some clearly completed receipts will
+pass despite contact/phone metadata. Record every changed decision and field.
+Freeze the226-case corpus and labels. Continue measuring the old path against
+its existing baseline; compare the new path separately with approved contract
+semantics. An old label that conflicts with the contract is reported as a
+compatibility disagreement, never relabeled or hidden to obtain a passing score.
+Category suggestions and caller-supplied default currencies must not silently
+override canonical category uncertainty or the JOD policy.
+
+### Acceptance and scope limits
+
+- Every canonical result validates against `validate_result`; Python/TS/browser
+  canonical outputs agree on every exercised case, including reason-code sets.
+- Target31/31 tracking decisions on the existing authored policy probes; also
+  report completion, direction, ownership and all known-field disagreements.
+  These are conformance checks, not independent accuracy or release thresholds.
+- Additional authored contrasts cover code requests versus completed receipts,
+  requested versus completed P2P, own versus external/unclear transfers, generic
+  ATM versus explicit withdrawal/deposit, missing amounts, conflicting evidence,
+  metadata changes, explicit versus default currency and Arabic/English/mixed
+  forms with the three digit scripts. They remain outside training/final tests.
+- Privately replay the four source examples: OTP excluded; three unresolved
+  examples reviewed. Source origin/field-boundary gaps remain unresolved. Their
+  now-exposed messages are diagnostic-only and cannot establish general accuracy.
+- The compatibility projection never exposes legacy transaction data on review
+  or exclude; the assessment retains partial known facts and explains uncertainty.
+- Report all226 frozen compatibility outcomes, numeric/exact-name safeguards,
+  category answer/abstention changes and stable source/model/data hashes. The old
+  path must retain its measured gate; intentional new-path differences require
+  visible review before Slice2. Preserve new report inputs under new run IDs.
+
+No new numeric confidence threshold is proposed. No independent dataset,
+meaningful accuracy target or safe deployment claim is implied. Implementation
+of Slice1 requires owner approval of this concrete API design under Project
+Control; Slice2 waits for review of its measured compatibility differences.
+Training, final-test evaluation, promotion/publication and legacy deletion remain
+separate decisions.

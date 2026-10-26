@@ -11,6 +11,11 @@ The target transaction, transfer, uncertainty, category, and evaluation rules ar
 This target contract is validated separately from the legacy runtime. Its authored
 examples are policy checks, not training data or independent accuracy evidence.
 
+Current behavior measurements and candidate decisions are in
+[`docs/BEHAVIOR_EVALUATION.md`](docs/BEHAVIOR_EVALUATION.md). The tester bundles the
+canonical TypeScript engine, and extracted names preserve exact source text.
+Two newly trained research candidates regressed and were kept out of the runtime.
+
 ## Directory layout
 
 | Directory or file | Purpose |
@@ -25,6 +30,7 @@ examples are policy checks, not training data or independent accuracy evidence.
 | `tests/fixtures/` | Frozen regression corpus and versioned contracts. |
 | `tests/python/`, `tests/typescript/` | Regression and contract runners. |
 | `tools/` | Corpus generators, optional browser tester, and retired developer utilities. |
+| `data/reports/behavior/` | Versioned behavior/parity and candidate comparison evidence. |
 | `STATE.md` | Concise current status. |
 | `.agents/HANDOFF.md` | Detailed continuation record for a new coding model. |
 
@@ -38,7 +44,7 @@ py run_all_tests.py
 
 Validate the target behavior contract alone with `py tools/contracts/validate_transaction_behavior.py`.
 
-The command validates the frozen 226-case corpus, both cross-language contracts, and the Python and TypeScript regression engines.
+The command validates the frozen sanitized 226-case corpus, both cross-language contracts, and the Python and TypeScript regression engines.
 
 ## Developer commands
 
@@ -47,16 +53,16 @@ The command validates the frozen 226-case corpus, both cross-language contracts,
 py tests/python/test_new_architectural_features.py
 & 'C:\Program Files\nodejs\node.exe' tests/typescript/test_new_architectural_features.ts
 
-# Rebuild deterministic BIO data and its flat perceptron model
+# Rebuild sanitized heuristic BIO drafts, then validate without fitting
 py training/build_bio_training_set.py
-py training/train_sequence_tagger.py
-py training/evaluate_bio_sequence_tagger.py
+py training/train_sequence_tagger.py --check-inputs
+py training/evaluate_bio_sequence_tagger.py --check-inputs
 
-# Recreate the transaction/direction grouped split
+# Validate the frozen global transaction/direction split
 py training/prepare_transaction_direction_split.py
 
-# Train and evaluate the separate v2 transaction/direction candidate
-py training/train_transaction_direction_v2.py
+# Validate candidate inputs; future fitting requires a fresh --run-id
+py training/train_transaction_direction_v2.py --check-inputs
 
 # Audit and train standalone merchant-name category research candidates
 py training/audit_category_corpus.py
@@ -65,8 +71,7 @@ py training/train_merchant_category.py
 # Rebuild the optional browser playground
 py tools/browser/build_tester_ui.py
 
-# Prepare a small merchant-category review batch
-py training/prepare_merchant_candidates.py
+# Prepare a review batch from the existing reviewed candidate registry
 py training/merchant_review.py batch --size 12
 
 # Review ambiguous category boundaries using clearly marked illustrative examples
@@ -90,14 +95,18 @@ disabled during development. These candidates do not change the active SMS engin
 
 The SMS source audit is in `data/reports/REAL_SMS_PROVENANCE_AUDIT.md`.
 Run `py training/audit_sms_provenance.py --check` after generating its private
-local outputs; originals are required and remain ignored. The current synthetic
-split has normalized-text duplicates across providers in train and validation;
-use a new version with global content/template isolation before further model
-comparisons. Source rules: `data/annotations/REAL_SMS_INTAKE.md`.
+local outputs; originals and private historical snapshots are required and remain
+ignored. The archived historical split has cross-provider duplicates; routine
+development uses the new globally grouped sanitized split.
+Source rules: `data/annotations/REAL_SMS_INTAKE.md`.
 
-The prepared sanitized replacement and new grouped split are described in
-[`docs/SANITIZED_CORPUS.md`](docs/SANITIZED_CORPUS.md). Their separate compatibility
-diagnostic records one maintenance-notice false positive; migration is blocked.
-The existing engine and frozen baseline remain active pending that fix.
+The sanitized corpus and new grouped split are described in
+[`docs/SANITIZED_CORPUS.md`](docs/SANITIZED_CORPUS.md). After the shared service-notice
+repair, Python and TypeScript pass all 226 sanitized compatibility cases. These
+fixtures are now the active gate; the earlier failing diagnostic is preserved.
+Model weights are unchanged. Data tools now use sanitized inputs or checked private
+historical snapshots; 12 legacy working files are retired. Details and recovery:
+[`docs/SANITIZED_CORPUS.md`](docs/SANITIZED_CORPUS.md). Old Git objects and legacy
+learned vocabulary remain; no independent accuracy or complete privacy claim follows.
 
 Workspace: `C:/Users/mustafa/Desktop/msroof` is authoritative. Original SMS inputs under `DATA_YOU_WANT/` and `data/raw/*.txt` stay local; `.local-backups/` contains verified pre-merge archives and is not published.

@@ -1,0 +1,390 @@
+{
+  "version": "2.0.0",
+  "scope": "Existing word learner on corrected synthetic proxy-grouped development; not independent accuracy",
+  "inputSha256": {
+    "data/training/sanitized_v2/bio_training_data.json": "fe5aa5f0012499f27a7505504c494d734bfc60d1c4546b670b91534c4a770f42",
+    "data/training/splits/bio_sanitized_v2.json": "4fdc75b9386ba111fb4275b31d091ac2a89a6fbc477285eda681f032f2d73b7c",
+    "data/reports/bio/bio_annotation_v2.json": "bec06e0eddc2242e0e3ab828339d9c9be91f9edbdc82d606096583f8f95d7e89",
+    "config/contracts/bio_annotations.json": "5ca6e922aa2f52daf3442a281b668029e82dbce57178410523b8404a09eb2c33",
+    "training/train_sequence_tagger.py": "88b724eda2e8352c2eafd44facd964d048fd4b69173d4e0c858e456755a08b70",
+    "training/prepare_bio_labels.py": "e78607a8bd027d6d7b3a22f0c0b2ee44dd7b1f653b874d1adf723a8d7220c098",
+    "training/evaluate_behavior.py": "c80e484f92dbe519fe8e3b716bcb443f6b8f7c496fb1245dee39e94a3b9b2765",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "training/corpus_io.py": "3b24a9ea6ba2de041d6f709caa0a60b8b9b7ea6a42327f94fc13e7b7ff04387a",
+    "src/python/bio_sequence.py": "638d4e92693164ba468ca81c1b3646a01e1bf2c34efd14f64e829c41588e01fe",
+    "src/typescript/BioNormalization.ts": "574aec57ecfc147df8212118b3bcd1da2adc547cd145be507bb3fb9c77a83503",
+    "src/typescript/MasroofEngine.ts": "8424f2916a45912394029e7672bb20eb461a98db6062296f8b5a7fd36febed24",
+    "src/python/verify_engine.py": "f38f9e90caf681feda35f12827154fe2b1dbf841e3492d1e2abbb730f9164f7f",
+    "src/python/entity_text.py": "688fcf0e4bda7dac395815589464d3f9f88f073d31b58aeadc798c83f3b98948",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "src/python/legacy_transaction_model.py": "911c45201bc21c1926ec4b03ef6e340376a5b292491225c0a81f7a1f97f32100",
+    "src/python/service_notice.py": "92cf27f5255e9a37f53f267063ba12913638c4cc1bfbc75652c2931c6f6136d3",
+    "config/contracts/service_notice.json": "1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3",
+    "tools/evaluation/probe_bio_model.ts": "e5945b728615242017bf02926566e701044b3920e61d440aaa64a293e727a5ae",
+    "training/evaluate_bio_labels.py": "2a677eb255e60328fb7456005d6342640fdb3652387d58e3a945fdb997a31aad"
+  },
+  "candidateModelSha256": "1e662b7a54f9caebddae148d53040c19eb8fbc26433614d1667ed1e1578448c5",
+  "trainCount": 63,
+  "validationCount": 16,
+  "quarantineCount": 4,
+  "epochs": 25,
+  "seed": 20261024,
+  "modelArchitectureChanged": false,
+  "predictionParity": {
+    "pythonTypeScript": true,
+    "count": 16,
+    "dtype": "float32 per accumulation"
+  },
+  "bio": {
+    "examples": 16,
+    "tokenAgreement": {
+      "count": 329,
+      "total": 397,
+      "rate": 0.8287153652392947
+    },
+    "exactSequenceAgreement": {
+      "count": 0,
+      "total": 16,
+      "rate": 0.0
+    },
+    "exactPrimaryFields": {
+      "count": 0,
+      "total": 16,
+      "rate": 0.0
+    },
+    "invalidIobTransitions": 2,
+    "perEntityCharacterSpan": {
+      "AMT": {
+        "truePositives": 6,
+        "falsePositives": 4,
+        "falseNegatives": 10,
+        "precision": 0.6,
+        "recall": 0.375,
+        "f1": 0.46153846153846156
+      },
+      "CURR": {
+        "truePositives": 15,
+        "falsePositives": 12,
+        "falseNegatives": 1,
+        "precision": 0.5555555555555556,
+        "recall": 0.9375,
+        "f1": 0.6976744186046512
+      },
+      "MERCHANT": {
+        "truePositives": 5,
+        "falsePositives": 2,
+        "falseNegatives": 9,
+        "precision": 0.7142857142857143,
+        "recall": 0.35714285714285715,
+        "f1": 0.47619047619047616
+      },
+      "ACCT": {
+        "truePositives": 0,
+        "falsePositives": 0,
+        "falseNegatives": 13,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "BAL": {
+        "truePositives": 0,
+        "falsePositives": 0,
+        "falseNegatives": 14,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "perPrimaryField": {
+      "AMT": {
+        "count": 2,
+        "total": 16,
+        "rate": 0.125
+      },
+      "CURR": {
+        "count": 3,
+        "total": 16,
+        "rate": 0.1875
+      },
+      "MERCHANT": {
+        "count": 7,
+        "total": 16,
+        "rate": 0.4375
+      },
+      "ACCT": {
+        "count": 3,
+        "total": 16,
+        "rate": 0.1875
+      },
+      "BAL": {
+        "count": 2,
+        "total": 16,
+        "rate": 0.125
+      }
+    },
+    "fieldFailureIds": [
+      "TC_EDG_DEC_002",
+      "TC_EDG_DEC_007",
+      "TC_EDG_DIA_001",
+      "TC_EDG_MIS_001",
+      "TC_EDG_TYP_003",
+      "TC_POS_ARAB_005",
+      "TC_POS_ARAB_007",
+      "TC_POS_ARAB_010",
+      "TC_POS_ETI_003",
+      "TC_POS_ETI_007",
+      "TC_POS_HOU_001",
+      "TC_POS_HOU_002",
+      "TC_POS_HOU_006",
+      "TC_POS_ORA_003",
+      "TC_POS_ZAI_001",
+      "TC_POS_ZAI_005"
+    ]
+  },
+  "regexValues": {
+    "exactPrimaryFields": {
+      "count": 16,
+      "total": 16,
+      "rate": 1.0
+    },
+    "perField": {
+      "AMT": {
+        "count": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "CURR": {
+        "count": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "MERCHANT": {
+        "count": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "ACCT": {
+        "count": 16,
+        "total": 16,
+        "rate": 1.0
+      },
+      "BAL": {
+        "count": 16,
+        "total": 16,
+        "rate": 1.0
+      }
+    },
+    "characterSpansScorable": false,
+    "reason": "Legacy regex API returns values, not source intervals"
+  },
+  "scriptSlices": {
+    "arabic_script_present": {
+      "examples": 8,
+      "tokenAgreement": {
+        "count": 154,
+        "total": 193,
+        "rate": 0.7979274611398963
+      },
+      "exactSequenceAgreement": {
+        "count": 0,
+        "total": 8,
+        "rate": 0.0
+      },
+      "exactPrimaryFields": {
+        "count": 0,
+        "total": 8,
+        "rate": 0.0
+      },
+      "invalidIobTransitions": 0,
+      "perEntityCharacterSpan": {
+        "AMT": {
+          "truePositives": 0,
+          "falsePositives": 0,
+          "falseNegatives": 8,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "CURR": {
+          "truePositives": 8,
+          "falsePositives": 8,
+          "falseNegatives": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        },
+        "MERCHANT": {
+          "truePositives": 3,
+          "falsePositives": 0,
+          "falseNegatives": 5,
+          "precision": 1.0,
+          "recall": 0.375,
+          "f1": 0.5454545454545454
+        },
+        "ACCT": {
+          "truePositives": 0,
+          "falsePositives": 0,
+          "falseNegatives": 5,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "BAL": {
+          "truePositives": 0,
+          "falsePositives": 0,
+          "falseNegatives": 8,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "perPrimaryField": {
+        "AMT": {
+          "count": 0,
+          "total": 8,
+          "rate": 0.0
+        },
+        "CURR": {
+          "count": 0,
+          "total": 8,
+          "rate": 0.0
+        },
+        "MERCHANT": {
+          "count": 3,
+          "total": 8,
+          "rate": 0.375
+        },
+        "ACCT": {
+          "count": 3,
+          "total": 8,
+          "rate": 0.375
+        },
+        "BAL": {
+          "count": 0,
+          "total": 8,
+          "rate": 0.0
+        }
+      },
+      "fieldFailureIds": [
+        "TC_EDG_DEC_002",
+        "TC_EDG_DIA_001",
+        "TC_EDG_TYP_003",
+        "TC_POS_HOU_001",
+        "TC_POS_HOU_006",
+        "TC_POS_ORA_003",
+        "TC_POS_ZAI_001",
+        "TC_POS_ZAI_005"
+      ]
+    },
+    "no_arabic_script": {
+      "examples": 8,
+      "tokenAgreement": {
+        "count": 175,
+        "total": 204,
+        "rate": 0.8578431372549019
+      },
+      "exactSequenceAgreement": {
+        "count": 0,
+        "total": 8,
+        "rate": 0.0
+      },
+      "exactPrimaryFields": {
+        "count": 0,
+        "total": 8,
+        "rate": 0.0
+      },
+      "invalidIobTransitions": 2,
+      "perEntityCharacterSpan": {
+        "AMT": {
+          "truePositives": 6,
+          "falsePositives": 4,
+          "falseNegatives": 2,
+          "precision": 0.6,
+          "recall": 0.75,
+          "f1": 0.6666666666666666
+        },
+        "CURR": {
+          "truePositives": 7,
+          "falsePositives": 4,
+          "falseNegatives": 1,
+          "precision": 0.6363636363636364,
+          "recall": 0.875,
+          "f1": 0.7368421052631579
+        },
+        "MERCHANT": {
+          "truePositives": 2,
+          "falsePositives": 2,
+          "falseNegatives": 4,
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "f1": 0.4
+        },
+        "ACCT": {
+          "truePositives": 0,
+          "falsePositives": 0,
+          "falseNegatives": 8,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "BAL": {
+          "truePositives": 0,
+          "falsePositives": 0,
+          "falseNegatives": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "perPrimaryField": {
+        "AMT": {
+          "count": 2,
+          "total": 8,
+          "rate": 0.25
+        },
+        "CURR": {
+          "count": 3,
+          "total": 8,
+          "rate": 0.375
+        },
+        "MERCHANT": {
+          "count": 4,
+          "total": 8,
+          "rate": 0.5
+        },
+        "ACCT": {
+          "count": 0,
+          "total": 8,
+          "rate": 0.0
+        },
+        "BAL": {
+          "count": 2,
+          "total": 8,
+          "rate": 0.25
+        }
+      },
+      "fieldFailureIds": [
+        "TC_EDG_DEC_007",
+        "TC_EDG_MIS_001",
+        "TC_POS_ARAB_005",
+        "TC_POS_ARAB_007",
+        "TC_POS_ARAB_010",
+        "TC_POS_ETI_003",
+        "TC_POS_ETI_007",
+        "TC_POS_HOU_002"
+      ]
+    }
+  },
+  "independentLanguageLabelsAvailable": false,
+  "intervalEstimates": null,
+  "spanDecoder": "Character intervals exact; orphan I tags start an interval and are separately counted as invalid IOB2",
+  "promotionAllowed": false,
+  "reservedMerchantTestInferred": false,
+  "activeModelChanged": false,
+  "limits": [
+    "Assistant labels and source/template proxies are not human gold or verified independent families.",
+    "The learner is conditioned on already-valid messages and provided tokenization, not end-to-end transaction detection.",
+    "Numeric token memorization remains possible; no new context/shape architecture was fitted.",
+    "Older BIO metrics use different labels and folds and cannot be used as a direct improvement denominator."
+  ]
+}

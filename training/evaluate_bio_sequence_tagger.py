@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections import Counter, defaultdict
 import hashlib
 import json
+import argparse
 from pathlib import Path
 import random
 import sys
@@ -12,12 +13,14 @@ from typing import Any, Iterable
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from training.corpus_io import BIO, write_immutable, sha256
 sys.path.insert(0, str(ROOT / "training"))
 
 from train_sequence_tagger import TAGS, TAG_TO_INDEX, evaluate, export_model, predict, train
 
 
-DATA_PATH = ROOT / "data" / "training" / "bio_training_data.json"
+DATA_PATH = BIO
 REPORT_PATH = ROOT / "data" / "reports" / "bio_sequence_tagger_evaluation.json"
 SEED = 20261024
 VALIDATION_FRACTION = 0.20
@@ -120,12 +123,27 @@ def entity_metrics(examples: Iterable[dict[str, Any]], model: dict[str, Any]) ->
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run-id", help="New candidate/report version, required to fit")
+    parser.add_argument("--check-inputs", action="store_true")
+    args = parser.parse_args()
+    import re
+    if not args.check_inputs and (not args.run_id or not re.fullmatch(r"[a-z0-9_]{1,40}", args.run_id)):
+        parser.error("A new --run-id is required to fit")
     artifact = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     examples = artifact.get("examples")
     if not isinstance(examples, list) or not examples:
         raise ValueError("BIO training artifact has no examples")
     if any(len(example.get("tokens", [])) != len(example.get("tags", [])) for example in examples):
         raise ValueError("BIO artifact has token/tag length mismatch")
+
+    if args.check_inputs:
+        print(f"Sanitized BIO drafts valid: {len(examples)} examples; labels remain unreviewed; no fitting")
+        return 0
+    global REPORT_PATH
+    REPORT_PATH = ROOT / f"data/reports/bio_{args.run_id}_evaluation.json"
+    if REPORT_PATH.exists():
+        raise ValueError("Report exists; select a new run ID")
 
     training, validation, validation_groups = split_examples(examples)
     emission, transition = train(training)
@@ -134,7 +152,7 @@ def main() -> int:
     report = {
         "reportVersion": "1.0.0",
         "datasetSha256": _sha256(DATA_PATH),
-        "evaluationScope": "held-out source-category groups; coarse grouping proxy, not template isolation",
+        "evaluationScope": "Sanitized development-regression heuristic drafts; coarse source-category groups, not independent entity evaluation or reviewed gold",
         "seed": SEED,
         "validationFractionTarget": VALIDATION_FRACTION,
         "trainingExampleCount": len(training),
@@ -145,7 +163,7 @@ def main() -> int:
         "entityExactSpanMetrics": entity_metrics(validation, model),
     }
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    REPORT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    write_immutable(REPORT_PATH, json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
     print(f"Wrote BIO held-out evaluation: {REPORT_PATH}")
     print(f"Holdout: {len(validation)} examples across {len(validation_groups)} source categories")
     print(f"Token accuracy: {report['tokenAccuracy']:.4f}; exact sequence accuracy: {report['exactSequenceAccuracy']:.4f}")

@@ -14,11 +14,12 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+from training.corpus_io import FIXTURES, write_immutable, sha256
 from src.python.verify_engine import MasroofEngine
 from src.python.preprocessing import PREPROCESSING_CONTRACT_VERSION, preprocess_message, tokenize_features
 
-REPORT = ROOT / "data/reports/arabic_support_evaluation.json"
-INPUT = ROOT / "data/reports/arabic_support_probe_inputs.json"
+REPORT = ROOT / "data/reports/arabic_support_sanitized_v1_evaluation.json"
+INPUT = ROOT / "data/reports/arabic_support_sanitized_v1_probe_inputs.json"
 NODE = Path(r"C:\Program Files\nodejs\node.exe")
 ARABIC = re.compile(r"[\u0621-\u064a]")
 
@@ -26,7 +27,7 @@ ARABIC = re.compile(r"[\u0621-\u064a]")
 def load_cases() -> list[dict]:
     cases = []
     for name in ("test_suite_cases.json", "qa_adversarial_cases.json"):
-        payload = json.loads((ROOT / "tests/fixtures" / name).read_text(encoding="utf-8"))
+        payload = json.loads((FIXTURES / name).read_text(encoding="utf-8"))
         cases.extend(payload["testCases"] if isinstance(payload, dict) else payload)
     return cases
 
@@ -72,7 +73,7 @@ def main():
             transformed.append({**case, "id": name + ":" + case["id"], "body": body})
         groups[name] = transformed
     preprocessing_inputs = ["رقم المرجع ١٢٣٤٥٦٧", "رقم المرجع ۱۲۳۴۵۶۷", "مرجع123456", "تم دفع ١٢٫٥٠ دينار"]
-    INPUT.write_text(json.dumps({"scope": "diagnostic only; derived from frozen fixtures, not independent training data", "groups": groups, "preprocessingInputs": preprocessing_inputs}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_immutable(INPUT, json.dumps({"scope": "diagnostic only; derived from frozen fixtures, not independent training data", "groups": groups, "preprocessingInputs": preprocessing_inputs}, ensure_ascii=False, indent=2) + "\n")
     engine = MasroofEngine()
     python = {name: summarize(group, [engine.predict(case["sender"], case["body"]) for case in group]) for name, group in groups.items()}
     process = subprocess.run([str(NODE), str(ROOT / "tools/generators/audit_arabic_runtime.ts"), str(INPUT)], cwd=ROOT, capture_output=True, text=True, encoding="utf-8", check=True)
@@ -85,14 +86,15 @@ def main():
     businesses = [json.loads(line) for line in (ROOT / "data/annotations/businesses_200.jsonl").read_text(encoding="utf-8").splitlines()]
     reviews = [json.loads(line) for line in (ROOT / "data/annotations/merchant_reviews.jsonl").read_text(encoding="utf-8").splitlines()]
     report = {
-        "version": "1.1.0", "geographicScope": "Jordan", "preprocessingVersion": PREPROCESSING_CONTRACT_VERSION,
+        "version": "1.2.0-sanitized",
+        "inputSha256": {str(path.relative_to(ROOT)): sha256(path) for path in [FIXTURES / "test_suite_cases.json", FIXTURES / "qa_adversarial_cases.json", ROOT / "data/models/masroof_model.json", ROOT / "src/python/verify_engine.py", ROOT / "src/typescript/MasroofEngine.ts"]}, "geographicScope": "Jordan", "preprocessingVersion": PREPROCESSING_CONTRACT_VERSION,
         "scope": "Existing Arabic-containing fixture text plus diagnostic digit-format transformations; not independent generalization evidence.",
         "baselineArabicCaseCount": len(cases), "digitProbeSourceProviders": list(selected)[:8],
         "python": python, "typescript": typescript["groups"], "preprocessingParityProbes": preprocessing,
         "categoryCorpus": {"businessCount": len(businesses), "arabicCanonicalNames": sum(bool(ARABIC.search(row["name"])) for row in businesses), "businessesWithArabicNameOrAlias": sum(any(ARABIC.search(name) for name in [row["name"]] + row["aliases"]) for row in businesses), "reviewRecordCount": len(reviews), "approvedArabicMerchantNames": sum(row["status"] == "approved" and row.get("reviewerType", "human") == "human" and row["labelScope"] == "merchant_name" and bool(ARABIC.search(row["name"])) for row in reviews)},
         "nextWork": ["Continue source-verified Arabic alias collection; see categoryCorpus for current coverage, which does not establish category accuracy.", "Prepare independent Jordan-specific Arabic evaluation; hold out entire brands including all Arabic and English aliases.", "Standalone merchant-name candidates are research only; no validated full-taxonomy SMS categorizer or independent Arabic category accuracy is established. See merchant_category_research.json for the separate candidate experiment."]
     }
-    REPORT.write_text(json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8")
+    write_immutable(REPORT, json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\n")
     compact = {
         engine_name: {group_name: {key: value for key, value in metrics.items() if key != "failures"} for group_name, metrics in measurements.items()}
         for engine_name, measurements in (("python", python), ("typescript", typescript["groups"]))

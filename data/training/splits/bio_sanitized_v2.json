@@ -1,0 +1,564 @@
+{
+  "splitVersion": "2.0.0",
+  "status": "prepared_development_only",
+  "datasetSha256": "fe5aa5f0012499f27a7505504c494d734bfc60d1c4546b670b91534c4a770f42",
+  "validationFractionTarget": 0.2,
+  "validationFractionActual": 0.20253164556962025,
+  "trainIds": [
+    "TC_EDG_DEC_001",
+    "TC_EDG_DEC_003",
+    "TC_EDG_DEC_004",
+    "TC_EDG_DEC_005",
+    "TC_EDG_DEC_006",
+    "TC_EDG_DIA_003",
+    "TC_EDG_MIS_002",
+    "TC_EDG_MIS_003",
+    "TC_EDG_TYP_001",
+    "TC_EDG_TYP_002",
+    "TC_EDG_WSP_001",
+    "TC_EDG_WSP_002",
+    "TC_EDG_WSP_003",
+    "TC_POS_ARAB_001",
+    "TC_POS_ARAB_002",
+    "TC_POS_ARAB_003",
+    "TC_POS_ARAB_004",
+    "TC_POS_ARAB_006",
+    "TC_POS_ARAB_008",
+    "TC_POS_ARAB_009",
+    "TC_POS_CAB_001",
+    "TC_POS_CAB_002",
+    "TC_POS_CAB_003",
+    "TC_POS_CAB_004",
+    "TC_POS_CAB_005",
+    "TC_POS_CAB_006",
+    "TC_POS_CAP_001",
+    "TC_POS_CAP_002",
+    "TC_POS_CAP_003",
+    "TC_POS_CAP_004",
+    "TC_POS_CAP_005",
+    "TC_POS_CAP_006",
+    "TC_POS_CAP_007",
+    "TC_POS_ETI_001",
+    "TC_POS_ETI_002",
+    "TC_POS_ETI_004",
+    "TC_POS_ETI_005",
+    "TC_POS_ETI_006",
+    "TC_POS_HOU_003",
+    "TC_POS_HOU_004",
+    "TC_POS_HOU_005",
+    "TC_POS_JIB_001",
+    "TC_POS_JIB_002",
+    "TC_POS_JIB_003",
+    "TC_POS_JIB_004",
+    "TC_POS_JIB_005",
+    "TC_POS_JIB_006",
+    "TC_POS_ORA_001",
+    "TC_POS_ORA_002",
+    "TC_POS_ORA_004",
+    "TC_POS_ORA_006",
+    "TC_POS_REF_002",
+    "TC_POS_REF_003",
+    "TC_POS_REF_004",
+    "TC_POS_REF_005",
+    "TC_POS_REF_006",
+    "TC_POS_UWA_001",
+    "TC_POS_UWA_002",
+    "TC_POS_UWA_003",
+    "TC_POS_UWA_004",
+    "TC_POS_UWA_005",
+    "TC_POS_ZAI_002",
+    "TC_POS_ZAI_004"
+  ],
+  "validationIds": [
+    "TC_EDG_DEC_002",
+    "TC_EDG_DEC_007",
+    "TC_EDG_DIA_001",
+    "TC_EDG_MIS_001",
+    "TC_EDG_TYP_003",
+    "TC_POS_ARAB_005",
+    "TC_POS_ARAB_007",
+    "TC_POS_ARAB_010",
+    "TC_POS_ETI_003",
+    "TC_POS_ETI_007",
+    "TC_POS_HOU_001",
+    "TC_POS_HOU_002",
+    "TC_POS_HOU_006",
+    "TC_POS_ORA_003",
+    "TC_POS_ZAI_001",
+    "TC_POS_ZAI_005"
+  ],
+  "quarantinedIds": [
+    "TC_EDG_DIA_002",
+    "TC_POS_ORA_005",
+    "TC_POS_REF_001",
+    "TC_POS_ZAI_003"
+  ],
+  "groups": [
+    {
+      "groupId": "bio-group-00ef474ae1e12e7d",
+      "recordIds": [
+        "TC_POS_ARAB_005"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-01d3f066e6d19427",
+      "recordIds": [
+        "TC_POS_ORA_003"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-05c5891115ebadb3",
+      "recordIds": [
+        "TC_POS_ARAB_007",
+        "TC_POS_ARAB_010"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-0876c3451aeffdc8",
+      "recordIds": [
+        "TC_POS_ZAI_005"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-0dc6dac835fe9ee0",
+      "recordIds": [
+        "TC_EDG_DEC_007"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-0f6ac17fc12d827f",
+      "recordIds": [
+        "TC_POS_HOU_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-1437252b65956a44",
+      "recordIds": [
+        "TC_POS_ETI_003"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-17332006dfb64c34",
+      "recordIds": [
+        "TC_POS_ETI_007"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-17bbf57c2a32a753",
+      "recordIds": [
+        "TC_EDG_DEC_002",
+        "TC_EDG_DIA_001",
+        "TC_EDG_TYP_003",
+        "TC_POS_HOU_001",
+        "TC_POS_HOU_006"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-1e95cb8a0976edb8",
+      "recordIds": [
+        "TC_POS_ZAI_001"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-247fd10817488aa7",
+      "recordIds": [
+        "TC_EDG_MIS_001"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-27547335abbd7ea7",
+      "recordIds": [
+        "TC_EDG_MIS_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-2e90e7f5d29b6987",
+      "recordIds": [
+        "TC_POS_UWA_001"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-4c3b95ff3fa53aa5",
+      "recordIds": [
+        "TC_POS_UWA_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-52bbda0a9121fb99",
+      "recordIds": [
+        "TC_EDG_DEC_005"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-53065d09fba263b7",
+      "recordIds": [
+        "TC_POS_ORA_006"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-578b27ac1ab2c4ad",
+      "recordIds": [
+        "TC_POS_ORA_005"
+      ],
+      "quarantineReasons": [
+        "unresolved_annotation"
+      ]
+    },
+    {
+      "groupId": "bio-group-5974988919f12e49",
+      "recordIds": [
+        "TC_POS_JIB_004"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-59abab68f02f6fc2",
+      "recordIds": [
+        "TC_EDG_DIA_002"
+      ],
+      "quarantineReasons": [
+        "unresolved_annotation"
+      ]
+    },
+    {
+      "groupId": "bio-group-609ca8ed9be6b50e",
+      "recordIds": [
+        "TC_POS_CAP_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-6a5158515b5ff3cf",
+      "recordIds": [
+        "TC_POS_ARAB_004"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-6d1a300a701f0165",
+      "recordIds": [
+        "TC_POS_ARAB_009"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-7240c1f2de96ee02",
+      "recordIds": [
+        "TC_POS_CAP_007"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-73afad9c1021eaca",
+      "recordIds": [
+        "TC_POS_ARAB_003"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-73c11552d618b591",
+      "recordIds": [
+        "TC_POS_HOU_005"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-73cf82500bf651d2",
+      "recordIds": [
+        "TC_EDG_DEC_006"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-7fe7793699ecfa02",
+      "recordIds": [
+        "TC_POS_ETI_006"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-83f4547899d93f5c",
+      "recordIds": [
+        "TC_POS_CAP_001"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-85b1b55c1e81d1f8",
+      "recordIds": [
+        "TC_POS_CAP_005"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-896d39e13943a5c5",
+      "recordIds": [
+        "TC_POS_REF_006"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-8c600f5ce49b29ae",
+      "recordIds": [
+        "TC_POS_ZAI_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-8f1fa5dd30d7bd95",
+      "recordIds": [
+        "TC_POS_ORA_001"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-92949729b8d56f2d",
+      "recordIds": [
+        "TC_POS_ZAI_003"
+      ],
+      "quarantineReasons": [
+        "protected_merchant_category_identity"
+      ]
+    },
+    {
+      "groupId": "bio-group-92b74a12476ebbcb",
+      "recordIds": [
+        "TC_POS_ZAI_004"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-9cbe2dd3ba64517f",
+      "recordIds": [
+        "TC_POS_CAP_006"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-9dc254a94e702545",
+      "recordIds": [
+        "TC_POS_HOU_003"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-9dcad7e280e8b91d",
+      "recordIds": [
+        "TC_POS_UWA_004"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-a5e4b4740c23cdd0",
+      "recordIds": [
+        "TC_EDG_DEC_001",
+        "TC_EDG_TYP_001",
+        "TC_EDG_WSP_001",
+        "TC_POS_ARAB_001",
+        "TC_POS_ARAB_002",
+        "TC_POS_ORA_004"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-ac417df04e52d9c9",
+      "recordIds": [
+        "TC_POS_CAB_003"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-b67a3dccb3a4218b",
+      "recordIds": [
+        "TC_POS_REF_003"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-b97d92a8da35b3c0",
+      "recordIds": [
+        "TC_EDG_TYP_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-ba8c391292fa754b",
+      "recordIds": [
+        "TC_POS_JIB_003"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-c32c4574811da42c",
+      "recordIds": [
+        "TC_POS_ETI_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-c5e51168baca442d",
+      "recordIds": [
+        "TC_POS_CAB_004"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-c69da1b21142dd87",
+      "recordIds": [
+        "TC_POS_REF_005"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-ca8a71b46f750d44",
+      "recordIds": [
+        "TC_POS_CAP_003",
+        "TC_POS_CAP_004"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-cff6ef626d200952",
+      "recordIds": [
+        "TC_POS_ORA_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-d1814bf078b75de6",
+      "recordIds": [
+        "TC_POS_ETI_005"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-d1a106756a2b5d2f",
+      "recordIds": [
+        "TC_POS_CAB_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-d7a56729471628ee",
+      "recordIds": [
+        "TC_POS_ARAB_008",
+        "TC_POS_JIB_005",
+        "TC_POS_REF_004"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-da7b7039918ca9e3",
+      "recordIds": [
+        "TC_POS_JIB_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-ddf4d1cca377775b",
+      "recordIds": [
+        "TC_POS_ETI_004"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-de15da6baebc77b0",
+      "recordIds": [
+        "TC_POS_CAB_001",
+        "TC_POS_CAB_006"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-e1638fb74fc28954",
+      "recordIds": [
+        "TC_POS_ARAB_006"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-e3d5691b77d4f144",
+      "recordIds": [
+        "TC_POS_UWA_005"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-e69a1b640696d874",
+      "recordIds": [
+        "TC_POS_REF_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-eba0ac2354809c82",
+      "recordIds": [
+        "TC_POS_HOU_004"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-eecec0a53c5b6a88",
+      "recordIds": [
+        "TC_POS_UWA_003"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-f381849844e0680a",
+      "recordIds": [
+        "TC_POS_REF_001"
+      ],
+      "quarantineReasons": [
+        "protected_merchant_category_identity"
+      ]
+    },
+    {
+      "groupId": "bio-group-f382ec03b80bc7b7",
+      "recordIds": [
+        "TC_EDG_DEC_003",
+        "TC_EDG_DIA_003",
+        "TC_EDG_MIS_003",
+        "TC_EDG_WSP_003",
+        "TC_POS_ETI_001",
+        "TC_POS_JIB_001",
+        "TC_POS_JIB_006"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-f39549ffce4ace4a",
+      "recordIds": [
+        "TC_EDG_WSP_002"
+      ],
+      "quarantineReasons": []
+    },
+    {
+      "groupId": "bio-group-fd2c25673d596dca",
+      "recordIds": [
+        "TC_EDG_DEC_004",
+        "TC_POS_CAB_005"
+      ],
+      "quarantineReasons": []
+    }
+  ],
+  "sourceFamiliesIndependentlyVerified": false,
+  "independentEvaluationEligible": false,
+  "limits": "Source categories and slot/numeric templates are conservative proxies; alias/family registry is bounded; usable corpus is small and selective"
+}

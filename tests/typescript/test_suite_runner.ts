@@ -47,7 +47,7 @@ function isClose(a: number | null, b: number | null): boolean {
   return Math.abs(a - b) < 0.001;
 }
 
-function runTypeScriptSuite(filePath: string = path.join(ROOT, 'tests', 'fixtures', 'test_suite_cases.json')) {
+function runTypeScriptSuite(filePath: string = path.join(ROOT, 'tests', 'fixtures', 'sanitized_v1', 'test_suite_cases.json')) {
   const model = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'models', 'masroof_model.json'), 'utf-8'));
   MasroofEngine.init(model);
 
@@ -286,4 +286,4 @@ function runTypeScriptSuite(filePath: string = path.join(ROOT, 'tests', 'fixture
   }
 }
 
-runTypeScriptSuite(process.argv[2] || path.join(ROOT, 'tests', 'fixtures', 'test_suite_cases.json'));
+runTypeScriptSuite(process.argv[2] || path.join(ROOT, 'tests', 'fixtures', 'sanitized_v1', 'test_suite_cases.json'));

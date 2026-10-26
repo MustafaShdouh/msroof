@@ -41,6 +41,86 @@ families for independent evaluation.
 No specific collection license, sharing permission or bank-message availability is
 inferred from a public webpage.
 
+## Targeted web review,2026-10-26
+
+The owner has no additional original withdrawal messages and requested an
+internet search. Four published examples were located in the
+[money-tracker source tests](https://github.com/AvAl4nch/money-tracker/tree/6616c7d85c5599e5da1c46613e444c4738d76a58/app/src/test/java/ava/sluff/money_tracker/sms):
+one Arabic ATM movement, two Arabic authorization formats and one English OTP.
+Two have explicit author claims of a real message/format, including sanitized
+digits on one format. The other two are fixtures with unresolved origins. The
+[MIT notice](https://github.com/AvAl4nch/money-tracker/blob/6616c7d85c5599e5da1c46613e444c4738d76a58/LICENSE)
+and exact source bytes are preserved locally. This is a source lead, not a
+verified real-message dataset or a claim that the source author's parser is
+correct.
+
+Private review: `data/private/entity_intake/web_review_v1/review.json`; its
+companion README describes the source snapshots and optional future intake file.
+Assistant annotations record exact visible amount/currency/account/balance/name
+spans without copying old validation failures. Zero exact/numeric-proxy matches
+were observed against active synthetic transactions, BIO and226 fixtures; this
+limited audit does not establish independent families. All four remain
+quarantined, with training/BIO/independent-evaluation admission false. Initial
+collection ran no inference; the subsequent diagnostic is recorded below. No
+fitting was run. The ATM wording does not state direction, one
+merchant boundary contains unresolved city/country text, and authorization
+completion is unconfirmed. The OTP is not a completed movement.
+
+Other checked leads were unsuitable for the requested real Jordan evidence:
+[APG's disclosure](https://github.com/hashme-husban/APG-Arabic-Phishing-Guard/blob/main/docs/DATASET_SUMMARY.md)
+describes synthetic SMS, the visible
+[FlashFlow bank-SMS rows](https://huggingface.co/datasets/4-alokk/flashflow-bank-sms)
+use Indian banking/INR/UPI formats, and
+[Sarfi's page](https://sarfi.app/) presents a product demonstration rather than
+a received-message dataset. Bank/provider service pages, including
+[Arab Bank SMS Express](https://www.arabbank.jo/mainmenu/home/ways-to-bank/sms)
+and [UWallet's withdrawal flow](https://uwallet.jo/our-services/), explain alert
+types or OTP-before-cash workflow without supplying new completed-SMS bodies.
+No usable credited-cashback SMS or source-confirmed Arabic ATM/operator-name
+example was located in this search. This does not claim none exists online.
+
+Review disposition,2026-10-26: retain all four outside training and independent
+evaluation. Their supported uses are source-attributed development diagnostics:
+the OTP requires exclusion, while the ATM direction and settled completion of
+the authorization examples remain unresolved. Observed numeric/name spans are
+partial annotations, not complete receipt labels. In particular, an unknown
+merchant boundary must not become an absent-merchant label. No training admission
+is implied by this review or its diagnostic run.
+
+Private diagnostic: `data/private/entity_intake/web_review_v1/diagnostic_v1.json`.
+Before the OTP repair, with the sender left empty, the Python/TypeScript/browser engines accept
+all four as outgoing transactions. The OTP is a definite false inclusion under
+the approved specification and produces the spurious merchant `complete`.
+For the other three, the legacy boolean API cannot express the required review
+outcome; this is not evidence that those messages were definitely failed or
+definitely settled. All three runtimes agree after removing validated Python
+compatibility aliases. Scores are uncalibrated, not correctness probabilities.
+
+The isolated context BIO candidate also agrees across Python/TypeScript features
+and predictions. On these new formats, none of the annotated numeric/account
+slots match; the one reviewed absent merchant remains absent. The known JO-PETROL
+name also does not match. The unresolved C TOWN boundary is not scored as absent,
+and positive receipt BIO metrics are not applied to the OTP. This tiny,
+assistant-reviewed, now-exposed diagnostic is not a general accuracy estimate.
+The report binds source/model hashes; no fitting or reserved merchant-final
+inference was performed and input/model bytes stayed unchanged.
+
+Additional official context checked: [UWallet's Arabic FAQ](https://uwallet.jo/faqs/)
+distinguishes a pre-withdrawal OTP from the alert after successful cash collection;
+[Arab Bank SMS Express](https://www.arabbank.jo/mainmenu/home/ways-to-bank/sms)
+lists both ATM withdrawals and deposits. These workflow descriptions do not
+resolve the direction of the published generic ATM fixture and supply no new SMS
+bodies. The extended search yielded no additional usable credited-cashback body.
+
+OTP repair completed2026-10-26: the source OTP is now rejected in Python/TS/browser,
+without returning entity data. The private
+`data/private/entity_intake/web_review_v1/diagnostic_after_otp_fix_v1.json` records
+the replay and source hashes; other three outputs are unchanged. Before/after
+inputs are preserved in deduplicated private snapshots. Public authored controls
+and the shared grammar are described in `docs/BEHAVIOR_EVALUATION.md`. All four
+source examples remain diagnostic-only. The broader uncertain/review API remains
+a separately scoped contract gap.
+
 Repository merge: msroof is the authoritative workspace. DATA_YOU_WANT, raw text inputs and .local-backups are local-only and excluded from GitHub. Earlier Git history containing raw inputs is retained locally; the published main branch begins with a clean project snapshot.
 
 ## Audited records and reproducible exposure report
@@ -74,12 +154,12 @@ in memory. Evidence/hashes are recorded in `generation_history.json`. The origin
 100% accuracy, near-zero false positives, or production readiness are not
 independent evaluation evidence.
 
-The current split contains 16 normalized-identical groups (150 rows: 109 train,
+The archived historical split contains 16 normalized-identical groups (150 rows: 109 train,
 41 validation) across provider metadata, with no existing-label conflicts. A
 further 50 numeric-mask proxy groups span 424 rows across folds. The latter are
 candidate template links, not proven families. This audit preserves historical
-assignments; future development must isolate content/templates across providers
-in a new version before training comparisons.
+assignments. Current development uses the new globally grouped sanitized split;
+the historical audit reads checked private snapshots after working-copy retirement.
 
 Historical publication finding: 16 source blocks match normalized text in the
 tracked regression fixture included in the previously verified pushed snapshot
@@ -89,7 +169,9 @@ exclude their embedded copies. Prepare a reviewed sanitized corpus version,
 preserve the historical baseline privately, and obtain separate approval for
 remote history changes. This audit performs no removal, rewrite, or push.
 
-Prepared follow-up: `docs/SANITIZED_CORPUS.md` describes a synthetic privacy-transformed
-replacement and a provider-agnostic grouped split. It does not admit the real seeds,
-change this audit's historical inputs, or solve prior publication by itself. A
-recorded maintenance-notice false positive blocks active regression-gate migration.
+Current follow-up: `docs/SANITIZED_CORPUS.md` describes the synthetic replacement,
+global development split, migrated consumers and 12 retired working copies. The
+service-notice repair clears all 226 sanitized regression cases. Real seeds remain
+unadmitted and the historical audit's archived inputs remain unchanged. Old Git
+history and learned vocabulary still require separate consideration; retirement
+does not solve prior publication by itself.

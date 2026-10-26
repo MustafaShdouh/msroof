@@ -1,7 +1,8 @@
 # Sanitized corpus v1 and grouped development split
 
-This version prepares replacements for the exposed legacy data. It does not change
-the active engine, replace its regression gate, fit a model, or modify GitHub.
+This version provides replacements for the exposed legacy data. The sanitized
+226-case suite is now the active regression gate after the service-notice repair.
+The model weights are unchanged; this work has not trained a replacement model.
 Historical originals remain unchanged and are also preserved in the ignored
 `data/private/historical_corpus_v1/` snapshot with a checked hash manifest.
 
@@ -14,6 +15,7 @@ Historical originals remain unchanged and are also preserved in the ignored
 | `tests/fixtures/sanitized_v1/` | 226 transformed compatibility cases plus their own frozen hash manifest. |
 | `data/reports/SANITIZED_CORPUS_V1.md` and JSON companion | Preparation methods, source/hash checks, partition counts and limitations. |
 | `data/reports/sanitized_corpus_v1_legacy_v1_evaluation.json` | Separate versioned Python/TypeScript diagnostic, tied to exact data/model/runtime hashes. |
+| `data/reports/sanitized_corpus_v1_service_notice_v1_evaluation.json` | Passing diagnostic after the service-notice repair; retains the earlier failing report. |
 
 These are synthetic privacy transformations, not newly collected real messages or
 additional independent examples. They preserve legacy binary labels for compatibility;
@@ -39,10 +41,10 @@ the wallet-message structure. Full transformation plans remain private.
 
 Automated checks establish that the known person phrases are absent from the new
 artifacts. This is not certification that all possible identifiers have been found.
-The previous tracked legacy data, generators and Git history still contain old
-material: preparing replacements alone does not complete repository privacy cleanup.
-Review/migration/retirement are still required, with separate authorization for any
-remote-history rewrite or push.
+Twelve legacy working files are now retired after private hash-checked preservation;
+the mapping is `config/contracts/corpus_layout.json`. Old Git objects and learned
+legacy model vocabulary remain. This is not complete repository anonymization;
+remote-history changes require separate authorization.
 
 ## Source-template grouping
 
@@ -73,22 +75,33 @@ conservative; it does not prove isolation of every semantic paraphrase or identi
 which original Gemini seed produced a row. This remains a synthetic development
 partition, with no independent final test or calibrated certainty claim.
 
-## Compatibility finding before migration
+## Compatibility and active gate
 
-The separate `legacy_v1` diagnostic agrees in Python and TypeScript:
+The historical `legacy_v1` diagnostic agreed in Python and TypeScript:
 225/226 classification matches, one false positive, zero false negatives, and no
 entity mismatches on correctly accepted transactions.
 
 `TC_EDGE_MAINTENANCE_TRAP_001` describes temporary transfer-service unavailability,
-with a numeric transfer limit. After the values change, the current model accepts
-the notice as a transaction. Its expected non-transaction label is retained. The
-diagnostic records `migrationGatePassed: false`; do not adopt the sanitized suite
-as the active passing gate or report a full compatibility pass yet.
+with a numeric transfer limit. Changing numeric values exposed the legacy model's
+false positive. Its expected non-transaction label and the original diagnostic
+remain intact.
 
-The original 226-case baseline remains active. Fix the measured semantic failure
-before migration, then retire the old exposed copies using the private snapshot
-for historical comparison. None of these development results measures real-world
-accuracy.
+The shared grammar in `config/contracts/service_notice.json` now rejects service
+unavailability/restoration notices while allowing explicit completed receipts
+with an appended maintenance reminder. Python, TypeScript and the generated
+browser use the same patterns. This is a runtime safeguard, not model retraining.
+The new `service_notice_v1` evaluation records 226/226 correct classifications,
+zero false positives/negatives/entity mismatches and Python/TS metric parity.
+The original 226-case gate also passed before switching defaults to sanitized_v1.
+
+The consolidated runner, standalone Python/TS suite runners, corpus validator and
+numeric-script checks now default to the frozen sanitized fixtures. Seventeen
+authored notice/control cases check the grammar and full canonical results in
+Python, TS and browser; Python's duplicate compatibility aliases are validated
+before comparison. Existing confidence conventions are not calibrated certainty.
+This bounded grammar is not a complete multi-event message parser. A separate
+task has migrated historical data consumers and retired exposed copies using the
+private snapshots, as described below. These results do not measure real-world accuracy.
 
 ## Reproduction and verification
 
@@ -96,7 +109,7 @@ Run from `C:/Users/mustafa/Desktop/msroof`:
 
 ```powershell
 py -X utf8 training/prepare_sanitized_corpus.py --check
-py -X utf8 training/evaluate_sanitized_corpus.py --check
+py -X utf8 training/evaluate_sanitized_corpus.py --run-id canonical_exact_names_v1 --check
 py -X utf8 -m unittest tests.python.test_sanitized_corpus
 py -X utf8 run_all_tests.py
 ```
@@ -111,3 +124,65 @@ the measurement; `migrationGatePassed` controls whether the result clears migrat
 The private snapshots and plans can exceed a local model's context window. Read
 aggregate reports first and query individual IDs or fields instead of loading the
 whole files.
+
+## Consumer migration and recovery
+
+`training/corpus_io.py` identifies the active dataset, frozen split, fixtures and
+sanitized BIO drafts. It checks active dataset/split hashes against the preparation
+report. Historical readers resolve only registered, contained, hash-matching files,
+with no silent fallback to a different working version.
+
+| Consumer | Current inputs and outputs |
+| --- | --- |
+| Transaction/direction split tool | Validates the existing global split; does not recreate the old provider-local split. |
+| Transaction/direction trainer | Sanitized rows/split/fixtures. `--check-inputs` does no fitting; fitting requires a fresh `--run-id` and writes candidate artifacts. |
+| Legacy TF-IDF trainer | Retained experiment, with sanitized grouped input/shared preprocessing and direction fitted on training rows only. Requires a new `--output`; export/runtime math remains unsuitable for promotion. |
+| BIO builder/train/evaluator | 83 sanitized heuristic drafts under `data/training/sanitized_v1/`; metadata binds source/builder hashes and marks labels unreviewed. Trainer/evaluator require new run IDs. Label repair remains a separate task. |
+| Historical provenance audit | Reproduces its frozen report from private original inputs and original auditor/BIO-builder hashes. Its findings describe the old corpus/split. |
+| Corpus preparation | Reproduces byte-identical artifacts from the closed snapshot. The frozen builder hash refers to the archived preparation implementation; the current access adapter has evolved. |
+| Category exposure audit | Reads old SMS from private archives and writes `category_corpus_archive_audit_v1.json`/Markdown, preserving earlier reports. No category prediction or final-test inference. |
+| Arabic diagnostic | Reads sanitized fixtures; writes `arabic_support_sanitized_v1_*`. |
+| Merchant candidate preparation | Reads 57 extracted commercial names from `synthetic_merchant_names_v1.json`, avoiding the old personal-message generator. Writes a new candidate file; existing reviewed inputs stay intact. |
+| Browser tester | All 14 controls use synthetic examples from `tools/browser/presets.json`. |
+
+The old dataset JSON/CSV, BIO file, split, three fixture files, three generators,
+saved Arabic probe and duplicate test runner are removed from the working tree.
+Their paths are ignored against accidental recreation. The duplicate runner's
+exact amount/direction checks are retained on all 106 accepted cases; currency
+checks honor the historical `$`/`€` ISO aliases without editing truth. Result:
+`data/reports/legacy_corpus_retirement_v1.json`.
+
+Original data/code/model versions remain in `data/private/historical_corpus_v1/`.
+Fifteen additional pre-migration tools/probe files are preserved under
+`data/private/legacy_tools_v1/`. Both manifests bind exact hashes. For recovery,
+inspect a registered private copy or copy it to another ignored private location;
+preserve the closed snapshots. These archives are local and need a private backup
+when moving the workspace. A public clone can use sanitized inference/regression
+without originals; private-evidence tests skip when unavailable. Never recover
+private evidence from old Git history just to run public-clone tests.
+
+```powershell
+py -X utf8 training/prepare_transaction_direction_split.py
+py -X utf8 training/train_transaction_direction_v2.py --check-inputs
+py -X utf8 training/train_sequence_tagger.py --check-inputs
+py -X utf8 training/evaluate_bio_sequence_tagger.py --check-inputs
+py -X utf8 training/train_and_export.py --check-inputs
+py -X utf8 training/retire_legacy_corpus.py --check
+py -X utf8 training/check_seed_copies.py --check
+py -X utf8 training/audit_sms_provenance.py --check
+```
+
+All 79 current safeguards and the 226-case Python/TS gate pass; behavior/refactor
+details are in `docs/BEHAVIOR_EVALUATION.md`. The sanitized Arabic
+diagnostic passes 111 Arabic-containing cases (49 accepted transactions with
+correct amount/currency/direction), plus three eight-case digit/separator groups
+in each engine. These remain development checks.
+
+`known_seed_copy_scan_v1.json` records zero matching working paths for the 26 known
+complete seed blocks after Unicode/digit/whitespace normalization and JSON decoding.
+The scan includes tracked and nonignored working text. Partial identifiers,
+paraphrases, unknown private data, model vocabulary and old Git objects are outside
+that check. Retirement changes the working tree; commit/publication/history cleanup
+are separate actions. That migration step performed no fitting or promotion.
+Subsequent research trained two transaction candidates and rejected both; existing
+weights remain unchanged, and no reserved merchant-test inference occurred.

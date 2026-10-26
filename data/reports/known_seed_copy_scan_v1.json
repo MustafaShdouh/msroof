@@ -1,0 +1,10 @@
+{
+  "scanVersion": "1.0.0",
+  "scope": "Known complete seed text after whitespace/Unicode/digit normalization in tracked and nonignored working files",
+  "knownSeedBlocks": 26,
+  "matchedWorkingPaths": [],
+  "gitHistoryScanned": false,
+  "modelVocabularyReviewed": false,
+  "completePrivacyRemediation": false,
+  "limits": "No proof against partial identifiers, paraphrases or unknown private data; old Git objects and learned legacy vocabulary remain"
+}

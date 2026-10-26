@@ -1,4 +1,4 @@
-"""Build deterministic BIO entity labels from the regression suite's gold values.
+"""Build legacy heuristic BIO drafts from sanitized regression expectations.
 
 The sequence tagger will run only after Layer 1 accepts a transaction, so this
 builder keeps the suite's valid transactions and records exact-alignment gaps
@@ -7,12 +7,16 @@ instead of creating guessed labels.
 
 import json
 import re
+import sys
+import hashlib
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_PATH = ROOT / "tests" / "fixtures" / "test_suite_cases.json"
-OUTPUT_PATH = ROOT / "data" / "training" / "bio_training_data.json"
+sys.path.insert(0, str(ROOT))
+from training.corpus_io import FIXTURES, BIO, write_immutable
+SOURCE_PATH = FIXTURES / "test_suite_cases.json"
+OUTPUT_PATH = BIO
 
 CURRENCY_TERMS = (
     "USD|EUR|GBP|JPY|CAD|AUD|CHF|CNY|INR|TRY|BRL|MXN|ZAR|JOD|SAR|AED|KWD|QAR|"
@@ -215,7 +219,13 @@ def build():
 
     artifact = {
         "metadata": {
-            "source": SOURCE_PATH.name,
+            "source": SOURCE_PATH.relative_to(ROOT).as_posix(),
+            "sourceSha256": hashlib.sha256(SOURCE_PATH.read_bytes()).hexdigest(),
+            "builderSha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+            "labelOrigin": "legacy_heuristic_drafts_from_development_regression",
+            "humanReviewed": False,
+            "independentEvaluationEligible": False,
+            "knownLimit": "Preserves legacy alignment heuristics; BIO label repair and independent entity evaluation remain separate tasks",
             "sourceCaseCount": len(suite["testCases"]),
             "includedValidTransactionCount": len(examples),
             "excludedInvalidTransactionCount": len(suite["testCases"]) - len(examples),
@@ -227,11 +237,9 @@ def build():
         },
         "examples": examples,
     }
-    with OUTPUT_PATH.open("w", encoding="utf-8") as handle:
-        json.dump(artifact, handle, ensure_ascii=False, indent=2)
-        handle.write("\n")
+    write_immutable(OUTPUT_PATH, json.dumps(artifact, ensure_ascii=False, indent=2) + "\n")
     print(f"Saved {len(examples)} BIO examples to {OUTPUT_PATH}")
-    print(f"Examples with unresolved gold fields: {len(unresolved_cases)}")
+    print(f"Heuristic examples with unresolved expected fields: {len(unresolved_cases)}")
     print("Label counts:", json.dumps(label_counts, ensure_ascii=False, sort_keys=True))
 
 

@@ -1,0 +1,369 @@
+{
+  "version": "1.0.0",
+  "scope": "Synthetic development comparison; legacy baseline has historical family exposure; no independent accuracy claim",
+  "inputSha256": {
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/training/splits/transaction_direction_sanitized_v1.json": "512af5213d2c34ab3f6f8a501163e261102e3dbf5e7cf52d0439735b204a4668",
+    "data/models/transaction_direction_jordan_sanitized_v1_candidate.json": "921cff48769fdacca2925801d0a8d856758ec5f3df52e4260ad0c4d2e6c2a0f7",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "src/python/verify_engine.py": "12fbfe761a8422919f274c02ef925eb7e683e873524f40daf32b9e2519b673f9",
+    "src/python/legacy_transaction_model.py": "39fc5dc5d73d5bd263271a9b38e014ee2985f9686bc0c1e8d83631d4fadd827c",
+    "src/python/transaction_direction.py": "28abe8e2e645391179da0805027dca86cae785d30e78177b4b4e667f509a55cd",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "src/python/service_notice.py": "92cf27f5255e9a37f53f267063ba12913638c4cc1bfbc75652c2931c6f6136d3",
+    "config/contracts/service_notice.json": "1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3",
+    "training/compare_transaction_candidate.py": "0470758bfda80d57eea91dcd7830ec5dcfb526bdc06cd79a94198f807d08ac1b",
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+    "tests/fixtures/sanitized_v1/qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c"
+  },
+  "adapter": "Same Python runtime guards, extraction and lexical direction overrides; only the score heads differ; .7/.5 thresholds unchanged",
+  "measurements": {
+    "syntheticValidation": {
+      "baseline": {
+        "cases": 418,
+        "truePositives": 215,
+        "trueNegatives": 203,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "directionAllEligible": {
+          "correctOrCount": 215,
+          "total": 215,
+          "rate": 1.0
+        },
+        "amountCurrencyAllEligible": {
+          "correctOrCount": 215,
+          "total": 215,
+          "rate": 1.0
+        },
+        "acceptedEligible": 215,
+        "failures": []
+      },
+      "candidate": {
+        "cases": 418,
+        "truePositives": 170,
+        "trueNegatives": 203,
+        "falsePositives": 0,
+        "falseNegatives": 45,
+        "directionAllEligible": {
+          "correctOrCount": 170,
+          "total": 215,
+          "rate": 0.7906976744186046
+        },
+        "amountCurrencyAllEligible": {
+          "correctOrCount": 170,
+          "total": 215,
+          "rate": 0.7906976744186046
+        },
+        "acceptedEligible": 170,
+        "failures": [
+          {
+            "caseId": "synthetic-v1-0031",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0050",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0143",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0167",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0185",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0219",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0304",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0305",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0375",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0410",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0411",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0662",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0663",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0673",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0773",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0779",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0782",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0807",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0847",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0865",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0889",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0900",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0972",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-0982",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1139",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1170",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1195",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1251",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1268",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1299",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1321",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1334",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1441",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1442",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1487",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1523",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1599",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1608",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1729",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1757",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1856",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1908",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-1978",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-2070",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "synthetic-v1-2091",
+            "kind": "falseNegative"
+          }
+        ]
+      }
+    },
+    "frozenRegression": {
+      "baseline": {
+        "cases": 226,
+        "truePositives": 106,
+        "trueNegatives": 120,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "directionAllEligible": {
+          "correctOrCount": 106,
+          "total": 106,
+          "rate": 1.0
+        },
+        "amountCurrencyAllEligible": {
+          "correctOrCount": 106,
+          "total": 106,
+          "rate": 1.0
+        },
+        "acceptedEligible": 106,
+        "failures": []
+      },
+      "candidate": {
+        "cases": 226,
+        "truePositives": 86,
+        "trueNegatives": 120,
+        "falsePositives": 0,
+        "falseNegatives": 20,
+        "directionAllEligible": {
+          "correctOrCount": 86,
+          "total": 106,
+          "rate": 0.8113207547169812
+        },
+        "amountCurrencyAllEligible": {
+          "correctOrCount": 86,
+          "total": 106,
+          "rate": 0.8113207547169812
+        },
+        "acceptedEligible": 86,
+        "failures": [
+          {
+            "caseId": "TC_POS_ETI_007",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_POS_HOU_001",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_POS_HOU_004",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_POS_HOU_005",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_POS_HOU_006",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_POS_JIB_001",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_POS_JIB_005",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_POS_CAB_004",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_POS_CAB_005",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_EDG_DEC_002",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_EDG_DEC_004",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_EDG_DIA_001",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_EDG_DIA_003",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_EDG_TYP_003",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_ADV_CURR_003",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_ADV_CURR_005",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_ADV_CURR_007",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_EDGE_DIACRITICS_001",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_EDGE_DECIMAL_COMMA_001",
+            "kind": "falseNegative"
+          },
+          {
+            "caseId": "TC_EDGE_THOUSANDS_COMMA_002",
+            "kind": "falseNegative"
+          }
+        ]
+      }
+    }
+  },
+  "frozenClassificationNoRegression": false,
+  "promotionAllowed": false,
+  "promotionReason": "Independent reviewed evidence and owner-approved thresholds are absent; runtime parity of a new integration is also required",
+  "activeWeightsChanged": false,
+  "reservedMerchantFinalTestInferred": false
+}
