@@ -6,17 +6,13 @@ Person-to-person transfers count. Own-account transfers are excluded. Unclear co
 
 ## Start here
 
-- [Active core-money roadmap](docs/CORE_MONEY_ROADMAP.md): scope, target architecture, ordered milestones, measured test gaps and pending policy decisions. This supersedes older research next-step proposals below.
-- [Core readiness audit](docs/CORE_MONEY_READINESS.md): current label coverage, independent-evidence gaps, tester/API differences and dependencies to preserve before cleanup.
-- [Validation preflight](docs/CORE_VALIDATION_PREFLIGHT.md): private future-data intake, exposure holds and required model initialization; no automatic scoring or admission.
-- [Jordan validation sources](docs/JORDAN_SMS_VALIDATION_SOURCING.md): checked public leads, their limitations and a small collection plan; no qualifying independent public corpus confirmed.
-- [Architecture and file map](docs/ARCHITECTURE.md): where code belongs, active versus research components, and recovery.
-- [ML readiness and experiment results](docs/REFACTOR_REVIEW.md): data limitations, completed preparation and measured candidates.
-- [Training coverage and next milestone](docs/SMS_DATA_COVERAGE.md): missing event types, the74-message authored batch and the next research proposal.
-- [SMS annotations and weak text reviews](data/annotations/sms_semantics_v1/README.md): reference-only drafts,80 reviewed representatives, evidence rules, and admission blockers.
-- [Transaction contract](docs/TRANSACTION_BEHAVIOR.md): current rules and the optional ownership-confirmation API.
-- [Measured behavior](docs/BEHAVIOR_EVALUATION.md): development results, known gaps and rejected candidates.
-- [Entity research](docs/BIO_EVALUATION.md): corrected BIO labels and isolated experiments.
+- [Tester checklist](docs/CORE_TESTER_CHECKLIST.md) for examples and expected results.
+- [Current readiness](docs/CORE_MONEY_READINESS.md) for verified behavior and remaining gaps.
+- [Core-money roadmap](docs/CORE_MONEY_ROADMAP.md) for the current scope and next steps.
+- [Transaction contract](docs/TRANSACTION_BEHAVIOR.md) for recording, amounts and ownership.
+- [Architecture](docs/ARCHITECTURE.md) for the runtime and research components.
+
+Historical experiment reports remain under `data/reports/transactions/`. Six older research summaries are available in Git history at commit `923b701`.
 
 ## Layout
 
@@ -67,7 +63,7 @@ py -X utf8 -m training.transactions.train --check-inputs
 py -X utf8 tools/browser/build_tester_ui.py
 ```
 
-Open [the tester](tools/browser/tester.html). It uses the canonical TypeScript bundle. Its detailed assessment comparison supports review/uncertainty; the default legacy caller path is retained while compatibility is evaluated.
+Open [the tester](tools/browser/tester.html). Its main assessment uses the detailed TypeScript engine. The optional ownership panel and legacy comparison have separate results.
 
 Expand **Try an ownership confirmation** to test a transfer with an explicit
 **My own accounts**, **Another person**, or **I'm not sure** choice. The panel shows
