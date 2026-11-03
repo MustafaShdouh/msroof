@@ -87,6 +87,7 @@ def build():
     <tr><th scope="row">Currency</th><td id="primaryCurrency">—</td></tr>
     <tr><th scope="row">Direction</th><td id="primaryDirection">—</td></tr>
     <tr><th scope="row">Ownership</th><td id="primaryOwnership">—</td></tr>
+    <tr><th scope="row">Category</th><td id="primaryCategory">—</td></tr>
     <tr><th scope="row">Why</th><td id="primaryReasons" class="assessment-reasons">Add a message to analyze.</td></tr>
     <tr><th scope="row">Local analysis time</th><td id="primaryLatency">—</td></tr>
     </tbody>

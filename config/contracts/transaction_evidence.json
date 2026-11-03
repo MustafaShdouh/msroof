@@ -130,7 +130,7 @@
   },
   "purpose": {
     "Telecom": "\\b(?:mobile|phone|telecom)\\s+(?:bill|recharge)\\b|فاتورة\\s+(?:الهاتف|الاتصالات)|شحن\\s+رصيد",
-    "Water and Electricity": "\\b(?:water|electricity|electric)\\s+bill\\b|فاتورة\\s+(?:المياه|الكهرباء)",
+    "Water and Electricity": "\\b(?:water|electricity|electric)\\s+bill\\b|\\bzamzam\\s+water\\b|فاتورة\\s+(?:المياه|الكهرباء)",
     "Food": "\\b(?:restaurant\\s+meal|meal|food\\s+delivery)\\b|وجبة\\s+مطعم|وجبة\\s+طعام|توصيل\\s+طعام",
     "Groceries": "\\bgroceries\\b|مشتريات\\s+بقالة|مواد\\s+غذائية",
     "Transportation": "\\b(?:taxi\\s+(?:ride|fare)|bus\\s+fare|fuel\\s+purchase)\\b|[أا]جرة\\s+(?:تاكسي|حافلة)|شراء\\s+وقود",

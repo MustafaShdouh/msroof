@@ -62,6 +62,14 @@ for(const c of cases) {
   if(c.currency)assert.equal(elements.primaryCurrency.innerText,c.currency);
   if(actual.transactionStatus==='non_transaction')assert.equal(elements.primaryCurrency.innerText,'Not applicable');
 }
+input('JO\nYou have a purchase transaction on account 1234*567 from ZAMZAM\nWATER amount JOD 1.200 on 02/11/2026 12:05 . Balance JOD 50.000 .');
+assert.equal(elements.detailedDecision.innerText,'Include');
+assert.equal(elements.primaryCategory.innerText,'Water and Electricity');
+input(cases[0].text);
+assert.equal(elements.primaryCategory.innerText,'Unresolved');
+input(cases[1].text);
+assert.equal(elements.primaryCategory.innerText,'Not applicable');
+
 input(cases[7].text);
 const messageOnly=elements.detailedOutput.innerText;
 const legacy=elements.jsonOutput.innerText;
@@ -75,7 +83,7 @@ assert.equal(elements.detailedOutput.innerText,messageOnly);
 
 input('');
 assert.equal(elements.detailedDecision.innerText,'Ready');
-for(const id of ['primaryAmount','primaryCurrency','primaryDirection','primaryOwnership','primaryStatus','primaryLatency'])assert.equal(elements[id].innerText,'—');
+for(const id of ['primaryAmount','primaryCurrency','primaryDirection','primaryOwnership','primaryCategory','primaryStatus','primaryLatency'])assert.equal(elements[id].innerText,'—');
 assert.equal(elements.detailedOutput.innerText,'{}');
 assert.equal(elements.jsonOutput.innerText,'{}');
 assert.equal(elements.ownershipOutput.innerText,'{}');

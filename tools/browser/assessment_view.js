@@ -7,7 +7,7 @@ function renderPrimaryAssessment(result, latency) {
   badge.style.backgroundColor = decision === 'review' ? '#f5efe3' : decision === 'include' ? '#edf1e9' : '#f3f5f1';
   var fields = {
     primaryStatus: '—', primaryAmount: '—', primaryCurrency: '—', primaryDirection: '—',
-    primaryOwnership: '—', primaryReasons: 'Add a message to analyze.', primaryLatency: '—'
+    primaryOwnership: '—', primaryCategory: '—', primaryReasons: 'Add a message to analyze.', primaryLatency: '—'
   };
   if (result) {
     fields.primaryStatus = { completed: 'Completed movement', non_transaction: 'No completed transaction', uncertain: 'Completion uncertain' }[result.transactionStatus];
@@ -19,6 +19,7 @@ function renderPrimaryAssessment(result, latency) {
     fields.primaryCurrency = result.currency ? result.currency + ' · ' + resolution : resolution;
     fields.primaryDirection = { incoming: 'Incoming', outgoing: 'Outgoing', uncertain: 'Direction unresolved', not_applicable: 'Not applicable' }[result.direction];
     fields.primaryOwnership = { not_transfer: 'Not a transfer', own_accounts: 'My own accounts', other_person: 'Another person', unknown: 'Ownership unresolved', not_applicable: 'Not applicable' }[result.transferRelationship];
+    fields.primaryCategory = result.expenseCategory || (result.categoryStatus === 'uncertain' ? 'Unresolved' : 'Not applicable');
     var reasons = {
       completed_transaction: 'Completed transaction evidence.', completion_unresolved: 'Completion is not established.',
       amount_unresolved: 'No single transaction amount is resolved.', direction_unresolved: 'Money-flow direction is unresolved.',
