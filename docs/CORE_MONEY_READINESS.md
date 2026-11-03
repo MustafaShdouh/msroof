@@ -1,4 +1,45 @@
-# Core money readiness — 2026-11-01
+# Core money readiness — 2026-11-03
+
+The current parser is ready for optional developer testing of Jordan Arabic/English messages. Independent accuracy and production/mobile readiness remain unestablished. R0–R5 finite development conformance is complete; R6’s independent release gate stays open. The owner chose existing-data testing and deferred collection.
+
+Start with the [compact tester checklist](CORE_TESTER_CHECKLIST.md). It uses 14 existing authored messages plus three hypothetical ownership confirmations. They pass their declared assertions in Python, TypeScript and the generated browser bundle. No tester design, engine behavior, model, label or admission policy changed in this readiness refresh.
+
+## Current checkpoint
+
+The parser fixes are published to `origin/main` at `cc27c0e` (`Guard transaction selection across coordinated money movements`). The feature branch was integrated as a fast-forward; no content conflicts occurred. Workspace now uses `main`. The older local `main` is preserved as `archive/main-before-integration-20261103`; ignored continuation notes/private files remained intact. This readiness follow-up is documented separately from that parser checkpoint.
+
+| Evidence | Current verified result | What it supports |
+| --- | --- | --- |
+| Full gate for the identical runtime bytes | 358 Python tests,14 TypeScript suites,226 frozen cases pass | Finite safeguards and compatibility; no independent accuracy estimate. |
+| Formatting controls | 6,984 inherited checks pass | Display controls, raw spans, whitespace/digits and parity on related exposed variants. |
+| Explicit separate-operation coordinators | 540 variants plus24 example-frame checks pass | Separate movement safety without promoting fragments into completion evidence. |
+| Ordinary-conjunction repair | 180/180 required-review variants and102/102inherited controls match asserted fields | The new required-review truth labels decision/null amount; it does not label every field. |
+| Equal-value/same-flow restatements | 72 remain unscored; outputs unchanged | Observations only, not correct/incorrect counts. |
+| Preservation | Original2302,ordering1036,multi-clause664,coordinator778 full detailed/legacy entries unchanged | 4,780 replays include repeated diagnostics; they are not independent examples. |
+| Ownership and models | 70 prior requests and23model artifacts unchanged;150new hypothetical requests pass | Binding and event-scope safety; hypothetical confirmations are not real account facts. |
+| Checklist wiring | 14 messages and3ownership choices match across all3runtimes | A compact path for the owner to exercise current behavior. |
+
+The original inventory’s missing-label/whole-source-family limits remain. Some cohorts assert status only, while new ambiguity cases assert only decision and null amount. Do not fill missing labels from predictions, pool augmented variants as independent observations, or reuse exposed diagnostics as an unseen final set. Runtime bytes match the full passing checkpoint after the fast-forward; the full suite was not repeated for documentation-only changes. The checklist checks were executed separately.
+
+## What is ready, deferred and open
+
+- **Ready for developer use:** completed-versus-chat/request/OTP/decline handling; Arabic/English amounts and digit scripts; visible JOD defaults and explicit foreign units; amount-role conflicts; direction; P2P/own/unknown ownership and exact-bound confirmations. These are the behaviors covered by current finite tests, not a promise about all future wording.
+- **Deferred by scope:** merchant/category inference, mobile-app integration, source collection and further model fitting. The browser’s optional research ground remains available; no research model was promoted into core.
+- **Open policy:** equal-value repeated descriptions lack adjudicated truth; zero/signed movement eligibility and ingestion deduplication remain uncontracted. Existing observation outputs are not labels.
+- **Open independent evidence:** private intake has zero records, known-exposure coverage is partial and release thresholds remain unset. Source search found no suitable public Jordan corpus in its bounded review; this is not a claim none exists. Final/reserved scoring remains unauthorized.
+- **Open runtime evidence:** actual target-device feature support, cold/warm performance, allocations and package measurements. The 0.10ms Hermes target remains unverified. Text alone cannot authenticate a bank.
+
+## Current dependency sizes
+
+The generated core graph contains17source/contract files totaling121,281bytes, with no research-module imports. Legacy weights are92,497bytes; the standalone developer tester is3,601,489bytes including optional research assets. These are source/disk sizes, not an app package or memory measurement. The large pretrained research encoder is outside the inspected core graph. App packaging was not inspected or changed.
+
+Keep the legacy scorer/extractor/APIs and immutable experiments until their consumers, replacements, unique tests/data and rollback references are mapped. Current core still needs the scorer fallback and extraction adapter; a primary tester change does not authorize deleting those dependencies.
+
+Machine evidence: [core_money_r6_readiness_refresh_v1.json](../data/reports/behavior/core_money_r6_readiness_refresh_v1.json). Current repair details: [CORE_PLAIN_CONJUNCTION_REPAIR.md](CORE_PLAIN_CONJUNCTION_REPAIR.md). No new independent data, fit, research-model inference, final evaluation or app work occurred.
+
+## Historical inventory and follow-ups — preserved reference
+
+The remaining sections describe the original 2026-11-01 inventory and later updates as recorded. Their source sizes, suite counts and next-action language are historical; the current summary above supersedes those status statements. Original reports and their frozen source bindings remain unchanged.
 
 The repaired detailed parser is ready for further developer testing. It is not
 yet supported by independent accuracy evidence or a verified mobile runtime.

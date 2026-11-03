@@ -13,10 +13,10 @@ agent-readable status record; it is not consumed by a program.
 
 ```yaml
 workspace: C:/Users/mustafa/Desktop/msroof
-active_milestone: R6_development_robustness
+active_milestone: R6_developer_testing_ready_release_open
 completed_milestones: [R0, R1, R2, R3, R4, R5]
-next_action: refresh_development_readiness_and_compact_tester_checklist
-then: [consolidate_saved_evidence_and_remaining_limits, provide_compact_core_tester_checks, preserve_independent_release_gate]
+next_action: use_compact_tester_checklist_and_triage_observed_core_mismatches
+then: [freeze_any_new_reproducible_mismatch_with_evidence, repair_only_proven_contract_gaps, preserve_independent_release_gate]
 owner_route_choice_20261103: continue_existing_development_testing
 collection: deferred_by_owner
 format_repair: data/reports/behavior/core_format_robustness_after_v1.json
@@ -35,6 +35,8 @@ validation_preflight: data/reports/behavior/core_validation_preflight_v1.json
 validation_preflight_doc: docs/CORE_VALIDATION_PREFLIGHT.md
 tester_report: data/reports/behavior/core_money_r6_tester_v1.json
 readiness_inventory: data/reports/behavior/core_money_r6_inventory_v1.json
+readiness_refresh: data/reports/behavior/core_money_r6_readiness_refresh_v1.json
+tester_checklist: docs/CORE_TESTER_CHECKLIST.md
 readiness_doc: docs/CORE_MONEY_READINESS.md
 readiness_inventory_inference: none
 baseline: data/reports/behavior/core_money_v1_baseline.json
@@ -68,18 +70,19 @@ merchant_reserved_29: not_inferred
 
 **Resume procedure:**
 
-R0–R5 are complete for the finite development requirements. R5 exited on
-2026-11-01 after the unmarked-account repair and final regression checks; see
-`docs/CORE_MONEY_UNMARKED_AMOUNTS.md`. R6's existing-evidence inventory and tester-primary update are complete; resume
-with existing-data robustness tests per owner choice on 2026-11-03. Source
-collection is deferred. Formatting controls were measured and repaired; see
-CORE_FORMAT_ROBUSTNESS.md. Amount-role ordering/ownership contrasts also pass; see
-CORE_AMOUNT_OWNERSHIP_ROBUSTNESS.md. Next test the one-event boundary using frozen
-source-derived combinations of multiple movements. Intake stays empty; no independent/final scoring,
-outreach, new model fitting or admission follows from development testing. Steps 2–6 below preserve the R1 recipe for
-reference, not work to repeat. No fresh fit, independent final evaluation,
-reserved-set inference, deployment, publication or deletion is authorized by
-this continuation. Zero/signed and duplicate-ingestion policies remain unresolved.
+R0–R5 are complete for finite development conformance. R6's parser fixes,
+current readiness refresh and optional tester checklist are complete. Read
+[CORE_MONEY_READINESS.md](CORE_MONEY_READINESS.md) and
+[CORE_TESTER_CHECKLIST.md](CORE_TESTER_CHECKLIST.md) before further changes.
+Triage newly observed mismatches against the existing contract; do not add
+synthetic variants just to grow the counts. The owner chose existing-data
+checks on 2026-11-03 and deferred collection. The intake remains empty,
+independent release evidence and thresholds remain open, and zero/signed and
+duplicate-ingestion policies remain unresolved. The parser checkpoint is on
+`origin/main`; Git publication was explicitly authorized for this integration
+and readiness follow-up. Steps 2–6 below preserve the R1 recipe as historical
+reference. No fresh fitting, independent or reserved-set scoring, deployment,
+source outreach or deletion follows from this continuation.
 
 1. Read `STATE.md`, this execution contract and the active milestone. Consult
    `.agents/HANDOFF.md` for durable decisions and only the linked evidence needed
@@ -559,9 +562,13 @@ score as calibrated confidence without calibration evidence.
   own-exclusionblockedbeforecontextwhenmixedselectionunresolved. Old4780full
   snapshotreplays/70wrappers/23models preserved.150newhypotheticalwrappers+24
   framecontrolsPASS. FULL358Python+14TS+226frozenPASS;CORE_PLAIN_CONJUNCTION_REPAIR.md.
-- [ ] Refresh development-readiness summary and compact tester checklist from
-  saved evidence/current behavior; consolidate unresolved policy/data/runtime
-  limits. No independentaccuracy/universalcoverage claim or newfit/sourcehunt.
+- [x] Refresh development readiness and publish compact tester checklist.
+  Fourteen existing messages and three hypothetical ownership checks pass
+  Python/TypeScript/tester parity. Current runtime bytes retain full358/14/226
+  verification. Parser integrated to origin/main at cc27c0e; no conflicts.
+  CORE_MONEY_READINESS.md, CORE_TESTER_CHECKLIST.md, readiness_refresh_v1 report.
+- [ ] Triage observed new core mismatches from optional tester use. Preserve
+  source-bound truth, ambiguity and the independent-release gate.
 - [ ] Require separately approved independent evidence and acceptance thresholds
   before release. `releaseThresholds` remains unset; the 32/29 reservations stay
   protected. No final evaluation or runtime migration authorized by this roadmap.
@@ -610,4 +617,4 @@ parity/regression checks. Augmentations inherit the same family/fold; they are
 not extra independent evidence. Never edit a test simply because the engine
 fails it. Use a new case/version for a genuine reviewed truth correction.
 
-Immediate next task: **Refresh development readiness and a compact core tester checklist**. Targeted1.0.20repair closes54failures,180/180required+102/102controls,72unscoredoutputsunchanged;old4780replays/70ownership/23models preserved. Full358Python+14TS+226frozenPASS. Read CORE_PLAIN_CONJUNCTION_REPAIR.md. Use existing saved evidence and state explicit remaining limits; collectiondeferred,no fits/finalreservedscoring/admission/appwork/publication. Independentrelease remainsOPEN.
+Immediate next task: **Use the compact tester checklist and triage any observed mismatch**. The grammar1.0.20 parser is published to origin/main, with the readiness summary and 14-message/3-ownership checklist complete. Developer conformance358Python+14TS+226frozen remains verified; independent release is open, intake empty, thresholds unset and collection deferred. Freeze exact failing evidence if a new case appears; no new fits, final/reserved scoring, admission or app work.

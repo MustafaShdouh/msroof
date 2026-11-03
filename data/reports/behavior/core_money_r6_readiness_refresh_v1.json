@@ -1,0 +1,348 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Existing-development readiness refresh and checklist verification; NOT independent accuracy",
+  "date": "2026-11-03",
+  "parserCheckpoint": "cc27c0e3b2d88c2f2d80383294f8b16e49780a3b",
+  "currentGrammar": "1.0.20",
+  "developerTestingReady": true,
+  "independentReleaseEstablished": false,
+  "independentIntakeRecords": 0,
+  "exposureCatalogComplete": false,
+  "releaseThresholds": null,
+  "fullRuntimeGate": {
+    "pythonTests": 358,
+    "typescriptSuites": 14,
+    "frozenCases": 226,
+    "passed": true,
+    "rerunForDocs": false,
+    "identicalRuntimeModelBytesVerified": true
+  },
+  "formattingSummary": {
+    "entries": 6984,
+    "allAssertedFieldsCorrect": 6984,
+    "fullResultParityFailures": 0,
+    "nonTransactionCases": 2868,
+    "pythonFalseIncludes": 0,
+    "pythonFalseCompleted": 0,
+    "pythonFieldErrors": {}
+  },
+  "conjunctionSummary": {
+    "entries": 354,
+    "scoredEntries": 282,
+    "unscoredEntries": 72,
+    "groups": {
+      "required_review": {
+        "entries": 180,
+        "scored": true,
+        "allAssertedFieldsCorrect": 180,
+        "observedDecisions": {
+          "review": 180
+        },
+        "fieldErrors": {}
+      },
+      "inherited_control": {
+        "entries": 102,
+        "scored": true,
+        "allAssertedFieldsCorrect": 102,
+        "observedDecisions": {
+          "exclude": 6,
+          "include": 54,
+          "review": 42
+        },
+        "fieldErrors": {}
+      },
+      "observation_only": {
+        "entries": 72,
+        "scored": false,
+        "observedDecisions": {
+          "include": 12,
+          "review": 60
+        }
+      }
+    }
+  },
+  "preservedSnapshots": {
+    "r5": 2302,
+    "ordering": 1036,
+    "multipleClauses": 664,
+    "explicitCoordinators": 778
+  },
+  "unscoredObservationOutputsPreserved": 72,
+  "unchangedOwnershipRequests": 70,
+  "unchangedModelArtifacts": 23,
+  "checklist": {
+    "messageCases": 14,
+    "hypotheticalOwnershipRequests": 3,
+    "fullThreeRuntimeParity": true,
+    "allDeclaredAssertionsPass": true,
+    "cases": [
+      {
+        "id": "1",
+        "label": "Debit vs balance",
+        "source": "tests/fixtures/core_money_v1.json",
+        "sourceCaseId": "balance-before",
+        "expected": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 8.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      {
+        "id": "2",
+        "label": "Arabic incoming; default currency",
+        "source": "tests/fixtures/core_unmarked_amounts_v1.json",
+        "sourceCaseId": "credit-ar",
+        "expected": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 17.25,
+          "direction": "incoming",
+          "currency": "JOD",
+          "currencyResolution": "default_missing"
+        }
+      },
+      {
+        "id": "3",
+        "label": "Arabic digits",
+        "source": "tests/fixtures/core_unmarked_amounts_v1.json",
+        "sourceCaseId": "debit-ar",
+        "expected": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 17.25,
+          "direction": "outgoing",
+          "currency": "JOD",
+          "currencyResolution": "default_missing"
+        }
+      },
+      {
+        "id": "4",
+        "label": "Person-to-person",
+        "source": "tests/fixtures/core_money_v1.json",
+        "sourceCaseId": "p2p-out",
+        "expected": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 25,
+          "currency": "JOD",
+          "direction": "outgoing",
+          "transferRelationship": "other_person"
+        }
+      },
+      {
+        "id": "5",
+        "label": "Own accounts",
+        "source": "tests/fixtures/core_money_v1.json",
+        "sourceCaseId": "own-transfer",
+        "expected": {
+          "transactionStatus": "completed",
+          "trackingDecision": "exclude",
+          "transferRelationship": "own_accounts"
+        }
+      },
+      {
+        "id": "6",
+        "label": "Name is not ownership proof",
+        "source": "tests/fixtures/core_money_v1.json",
+        "sourceCaseId": "named-unknown-transfer",
+        "expected": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "transferRelationship": "unknown"
+        }
+      },
+      {
+        "id": "7",
+        "label": "Authorization code",
+        "source": "tests/fixtures/core_money_v1.json",
+        "sourceCaseId": "otp-en",
+        "expected": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "direction": "not_applicable"
+        }
+      },
+      {
+        "id": "8",
+        "label": "Declined attempt",
+        "source": "tests/fixtures/core_money_v1.json",
+        "sourceCaseId": "declined-ar",
+        "expected": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "direction": "not_applicable"
+        }
+      },
+      {
+        "id": "9",
+        "label": "Pending request",
+        "source": "tests/fixtures/core_money_v1.json",
+        "sourceCaseId": "pending-en",
+        "expected": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "direction": "not_applicable"
+        }
+      },
+      {
+        "id": "10",
+        "label": "Conversational claim",
+        "source": "tests/fixtures/core_money_v1.json",
+        "sourceCaseId": "chat-ar",
+        "expected": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "direction": "not_applicable"
+        }
+      },
+      {
+        "id": "11",
+        "label": "Stated fee-inclusive total",
+        "source": "tests/fixtures/core_unmarked_amounts_v1.json",
+        "sourceCaseId": "explicit-total-en",
+        "expected": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 17.5,
+          "direction": "outgoing",
+          "currency": "JOD",
+          "currencyResolution": "explicit"
+        }
+      },
+      {
+        "id": "12",
+        "label": "Account charge; visible default",
+        "source": "tests/fixtures/core_unmarked_amounts_v1.json",
+        "sourceCaseId": "bare-primary-en",
+        "expected": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 7.09,
+          "direction": "outgoing",
+          "currency": "JOD",
+          "currencyResolution": "default_missing"
+        }
+      },
+      {
+        "id": "13",
+        "label": "Unconfirmed outcome",
+        "source": "tests/fixtures/core_money_v1.json",
+        "sourceCaseId": "unknown-outcome",
+        "expected": {
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review"
+        }
+      },
+      {
+        "id": "14",
+        "label": "Conflicting postings and total",
+        "source": "tests/fixtures/core_plain_conjunction_review_v1.json",
+        "sourceCaseId": "ordinary-28",
+        "expected": {
+          "trackingDecision": "review",
+          "amount": null
+        }
+      }
+    ],
+    "privateVerificationSha256": "6821bafceb2114d796859a0c2d5ff0a2d5809e88f560fea7097df9612958e22d"
+  },
+  "runtime": {
+    "coreGraphFiles": 17,
+    "coreSourceBytes": 121281,
+    "legacyWeightBytes": 92497,
+    "testerHtmlBytes": 3601489,
+    "researchImports": [],
+    "actualMobileBenchmarked": false,
+    "appPackagingInspected": false
+  },
+  "openPolicies": [
+    "Unadjudicated equal-value/same-direction descriptions",
+    "Zero/signed movement eligibility",
+    "Ingestion deduplication"
+  ],
+  "deferred": [
+    "Category/merchant inference",
+    "Mobile app integration",
+    "Collection",
+    "Further model fitting"
+  ],
+  "sourceSha256": {
+    "docs/CORE_MONEY_READINESS.md": "047eae590ee4e746399bb65569f1231340c4a2445a9aabfa86c7d2e84588ae43",
+    "docs/CORE_TESTER_CHECKLIST.md": "abe37dbeec0eac3bf73a38a77206eec5947a64b00a7f96798fb37877f964cc0d",
+    "data/reports/behavior/core_plain_conjunction_repair_integrity_v1.json": "2f375e8b0326a035af9c22683cd203720a722e28c0b71ec5eceafc2818a2f456",
+    "data/reports/behavior/core_plain_conjunction_repair_verification_v1.json": "18ca03967bd20c832e3cfd35bd6f5aed674ed43ef92209ce071494b034a73e5b",
+    "data/reports/behavior/core_format_robustness_after_v1.json": "cd38f0fbb1d32fc8e5e643fd4690aabd554eb244a2b499321d54a173f32df2d9",
+    "data/reports/behavior/core_money_r6_startup_guard_final_v1.json": "7c14da712a5471abc9a4ebfced81cb6e538104acc9207dd7467df5770b66ea92",
+    "data/reports/behavior/core_validation_preflight_v1.json": "5e4607ee9d4be7854b54b0660265e8cc7fcf1632c4125e1b69884ec056efbfe1",
+    "data/sources/transactions/validation_source_review_20261102.json": "c523f2e8739a480a21fceb75b0c5e7cadc7c9c329a407387edb5d2aa9761745c",
+    "config/contracts/transaction_behavior.json": "e06693e71398f60a220488a779902fc2d38d2ba7c19570df395fddf551e2bf4b",
+    "config/contracts/transaction_evidence.json": "ffe5031eb16cdcd51511b384cca977757be98e29bc59f8d65312355d6e949e5d",
+    "tools/browser/tester.html": "46912dc4d6db9c1fc2bf5a75659985899ac011c260f6e7e10a8424994912ce85",
+    "tests/fixtures/core_money_v1.json": "ea36d5a469e07cbd80255e71b28f36bbb26ef9f864eac9d227bc56b477d1b3bb",
+    "tests/fixtures/core_unmarked_amounts_v1.json": "f6c1e801afc353a9636181fe47e38399723ae171b28c5e8b74df481a5c6e7c55",
+    "tests/fixtures/core_plain_conjunction_review_v1.json": "df7ed50aee023bf43d4cc426971379090c8a49c32a0867507526ce8acee82180",
+    "data/private/core_evaluation_v1/intake.json": "5e7c0080b7c3ef6ed3fe9b1efddaa3a260d44b4a6ad9b82da7338ee756f86f44",
+    "src/typescript/MasroofEngine.ts": "4eea48841f21c7bb6b75734df65af37878731151e75905ec580abd60b71f5113",
+    "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+    "src/typescript/ServiceNotice.ts": "a6e9976cd5f62e18d926260a2681cac6c0834ab317eeeb33df609d7bf8c907c5",
+    "config/contracts/service_notice.json": "1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3",
+    "src/typescript/AuthorizationRequest.ts": "0c45b2b8c327e53576495a3a7b2fa0ec3b7757197eb6fd0cab9571a212b281c2",
+    "config/contracts/authorization_request.json": "e67d6ca0e01dc38d70a38cc9f3c49064973f5fe0894c95b5230d4fa88f6d45fc",
+    "src/typescript/LegacyTransactionModel.ts": "5f060dd375f4a3f568971282339c0c389fdaeb54951ffa80f83642193a7d0f59",
+    "src/typescript/EntityText.ts": "e110dca008fa4ee538eacc9b2c0224cb38a155d647fcf9b586e57be4ce52f0d2",
+    "config/contracts/source_text_view.json": "dfa5203745068950c1db04df2f885385637c6d765e882ede3e6bb8c3c92b2e8a",
+    "src/typescript/DetailedAssessment.ts": "20486992fc50891d032f310474ea533137dad89f0ed36500fd0c1ea4818071b1",
+    "src/typescript/MoneyCandidates.ts": "618958b0e1dc0adccf410cb7a0b24522128184f36b74b75769188ca33970e29e",
+    "src/typescript/MoneySyntax.ts": "344772e1695867d7b5b3a6c223cfb709a74ee5d68732a5ab345896fea259a5f7",
+    "src/typescript/AccountMovement.ts": "5068854995974fc52f24c98484edc461453a62e5184f65be1ff0ae0182682198",
+    "src/typescript/DirectionPolicy.ts": "a9c6d2ef1b1b1d5e5dd4b4289f17bc076c917c1bc824d311a44e62a55795559a",
+    "src/typescript/OwnershipContext.ts": "c45f4ade087828389a7ef1425f07d2d1abfd72334215815c39b6b753fd0b95a4",
+    "config/contracts/ownership_context.json": "faeabebe5f6c15a6cb855077dd68ab907db713b9c3ddaaf14c7f66c296905914",
+    "data/models/bio_context_labels_v2_context_v1_candidate.json": "cd8811c078961a501da4b569953a6bda0fe1d7d04ba6fa54998e5730111f20fb",
+    "data/models/bio_labels_v2_word_v1_candidate.json": "1e662b7a54f9caebddae148d53040c19eb8fbc26433614d1667ed1e1578448c5",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "data/models/masroof_sequence_tagger.json": "7244dd5be424267d929d1cf8669dc6b9177ada93709313d9d3503322285d8b21",
+    "data/models/masroof_transaction_direction_v2.json": "79a91780a3289169fd9de8f4fbfa8fb7d3636e8c2ce483a019ba67934e40e835",
+    "data/models/merchant_category_research_aliases.json": "4aaa7b4d3d44647660bd8a6e3fd4ba3d5642cf93bb542e83d16d7573a7c82be7",
+    "data/models/merchant_category_research_augmented.json": "bbd416815106314ff9956b3c4d499b09866099729603ad8ea0b652332731bce1",
+    "data/models/merchant_category_research_baseline.json": "a5eaa1c49cb4c93411083cfd6767f4c80aec14be5501975d55644576e3c91aed",
+    "data/models/merchant_category_research_jordan_data_v3_aliases.json": "628d6d18e031c016269c0702178c3240273c1f0f6e424fbe67ee47855ed41203",
+    "data/models/merchant_category_research_jordan_data_v3_augmented.json": "29d968fc133f4000c08b978ef6a262390cf8b4531f0f3622c38c5da2abdc34ed",
+    "data/models/merchant_category_research_jordan_data_v3_baseline.json": "b42842ebd013fc6d1a0a171a4aa27f020ef8ac4f3152b5c5282d24183d5b3ede",
+    "data/models/merchant_category_research_jordan_expansion_v2_aliases.json": "ce3dd67df2bd15f51f993fccdfdaa03a3c66a9cf77a969e99bbf0ac0fef6f144",
+    "data/models/merchant_category_research_jordan_expansion_v2_augmented.json": "a88666b309400684ebccfe345c4435dedc83af0fc91c8119d238f0d7f10f47aa",
+    "data/models/merchant_category_research_jordan_expansion_v2_baseline.json": "93f1cfbcc53114a7bfc221bd1d67b7d98a7dd23e7fba941ab7af97eccc6c0adb",
+    "data/models/sms_completion_context_v1_browser_runtime.js": "56a07ac40f55309645df2ef5d4047e7ca1a2b0a3e0baa658eaeca5f08cb552e9",
+    "data/models/sms_completion_context_v1_candidate.json": "fad7f42560fae5dfbf55c7c070013e7e95b1eb008c67434219165207891cd73c",
+    "data/models/sms_completion_encoder_v1_candidate.json": "8080e66ef95ff87d8f8d5d461b7dd825c7fc7467ed397c4ecf92d11896700889",
+    "data/models/sms_semantics_ab_v1_browser_runtime.js": "c361f9f94e4757ce3518f0b6703f6ab8de26d3c0cd0508d298d8cbfb275b4890",
+    "data/models/sms_semantics_ab_v1_word_candidate.json": "f4793e23851946cc202c7427502183e02892ff452253095d1a50acdd3a095766",
+    "data/models/sms_semantics_ab_v1_word_char_candidate.json": "00ad8b39744c7ca9e43caf09ddec8c0bd5fb40bbed9ec83275955ab2b3d77802",
+    "data/models/sms_semantics_followup_v1_word_candidate.json": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121",
+    "data/models/transaction_direction_jordan_sanitized_liblinear_v1_candidate.json": "50aee39b74e5c4cad0be6151ea9117c309a249577ae7a7d5d0aaebfb6bad463d",
+    "data/models/transaction_direction_jordan_sanitized_v1_candidate.json": "921cff48769fdacca2925801d0a8d856758ec5f3df52e4260ad0c4d2e6c2a0f7"
+  },
+  "training": false,
+  "newResearchModelInference": false,
+  "reservedInferred": false,
+  "scoringAuthorized": false,
+  "independentEvaluationEligible": false,
+  "limits": [
+    "All case/variant results are related exposed development evidence; no pooled accuracy or independence claim.",
+    "New ambiguity labels assert decision/null amount only; missing labels are not inferred.",
+    "Checklist checks execute canonical parser inference on existing authored inputs only.",
+    "No full-suite repeat for identical runtime bytes and documentation-only changes."
+  ]
+}
