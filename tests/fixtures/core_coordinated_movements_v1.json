@@ -1,0 +1,2263 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Frozen source-derived explicit same-clause operation contrasts; NOT independent evidence",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false,
+  "sourceSnapshot": ".local-backups/core_money_r5a_unmarked/after.json",
+  "sourceSnapshotSha256": "68874901b1ef4af25ec7e7c30a48b50255c34b74de86294b05de6d4cc312c109",
+  "priorFixture": "tests/fixtures/core_multiple_movements_v1.json",
+  "priorFixtureSha256": "b8bdd869d383dd3806ea59b3c4af91c6ddf9183e37e582079e337219983d7162",
+  "balanceSource": {
+    "cohort": "core52",
+    "recordId": "balance-before",
+    "fragment": "Available balance JOD 630.500."
+  },
+  "scope": "Explicit separate-operation coordinators only; no general unadorned-conjunction or event co-reference policy change.",
+  "cases": [
+    {
+      "id": "separate-1",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك وفي عملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-2",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك وبعملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-3",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "Internal movement completed: JOD 17 from your current account to your own savings account and separately 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-4",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "Internal movement completed: JOD 17 from your current account to your own savings account and as a separate transaction 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-5",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090 and separately 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-6",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090 and as a separate transaction 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-7",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090 and separately 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-8",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090 and as a separate transaction 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-9",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500 and separately 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-10",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500 and as a separate transaction 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-11",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500 and separately 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-12",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500 and as a separate transaction 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-13",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك وفي عملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-14",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك وبعملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-15",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك وفي عملية أخرى، خصم 17.250 USD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-16",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك وبعملية أخرى، خصم 17.250 USD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-17",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was credited to your account and separately Purchase USD 10; your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-18",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was credited to your account and as a separate transaction Purchase USD 10; your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-19",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was credited to your account and separately 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-20",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was credited to your account and as a separate transaction 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-21",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was credited to your account and separately 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-22",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was credited to your account and as a separate transaction 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-23",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was credited to your account and separately 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-24",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was credited to your account and as a separate transaction 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-25",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was credited to your account and separately USD 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-26",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was credited to your account and as a separate transaction USD 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-27",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "Your account was debited 17.250 and separately 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-after-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-28",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "Your account was debited 17.250 and as a separate transaction 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-after-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-29",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وفي عملية أخرى، اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-30",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وبعملية أخرى، اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-31",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وفي عملية أخرى، أُضيف 17.250 إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-32",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وبعملية أخرى، أُضيف 17.250 إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-33",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وفي عملية أخرى، خُصم من بطاقتك 17.250."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-34",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وبعملية أخرى، خُصم من بطاقتك 17.250."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-35",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وفي عملية أخرى، خصم 17.250 USD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-36",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وبعملية أخرى، خصم 17.250 USD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-37",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and separately Internal movement completed: JOD 17 from your current account to your own savings account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-38",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and as a separate transaction Internal movement completed: JOD 17 from your current account to your own savings account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-39",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and separately Purchase USD 10; your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-40",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and as a separate transaction Purchase USD 10; your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-41",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and separately 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-42",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and as a separate transaction 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-43",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and separately 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-44",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and as a separate transaction 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-45",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and separately Your account was debited 17.250."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-after-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-46",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and as a separate transaction Your account was debited 17.250."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-after-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-47",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and separately 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-48",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and as a separate transaction 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-49",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and separately USD 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-50",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17.250 was debited from your account and as a separate transaction USD 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-51",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خُصم من بطاقتك 17.250 وفي عملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-52",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خُصم من بطاقتك 17.250 وبعملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-53",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500 and separately 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-54",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500 and as a separate transaction 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-55",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500 and separately 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-56",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500 and as a separate transaction 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-57",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك وفي عملية أخرى، أُضيف 17.250 إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-58",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك وبعملية أخرى، أُضيف 17.250 إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-59",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك وفي عملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-60",
+      "language": "ar",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك وبعملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-61",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "USD 17.250 was debited from your account and separately 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-62",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "USD 17.250 was debited from your account and as a separate transaction 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-63",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "USD 17.250 was debited from your account and separately 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "separate-64",
+      "language": "en",
+      "boundary": "explicit_separate_operation",
+      "input": {
+        "text": "USD 17.250 was debited from your account and as a separate transaction 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "evidence": "The connector explicitly describes a separate operation; both original fragments establish a completed money movement. One-event output must not select either amount."
+    },
+    {
+      "id": "single-control-bare-total-en",
+      "language": "en",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "single-control-explicit-total-en",
+      "language": "en",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "single-control-bare-primary-en",
+      "language": "en",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "single-control-two-primary-en",
+      "language": "en",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "Your account was charged 17; total debited 19.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "two-primary-en:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "single-control-debit-ar",
+      "language": "ar",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "خُصم 17.250 من حسابك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "single-control-credit-ar",
+      "language": "ar",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "incoming",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "single-control-explicit-principal-total",
+      "language": "en",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "JOD 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "transform": "explicit_same_currency_principal",
+      "evidence": "Existing stated inclusive total remains primary; adding its explicit currency to the principal creates no second event."
+    },
+    {
+      "id": "support-bare-total-en",
+      "language": "en",
+      "boundary": "single_event_supporting_amounts",
+      "input": {
+        "text": "17 was debited from your account and fee 0.500 and total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "transform": "semicolon_to_and",
+      "evidence": "One purchase with stated account charge or inclusive total; unadorned and is not proof of a separate operation."
+    },
+    {
+      "id": "support-explicit-total-en",
+      "language": "en",
+      "boundary": "single_event_supporting_amounts",
+      "input": {
+        "text": "17 was debited from your account and fee JOD 0.500 and total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "transform": "semicolon_to_and",
+      "evidence": "One purchase with stated account charge or inclusive total; unadorned and is not proof of a separate operation."
+    },
+    {
+      "id": "support-bare-primary-en",
+      "language": "en",
+      "boundary": "single_event_supporting_amounts",
+      "input": {
+        "text": "Purchase USD 10 and your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "transform": "semicolon_to_and",
+      "evidence": "One purchase with stated account charge or inclusive total; unadorned and is not proof of a separate operation."
+    },
+    {
+      "id": "balance-75",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "Available balance JOD 630.500 and separately 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "balanceBefore": true,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-76",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "17.250 was debited from your account and separately Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "balanceBefore": false,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-77",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "Available balance JOD 630.500 and as a separate transaction 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "balanceBefore": true,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-78",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "17.250 was debited from your account and as a separate transaction Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "balanceBefore": false,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-79",
+      "language": "ar",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "Available balance JOD 630.500 وفي عملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "balanceBefore": true,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-80",
+      "language": "ar",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وفي عملية أخرى، Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وفي عملية أخرى، ",
+      "balanceBefore": false,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-81",
+      "language": "ar",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "Available balance JOD 630.500 وبعملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "balanceBefore": true,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-82",
+      "language": "ar",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وبعملية أخرى، Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " وبعملية أخرى، ",
+      "balanceBefore": false,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-83",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "Available balance JOD 630.500 and separately 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "balanceBefore": true,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-84",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500 and separately Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "balanceBefore": false,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-85",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "Available balance JOD 630.500 and as a separate transaction 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "balanceBefore": true,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-86",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500 and as a separate transaction Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "balanceBefore": false,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-87",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "Available balance JOD 630.500 and separately Purchase USD 10; your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "balanceBefore": true,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-88",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090 and separately Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "joiner": " and separately ",
+      "balanceBefore": false,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-89",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "Available balance JOD 630.500 and as a separate transaction Purchase USD 10; your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "balanceBefore": true,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    },
+    {
+      "id": "balance-90",
+      "language": "en",
+      "boundary": "separate_balance_not_movement",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090 and as a separate transaction Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "joiner": " and as a separate transaction ",
+      "balanceBefore": false,
+      "evidence": "Balance fragment is not another completed money movement or ownership fact."
+    }
+  ]
+}

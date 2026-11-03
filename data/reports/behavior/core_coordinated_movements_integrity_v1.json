@@ -1,0 +1,61 @@
+{
+  "kind": "Exposed authored source-derived development conformance, NOT independent accuracy",
+  "before": {
+    "entries": 540,
+    "allAssertedFieldsCorrect": 216,
+    "multipleEntries": 384,
+    "multipleCorrect": 72,
+    "wrongIncludes": 84,
+    "wrongExcludes": 48,
+    "controlEntries": 156,
+    "controlsCorrect": 144
+  },
+  "after": {
+    "entries": 540,
+    "allAssertedFieldsCorrect": 540,
+    "multipleEntries": 384,
+    "multipleCorrect": 384,
+    "wrongIncludes": 0,
+    "wrongExcludes": 0,
+    "controlEntries": 156,
+    "controlsCorrect": 156
+  },
+  "preservedFullDetailedAndLegacyEntries": {
+    "r5": 2302,
+    "ordering": 1036,
+    "multipleClauses": 664
+  },
+  "regressionEntriesIncludingRepeatedDiagnostics": 4002,
+  "unchangedOwnershipRequests": 70,
+  "unchangedModelArtifacts": 23,
+  "sourceSha256": {
+    "tools/evaluation/core_boundary_check.py": "ce31b43f8232b947c3390681a63845d84ab673157f4d58c9941420abe38d3489",
+    "src/python/money_syntax.py": "d8a37c4f329a247f319370200c84032f5e07fc9d91e4cb16f0ca2ff1ef27c9ac",
+    "src/typescript/MoneySyntax.ts": "344772e1695867d7b5b3a6c223cfb709a74ee5d68732a5ab345896fea259a5f7",
+    "src/python/account_movement.py": "9a2595e2a5478811f18e6d9dde3129ff1936283e6f4ea0cf6d8adcdaf5f07e00",
+    "src/typescript/AccountMovement.ts": "5068854995974fc52f24c98484edc461453a62e5184f65be1ff0ae0182682198",
+    "src/python/direction_policy.py": "725767c650b2a99cc7f61455066b20e45803aaaea83901832d51647943d6dd74",
+    "src/typescript/DirectionPolicy.ts": "a9c6d2ef1b1b1d5e5dd4b4289f17bc076c917c1bc824d311a44e62a55795559a",
+    "src/python/money_candidates.py": "392c1a8d7268203d77bf22cf86523fc751364e95ca7ffb9922db08c7f36df4c1",
+    "src/typescript/MoneyCandidates.ts": "453cb9107e6880497ee0ec134e632ceb2f377a574e5a1c695444d2fc23ea15e5",
+    "src/python/detailed_assessment.py": "8744c095a8019ecc1ef4dd0c8f0a3177ecb465e1a4d94c93f166f978245a7813",
+    "src/typescript/DetailedAssessment.ts": "6ee04abf29c26bf65116245db7c6af951d602c4f55510b0f6a40125f43d99999",
+    "config/contracts/transaction_evidence.json": "afb9147c83fde0835d682578bccd67b3e585fc78b55adbdb1b5987f377eb2a92",
+    "tools/browser/tester.html": "f24f7c41b3eaf99cf395a51a6df96c5845d09c984f56c3673b2bf8899c13df54",
+    "tests/fixtures/core_coordinated_movements_v1.json": "8a1bdf68f9c703285c3c45d5f81656efe3e8eea1217af4c61c4ed0ab5376995c",
+    "tests/python/test_core_coordinated_movements.py": "19f62445b34047e94c013f61dff8872be6e405d14aaadc59a31fbcd690714f86",
+    "tests/python/test_quoted_examples.py": "a4ac92cbb7eca1c8c65bc80757e006d2054f46d26d4ae7a032c755ebe8a40666",
+    "data/reports/behavior/core_coordinated_movements_v1_comparison.json": "7b14f1ae1e44130c7abdd853fbe26804fbc02e1f67795f9c1d5c31eec6268699"
+  },
+  "privateRegressionSnapshotSha256": "22fe347f56bf1974e151c5b04e825b4d7ec025488de6251d655872e06176f33f",
+  "training": false,
+  "reservedInferred": false,
+  "newResearchModelInference": false,
+  "independentEvaluationEligible": false,
+  "limits": [
+    "Separators explicitly identify a separate operation; generic conjunction/co-reference remains outside this bounded repair.",
+    "Variants, composites and repeated diagnostics are related exposed checks, not independent SMS.",
+    "Language is inherited from source; English balance additions can make Arabic-source controls mixed.",
+    "New operation fragments are used ONLY for competing-amount safety, never to establish completion or replace scope."
+  ]
+}

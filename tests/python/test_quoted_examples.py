@@ -66,4 +66,4 @@ class QuotedExampleTests(unittest.TestCase):
             self.assertEqual(old["version"], "1.0.5")
             source = (root / "tests/python/test_sms_semantics_followup.py").read_text(encoding="utf-8")
             self.assertIn("cls.selected, cls.sources", source)
-        self.assertEqual(json.loads((ROOT / "config/contracts/transaction_evidence.json").read_text(encoding="utf-8"))["version"], "1.0.18")
+        self.assertEqual(json.loads((ROOT / "config/contracts/transaction_evidence.json").read_text(encoding="utf-8"))["version"], "1.0.20")

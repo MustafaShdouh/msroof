@@ -5,7 +5,7 @@ from pathlib import Path
 
 from .authorization_request import is_authorization_request
 from .entity_text import EntityText
-from .money_candidates import mask_balances, amounts, has_movement_amount
+from .money_candidates import mask_balances, amounts, has_movement_amount, movement_values
 from .direction_policy import initial_direction, resolve_relationship, recording_decision
 from .service_notice import is_service_notice
 from .account_movement import has_account_debit, has_account_credit
@@ -67,6 +67,26 @@ def completed_clause(clause, allow_purchase):
         RX[key].search(clause) for key in ("purchaseUnsettled", "purchaseConditional", "deferred", "declined", "chat"))
     return bool(completion_evidence(clause) or purchase)
 
+
+
+def conjoined_movement_conflict(completed, allow_purchase, parse_number):
+    for part in completed:
+        if not RX['conjoinedMovementCandidateBoundary'].search(part):
+            continue
+        sections = [section for section in RX['conjoinedMovementCandidateBoundary'].split(part)
+                    if completed_clause(section, allow_purchase)]
+        if len(sections) < 2:
+            continue
+        previous = None
+        for section in sections:
+            values = movement_values(section, parse_number)
+            if len(values) != 1:
+                continue
+            value = next(iter(values))
+            if previous is not None and value != previous:
+                return True
+            previous = value
+    return False
 
 
 def unresolved_completion(clauses):
@@ -132,8 +152,18 @@ def assess(input_value, extract, parse_number, financial_candidate, ownership_ov
     direction, relation = initial_direction(text, relevant)
     extracted = extract(raw, "INCOME" if direction == "incoming" else "EXPENSE")
     amount, unit, resolution = amounts(text, extracted, parse_number, source, allow_unmarked=status=='completed')
-    if len(completed) > 1 and sum(has_movement_amount(part, parse_number) for part in completed) > 1:
+    # Explicit separate-operation coordinators only refine the competing-amount
+    # guard. Never use these fragments to establish completion or override scope.
+    movement_parts = completed
+    if any(RX['separateMovementBoundary'].search(part) for part in completed):
+        movement_parts = [section for part in completed for section in RX['separateMovementBoundary'].split(part)
+                          if completed_clause(section, allow_purchase)]
+    if len(movement_parts) > 1 and sum(has_movement_amount(part, parse_number) for part in movement_parts) > 1:
         status, amount = "uncertain", None
+    # Completion-only, non-transfer review is already unresolved. Guard selected
+    # amounts or transfer eligibility before any ownership override can be applied.
+    if (amount is not None or relation != 'not_transfer') and conjoined_movement_conflict(completed, allow_purchase, parse_number):
+        status, amount = 'uncertain', None
     direction, relation = resolve_relationship(text, semantic, amount, negative, direction, relation, ownership_override)
     decision = recording_decision(status, amount, direction, relation)
     purpose = [label for label, pattern in PURPOSE.items() if pattern.search(semantic)] if decision == "include" and direction == "outgoing" else []

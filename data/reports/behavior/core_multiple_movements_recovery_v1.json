@@ -1,0 +1,35 @@
+{
+  "kind": "Checkout recovery and post-recovery verification; not model accuracy",
+  "head": "f97fb7c49a299cc26f86c1de99be4d470f8da2ca",
+  "branch": "codex/merged-project",
+  "gitMutationsPerformedByThisTask": false,
+  "recoveredRuntimeBindings": 17,
+  "runtimeBindingsAllMatch": true,
+  "unchangedModelArtifacts": 23,
+  "recoveredRawFiles": 9,
+  "allRawFilesMatchPrivateLedger": true,
+  "originalMessagesUnchanged": true,
+  "labelsAndEligibilityUnchanged": true,
+  "notesReconstructed": true,
+  "handoffCharacters": 40840,
+  "postRecoveryFullGate": {
+    "pythonTests": 349,
+    "typescriptSuites": 14,
+    "frozenCases": 226,
+    "passed": true,
+    "logSha256": "4b4cadd4f616272681fe75beab7c1f90d4ce50b855b272d99de0ff00c49ee79b"
+  },
+  "postRawArchiveRecoveryProvenanceTests": {
+    "tests": 10,
+    "passed": true
+  },
+  "privateBackupManifest": "data/private/report_inputs/manifests/core_multiple_movements_recovery_v1.json",
+  "training": false,
+  "reservedInferred": false,
+  "independentEvaluationEligible": false,
+  "limits": [
+    "Full gate passed after restoring the two required seed copies; seven further archive copies then passed the targeted provenance suite. No runtime changes after the full gate.",
+    "Continuation notes were reconstructed, not recovered byte-for-byte; original historical backups preserved.",
+    "External branch switches/commits are not agent operations."
+  ]
+}

@@ -1,8 +1,10 @@
 {
-  "version": "1.0.18",
+  "version": "1.0.20",
   "scope": "Shared structural evidence for the detailed API; not learned weights or exhaustive language coverage",
   "number": "[0-9]+(?:[,'’][0-9]{3})*(?:[.,][0-9]+)?",
   "patterns": {
+    "conjoinedMovementCandidateBoundary": "\\s+(?:and\\s+|و\\s*)",
+    "separateMovementBoundary": "\\s+(?:and\\s+(?:separately|as\\s+a\\s+separate\\s+(?:transaction|operation))\\s*[:,]?|و(?:في\\s+|ب)(?:عملية|حركة)\\s+[أا]خرى\\s*[،,:]?)\\s+",
     "amountSummaryPrefix": "^\\s*(?:total\\s+(?:amount\\s+)?(?:debited|charged)\\b|[إا]جمالي\\s+(?:المبلغ\\s+)?(?:المخصوم|الخصم))",
     "purchaseEvidence": "^(?:[A-Z]{2,3}\\s+)?(?:you\\s+have\\s+a\\s+purchase\\s+transaction\\s+on\\s+(?:[A-Za-z-]+\\s+){0,3}(?:account|card)\\b|you\\s+(?:(?:have\\s+)?made|have\\s+completed)\\s+a\\s+(?:card\\s+)?purchase\\b)|(?<![\\u0621-\\u064A])(?:تم|تمت)\\s+حركة\\s+شراء",
     "purchaseUnsettled": "\\b(?:authoriz(?:ation|ed)|authoris(?:ation|ed)|pending|hold|held|reservation)\\b|تفويض|حجز|[?؟]",

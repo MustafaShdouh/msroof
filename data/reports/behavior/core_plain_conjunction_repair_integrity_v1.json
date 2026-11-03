@@ -1,0 +1,601 @@
+{
+  "kind": "Exposed scored-safety repair with unscored observations preserved; NOT independent accuracy",
+  "before": {
+    "entries": 354,
+    "scoredEntries": 282,
+    "unscoredEntries": 72,
+    "groups": {
+      "required_review": {
+        "entries": 180,
+        "scored": true,
+        "allAssertedFieldsCorrect": 126,
+        "observedDecisions": {
+          "exclude": 30,
+          "include": 12,
+          "review": 138
+        },
+        "fieldErrors": {
+          "amount": 24,
+          "trackingDecision": 42
+        }
+      },
+      "inherited_control": {
+        "entries": 102,
+        "scored": true,
+        "allAssertedFieldsCorrect": 102,
+        "observedDecisions": {
+          "exclude": 6,
+          "include": 54,
+          "review": 42
+        },
+        "fieldErrors": {}
+      },
+      "observation_only": {
+        "entries": 72,
+        "scored": false,
+        "observedDecisions": {
+          "include": 12,
+          "review": 60
+        }
+      }
+    }
+  },
+  "after": {
+    "entries": 354,
+    "scoredEntries": 282,
+    "unscoredEntries": 72,
+    "groups": {
+      "required_review": {
+        "entries": 180,
+        "scored": true,
+        "allAssertedFieldsCorrect": 180,
+        "observedDecisions": {
+          "review": 180
+        },
+        "fieldErrors": {}
+      },
+      "inherited_control": {
+        "entries": 102,
+        "scored": true,
+        "allAssertedFieldsCorrect": 102,
+        "observedDecisions": {
+          "exclude": 6,
+          "include": 54,
+          "review": 42
+        },
+        "fieldErrors": {}
+      },
+      "observation_only": {
+        "entries": 72,
+        "scored": false,
+        "observedDecisions": {
+          "include": 12,
+          "review": 60
+        }
+      }
+    }
+  },
+  "changedDetailedResults": [
+    {
+      "id": "ordinary-1:0:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-1:0:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-1:1:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-1:1:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-1:2:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-1:2:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-2:0:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-2:0:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-2:1:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-2:1:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-2:2:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-2:2:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-3:0:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-3:0:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-3:1:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-3:1:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-3:2:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-3:2:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-13:0:False",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-13:0:True",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-13:1:False",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-13:1:True",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-13:2:False",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-13:2:True",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-15:0:False",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-15:0:True",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-15:1:False",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-15:1:True",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-15:2:False",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-15:2:True",
+      "fields": [
+        "transactionStatus",
+        "reasonCodes",
+        "amount"
+      ]
+    },
+    {
+      "id": "ordinary-19:0:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-19:0:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-19:1:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-19:1:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-19:2:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-19:2:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-26:0:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-26:0:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-26:1:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-26:1:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-26:2:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-26:2:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes"
+      ]
+    },
+    {
+      "id": "ordinary-28:0:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    },
+    {
+      "id": "ordinary-28:0:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    },
+    {
+      "id": "ordinary-28:1:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    },
+    {
+      "id": "ordinary-28:1:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    },
+    {
+      "id": "ordinary-28:2:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    },
+    {
+      "id": "ordinary-28:2:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    },
+    {
+      "id": "ordinary-31:0:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    },
+    {
+      "id": "ordinary-31:0:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    },
+    {
+      "id": "ordinary-31:1:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    },
+    {
+      "id": "ordinary-31:1:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    },
+    {
+      "id": "ordinary-31:2:False",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    },
+    {
+      "id": "ordinary-31:2:True",
+      "fields": [
+        "transactionStatus",
+        "trackingDecision",
+        "reasonCodes",
+        "amount",
+        "categoryStatus"
+      ]
+    }
+  ],
+  "requiredReviewFields": [
+    "trackingDecision",
+    "amount"
+  ],
+  "unscoredObservationOutputsUnchanged": 72,
+  "oldSnapshotFullDetailedLegacyEntriesPreserved": {
+    "r5": 2302,
+    "ordering": 1036,
+    "multipleClauses": 664,
+    "explicitCoordinators": 778
+  },
+  "regressionEntriesIncludingRepeatedDiagnostics": 4780,
+  "ownershipRequestsUnchanged": 70,
+  "modelArtifactsUnchanged": 23,
+  "legacyResultsUnchanged": true,
+  "fullDetailedParity": true,
+  "sourceSha256": {
+    "src/python/money_candidates.py": "62d776ce0b3b6ce05ffcfc0713167e08a6548a0f623507204469d44084058e94",
+    "src/typescript/MoneyCandidates.ts": "618958b0e1dc0adccf410cb7a0b24522128184f36b74b75769188ca33970e29e",
+    "src/python/detailed_assessment.py": "b8344ad42766d677df6560862a6e5e396b0fbe9931191c5bbb3951edf18550c0",
+    "src/typescript/DetailedAssessment.ts": "20486992fc50891d032f310474ea533137dad89f0ed36500fd0c1ea4818071b1",
+    "config/contracts/transaction_evidence.json": "ffe5031eb16cdcd51511b384cca977757be98e29bc59f8d65312355d6e949e5d",
+    "tools/browser/tester.html": "46912dc4d6db9c1fc2bf5a75659985899ac011c260f6e7e10a8424994912ce85",
+    "tools/evaluation/review_plain_conjunctions.py": "d41b0370b7d2e0ecd69553825428ba85ace32d4dc6465fc8976515b13bd2bada",
+    "tests/fixtures/core_plain_conjunction_review_v1.json": "df7ed50aee023bf43d4cc426971379090c8a49c32a0867507526ce8acee82180",
+    "tests/python/test_plain_conjunction_repair.py": "3bf7e3973143f20ff5e6febcbf48d7d430cfc1c8442e8118ce961dec1ad76397",
+    "tests/python/test_quoted_examples.py": "0d37dc9a07724604150e6f4a42e415117cebca36adbbb165793123ff4d6d6576",
+    "data/models/bio_context_labels_v2_context_v1_candidate.json": "cd8811c078961a501da4b569953a6bda0fe1d7d04ba6fa54998e5730111f20fb",
+    "data/models/bio_labels_v2_word_v1_candidate.json": "1e662b7a54f9caebddae148d53040c19eb8fbc26433614d1667ed1e1578448c5",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "data/models/masroof_sequence_tagger.json": "7244dd5be424267d929d1cf8669dc6b9177ada93709313d9d3503322285d8b21",
+    "data/models/masroof_transaction_direction_v2.json": "79a91780a3289169fd9de8f4fbfa8fb7d3636e8c2ce483a019ba67934e40e835",
+    "data/models/merchant_category_research_aliases.json": "4aaa7b4d3d44647660bd8a6e3fd4ba3d5642cf93bb542e83d16d7573a7c82be7",
+    "data/models/merchant_category_research_augmented.json": "bbd416815106314ff9956b3c4d499b09866099729603ad8ea0b652332731bce1",
+    "data/models/merchant_category_research_baseline.json": "a5eaa1c49cb4c93411083cfd6767f4c80aec14be5501975d55644576e3c91aed",
+    "data/models/merchant_category_research_jordan_data_v3_aliases.json": "628d6d18e031c016269c0702178c3240273c1f0f6e424fbe67ee47855ed41203",
+    "data/models/merchant_category_research_jordan_data_v3_augmented.json": "29d968fc133f4000c08b978ef6a262390cf8b4531f0f3622c38c5da2abdc34ed",
+    "data/models/merchant_category_research_jordan_data_v3_baseline.json": "b42842ebd013fc6d1a0a171a4aa27f020ef8ac4f3152b5c5282d24183d5b3ede",
+    "data/models/merchant_category_research_jordan_expansion_v2_aliases.json": "ce3dd67df2bd15f51f993fccdfdaa03a3c66a9cf77a969e99bbf0ac0fef6f144",
+    "data/models/merchant_category_research_jordan_expansion_v2_augmented.json": "a88666b309400684ebccfe345c4435dedc83af0fc91c8119d238f0d7f10f47aa",
+    "data/models/merchant_category_research_jordan_expansion_v2_baseline.json": "93f1cfbcc53114a7bfc221bd1d67b7d98a7dd23e7fba941ab7af97eccc6c0adb",
+    "data/models/sms_completion_context_v1_browser_runtime.js": "56a07ac40f55309645df2ef5d4047e7ca1a2b0a3e0baa658eaeca5f08cb552e9",
+    "data/models/sms_completion_context_v1_candidate.json": "fad7f42560fae5dfbf55c7c070013e7e95b1eb008c67434219165207891cd73c",
+    "data/models/sms_completion_encoder_v1_candidate.json": "8080e66ef95ff87d8f8d5d461b7dd825c7fc7467ed397c4ecf92d11896700889",
+    "data/models/sms_semantics_ab_v1_browser_runtime.js": "c361f9f94e4757ce3518f0b6703f6ab8de26d3c0cd0508d298d8cbfb275b4890",
+    "data/models/sms_semantics_ab_v1_word_candidate.json": "f4793e23851946cc202c7427502183e02892ff452253095d1a50acdd3a095766",
+    "data/models/sms_semantics_ab_v1_word_char_candidate.json": "00ad8b39744c7ca9e43caf09ddec8c0bd5fb40bbed9ec83275955ab2b3d77802",
+    "data/models/sms_semantics_followup_v1_word_candidate.json": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121",
+    "data/models/transaction_direction_jordan_sanitized_liblinear_v1_candidate.json": "50aee39b74e5c4cad0be6151ea9117c309a249577ae7a7d5d0aaebfb6bad463d",
+    "data/models/transaction_direction_jordan_sanitized_v1_candidate.json": "921cff48769fdacca2925801d0a8d856758ec5f3df52e4260ad0c4d2e6c2a0f7"
+  },
+  "privateSnapshots": {
+    "before": "1b1656cb34ebfa247db73148a5a65214d492074a3e03cb63e004ae1a8266ad14",
+    "after": "a75f03ab5525dc68963171d5772c8b4d098026931be3844bddfa17e5fe0fc7d7",
+    "regression": "790e8fb5c8da91352fc9841645aab22364f11c3f41078c76abfab354d844a387"
+  },
+  "training": false,
+  "reservedInferred": false,
+  "independentEvaluationEligible": false,
+  "limits": [
+    "Required-review truth asserts decision and null amount, not every result field.",
+    "Equal-value/same-flow observations remain unscored, not correctness labels.",
+    "Variant/repeated-snapshot counts are not independent examples.",
+    "No general event co-reference, sender authentication or mobile-performance claim."
+  ]
+}

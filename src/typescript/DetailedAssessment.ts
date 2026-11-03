@@ -1,7 +1,7 @@
 /** Canonical contract assessment; metadata and classifier scores cannot prove settlement. */
 import rules from '../../config/contracts/transaction_evidence.json' with { type: 'json' };
 import { EntityText } from './EntityText.ts';
-import { maskBalances, amounts, hasMovementAmount } from './MoneyCandidates.ts';
+import { maskBalances, amounts, hasMovementAmount, movementValues } from './MoneyCandidates.ts';
 import { initialDirection, resolveRelationship, recordingDecision } from './DirectionPolicy.ts';
 import { isAuthorizationRequest } from './AuthorizationRequest.ts';
 import { isServiceNotice } from './ServiceNotice.ts';
@@ -81,6 +81,23 @@ function completedClause(clause: string, allowPurchase: boolean): boolean {
 }
 
 
+function conjoinedMovementConflict(completed: string[], allowPurchase: boolean, parseNumber: (value: string) => number | null): boolean {
+  for(const part of completed) {
+    if(!RX.conjoinedMovementCandidateBoundary.test(part))continue;
+    const sections=part.split(RX.conjoinedMovementCandidateBoundary).filter(section=>completedClause(section,allowPurchase));
+    if(sections.length<2)continue;
+    let previous: number | null=null;
+    for(const section of sections) {
+      const values=movementValues(section,parseNumber);
+      if(values.size!==1)continue;
+      const value=values.values().next().value!;
+      if(previous!==null && value!==previous)return true;
+      previous=value;
+    }
+  }
+  return false;
+}
+
 function unresolvedCompletion(clauses: string[]): boolean {
   let noncashSeen = false, financialContext = false, unknown = false, finalUnknown = false;
   for (let clause of clauses) {
@@ -141,8 +158,18 @@ export function assess(input: DetailedInput, extract: (body: string, type: 'INCO
   let [direction,relation]=initialDirection(text,relevant);
   const extracted = extract(raw, direction === 'incoming' ? 'INCOME' : 'EXPENSE');
   let [amount, unit, resolution] = amounts(text, extracted, parseNumber, source,status==='completed');
-  if (completed.length > 1 && completed.filter(part => hasMovementAmount(part,parseNumber)).length > 1) {
+  // Refine competing amounts only; these fragments never establish completion/scope.
+  let movementParts=completed;
+  if(completed.some(part=>RX.separateMovementBoundary.test(part))) {
+    movementParts=completed.flatMap(part=>part.split(RX.separateMovementBoundary).filter(section=>completedClause(section,allowPurchase)));
+  }
+  if (movementParts.length > 1 && movementParts.filter(part => hasMovementAmount(part,parseNumber)).length > 1) {
     status = 'uncertain'; amount = null;
+  }
+  // Existing completion-only review stays unresolved; selected amounts or transfer
+  // eligibility need coherent scope before ownership can be supplied by a caller.
+  if((amount!==null || relation!=='not_transfer') && conjoinedMovementConflict(completed,allowPurchase,parseNumber)) {
+    status='uncertain'; amount=null;
   }
   [direction,relation]=resolveRelationship(text,semantic,amount,negative,direction,relation,ownershipOverride);
   const decision=recordingDecision(status,amount,direction,relation);

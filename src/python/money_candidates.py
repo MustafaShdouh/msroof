@@ -86,10 +86,24 @@ def collect_candidates(source, parse_number):
     return dict(working=working,monetary=monetary,anchored=anchored,primary=primary,exclusions=exclusions)
 
 
+def standalone_total(clause):
+    clean = clause.strip().rstrip('.!?؟;').strip()
+    return bool(RX['amountSummaryPrefix'].search(clean) and (PRIMARY.fullmatch(clean) or BARE_PRIMARY.fullmatch(clean)))
+
+
+def movement_values(clause, parse_number):
+    """Canonical posted-value evidence inside one fragment, not new event truth."""
+    if standalone_total(clause):
+        return set()
+    evidence = collect_candidates(EntityText(clause), parse_number)
+    posted = evidence['primary'] + [c for c in evidence['anchored'] if c['role'] == 'account_amount']
+    candidates = posted or evidence['monetary'] + evidence['anchored']
+    return {c['value'] for c in candidates}
+
+
 def has_movement_amount(clause, parse_number):
     """A standalone inclusive total describes a movement, not another movement."""
-    clean = clause.strip().rstrip('.!?؟;').strip()
-    if RX['amountSummaryPrefix'].search(clean) and (PRIMARY.fullmatch(clean) or BARE_PRIMARY.fullmatch(clean)):
+    if standalone_total(clause):
         return False
     # Keep existing explicit-money safeguards; bare amounts use the same ID/date
     # masks and guarded account/primary roles as canonical amount selection.

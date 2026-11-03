@@ -15,13 +15,17 @@ agent-readable status record; it is not consumed by a program.
 workspace: C:/Users/mustafa/Desktop/msroof
 active_milestone: R6_development_robustness
 completed_milestones: [R0, R1, R2, R3, R4, R5]
-next_action: freeze_and_test_multiple_movement_one_event_boundaries_on_exposed_data
-then: [freeze_source_derived_contrasts_without_new_truth, repair_only_proven_contract_gaps, verify_original_results_and_model_integrity]
+next_action: refresh_development_readiness_and_compact_tester_checklist
+then: [consolidate_saved_evidence_and_remaining_limits, provide_compact_core_tester_checks, preserve_independent_release_gate]
 owner_route_choice_20261103: continue_existing_development_testing
 collection: deferred_by_owner
 format_repair: data/reports/behavior/core_format_robustness_after_v1.json
 format_integrity: data/reports/behavior/core_format_robustness_integrity_v1.json
 amount_ownership_integrity: data/reports/behavior/core_amount_ownership_integrity_v1.json
+multiple_movements_integrity: data/reports/behavior/core_multiple_movements_integrity_v1.json
+coordinated_movements_integrity: data/reports/behavior/core_coordinated_movements_integrity_v1.json
+plain_conjunction_review: data/reports/behavior/core_plain_conjunction_review_v1.json
+plain_conjunction_repair: data/reports/behavior/core_plain_conjunction_repair_integrity_v1.json
 source_review: data/sources/transactions/validation_source_review_20261102.json
 source_plan: docs/JORDAN_SMS_VALIDATION_SOURCING.md
 route_choice: existing_development_testing_selected
@@ -535,10 +539,29 @@ score as calibrated confidence without calibration evidence.
   Full346Python+14TS+226frozenPASS. CORE_AMOUNT_OWNERSHIP_ROBUSTNESS.md;
   core_amount_ownership_v1_comparison.json +core_amount_ownership_integrity_v1.json.
   Source-language labels include mixed balance combinations, not independent SMS.
-- [ ] Freeze source-derived multiple-movement contrasts and test one-event safety:
-  bare/explicit amounts, opposite flows, totals/account charges across events.
-  Require review for inseparable events; never select one event's convenient total
-  to resolve another. Preserve existing expectations/ambiguity; no model-made truth.
+- [x] Multi-clause movement safety:71basecases/426variants,36→426assertedmatches.
+  Wrongmultiple includes120→0,excludes48→0of384;single-eventcontrols36→42of42.
+  Grammar1.0.18 uses guarded account/primary candidates and standalone-total
+  exception; original2302fullresults/70wrappers/23models unchanged. Rebuilt tester.
+  Full349Python+14TS+226frozenPASS. CORE_MULTIPLE_MOVEMENTS.md +versioned reports.
+- [x] Explicit coordinated-operation safety:90bases/540variants216→540allasserted;
+  multiplewrongincludes84→0/excludes48→0of384;controls144→156of156.
+  Grammar1.0.19 boundary refines ONLYalreadycompletedclauses foramountsafety;
+  24nonreceiptframeguardsPASS, original4002snapshotreplays/70wrappers/23models
+  unchanged. Full352Python+14TS+226frozenPASS; CORE_COORDINATED_MOVEMENTS.md.
+- [x] Ordinaryconjunctionreview:59bases/354variants;180required-review126correct/
+  54fail(ninebases),102inheritedcontrolsPASS,72same-value/same-flowUNSCORED.
+  Required12wrongincludes30wrongexcludes24amountmismatches(overlap). Fullparity;
+  runtime/model/testerunchanged,twoauditsPASS;lastfullgate352/14/226unchanged.
+  CORE_PLAIN_CONJUNCTION_REVIEW.md definesboundedfix;no generalandsplit.
+- [x] Boundedplainconjunctionrepair1.0.20:all54failuresclosed,180/180required+
+  102/102controls,72unscoredfulloutputsunchanged. Typedcompletedpostingproofonly;
+  own-exclusionblockedbeforecontextwhenmixedselectionunresolved. Old4780full
+  snapshotreplays/70wrappers/23models preserved.150newhypotheticalwrappers+24
+  framecontrolsPASS. FULL358Python+14TS+226frozenPASS;CORE_PLAIN_CONJUNCTION_REPAIR.md.
+- [ ] Refresh development-readiness summary and compact tester checklist from
+  saved evidence/current behavior; consolidate unresolved policy/data/runtime
+  limits. No independentaccuracy/universalcoverage claim or newfit/sourcehunt.
 - [ ] Require separately approved independent evidence and acceptance thresholds
   before release. `releaseThresholds` remains unset; the 32/29 reservations stay
   protected. No final evaluation or runtime migration authorized by this roadmap.
@@ -587,4 +610,4 @@ parity/regression checks. Augmentations inherit the same family/fold; they are
 not extra independent evidence. Never edit a test simply because the engine
 fails it. Use a new case/version for a genuine reviewed truth correction.
 
-Immediate next task: **Existing-data multiple-movement / one-event boundary tests**. The owner chose development testing on 2026-11-03 and deferred collection. Format repair and bounded amount/ownership ordering tests are complete; full346Python+14TS+226frozen pass, original results/models preserved. Freeze new source-derived contrasts and policy evidence before changes; preserve unresolved conflicting amounts/outcomes and raw confirmations. Intake empty, source audit partial, final/reserved scoring and new fits unauthorized. Independent release evidence remains open.
+Immediate next task: **Refresh development readiness and a compact core tester checklist**. Targeted1.0.20repair closes54failures,180/180required+102/102controls,72unscoredoutputsunchanged;old4780replays/70ownership/23models preserved. Full358Python+14TS+226frozenPASS. Read CORE_PLAIN_CONJUNCTION_REPAIR.md. Use existing saved evidence and state explicit remaining limits; collectiondeferred,no fits/finalreservedscoring/admission/appwork/publication. Independentrelease remainsOPEN.

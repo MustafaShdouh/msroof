@@ -1,0 +1,1360 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Frozen source-derived review contrasts with explicitly unscored ambiguities, NOT independent evidence",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false,
+  "sourceSnapshot": ".local-backups/core_money_r5a_unmarked/after.json",
+  "sourceSnapshotSha256": "68874901b1ef4af25ec7e7c30a48b50255c34b74de86294b05de6d4cc312c109",
+  "priorFixture": "tests/fixtures/core_coordinated_movements_v1.json",
+  "priorFixtureSha256": "8a1bdf68f9c703285c3c45d5f81656efe3e8eea1217af4c61c4ed0ab5376995c",
+  "pairedFixture": "tests/fixtures/paired_movement_cases.json",
+  "pairedFixtureSha256": "68c01fb8fc6eb3f9699074e5978ed3fd143570bdacc3491868bc4e42ccaa9010",
+  "cases": [
+    {
+      "id": "ordinary-1",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك وخُصم 17.250 من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " و",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-2",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك و خُصم 17.250 من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " و ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-3",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "Internal movement completed: JOD 17 from your current account to your own savings account and 17.250 was debited from your account."
+      },
+      "sources": [
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-4",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090 and 17.250 was credited to your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-5",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090 and 17.250 was debited from your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-6",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500 and 17.250 was credited to your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-7",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500 and 17.250 was debited from your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-8",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك وخُصم 17.250 من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " و",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-9",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك و خُصم 17.250 من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " و ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-10",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك وخصم 17.250 USD من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "joiner": " و",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-11",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك و خصم 17.250 USD من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "joiner": " و ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-12",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17.250 was credited to your account and Purchase USD 10; your account was charged 7.090."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-13",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17.250 was credited to your account and 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-14",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17.250 was credited to your account and 17.250 was debited from your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-15",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17.250 was credited to your account and 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-16",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17.250 was credited to your account and USD 17.250 was debited from your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-17",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "Your account was debited 17.250 and 17.250 was debited from your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-after-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "ordinary-18",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "خُصم 17.250 من حسابك واكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        }
+      ],
+      "joiner": " و",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-19",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "خُصم 17.250 من حسابك و اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        }
+      ],
+      "joiner": " و ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-20",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وأُضيف 17.250 إلى حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "joiner": " و",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-21",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "خُصم 17.250 من حسابك و أُضيف 17.250 إلى حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "joiner": " و ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-22",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وخُصم من بطاقتك 17.250."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        }
+      ],
+      "joiner": " و",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "ordinary-23",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "خُصم 17.250 من حسابك و خُصم من بطاقتك 17.250."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        }
+      ],
+      "joiner": " و ",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "ordinary-24",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "خُصم 17.250 من حسابك وخصم 17.250 USD من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "joiner": " و",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "ordinary-25",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "خُصم 17.250 من حسابك و خصم 17.250 USD من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "joiner": " و ",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "ordinary-26",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17.250 was debited from your account and Internal movement completed: JOD 17 from your current account to your own savings account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-27",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17.250 was debited from your account and Purchase USD 10; your account was charged 7.090."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-28",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17.250 was debited from your account and 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-29",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17.250 was debited from your account and 17.250 was credited to your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-30",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "17.250 was debited from your account and Your account was debited 17.250."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-after-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "ordinary-31",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17.250 was debited from your account and 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-32",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "17.250 was debited from your account and USD 17.250 was debited from your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "ordinary-33",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "خُصم من بطاقتك 17.250 وخُصم 17.250 من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " و",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "ordinary-34",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "خُصم من بطاقتك 17.250 و خُصم 17.250 من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " و ",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "ordinary-35",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500 and 17.250 was credited to your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-36",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500 and 17.250 was debited from your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-37",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك وأُضيف 17.250 إلى حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "joiner": " و",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-38",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك و أُضيف 17.250 إلى حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "joiner": " و ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-39",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك وخُصم 17.250 من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " و",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "ordinary-40",
+      "language": "ar",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك و خُصم 17.250 من حسابك."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "joiner": " و ",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "ordinary-41",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "required_review",
+      "input": {
+        "text": "USD 17.250 was debited from your account and 17.250 was credited to your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "evidence": "Distinct stated amounts or opposite cash effects cannot yield one convenient selected movement. No linked conversion/fee-inclusive reconciliation is stated. Completion status is deliberately unasserted."
+    },
+    {
+      "id": "ordinary-42",
+      "language": "en",
+      "boundary": "unadorned_conjunction",
+      "adjudication": "observation_only",
+      "input": {
+        "text": "USD 17.250 was debited from your account and 17.250 was debited from your account."
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "joiner": " and ",
+      "evidence": "Equal same-direction descriptions may repeat one movement, including a repeated amount with omitted currency. Source defaults are not proof of distinct in-message units. No correctness label assigned."
+    },
+    {
+      "id": "keep-single-control-bare-total-en",
+      "language": "en",
+      "boundary": "inherited_one_event_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "priorCaseId": "single-control-bare-total-en"
+    },
+    {
+      "id": "keep-single-control-explicit-total-en",
+      "language": "en",
+      "boundary": "inherited_one_event_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "priorCaseId": "single-control-explicit-total-en"
+    },
+    {
+      "id": "keep-single-control-bare-primary-en",
+      "language": "en",
+      "boundary": "inherited_one_event_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "priorCaseId": "single-control-bare-primary-en"
+    },
+    {
+      "id": "keep-single-control-two-primary-en",
+      "language": "en",
+      "boundary": "inherited_one_event_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "Your account was charged 17; total debited 19.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      },
+      "priorCaseId": "single-control-two-primary-en"
+    },
+    {
+      "id": "keep-single-control-debit-ar",
+      "language": "ar",
+      "boundary": "inherited_one_event_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "خُصم 17.250 من حسابك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "priorCaseId": "single-control-debit-ar"
+    },
+    {
+      "id": "keep-single-control-credit-ar",
+      "language": "ar",
+      "boundary": "inherited_one_event_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "incoming",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "priorCaseId": "single-control-credit-ar"
+    },
+    {
+      "id": "keep-single-control-explicit-principal-total",
+      "language": "en",
+      "boundary": "inherited_one_event_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "JOD 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "priorCaseId": "single-control-explicit-principal-total"
+    },
+    {
+      "id": "keep-support-bare-total-en",
+      "language": "en",
+      "boundary": "inherited_one_event_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "17 was debited from your account and fee 0.500 and total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "priorCaseId": "support-bare-total-en"
+    },
+    {
+      "id": "keep-support-explicit-total-en",
+      "language": "en",
+      "boundary": "inherited_one_event_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "17 was debited from your account and fee JOD 0.500 and total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "priorCaseId": "support-explicit-total-en"
+    },
+    {
+      "id": "keep-support-bare-primary-en",
+      "language": "en",
+      "boundary": "inherited_one_event_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "Purchase USD 10 and your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "priorCaseId": "support-bare-primary-en"
+    },
+    {
+      "id": "keep-two-bare-en",
+      "language": "en",
+      "boundary": "inherited_ambiguous_effect_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "17 was debited from your account and 5 was credited to your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "uncertain"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "two-bare-en:0:False"
+        }
+      ]
+    },
+    {
+      "id": "keep-two-equal-bare-en",
+      "language": "en",
+      "boundary": "inherited_ambiguous_effect_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "17 was debited from your account and 17 was credited to your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "uncertain"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "two-equal-bare-en:0:False"
+        }
+      ]
+    },
+    {
+      "id": "keep-bare-and-explicit-en",
+      "language": "en",
+      "boundary": "inherited_ambiguous_effect_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "17 was debited from your account and JOD 5 was credited to your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "uncertain"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-and-explicit-en:0:False"
+        }
+      ]
+    },
+    {
+      "id": "paired-english_shared_amount",
+      "language": "en",
+      "boundary": "linked_paired_transfer_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "JOD 7.333 has been debited from 8452*834 and has been credited to 1741*349 on 09/05/2001. Balance JOD 43.353"
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 7.333,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "pairedCaseId": "english_shared_amount",
+      "evidence": "Existing recognized paired_movement fixture/test expectation; explicit own-account overrides inherited unchanged."
+    },
+    {
+      "id": "paired-arabic_added_amount",
+      "language": "ar",
+      "boundary": "linked_paired_transfer_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "تم خصم مبلغ 7.333 دينار من حساب *1111 وتم إضافة المبلغ إلى حساب *2222. الرصيد 43.353 دينار"
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 7.333,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "pairedCaseId": "arabic_added_amount",
+      "evidence": "Existing recognized paired_movement fixture/test expectation; explicit own-account overrides inherited unchanged."
+    },
+    {
+      "id": "paired-arabic_pronoun",
+      "language": "ar",
+      "boundary": "linked_paired_transfer_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "تم خصم 7.333 دينار من الحساب *1111 وإضافته إلى الحساب *2222."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 7.333,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "pairedCaseId": "arabic_pronoun",
+      "evidence": "Existing recognized paired_movement fixture/test expectation; explicit own-account overrides inherited unchanged."
+    },
+    {
+      "id": "paired-explicit_own_text",
+      "language": "ar",
+      "boundary": "linked_paired_transfer_control",
+      "adjudication": "inherited_control",
+      "input": {
+        "text": "تم خصم مبلغ 7.333 دينار من حسابك *1111 وتم إضافته إلى حسابك *2222."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 7.333,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "pairedCaseId": "explicit_own_text",
+      "evidence": "Existing recognized paired_movement fixture/test expectation; explicit own-account overrides inherited unchanged."
+    }
+  ],
+  "staticDraftReview": {
+    "privateDraftSha256": "eafcfacd8451cebb725acde57f6baffa9f4b9581650fb854f7ec5173ad35b628",
+    "reason": "Before measurement, held equal-flow/equal-value omitted-currency compositions unscored; source default currency is not event evidence."
+  }
+}
