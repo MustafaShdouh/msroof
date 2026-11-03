@@ -1,0 +1,5390 @@
+{
+  "kind": "Exposed weak development conformance, not independent accuracy",
+  "tag": "core_money_r5a_uncertainty",
+  "cohorts": {
+    "authored74": {
+      "before": {
+        "cases": 74,
+        "allAssertedFieldsCorrect": 21,
+        "statusCheckedCases": 74,
+        "statusCorrect": 22,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 7,
+        "completedCases": 54,
+        "missedCompletion": 43,
+        "uncertainCases": 4,
+        "wrongCertainty": 2,
+        "endToEndEligible": 48,
+        "endToEndCorrect": 8,
+        "fields": {
+          "transactionStatus": {
+            "checked": 74,
+            "correct": 22
+          },
+          "amount": {
+            "checked": 70,
+            "correct": 58
+          },
+          "currency": {
+            "checked": 70,
+            "correct": 54
+          },
+          "currencyResolution": {
+            "checked": 70,
+            "correct": 54
+          },
+          "direction": {
+            "checked": 70,
+            "correct": 39
+          },
+          "transferRelationship": {
+            "checked": 70,
+            "correct": 49
+          },
+          "trackingDecision": {
+            "checked": 74,
+            "correct": 23
+          }
+        }
+      },
+      "after": {
+        "cases": 74,
+        "allAssertedFieldsCorrect": 23,
+        "statusCheckedCases": 74,
+        "statusCorrect": 24,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 7,
+        "completedCases": 54,
+        "missedCompletion": 43,
+        "uncertainCases": 4,
+        "wrongCertainty": 0,
+        "endToEndEligible": 48,
+        "endToEndCorrect": 8,
+        "fields": {
+          "transactionStatus": {
+            "checked": 74,
+            "correct": 24
+          },
+          "amount": {
+            "checked": 70,
+            "correct": 58
+          },
+          "currency": {
+            "checked": 70,
+            "correct": 54
+          },
+          "currencyResolution": {
+            "checked": 70,
+            "correct": 54
+          },
+          "direction": {
+            "checked": 70,
+            "correct": 39
+          },
+          "transferRelationship": {
+            "checked": 70,
+            "correct": 49
+          },
+          "trackingDecision": {
+            "checked": 74,
+            "correct": 25
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 37,
+            "allAssertedFieldsCorrect": 6,
+            "statusCheckedCases": 37,
+            "statusCorrect": 6,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 3,
+            "completedCases": 27,
+            "missedCompletion": 27,
+            "uncertainCases": 2,
+            "wrongCertainty": 1,
+            "endToEndEligible": 24,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 37,
+                "correct": 6
+              },
+              "amount": {
+                "checked": 35,
+                "correct": 30
+              },
+              "currency": {
+                "checked": 35,
+                "correct": 28
+              },
+              "currencyResolution": {
+                "checked": 35,
+                "correct": 28
+              },
+              "direction": {
+                "checked": 35,
+                "correct": 21
+              },
+              "transferRelationship": {
+                "checked": 35,
+                "correct": 25
+              },
+              "trackingDecision": {
+                "checked": 37,
+                "correct": 8
+              }
+            }
+          },
+          "after": {
+            "cases": 37,
+            "allAssertedFieldsCorrect": 7,
+            "statusCheckedCases": 37,
+            "statusCorrect": 7,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 3,
+            "completedCases": 27,
+            "missedCompletion": 27,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 24,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 37,
+                "correct": 7
+              },
+              "amount": {
+                "checked": 35,
+                "correct": 30
+              },
+              "currency": {
+                "checked": 35,
+                "correct": 28
+              },
+              "currencyResolution": {
+                "checked": 35,
+                "correct": 28
+              },
+              "direction": {
+                "checked": 35,
+                "correct": 21
+              },
+              "transferRelationship": {
+                "checked": 35,
+                "correct": 25
+              },
+              "trackingDecision": {
+                "checked": 37,
+                "correct": 9
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 37,
+            "allAssertedFieldsCorrect": 15,
+            "statusCheckedCases": 37,
+            "statusCorrect": 16,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 4,
+            "completedCases": 27,
+            "missedCompletion": 16,
+            "uncertainCases": 2,
+            "wrongCertainty": 1,
+            "endToEndEligible": 24,
+            "endToEndCorrect": 8,
+            "fields": {
+              "transactionStatus": {
+                "checked": 37,
+                "correct": 16
+              },
+              "amount": {
+                "checked": 35,
+                "correct": 28
+              },
+              "currency": {
+                "checked": 35,
+                "correct": 26
+              },
+              "currencyResolution": {
+                "checked": 35,
+                "correct": 26
+              },
+              "direction": {
+                "checked": 35,
+                "correct": 18
+              },
+              "transferRelationship": {
+                "checked": 35,
+                "correct": 24
+              },
+              "trackingDecision": {
+                "checked": 37,
+                "correct": 15
+              }
+            }
+          },
+          "after": {
+            "cases": 37,
+            "allAssertedFieldsCorrect": 16,
+            "statusCheckedCases": 37,
+            "statusCorrect": 17,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 4,
+            "completedCases": 27,
+            "missedCompletion": 16,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 24,
+            "endToEndCorrect": 8,
+            "fields": {
+              "transactionStatus": {
+                "checked": 37,
+                "correct": 17
+              },
+              "amount": {
+                "checked": 35,
+                "correct": 28
+              },
+              "currency": {
+                "checked": 35,
+                "correct": 26
+              },
+              "currencyResolution": {
+                "checked": 35,
+                "correct": 26
+              },
+              "direction": {
+                "checked": 35,
+                "correct": 18
+              },
+              "transferRelationship": {
+                "checked": 35,
+                "correct": 24
+              },
+              "trackingDecision": {
+                "checked": 37,
+                "correct": 16
+              }
+            }
+          }
+        }
+      }
+    },
+    "authoredProbe": {
+      "before": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 8,
+        "statusCheckedCases": 24,
+        "statusCorrect": 8,
+        "nonTransactionCases": 12,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 5,
+        "completedCases": 12,
+        "missedCompletion": 11,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 8
+          }
+        }
+      },
+      "after": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 8,
+        "statusCheckedCases": 24,
+        "statusCorrect": 8,
+        "nonTransactionCases": 12,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 5,
+        "completedCases": 12,
+        "missedCompletion": 11,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 8
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 3,
+            "statusCheckedCases": 12,
+            "statusCorrect": 3,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 3,
+            "completedCases": 6,
+            "missedCompletion": 6,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 3
+              }
+            }
+          },
+          "after": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 3,
+            "statusCheckedCases": 12,
+            "statusCorrect": 3,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 3,
+            "completedCases": 6,
+            "missedCompletion": 6,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 3
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 5,
+            "statusCheckedCases": 12,
+            "statusCorrect": 5,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 2,
+            "completedCases": 6,
+            "missedCompletion": 5,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 5
+              }
+            }
+          },
+          "after": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 5,
+            "statusCheckedCases": 12,
+            "statusCorrect": 5,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 2,
+            "completedCases": 6,
+            "missedCompletion": 5,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 5
+              }
+            }
+          }
+        }
+      }
+    },
+    "completion_frame_cases_v1": {
+      "before": {
+        "cases": 168,
+        "allAssertedFieldsCorrect": 168,
+        "statusCheckedCases": 168,
+        "statusCorrect": 168,
+        "nonTransactionCases": 72,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 72,
+        "missedCompletion": 0,
+        "uncertainCases": 24,
+        "wrongCertainty": 0,
+        "endToEndEligible": 72,
+        "endToEndCorrect": 72,
+        "fields": {
+          "transactionStatus": {
+            "checked": 168,
+            "correct": 168
+          },
+          "trackingDecision": {
+            "checked": 168,
+            "correct": 168
+          },
+          "amount": {
+            "checked": 144,
+            "correct": 144
+          },
+          "currency": {
+            "checked": 144,
+            "correct": 144
+          },
+          "direction": {
+            "checked": 144,
+            "correct": 144
+          }
+        }
+      },
+      "after": {
+        "cases": 168,
+        "allAssertedFieldsCorrect": 168,
+        "statusCheckedCases": 168,
+        "statusCorrect": 168,
+        "nonTransactionCases": 72,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 72,
+        "missedCompletion": 0,
+        "uncertainCases": 24,
+        "wrongCertainty": 0,
+        "endToEndEligible": 72,
+        "endToEndCorrect": 72,
+        "fields": {
+          "transactionStatus": {
+            "checked": 168,
+            "correct": 168
+          },
+          "trackingDecision": {
+            "checked": 168,
+            "correct": 168
+          },
+          "amount": {
+            "checked": 144,
+            "correct": 144
+          },
+          "currency": {
+            "checked": 144,
+            "correct": 144
+          },
+          "direction": {
+            "checked": 144,
+            "correct": 144
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 84,
+            "allAssertedFieldsCorrect": 84,
+            "statusCheckedCases": 84,
+            "statusCorrect": 84,
+            "nonTransactionCases": 36,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 36,
+            "missedCompletion": 0,
+            "uncertainCases": 12,
+            "wrongCertainty": 0,
+            "endToEndEligible": 36,
+            "endToEndCorrect": 36,
+            "fields": {
+              "transactionStatus": {
+                "checked": 84,
+                "correct": 84
+              },
+              "trackingDecision": {
+                "checked": 84,
+                "correct": 84
+              },
+              "amount": {
+                "checked": 72,
+                "correct": 72
+              },
+              "currency": {
+                "checked": 72,
+                "correct": 72
+              },
+              "direction": {
+                "checked": 72,
+                "correct": 72
+              }
+            }
+          },
+          "after": {
+            "cases": 84,
+            "allAssertedFieldsCorrect": 84,
+            "statusCheckedCases": 84,
+            "statusCorrect": 84,
+            "nonTransactionCases": 36,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 36,
+            "missedCompletion": 0,
+            "uncertainCases": 12,
+            "wrongCertainty": 0,
+            "endToEndEligible": 36,
+            "endToEndCorrect": 36,
+            "fields": {
+              "transactionStatus": {
+                "checked": 84,
+                "correct": 84
+              },
+              "trackingDecision": {
+                "checked": 84,
+                "correct": 84
+              },
+              "amount": {
+                "checked": 72,
+                "correct": 72
+              },
+              "currency": {
+                "checked": 72,
+                "correct": 72
+              },
+              "direction": {
+                "checked": 72,
+                "correct": 72
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 84,
+            "allAssertedFieldsCorrect": 84,
+            "statusCheckedCases": 84,
+            "statusCorrect": 84,
+            "nonTransactionCases": 36,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 36,
+            "missedCompletion": 0,
+            "uncertainCases": 12,
+            "wrongCertainty": 0,
+            "endToEndEligible": 36,
+            "endToEndCorrect": 36,
+            "fields": {
+              "transactionStatus": {
+                "checked": 84,
+                "correct": 84
+              },
+              "trackingDecision": {
+                "checked": 84,
+                "correct": 84
+              },
+              "amount": {
+                "checked": 72,
+                "correct": 72
+              },
+              "currency": {
+                "checked": 72,
+                "correct": 72
+              },
+              "direction": {
+                "checked": 72,
+                "correct": 72
+              }
+            }
+          },
+          "after": {
+            "cases": 84,
+            "allAssertedFieldsCorrect": 84,
+            "statusCheckedCases": 84,
+            "statusCorrect": 84,
+            "nonTransactionCases": 36,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 36,
+            "missedCompletion": 0,
+            "uncertainCases": 12,
+            "wrongCertainty": 0,
+            "endToEndEligible": 36,
+            "endToEndCorrect": 36,
+            "fields": {
+              "transactionStatus": {
+                "checked": 84,
+                "correct": 84
+              },
+              "trackingDecision": {
+                "checked": 84,
+                "correct": 84
+              },
+              "amount": {
+                "checked": 72,
+                "correct": 72
+              },
+              "currency": {
+                "checked": 72,
+                "correct": 72
+              },
+              "direction": {
+                "checked": 72,
+                "correct": 72
+              }
+            }
+          }
+        }
+      }
+    },
+    "completion_uncertainty_cases_v1": {
+      "before": {
+        "cases": 216,
+        "allAssertedFieldsCorrect": 150,
+        "statusCheckedCases": 216,
+        "statusCorrect": 150,
+        "nonTransactionCases": 96,
+        "falseIncludes": 6,
+        "falseCompleted": 6,
+        "unnecessaryReview": 6,
+        "completedCases": 24,
+        "missedCompletion": 0,
+        "uncertainCases": 96,
+        "wrongCertainty": 54,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 216,
+            "correct": 150
+          },
+          "trackingDecision": {
+            "checked": 216,
+            "correct": 150
+          }
+        }
+      },
+      "after": {
+        "cases": 216,
+        "allAssertedFieldsCorrect": 216,
+        "statusCheckedCases": 216,
+        "statusCorrect": 216,
+        "nonTransactionCases": 96,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 24,
+        "missedCompletion": 0,
+        "uncertainCases": 96,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 216,
+            "correct": 216
+          },
+          "trackingDecision": {
+            "checked": 216,
+            "correct": 216
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 108,
+            "allAssertedFieldsCorrect": 78,
+            "statusCheckedCases": 108,
+            "statusCorrect": 78,
+            "nonTransactionCases": 48,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 6,
+            "completedCases": 12,
+            "missedCompletion": 0,
+            "uncertainCases": 48,
+            "wrongCertainty": 24,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 108,
+                "correct": 78
+              },
+              "trackingDecision": {
+                "checked": 108,
+                "correct": 78
+              }
+            }
+          },
+          "after": {
+            "cases": 108,
+            "allAssertedFieldsCorrect": 108,
+            "statusCheckedCases": 108,
+            "statusCorrect": 108,
+            "nonTransactionCases": 48,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 12,
+            "missedCompletion": 0,
+            "uncertainCases": 48,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 108,
+                "correct": 108
+              },
+              "trackingDecision": {
+                "checked": 108,
+                "correct": 108
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 108,
+            "allAssertedFieldsCorrect": 72,
+            "statusCheckedCases": 108,
+            "statusCorrect": 72,
+            "nonTransactionCases": 48,
+            "falseIncludes": 6,
+            "falseCompleted": 6,
+            "unnecessaryReview": 0,
+            "completedCases": 12,
+            "missedCompletion": 0,
+            "uncertainCases": 48,
+            "wrongCertainty": 30,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 108,
+                "correct": 72
+              },
+              "trackingDecision": {
+                "checked": 108,
+                "correct": 72
+              }
+            }
+          },
+          "after": {
+            "cases": 108,
+            "allAssertedFieldsCorrect": 108,
+            "statusCheckedCases": 108,
+            "statusCorrect": 108,
+            "nonTransactionCases": 48,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 12,
+            "missedCompletion": 0,
+            "uncertainCases": 48,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 108,
+                "correct": 108
+              },
+              "trackingDecision": {
+                "checked": 108,
+                "correct": 108
+              }
+            }
+          }
+        }
+      }
+    },
+    "core52": {
+      "before": {
+        "cases": 52,
+        "allAssertedFieldsCorrect": 52,
+        "statusCheckedCases": 51,
+        "statusCorrect": 51,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 32,
+        "missedCompletion": 0,
+        "uncertainCases": 3,
+        "wrongCertainty": 0,
+        "endToEndEligible": 28,
+        "endToEndCorrect": 28,
+        "fields": {
+          "transactionStatus": {
+            "checked": 51,
+            "correct": 51
+          },
+          "trackingDecision": {
+            "checked": 52,
+            "correct": 52
+          },
+          "amount": {
+            "checked": 47,
+            "correct": 47
+          },
+          "currency": {
+            "checked": 44,
+            "correct": 44
+          },
+          "currencyResolution": {
+            "checked": 26,
+            "correct": 26
+          },
+          "direction": {
+            "checked": 46,
+            "correct": 46
+          },
+          "transferRelationship": {
+            "checked": 30,
+            "correct": 30
+          }
+        }
+      },
+      "after": {
+        "cases": 52,
+        "allAssertedFieldsCorrect": 52,
+        "statusCheckedCases": 51,
+        "statusCorrect": 51,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 32,
+        "missedCompletion": 0,
+        "uncertainCases": 3,
+        "wrongCertainty": 0,
+        "endToEndEligible": 28,
+        "endToEndCorrect": 28,
+        "fields": {
+          "transactionStatus": {
+            "checked": 51,
+            "correct": 51
+          },
+          "trackingDecision": {
+            "checked": 52,
+            "correct": 52
+          },
+          "amount": {
+            "checked": 47,
+            "correct": 47
+          },
+          "currency": {
+            "checked": 44,
+            "correct": 44
+          },
+          "currencyResolution": {
+            "checked": 26,
+            "correct": 26
+          },
+          "direction": {
+            "checked": 46,
+            "correct": 46
+          },
+          "transferRelationship": {
+            "checked": 30,
+            "correct": 30
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 19,
+            "allAssertedFieldsCorrect": 19,
+            "statusCheckedCases": 19,
+            "statusCorrect": 19,
+            "nonTransactionCases": 7,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 11,
+            "missedCompletion": 0,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 11,
+            "endToEndCorrect": 11,
+            "fields": {
+              "transactionStatus": {
+                "checked": 19,
+                "correct": 19
+              },
+              "trackingDecision": {
+                "checked": 19,
+                "correct": 19
+              },
+              "amount": {
+                "checked": 18,
+                "correct": 18
+              },
+              "currency": {
+                "checked": 18,
+                "correct": 18
+              },
+              "currencyResolution": {
+                "checked": 10,
+                "correct": 10
+              },
+              "direction": {
+                "checked": 18,
+                "correct": 18
+              },
+              "transferRelationship": {
+                "checked": 11,
+                "correct": 11
+              }
+            }
+          },
+          "after": {
+            "cases": 19,
+            "allAssertedFieldsCorrect": 19,
+            "statusCheckedCases": 19,
+            "statusCorrect": 19,
+            "nonTransactionCases": 7,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 11,
+            "missedCompletion": 0,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 11,
+            "endToEndCorrect": 11,
+            "fields": {
+              "transactionStatus": {
+                "checked": 19,
+                "correct": 19
+              },
+              "trackingDecision": {
+                "checked": 19,
+                "correct": 19
+              },
+              "amount": {
+                "checked": 18,
+                "correct": 18
+              },
+              "currency": {
+                "checked": 18,
+                "correct": 18
+              },
+              "currencyResolution": {
+                "checked": 10,
+                "correct": 10
+              },
+              "direction": {
+                "checked": 18,
+                "correct": 18
+              },
+              "transferRelationship": {
+                "checked": 11,
+                "correct": 11
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 32,
+            "allAssertedFieldsCorrect": 32,
+            "statusCheckedCases": 31,
+            "statusCorrect": 31,
+            "nonTransactionCases": 9,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 20,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 16,
+            "endToEndCorrect": 16,
+            "fields": {
+              "transactionStatus": {
+                "checked": 31,
+                "correct": 31
+              },
+              "trackingDecision": {
+                "checked": 32,
+                "correct": 32
+              },
+              "amount": {
+                "checked": 28,
+                "correct": 28
+              },
+              "currency": {
+                "checked": 25,
+                "correct": 25
+              },
+              "currencyResolution": {
+                "checked": 15,
+                "correct": 15
+              },
+              "direction": {
+                "checked": 27,
+                "correct": 27
+              },
+              "transferRelationship": {
+                "checked": 18,
+                "correct": 18
+              }
+            }
+          },
+          "after": {
+            "cases": 32,
+            "allAssertedFieldsCorrect": 32,
+            "statusCheckedCases": 31,
+            "statusCorrect": 31,
+            "nonTransactionCases": 9,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 20,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 16,
+            "endToEndCorrect": 16,
+            "fields": {
+              "transactionStatus": {
+                "checked": 31,
+                "correct": 31
+              },
+              "trackingDecision": {
+                "checked": 32,
+                "correct": 32
+              },
+              "amount": {
+                "checked": 28,
+                "correct": 28
+              },
+              "currency": {
+                "checked": 25,
+                "correct": 25
+              },
+              "currencyResolution": {
+                "checked": 15,
+                "correct": 15
+              },
+              "direction": {
+                "checked": 27,
+                "correct": 27
+              },
+              "transferRelationship": {
+                "checked": 18,
+                "correct": 18
+              }
+            }
+          }
+        },
+        "mixed": {
+          "before": {
+            "cases": 1,
+            "allAssertedFieldsCorrect": 1,
+            "statusCheckedCases": 1,
+            "statusCorrect": 1,
+            "nonTransactionCases": 0,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 1,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 1,
+            "endToEndCorrect": 1,
+            "fields": {
+              "transactionStatus": {
+                "checked": 1,
+                "correct": 1
+              },
+              "trackingDecision": {
+                "checked": 1,
+                "correct": 1
+              },
+              "amount": {
+                "checked": 1,
+                "correct": 1
+              },
+              "currency": {
+                "checked": 1,
+                "correct": 1
+              },
+              "currencyResolution": {
+                "checked": 1,
+                "correct": 1
+              },
+              "direction": {
+                "checked": 1,
+                "correct": 1
+              },
+              "transferRelationship": {
+                "checked": 1,
+                "correct": 1
+              }
+            }
+          },
+          "after": {
+            "cases": 1,
+            "allAssertedFieldsCorrect": 1,
+            "statusCheckedCases": 1,
+            "statusCorrect": 1,
+            "nonTransactionCases": 0,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 1,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 1,
+            "endToEndCorrect": 1,
+            "fields": {
+              "transactionStatus": {
+                "checked": 1,
+                "correct": 1
+              },
+              "trackingDecision": {
+                "checked": 1,
+                "correct": 1
+              },
+              "amount": {
+                "checked": 1,
+                "correct": 1
+              },
+              "currency": {
+                "checked": 1,
+                "correct": 1
+              },
+              "currencyResolution": {
+                "checked": 1,
+                "correct": 1
+              },
+              "direction": {
+                "checked": 1,
+                "correct": 1
+              },
+              "transferRelationship": {
+                "checked": 1,
+                "correct": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "exposedManual": {
+      "before": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 13,
+        "statusCheckedCases": 24,
+        "statusCorrect": 13,
+        "nonTransactionCases": 10,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 3,
+        "completedCases": 12,
+        "missedCompletion": 8,
+        "uncertainCases": 2,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 13
+          }
+        }
+      },
+      "after": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 14,
+        "statusCheckedCases": 24,
+        "statusCorrect": 14,
+        "nonTransactionCases": 10,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 2,
+        "completedCases": 12,
+        "missedCompletion": 8,
+        "uncertainCases": 2,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 14
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 3,
+            "statusCheckedCases": 12,
+            "statusCorrect": 3,
+            "nonTransactionCases": 5,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 3,
+            "completedCases": 6,
+            "missedCompletion": 6,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 3
+              }
+            }
+          },
+          "after": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 4,
+            "statusCheckedCases": 12,
+            "statusCorrect": 4,
+            "nonTransactionCases": 5,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 2,
+            "completedCases": 6,
+            "missedCompletion": 6,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 4
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 10,
+            "statusCheckedCases": 12,
+            "statusCorrect": 10,
+            "nonTransactionCases": 5,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 6,
+            "missedCompletion": 2,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 10
+              }
+            }
+          },
+          "after": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 10,
+            "statusCheckedCases": 12,
+            "statusCorrect": 10,
+            "nonTransactionCases": 5,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 6,
+            "missedCompletion": 2,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 10
+              }
+            }
+          }
+        }
+      }
+    },
+    "oldExposedValidation": {
+      "before": {
+        "cases": 18,
+        "allAssertedFieldsCorrect": 16,
+        "statusCheckedCases": 18,
+        "statusCorrect": 16,
+        "nonTransactionCases": 14,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 2,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 18,
+            "correct": 16
+          }
+        }
+      },
+      "after": {
+        "cases": 18,
+        "allAssertedFieldsCorrect": 16,
+        "statusCheckedCases": 18,
+        "statusCorrect": 16,
+        "nonTransactionCases": 14,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 2,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 18,
+            "correct": 16
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 10,
+            "allAssertedFieldsCorrect": 10,
+            "statusCheckedCases": 10,
+            "statusCorrect": 10,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 10,
+                "correct": 10
+              }
+            }
+          },
+          "after": {
+            "cases": 10,
+            "allAssertedFieldsCorrect": 10,
+            "statusCheckedCases": 10,
+            "statusCorrect": 10,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 10,
+                "correct": 10
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 8,
+            "allAssertedFieldsCorrect": 6,
+            "statusCheckedCases": 8,
+            "statusCorrect": 6,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 2,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 8,
+                "correct": 6
+              }
+            }
+          },
+          "after": {
+            "cases": 8,
+            "allAssertedFieldsCorrect": 6,
+            "statusCheckedCases": 8,
+            "statusCorrect": 6,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 2,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 8,
+                "correct": 6
+              }
+            }
+          }
+        }
+      }
+    },
+    "quoteControls": {
+      "before": {
+        "cases": 14,
+        "allAssertedFieldsCorrect": 14,
+        "statusCheckedCases": 14,
+        "statusCorrect": 14,
+        "nonTransactionCases": 6,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 4,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 14,
+            "correct": 14
+          }
+        }
+      },
+      "after": {
+        "cases": 14,
+        "allAssertedFieldsCorrect": 14,
+        "statusCheckedCases": 14,
+        "statusCorrect": 14,
+        "nonTransactionCases": 6,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 4,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 14,
+            "correct": 14
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 7,
+            "allAssertedFieldsCorrect": 7,
+            "statusCheckedCases": 7,
+            "statusCorrect": 7,
+            "nonTransactionCases": 3,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 7,
+                "correct": 7
+              }
+            }
+          },
+          "after": {
+            "cases": 7,
+            "allAssertedFieldsCorrect": 7,
+            "statusCheckedCases": 7,
+            "statusCorrect": 7,
+            "nonTransactionCases": 3,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 7,
+                "correct": 7
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 7,
+            "allAssertedFieldsCorrect": 7,
+            "statusCheckedCases": 7,
+            "statusCorrect": 7,
+            "nonTransactionCases": 3,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 7,
+                "correct": 7
+              }
+            }
+          },
+          "after": {
+            "cases": 7,
+            "allAssertedFieldsCorrect": 7,
+            "statusCheckedCases": 7,
+            "statusCorrect": 7,
+            "nonTransactionCases": 3,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 7,
+                "correct": 7
+              }
+            }
+          }
+        }
+      }
+    },
+    "scopeDevelopment": {
+      "before": {
+        "cases": 32,
+        "allAssertedFieldsCorrect": 11,
+        "statusCheckedCases": 32,
+        "statusCorrect": 11,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 9,
+        "completedCases": 8,
+        "missedCompletion": 6,
+        "uncertainCases": 8,
+        "wrongCertainty": 6,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 32,
+            "correct": 11
+          }
+        }
+      },
+      "after": {
+        "cases": 32,
+        "allAssertedFieldsCorrect": 17,
+        "statusCheckedCases": 32,
+        "statusCorrect": 17,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 9,
+        "completedCases": 8,
+        "missedCompletion": 6,
+        "uncertainCases": 8,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 32,
+            "correct": 17
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 16,
+            "allAssertedFieldsCorrect": 6,
+            "statusCheckedCases": 16,
+            "statusCorrect": 6,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 4,
+            "completedCases": 4,
+            "missedCompletion": 4,
+            "uncertainCases": 4,
+            "wrongCertainty": 2,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 16,
+                "correct": 6
+              }
+            }
+          },
+          "after": {
+            "cases": 16,
+            "allAssertedFieldsCorrect": 8,
+            "statusCheckedCases": 16,
+            "statusCorrect": 8,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 4,
+            "completedCases": 4,
+            "missedCompletion": 4,
+            "uncertainCases": 4,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 16,
+                "correct": 8
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 16,
+            "allAssertedFieldsCorrect": 5,
+            "statusCheckedCases": 16,
+            "statusCorrect": 5,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 5,
+            "completedCases": 4,
+            "missedCompletion": 2,
+            "uncertainCases": 4,
+            "wrongCertainty": 4,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 16,
+                "correct": 5
+              }
+            }
+          },
+          "after": {
+            "cases": 16,
+            "allAssertedFieldsCorrect": 9,
+            "statusCheckedCases": 16,
+            "statusCorrect": 9,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 5,
+            "completedCases": 4,
+            "missedCompletion": 2,
+            "uncertainCases": 4,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 16,
+                "correct": 9
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "changedDetailedResults": [
+    {
+      "cohort": "exposedManual",
+      "recordId": "purchase-otp-ar",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved"
+        ],
+        "amount": 16.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "otp_or_authorization"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-ar",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-en",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-ar",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-en",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-4-en",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "pending_or_requested"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-4-en",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-065",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 33.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-068",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 8.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-en:0:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-en:0:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-en:1:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-en:1:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-en:2:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-en:2:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-ar:0:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-ar:0:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-ar:1:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-ar:1:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-ar:2:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "closed-unknown-ar:2:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "processing-unknown-ar:0:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "processing-unknown-ar:0:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "processing-unknown-ar:1:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "processing-unknown-ar:1:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "processing-unknown-ar:2:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "processing-unknown-ar:2:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "hold-unknown-ar:0:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "hold-unknown-ar:0:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "hold-unknown-ar:1:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "hold-unknown-ar:1:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "hold-unknown-ar:2:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "hold-unknown-ar:2:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "cancel-unknown-en:0:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "cancel-unknown-en:0:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "cancel-unknown-en:1:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "cancel-unknown-en:1:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "cancel-unknown-en:2:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "cancel-unknown-en:2:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "execution-alternatives-en:0:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "pending_or_requested"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "execution-alternatives-en:0:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "pending_or_requested"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "execution-alternatives-en:1:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "pending_or_requested"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "execution-alternatives-en:1:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "pending_or_requested"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "execution-alternatives-en:2:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "pending_or_requested"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "execution-alternatives-en:2:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "pending_or_requested"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "context-unknown-en:0:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "context-unknown-en:0:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "context-unknown-en:1:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "context-unknown-en:1:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "context-unknown-en:2:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "context-unknown-en:2:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "question-unknown-en:0:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "question-unknown-en:0:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "question-unknown-en:1:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "question-unknown-en:1:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "question-unknown-en:2:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "question-unknown-en:2:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "reasonCodes": [
+          "completed_transaction"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "otp-unknown-ar:0:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "otp_or_authorization"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "otp-unknown-ar:0:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "otp_or_authorization"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "otp-unknown-ar:1:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "otp_or_authorization"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "otp-unknown-ar:1:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "otp_or_authorization"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "otp-unknown-ar:2:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "otp_or_authorization"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "otp-unknown-ar:2:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "otp_or_authorization"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-en:0:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-en:0:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-en:1:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-en:1:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-en:2:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-en:2:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-ar:0:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-ar:0:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-ar:1:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-ar:1:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-ar:2:False",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "completion_uncertainty_cases_v1",
+      "recordId": "points-cash-unknown-ar:2:True",
+      "before": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "promotion_or_administration"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "after": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": 17.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "afterMismatches": {}
+    }
+  ],
+  "expectedFieldRegressions": [],
+  "inputEntries": 622,
+  "fullDetailedParity": true,
+  "legacyResultsUnchanged": true,
+  "unchangedOwnershipRequests": 70,
+  "unchangedModelArtifacts": 23,
+  "training": false,
+  "reservedInferred": false,
+  "newResearchModelInference": false,
+  "artifacts": {
+    "tools/evaluation/core_boundary_check.py": "9863314a3353b5c7e95a94be69659b86c5bf32cbf00874cae86a3a35583da45b",
+    "src/python/detailed_assessment.py": "0eaf29bdc6908734557ac8a8485504a3fdb3299a065c935264c3c7830edfea3d",
+    "src/typescript/DetailedAssessment.ts": "baade12b94eaa78dfc53132bbdc5feb2aaef50d88c39429cc20fd0cd6c0e1cb3",
+    "config/contracts/transaction_evidence.json": "cf8e644e8add3b98d87923493b0b0f1459fd6acd7731b89fd2837ffcc78b1275",
+    "tools/browser/tester.html": "0a66cdc7e397bc53295fd8ca069573764cdaacfdefc022f0b6309085dc4c23bc",
+    "tests/fixtures/completion_frame_cases_v1.json": "08b1e34a63bd98ccc798b861c1edbb0405025f360df7f641110d2d7c7bd9cf29",
+    "tests/fixtures/completion_uncertainty_cases_v1.json": "86de006a92e856bdf39d274dd0ca31a5689cece0ec4875c07bb27a01c6426338"
+  },
+  "limits": [
+    "Variant counts are not independent examples.",
+    "No mobile performance or release-readiness claim."
+  ],
+  "privateSnapshotSha256": {
+    "before": "89b914b51d1df2e2bef99ed0a9e3bd51d4aee5cff582006939e9a640dddb7565",
+    "after": "c04640d95d0d998019f41cf4ab3e912cb512b7ae46ee5205ce8c300847d1dfaa"
+  }
+}

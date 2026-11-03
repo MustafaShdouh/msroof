@@ -1,0 +1,78 @@
+{
+  "version": "1.0.1",
+  "scope": "Assistant weak source-text review only; not human gold, data admission or independent accuracy",
+  "reviewedRecords": 80,
+  "weakFieldAnnotations": 791,
+  "fieldCoverage": {
+    "transactionStatus": 80,
+    "trackingDecision": 80,
+    "amount": 79,
+    "currency": 79,
+    "currencyResolution": 79,
+    "direction": 79,
+    "transferRelationship": 79,
+    "merchantOrCounterparty": 78,
+    "expenseCategory": 79,
+    "categoryStatus": 79
+  },
+  "statusCounts": {
+    "completed": 24,
+    "non_transaction": 55,
+    "uncertain": 1
+  },
+  "trackingCounts": {
+    "review": 14,
+    "include": 11,
+    "exclude": 55
+  },
+  "unblockedReviewedRecords": 67,
+  "blockedReviewedRecords": 13,
+  "unblockedStatusCounts": {
+    "completed": 17,
+    "non_transaction": 49,
+    "uncertain": 1
+  },
+  "purposeAssignments": {
+    "Cash Withdrawals": 1
+  },
+  "unannotatedFields": {
+    "synthetic-v1-0018": [
+      "merchantOrCounterparty"
+    ],
+    "synthetic-v1-1925": [
+      "amount",
+      "currency",
+      "currencyResolution",
+      "direction",
+      "transferRelationship",
+      "merchantOrCounterparty",
+      "expenseCategory",
+      "categoryStatus"
+    ]
+  },
+  "trainingEligibleRecords": 0,
+  "independentEvaluationEligibleRecords": 0,
+  "assistantWeakAnnotations": true,
+  "humanGold": false,
+  "studentRuntimePredictionsUsed": false,
+  "merchantFinalInferencePerformed": false,
+  "teacherPredictionsTreatedAsGold": false,
+  "modelFitted": false,
+  "descendantAnnotationsPropagated": false,
+  "limits": [
+    "The named source account in queue7 has an unresolved party role; party remains unannotated.",
+    "Queue44 is a truncated prefix/date/balance fragment: reviewed completion uncertainty, other fields unannotated.",
+    "Transfer ownership is unknown without explicit facts; no own/external labels inferred from masks/names/phones.",
+    "Named merchants/billers alone do not establish unique purpose; only explicit ATM withdrawal is assigned in this batch."
+  ],
+  "inputSha256": {
+    "data/annotations/sms_semantics_v1/drafts.jsonl": "b847772c7cff8336d6059b583195f79f64c40c1b4926751084bb46623f6365fe",
+    "data/annotations/sms_semantics_v1/review_queue.jsonl": "6f8f6260b87a948cd3a76fda678f768bbcde6ce130ed8a329125d239ba963db0",
+    "data/annotations/sms_semantics_v1/manifest.json": "fad819643ab0e629ef1e09675073e72699269795ff5f76214b723b0fc5b01d99",
+    "data/reports/sms_semantics_preparation_v1.json": "2c3fdd7ecbe81356045582c722cd7cef63fd014b188aa36f04444f22635e13a7",
+    "data/annotations/sms_semantics_v1/text_review_decisions_v1.json": "0b837ce16b53c1c21518ede2eaf71675acfba5dc3c71a707d8bcfe8795be79d7",
+    "training/corpus/review_semantics.py": "85ed12b2682f22a42ed9dba2cc741863c5d99665a3f3445c085497ebe37e2ff7",
+    "tests/python/test_sms_semantics_review.py": "7e881a79f9c01e50e54bf7241a15883763c15f97559d71d041474880ce8d6869"
+  },
+  "artifactSha256": "62a3bf3ea2a811064a246069b9d15aede268c5e76c628e64ee6ef7767edc2e3f"
+}

@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "scope": "Training coverage inventory plus assistant-authored weak development examples; no fitting, admission or independent evaluation",
+  "batchId": "authored_sms_v1",
+  "recordCount": 74,
+  "authoringGroups": 37,
+  "origin": "assistant_authored_training_only",
+  "fold": "proposed_training",
+  "languages": ["ar", "en"],
+  "eventTypes": ["bank_transfer", "cash_withdrawal", "cash_deposit", "card_purchase", "merchant_payment", "bill_payment", "refund", "cashback", "fee", "installment", "salary_credit", "own_account_transfer", "ambiguous_transfer", "otp", "declined_or_failed", "balance_only", "administration", "loyalty", "promotion", "personal_conversation", "pending_or_requested", "settlement_uncertain", "uncertain_fragment"],
+  "semanticsSource": "config/contracts/sms_semantics_annotations.json",
+  "grouping": "Arabic/English counterparts share an authoring group; never split translations across folds or count them as independent scenarios. Existing frozen source-expression IDs are not reused.",
+  "provenance": "Authored by the same assistant that supplied weak labels. These are not received bank messages, verified bank formats, human gold or independent examples. The earlier exposed validation failure informed broad coverage priorities. No validation text is used as an authoring template; overlap checks cannot prove semantic independence.",
+  "overlapRule": "Check normalized full text and number-masked feature text against all old source rows and known frozen/control bodies, protected merchant aliases and related-brand names. Block both language counterparts if either matches; do not erase or reinterpret reservations.",
+  "admissionRule": "trainingEligible=false and independentEvaluationEligible=false for every record; a future approved research cohort may select unblocked records without changing this original evidence",
+  "fitRule": "No model fitting, student inference, active-model change, promotion or final-merchant inference in this preparation milestone"
+}

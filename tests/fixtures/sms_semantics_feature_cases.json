@@ -1,0 +1,9 @@
+{
+  "cases": [
+    {"text": "JO\\nتَمَّ سحب ١٢٫٥ JOD", "normalized": "تم سحب num jod", "words": ["w|jod", "w|num", "w|تم", "w|سحب"]},
+    {"text": "IF\nNO money ۱۲٬۳۴۵.۶\ufeffNOW", "normalized": "if no money num now", "words": ["w|if", "w|money", "w|no", "w|now", "w|num"]},
+    {"text": "constructor __proto__ constructor", "normalized": "constructor __proto__ constructor", "words": ["w|__proto__", "w|constructor"]},
+    {"text": "Straße 😀 سامي", "normalized": "straße 😀 سامي", "words": ["w|straße", "w|سامي"]},
+    {"text": "", "normalized": "", "words": []}
+  ]
+}

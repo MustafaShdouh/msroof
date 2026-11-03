@@ -1,0 +1,4658 @@
+{
+  "runId": "sms_completion_encoder_v1_failure_analysis",
+  "fitCalls": 0,
+  "newInference": false,
+  "sourceSha256": {
+    "data\\reports\\transactions\\sms_completion_encoder_v1.json": "6b6233a56430224f6983a7ea5f64bee2f6f251baee26021c36b0932f77f60e45",
+    "data\\models\\sms_completion_encoder_v1_candidate.json": "8080e66ef95ff87d8f8d5d461b7dd825c7fc7467ed397c4ecf92d11896700889",
+    "tools\\evaluation\\analyze_sms_completion_encoder.py": "2ee0f8413855f136f81f396b05f3859e6ebdf84ba04caf764f2b0d85cd3c84f7"
+  },
+  "caveats": "All diagnostics exposed/weak. Cosine neighbours are similarities, not causal attribution or confidence. Training resubstitution is not accuracy. No threshold search.",
+  "trainingErrors": [
+    {
+      "recordId": "synthetic-v1-0600",
+      "group": "literal-L236-C15",
+      "target": "completed",
+      "score": -2.410392368728089,
+      "text": "JO\nتم قيد دفعة كليك بمبلغ 95.639JOD إلى 0386*319 من حساب EENOLL YGVD LZ-TNKMNR الرصيد 376.740JOD",
+      "weight": 0.03333333333333333
+    },
+    {
+      "recordId": "synthetic-v1-1192",
+      "group": "literal-L236-C15",
+      "target": "completed",
+      "score": -0.264263345165979,
+      "text": "JO\nتم قيد دفعة كليك بمبلغ 35.455JOD إلى 2194 من حساب ILMZ EDBUFW XW-VOATYB الرصيد 19.913JOD",
+      "weight": 0.03333333333333333
+    },
+    {
+      "recordId": "synthetic-v1-1330",
+      "group": "literal-L236-C15",
+      "target": "completed",
+      "score": -0.05770121450878834,
+      "text": "JO\nتم قيد دفعة كليك بمبلغ 48.810JOD إلى xxxx239 من حساب XWGQ GUXFFKR FHOAPE DONCD الرصيد 633.476JOD",
+      "weight": 0.03333333333333333
+    },
+    {
+      "recordId": "authored-sms-v1-035",
+      "group": "authored-v1-cashback-b",
+      "target": "completed",
+      "score": -0.4371030212589936,
+      "text": "زاد رصيد محفظتك بمكافأة نقدية مقيدة مقدارها ۳٫۸۰ دينار؛ ليست نقاطاً.",
+      "weight": 0.5
+    },
+    {
+      "recordId": "transfer-refusal-completed-ar",
+      "group": "context:transfer-refusal",
+      "target": "completed",
+      "score": -0.24786979939210027,
+      "text": "تم تنفيذ حوالة ٦٧ دينار وخصمها من حسابك. لا يوجد رفض لهذه الحركة.",
+      "weight": 0.25
+    },
+    {
+      "recordId": "transfer-refusal-non_transaction-en",
+      "group": "context:transfer-refusal",
+      "target": "non_transaction",
+      "score": 0.7637022741360451,
+      "text": "The JOD 67 transfer was declined and nothing was debited from your account. No transaction was executed.",
+      "weight": 0.25
+    },
+    {
+      "recordId": "otp-versus-settlement-completed-ar",
+      "group": "context:otp-versus-settlement",
+      "target": "completed",
+      "score": -0.4708596500857527,
+      "text": "اكتملت عملية الشراء بقيمة ١٨٫٣٠ دينار وقيد الخصم على البطاقة. لا يلزم رمز تأكيد آخر.",
+      "weight": 0.25
+    }
+  ],
+  "trainingErrorCounts": {
+    "completed": 6,
+    "non_transaction": 1
+  },
+  "trainingErrorWeight": 1.35,
+  "cohorts": {
+    "oldExposedValidation": [
+      {
+        "recordId": "synthetic-v1-0053",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -0.9498864397144468,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "كم رصيدك هسا في المحفظة؟",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-023",
+              "group": "authored-v1-transfer-in-b",
+              "text": "اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك ۱۲ دينار.",
+              "cosine": 0.7393861712562352,
+              "score": 1.901647232065977
+            },
+            {
+              "recordId": "authored-sms-v1-073",
+              "group": "authored-v1-missing-amount",
+              "text": "اكتمل سداد فاتورتك وسُجل خصمها على المحفظة. افتح كشف الحركات لمعرفة القيمة.",
+              "cosine": 0.7336559732490493,
+              "score": 0.9581154183672982
+            },
+            {
+              "recordId": "synthetic-v1-0386",
+              "group": "literal-L433-C15",
+              "text": "JO\nتم إيداع مبلغ 46.25 JOD نقداً في محفظة زين كاش الخاصة بك عبر صراف آلي. رصيدك الجديد 27.85 JOD.",
+              "cosine": 0.72920720820145,
+              "score": 1.918087763696371
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0088",
+              "group": "literal-L744-C8",
+              "text": "شو رقم محفظتك في اورنج موني؟",
+              "cosine": 0.7788282406622555,
+              "score": -3.281299363154337
+            },
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.7525179323157447,
+              "score": -0.09117214368115643
+            },
+            {
+              "recordId": "authored-sms-v1-057",
+              "group": "authored-v1-balance",
+              "text": "الرصيد المتاح في محفظتك الآن ٢٠٠ JOD. هذا عرض للرصيد الحالي.",
+              "cosine": 0.6992551930994872,
+              "score": -0.5970071147153756
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-0140",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -2.5808032548936013,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "JO\nرمز التحقق لمرة واحدة (OTP) لتسجيل الدخول إلى تطبيق إسكان موبايل هو: 671107. لا تشارك هذا الرمز مطلقاً.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-1379",
+              "group": "literal-L387-C15",
+              "text": "JO\nتم تحويل مبلغ 6.57 JOD بنجاح إلى 0797279506 (STHFM PMQCATL XPYIUA) عبر كليك. رصيدك الحالي هو 696.29 JOD. الرقم المرجعي: 3418959.",
+              "cosine": 0.503942101014827,
+              "score": 1.519574714094517
+            },
+            {
+              "recordId": "synthetic-v1-0572",
+              "group": "literal-L320-C15",
+              "text": "JO\nتم تحويل مبلغ 71.319 JOD بنجاح إلى محفظة 0773903866 (NYPNA ISIRH CCTXCNU OUIYIMAT) عبر كليك. رصيدك الحالي هو 118.578 JOD. رقم الحركة: 9177608.",
+              "cosine": 0.4758835485599633,
+              "score": 1.3593269498171012
+            },
+            {
+              "recordId": "synthetic-v1-1466",
+              "group": "literal-L135-C15",
+              "text": "JO\nJOD728.117 has been credited to 6583 from WQILA DBMVTTD METNXX as CliQ transfer Balance 101.692JOD",
+              "cosine": 0.4752476886249223,
+              "score": 1.699567506586071
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0212",
+              "group": "literal-L601-C12",
+              "text": "JO\nYour verification code is 659740 to log in to mobile banking. Please do not share this code with anyone.",
+              "cosine": 0.7121177094012365,
+              "score": -4.1185622127542345
+            },
+            {
+              "recordId": "synthetic-v1-0077",
+              "group": "literal-L603-C12",
+              "text": "JO\nرمز التحقق لمرة واحدة في زين كاش هو: 228393 لإتمام عملية تسجيل الدخول. لا تشارك هذا الرمز مع أي كان.",
+              "cosine": 0.6134902289396875,
+              "score": -2.1090536928994266
+            },
+            {
+              "recordId": "authored-sms-v1-050",
+              "group": "authored-v1-otp",
+              "text": "Your login verification code is 381902. Use it to sign in; this notice contains no financial movement.",
+              "cosine": 0.5903592066134139,
+              "score": -4.257127378790548
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-0038",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -4.8175902054421025,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "تقدم بطلب الحصول على البطاقة الائتمانية بدون رسوم سنوية للسنة الأولى واستمتع بعروض حصرية.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "otp-versus-settlement-completed-ar",
+              "group": "context:otp-versus-settlement",
+              "text": "اكتملت عملية الشراء بقيمة ١٨٫٣٠ دينار وقيد الخصم على البطاقة. لا يلزم رمز تأكيد آخر.",
+              "cosine": 0.49445225135847354,
+              "score": -0.4708596500857527
+            },
+            {
+              "recordId": "authored-sms-v1-007",
+              "group": "authored-v1-purchase-b",
+              "text": "قُيد خصم الشراء النهائي على بطاقتك بقيمة ۶٫۴۰ USD.",
+              "cosine": 0.4474777313315219,
+              "score": 0.6285668282896402
+            },
+            {
+              "recordId": "authored-sms-v1-041",
+              "group": "authored-v1-installment-a",
+              "text": "سُدد قسط قرضك الشهري وخصم مبلغ ١٤٥ JOD من حسابك.",
+              "cosine": 0.43715533533147416,
+              "score": 0.38000922582326807
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "authored-sms-v1-062",
+              "group": "authored-v1-admin",
+              "text": "Your card PIN was changed successfully. Open card settings for details.",
+              "cosine": 0.5093737459906652,
+              "score": -2.331696043326804
+            },
+            {
+              "recordId": "synthetic-v1-0405",
+              "group": "literal-L685-C12",
+              "text": "عميلنا العزيز، تم تفعيل بطاقتك الائتمانية بنجاح، نتمنى لك تجربة مصرفية مميزة.",
+              "cosine": 0.5066177787885823,
+              "score": -2.285442475438427
+            },
+            {
+              "recordId": "synthetic-v1-0014",
+              "group": "literal-L711-C12",
+              "text": "عرض خاص: قرض شخصي فوري لغاية 38843 د.أ بأقل فائدة وأطول فترة سداد، اتصل بنا اليوم أو قدم أونلاين.",
+              "cosine": 0.4815431431001238,
+              "score": -2.4002869658528745
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-1554",
+        "language": "en",
+        "target": "completed",
+        "score": 2.277581652145259,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "JO\nOutward CliQ of JOD 8.396 debited from Reflect account 7019 to ECJM LGLTEQ BCHHKF. Available balance JOD 79.515.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-0319",
+              "group": "literal-L302-C15",
+              "text": "JO\nInward CliQ of JOD 73.387 credited to Reflect account 5127*940 from DVDDH BMZFBW LG-IMUNE. Available balance JOD 844.036.",
+              "cosine": 0.8943571473667647,
+              "score": 1.8412751437727963
+            },
+            {
+              "recordId": "synthetic-v1-1340",
+              "group": "literal-L531-C15",
+              "text": "JO\nOutward CliQ of JOD 19.433 debited from Acc. 8658*027 on 28/05/2001 to FPZK XGOOB BDKJWJMR. Available balance JOD 436.317.",
+              "cosine": 0.8876018991301708,
+              "score": 2.559867162784573
+            },
+            {
+              "recordId": "synthetic-v1-1434",
+              "group": "literal-L186-C15",
+              "text": "Outward Cliq of JOD 14.248 debited from Acc. No *9522 on 08/05/2001 12:16 to CSPSWQ KMBD IV-DDMWNW. Available balance JOD 584.861",
+              "cosine": 0.8530500258357199,
+              "score": 2.118985526540095
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0040",
+              "group": "literal-L672-C12",
+              "text": "JO\nBalance JOD 362.193 on account 3476.",
+              "cosine": 0.7213464138252268,
+              "score": -0.7197016971198356
+            },
+            {
+              "recordId": "synthetic-v1-0475",
+              "group": "literal-L671-C12",
+              "text": "JO\nYour available balance on account 5845 is JOD 699.014 on 21/11 21:44.",
+              "cosine": 0.7000156595952198,
+              "score": -1.477516399431498
+            },
+            {
+              "recordId": "synthetic-v1-0132",
+              "group": "literal-L676-C12",
+              "text": "JO\nBalance inquiry: Account 0818*595 available balance JOD 254.978.",
+              "cosine": 0.6860896828732987,
+              "score": -2.7688723378086935
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-0106",
+        "language": "en",
+        "target": "non_transaction",
+        "score": 0.2757530689728911,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "I transferred you the money for yesterday's dinner",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-019",
+              "group": "authored-v1-transfer-out-b",
+              "text": "أُرسلت دفعة كليك لشخص آخر وقُيد خصم ۷٫۵۰ دينار على محفظتك.",
+              "cosine": 0.6998115865073353,
+              "score": 1.3880210845345324
+            },
+            {
+              "recordId": "authored-sms-v1-029",
+              "group": "authored-v1-refund-a",
+              "text": "استُردت قيمة شراء سابق، وأُعيد ١٥٫٨٠ JOD إلى رصيد بطاقتك.",
+              "cosine": 0.6736951039497964,
+              "score": 1.6752049329019092
+            },
+            {
+              "recordId": "authored-sms-v1-023",
+              "group": "authored-v1-transfer-in-b",
+              "text": "اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك ۱۲ دينار.",
+              "cosine": 0.645391338060943,
+              "score": 1.901647232065977
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "authored-sms-v1-056",
+              "group": "authored-v1-chat",
+              "text": "I paid your 11 dinars for dinner; message me when you check.",
+              "cosine": 0.6523181875040922,
+              "score": -1.5662586673872805
+            },
+            {
+              "recordId": "synthetic-v1-0244",
+              "group": "literal-L743-C8",
+              "text": "did you receive the payment on Zain cash?",
+              "cosine": 0.6279279868958658,
+              "score": -1.3919235226949414
+            },
+            {
+              "recordId": "synthetic-v1-0068",
+              "group": "literal-L739-C8",
+              "text": "دفعت الحساب للمطعم ولا ادفع انا؟",
+              "cosine": 0.6249810200996162,
+              "score": -3.604786103761366
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-1398",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -5.1509923677269365,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "JO\nيرجى العلم بأن خدمة كليك ستكون غير متاحة مؤقتاً يوم الجمعة من 22:54 إلى 12:33 صباحاً لغايات الصيانة الدورية.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-0728",
+              "group": "literal-L152-C15",
+              "text": "JO\n56JOD has been debited from your account 6061*772 as an ATM Withdrawal from Aqaba Branch on 02/08 04:05. Available balance 189.400.\nREF 729140485288",
+              "cosine": 0.4745508493070716,
+              "score": 1.420672357144163
+            },
+            {
+              "recordId": "authored-sms-v1-071",
+              "group": "authored-v1-unknown",
+              "text": "أُنجزت حوالة ٣٦ JOD؛ الحساب المصدر *2104 والحساب المستفيد *7601، رقم المرجع 98351.",
+              "cosine": 0.45518266987231515,
+              "score": 1.037424270406995
+            },
+            {
+              "recordId": "synthetic-v1-1389",
+              "group": "literal-L387-C15",
+              "text": "JO\nتم تحويل مبلغ 55.77 JOD بنجاح إلى 0790160486 (MSNLE IFCIUANF RS-YEU) عبر كليك. رصيدك الحالي هو 775.14 JOD. الرقم المرجعي: 6943587.",
+              "cosine": 0.40685682300551024,
+              "score": 1.737309601192113
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0373",
+              "group": "literal-L678-C12",
+              "text": "يرجى العلم بأن خدمة كليك ستتوقف مؤقتاً لغايات تحديث الأنظمة يوم الجمعة من الساعة 1:32 وحتى 17:35 بعد منتصف الليل, مستعدون لخدمتكم.",
+              "cosine": 0.8769919532970503,
+              "score": -4.233239086552255
+            },
+            {
+              "recordId": "synthetic-v1-0348",
+              "group": "literal-L680-C12",
+              "text": "JO\nReflect services including CliQ transfers will undergo scheduled system maintenance on Friday from 11:32 AM to 03:07 AM.",
+              "cosine": 0.6148350494051114,
+              "score": -2.077431692350879
+            },
+            {
+              "recordId": "synthetic-v1-0451",
+              "group": "literal-L647-C12",
+              "text": "JO\nحركة مرفوضة على بطاقتك المنتهية ب 9332*066 بقيمة JOD 27.090 بسبب عدم كفاية الرصيد, للمزيد اتصل على 063523605",
+              "cosine": 0.5300403447684023,
+              "score": -1.768018010293864
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-0750",
+        "language": "ar",
+        "target": "completed",
+        "score": 1.5716948370870274,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "JO\nتم سحب مبلغ 27.75 JOD نقداً من صراف آلي بنك القاهرة عمان بواسطة محفظتك. رصيدك الحالي 93.02 JOD.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-0386",
+              "group": "literal-L433-C15",
+              "text": "JO\nتم إيداع مبلغ 46.25 JOD نقداً في محفظة زين كاش الخاصة بك عبر صراف آلي. رصيدك الجديد 27.85 JOD.",
+              "cosine": 0.8232458092790672,
+              "score": 1.918087763696371
+            },
+            {
+              "recordId": "synthetic-v1-1358",
+              "group": "literal-L369-C15",
+              "text": "JO\nتم دفع فاتورة أمانة عمان الكبرى بنجاح بقيمة 5.756 JOD عبر إي فواتيركم من محفظتك. الرصيد المتاح 477.330 JOD. رقم الفاتورة: 3971057.",
+              "cosine": 0.7622144111857271,
+              "score": 0.6690039165290371
+            },
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.7572999216331937,
+              "score": 0.4273995816324462
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.7007453220501183,
+              "score": -0.09117214368115643
+            },
+            {
+              "recordId": "synthetic-v1-0808",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 793.006 دينار على حسابك *5824.",
+              "cosine": 0.697150481102327,
+              "score": -0.36864610427244565
+            },
+            {
+              "recordId": "synthetic-v1-0244",
+              "group": "literal-L743-C8",
+              "text": "did you receive the payment on Zain cash?",
+              "cosine": 0.6805730521907503,
+              "score": -1.3919235226949414
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-1107",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -4.0653534090028955,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "JO\nTo continue with your account login process, enter the code 654488. Please ensure not to share your activation code with anyone.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-070",
+              "group": "authored-v1-own",
+              "text": "Internal movement completed: JOD 77 from your current account to your own savings account.",
+              "cosine": 0.5456658806795216,
+              "score": 2.324921830425498
+            },
+            {
+              "recordId": "synthetic-v1-0946",
+              "group": "literal-L152-C15",
+              "text": "JO\n62JOD has been debited from your account xxxx423 as an ATM Withdrawal from Aqaba Branch on 02/03 06:27. Available balance 685.228.\nREF 197788266161",
+              "cosine": 0.5354376789256395,
+              "score": 1.3526306744633638
+            },
+            {
+              "recordId": "authored-sms-v1-072",
+              "group": "authored-v1-unknown",
+              "text": "Transfer completed for JOD 36. Source account *2104, destination account *7601, reference 98351.",
+              "cosine": 0.4635909086319376,
+              "score": 1.3311606921430315
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "authored-sms-v1-050",
+              "group": "authored-v1-otp",
+              "text": "Your login verification code is 381902. Use it to sign in; this notice contains no financial movement.",
+              "cosine": 0.6609068792898936,
+              "score": -4.257127378790548
+            },
+            {
+              "recordId": "synthetic-v1-0212",
+              "group": "literal-L601-C12",
+              "text": "JO\nYour verification code is 659740 to log in to mobile banking. Please do not share this code with anyone.",
+              "cosine": 0.6040019536362198,
+              "score": -4.1185622127542345
+            },
+            {
+              "recordId": "synthetic-v1-0025",
+              "group": "literal-L745-C8",
+              "text": "check your account, I just sent 39 JOD",
+              "cosine": 0.547690430554229,
+              "score": -2.6501162519538597
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-1665",
+        "language": "en",
+        "target": "completed",
+        "score": 0.22025818164840022,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "JO\nJOD 68.821 has been credited to xxxx572 on 01/04/2001 19:22 as an Online ATM Deposit. Available balance 322.981.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-1811",
+              "group": "literal-L548-C15",
+              "text": "JO\nInward CliQ of JOD 82.148 credited to Acc. 8860*166 on 02/04/2001 21:27 from MNSVY RGAF CS-DY'XC. Available balance JOD 286.166.",
+              "cosine": 0.843534260581865,
+              "score": 1.6433866835380362
+            },
+            {
+              "recordId": "synthetic-v1-0632",
+              "group": "literal-L135-C15",
+              "text": "JO\nJOD12.180 has been credited to 7214*691 from DTK TEXJYCSK YM-AOWTTB as CliQ transfer Balance 30.916JOD",
+              "cosine": 0.8303358570457506,
+              "score": 1.4017869573818331
+            },
+            {
+              "recordId": "synthetic-v1-1802",
+              "group": "literal-L302-C15",
+              "text": "JO\nInward CliQ of JOD 58.323 credited to Reflect account 2783*180 from FTIZK CCESJ XC-LTMBNU. Available balance JOD 105.827.",
+              "cosine": 0.8044287605521951,
+              "score": 1.8211167225605112
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0475",
+              "group": "literal-L671-C12",
+              "text": "JO\nYour available balance on account 5845 is JOD 699.014 on 21/11 21:44.",
+              "cosine": 0.8288293213980197,
+              "score": -1.477516399431498
+            },
+            {
+              "recordId": "synthetic-v1-0040",
+              "group": "literal-L672-C12",
+              "text": "JO\nBalance JOD 362.193 on account 3476.",
+              "cosine": 0.7184048789934359,
+              "score": -0.7197016971198356
+            },
+            {
+              "recordId": "synthetic-v1-0020",
+              "group": "literal-L626-C12",
+              "text": "JO\nYour OTP is 319787 for transfer JOD 10.558 Please dont share.\n59412261",
+              "cosine": 0.6834224766257179,
+              "score": -2.301520975340506
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-1548",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -1.7520576955554492,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "JO\n353545 هو رمز المرور لمرة واحدة (OTP) لتسجيل الدخول، يرجى عدم مشاركته مع أي شخص، صالح لمدة 8 دقائق.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-1161",
+              "group": "literal-L320-C15",
+              "text": "JO\nتم تحويل مبلغ 45.992 JOD بنجاح إلى محفظة 0778123267 (TDAY TAPYD CDIVUWTV) عبر كليك. رصيدك الحالي هو 667.405 JOD. رقم الحركة: 6765024.",
+              "cosine": 0.532390261869873,
+              "score": 0.6403931463086014
+            },
+            {
+              "recordId": "synthetic-v1-0897",
+              "group": "literal-L387-C15",
+              "text": "JO\nتم تحويل مبلغ 95.00 JOD بنجاح إلى 0792172331 (VSGXEH ORDN IX-WAPJVP) عبر كليك. رصيدك الحالي هو 96.39 JOD. الرقم المرجعي: 1797072.",
+              "cosine": 0.5204676084992255,
+              "score": 1.5431311653954607
+            },
+            {
+              "recordId": "synthetic-v1-0177",
+              "group": "literal-L481-C15",
+              "text": "JO\nتم تحويل مبلغ 52.044 JOD بنجاح إلى محفظة 0787111842 (IXVFE CLMG EV-TP'KO) عبر كليك. رصيدك الحالي هو 96.061 JOD. رقم المرجع: 9995281.",
+              "cosine": 0.4930967974304314,
+              "score": 1.5040594587732006
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0020",
+              "group": "literal-L626-C12",
+              "text": "JO\nYour OTP is 319787 for transfer JOD 10.558 Please dont share.\n59412261",
+              "cosine": 0.6323174214164888,
+              "score": -2.301520975340506
+            },
+            {
+              "recordId": "synthetic-v1-0212",
+              "group": "literal-L601-C12",
+              "text": "JO\nYour verification code is 659740 to log in to mobile banking. Please do not share this code with anyone.",
+              "cosine": 0.542601205256205,
+              "score": -4.1185622127542345
+            },
+            {
+              "recordId": "authored-sms-v1-049",
+              "group": "authored-v1-otp",
+              "text": "رمز دخولك هو 381902. أدخله لتسجيل الدخول فقط؛ لا توجد حركة مالية في هذا التنبيه.",
+              "cosine": 0.5243761417674371,
+              "score": -3.112739036103604
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-1302",
+        "language": "ar",
+        "target": "completed",
+        "score": 1.116571820467797,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "JO\nتم استلام مبلغ 87.815 JOD بنجاح إلى محفظتك من 0777138662 (BQIXR IHNKAPA HOREIW) كليك. رصيدك الحالي هو 403.251 JOD. رقم المرجع: 6699435.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-1578",
+              "group": "literal-L403-C15",
+              "text": "JO\nتم استلام مبلغ 60.78 JOD في محفظتك بنجاح من IDNH UJRWV LXIBBTA عبر كليك. رصيدك الحالي هو 511.01 JOD. الرقم المرجعي: 4967963.",
+              "cosine": 0.9524029400833437,
+              "score": 1.2112322821035029
+            },
+            {
+              "recordId": "synthetic-v1-1054",
+              "group": "literal-L481-C15",
+              "text": "JO\nتم تحويل مبلغ 68.233 JOD بنجاح إلى محفظة 0786589466 (HBMO RUZSNN NZBQKJ) عبر كليك. رصيدك الحالي هو 435.191 JOD. رقم المرجع: 2594666.",
+              "cosine": 0.9301394476392286,
+              "score": 1.7602638790938296
+            },
+            {
+              "recordId": "synthetic-v1-0404",
+              "group": "literal-L320-C15",
+              "text": "JO\nتم تحويل مبلغ 9.774 JOD بنجاح إلى محفظة 0773854653 (SXUH FEOJCHN DNQAWAFFN) عبر كليك. رصيدك الحالي هو 852.562 JOD. رقم الحركة: 1458149.",
+              "cosine": 0.9182907150544138,
+              "score": 1.118580081171521
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.8159643788436092,
+              "score": -0.09117214368115643
+            },
+            {
+              "recordId": "synthetic-v1-0671",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 311.717 دينار على حسابك 6951*762.",
+              "cosine": 0.7536482250979808,
+              "score": -0.5101344006625638
+            },
+            {
+              "recordId": "authored-sms-v1-057",
+              "group": "authored-v1-balance",
+              "text": "الرصيد المتاح في محفظتك الآن ٢٠٠ JOD. هذا عرض للرصيد الحالي.",
+              "cosine": 0.728687155285396,
+              "score": -0.5970071147153756
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-1914",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -1.4249999447113502,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "حولتلك 84 دنانير على كليك شيك عليها بالله",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-0463",
+              "group": "literal-L582-C15",
+              "text": "JO\nتم قيد حوالة كليك بمبلغ 52.588 د.أ لحسابك 5079 من SKNU DNHKL DOMDUOOC. رصيدك المتاح هو 264.265 د.أ.",
+              "cosine": 0.5519666219523597,
+              "score": 0.8182799885460723
+            },
+            {
+              "recordId": "authored-sms-v1-023",
+              "group": "authored-v1-transfer-in-b",
+              "text": "اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك ۱۲ دينار.",
+              "cosine": 0.5425647717311408,
+              "score": 1.901647232065977
+            },
+            {
+              "recordId": "authored-sms-v1-073",
+              "group": "authored-v1-missing-amount",
+              "text": "اكتمل سداد فاتورتك وسُجل خصمها على المحفظة. افتح كشف الحركات لمعرفة القيمة.",
+              "cosine": 0.5160800197004203,
+              "score": 0.9581154183672982
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "authored-sms-v1-055",
+              "group": "authored-v1-chat",
+              "text": "أنا دفعتلك ١١ دينار عن العشا، ابعثلي لما تتأكد.",
+              "cosine": 0.7186409798056398,
+              "score": -1.8005059261308576
+            },
+            {
+              "recordId": "synthetic-v1-0030",
+              "group": "literal-L727-C8",
+              "text": "حولتلك 96 ليرة هسا شوف وصلتك ولا لسا؟",
+              "cosine": 0.6648578541678862,
+              "score": -3.3044431377092733
+            },
+            {
+              "recordId": "synthetic-v1-0295",
+              "group": "literal-L740-C8",
+              "text": "معي 95 دينار كاش مين بده كليك؟",
+              "cosine": 0.6444149430408248,
+              "score": -3.190620957756275
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-0334",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -2.3621187373417176,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "JO\nYour eStatement has been issued for Account. Please login to Arabi Online or Arab Bank App to view it.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-1521",
+              "group": "literal-L463-C15",
+              "text": "JO\nتم دفع فاتورة أمانة عمان الكبرى بنجاح بقيمة 4.717 JOD من خلال خدمة إي فواتيركم. رصيدك الحالي هو 23.08 JOD.",
+              "cosine": 0.47646489260498204,
+              "score": 0.31595288673685373
+            },
+            {
+              "recordId": "personal-claim-completed-ar",
+              "group": "context:personal-claim",
+              "text": "وصلت حوالة شخصية إلى حسابك وقيد المبلغ في الرصيد. بيانات القيمة في تفاصيل الحركة.",
+              "cosine": 0.46589689763748404,
+              "score": 1.5861694597417402
+            },
+            {
+              "recordId": "authored-sms-v1-069",
+              "group": "authored-v1-own",
+              "text": "اكتملت حركة داخلية بقيمة ٧٧ JOD من حسابك الجاري إلى حساب التوفير المملوك لك.",
+              "cosine": 0.43726493859374627,
+              "score": 2.830061991291984
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0055",
+              "group": "literal-L703-C12",
+              "text": "JO\n90 Points were redeemed from your 'Arabi Points' account as a reward voucher. For more information, login to Arab Bank app.",
+              "cosine": 0.5240251466617786,
+              "score": -1.6782995234892348
+            },
+            {
+              "recordId": "personal-claim-non_transaction-en",
+              "group": "context:personal-claim",
+              "text": "Hey friend, I am telling you I sent a personal transfer to your account. Please open your app and check for yourself.",
+              "cosine": 0.5236629740463747,
+              "score": -2.706702281403963
+            },
+            {
+              "recordId": "synthetic-v1-0546",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 17.426 دينار على حسابك xxxx883.",
+              "cosine": 0.47309167828433485,
+              "score": -1.0168140217009385
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-0289",
+        "language": "en",
+        "target": "non_transaction",
+        "score": 0.5874658228899232,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "did you finish the transaction?",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-005",
+              "group": "authored-v1-purchase-a",
+              "text": "سُجل خصم نهائي على بطاقتك مقابل عملية شراء بقيمة ٣٤٫٢٠ دينار.",
+              "cosine": 0.668113533587265,
+              "score": 1.109291523986786
+            },
+            {
+              "recordId": "authored-sms-v1-029",
+              "group": "authored-v1-refund-a",
+              "text": "استُردت قيمة شراء سابق، وأُعيد ١٥٫٨٠ JOD إلى رصيد بطاقتك.",
+              "cosine": 0.6478304137822554,
+              "score": 1.6752049329019092
+            },
+            {
+              "recordId": "authored-sms-v1-016",
+              "group": "authored-v1-bill-b",
+              "text": "Bill settlement finished. A debit of JOD 13.250 is now posted to your wallet.",
+              "cosine": 0.6248329321403463,
+              "score": 2.6288486853350697
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0244",
+              "group": "literal-L743-C8",
+              "text": "did you receive the payment on Zain cash?",
+              "cosine": 0.7018341820275155,
+              "score": -1.3919235226949414
+            },
+            {
+              "recordId": "synthetic-v1-0068",
+              "group": "literal-L739-C8",
+              "text": "دفعت الحساب للمطعم ولا ادفع انا؟",
+              "cosine": 0.5483155193184792,
+              "score": -3.604786103761366
+            },
+            {
+              "recordId": "otp-versus-settlement-non_transaction-ar",
+              "group": "context:otp-versus-settlement",
+              "text": "رمز تأكيد عملية الشراء بقيمة ١٨٫٣٠ دينار هو ٧١٢٤. الشراء لم يكتمل بعد.",
+              "cosine": 0.5277413699642848,
+              "score": -1.1348538837579671
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-0184",
+        "language": "en",
+        "target": "non_transaction",
+        "score": 0.8084804758807379,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "send me the transaction receipt or screenshot",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "personal-claim-completed-en",
+              "group": "context:personal-claim",
+              "text": "A personal transfer arrived in your account and the credit was posted. The amount is in the transaction details.",
+              "cosine": 0.6514039674477723,
+              "score": 2.9037848541967324
+            },
+            {
+              "recordId": "cash-disbursement-completed-ar",
+              "group": "context:cash-disbursement",
+              "text": "أخرج الصراف النقد وتم تسجيل خصم السحب على حسابك. قيمة السحب في كشف الحساب.",
+              "cosine": 0.5669401777401568,
+              "score": 2.2532097337224566
+            },
+            {
+              "recordId": "authored-sms-v1-074",
+              "group": "authored-v1-missing-amount",
+              "text": "Your bill payment completed and its debit was posted to the wallet. Open the statement for the amount.",
+              "cosine": 0.5507191179025792,
+              "score": 3.4048275569905844
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "personal-claim-non_transaction-en",
+              "group": "context:personal-claim",
+              "text": "Hey friend, I am telling you I sent a personal transfer to your account. Please open your app and check for yourself.",
+              "cosine": 0.4705074501990795,
+              "score": -2.706702281403963
+            },
+            {
+              "recordId": "wallet-posting-non_transaction-en",
+              "group": "context:wallet-posting",
+              "text": "The wallet debit was not posted because bill payment did not complete. Please retry later.",
+              "cosine": 0.45827113831011046,
+              "score": -0.3378020612277868
+            },
+            {
+              "recordId": "authored-sms-v1-056",
+              "group": "authored-v1-chat",
+              "text": "I paid your 11 dinars for dinner; message me when you check.",
+              "cosine": 0.4541120470369245,
+              "score": -1.5662586673872805
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-0174",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -3.2463072755280575,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "JO\nYour Talabat Voucher Code is : SYNTHCODE764103. 15 Points from your Arabi Points were redeemed as a Talabat voucher.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-0102",
+              "group": "literal-L387-C15",
+              "text": "JO\nتم تحويل مبلغ 29.60 JOD بنجاح إلى 0795169103 (HLVKAM VGUAZ HUIAJ) عبر كليك. رصيدك الحالي هو 80.52 JOD. الرقم المرجعي: 9612153.",
+              "cosine": 0.5328424997661911,
+              "score": 1.106311620867473
+            },
+            {
+              "recordId": "synthetic-v1-1161",
+              "group": "literal-L320-C15",
+              "text": "JO\nتم تحويل مبلغ 45.992 JOD بنجاح إلى محفظة 0778123267 (TDAY TAPYD CDIVUWTV) عبر كليك. رصيدك الحالي هو 667.405 JOD. رقم الحركة: 6765024.",
+              "cosine": 0.5142732170841025,
+              "score": 0.6403931463086014
+            },
+            {
+              "recordId": "synthetic-v1-1102",
+              "group": "literal-L403-C15",
+              "text": "JO\nتم استلام مبلغ 53.26 JOD في محفظتك بنجاح من LNDF AZKSKMY WZTGNNOOM عبر كليك. رصيدك الحالي هو 75.22 JOD. الرقم المرجعي: 2926602.",
+              "cosine": 0.5126695242198099,
+              "score": 1.0752958638369872
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0055",
+              "group": "literal-L703-C12",
+              "text": "JO\n90 Points were redeemed from your 'Arabi Points' account as a reward voucher. For more information, login to Arab Bank app.",
+              "cosine": 0.6868838247914542,
+              "score": -1.6782995234892348
+            },
+            {
+              "recordId": "synthetic-v1-0122",
+              "group": "literal-L705-C12",
+              "text": "JO\nCongratulations! You have received 59 bonus Reflect Coins for completing 7 CliQ transfers this week. View rewards in app.",
+              "cosine": 0.5091764231393477,
+              "score": -3.2216483553858444
+            },
+            {
+              "recordId": "synthetic-v1-0212",
+              "group": "literal-L601-C12",
+              "text": "JO\nYour verification code is 659740 to log in to mobile banking. Please do not share this code with anyone.",
+              "cosine": 0.5003596945326418,
+              "score": -4.1185622127542345
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-1881",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -1.320444076053091,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "JO\nحركة شراء مرفوضة بقيمة 238.459 د.أ على بطاقتك 4164*682 بسبب عدم كفاية الرصيد.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-011",
+              "group": "authored-v1-merchant-b",
+              "text": "انخفض رصيد محفظتك بمقدار ۲۲٫۱ JOD بعد تنفيذ الدفع للتاجر نهائياً.",
+              "cosine": 0.6212087385203975,
+              "score": 1.7216632715151452
+            },
+            {
+              "recordId": "authored-sms-v1-007",
+              "group": "authored-v1-purchase-b",
+              "text": "قُيد خصم الشراء النهائي على بطاقتك بقيمة ۶٫۴۰ USD.",
+              "cosine": 0.6210235914136462,
+              "score": 0.6285668282896402
+            },
+            {
+              "recordId": "otp-versus-settlement-completed-ar",
+              "group": "context:otp-versus-settlement",
+              "text": "اكتملت عملية الشراء بقيمة ١٨٫٣٠ دينار وقيد الخصم على البطاقة. لا يلزم رمز تأكيد آخر.",
+              "cosine": 0.6077883512148098,
+              "score": -0.4708596500857527
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0113",
+              "group": "literal-L647-C12",
+              "text": "JO\nحركة مرفوضة على بطاقتك المنتهية ب *3000 بقيمة JOD 177.459 بسبب عدم كفاية الرصيد, للمزيد اتصل على 064076120",
+              "cosine": 0.7336470960161486,
+              "score": -1.5627672643275403
+            },
+            {
+              "recordId": "synthetic-v1-0218",
+              "group": "literal-L651-C12",
+              "text": "JO\nحركة غير مكتملة: تم رفض عملية التحويل بمبلغ 23.597 JOD بسبب عدم كفاية الرصيد في محفظة زين كاش.",
+              "cosine": 0.6684616836793449,
+              "score": -1.7642107513114351
+            },
+            {
+              "recordId": "settled-payment-non_transaction-ar",
+              "group": "context:settled-payment",
+              "text": "دفع ٢٤ دينار من بطاقتك ما زال بانتظار الموافقة. لم ينفذ الدفع ولم تخصم القيمة.",
+              "cosine": 0.6418939064400686,
+              "score": -2.006457168013331
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "synthetic-v1-0806",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -3.0030675828113056,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "تنويه: ستتوقف خدمات التحويل والدفع عبر كليك مؤقتاً لتحديث الأنظمة فجر يوم الجمعة من 18:16 حتى 16:47 صباحاً.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-0175",
+              "group": "literal-L582-C15",
+              "text": "JO\nتم قيد حوالة كليك بمبلغ 53.049 د.أ لحسابك *6127 من PPNX ZZPOFN PIJFBG. رصيدك المتاح هو 542.752 د.أ.",
+              "cosine": 0.5353316493442148,
+              "score": 0.10578589459726334
+            },
+            {
+              "recordId": "authored-sms-v1-037",
+              "group": "authored-v1-fee-a",
+              "text": "تم اقتطاع رسوم خدمة بقيمة ٠٫٧٥ دينار من حسابك وقُيد الخصم نهائياً.",
+              "cosine": 0.5077556548245079,
+              "score": 1.4472798873439137
+            },
+            {
+              "recordId": "synthetic-v1-1933",
+              "group": "literal-L236-C15",
+              "text": "JO\nتم قيد دفعة كليك بمبلغ 85.214JOD إلى 7216 من حساب ATIYBR WSUMG BZYQI الرصيد 369.669JOD",
+              "cosine": 0.49743234519740953,
+              "score": 0.5425037936875419
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0373",
+              "group": "literal-L678-C12",
+              "text": "يرجى العلم بأن خدمة كليك ستتوقف مؤقتاً لغايات تحديث الأنظمة يوم الجمعة من الساعة 1:32 وحتى 17:35 بعد منتصف الليل, مستعدون لخدمتكم.",
+              "cosine": 0.7101414176232379,
+              "score": -4.233239086552255
+            },
+            {
+              "recordId": "synthetic-v1-0131",
+              "group": "literal-L647-C12",
+              "text": "JO\nحركة مرفوضة على بطاقتك المنتهية ب xxxx551 بقيمة JOD 585.131 بسبب عدم كفاية الرصيد, للمزيد اتصل على 064430152",
+              "cosine": 0.5494938043512556,
+              "score": -1.8163198891249115
+            },
+            {
+              "recordId": "synthetic-v1-0348",
+              "group": "literal-L680-C12",
+              "text": "JO\nReflect services including CliQ transfers will undergo scheduled system maintenance on Friday from 11:32 AM to 03:07 AM.",
+              "cosine": 0.5291601952097045,
+              "score": -2.077431692350879
+            }
+          ]
+        }
+      }
+    ],
+    "exposedManual": [
+      {
+        "recordId": "withdrawal-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": 0.35027639307939606,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "صرف الصراف ١٩٫٢٥٠ دينار نقداً، وسُجل المبلغ خصماً على حسابك. الرصيد بعد الحركة ٨٨٫٤٠٠ دينار.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.8640972342358039,
+              "score": 0.4273995816324462
+            },
+            {
+              "recordId": "authored-sms-v1-031",
+              "group": "authored-v1-refund-b",
+              "text": "أُضيف رد دفعة ملغاة بقيمة ۲۹ دينار إلى حسابك كحركة دائنة.",
+              "cosine": 0.8468095394582495,
+              "score": 1.2568168745767305
+            },
+            {
+              "recordId": "authored-sms-v1-003",
+              "group": "authored-v1-withdraw-b",
+              "text": "صُرف لك نقداً ۲۷ دينار من الصراف، وقُيّدت العملية على حسابك كخصم.",
+              "cosine": 0.827924704772537,
+              "score": 0.7636799809849317
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0808",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 793.006 دينار على حسابك *5824.",
+              "cosine": 0.8091877492528774,
+              "score": -0.36864610427244565
+            },
+            {
+              "recordId": "synthetic-v1-0205",
+              "group": "literal-L709-C12",
+              "text": "احصل على تمويل شخصي يصل إلى 45400 دينار بفترة سداد ميسرة وبدون تحويل راتب! قدم طلبك الآن عبر التطبيق.",
+              "cosine": 0.7130915301934582,
+              "score": -1.1034076671235118
+            },
+            {
+              "recordId": "authored-sms-v1-056",
+              "group": "authored-v1-chat",
+              "text": "I paid your 11 dinars for dinner; message me when you check.",
+              "cosine": 0.7020914801157814,
+              "score": -1.5662586673872805
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "withdrawal-en",
+        "language": "en",
+        "target": "completed",
+        "score": 2.502694400097277,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "The ATM dispensed JOD 19.250 in cash and posted a debit to your account. Balance after the movement: JOD 88.400.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-002",
+              "group": "authored-v1-withdraw-a",
+              "text": "Cash dispensed. Your account was charged JOD 18.50 for this withdrawal.",
+              "cosine": 0.7781138765505404,
+              "score": 2.906152987153824
+            },
+            {
+              "recordId": "authored-sms-v1-016",
+              "group": "authored-v1-bill-b",
+              "text": "Bill settlement finished. A debit of JOD 13.250 is now posted to your wallet.",
+              "cosine": 0.7504681337647955,
+              "score": 2.6288486853350697
+            },
+            {
+              "recordId": "authored-sms-v1-020",
+              "group": "authored-v1-transfer-out-b",
+              "text": "CliQ payment sent to another person; a 7.50 JOD debit is posted to your wallet.",
+              "cosine": 0.7435750614479958,
+              "score": 2.3414271429417544
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0113",
+              "group": "literal-L647-C12",
+              "text": "JO\nحركة مرفوضة على بطاقتك المنتهية ب *3000 بقيمة JOD 177.459 بسبب عدم كفاية الرصيد, للمزيد اتصل على 064076120",
+              "cosine": 0.6466863832505796,
+              "score": -1.5627672643275403
+            },
+            {
+              "recordId": "authored-sms-v1-058",
+              "group": "authored-v1-balance",
+              "text": "Your wallet currently has an available balance of JOD 200. This is a balance display.",
+              "cosine": 0.6360085352668072,
+              "score": -1.0428066441472235
+            },
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.6317707105856997,
+              "score": -0.09117214368115643
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "refund-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": 1.9112039343133054,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "تم رد مبلغ ١١٫٧٠ JOD عن شراء سابق وإضافته فعلياً إلى رصيد بطاقتك.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-029",
+              "group": "authored-v1-refund-a",
+              "text": "استُردت قيمة شراء سابق، وأُعيد ١٥٫٨٠ JOD إلى رصيد بطاقتك.",
+              "cosine": 0.8932361814031807,
+              "score": 1.6752049329019092
+            },
+            {
+              "recordId": "authored-sms-v1-005",
+              "group": "authored-v1-purchase-a",
+              "text": "سُجل خصم نهائي على بطاقتك مقابل عملية شراء بقيمة ٣٤٫٢٠ دينار.",
+              "cosine": 0.7898464821984507,
+              "score": 1.109291523986786
+            },
+            {
+              "recordId": "authored-sms-v1-025",
+              "group": "authored-v1-deposit-a",
+              "text": "قُبل إيداعك النقدي وأصبح مبلغ ١٢٠ JOD مضافاً إلى حسابك.",
+              "cosine": 0.788039066342028,
+              "score": 2.2428720075294777
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "settled-payment-non_transaction-ar",
+              "group": "context:settled-payment",
+              "text": "دفع ٢٤ دينار من بطاقتك ما زال بانتظار الموافقة. لم ينفذ الدفع ولم تخصم القيمة.",
+              "cosine": 0.7177855993911579,
+              "score": -2.006457168013331
+            },
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.6483821059087916,
+              "score": -0.09117214368115643
+            },
+            {
+              "recordId": "authored-sms-v1-061",
+              "group": "authored-v1-admin",
+              "text": "تم تغيير الرقم السري لبطاقتك بنجاح. للتفاصيل افتح إعدادات البطاقة.",
+              "cosine": 0.6424396733364099,
+              "score": -0.9074146959987118
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "refund-en",
+        "language": "en",
+        "target": "completed",
+        "score": 2.352879532326993,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "A refund of JOD 11.70 for an earlier purchase has now been credited to your card balance.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-030",
+              "group": "authored-v1-refund-a",
+              "text": "Refund completed. JOD 15.80 returned to your card balance for an earlier purchase.",
+              "cosine": 0.8939349224660758,
+              "score": 1.6846220360099071
+            },
+            {
+              "recordId": "refund-refusal-completed-en",
+              "group": "context:refund-refusal",
+              "text": "Your purchase refund of JOD 9.75 was credited successfully. The refund is complete.",
+              "cosine": 0.7965211499635241,
+              "score": 2.379287666846686
+            },
+            {
+              "recordId": "authored-sms-v1-032",
+              "group": "authored-v1-refund-b",
+              "text": "The reversed payment of 29 JOD has posted as a credit to your account.",
+              "cosine": 0.7808762435466572,
+              "score": 2.2170957335831485
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "authored-sms-v1-058",
+              "group": "authored-v1-balance",
+              "text": "Your wallet currently has an available balance of JOD 200. This is a balance display.",
+              "cosine": 0.6513360337996394,
+              "score": -1.0428066441472235
+            },
+            {
+              "recordId": "authored-sms-v1-060",
+              "group": "authored-v1-promotion",
+              "text": "Use your card next week for a chance to earn 10 JOD cashback.",
+              "cosine": 0.6219468812920417,
+              "score": -2.025074043817928
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-en",
+              "group": "context:refund-refusal",
+              "text": "Your purchase refund request for JOD 9.75 was refused. The refund has not been credited to your account.",
+              "cosine": 0.611028423229941,
+              "score": -2.5441398514246436
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "foreign-purchase-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": 0.3305624466590469,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "خُصم من بطاقتك ۱۲٫۴۰ USD مقابل شراء تمت تسويته. الرصيد المتاح ۷۵٫۰۰ JOD.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-029",
+              "group": "authored-v1-refund-a",
+              "text": "استُردت قيمة شراء سابق، وأُعيد ١٥٫٨٠ JOD إلى رصيد بطاقتك.",
+              "cosine": 0.8568536871710861,
+              "score": 1.6752049329019092
+            },
+            {
+              "recordId": "authored-sms-v1-005",
+              "group": "authored-v1-purchase-a",
+              "text": "سُجل خصم نهائي على بطاقتك مقابل عملية شراء بقيمة ٣٤٫٢٠ دينار.",
+              "cosine": 0.8261682411158796,
+              "score": 1.109291523986786
+            },
+            {
+              "recordId": "authored-sms-v1-007",
+              "group": "authored-v1-purchase-b",
+              "text": "قُيد خصم الشراء النهائي على بطاقتك بقيمة ۶٫۴۰ USD.",
+              "cosine": 0.799970171074324,
+              "score": 0.6285668282896402
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "settled-payment-non_transaction-ar",
+              "group": "context:settled-payment",
+              "text": "دفع ٢٤ دينار من بطاقتك ما زال بانتظار الموافقة. لم ينفذ الدفع ولم تخصم القيمة.",
+              "cosine": 0.7090593041064763,
+              "score": -2.006457168013331
+            },
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.707189383927414,
+              "score": -0.09117214368115643
+            },
+            {
+              "recordId": "authored-sms-v1-057",
+              "group": "authored-v1-balance",
+              "text": "الرصيد المتاح في محفظتك الآن ٢٠٠ JOD. هذا عرض للرصيد الحالي.",
+              "cosine": 0.7024708346101056,
+              "score": -0.5970071147153756
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "foreign-purchase-en",
+        "language": "en",
+        "target": "completed",
+        "score": -0.020618554412357347,
+        "candidate": "non_transaction",
+        "word": "completed",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "Your card was debited USD 12.40 for a settled purchase. Available balance: JOD 75.00.",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-006",
+              "group": "authored-v1-purchase-a",
+              "text": "Your card purchase has settled: JOD 34.20 posted as a debit.",
+              "cosine": 0.8488808195568522,
+              "score": 0.8667450591801651
+            },
+            {
+              "recordId": "authored-sms-v1-007",
+              "group": "authored-v1-purchase-b",
+              "text": "قُيد خصم الشراء النهائي على بطاقتك بقيمة ۶٫۴۰ USD.",
+              "cosine": 0.7977264153060554,
+              "score": 0.6285668282896402
+            },
+            {
+              "recordId": "authored-sms-v1-030",
+              "group": "authored-v1-refund-a",
+              "text": "Refund completed. JOD 15.80 returned to your card balance for an earlier purchase.",
+              "cosine": 0.7842452533893896,
+              "score": 1.6846220360099071
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0113",
+              "group": "literal-L647-C12",
+              "text": "JO\nحركة مرفوضة على بطاقتك المنتهية ب *3000 بقيمة JOD 177.459 بسبب عدم كفاية الرصيد, للمزيد اتصل على 064076120",
+              "cosine": 0.676904793526398,
+              "score": -1.5627672643275403
+            },
+            {
+              "recordId": "authored-sms-v1-058",
+              "group": "authored-v1-balance",
+              "text": "Your wallet currently has an available balance of JOD 200. This is a balance display.",
+              "cosine": 0.6737012169442647,
+              "score": -1.0428066441472235
+            },
+            {
+              "recordId": "settled-payment-non_transaction-ar",
+              "group": "context:settled-payment",
+              "text": "دفع ٢٤ دينار من بطاقتك ما زال بانتظار الموافقة. لم ينفذ الدفع ولم تخصم القيمة.",
+              "cosine": 0.6539503292149809,
+              "score": -2.006457168013331
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "unknown-transfer-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": 1.3878418074620196,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "قُيدت حوالة واردة بقيمة ٥٧٫٢٥ JOD في حسابك *6041 من الحساب *9012. الرصيد المتاح ١٠٤٫٥٠ JOD.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-1700",
+              "group": "literal-L236-C15",
+              "text": "JO\nتم قيد دفعة كليك بمبلغ 76.024JOD إلى 4167*584 من حساب SXZR TQYRHM YG-BZSDVU الرصيد 207.334JOD",
+              "cosine": 0.8287583341264467,
+              "score": 0.6531646581792577
+            },
+            {
+              "recordId": "synthetic-v1-0386",
+              "group": "literal-L433-C15",
+              "text": "JO\nتم إيداع مبلغ 46.25 JOD نقداً في محفظة زين كاش الخاصة بك عبر صراف آلي. رصيدك الجديد 27.85 JOD.",
+              "cosine": 0.8178463853575206,
+              "score": 1.918087763696371
+            },
+            {
+              "recordId": "synthetic-v1-0455",
+              "group": "literal-L403-C15",
+              "text": "JO\nتم استلام مبلغ 36.94 JOD في محفظتك بنجاح من LIODY ITSEN XASGAFE MNWDJFSR عبر كليك. رصيدك الحالي هو 95.21 JOD. الرقم المرجعي: 5005342.",
+              "cosine": 0.8140888583297125,
+              "score": 1.345717098368378
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0808",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 793.006 دينار على حسابك *5824.",
+              "cosine": 0.8243496238954512,
+              "score": -0.36864610427244565
+            },
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.7855874021979664,
+              "score": -0.09117214368115643
+            },
+            {
+              "recordId": "authored-sms-v1-057",
+              "group": "authored-v1-balance",
+              "text": "الرصيد المتاح في محفظتك الآن ٢٠٠ JOD. هذا عرض للرصيد الحالي.",
+              "cosine": 0.7051189442753336,
+              "score": -0.5970071147153756
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "unknown-transfer-en",
+        "language": "en",
+        "target": "completed",
+        "score": 1.6603084632941276,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "An incoming transfer of JOD 57.25 has been credited to your account *6041 from account *9012. Available balance JOD 104.50.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-072",
+              "group": "authored-v1-unknown",
+              "text": "Transfer completed for JOD 36. Source account *2104, destination account *7601, reference 98351.",
+              "cosine": 0.8716779398811995,
+              "score": 1.3311606921430315
+            },
+            {
+              "recordId": "authored-sms-v1-022",
+              "group": "authored-v1-transfer-in-a",
+              "text": "Transfer received from another person. JOD 46.30 added to your account balance.",
+              "cosine": 0.8664125195113628,
+              "score": 1.7659859365283734
+            },
+            {
+              "recordId": "synthetic-v1-0556",
+              "group": "literal-L135-C15",
+              "text": "JO\nJOD99.384 has been credited to 3635*291 from TAPP QDUJS ADVVAGUD as CliQ transfer Balance 231.037JOD",
+              "cosine": 0.8106336905669215,
+              "score": 1.5425575669289109
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0020",
+              "group": "literal-L626-C12",
+              "text": "JO\nYour OTP is 319787 for transfer JOD 10.558 Please dont share.\n59412261",
+              "cosine": 0.7647002069010309,
+              "score": -2.301520975340506
+            },
+            {
+              "recordId": "synthetic-v1-0475",
+              "group": "literal-L671-C12",
+              "text": "JO\nYour available balance on account 5845 is JOD 699.014 on 21/11 21:44.",
+              "cosine": 0.7562888208289219,
+              "score": -1.477516399431498
+            },
+            {
+              "recordId": "synthetic-v1-0040",
+              "group": "literal-L672-C12",
+              "text": "JO\nBalance JOD 362.193 on account 3476.",
+              "cosine": 0.6962204774831888,
+              "score": -0.7197016971198356
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "own-accounts-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": 1.0687690810905273,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "اكتمل نقل ٤٢ دينار من حسابك الجاري *3351 إلى حساب التوفير الخاص بك *8842.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-031",
+              "group": "authored-v1-refund-b",
+              "text": "أُضيف رد دفعة ملغاة بقيمة ۲۹ دينار إلى حسابك كحركة دائنة.",
+              "cosine": 0.8302983988850463,
+              "score": 1.2568168745767305
+            },
+            {
+              "recordId": "cash-disbursement-completed-ar",
+              "group": "context:cash-disbursement",
+              "text": "أخرج الصراف النقد وتم تسجيل خصم السحب على حسابك. قيمة السحب في كشف الحساب.",
+              "cosine": 0.8261364900075542,
+              "score": 2.2532097337224566
+            },
+            {
+              "recordId": "refund-refusal-completed-ar",
+              "group": "context:refund-refusal",
+              "text": "قيد رد الشراء بقيمة ٩٫٧٥ دينار في حسابك بنجاح. الاسترداد مكتمل.",
+              "cosine": 0.8187253164552561,
+              "score": 1.6362968139718674
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0808",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 793.006 دينار على حسابك *5824.",
+              "cosine": 0.863495601713251,
+              "score": -0.36864610427244565
+            },
+            {
+              "recordId": "synthetic-v1-0205",
+              "group": "literal-L709-C12",
+              "text": "احصل على تمويل شخصي يصل إلى 45400 دينار بفترة سداد ميسرة وبدون تحويل راتب! قدم طلبك الآن عبر التطبيق.",
+              "cosine": 0.6676412953865323,
+              "score": -1.1034076671235118
+            },
+            {
+              "recordId": "personal-claim-non_transaction-en",
+              "group": "context:personal-claim",
+              "text": "Hey friend, I am telling you I sent a personal transfer to your account. Please open your app and check for yourself.",
+              "cosine": 0.6291942220927264,
+              "score": -2.706702281403963
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "own-accounts-en",
+        "language": "en",
+        "target": "completed",
+        "score": 2.7925087058178346,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "A transfer of JOD 42 completed from your current account *3351 to your own savings account *8842.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-022",
+              "group": "authored-v1-transfer-in-a",
+              "text": "Transfer received from another person. JOD 46.30 added to your account balance.",
+              "cosine": 0.8470613309362057,
+              "score": 1.7659859365283734
+            },
+            {
+              "recordId": "authored-sms-v1-072",
+              "group": "authored-v1-unknown",
+              "text": "Transfer completed for JOD 36. Source account *2104, destination account *7601, reference 98351.",
+              "cosine": 0.8203349411524785,
+              "score": 1.3311606921430315
+            },
+            {
+              "recordId": "authored-sms-v1-070",
+              "group": "authored-v1-own",
+              "text": "Internal movement completed: JOD 77 from your current account to your own savings account.",
+              "cosine": 0.7837779644983345,
+              "score": 2.324921830425498
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0020",
+              "group": "literal-L626-C12",
+              "text": "JO\nYour OTP is 319787 for transfer JOD 10.558 Please dont share.\n59412261",
+              "cosine": 0.6950280774627133,
+              "score": -2.301520975340506
+            },
+            {
+              "recordId": "synthetic-v1-0671",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 311.717 دينار على حسابك 6951*762.",
+              "cosine": 0.6673305867417669,
+              "score": -0.5101344006625638
+            },
+            {
+              "recordId": "sample-credit-non_transaction-en",
+              "group": "context:sample-credit",
+              "text": "This is an illustrative message only: 'JOD 42 was credited after the transfer completed.' No actual account movement occurred.",
+              "cosine": 0.6345083804441138,
+              "score": -0.8252303618356465
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "missing-amount-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": 2.358861120518042,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "انتهى دفع فاتورتك وجرى الخصم من المحفظة بنجاح. قيمة الدفعة متاحة في كشف الحساب.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "wallet-posting-completed-ar",
+              "group": "context:wallet-posting",
+              "text": "جرى الخصم من المحفظة بعد إتمام سداد الفاتورة بنجاح. يمكنك الاطلاع على القيمة في الكشف.",
+              "cosine": 0.8885027689648675,
+              "score": 2.6274867100873682
+            },
+            {
+              "recordId": "cash-disbursement-completed-ar",
+              "group": "context:cash-disbursement",
+              "text": "أخرج الصراف النقد وتم تسجيل خصم السحب على حسابك. قيمة السحب في كشف الحساب.",
+              "cosine": 0.8025141973163188,
+              "score": 2.2532097337224566
+            },
+            {
+              "recordId": "authored-sms-v1-027",
+              "group": "authored-v1-deposit-b",
+              "text": "عزز إيداع النقد رصيد محفظتك بمقدار ۶۸٫۲۵ دينار، وأُنجز القيد الدائن.",
+              "cosine": 0.789698519773602,
+              "score": 2.055370454377001
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0002",
+              "group": "literal-L708-C12",
+              "text": "ادفع فواتيرك عبر إي فواتيركم باستخدام المحفظة وادخل السحب على جوائز أسبوعية قيّمة!",
+              "cosine": 0.6967864349221772,
+              "score": -0.9542225542597685
+            },
+            {
+              "recordId": "synthetic-v1-0244",
+              "group": "literal-L743-C8",
+              "text": "did you receive the payment on Zain cash?",
+              "cosine": 0.680334328593492,
+              "score": -1.3919235226949414
+            },
+            {
+              "recordId": "synthetic-v1-0371",
+              "group": "literal-L748-C8",
+              "text": "دفعت الفاتورة على إي فواتيركم وخصموا مرتين",
+              "cosine": 0.6771147863195731,
+              "score": -1.190810244497085
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "missing-amount-en",
+        "language": "en",
+        "target": "completed",
+        "score": 2.7468795877849446,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "Your bill payment finished and the wallet debit was successfully posted. The amount is available in your statement.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "wallet-posting-completed-en",
+              "group": "context:wallet-posting",
+              "text": "The wallet debit was successfully posted after bill payment completed. View your statement for the amount.",
+              "cosine": 0.9145142479376251,
+              "score": 3.589204895286027
+            },
+            {
+              "recordId": "authored-sms-v1-074",
+              "group": "authored-v1-missing-amount",
+              "text": "Your bill payment completed and its debit was posted to the wallet. Open the statement for the amount.",
+              "cosine": 0.8974153383366752,
+              "score": 3.4048275569905844
+            },
+            {
+              "recordId": "scheduled-versus-executed-completed-en",
+              "group": "context:scheduled-versus-executed",
+              "text": "Your installment payment was executed and deducted from your account today. Its amount is listed in the statement.",
+              "cosine": 0.7571152222920888,
+              "score": 2.6191841585227427
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "wallet-posting-non_transaction-en",
+              "group": "context:wallet-posting",
+              "text": "The wallet debit was not posted because bill payment did not complete. Please retry later.",
+              "cosine": 0.7122108093142424,
+              "score": -0.3378020612277868
+            },
+            {
+              "recordId": "synthetic-v1-0371",
+              "group": "literal-L748-C8",
+              "text": "دفعت الفاتورة على إي فواتيركم وخصموا مرتين",
+              "cosine": 0.593879054951187,
+              "score": -1.190810244497085
+            },
+            {
+              "recordId": "billed-versus-paid-non_transaction-en",
+              "group": "context:billed-versus-paid",
+              "text": "Your electricity bill is ready for payment from your account. This is a payment reminder and no amount has been debited.",
+              "cosine": 0.5882375549483213,
+              "score": -1.4045865837363218
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "declined-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -1.849265978879883,
+        "candidate": "non_transaction",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "رُفض طلب الحوالة بقيمة ٨٣ دينار؛ لم يُسحب أي مبلغ من حسابك.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "transfer-refusal-completed-ar",
+              "group": "context:transfer-refusal",
+              "text": "تم تنفيذ حوالة ٦٧ دينار وخصمها من حسابك. لا يوجد رفض لهذه الحركة.",
+              "cosine": 0.49528832304730247,
+              "score": -0.24786979939210027
+            },
+            {
+              "recordId": "authored-sms-v1-036",
+              "group": "authored-v1-cashback-b",
+              "text": "A monetary cashback reward of 3.80 JOD is credited to your wallet, not reward points.",
+              "cosine": 0.46046207570696035,
+              "score": 0.8129672844115733
+            },
+            {
+              "recordId": "authored-sms-v1-002",
+              "group": "authored-v1-withdraw-a",
+              "text": "Cash dispensed. Your account was charged JOD 18.50 for this withdrawal.",
+              "cosine": 0.43256960160078645,
+              "score": 2.906152987153824
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "transfer-refusal-non_transaction-ar",
+              "group": "context:transfer-refusal",
+              "text": "رفضت حوالة ٦٧ دينار ولم يسحب أي مبلغ من حسابك. لا توجد حركة منفذة.",
+              "cosine": 0.8350736818136159,
+              "score": -1.7975711653603184
+            },
+            {
+              "recordId": "authored-sms-v1-051",
+              "group": "authored-v1-declined",
+              "text": "تعذر صرف النقد المطلوب بقيمة ٤٠ JOD. رُفض الطلب ولم يُخصم المبلغ.",
+              "cosine": 0.7922813190963062,
+              "score": -1.2417600121290833
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-ar",
+              "group": "context:refund-refusal",
+              "text": "طلب رد الشراء بقيمة ٩٫٧٥ دينار مرفوض. لم يقيد الاسترداد في حسابك.",
+              "cosine": 0.7746960745000946,
+              "score": -1.4037838058817984
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "declined-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -0.5946526092347283,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "The transfer request for JOD 83 was declined. No funds were taken from your account.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "transfer-refusal-completed-en",
+              "group": "context:transfer-refusal",
+              "text": "The JOD 67 transfer was executed and debited from your account. This transaction was not declined.",
+              "cosine": 0.6979470772016771,
+              "score": 2.6651822687570728
+            },
+            {
+              "recordId": "authored-sms-v1-038",
+              "group": "authored-v1-fee-a",
+              "text": "A service fee of JOD 0.75 was deducted from your account and posted.",
+              "cosine": 0.6260033847183732,
+              "score": 3.533305448540485
+            },
+            {
+              "recordId": "authored-sms-v1-018",
+              "group": "authored-v1-transfer-out-a",
+              "text": "Your transfer to another person is complete. JOD 56 was removed from your account.",
+              "cosine": 0.6125039212998753,
+              "score": 2.9579967206012645
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "transfer-refusal-non_transaction-en",
+              "group": "context:transfer-refusal",
+              "text": "The JOD 67 transfer was declined and nothing was debited from your account. No transaction was executed.",
+              "cosine": 0.8702582496423934,
+              "score": 0.7637022741360451
+            },
+            {
+              "recordId": "authored-sms-v1-052",
+              "group": "authored-v1-declined",
+              "text": "Cash withdrawal of JOD 40 failed. The request was rejected and nothing was debited.",
+              "cosine": 0.827566541618756,
+              "score": -1.9618852615509752
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-en",
+              "group": "context:refund-refusal",
+              "text": "Your purchase refund request for JOD 9.75 was refused. The refund has not been credited to your account.",
+              "cosine": 0.7288175801084587,
+              "score": -2.5441398514246436
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "personal-chat-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -1.6356054021399844,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "حولي ٢٣ دينار وبكرا بردلك ياهم، لا تنسى.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-023",
+              "group": "authored-v1-transfer-in-b",
+              "text": "اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك ۱۲ دينار.",
+              "cosine": 0.5939364283701922,
+              "score": 1.901647232065977
+            },
+            {
+              "recordId": "synthetic-v1-0463",
+              "group": "literal-L582-C15",
+              "text": "JO\nتم قيد حوالة كليك بمبلغ 52.588 د.أ لحسابك 5079 من SKNU DNHKL DOMDUOOC. رصيدك المتاح هو 264.265 د.أ.",
+              "cosine": 0.5780737030904701,
+              "score": 0.8182799885460723
+            },
+            {
+              "recordId": "authored-sms-v1-019",
+              "group": "authored-v1-transfer-out-b",
+              "text": "أُرسلت دفعة كليك لشخص آخر وقُيد خصم ۷٫۵۰ دينار على محفظتك.",
+              "cosine": 0.5733715972733866,
+              "score": 1.3880210845345324
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "authored-sms-v1-055",
+              "group": "authored-v1-chat",
+              "text": "أنا دفعتلك ١١ دينار عن العشا، ابعثلي لما تتأكد.",
+              "cosine": 0.8205089722524836,
+              "score": -1.8005059261308576
+            },
+            {
+              "recordId": "synthetic-v1-0295",
+              "group": "literal-L740-C8",
+              "text": "معي 95 دينار كاش مين بده كليك؟",
+              "cosine": 0.7717332971081151,
+              "score": -3.190620957756275
+            },
+            {
+              "recordId": "synthetic-v1-0030",
+              "group": "literal-L727-C8",
+              "text": "حولتلك 96 ليرة هسا شوف وصلتك ولا لسا؟",
+              "cosine": 0.6710152465969451,
+              "score": -3.3044431377092733
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "personal-chat-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -2.220717790897185,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "Please send me 23 dinars and I will pay you back tomorrow.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-031",
+              "group": "authored-v1-refund-b",
+              "text": "أُضيف رد دفعة ملغاة بقيمة ۲۹ دينار إلى حسابك كحركة دائنة.",
+              "cosine": 0.6462058168272946,
+              "score": 1.2568168745767305
+            },
+            {
+              "recordId": "synthetic-v1-1358",
+              "group": "literal-L369-C15",
+              "text": "JO\nتم دفع فاتورة أمانة عمان الكبرى بنجاح بقيمة 5.756 JOD عبر إي فواتيركم من محفظتك. الرصيد المتاح 477.330 JOD. رقم الفاتورة: 3971057.",
+              "cosine": 0.5980924386567578,
+              "score": 0.6690039165290371
+            },
+            {
+              "recordId": "sample-credit-completed-ar",
+              "group": "context:sample-credit",
+              "text": "هذه حركة حقيقية: أضيف إلى حسابك مبلغ ٤٢ دينار بعد اكتمال التحويل.",
+              "cosine": 0.5928874450544487,
+              "score": 0.3069375095216892
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "authored-sms-v1-056",
+              "group": "authored-v1-chat",
+              "text": "I paid your 11 dinars for dinner; message me when you check.",
+              "cosine": 0.7491835750255076,
+              "score": -1.5662586673872805
+            },
+            {
+              "recordId": "synthetic-v1-0295",
+              "group": "literal-L740-C8",
+              "text": "معي 95 دينار كاش مين بده كليك؟",
+              "cosine": 0.6053934931577023,
+              "score": -3.190620957756275
+            },
+            {
+              "recordId": "synthetic-v1-0205",
+              "group": "literal-L709-C12",
+              "text": "احصل على تمويل شخصي يصل إلى 45400 دينار بفترة سداد ميسرة وبدون تحويل راتب! قدم طلبك الآن عبر التطبيق.",
+              "cosine": 0.5714936573432359,
+              "score": -1.1034076671235118
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "pending-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -3.403632312022381,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "دفعة ٦٫٥٠ JOD معلقة بانتظار موافقتك، ولم تُنفذ بعد.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "settled-payment-completed-ar",
+              "group": "context:settled-payment",
+              "text": "دفع ٢٤ دينار من بطاقتك اكتمل بالفعل. أزيلت حالة الانتظار وسويت الحركة.",
+              "cosine": 0.5859508490475756,
+              "score": 0.4317299596067779
+            },
+            {
+              "recordId": "transfer-refusal-completed-ar",
+              "group": "context:transfer-refusal",
+              "text": "تم تنفيذ حوالة ٦٧ دينار وخصمها من حسابك. لا يوجد رفض لهذه الحركة.",
+              "cosine": 0.5538318343914108,
+              "score": -0.24786979939210027
+            },
+            {
+              "recordId": "synthetic-v1-0463",
+              "group": "literal-L582-C15",
+              "text": "JO\nتم قيد حوالة كليك بمبلغ 52.588 د.أ لحسابك 5079 من SKNU DNHKL DOMDUOOC. رصيدك المتاح هو 264.265 د.أ.",
+              "cosine": 0.5145300028370964,
+              "score": 0.8182799885460723
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "authored-sms-v1-053",
+              "group": "authored-v1-pending",
+              "text": "طلب تحويل ٦٠ دينار بانتظار موافقتك؛ لم يبدأ التنفيذ ولم يسجل خصم.",
+              "cosine": 0.7166136287284273,
+              "score": -2.6913287361831286
+            },
+            {
+              "recordId": "settled-payment-non_transaction-ar",
+              "group": "context:settled-payment",
+              "text": "دفع ٢٤ دينار من بطاقتك ما زال بانتظار الموافقة. لم ينفذ الدفع ولم تخصم القيمة.",
+              "cosine": 0.6734069662306567,
+              "score": -2.006457168013331
+            },
+            {
+              "recordId": "synthetic-v1-0479",
+              "group": "literal-L728-C8",
+              "text": "وصلتك الحوالة ولا لسا؟",
+              "cosine": 0.6381177925569672,
+              "score": -3.5255466242091136
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "pending-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -2.35964697119358,
+        "candidate": "non_transaction",
+        "word": "completed",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "Your JOD 6.50 payment is pending your approval and has not been executed.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "settled-payment-completed-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment has completed. It is no longer pending and the debit is settled.",
+              "cosine": 0.66978851156868,
+              "score": 2.914917586641824
+            },
+            {
+              "recordId": "transfer-refusal-completed-en",
+              "group": "context:transfer-refusal",
+              "text": "The JOD 67 transfer was executed and debited from your account. This transaction was not declined.",
+              "cosine": 0.6296156077039172,
+              "score": 2.6651822687570728
+            },
+            {
+              "recordId": "otp-versus-settlement-completed-en",
+              "group": "context:otp-versus-settlement",
+              "text": "The purchase of JOD 18.30 completed and the debit was posted to the card. No further confirmation code is required.",
+              "cosine": 0.6203809206017977,
+              "score": 0.29453888139053686
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "settled-payment-non_transaction-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment is still pending approval. It has not been executed and no debit was posted.",
+              "cosine": 0.8984699971516823,
+              "score": -1.7772678834149986
+            },
+            {
+              "recordId": "authored-sms-v1-054",
+              "group": "authored-v1-pending",
+              "text": "Transfer request for 60 JOD awaits your approval. Execution has not started and no debit is posted.",
+              "cosine": 0.7386374451601363,
+              "score": -2.901559615738744
+            },
+            {
+              "recordId": "otp-versus-settlement-non_transaction-en",
+              "group": "context:otp-versus-settlement",
+              "text": "Your confirmation code for the JOD 18.30 purchase is 7124. The purchase has not completed yet.",
+              "cosine": 0.719725117125661,
+              "score": -2.5247717663579055
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "purchase-otp-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -0.8495690358267577,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "أدخل رمز ٥٦١٢٠٤ لتأكيد شراء بقيمة ١٦ دينار. لن يُنفذ الدفع قبل إدخال الرمز.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "otp-versus-settlement-completed-ar",
+              "group": "context:otp-versus-settlement",
+              "text": "اكتملت عملية الشراء بقيمة ١٨٫٣٠ دينار وقيد الخصم على البطاقة. لا يلزم رمز تأكيد آخر.",
+              "cosine": 0.7254777403171927,
+              "score": -0.4708596500857527
+            },
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.6495166211239183,
+              "score": 0.4273995816324462
+            },
+            {
+              "recordId": "authored-sms-v1-031",
+              "group": "authored-v1-refund-b",
+              "text": "أُضيف رد دفعة ملغاة بقيمة ۲۹ دينار إلى حسابك كحركة دائنة.",
+              "cosine": 0.6359509930444921,
+              "score": 1.2568168745767305
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "otp-versus-settlement-non_transaction-ar",
+              "group": "context:otp-versus-settlement",
+              "text": "رمز تأكيد عملية الشراء بقيمة ١٨٫٣٠ دينار هو ٧١٢٤. الشراء لم يكتمل بعد.",
+              "cosine": 0.7979548281089689,
+              "score": -1.1348538837579671
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-ar",
+              "group": "context:refund-refusal",
+              "text": "طلب رد الشراء بقيمة ٩٫٧٥ دينار مرفوض. لم يقيد الاسترداد في حسابك.",
+              "cosine": 0.7285145150662202,
+              "score": -1.4037838058817984
+            },
+            {
+              "recordId": "settled-payment-non_transaction-ar",
+              "group": "context:settled-payment",
+              "text": "دفع ٢٤ دينار من بطاقتك ما زال بانتظار الموافقة. لم ينفذ الدفع ولم تخصم القيمة.",
+              "cosine": 0.7099825078280224,
+              "score": -2.006457168013331
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "purchase-otp-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -0.17708191433661125,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "Enter code 561204 to confirm a purchase of JOD 16. The payment will not execute until you enter the code.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "otp-versus-settlement-completed-en",
+              "group": "context:otp-versus-settlement",
+              "text": "The purchase of JOD 18.30 completed and the debit was posted to the card. No further confirmation code is required.",
+              "cosine": 0.6736738313729337,
+              "score": 0.29453888139053686
+            },
+            {
+              "recordId": "instruction-quote-completed-en",
+              "group": "context:instruction-quote",
+              "text": "Actual financial notification: JOD 13 was debited from your account for a completed purchase.",
+              "cosine": 0.6367365906985166,
+              "score": 2.2993352212443394
+            },
+            {
+              "recordId": "settled-payment-completed-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment has completed. It is no longer pending and the debit is settled.",
+              "cosine": 0.6321250320208825,
+              "score": 2.914917586641824
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "otp-versus-settlement-non_transaction-en",
+              "group": "context:otp-versus-settlement",
+              "text": "Your confirmation code for the JOD 18.30 purchase is 7124. The purchase has not completed yet.",
+              "cosine": 0.7887505983804823,
+              "score": -2.5247717663579055
+            },
+            {
+              "recordId": "authored-sms-v1-054",
+              "group": "authored-v1-pending",
+              "text": "Transfer request for 60 JOD awaits your approval. Execution has not started and no debit is posted.",
+              "cosine": 0.6658332750893772,
+              "score": -2.901559615738744
+            },
+            {
+              "recordId": "settled-payment-non_transaction-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment is still pending approval. It has not been executed and no debit was posted.",
+              "cosine": 0.6658015378974369,
+              "score": -1.7772678834149986
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "quoted-example-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -0.3965122966716145,
+        "candidate": "non_transaction",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "هذا مثال توضيحي وليس إشعاراً مالياً: «تم خصم ٣٠ دينار من حسابك بعد اكتمال الشراء».",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-0600",
+              "group": "literal-L236-C15",
+              "text": "JO\nتم قيد دفعة كليك بمبلغ 95.639JOD إلى 0386*319 من حساب EENOLL YGVD LZ-TNKMNR الرصيد 376.740JOD",
+              "cosine": 0.8183340042345508,
+              "score": -2.410392368728089
+            },
+            {
+              "recordId": "synthetic-v1-0175",
+              "group": "literal-L582-C15",
+              "text": "JO\nتم قيد حوالة كليك بمبلغ 53.049 د.أ لحسابك *6127 من PPNX ZZPOFN PIJFBG. رصيدك المتاح هو 542.752 د.أ.",
+              "cosine": 0.5892014874513309,
+              "score": 0.10578589459726334
+            },
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.5792508562105044,
+              "score": 0.4273995816324462
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "instruction-quote-non_transaction-ar",
+              "group": "context:instruction-quote",
+              "text": "مثال تعليمي وليس إشعاراً مالياً: «تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل».",
+              "cosine": 0.9190392376571446,
+              "score": -1.6734585698115372
+            },
+            {
+              "recordId": "synthetic-v1-0011",
+              "group": "literal-L732-C8",
+              "text": "اشتريت من زارا ب 34 دينار مبارح",
+              "cosine": 0.8082950481351378,
+              "score": -3.3342498662711395
+            },
+            {
+              "recordId": "synthetic-v1-0430",
+              "group": "literal-L746-C8",
+              "text": "عملت سحب من الصراف وما طلع مصاري",
+              "cosine": 0.8027703789081413,
+              "score": -4.08119733492072
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "quoted-example-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": 0.9582506298124233,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "This is an example, not a financial notification: \"JOD 30 was debited from your account after the purchase completed.\"",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "instruction-quote-completed-en",
+              "group": "context:instruction-quote",
+              "text": "Actual financial notification: JOD 13 was debited from your account for a completed purchase.",
+              "cosine": 0.8448973891677287,
+              "score": 2.2993352212443394
+            },
+            {
+              "recordId": "transfer-refusal-completed-en",
+              "group": "context:transfer-refusal",
+              "text": "The JOD 67 transfer was executed and debited from your account. This transaction was not declined.",
+              "cosine": 0.7212211369028533,
+              "score": 2.6651822687570728
+            },
+            {
+              "recordId": "authored-sms-v1-002",
+              "group": "authored-v1-withdraw-a",
+              "text": "Cash dispensed. Your account was charged JOD 18.50 for this withdrawal.",
+              "cosine": 0.6653646856263543,
+              "score": 2.906152987153824
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "instruction-quote-non_transaction-en",
+              "group": "context:instruction-quote",
+              "text": "Teaching example, not a financial notification: 'JOD 13 was debited from your account for a completed purchase.'",
+              "cosine": 0.8468739681374693,
+              "score": -0.5241871418431131
+            },
+            {
+              "recordId": "sample-credit-non_transaction-en",
+              "group": "context:sample-credit",
+              "text": "This is an illustrative message only: 'JOD 42 was credited after the transfer completed.' No actual account movement occurred.",
+              "cosine": 0.6758406013512002,
+              "score": -0.8252303618356465
+            },
+            {
+              "recordId": "cash-disbursement-non_transaction-en",
+              "group": "context:cash-disbursement",
+              "text": "Cash was not dispensed and the withdrawal debit was not posted to your account. The withdrawal request was cancelled.",
+              "cosine": 0.6714417300658884,
+              "score": -1.2204809898850164
+            }
+          ]
+        }
+      }
+    ],
+    "authoredProbe": [
+      {
+        "recordId": "probe-cash-receipt-completed-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": 0.284611379576871,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "صرف جهاز السحب النقد وسجل البنك المبلغ مديناً على حسابك. افتح الإيصال لمعرفة القيمة.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "cash-disbursement-completed-ar",
+              "group": "context:cash-disbursement",
+              "text": "أخرج الصراف النقد وتم تسجيل خصم السحب على حسابك. قيمة السحب في كشف الحساب.",
+              "cosine": 0.8417258307287946,
+              "score": 2.2532097337224566
+            },
+            {
+              "recordId": "authored-sms-v1-033",
+              "group": "authored-v1-cashback-a",
+              "text": "أُودع استرداد نقدي بقيمة ٢٫٤٥ JOD في حسابك؛ المبلغ متاح للاستخدام.",
+              "cosine": 0.7587721233991165,
+              "score": 2.0841574333538317
+            },
+            {
+              "recordId": "authored-sms-v1-025",
+              "group": "authored-v1-deposit-a",
+              "text": "قُبل إيداعك النقدي وأصبح مبلغ ١٢٠ JOD مضافاً إلى حسابك.",
+              "cosine": 0.7524546859727093,
+              "score": 2.2428720075294777
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0808",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 793.006 دينار على حسابك *5824.",
+              "cosine": 0.7114510004856034,
+              "score": -0.36864610427244565
+            },
+            {
+              "recordId": "synthetic-v1-0205",
+              "group": "literal-L709-C12",
+              "text": "احصل على تمويل شخصي يصل إلى 45400 دينار بفترة سداد ميسرة وبدون تحويل راتب! قدم طلبك الآن عبر التطبيق.",
+              "cosine": 0.6577555463657888,
+              "score": -1.1034076671235118
+            },
+            {
+              "recordId": "synthetic-v1-0405",
+              "group": "literal-L685-C12",
+              "text": "عميلنا العزيز، تم تفعيل بطاقتك الائتمانية بنجاح، نتمنى لك تجربة مصرفية مميزة.",
+              "cosine": 0.6369416980495242,
+              "score": -2.285442475438427
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-cash-receipt-completed-en",
+        "language": "en",
+        "target": "completed",
+        "score": 5.227720642707895,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "The cash machine paid out the cash and the bank booked the debit. Open the receipt to view the value.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-074",
+              "group": "authored-v1-missing-amount",
+              "text": "Your bill payment completed and its debit was posted to the wallet. Open the statement for the amount.",
+              "cosine": 0.7360613744969031,
+              "score": 3.4048275569905844
+            },
+            {
+              "recordId": "cash-disbursement-completed-ar",
+              "group": "context:cash-disbursement",
+              "text": "أخرج الصراف النقد وتم تسجيل خصم السحب على حسابك. قيمة السحب في كشف الحساب.",
+              "cosine": 0.7183058521621872,
+              "score": 2.2532097337224566
+            },
+            {
+              "recordId": "authored-sms-v1-001",
+              "group": "authored-v1-withdraw-a",
+              "text": "أُنجز سحب نقدي من جهاز الصرف، وخُصم ١٨٫٥٠ د.أ من حسابك.",
+              "cosine": 0.6835906261245055,
+              "score": 1.5402463128153534
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "wallet-posting-non_transaction-en",
+              "group": "context:wallet-posting",
+              "text": "The wallet debit was not posted because bill payment did not complete. Please retry later.",
+              "cosine": 0.5749880474540707,
+              "score": -0.3378020612277868
+            },
+            {
+              "recordId": "synthetic-v1-0244",
+              "group": "literal-L743-C8",
+              "text": "did you receive the payment on Zain cash?",
+              "cosine": 0.5107647928461158,
+              "score": -1.3919235226949414
+            },
+            {
+              "recordId": "billed-versus-paid-non_transaction-en",
+              "group": "context:billed-versus-paid",
+              "text": "Your electricity bill is ready for payment from your account. This is a payment reminder and no amount has been debited.",
+              "cosine": 0.5098808063644722,
+              "score": -1.4045865837363218
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-cash-receipt-non_transaction-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -1.2171785652640323,
+        "candidate": "non_transaction",
+        "word": "completed",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "تعذر صرف النقد من جهاز السحب. لم يسجل البنك أي مبلغ مدين على حسابك.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "cash-disbursement-completed-ar",
+              "group": "context:cash-disbursement",
+              "text": "أخرج الصراف النقد وتم تسجيل خصم السحب على حسابك. قيمة السحب في كشف الحساب.",
+              "cosine": 0.6291656833118646,
+              "score": 2.2532097337224566
+            },
+            {
+              "recordId": "scheduled-versus-executed-completed-ar",
+              "group": "context:scheduled-versus-executed",
+              "text": "نفذت دفعة القسط وخصمت قيمتها من حسابك اليوم. كشف الحساب يتضمن قيمة الدفعة.",
+              "cosine": 0.6044431779483035,
+              "score": 0.35268570876278194
+            },
+            {
+              "recordId": "authored-sms-v1-003",
+              "group": "authored-v1-withdraw-b",
+              "text": "صُرف لك نقداً ۲۷ دينار من الصراف، وقُيّدت العملية على حسابك كخصم.",
+              "cosine": 0.5977524241709001,
+              "score": 0.7636799809849317
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "cash-disbursement-non_transaction-ar",
+              "group": "context:cash-disbursement",
+              "text": "لم يخرج الصراف النقد ولم يتم تسجيل خصم السحب على حسابك. ألغي طلب السحب.",
+              "cosine": 0.8711347905973061,
+              "score": -1.975557243976018
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-ar",
+              "group": "context:refund-refusal",
+              "text": "طلب رد الشراء بقيمة ٩٫٧٥ دينار مرفوض. لم يقيد الاسترداد في حسابك.",
+              "cosine": 0.7015663724740311,
+              "score": -1.4037838058817984
+            },
+            {
+              "recordId": "transfer-refusal-non_transaction-ar",
+              "group": "context:transfer-refusal",
+              "text": "رفضت حوالة ٦٧ دينار ولم يسحب أي مبلغ من حسابك. لا توجد حركة منفذة.",
+              "cosine": 0.7003522409029512,
+              "score": -1.7975711653603184
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-cash-receipt-non_transaction-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": 0.06655903022732632,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "The cash machine could not pay out the cash. The bank did not book any debit to your account.",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "cash-disbursement-completed-en",
+              "group": "context:cash-disbursement",
+              "text": "Cash was dispensed and the withdrawal debit was posted to your account. See the statement for the withdrawal amount.",
+              "cosine": 0.5062895026865112,
+              "score": 2.563841759452806
+            },
+            {
+              "recordId": "authored-sms-v1-003",
+              "group": "authored-v1-withdraw-b",
+              "text": "صُرف لك نقداً ۲۷ دينار من الصراف، وقُيّدت العملية على حسابك كخصم.",
+              "cosine": 0.5044830239144011,
+              "score": 0.7636799809849317
+            },
+            {
+              "recordId": "authored-sms-v1-001",
+              "group": "authored-v1-withdraw-a",
+              "text": "أُنجز سحب نقدي من جهاز الصرف، وخُصم ١٨٫٥٠ د.أ من حسابك.",
+              "cosine": 0.49871485875779437,
+              "score": 1.5402463128153534
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "cash-disbursement-non_transaction-ar",
+              "group": "context:cash-disbursement",
+              "text": "لم يخرج الصراف النقد ولم يتم تسجيل خصم السحب على حسابك. ألغي طلب السحب.",
+              "cosine": 0.6832495211392708,
+              "score": -1.975557243976018
+            },
+            {
+              "recordId": "wallet-posting-non_transaction-ar",
+              "group": "context:wallet-posting",
+              "text": "لم يجر الخصم من المحفظة لأن سداد الفاتورة لم يتم. حاول السداد لاحقاً.",
+              "cosine": 0.6532134545510712,
+              "score": -0.8068372040549296
+            },
+            {
+              "recordId": "synthetic-v1-0438",
+              "group": "literal-L650-C12",
+              "text": "JO\nفشلت عملية الدفع بمبلغ 2.925 JOD بسبب عدم توفر رصيد كافٍ في محفظتك. يرجى إعادة شحن المحفظة والمحاولة لاحقاً.",
+              "cosine": 0.5931440054649229,
+              "score": -1.5474466419443964
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-unpriced-payment-completed-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": 3.0323719453908797,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "انتهى دفع فاتورة المياه وأصبح الخصم مثبتاً في المحفظة. قيمة الفاتورة ضمن سجل الدفعات.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-013",
+              "group": "authored-v1-bill-a",
+              "text": "سُددت الفاتورة رقم 731 بنجاح، وخصم الحساب مبلغ ٤١٫٦٠ دينار.",
+              "cosine": 0.7347400557328375,
+              "score": 2.438145310677228
+            },
+            {
+              "recordId": "synthetic-v1-0645",
+              "group": "literal-L369-C15",
+              "text": "JO\nتم دفع فاتورة مياهنا (Miyahuna) بنجاح بقيمة 55.637 JOD عبر إي فواتيركم من محفظتك. الرصيد المتاح 55.311 JOD. رقم الفاتورة: 6221537.",
+              "cosine": 0.7206258311362228,
+              "score": 0.8667284256811837
+            },
+            {
+              "recordId": "wallet-posting-completed-ar",
+              "group": "context:wallet-posting",
+              "text": "جرى الخصم من المحفظة بعد إتمام سداد الفاتورة بنجاح. يمكنك الاطلاع على القيمة في الكشف.",
+              "cosine": 0.698527433602413,
+              "score": 2.6274867100873682
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0371",
+              "group": "literal-L748-C8",
+              "text": "دفعت الفاتورة على إي فواتيركم وخصموا مرتين",
+              "cosine": 0.6393279191706381,
+              "score": -1.190810244497085
+            },
+            {
+              "recordId": "wallet-posting-non_transaction-en",
+              "group": "context:wallet-posting",
+              "text": "The wallet debit was not posted because bill payment did not complete. Please retry later.",
+              "cosine": 0.6293232009389511,
+              "score": -0.3378020612277868
+            },
+            {
+              "recordId": "synthetic-v1-0244",
+              "group": "literal-L743-C8",
+              "text": "did you receive the payment on Zain cash?",
+              "cosine": 0.5448375807364515,
+              "score": -1.3919235226949414
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-unpriced-payment-completed-en",
+        "language": "en",
+        "target": "completed",
+        "score": 4.4745429473527505,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "Your water bill payment finished and the debit is now recorded in the wallet. The bill value is in the payment history.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "wallet-posting-completed-en",
+              "group": "context:wallet-posting",
+              "text": "The wallet debit was successfully posted after bill payment completed. View your statement for the amount.",
+              "cosine": 0.7477945159608107,
+              "score": 3.589204895286027
+            },
+            {
+              "recordId": "authored-sms-v1-074",
+              "group": "authored-v1-missing-amount",
+              "text": "Your bill payment completed and its debit was posted to the wallet. Open the statement for the amount.",
+              "cosine": 0.7375454754684078,
+              "score": 3.4048275569905844
+            },
+            {
+              "recordId": "billed-versus-paid-completed-en",
+              "group": "context:billed-versus-paid",
+              "text": "Your electricity bill was paid from your account and the debit completed successfully. Check payment details for the amount.",
+              "cosine": 0.6897262838642398,
+              "score": 3.5963082926683834
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "wallet-posting-non_transaction-en",
+              "group": "context:wallet-posting",
+              "text": "The wallet debit was not posted because bill payment did not complete. Please retry later.",
+              "cosine": 0.6816987216008035,
+              "score": -0.3378020612277868
+            },
+            {
+              "recordId": "synthetic-v1-0371",
+              "group": "literal-L748-C8",
+              "text": "دفعت الفاتورة على إي فواتيركم وخصموا مرتين",
+              "cosine": 0.5482803754771899,
+              "score": -1.190810244497085
+            },
+            {
+              "recordId": "billed-versus-paid-non_transaction-en",
+              "group": "context:billed-versus-paid",
+              "text": "Your electricity bill is ready for payment from your account. This is a payment reminder and no amount has been debited.",
+              "cosine": 0.5430056383946553,
+              "score": -1.4045865837363218
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-unpriced-payment-non_transaction-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -2.9840326261739736,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "لم ينته دفع فاتورة المياه ولا يوجد خصم مثبت في المحفظة. أعد المحاولة.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-0645",
+              "group": "literal-L369-C15",
+              "text": "JO\nتم دفع فاتورة مياهنا (Miyahuna) بنجاح بقيمة 55.637 JOD عبر إي فواتيركم من محفظتك. الرصيد المتاح 55.311 JOD. رقم الفاتورة: 6221537.",
+              "cosine": 0.5910968956565187,
+              "score": 0.8667284256811837
+            },
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.5490714419893138,
+              "score": 0.4273995816324462
+            },
+            {
+              "recordId": "authored-sms-v1-001",
+              "group": "authored-v1-withdraw-a",
+              "text": "أُنجز سحب نقدي من جهاز الصرف، وخُصم ١٨٫٥٠ د.أ من حسابك.",
+              "cosine": 0.5437275066953604,
+              "score": 1.5402463128153534
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "wallet-posting-non_transaction-ar",
+              "group": "context:wallet-posting",
+              "text": "لم يجر الخصم من المحفظة لأن سداد الفاتورة لم يتم. حاول السداد لاحقاً.",
+              "cosine": 0.6337089810727239,
+              "score": -0.8068372040549296
+            },
+            {
+              "recordId": "cash-disbursement-non_transaction-ar",
+              "group": "context:cash-disbursement",
+              "text": "لم يخرج الصراف النقد ولم يتم تسجيل خصم السحب على حسابك. ألغي طلب السحب.",
+              "cosine": 0.5979039307941459,
+              "score": -1.975557243976018
+            },
+            {
+              "recordId": "synthetic-v1-0438",
+              "group": "literal-L650-C12",
+              "text": "JO\nفشلت عملية الدفع بمبلغ 2.925 JOD بسبب عدم توفر رصيد كافٍ في محفظتك. يرجى إعادة شحن المحفظة والمحاولة لاحقاً.",
+              "cosine": 0.56238210866716,
+              "score": -1.5474466419443964
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-unpriced-payment-non_transaction-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -1.836134488966618,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "Your water bill payment did not finish and no debit is recorded in the wallet. Please try again.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "wallet-posting-completed-en",
+              "group": "context:wallet-posting",
+              "text": "The wallet debit was successfully posted after bill payment completed. View your statement for the amount.",
+              "cosine": 0.6557687211344052,
+              "score": 3.589204895286027
+            },
+            {
+              "recordId": "authored-sms-v1-074",
+              "group": "authored-v1-missing-amount",
+              "text": "Your bill payment completed and its debit was posted to the wallet. Open the statement for the amount.",
+              "cosine": 0.6494662941794787,
+              "score": 3.4048275569905844
+            },
+            {
+              "recordId": "synthetic-v1-0645",
+              "group": "literal-L369-C15",
+              "text": "JO\nتم دفع فاتورة مياهنا (Miyahuna) بنجاح بقيمة 55.637 JOD عبر إي فواتيركم من محفظتك. الرصيد المتاح 55.311 JOD. رقم الفاتورة: 6221537.",
+              "cosine": 0.6315772406592453,
+              "score": 0.8667284256811837
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "wallet-posting-non_transaction-en",
+              "group": "context:wallet-posting",
+              "text": "The wallet debit was not posted because bill payment did not complete. Please retry later.",
+              "cosine": 0.7661679606028794,
+              "score": -0.3378020612277868
+            },
+            {
+              "recordId": "synthetic-v1-0438",
+              "group": "literal-L650-C12",
+              "text": "JO\nفشلت عملية الدفع بمبلغ 2.925 JOD بسبب عدم توفر رصيد كافٍ في محفظتك. يرجى إعادة شحن المحفظة والمحاولة لاحقاً.",
+              "cosine": 0.6865432508488872,
+              "score": -1.5474466419443964
+            },
+            {
+              "recordId": "cash-disbursement-non_transaction-ar",
+              "group": "context:cash-disbursement",
+              "text": "لم يخرج الصراف النقد ولم يتم تسجيل خصم السحب على حسابك. ألغي طلب السحب.",
+              "cosine": 0.6620047732145965,
+              "score": -1.975557243976018
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-example-context-completed-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": -0.37651078473826705,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "تنبيه حساب حقيقي: نزل راتبك في الحساب بقيمة ٦٠٠ دينار وأصبح الرصيد متاحاً.",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.8415041785362385,
+              "score": 0.4273995816324462
+            },
+            {
+              "recordId": "authored-sms-v1-031",
+              "group": "authored-v1-refund-b",
+              "text": "أُضيف رد دفعة ملغاة بقيمة ۲۹ دينار إلى حسابك كحركة دائنة.",
+              "cosine": 0.8114121654388152,
+              "score": 1.2568168745767305
+            },
+            {
+              "recordId": "refund-refusal-completed-ar",
+              "group": "context:refund-refusal",
+              "text": "قيد رد الشراء بقيمة ٩٫٧٥ دينار في حسابك بنجاح. الاسترداد مكتمل.",
+              "cosine": 0.7783100773985674,
+              "score": 1.6362968139718674
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0808",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 793.006 دينار على حسابك *5824.",
+              "cosine": 0.842918036682435,
+              "score": -0.36864610427244565
+            },
+            {
+              "recordId": "synthetic-v1-0205",
+              "group": "literal-L709-C12",
+              "text": "احصل على تمويل شخصي يصل إلى 45400 دينار بفترة سداد ميسرة وبدون تحويل راتب! قدم طلبك الآن عبر التطبيق.",
+              "cosine": 0.7080885700092009,
+              "score": -1.1034076671235118
+            },
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.6662732725498064,
+              "score": -0.09117214368115643
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-example-context-completed-en",
+        "language": "en",
+        "target": "completed",
+        "score": 1.3041457795676,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "Genuine account alert: your JOD 600 salary has landed in the account and the funds are available.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-048",
+              "group": "authored-v1-salary-b",
+              "text": "Payroll received: 910.50 JOD posted as an increase to your account balance.",
+              "cosine": 0.7643420465885893,
+              "score": 2.2815185517238143
+            },
+            {
+              "recordId": "authored-sms-v1-026",
+              "group": "authored-v1-deposit-a",
+              "text": "Cash deposit accepted and JOD 120 credited to your account.",
+              "cosine": 0.7571614318002564,
+              "score": 1.42383298741565
+            },
+            {
+              "recordId": "authored-sms-v1-046",
+              "group": "authored-v1-salary-a",
+              "text": "Salary of JOD 625 has been added to your account and available balance.",
+              "cosine": 0.7384512339076343,
+              "score": 2.594542675659337
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0808",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 793.006 دينار على حسابك *5824.",
+              "cosine": 0.6615544194702307,
+              "score": -0.36864610427244565
+            },
+            {
+              "recordId": "synthetic-v1-0025",
+              "group": "literal-L745-C8",
+              "text": "check your account, I just sent 39 JOD",
+              "cosine": 0.6431110881992275,
+              "score": -2.6501162519538597
+            },
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.616167033760687,
+              "score": -0.09117214368115643
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-example-context-non_transaction-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -0.5956163732721867,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "النص التالي مثال للاختبار ولا يصف حركة حقيقية: «نزل راتبك في الحساب بقيمة ٦٠٠ دينار وأصبح الرصيد متاحاً».",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.5752754668482394,
+              "score": 0.4273995816324462
+            },
+            {
+              "recordId": "authored-sms-v1-031",
+              "group": "authored-v1-refund-b",
+              "text": "أُضيف رد دفعة ملغاة بقيمة ۲۹ دينار إلى حسابك كحركة دائنة.",
+              "cosine": 0.5273408586707208,
+              "score": 1.2568168745767305
+            },
+            {
+              "recordId": "sample-credit-completed-ar",
+              "group": "context:sample-credit",
+              "text": "هذه حركة حقيقية: أضيف إلى حسابك مبلغ ٤٢ دينار بعد اكتمال التحويل.",
+              "cosine": 0.5143871399208184,
+              "score": 0.3069375095216892
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "instruction-quote-non_transaction-ar",
+              "group": "context:instruction-quote",
+              "text": "مثال تعليمي وليس إشعاراً مالياً: «تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل».",
+              "cosine": 0.5775376225929411,
+              "score": -1.6734585698115372
+            },
+            {
+              "recordId": "sample-credit-non_transaction-ar",
+              "group": "context:sample-credit",
+              "text": "هذه رسالة توضيحية فقط: «أضيف إلى حسابك مبلغ ٤٢ دينار بعد اكتمال التحويل». لم تحدث حركة حقيقية.",
+              "cosine": 0.5278443950414354,
+              "score": -1.5885724198593432
+            },
+            {
+              "recordId": "otp-versus-settlement-non_transaction-ar",
+              "group": "context:otp-versus-settlement",
+              "text": "رمز تأكيد عملية الشراء بقيمة ١٨٫٣٠ دينار هو ٧١٢٤. الشراء لم يكتمل بعد.",
+              "cosine": 0.5240641301993443,
+              "score": -1.1348538837579671
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-example-context-non_transaction-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": 0.4710046858407955,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "The following text is a test example and describes no real movement: 'Your JOD 600 salary has landed in the account and the funds are available.'",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-016",
+              "group": "authored-v1-bill-b",
+              "text": "Bill settlement finished. A debit of JOD 13.250 is now posted to your wallet.",
+              "cosine": 0.5989935464550673,
+              "score": 2.6288486853350697
+            },
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.5890136200892533,
+              "score": 0.4273995816324462
+            },
+            {
+              "recordId": "settled-payment-completed-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment has completed. It is no longer pending and the debit is settled.",
+              "cosine": 0.5863358185689913,
+              "score": 2.914917586641824
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "sample-credit-non_transaction-ar",
+              "group": "context:sample-credit",
+              "text": "هذه رسالة توضيحية فقط: «أضيف إلى حسابك مبلغ ٤٢ دينار بعد اكتمال التحويل». لم تحدث حركة حقيقية.",
+              "cosine": 0.6047027454397507,
+              "score": -1.5885724198593432
+            },
+            {
+              "recordId": "instruction-quote-non_transaction-en",
+              "group": "context:instruction-quote",
+              "text": "Teaching example, not a financial notification: 'JOD 13 was debited from your account for a completed purchase.'",
+              "cosine": 0.5605463732004334,
+              "score": -0.5241871418431131
+            },
+            {
+              "recordId": "synthetic-v1-0218",
+              "group": "literal-L651-C12",
+              "text": "JO\nحركة غير مكتملة: تم رفض عملية التحويل بمبلغ 23.597 JOD بسبب عدم كفاية الرصيد في محفظة زين كاش.",
+              "cosine": 0.5403533130158984,
+              "score": -1.7642107513114351
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-approval-state-completed-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": -0.6081803118131771,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "تمت الموافقة على سداد ٣٤ دينار وانتهى الخصم. لم يعد الطلب معلقاً.",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "transfer-refusal-completed-ar",
+              "group": "context:transfer-refusal",
+              "text": "تم تنفيذ حوالة ٦٧ دينار وخصمها من حسابك. لا يوجد رفض لهذه الحركة.",
+              "cosine": 0.7304934443831161,
+              "score": -0.24786979939210027
+            },
+            {
+              "recordId": "otp-versus-settlement-completed-ar",
+              "group": "context:otp-versus-settlement",
+              "text": "اكتملت عملية الشراء بقيمة ١٨٫٣٠ دينار وقيد الخصم على البطاقة. لا يلزم رمز تأكيد آخر.",
+              "cosine": 0.6328749721358777,
+              "score": -0.4708596500857527
+            },
+            {
+              "recordId": "settled-payment-completed-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment has completed. It is no longer pending and the debit is settled.",
+              "cosine": 0.6215373417576726,
+              "score": 2.914917586641824
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "authored-sms-v1-053",
+              "group": "authored-v1-pending",
+              "text": "طلب تحويل ٦٠ دينار بانتظار موافقتك؛ لم يبدأ التنفيذ ولم يسجل خصم.",
+              "cosine": 0.7184529560792089,
+              "score": -2.6913287361831286
+            },
+            {
+              "recordId": "sample-credit-non_transaction-ar",
+              "group": "context:sample-credit",
+              "text": "هذه رسالة توضيحية فقط: «أضيف إلى حسابك مبلغ ٤٢ دينار بعد اكتمال التحويل». لم تحدث حركة حقيقية.",
+              "cosine": 0.6651029504694723,
+              "score": -1.5885724198593432
+            },
+            {
+              "recordId": "settled-payment-non_transaction-ar",
+              "group": "context:settled-payment",
+              "text": "دفع ٢٤ دينار من بطاقتك ما زال بانتظار الموافقة. لم ينفذ الدفع ولم تخصم القيمة.",
+              "cosine": 0.6636541542005735,
+              "score": -2.006457168013331
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-approval-state-completed-en",
+        "language": "en",
+        "target": "completed",
+        "score": 1.5023054069705977,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "The JOD 34 payment was approved and the debit finished. The request is no longer awaiting approval.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "settled-payment-completed-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment has completed. It is no longer pending and the debit is settled.",
+              "cosine": 0.8498042265335416,
+              "score": 2.914917586641824
+            },
+            {
+              "recordId": "otp-versus-settlement-completed-en",
+              "group": "context:otp-versus-settlement",
+              "text": "The purchase of JOD 18.30 completed and the debit was posted to the card. No further confirmation code is required.",
+              "cosine": 0.8261678960831591,
+              "score": 0.29453888139053686
+            },
+            {
+              "recordId": "instruction-quote-completed-en",
+              "group": "context:instruction-quote",
+              "text": "Actual financial notification: JOD 13 was debited from your account for a completed purchase.",
+              "cosine": 0.7378749260774371,
+              "score": 2.2993352212443394
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "settled-payment-non_transaction-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment is still pending approval. It has not been executed and no debit was posted.",
+              "cosine": 0.8222697761377733,
+              "score": -1.7772678834149986
+            },
+            {
+              "recordId": "authored-sms-v1-054",
+              "group": "authored-v1-pending",
+              "text": "Transfer request for 60 JOD awaits your approval. Execution has not started and no debit is posted.",
+              "cosine": 0.7382916341341667,
+              "score": -2.901559615738744
+            },
+            {
+              "recordId": "authored-sms-v1-052",
+              "group": "authored-v1-declined",
+              "text": "Cash withdrawal of JOD 40 failed. The request was rejected and nothing was debited.",
+              "cosine": 0.7163770619881377,
+              "score": -1.9618852615509752
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-approval-state-non_transaction-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -3.0451663578524775,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "سداد ٣٤ دينار يحتاج موافقتك ولم ينفذ حتى الآن. الرصيد لم يتغير.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "transfer-refusal-completed-ar",
+              "group": "context:transfer-refusal",
+              "text": "تم تنفيذ حوالة ٦٧ دينار وخصمها من حسابك. لا يوجد رفض لهذه الحركة.",
+              "cosine": 0.660600160900975,
+              "score": -0.24786979939210027
+            },
+            {
+              "recordId": "otp-versus-settlement-completed-ar",
+              "group": "context:otp-versus-settlement",
+              "text": "اكتملت عملية الشراء بقيمة ١٨٫٣٠ دينار وقيد الخصم على البطاقة. لا يلزم رمز تأكيد آخر.",
+              "cosine": 0.5329696853851712,
+              "score": -0.4708596500857527
+            },
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.5262255174497555,
+              "score": 0.4273995816324462
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "authored-sms-v1-053",
+              "group": "authored-v1-pending",
+              "text": "طلب تحويل ٦٠ دينار بانتظار موافقتك؛ لم يبدأ التنفيذ ولم يسجل خصم.",
+              "cosine": 0.7569944290196811,
+              "score": -2.6913287361831286
+            },
+            {
+              "recordId": "settled-payment-non_transaction-ar",
+              "group": "context:settled-payment",
+              "text": "دفع ٢٤ دينار من بطاقتك ما زال بانتظار الموافقة. لم ينفذ الدفع ولم تخصم القيمة.",
+              "cosine": 0.7250019871095396,
+              "score": -2.006457168013331
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-ar",
+              "group": "context:refund-refusal",
+              "text": "طلب رد الشراء بقيمة ٩٫٧٥ دينار مرفوض. لم يقيد الاسترداد في حسابك.",
+              "cosine": 0.6518160954266469,
+              "score": -1.4037838058817984
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-approval-state-non_transaction-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -2.8472540470232115,
+        "candidate": "non_transaction",
+        "word": "completed",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "The JOD 34 payment needs your approval and has not been carried out. Your balance has not changed.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "transfer-refusal-completed-en",
+              "group": "context:transfer-refusal",
+              "text": "The JOD 67 transfer was executed and debited from your account. This transaction was not declined.",
+              "cosine": 0.7058892113347504,
+              "score": 2.6651822687570728
+            },
+            {
+              "recordId": "settled-payment-completed-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment has completed. It is no longer pending and the debit is settled.",
+              "cosine": 0.6740727331348473,
+              "score": 2.914917586641824
+            },
+            {
+              "recordId": "otp-versus-settlement-completed-en",
+              "group": "context:otp-versus-settlement",
+              "text": "The purchase of JOD 18.30 completed and the debit was posted to the card. No further confirmation code is required.",
+              "cosine": 0.6192633624024493,
+              "score": 0.29453888139053686
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "settled-payment-non_transaction-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment is still pending approval. It has not been executed and no debit was posted.",
+              "cosine": 0.8109148213827495,
+              "score": -1.7772678834149986
+            },
+            {
+              "recordId": "otp-versus-settlement-non_transaction-en",
+              "group": "context:otp-versus-settlement",
+              "text": "Your confirmation code for the JOD 18.30 purchase is 7124. The purchase has not completed yet.",
+              "cosine": 0.6941844827080597,
+              "score": -2.5247717663579055
+            },
+            {
+              "recordId": "authored-sms-v1-054",
+              "group": "authored-v1-pending",
+              "text": "Transfer request for 60 JOD awaits your approval. Execution has not started and no debit is posted.",
+              "cosine": 0.6874282242371925,
+              "score": -2.901559615738744
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-message-from-friend-completed-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": 1.5705087375965463,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "استلم حسابك ٥٦ دينار من حوالة خارجية وأضيفت القيمة إلى الرصيد المتاح.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-047",
+              "group": "authored-v1-salary-b",
+              "text": "قُيدت حوالة الراتب كزيادة على رصيدك بمبلغ ۹۱۰٫۵۰ دينار.",
+              "cosine": 0.8213292151112022,
+              "score": 1.242655368771809
+            },
+            {
+              "recordId": "authored-sms-v1-031",
+              "group": "authored-v1-refund-b",
+              "text": "أُضيف رد دفعة ملغاة بقيمة ۲۹ دينار إلى حسابك كحركة دائنة.",
+              "cosine": 0.808619466083644,
+              "score": 1.2568168745767305
+            },
+            {
+              "recordId": "authored-sms-v1-037",
+              "group": "authored-v1-fee-a",
+              "text": "تم اقتطاع رسوم خدمة بقيمة ٠٫٧٥ دينار من حسابك وقُيد الخصم نهائياً.",
+              "cosine": 0.7951030624594788,
+              "score": 1.4472798873439137
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0808",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 793.006 دينار على حسابك *5824.",
+              "cosine": 0.7590012940024572,
+              "score": -0.36864610427244565
+            },
+            {
+              "recordId": "synthetic-v1-0205",
+              "group": "literal-L709-C12",
+              "text": "احصل على تمويل شخصي يصل إلى 45400 دينار بفترة سداد ميسرة وبدون تحويل راتب! قدم طلبك الآن عبر التطبيق.",
+              "cosine": 0.6772755959827383,
+              "score": -1.1034076671235118
+            },
+            {
+              "recordId": "synthetic-v1-0244",
+              "group": "literal-L743-C8",
+              "text": "did you receive the payment on Zain cash?",
+              "cosine": 0.6613117508162383,
+              "score": -1.3919235226949414
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-message-from-friend-completed-en",
+        "language": "en",
+        "target": "completed",
+        "score": 3.748509061904269,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "Your account received JOD 56 by an external transfer and the funds were added to the available balance.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-022",
+              "group": "authored-v1-transfer-in-a",
+              "text": "Transfer received from another person. JOD 46.30 added to your account balance.",
+              "cosine": 0.8841909011996187,
+              "score": 1.7659859365283734
+            },
+            {
+              "recordId": "authored-sms-v1-034",
+              "group": "authored-v1-cashback-a",
+              "text": "Cashback of JOD 2.45 has been deposited into your account and is available to spend.",
+              "cosine": 0.763295884406026,
+              "score": 3.0676383652110024
+            },
+            {
+              "recordId": "transfer-refusal-completed-en",
+              "group": "context:transfer-refusal",
+              "text": "The JOD 67 transfer was executed and debited from your account. This transaction was not declined.",
+              "cosine": 0.7592057465207133,
+              "score": 2.6651822687570728
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "sample-credit-non_transaction-en",
+              "group": "context:sample-credit",
+              "text": "This is an illustrative message only: 'JOD 42 was credited after the transfer completed.' No actual account movement occurred.",
+              "cosine": 0.5876403987960281,
+              "score": -0.8252303618356465
+            },
+            {
+              "recordId": "synthetic-v1-0020",
+              "group": "literal-L626-C12",
+              "text": "JO\nYour OTP is 319787 for transfer JOD 10.558 Please dont share.\n59412261",
+              "cosine": 0.5633676403201066,
+              "score": -2.301520975340506
+            },
+            {
+              "recordId": "synthetic-v1-0205",
+              "group": "literal-L709-C12",
+              "text": "احصل على تمويل شخصي يصل إلى 45400 دينار بفترة سداد ميسرة وبدون تحويل راتب! قدم طلبك الآن عبر التطبيق.",
+              "cosine": 0.5517054643251599,
+              "score": -1.1034076671235118
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-message-from-friend-non_transaction-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -1.378597012301793,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "هلا، أنا حولت لك ٥٦ دينار من حسابي، خبرني لما تشوفهم بالرصيد.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-019",
+              "group": "authored-v1-transfer-out-b",
+              "text": "أُرسلت دفعة كليك لشخص آخر وقُيد خصم ۷٫۵۰ دينار على محفظتك.",
+              "cosine": 0.7176199950092579,
+              "score": 1.3880210845345324
+            },
+            {
+              "recordId": "authored-sms-v1-003",
+              "group": "authored-v1-withdraw-b",
+              "text": "صُرف لك نقداً ۲۷ دينار من الصراف، وقُيّدت العملية على حسابك كخصم.",
+              "cosine": 0.7022363889000601,
+              "score": 0.7636799809849317
+            },
+            {
+              "recordId": "authored-sms-v1-023",
+              "group": "authored-v1-transfer-in-b",
+              "text": "اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك ۱۲ دينار.",
+              "cosine": 0.6827153950006191,
+              "score": 1.901647232065977
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "authored-sms-v1-055",
+              "group": "authored-v1-chat",
+              "text": "أنا دفعتلك ١١ دينار عن العشا، ابعثلي لما تتأكد.",
+              "cosine": 0.8733434600928437,
+              "score": -1.8005059261308576
+            },
+            {
+              "recordId": "synthetic-v1-0295",
+              "group": "literal-L740-C8",
+              "text": "معي 95 دينار كاش مين بده كليك؟",
+              "cosine": 0.7655443902997512,
+              "score": -3.190620957756275
+            },
+            {
+              "recordId": "synthetic-v1-0226",
+              "group": "literal-L741-C8",
+              "text": "حولت 1 دنانير بالغلط رجعلي اياهم",
+              "cosine": 0.6737282633976847,
+              "score": -1.2667664903245068
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-message-from-friend-non_transaction-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -1.5943446487867599,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "Hi, I sent you JOD 56 from my account. Let me know when you see it in your balance.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-0455",
+              "group": "literal-L403-C15",
+              "text": "JO\nتم استلام مبلغ 36.94 JOD في محفظتك بنجاح من LIODY ITSEN XASGAFE MNWDJFSR عبر كليك. رصيدك الحالي هو 95.21 JOD. الرقم المرجعي: 5005342.",
+              "cosine": 0.659267777663683,
+              "score": 1.345717098368378
+            },
+            {
+              "recordId": "synthetic-v1-0832",
+              "group": "literal-L481-C15",
+              "text": "JO\nتم تحويل مبلغ 85.575 JOD بنجاح إلى محفظة 0785853409 (HJTHD FWVHJ UVJNKF IJWEWGK) عبر كليك. رصيدك الحالي هو 42.410 JOD. رقم المرجع: 5900151.",
+              "cosine": 0.6034432047671018,
+              "score": 1.7400474855161705
+            },
+            {
+              "recordId": "authored-sms-v1-034",
+              "group": "authored-v1-cashback-a",
+              "text": "Cashback of JOD 2.45 has been deposited into your account and is available to spend.",
+              "cosine": 0.5971722163138455,
+              "score": 3.0676383652110024
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0025",
+              "group": "literal-L745-C8",
+              "text": "check your account, I just sent 39 JOD",
+              "cosine": 0.788487515196323,
+              "score": -2.6501162519538597
+            },
+            {
+              "recordId": "synthetic-v1-0546",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 17.426 دينار على حسابك xxxx883.",
+              "cosine": 0.6252627633763271,
+              "score": -1.0168140217009385
+            },
+            {
+              "recordId": "synthetic-v1-0237",
+              "group": "literal-L675-C12",
+              "text": "Your current balance is JOD 927.190.",
+              "cosine": 0.6231873040951172,
+              "score": -1.0219765761401365
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-rejected-debit-completed-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": -0.24057096900024025,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "خصم شراء بمبلغ ٧٫٦٠ دينار مثبت على بطاقتك. اكتملت التسوية دون رفض.",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "otp-versus-settlement-completed-ar",
+              "group": "context:otp-versus-settlement",
+              "text": "اكتملت عملية الشراء بقيمة ١٨٫٣٠ دينار وقيد الخصم على البطاقة. لا يلزم رمز تأكيد آخر.",
+              "cosine": 0.7794149101343786,
+              "score": -0.4708596500857527
+            },
+            {
+              "recordId": "authored-sms-v1-005",
+              "group": "authored-v1-purchase-a",
+              "text": "سُجل خصم نهائي على بطاقتك مقابل عملية شراء بقيمة ٣٤٫٢٠ دينار.",
+              "cosine": 0.7649198168318188,
+              "score": 1.109291523986786
+            },
+            {
+              "recordId": "settled-payment-completed-ar",
+              "group": "context:settled-payment",
+              "text": "دفع ٢٤ دينار من بطاقتك اكتمل بالفعل. أزيلت حالة الانتظار وسويت الحركة.",
+              "cosine": 0.743950871882421,
+              "score": 0.4317299596067779
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "settled-payment-non_transaction-ar",
+              "group": "context:settled-payment",
+              "text": "دفع ٢٤ دينار من بطاقتك ما زال بانتظار الموافقة. لم ينفذ الدفع ولم تخصم القيمة.",
+              "cosine": 0.8243353314034862,
+              "score": -2.006457168013331
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-ar",
+              "group": "context:refund-refusal",
+              "text": "طلب رد الشراء بقيمة ٩٫٧٥ دينار مرفوض. لم يقيد الاسترداد في حسابك.",
+              "cosine": 0.6881027855811492,
+              "score": -1.4037838058817984
+            },
+            {
+              "recordId": "sample-credit-non_transaction-ar",
+              "group": "context:sample-credit",
+              "text": "هذه رسالة توضيحية فقط: «أضيف إلى حسابك مبلغ ٤٢ دينار بعد اكتمال التحويل». لم تحدث حركة حقيقية.",
+              "cosine": 0.6723493909728295,
+              "score": -1.5885724198593432
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-rejected-debit-completed-en",
+        "language": "en",
+        "target": "completed",
+        "score": 1.8295440213214182,
+        "candidate": "completed",
+        "word": "non_transaction",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "A purchase debit of JOD 7.60 is booked on your card. Settlement finished without rejection.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-006",
+              "group": "authored-v1-purchase-a",
+              "text": "Your card purchase has settled: JOD 34.20 posted as a debit.",
+              "cosine": 0.8256821222391655,
+              "score": 0.8667450591801651
+            },
+            {
+              "recordId": "settled-payment-completed-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment has completed. It is no longer pending and the debit is settled.",
+              "cosine": 0.8121131505105005,
+              "score": 2.914917586641824
+            },
+            {
+              "recordId": "otp-versus-settlement-completed-en",
+              "group": "context:otp-versus-settlement",
+              "text": "The purchase of JOD 18.30 completed and the debit was posted to the card. No further confirmation code is required.",
+              "cosine": 0.8073515884712974,
+              "score": 0.29453888139053686
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "settled-payment-non_transaction-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment is still pending approval. It has not been executed and no debit was posted.",
+              "cosine": 0.7284555910872934,
+              "score": -1.7772678834149986
+            },
+            {
+              "recordId": "otp-versus-settlement-non_transaction-en",
+              "group": "context:otp-versus-settlement",
+              "text": "Your confirmation code for the JOD 18.30 purchase is 7124. The purchase has not completed yet.",
+              "cosine": 0.7141627773949585,
+              "score": -2.5247717663579055
+            },
+            {
+              "recordId": "transfer-refusal-non_transaction-en",
+              "group": "context:transfer-refusal",
+              "text": "The JOD 67 transfer was declined and nothing was debited from your account. No transaction was executed.",
+              "cosine": 0.6548486581642767,
+              "score": 0.7637022741360451
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-rejected-debit-non_transaction-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -1.7786146946337555,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "رفض البنك شراء بمبلغ ٧٫٦٠ دينار. لم يخصم شيء من بطاقتك ولم تتم التسوية.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "otp-versus-settlement-completed-ar",
+              "group": "context:otp-versus-settlement",
+              "text": "اكتملت عملية الشراء بقيمة ١٨٫٣٠ دينار وقيد الخصم على البطاقة. لا يلزم رمز تأكيد آخر.",
+              "cosine": 0.5126826200385033,
+              "score": -0.4708596500857527
+            },
+            {
+              "recordId": "authored-sms-v1-035",
+              "group": "authored-v1-cashback-b",
+              "text": "زاد رصيد محفظتك بمكافأة نقدية مقيدة مقدارها ۳٫۸۰ دينار؛ ليست نقاطاً.",
+              "cosine": 0.4927868550319348,
+              "score": -0.4371030212589936
+            },
+            {
+              "recordId": "authored-sms-v1-011",
+              "group": "authored-v1-merchant-b",
+              "text": "انخفض رصيد محفظتك بمقدار ۲۲٫۱ JOD بعد تنفيذ الدفع للتاجر نهائياً.",
+              "cosine": 0.4872711114856232,
+              "score": 1.7216632715151452
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "transfer-refusal-non_transaction-ar",
+              "group": "context:transfer-refusal",
+              "text": "رفضت حوالة ٦٧ دينار ولم يسحب أي مبلغ من حسابك. لا توجد حركة منفذة.",
+              "cosine": 0.8034684397871852,
+              "score": -1.7975711653603184
+            },
+            {
+              "recordId": "cash-disbursement-non_transaction-ar",
+              "group": "context:cash-disbursement",
+              "text": "لم يخرج الصراف النقد ولم يتم تسجيل خصم السحب على حسابك. ألغي طلب السحب.",
+              "cosine": 0.7369697619597935,
+              "score": -1.975557243976018
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-ar",
+              "group": "context:refund-refusal",
+              "text": "طلب رد الشراء بقيمة ٩٫٧٥ دينار مرفوض. لم يقيد الاسترداد في حسابك.",
+              "cosine": 0.7334095586198519,
+              "score": -1.4037838058817984
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "probe-rejected-debit-non_transaction-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -0.013835255176139568,
+        "candidate": "non_transaction",
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "The bank rejected the JOD 7.60 purchase. Nothing was deducted from your card and settlement did not occur.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "otp-versus-settlement-completed-en",
+              "group": "context:otp-versus-settlement",
+              "text": "The purchase of JOD 18.30 completed and the debit was posted to the card. No further confirmation code is required.",
+              "cosine": 0.6870365339165552,
+              "score": 0.29453888139053686
+            },
+            {
+              "recordId": "transfer-refusal-completed-en",
+              "group": "context:transfer-refusal",
+              "text": "The JOD 67 transfer was executed and debited from your account. This transaction was not declined.",
+              "cosine": 0.6868904735313606,
+              "score": 2.6651822687570728
+            },
+            {
+              "recordId": "settled-payment-completed-en",
+              "group": "context:settled-payment",
+              "text": "Your JOD 24 payment has completed. It is no longer pending and the debit is settled.",
+              "cosine": 0.6163385717968644,
+              "score": 2.914917586641824
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "transfer-refusal-non_transaction-en",
+              "group": "context:transfer-refusal",
+              "text": "The JOD 67 transfer was declined and nothing was debited from your account. No transaction was executed.",
+              "cosine": 0.8628007454384189,
+              "score": 0.7637022741360451
+            },
+            {
+              "recordId": "authored-sms-v1-052",
+              "group": "authored-v1-declined",
+              "text": "Cash withdrawal of JOD 40 failed. The request was rejected and nothing was debited.",
+              "cosine": 0.8006855758880727,
+              "score": -1.9618852615509752
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-en",
+              "group": "context:refund-refusal",
+              "text": "Your purchase refund request for JOD 9.75 was refused. The refund has not been credited to your account.",
+              "cosine": 0.6938296686815826,
+              "score": -2.5441398514246436
+            }
+          ]
+        }
+      }
+    ],
+    "quoteControls": [
+      {
+        "recordId": "manual-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -0.3965122966716145,
+        "candidate": "non_transaction",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": true,
+        "text": "هذا مثال توضيحي وليس إشعاراً مالياً: «تم خصم ٣٠ دينار من حسابك بعد اكتمال الشراء».",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "synthetic-v1-0600",
+              "group": "literal-L236-C15",
+              "text": "JO\nتم قيد دفعة كليك بمبلغ 95.639JOD إلى 0386*319 من حساب EENOLL YGVD LZ-TNKMNR الرصيد 376.740JOD",
+              "cosine": 0.8183340042345508,
+              "score": -2.410392368728089
+            },
+            {
+              "recordId": "synthetic-v1-0175",
+              "group": "literal-L582-C15",
+              "text": "JO\nتم قيد حوالة كليك بمبلغ 53.049 د.أ لحسابك *6127 من PPNX ZZPOFN PIJFBG. رصيدك المتاح هو 542.752 د.أ.",
+              "cosine": 0.5892014874513309,
+              "score": 0.10578589459726334
+            },
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.5792508562105044,
+              "score": 0.4273995816324462
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "instruction-quote-non_transaction-ar",
+              "group": "context:instruction-quote",
+              "text": "مثال تعليمي وليس إشعاراً مالياً: «تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل».",
+              "cosine": 0.9190392376571446,
+              "score": -1.6734585698115372
+            },
+            {
+              "recordId": "synthetic-v1-0011",
+              "group": "literal-L732-C8",
+              "text": "اشتريت من زارا ب 34 دينار مبارح",
+              "cosine": 0.8082950481351378,
+              "score": -3.3342498662711395
+            },
+            {
+              "recordId": "synthetic-v1-0430",
+              "group": "literal-L746-C8",
+              "text": "عملت سحب من الصراف وما طلع مصاري",
+              "cosine": 0.8027703789081413,
+              "score": -4.08119733492072
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "manual-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": 0.9582506298124233,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "non_transaction",
+        "duplicatesManual": true,
+        "text": "This is an example, not a financial notification: \"JOD 30 was debited from your account after the purchase completed.\"",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "instruction-quote-completed-en",
+              "group": "context:instruction-quote",
+              "text": "Actual financial notification: JOD 13 was debited from your account for a completed purchase.",
+              "cosine": 0.8448973891677287,
+              "score": 2.2993352212443394
+            },
+            {
+              "recordId": "transfer-refusal-completed-en",
+              "group": "context:transfer-refusal",
+              "text": "The JOD 67 transfer was executed and debited from your account. This transaction was not declined.",
+              "cosine": 0.7212211369028533,
+              "score": 2.6651822687570728
+            },
+            {
+              "recordId": "authored-sms-v1-002",
+              "group": "authored-v1-withdraw-a",
+              "text": "Cash dispensed. Your account was charged JOD 18.50 for this withdrawal.",
+              "cosine": 0.6653646856263543,
+              "score": 2.906152987153824
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "instruction-quote-non_transaction-en",
+              "group": "context:instruction-quote",
+              "text": "Teaching example, not a financial notification: 'JOD 13 was debited from your account for a completed purchase.'",
+              "cosine": 0.8468739681374693,
+              "score": -0.5241871418431131
+            },
+            {
+              "recordId": "sample-credit-non_transaction-en",
+              "group": "context:sample-credit",
+              "text": "This is an illustrative message only: 'JOD 42 was credited after the transfer completed.' No actual account movement occurred.",
+              "cosine": 0.6758406013512002,
+              "score": -0.8252303618356465
+            },
+            {
+              "recordId": "cash-disbursement-non_transaction-en",
+              "group": "context:cash-disbursement",
+              "text": "Cash was not dispensed and the withdrawal debit was not posted to your account. The withdrawal request was cancelled.",
+              "cosine": 0.6714417300658884,
+              "score": -1.2204809898850164
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "qualified-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -0.5241871418431131,
+        "candidate": "non_transaction",
+        "word": "completed",
+        "context": "non_transaction",
+        "duplicatesManual": false,
+        "text": "Teaching example, not a financial notification: 'JOD 13 was debited from your account for a completed purchase.'",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "instruction-quote-completed-en",
+              "group": "context:instruction-quote",
+              "text": "Actual financial notification: JOD 13 was debited from your account for a completed purchase.",
+              "cosine": 0.7479743050631825,
+              "score": 2.2993352212443394
+            },
+            {
+              "recordId": "transfer-refusal-completed-en",
+              "group": "context:transfer-refusal",
+              "text": "The JOD 67 transfer was executed and debited from your account. This transaction was not declined.",
+              "cosine": 0.6307364453314127,
+              "score": 2.6651822687570728
+            },
+            {
+              "recordId": "authored-sms-v1-002",
+              "group": "authored-v1-withdraw-a",
+              "text": "Cash dispensed. Your account was charged JOD 18.50 for this withdrawal.",
+              "cosine": 0.6024475371451576,
+              "score": 2.906152987153824
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "instruction-quote-non_transaction-en",
+              "group": "context:instruction-quote",
+              "text": "Teaching example, not a financial notification: 'JOD 13 was debited from your account for a completed purchase.'",
+              "cosine": 1.0000000000000002,
+              "score": -0.5241871418431131
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-ar",
+              "group": "context:refund-refusal",
+              "text": "طلب رد الشراء بقيمة ٩٫٧٥ دينار مرفوض. لم يقيد الاسترداد في حسابك.",
+              "cosine": 0.6527189711068064,
+              "score": -1.4037838058817984
+            },
+            {
+              "recordId": "help-quotation-non_transaction-en",
+              "group": "context:help-quotation",
+              "text": "The help centre shows 'The service fee was actually deducted from your balance' as an example only. This is not a debit notification.",
+              "cosine": 0.6247096540072631,
+              "score": -0.18150939808776334
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "qualified-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": -0.7063507151316494,
+        "candidate": "non_transaction",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "هذا نموذج تعليمي: «تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل».",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.615076790171404,
+              "score": 0.4273995816324462
+            },
+            {
+              "recordId": "synthetic-v1-0600",
+              "group": "literal-L236-C15",
+              "text": "JO\nتم قيد دفعة كليك بمبلغ 95.639JOD إلى 0386*319 من حساب EENOLL YGVD LZ-TNKMNR الرصيد 376.740JOD",
+              "cosine": 0.6122295560800244,
+              "score": -2.410392368728089
+            },
+            {
+              "recordId": "synthetic-v1-0382",
+              "group": "literal-L582-C15",
+              "text": "JO\nتم قيد حوالة كليك بمبلغ 55.355 د.أ لحسابك 2138*767 من RIYK ZPUEYG UR-JBGJMC. رصيدك المتاح هو 10.595 د.أ.",
+              "cosine": 0.5587344564770027,
+              "score": 0.27782449197486997
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "instruction-quote-non_transaction-ar",
+              "group": "context:instruction-quote",
+              "text": "مثال تعليمي وليس إشعاراً مالياً: «تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل».",
+              "cosine": 0.8679408195765503,
+              "score": -1.6734585698115372
+            },
+            {
+              "recordId": "synthetic-v1-0011",
+              "group": "literal-L732-C8",
+              "text": "اشتريت من زارا ب 34 دينار مبارح",
+              "cosine": 0.5784269018771933,
+              "score": -3.3342498662711395
+            },
+            {
+              "recordId": "synthetic-v1-0430",
+              "group": "literal-L746-C8",
+              "text": "عملت سحب من الصراف وما طلع مصاري",
+              "cosine": 0.5588556043499864,
+              "score": -4.08119733492072
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "note-en",
+        "language": "en",
+        "target": "non_transaction",
+        "score": -0.19401792010193253,
+        "candidate": "non_transaction",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "NOTE: This is an illustrative sample: JOD 9 was credited to your account.",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-026",
+              "group": "authored-v1-deposit-a",
+              "text": "Cash deposit accepted and JOD 120 credited to your account.",
+              "cosine": 0.6542648047730718,
+              "score": 1.42383298741565
+            },
+            {
+              "recordId": "synthetic-v1-1578",
+              "group": "literal-L403-C15",
+              "text": "JO\nتم استلام مبلغ 60.78 JOD في محفظتك بنجاح من IDNH UJRWV LXIBBTA عبر كليك. رصيدك الحالي هو 511.01 JOD. الرقم المرجعي: 4967963.",
+              "cosine": 0.6354573238414543,
+              "score": 1.2112322821035029
+            },
+            {
+              "recordId": "sample-credit-completed-en",
+              "group": "context:sample-credit",
+              "text": "This is an actual account movement: JOD 42 was credited after the transfer completed.",
+              "cosine": 0.6353460121287907,
+              "score": 3.16973677037307
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0275",
+              "group": "literal-L671-C12",
+              "text": "JO\nYour available balance on account *6532 is JOD 627.023 on 14/08 23:33.",
+              "cosine": 0.6187614023510322,
+              "score": -1.4158395689526957
+            },
+            {
+              "recordId": "synthetic-v1-0237",
+              "group": "literal-L675-C12",
+              "text": "Your current balance is JOD 927.190.",
+              "cosine": 0.6132986387165428,
+              "score": -1.0219765761401365
+            },
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.6027439115980047,
+              "score": -0.09117214368115643
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "note-ar",
+        "language": "ar",
+        "target": "non_transaction",
+        "score": 0.3806233881125439,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "ملاحظة: هذا مثال توضيحي: تم خصم ٩ دينار من حسابك.",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.8172539415604254,
+              "score": 0.4273995816324462
+            },
+            {
+              "recordId": "authored-sms-v1-031",
+              "group": "authored-v1-refund-b",
+              "text": "أُضيف رد دفعة ملغاة بقيمة ۲۹ دينار إلى حسابك كحركة دائنة.",
+              "cosine": 0.7409952703582336,
+              "score": 1.2568168745767305
+            },
+            {
+              "recordId": "authored-sms-v1-003",
+              "group": "authored-v1-withdraw-b",
+              "text": "صُرف لك نقداً ۲۷ دينار من الصراف، وقُيّدت العملية على حسابك كخصم.",
+              "cosine": 0.7224679870471266,
+              "score": 0.7636799809849317
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0751",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 960.175 دينار على حسابك 7255.",
+              "cosine": 0.7469076321639265,
+              "score": -0.5593343383413826
+            },
+            {
+              "recordId": "instruction-quote-non_transaction-en",
+              "group": "context:instruction-quote",
+              "text": "Teaching example, not a financial notification: 'JOD 13 was debited from your account for a completed purchase.'",
+              "cosine": 0.620490305536685,
+              "score": -0.5241871418431131
+            },
+            {
+              "recordId": "sample-credit-non_transaction-ar",
+              "group": "context:sample-credit",
+              "text": "هذه رسالة توضيحية فقط: «أضيف إلى حسابك مبلغ ٤٢ دينار بعد اكتمال التحويل». لم تحدث حركة حقيقية.",
+              "cosine": 0.6148809407107529,
+              "score": -1.5885724198593432
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "merchant-en",
+        "language": "en",
+        "target": "completed",
+        "score": 1.9467876717108064,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "JOD 14 was debited from your account at \"Example Shop\".",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-038",
+              "group": "authored-v1-fee-a",
+              "text": "A service fee of JOD 0.75 was deducted from your account and posted.",
+              "cosine": 0.7717126270489,
+              "score": 3.533305448540485
+            },
+            {
+              "recordId": "instruction-quote-completed-en",
+              "group": "context:instruction-quote",
+              "text": "Actual financial notification: JOD 13 was debited from your account for a completed purchase.",
+              "cosine": 0.7710346362005468,
+              "score": 2.2993352212443394
+            },
+            {
+              "recordId": "authored-sms-v1-002",
+              "group": "authored-v1-withdraw-a",
+              "text": "Cash dispensed. Your account was charged JOD 18.50 for this withdrawal.",
+              "cosine": 0.721574954778778,
+              "score": 2.906152987153824
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "instruction-quote-non_transaction-en",
+              "group": "context:instruction-quote",
+              "text": "Teaching example, not a financial notification: 'JOD 13 was debited from your account for a completed purchase.'",
+              "cosine": 0.6328820150024551,
+              "score": -0.5241871418431131
+            },
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.5844929410423336,
+              "score": -0.09117214368115643
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-ar",
+              "group": "context:refund-refusal",
+              "text": "طلب رد الشراء بقيمة ٩٫٧٥ دينار مرفوض. لم يقيد الاسترداد في حسابك.",
+              "cosine": 0.5478327227258536,
+              "score": -1.4037838058817984
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "merchant-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": 0.4214741070201789,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "تم خصم ١٤ دينار من حسابك لدى «متجر مثال».",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.8345822437080532,
+              "score": 0.4273995816324462
+            },
+            {
+              "recordId": "authored-sms-v1-003",
+              "group": "authored-v1-withdraw-b",
+              "text": "صُرف لك نقداً ۲۷ دينار من الصراف، وقُيّدت العملية على حسابك كخصم.",
+              "cosine": 0.7934590653537482,
+              "score": 0.7636799809849317
+            },
+            {
+              "recordId": "authored-sms-v1-019",
+              "group": "authored-v1-transfer-out-b",
+              "text": "أُرسلت دفعة كليك لشخص آخر وقُيد خصم ۷٫۵۰ دينار على محفظتك.",
+              "cosine": 0.7523341594071604,
+              "score": 1.3880210845345324
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "synthetic-v1-0808",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 793.006 دينار على حسابك *5824.",
+              "cosine": 0.7088294001567703,
+              "score": -0.36864610427244565
+            },
+            {
+              "recordId": "synthetic-v1-0427",
+              "group": "literal-L674-C12",
+              "text": "رصيدك المتوفر في المحفظة هو 736.627 JOD.",
+              "cosine": 0.6424326529734953,
+              "score": -0.09117214368115643
+            },
+            {
+              "recordId": "authored-sms-v1-055",
+              "group": "authored-v1-chat",
+              "text": "أنا دفعتلك ١١ دينار عن العشا، ابعثلي لما تتأكد.",
+              "cosine": 0.6224280574627947,
+              "score": -1.8005059261308576
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "qualified-merchant-en",
+        "language": "en",
+        "target": "completed",
+        "score": 1.9295307189701476,
+        "candidate": "completed",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "JOD 14 was debited from your account at \"Teaching Example\".",
+        "correct": true,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "authored-sms-v1-038",
+              "group": "authored-v1-fee-a",
+              "text": "A service fee of JOD 0.75 was deducted from your account and posted.",
+              "cosine": 0.693964030136639,
+              "score": 3.533305448540485
+            },
+            {
+              "recordId": "instruction-quote-completed-en",
+              "group": "context:instruction-quote",
+              "text": "Actual financial notification: JOD 13 was debited from your account for a completed purchase.",
+              "cosine": 0.625942818665715,
+              "score": 2.2993352212443394
+            },
+            {
+              "recordId": "authored-sms-v1-002",
+              "group": "authored-v1-withdraw-a",
+              "text": "Cash dispensed. Your account was charged JOD 18.50 for this withdrawal.",
+              "cosine": 0.6031225854105161,
+              "score": 2.906152987153824
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "instruction-quote-non_transaction-en",
+              "group": "context:instruction-quote",
+              "text": "Teaching example, not a financial notification: 'JOD 13 was debited from your account for a completed purchase.'",
+              "cosine": 0.7020166249939894,
+              "score": -0.5241871418431131
+            },
+            {
+              "recordId": "synthetic-v1-0414",
+              "group": "literal-L647-C12",
+              "text": "JO\nحركة مرفوضة على بطاقتك المنتهية ب 1914 بقيمة JOD 5.768 بسبب عدم كفاية الرصيد, للمزيد اتصل على 063342098",
+              "cosine": 0.49447519825281494,
+              "score": -1.9872485194172778
+            },
+            {
+              "recordId": "help-quotation-non_transaction-en",
+              "group": "context:help-quotation",
+              "text": "The help centre shows 'The service fee was actually deducted from your balance' as an example only. This is not a debit notification.",
+              "cosine": 0.46296224366804506,
+              "score": -0.18150939808776334
+            }
+          ]
+        }
+      },
+      {
+        "recordId": "qualified-merchant-ar",
+        "language": "ar",
+        "target": "completed",
+        "score": -0.19573856127037292,
+        "candidate": "non_transaction",
+        "word": "completed",
+        "context": "completed",
+        "duplicatesManual": false,
+        "text": "تم خصم ١٤ دينار من حسابك لدى «متجر نموذج تعليمي».",
+        "correct": false,
+        "neighbours": {
+          "completed": [
+            {
+              "recordId": "instruction-quote-completed-ar",
+              "group": "context:instruction-quote",
+              "text": "إشعار مالي فعلي: تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل.",
+              "cosine": 0.7133844227114519,
+              "score": 0.4273995816324462
+            },
+            {
+              "recordId": "authored-sms-v1-003",
+              "group": "authored-v1-withdraw-b",
+              "text": "صُرف لك نقداً ۲۷ دينار من الصراف، وقُيّدت العملية على حسابك كخصم.",
+              "cosine": 0.7065889574755325,
+              "score": 0.7636799809849317
+            },
+            {
+              "recordId": "authored-sms-v1-001",
+              "group": "authored-v1-withdraw-a",
+              "text": "أُنجز سحب نقدي من جهاز الصرف، وخُصم ١٨٫٥٠ د.أ من حسابك.",
+              "cosine": 0.6359777942728873,
+              "score": 1.5402463128153534
+            }
+          ],
+          "non_transaction": [
+            {
+              "recordId": "instruction-quote-non_transaction-en",
+              "group": "context:instruction-quote",
+              "text": "Teaching example, not a financial notification: 'JOD 13 was debited from your account for a completed purchase.'",
+              "cosine": 0.6336372197943249,
+              "score": -0.5241871418431131
+            },
+            {
+              "recordId": "synthetic-v1-0808",
+              "group": "literal-L673-C12",
+              "text": "JO\nرصيد حسابك الحالي هو 793.006 دينار على حسابك *5824.",
+              "cosine": 0.6201021696872374,
+              "score": -0.36864610427244565
+            },
+            {
+              "recordId": "refund-refusal-non_transaction-ar",
+              "group": "context:refund-refusal",
+              "text": "طلب رد الشراء بقيمة ٩٫٧٥ دينار مرفوض. لم يقيد الاسترداد في حسابك.",
+              "cosine": 0.5294290121165143,
+              "score": -1.4037838058817984
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "pairedProbes": [
+    {
+      "group": "probe-cash-receipt",
+      "language": "ar",
+      "positiveId": "probe-cash-receipt-completed-ar",
+      "negativeId": "probe-cash-receipt-non_transaction-ar",
+      "positiveScore": 0.284611379576871,
+      "negativeScore": -1.2171785652640323,
+      "correctScoreOrdering": true,
+      "cosine": 0.5660582489221746,
+      "bothCorrect": true
+    },
+    {
+      "group": "probe-cash-receipt",
+      "language": "en",
+      "positiveId": "probe-cash-receipt-completed-en",
+      "negativeId": "probe-cash-receipt-non_transaction-en",
+      "positiveScore": 5.227720642707895,
+      "negativeScore": 0.06655903022732632,
+      "correctScoreOrdering": true,
+      "cosine": 0.5849021691211361,
+      "bothCorrect": false
+    },
+    {
+      "group": "probe-unpriced-payment",
+      "language": "ar",
+      "positiveId": "probe-unpriced-payment-completed-ar",
+      "negativeId": "probe-unpriced-payment-non_transaction-ar",
+      "positiveScore": 3.0323719453908797,
+      "negativeScore": -2.9840326261739736,
+      "correctScoreOrdering": true,
+      "cosine": 0.6375660255198887,
+      "bothCorrect": true
+    },
+    {
+      "group": "probe-unpriced-payment",
+      "language": "en",
+      "positiveId": "probe-unpriced-payment-completed-en",
+      "negativeId": "probe-unpriced-payment-non_transaction-en",
+      "positiveScore": 4.4745429473527505,
+      "negativeScore": -1.836134488966618,
+      "correctScoreOrdering": true,
+      "cosine": 0.7703736021466813,
+      "bothCorrect": true
+    },
+    {
+      "group": "probe-example-context",
+      "language": "ar",
+      "positiveId": "probe-example-context-completed-ar",
+      "negativeId": "probe-example-context-non_transaction-ar",
+      "positiveScore": -0.37651078473826705,
+      "negativeScore": -0.5956163732721867,
+      "correctScoreOrdering": true,
+      "cosine": 0.6009546291789936,
+      "bothCorrect": false
+    },
+    {
+      "group": "probe-example-context",
+      "language": "en",
+      "positiveId": "probe-example-context-completed-en",
+      "negativeId": "probe-example-context-non_transaction-en",
+      "positiveScore": 1.3041457795676,
+      "negativeScore": 0.4710046858407955,
+      "correctScoreOrdering": true,
+      "cosine": 0.6581329647226377,
+      "bothCorrect": false
+    },
+    {
+      "group": "probe-approval-state",
+      "language": "ar",
+      "positiveId": "probe-approval-state-completed-ar",
+      "negativeId": "probe-approval-state-non_transaction-ar",
+      "positiveScore": -0.6081803118131771,
+      "negativeScore": -3.0451663578524775,
+      "correctScoreOrdering": true,
+      "cosine": 0.6267816940075155,
+      "bothCorrect": false
+    },
+    {
+      "group": "probe-approval-state",
+      "language": "en",
+      "positiveId": "probe-approval-state-completed-en",
+      "negativeId": "probe-approval-state-non_transaction-en",
+      "positiveScore": 1.5023054069705977,
+      "negativeScore": -2.8472540470232115,
+      "correctScoreOrdering": true,
+      "cosine": 0.653755991652812,
+      "bothCorrect": true
+    },
+    {
+      "group": "probe-message-from-friend",
+      "language": "ar",
+      "positiveId": "probe-message-from-friend-completed-ar",
+      "negativeId": "probe-message-from-friend-non_transaction-ar",
+      "positiveScore": 1.5705087375965463,
+      "negativeScore": -1.378597012301793,
+      "correctScoreOrdering": true,
+      "cosine": 0.624561464013129,
+      "bothCorrect": true
+    },
+    {
+      "group": "probe-message-from-friend",
+      "language": "en",
+      "positiveId": "probe-message-from-friend-completed-en",
+      "negativeId": "probe-message-from-friend-non_transaction-en",
+      "positiveScore": 3.748509061904269,
+      "negativeScore": -1.5943446487867599,
+      "correctScoreOrdering": true,
+      "cosine": 0.5028628055628841,
+      "bothCorrect": true
+    },
+    {
+      "group": "probe-rejected-debit",
+      "language": "ar",
+      "positiveId": "probe-rejected-debit-completed-ar",
+      "negativeId": "probe-rejected-debit-non_transaction-ar",
+      "positiveScore": -0.24057096900024025,
+      "negativeScore": -1.7786146946337555,
+      "correctScoreOrdering": true,
+      "cosine": 0.6217556255785452,
+      "bothCorrect": false
+    },
+    {
+      "group": "probe-rejected-debit",
+      "language": "en",
+      "positiveId": "probe-rejected-debit-completed-en",
+      "negativeId": "probe-rejected-debit-non_transaction-en",
+      "positiveScore": 1.8295440213214182,
+      "negativeScore": -0.013835255176139568,
+      "correctScoreOrdering": true,
+      "cosine": 0.7089661490669477,
+      "bothCorrect": true
+    }
+  ]
+}

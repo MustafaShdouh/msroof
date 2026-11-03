@@ -1,0 +1,243 @@
+# Hand-authored weak contrasts. C=completed, N=non_transaction, U=uncertain.
+# {{event:...}}, {{context:...}}, {{scope:...}} mark exact evidence spans.
+# Fictional teaching text; no verified bank formats or real merchant identities.
+
+@ rent-share personal_claim
+C ar {{context:إشعار حركة حساب:}} {{event:أضيفت حصة الإيجار المحولة إليك إلى الرصيد القابل للاستخدام.}}
+C en {{context:Account activity notice:}} {{event:The rent contribution transferred to you has been added to your spendable balance.}}
+N ar {{context:يا صاحبي}} {{event:بعتلك حصتي بالإيجار}}، {{scope:بس افتح حسابك وتأكد إذا وصلتك.}}
+N en {{context:Hey mate,}} {{event:I sent my rent share}}; {{scope:open your account and check whether it reached you.}}
+N ar {{context:اتفاق بين أصحاب:}} {{scope:إذا قدرت بكرا ببعتلك باقي الإيجار.}}
+N en {{context:An arrangement between friends:}} {{scope:If I can tomorrow, I will send the rest of the rent.}}
+U ar {{context:متابعة تحويل الإيجار:}} {{scope:حالة الوصول غير متوفرة حالياً؛ راجع سجل الحركات.}}
+U en {{context:Rent transfer follow-up:}} {{scope:Delivery status is currently unavailable; consult the activity history.}}
+
+@ gift-wallet personal_claim
+C ar {{context:سجل المحفظة:}} {{event:قيدت هدية مرسلة من شخص آخر كإضافة نهائية إلى رصيدك.}}
+C en {{context:Wallet ledger:}} {{event:A gift from another person has been booked as a final credit to your balance.}}
+N ar {{context:مرحبا، أنا خالتك.}} {{event:حولتلك العيدية ع المحفظة}}؛ {{scope:طمنيني بس توصلك.}}
+N en {{context:Hi, it is your aunt.}} {{event:I sent your gift to the wallet}}; {{scope:let me know when it arrives.}}
+N ar {{context:رسالة عائلية:}} {{scope:ابعتلي رقم المحفظة عشان أحول الهدية.}}
+N en {{context:Family message:}} {{scope:Send me your wallet number so I can transfer the gift.}}
+U ar {{context:استعلام عن إضافة الهدية:}} {{scope:الطلب مغلق، لكن نتيجة القيد غير مذكورة.}}
+U en {{context:Gift credit inquiry:}} {{scope:The request is closed, but its posting outcome is unspecified.}}
+
+@ sale-proceeds personal_claim
+C ar {{context:تفاصيل إيداع وارد:}} {{event:ورد ثمن الغرض المباع وقيد في حسابك كرصيد متاح.}}
+C en {{context:Incoming deposit details:}} {{event:Proceeds from the sold item arrived and were posted as available funds in your account.}}
+N ar {{context:أنا المشتري.}} {{event:دفعت حق الغرض بالتحويل}}، {{scope:ابعثلي صورة لما تشوف الدفعة عندك.}}
+N en {{context:I am the buyer.}} {{event:I paid for the item by transfer}}; {{scope:send a picture when you see the payment.}}
+N ar {{context:محادثة بيع:}} {{scope:لا تسلم الغرض قبل ما تتأكد من وصول المصاري.}}
+N en {{context:Sale conversation:}} {{scope:Do not hand over the item before checking that the money arrived.}}
+U ar {{context:متابعة ثمن المبيع:}} {{scope:توجد معاملة مرتبطة بالبيع دون بيان إن كانت قيدت أو ألغيت.}}
+U en {{context:Sale payment follow-up:}} {{scope:A related transaction exists without indicating whether it posted or was cancelled.}}
+
+@ shared-ride personal_claim
+C ar {{context:إضافة في كشف الحساب:}} {{event:استقبل الحساب تعويض أجرة الرحلة من مشارك آخر وأصبح المبلغ متاحاً.}}
+C en {{context:Statement credit entry:}} {{event:The account received another rider's fare reimbursement and the funds are available.}}
+N ar {{context:هلا، أنا اللي ركبت معك.}} {{event:رجعتلك أجرة الطريق ع كليك}}، {{scope:شوف إذا مبينة عندك.}}
+N en {{context:Hi, I shared the ride.}} {{event:I sent your fare back through CliQ}}; {{scope:see whether it shows up.}}
+N ar {{context:ترتيب مصروف الرحلة:}} {{scope:لسه ما بعثت الأجرة، ببعثها بعد الدوام.}}
+N en {{context:Ride expense arrangement:}} {{scope:I have not sent the fare yet; I will send it after work.}}
+U ar {{context:تفاصيل تسوية أجرة:}} {{scope:العملية مؤشرة للمراجعة ولا تظهر نتيجة استقبال المال.}}
+U en {{context:Fare settlement details:}} {{scope:The operation is marked for review with no indication that funds were received.}}
+
+@ payment-copy question_request
+C ar {{context:نسخة سجل سداد:}} {{event:أغلق سداد رسوم التسجيل بنجاح وقيد الخصم في حسابك.}}
+C en {{context:Payment record copy:}} {{event:The registration payment closed successfully and its debit was posted to your account.}}
+N ar {{context:سؤال عن دفع التسجيل:}} {{scope:خلصت الدفع ولا لسه بتحاول؟}}
+N en {{context:Question about registration payment:}} {{scope:Have you finished paying or are you still trying?}}
+N ar {{context:طلب مستند:}} {{scope:نزّل نسخة إيصال التسجيل وابعتها إلي.}}
+N en {{context:Document request:}} {{scope:Download a copy of the registration receipt and send it to me.}}
+U ar {{context:نسخة عملية التسجيل:}} {{scope:رقم المرجع ظاهر لكن خانة نتيجة السداد فارغة.}}
+U en {{context:Registration operation copy:}} {{scope:The reference is visible but the payment outcome field is blank.}}
+
+@ deposit-check question_request
+C ar {{context:إيصال آلة الإيداع:}} {{event:اعتمد الإيداع النقدي وأضيف إلى الرصيد المتاح لحسابك.}}
+C en {{context:Deposit machine receipt:}} {{event:The cash deposit was accepted and added to your account's available balance.}}
+N ar {{context:استفسار شخصي:}} {{scope:الجهاز قبل الإيداع ولا رجعلك الورق؟}}
+N en {{context:Personal inquiry:}} {{scope:Did the machine accept the deposit or return your notes?}}
+N ar {{context:طلب من زميل:}} {{scope:صورلي ورقة الإيداع عشان أعرف رقم المرجع.}}
+N en {{context:Request from a colleague:}} {{scope:Photograph the deposit slip so I can see its reference number.}}
+U ar {{context:متابعة آلة إيداع:}} {{scope:انقطعت الجلسة ولا يمكن تحديد إن كان النقد قيد في الحساب.}}
+U en {{context:Deposit machine follow-up:}} {{scope:The session disconnected and whether the cash posted cannot be determined.}}
+
+@ reversal-query question_request
+C ar {{context:قيد استرداد:}} {{event:عكس خصم المشتريات وأعيدت قيمته فعلياً إلى رصيد البطاقة.}}
+C en {{context:Refund entry:}} {{event:The purchase debit was reversed and its value was actually returned to the card balance.}}
+N ar {{context:سؤال لصديق:}} {{scope:رجعولك حق الطلب الملغي على البطاقة؟}}
+N en {{context:Question to a friend:}} {{scope:Have they returned the cancelled order payment to your card?}}
+N ar {{context:طلب متابعة:}} {{scope:افتح كشف البطاقة ودورلي على قيد الاسترداد.}}
+N en {{context:Follow-up request:}} {{scope:Open the card statement and look for the refund entry for me.}}
+U ar {{context:ملف استرداد:}} {{scope:انتهت معالجة الطلب ولا تتوفر معلومات عن إعادة المبلغ.}}
+U en {{context:Refund case:}} {{scope:Request handling has ended, but information about returning the funds is unavailable.}}
+
+@ wage-receipt question_request
+C ar {{context:إشعار إضافة أجر:}} {{event:قيد أجر العمل في حسابك وبات قابلاً للسحب.}}
+C en {{context:Wage credit notice:}} {{event:Your work payment was booked to your account and is now withdrawable.}}
+N ar {{context:محادثة مع زميل:}} {{scope:شيكت إذا الأجر نزل ولا بعده؟}}
+N en {{context:Conversation with a colleague:}} {{scope:Have you checked whether the wage arrived yet?}}
+N ar {{context:طلب من المحاسب:}} {{scope:ابعث تأكيد استلام الأجر بعد ما تشوفه بكشفك.}}
+N en {{context:Request from the accountant:}} {{scope:Send confirmation of receiving the wage after checking your statement.}}
+U ar {{context:تقرير صرف الأجر:}} {{scope:أرسل الملف للمعالجة دون تأكيد حصول القيد أو فشله.}}
+U en {{context:Wage distribution report:}} {{scope:The file was sent for processing without confirmation of posting or failure.}}
+
+@ tuition-status pending_settled
+C ar {{context:تحديث سداد الدراسة:}} {{event:اكتمل سداد الدفعة الدراسية وسجل الخصم نهائياً.}}
+C en {{context:Tuition payment update:}} {{event:The tuition payment completed and its debit was booked finally.}}
+N ar {{context:تحديث سداد الدراسة:}} {{scope:الدفعة بانتظار اعتمادك ولم تقتطع من الحساب.}}
+N en {{context:Tuition payment update:}} {{scope:The payment awaits your approval and has not been taken from the account.}}
+N ar {{context:تحديث سداد الدراسة:}} {{scope:رفض السداد ولم ينشأ عنه أي خصم.}}
+N en {{context:Tuition payment update:}} {{scope:The payment was refused and produced no debit.}}
+U ar {{context:تحديث سداد الدراسة:}} {{scope:تعذر جلب النتيجة؛ قد تكون الدفعة نفذت أو بقيت معلقة.}}
+U en {{context:Tuition payment update:}} {{scope:The result could not be retrieved; the payment may have executed or remained pending.}}
+
+@ utility-order pending_settled
+C ar {{context:نتيجة أمر دفع الكهرباء:}} {{event:سويت الفاتورة وسجل اقتطاع قيمتها من المحفظة.}}
+C en {{context:Electricity payment order result:}} {{event:The bill settled and its deduction from the wallet was recorded.}}
+N ar {{context:أمر دفع الكهرباء:}} {{scope:حفظ للغد، ولم تخرج قيمته من المحفظة.}}
+N en {{context:Electricity payment order:}} {{scope:Saved for tomorrow; its value has not left the wallet.}}
+N ar {{context:أمر دفع الكهرباء:}} {{scope:ألغي قبل التنفيذ، والرصيد لم يتغير.}}
+N en {{context:Electricity payment order:}} {{scope:Cancelled before execution; the balance has not changed.}}
+U ar {{context:أمر دفع الكهرباء:}} {{scope:انتهت مهلة الاتصال دون نتيجة يمكن الاعتماد عليها.}}
+U en {{context:Electricity payment order:}} {{scope:The connection timed out without a reliable outcome.}}
+
+@ cash-out-status pending_settled
+C ar {{context:إغلاق عملية صرف نقد:}} {{event:سلمت الآلة النقد وسجلت قيمته خصماً نهائياً من حسابك.}}
+C en {{context:Cash payout operation closed:}} {{event:The machine delivered the cash and its value was recorded as a final account debit.}}
+N ar {{context:طلب صرف نقد:}} {{scope:بانتظار إدخال رمز التحقق ولم يصرف نقد أو يقيد خصم.}}
+N en {{context:Cash payout request:}} {{scope:Awaiting a verification code; no cash was delivered and no debit posted.}}
+N ar {{context:طلب صرف نقد:}} {{scope:فشل قبل إخراج المال وألغي دون خصم.}}
+N en {{context:Cash payout request:}} {{scope:Failed before dispensing money and was cancelled without a debit.}}
+U ar {{context:بلاغ صرف نقد:}} {{scope:نتيجة الجهاز غير معروفة وقيد الحساب يحتاج تحققاً.}}
+U en {{context:Cash payout incident:}} {{scope:The machine outcome is unknown and the account posting needs verification.}}
+
+@ booking-charge pending_settled
+C ar {{context:تحديث قيمة حجز:}} {{event:سجل اقتطاع مبلغ الحجز كتسوية نهائية في بطاقتك.}}
+C en {{context:Booking charge update:}} {{event:The booking amount was booked as a settled debit on your card.}}
+N ar {{context:تحديث قيمة حجز:}} {{scope:هذا حجز تفويض مؤقت فقط؛ لم يسجل اقتطاع نهائي.}}
+N en {{context:Booking charge update:}} {{scope:This is only a temporary authorization hold; no settled debit was booked.}}
+N ar {{context:تحديث قيمة حجز:}} {{scope:أوقف التفويض قبل التسوية دون تسجيل دفعة.}}
+N en {{context:Booking charge update:}} {{scope:The authorization was stopped before settlement without recording a payment.}}
+U ar {{context:تحديث قيمة حجز:}} {{scope:ظهرت قيمة على البطاقة ولا تتضح صفتها كحجز أو خصم مسوى.}}
+U en {{context:Booking charge update:}} {{scope:An amount appears on the card without identifying it as a hold or a settled debit.}}
+
+@ repayment-negation negated_failure
+C ar {{context:حالة سداد قرض:}} {{event:قيدت الدفعة وخصمت القيمة.}} {{scope:القول إن السداد رفض غير صحيح.}}
+C en {{context:Loan repayment status:}} {{event:The payment posted and the value was deducted.}} {{scope:The claim that repayment was refused is incorrect.}}
+N ar {{context:حالة سداد قرض:}} {{scope:ليس صحيحاً أن الدفعة قيدت؛ فقد رفض السداد دون خصم.}}
+N en {{context:Loan repayment status:}} {{scope:It is incorrect that the payment posted; repayment was refused without a debit.}}
+N ar {{context:حالة سداد قرض:}} {{scope:لم يرفع الرفض ولا تزال الدفعة غير منفذة.}}
+N en {{context:Loan repayment status:}} {{scope:The refusal has not been lifted and the payment remains unexecuted.}}
+U ar {{context:حالة سداد قرض:}} {{scope:تظهر إشارة رفض وإشارة قيد مكتمل لنفس الدفعة دون توضيح أيهما الأحدث.}}
+U en {{context:Loan repayment status:}} {{scope:A refusal and a completed posting appear for the same payment without indicating which is newer.}}
+
+@ cheque-credit negated_failure
+C ar {{context:إضافة شيك:}} {{event:أصبحت قيمة الشيك رصيداً متاحاً.}} {{scope:لم يعد الإيداع مرفوضاً.}}
+C en {{context:Cheque credit:}} {{event:The cheque value became available funds.}} {{scope:The deposit is no longer rejected.}}
+N ar {{context:إضافة شيك:}} {{scope:لم تصبح قيمة الشيك متاحة؛ ما زال الإيداع مرفوضاً.}}
+N en {{context:Cheque credit:}} {{scope:The cheque value has not become available; the deposit remains rejected.}}
+N ar {{context:إضافة شيك:}} {{scope:إزالة التنبيه لا تعني قيد القيمة؛ التحصيل لم يبدأ.}}
+N en {{context:Cheque credit:}} {{scope:Removing the warning does not mean the value posted; collection has not started.}}
+U ar {{context:إضافة شيك:}} {{scope:لا يوجد رفض ظاهر، لكن لا يوجد أيضاً تأكيد قيد أو إتاحة.}}
+U en {{context:Cheque credit:}} {{scope:No refusal is visible, but there is also no confirmation of posting or availability.}}
+
+@ reward-credit negated_failure
+C ar {{context:مكافأة نقدية:}} {{event:أضيفت المكافأة بالفعل إلى حسابك.}} {{scope:القيمة مال مقيد وليست رصيد نقاط.}}
+C en {{context:Cash reward:}} {{event:The reward has actually been added to your account.}} {{scope:The value is posted money, not loyalty points.}}
+N ar {{context:مكافأة الحساب:}} {{scope:هذه نقاط مكافآت وليست إضافة مالية؛ لم يتغير رصيد المال.}}
+N en {{context:Account reward:}} {{scope:These are reward points rather than a cash credit; the money balance has not changed.}}
+N ar {{context:مكافأة نقدية:}} {{scope:لم تقيد المكافأة حتى الآن، رغم أنها لم ترفض.}}
+N en {{context:Cash reward:}} {{scope:The reward has not posted yet, although it was not refused.}}
+U ar {{context:مكافأة الحساب:}} {{scope:توجد قيمة مكافأة دون تحديد أهي نقاط أم مال مضاف فعلياً.}}
+U en {{context:Account reward:}} {{scope:A reward value appears without specifying whether it is points or actual credited money.}}
+
+@ collection-final negated_failure
+C ar {{context:نتيجة تحصيل دفعة:}} {{event:انتهى التحصيل وأضيف العائد إلى حسابك.}} {{scope:لا توجد خطوة اعتماد متبقية.}}
+C en {{context:Collection result:}} {{event:Collection finished and its proceeds were credited to your account.}} {{scope:No approval step remains.}}
+N ar {{context:نتيجة تحصيل دفعة:}} {{scope:لا يصح اعتبارها محصلة؛ ما زال اعتمادها مطلوباً ولم يضف العائد.}}
+N en {{context:Collection result:}} {{scope:It cannot be considered collected; approval is still required and no proceeds were added.}}
+N ar {{context:نتيجة تحصيل دفعة:}} {{scope:عدم ظهور خطأ لا يؤكد التنفيذ؛ الطلب لم يغادر قائمة الانتظار.}}
+N en {{context:Collection result:}} {{scope:The absence of an error does not confirm execution; the request has not left the queue.}}
+U ar {{context:نتيجة تحصيل دفعة:}} {{scope:لا يمكن التأكد من التنفيذ أو نفيه بسبب نقص السجل.}}
+U en {{context:Collection result:}} {{scope:Execution can neither be confirmed nor ruled out because the record is incomplete.}}
+
+@ service-fee-sample illustrative_scope
+C ar {{context:قيد عمولة حساب:}} {{event:خصمت عمولة الخدمة من رصيدك وسجلت في الكشف.}}
+C en {{context:Account fee entry:}} {{event:The service fee was deducted from your balance and recorded in the statement.}}
+N ar {{context:دليل قراءة الكشف، مثال افتراضي:}} «{{event:خصمت عمولة الخدمة من رصيدك وسجلت في الكشف.}}» {{scope:لا يصف المثال حساب القارئ.}}
+N en {{context:Statement guide, hypothetical example:}} "{{event:The service fee was deducted from your balance and recorded in the statement.}}" {{scope:The example does not describe the reader's account.}}
+N ar {{context:تدريب على الإشعارات:}} {{scope:اكتب رسالة تقول إن عمولة الخدمة خصمت؛ لا تنفذ أي خصم.}}
+N en {{context:Notification writing exercise:}} {{scope:Write a message saying a service fee was deducted; do not execute any charge.}}
+U ar {{context:نص معروض في صفحة مساعدة:}} «{{event:قيدت عمولة الخدمة.}}» {{scope:لا يتضح إن كان النص نموذجاً أو من كشف الحساب الفعلي.}}
+U en {{context:Text shown on a help page:}} "{{event:The service fee posted.}}" {{scope:It is unclear whether this is a template or an actual statement entry.}}
+
+@ pension-demo illustrative_scope
+C ar {{context:حركة معاش:}} {{event:وصل المعاش وسجل دائناً في حسابك المتاح.}}
+C en {{context:Pension activity:}} {{event:The pension arrived and was booked as a credit in your available account balance.}}
+N ar {{context:عرض تجريبي لا يرتبط بحسابك:}} «{{event:وصل المعاش وسجل دائناً في حسابك المتاح.}}»
+N en {{context:Demo display unrelated to your account:}} "{{event:The pension arrived and was booked as a credit in your available account balance.}}"
+N ar {{context:سؤال في دورة تدريبية:}} {{scope:أي عبارة تدل على قيد المعاش في الحساب؟}}
+N en {{context:Question in a training course:}} {{scope:Which phrase indicates that a pension was credited to an account?}}
+U ar {{context:رسالة معاش معاد توجيهها:}} {{scope:لا يظهر إن كانت تخص حسابك أم مقتبسة من العرض التجريبي.}}
+U en {{context:Forwarded pension message:}} {{scope:It does not show whether it concerns your account or quotes the demo display.}}
+
+@ refund-tutorial illustrative_scope
+C ar {{context:إفادة استرداد حسابك:}} {{event:أعيدت قيمة الحجز إلى محفظتك وأصبحت متاحة للاستخدام.}}
+C en {{context:Your account refund advice:}} {{event:The reservation value was returned to your wallet and became spendable.}}
+N ar {{context:نص توضيحي في درس عن الاسترداد:}} «{{event:أعيدت قيمة الحجز إلى محفظتك وأصبحت متاحة للاستخدام.}}»
+N en {{context:Illustrative text in a refund lesson:}} "{{event:The reservation value was returned to your wallet and became spendable.}}"
+N ar {{context:تعليمات تحرير نموذج:}} {{scope:استبدل خانة الحالة بعبارة أعيدت القيمة؛ هذه معاينة وليست حركة حساب.}}
+N en {{context:Template editing instructions:}} {{scope:Replace the status field with value returned; this is a preview rather than account activity.}}
+U ar {{context:معاينة استرداد:}} {{scope:بيانات الحركة حقيقية أو تجريبية؛ نوع المعاينة غير محدد.}}
+U en {{context:Refund preview:}} {{scope:The activity data may be real or simulated; the preview type is unspecified.}}
+
+@ card-alert-lesson illustrative_scope
+C ar {{context:نتيجة مشتريات البطاقة:}} {{event:دفعت قيمة المشتريات وقيدت مديناً على البطاقة.}}
+C en {{context:Card purchase result:}} {{event:The purchase value was paid and booked as a debit on the card.}}
+N ar {{context:اختبار فهم لغوي، اقرأ العبارة فقط:}} «{{event:دفعت قيمة المشتريات وقيدت مديناً على البطاقة.}}»
+N en {{context:Language comprehension exercise, read this sentence only:}} "{{event:The purchase value was paid and booked as a debit on the card.}}"
+N ar {{context:ملاحظة محرر الدرس:}} {{scope:كل إشعارات الخصم في هذه الصفحة مختلقة ولا تخص حساباً حقيقياً.}}
+N en {{context:Lesson editor's note:}} {{scope:All debit notices on this page are invented and concern no real account.}}
+U ar {{context:قصاصة إشعار بطاقة:}} {{scope:بداية الرسالة مفقودة، فلا نعرف هل السطر المتبقي اقتباس تعليمي أم حركة فعلية.}}
+U en {{context:Card notice fragment:}} {{scope:The message opening is missing, so the remaining line could be a teaching quote or actual activity.}}
+
+@ shop-reminder party_scope
+C ar {{context:عملية بطاقة مكتملة:}} {{event:قيد شراء لدى «متجر تذكير» وخصمت قيمته.}}
+C en {{context:Completed card operation:}} {{event:A purchase at Reminder Store posted and its value was deducted.}}
+C ar {{context:عملية بطاقة مكتملة:}} {{event:قيد شراء لدى متجر الحديقة وخصمت قيمته.}}
+C en {{context:Completed card operation:}} {{event:A purchase at Garden Store posted and its value was deducted.}}
+N ar {{context:تذكير بدفع مشتريات:}} {{scope:الدفع لم ينفذ بعد ولم يخصم شيء؛ المتجر ينتظر موافقتك.}}
+N en {{context:Purchase payment reminder:}} {{scope:Payment has not executed and nothing was deducted; the store awaits your approval.}}
+U ar {{context:حركة مرتبطة بمتجر تذكير:}} {{scope:حالة قيد المبلغ غير مدرجة.}}
+U en {{context:Operation associated with Reminder Store:}} {{scope:The amount's posting status is not listed.}}
+
+@ cafe-test party_scope
+C ar {{context:قيد مصروف بطاقة:}} {{event:خصمت قيمة الزيارة لدى «مقهى اختبار» بعد تسوية الدفع.}}
+C en {{context:Card expense entry:}} {{event:The visit charge at Test Cafe was deducted after payment settled.}}
+C ar {{context:قيد مصروف بطاقة:}} {{event:خصمت قيمة الزيارة لدى مقهى الساحة بعد تسوية الدفع.}}
+C en {{context:Card expense entry:}} {{event:The visit charge at Square Cafe was deducted after payment settled.}}
+N ar {{context:اختبار نظام الدفع دون حسابات فعلية:}} {{scope:السطر التالي يحاكي خصم ثمن زيارة مقهى ولا ينفذه.}}
+N en {{context:Payment system test without actual accounts:}} {{scope:The following line simulates a cafe visit debit without executing it.}}
+U ar {{context:تقرير زيارة مقهى اختبار:}} {{scope:وردت قيمة الدفع دون بيان إن كانت خصماً أو تفويضاً مؤقتاً.}}
+U en {{context:Test Cafe visit report:}} {{scope:A payment value appears without indicating whether it is a debit or a temporary authorization.}}
+
+@ bookshop-pending party_scope
+C ar {{context:تسوية مشتريات:}} {{event:سجل خصم الكتب من «مكتبة انتظار» في كشف حسابك.}}
+C en {{context:Purchase settlement:}} {{event:The book purchase debit from Pending Books was recorded in your statement.}}
+C ar {{context:تسوية مشتريات:}} {{event:سجل خصم الكتب من مكتبة الورق في كشف حسابك.}}
+C en {{context:Purchase settlement:}} {{event:The book purchase debit from Paper Books was recorded in your statement.}}
+N ar {{context:شراء كتب بانتظار التسوية:}} {{scope:المبلغ محجوز مؤقتاً فقط ولم يسجل خصم نهائي.}}
+N en {{context:Book purchase pending settlement:}} {{scope:The amount is temporarily held only; no final debit was recorded.}}
+U ar {{context:ملخص مكتبة انتظار:}} {{scope:يظهر مرجع شراء دون حالة مالية واضحة.}}
+U en {{context:Pending Books summary:}} {{scope:A purchase reference appears without a clear financial status.}}
+
+@ vendor-cancel party_scope
+C ar {{context:إشعار دفع منجز:}} {{event:اقتطعت دفعة مشتريات لدى «متجر إلغاء» وأثبتت في حسابك.}}
+C en {{context:Executed payment notice:}} {{event:A purchase payment to Cancel Shop was deducted and booked to your account.}}
+C ar {{context:إشعار دفع منجز:}} {{event:اقتطعت دفعة مشتريات لدى متجر الحي وأثبتت في حسابك.}}
+C en {{context:Executed payment notice:}} {{event:A purchase payment to Neighbourhood Shop was deducted and booked to your account.}}
+N ar {{context:إلغاء دفع قبل التنفيذ:}} {{scope:لم تسجل دفعة المشتريات ولم يقتطع رصيد.}}
+N en {{context:Payment cancellation before execution:}} {{scope:The purchase payment was not booked and no funds were deducted.}}
+U ar {{context:استعلام متجر إلغاء:}} {{scope:السجل يعرض طلب مشتريات بلا نتيجة تنفيذ.}}
+U en {{context:Cancel Shop inquiry:}} {{scope:The record shows a purchase request without an execution outcome.}}

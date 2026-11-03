@@ -1,0 +1,20 @@
+{
+  "runId": "sms_auxiliary_status_v1",
+  "binding": {
+    "protocolSha256": "75a3f4fb108f08eda942db8eb29165db5dad883913ef0bd8972b477f1f62d8cc",
+    "producerSha256": "84cb441260c4017b8bf80878c272a487f5d7cf19499c2c6145f7f6cb9282aff0",
+    "viewProducerSha256": "d21828372cec9773296682c57fc24ba2cbc0fc1f3c2738a36bf3c61587991cf6",
+    "environment": {
+      "torch": "2.14.1+cpu",
+      "transformers": "5.21.0",
+      "numpy": "2.5.4",
+      "safetensors": "0.8.0"
+    }
+  },
+  "ownerApproval": {
+    "date": "2026-10-28",
+    "instruction": "go",
+    "scope": "Implement, execute and audit the fixed one-run primary-status/auxiliary-context-event experiment; no reserved inference"
+  },
+  "trainingRunsAuthorized": 1
+}

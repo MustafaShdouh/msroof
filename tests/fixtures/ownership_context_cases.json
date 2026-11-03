@@ -1,0 +1,1581 @@
+{
+  "dataKind": "assistant_authored_development_controls",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "cases": [
+    {
+      "id": "external_resolved",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "categoryStatus": "uncertain"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "own_resolved",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "own_accounts"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "unknown_missing",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        }
+      },
+      "contextStatus": "absent",
+      "contextReason": "not_provided",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "unknown_null",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": null
+      },
+      "contextStatus": "absent",
+      "contextReason": "not_provided",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "unknown_unknown",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "unknown"
+        }
+      },
+      "contextStatus": "unresolved",
+      "contextReason": "confirmation_unknown",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "own_missing",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Transfer of JOD 75.00 between your own accounts completed."
+        }
+      },
+      "contextStatus": "absent",
+      "contextReason": "not_provided",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "own_null",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Transfer of JOD 75.00 between your own accounts completed."
+        },
+        "ownershipContext": null
+      },
+      "contextStatus": "absent",
+      "contextReason": "not_provided",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "own_unknown",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Transfer of JOD 75.00 between your own accounts completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Transfer of JOD 75.00 between your own accounts completed.",
+          "evidence": "user_confirmed",
+          "relationship": "unknown"
+        }
+      },
+      "contextStatus": "unresolved",
+      "contextReason": "confirmation_unknown",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "external_missing",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to another person's wallet completed."
+        }
+      },
+      "contextStatus": "absent",
+      "contextReason": "not_provided",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "external_null",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to another person's wallet completed."
+        },
+        "ownershipContext": null
+      },
+      "contextStatus": "absent",
+      "contextReason": "not_provided",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "external_unknown",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to another person's wallet completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to another person's wallet completed.",
+          "evidence": "user_confirmed",
+          "relationship": "unknown"
+        }
+      },
+      "contextStatus": "unresolved",
+      "contextReason": "confirmation_unknown",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "agree_own",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Transfer of JOD 75.00 between your own accounts completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Transfer of JOD 75.00 between your own accounts completed.",
+          "evidence": "user_confirmed",
+          "relationship": "own_accounts"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "agree_external",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to another person's wallet completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to another person's wallet completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "own_conflict",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Transfer of JOD 75.00 between your own accounts completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Transfer of JOD 75.00 between your own accounts completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "conflict",
+      "contextReason": "text_context_conflict",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "categoryStatus": "not_applicable"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "external_conflict",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to another person's wallet completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to another person's wallet completed.",
+          "evidence": "user_confirmed",
+          "relationship": "own_accounts"
+        }
+      },
+      "contextStatus": "conflict",
+      "contextReason": "text_context_conflict",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "categoryStatus": "not_applicable"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "missing_amount_own",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Transfer between your own accounts completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Transfer between your own accounts completed.",
+          "evidence": "user_confirmed",
+          "relationship": "own_accounts"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {
+        "trackingDecision": "exclude",
+        "amount": null
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "missing_amount_other",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "uncertain"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "missing_direction",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Transfer of JOD 20.00 to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Transfer of JOD 20.00 to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "uncertain"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "uncertain_completion",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Outward transfer of JOD 20.00."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Outward transfer of JOD 20.00.",
+          "evidence": "user_confirmed",
+          "relationship": "own_accounts"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "purpose_after_resolution",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 8.00 debited. Transfer to LOCAL PERSON completed as payment for a restaurant meal."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 8.00 debited. Transfer to LOCAL PERSON completed as payment for a restaurant meal.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {
+        "trackingDecision": "include",
+        "expenseCategory": "Food",
+        "categoryStatus": "assigned"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "arabic_incoming",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "تم استلام دفعة كليك بمبلغ ١٢٫٣٧٥ دينار إلى محفظتك من LOCAL PERSON."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "تم استلام دفعة كليك بمبلغ ١٢٫٣٧٥ دينار إلى محفظتك من LOCAL PERSON.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 12.375
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "arabic_own",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "تم تحويل مبلغ ١٢٫٣٧٥ دينار بنجاح من حسابك إلى LOCAL PERSON."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "تم تحويل مبلغ ١٢٫٣٧٥ دينار بنجاح من حسابك إلى LOCAL PERSON.",
+          "evidence": "user_confirmed",
+          "relationship": "own_accounts"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "amount": 12.375
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "arabic_conflict",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "تم تحويل ٧٥ د.أ بنجاح بين حساباتك الشخصية."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "تم تحويل ٧٥ د.أ بنجاح بين حساباتك الشخصية.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "conflict",
+      "contextReason": "text_context_conflict",
+      "expect": {
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "otp",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Your OTP for transfer JOD 20.00 is 481763."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Your OTP for transfer JOD 20.00 is 481763.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "not_applicable",
+      "contextReason": "non_transaction",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "chat",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Can you send me 20 JOD?"
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Can you send me 20 JOD?",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "not_applicable",
+      "contextReason": "non_transaction",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "request",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Please transfer JOD 20.00."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Please transfer JOD 20.00.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "not_applicable",
+      "contextReason": "non_transaction",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "declined",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Transfer of JOD 20.00 declined."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Transfer of JOD 20.00 declined.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "not_applicable",
+      "contextReason": "non_transaction",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "purchase",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Card purchase completed for JOD 20.00."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Card purchase completed for JOD 20.00.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "not_applicable",
+      "contextReason": "not_a_transfer",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "paired_unrecognized",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited from *1111 and credited to *2222."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited from *1111 and credited to *2222.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "not_applicable",
+      "contextReason": "not_a_transfer",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "owner_binding",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-2",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "owner_mismatch",
+      "expect": {
+        "trackingDecision": "review",
+        "transferRelationship": "unknown",
+        "direction": "outgoing"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "message_binding",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-2",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "message_mismatch",
+      "expect": {
+        "trackingDecision": "review",
+        "transferRelationship": "unknown",
+        "direction": "outgoing"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "raw_amount",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 21.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "message_mismatch",
+      "expect": {
+        "trackingDecision": "review",
+        "transferRelationship": "unknown",
+        "direction": "outgoing"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "raw_whitespace",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed. ",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "message_mismatch",
+      "expect": {
+        "trackingDecision": "review",
+        "transferRelationship": "unknown",
+        "direction": "outgoing"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "raw_digits",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD ٢٠٫٠٠ debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "message_mismatch",
+      "expect": {
+        "trackingDecision": "review",
+        "transferRelationship": "unknown",
+        "direction": "outgoing"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "version",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "2.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "unsupported_version",
+      "expect": {
+        "trackingDecision": "review",
+        "transferRelationship": "unknown",
+        "direction": "outgoing"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "evidence",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "model_predicted",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "untrusted_evidence",
+      "expect": {
+        "trackingDecision": "review",
+        "transferRelationship": "unknown",
+        "direction": "outgoing"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "relationship",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "not_transfer"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review",
+        "transferRelationship": "unknown",
+        "direction": "outgoing"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "wrong_type",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": false,
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review",
+        "transferRelationship": "unknown",
+        "direction": "outgoing"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "array",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": []
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "two_confirmations",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": [
+          {
+            "schemaVersion": "1.0.0",
+            "ownerScopeId": "owner-1",
+            "messageId": "sms-1",
+            "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+            "evidence": "user_confirmed",
+            "relationship": "other_person"
+          },
+          {
+            "schemaVersion": "1.0.0",
+            "ownerScopeId": "owner-1",
+            "messageId": "sms-1",
+            "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+            "evidence": "user_confirmed",
+            "relationship": "own_accounts"
+          }
+        ]
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "boolean",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": true
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "number",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": 1
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "string",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": "own_accounts"
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "empty_object",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {}
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "missing_context_schemaVersion",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "missing_context_ownerScopeId",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "missing_context_messageId",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "missing_context_text",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "missing_context_evidence",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "missing_context_relationship",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "context_extra",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person",
+          "extra": true
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_context",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "request_extra",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        },
+        "extra": true
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "empty_owner",
+      "request": {
+        "ownerScopeId": " ",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "numeric_id",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": 1,
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "message_extra",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "extra": true
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "contact_type",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "isContact": 1
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "sender_type",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "sender": false
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "received_type",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "receivedAt": 4
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "null_request",
+      "request": null,
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "reasonCodes": [
+          "empty_or_malformed"
+        ]
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "array_request",
+      "request": [],
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "reasonCodes": [
+          "empty_or_malformed"
+        ]
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "missing_request",
+      "request": {},
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "reasonCodes": [
+          "empty_or_malformed"
+        ]
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "missing_message",
+      "request": {
+        "ownerScopeId": "x",
+        "messageId": "y"
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "reasonCodes": [
+          "empty_or_malformed"
+        ]
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "nonstring_body",
+      "request": {
+        "ownerScopeId": "x",
+        "messageId": "y",
+        "message": {
+          "text": 1
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "invalid_request",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "reasonCodes": [
+          "empty_or_malformed"
+        ]
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "invalid_own",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Transfer of JOD 75.00 between your own accounts completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "wrong",
+          "messageId": "sms-1",
+          "text": "Transfer of JOD 75.00 between your own accounts completed.",
+          "evidence": "guessed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "untrusted_evidence",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 75
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "version_precedence",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "2",
+          "ownerScopeId": "wrong",
+          "messageId": "wrong",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "guessed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "unsupported_version",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "owner_precedence",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "wrong",
+          "messageId": "wrong",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "owner_mismatch",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "identical_body_new_record",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-2",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "message_mismatch",
+      "expect": {
+        "trackingDecision": "review"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "second_record_confirmed",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-2",
+        "message": {
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-2",
+          "text": "JOD 20.00 debited. Transfer to LOCAL PERSON completed.",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "expect": {
+        "trackingDecision": "include"
+      },
+      "sameAsBody": false
+    },
+    {
+      "id": "invalid_purchase",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Card purchase completed for JOD 20.00."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Card purchase completed for JOD 20.00. ",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "message_mismatch",
+      "expect": {},
+      "sameAsBody": true
+    },
+    {
+      "id": "invalid_otp",
+      "request": {
+        "ownerScopeId": "owner-1",
+        "messageId": "sms-1",
+        "message": {
+          "text": "Your OTP for transfer JOD 20.00 is 481763."
+        },
+        "ownershipContext": {
+          "schemaVersion": "1.0.0",
+          "ownerScopeId": "owner-1",
+          "messageId": "sms-1",
+          "text": "Your OTP for transfer JOD 20.00 is 481763. ",
+          "evidence": "user_confirmed",
+          "relationship": "other_person"
+        }
+      },
+      "contextStatus": "invalid",
+      "contextReason": "message_mismatch",
+      "expect": {},
+      "sameAsBody": true
+    }
+  ]
+}

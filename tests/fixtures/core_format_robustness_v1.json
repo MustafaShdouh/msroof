@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Metamorphic development checks on existing exposed messages; not new SMS or independent evaluation",
+  "baselineSnapshot": ".local-backups/core_money_r5a_unmarked/after.json",
+  "baselineBindingReport": "data/reports/behavior/core_money_r5a_unmarked_comparison.json",
+  "expectedFields": ["transactionStatus", "trackingDecision", "amount", "currency", "currencyResolution", "direction", "transferRelationship"],
+  "transforms": ["identity", "space_runs", "tabs", "nbsp", "narrow_nbsp", "crlf_wrap", "escaped_crlf_wrap", "bom_prefix", "directional_wrapper", "rtl_word_boundaries", "lowercase", "uppercase"],
+  "invariance": "Only presentation, whitespace and letter case change; no words, numbers, currencies or supplied ownership facts are added. Inherit only existing asserted core truth. Optional raw names may change and are not baseline-invariance targets.",
+  "ownership": "Message-only assessment. A raw-text ownership confirmation must never be transferred to a transformed message.",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false
+}

@@ -1,0 +1,691 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Assistant-authored exposed development contrasts, not independent evidence",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false,
+  "cases": [
+    {
+      "id": "debit-before-en",
+      "language": "en",
+      "boundary": "bare",
+      "input": {
+        "text": "17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "credit-before-en",
+      "language": "en",
+      "boundary": "bare",
+      "input": {
+        "text": "17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "incoming",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "debit-after-en",
+      "language": "en",
+      "boundary": "bare",
+      "input": {
+        "text": "Your account was debited 17.250."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "credit-after-en",
+      "language": "en",
+      "boundary": "bare",
+      "input": {
+        "text": "Your account was credited with 17.250."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "incoming",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "received-en",
+      "language": "en",
+      "boundary": "bare",
+      "input": {
+        "text": "Your account received 17.250 from another person."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "incoming",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "debit-ar",
+      "language": "ar",
+      "boundary": "bare",
+      "input": {
+        "text": "خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "debit-owner-first-ar",
+      "language": "ar",
+      "boundary": "bare",
+      "input": {
+        "text": "خُصم من بطاقتك 17.250."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "credit-ar",
+      "language": "ar",
+      "boundary": "bare",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "incoming",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "received-ar",
+      "language": "ar",
+      "boundary": "bare",
+      "input": {
+        "text": "استلم حسابك 17.250 من شخص آخر."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "incoming",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "salary-ar",
+      "language": "ar",
+      "boundary": "bare",
+      "input": {
+        "text": "أضيف راتبك بقيمة 17.250 إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "incoming",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "ambiguous-unit-en",
+      "language": "en",
+      "boundary": "ambiguous_unit",
+      "input": {
+        "text": "17.250 dollars was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_ambiguous"
+      }
+    },
+    {
+      "id": "ambiguous-primary-en",
+      "language": "en",
+      "boundary": "ambiguous_unit",
+      "input": {
+        "text": "Your account was charged 17.250 pounds."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_ambiguous"
+      }
+    },
+    {
+      "id": "bare-primary-en",
+      "language": "en",
+      "boundary": "primary",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "bare-total-en",
+      "language": "en",
+      "boundary": "primary",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "explicit-total-en",
+      "language": "en",
+      "boundary": "explicit",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "explicit-usd-en",
+      "language": "en",
+      "boundary": "explicit",
+      "input": {
+        "text": "USD 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "USD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "explicit-usd-ar",
+      "language": "ar",
+      "boundary": "explicit",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "USD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "bare-with-balance-en",
+      "language": "en",
+      "boundary": "balance",
+      "input": {
+        "text": "17.250 was debited from your account. Available balance USD 88.400."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "bare-with-balance-ar",
+      "language": "ar",
+      "boundary": "balance",
+      "input": {
+        "text": "خصم 17.250 من حسابك. الرصيد بعد الحركة 88.400 JOD."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "reference-after-en",
+      "language": "en",
+      "boundary": "identifier",
+      "input": {
+        "text": "17.250 was debited from your account. Reference 781234; date 2026-11-01."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "masked-owner-ar",
+      "language": "ar",
+      "boundary": "identifier",
+      "input": {
+        "text": "أضيف 17.250 إلى حسابك *1234."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "incoming",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "account-id-en",
+      "language": "en",
+      "boundary": "excluded",
+      "input": {
+        "text": "Your account 1234 was credited."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "reference-en",
+      "language": "en",
+      "boundary": "excluded",
+      "input": {
+        "text": "Reference 1234 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "masked-number-en",
+      "language": "en",
+      "boundary": "excluded",
+      "input": {
+        "text": "*1234 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "date-en",
+      "language": "en",
+      "boundary": "excluded",
+      "input": {
+        "text": "2026-11-01 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "time-en",
+      "language": "en",
+      "boundary": "excluded",
+      "input": {
+        "text": "17:25 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "bare-and-fee-en",
+      "language": "en",
+      "boundary": "competing",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "bare-and-explicit-en",
+      "language": "en",
+      "boundary": "competing",
+      "input": {
+        "text": "17 was debited from your account and JOD 5 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "uncertain"
+      }
+    },
+    {
+      "id": "two-bare-en",
+      "language": "en",
+      "boundary": "competing",
+      "input": {
+        "text": "17 was debited from your account and 5 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "uncertain"
+      }
+    },
+    {
+      "id": "two-equal-bare-en",
+      "language": "en",
+      "boundary": "competing",
+      "input": {
+        "text": "17 was debited from your account and 17 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "uncertain"
+      }
+    },
+    {
+      "id": "or-values-en",
+      "language": "en",
+      "boundary": "competing",
+      "input": {
+        "text": "17 or 19 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "and-values-en",
+      "language": "en",
+      "boundary": "competing",
+      "input": {
+        "text": "17 and 19 were debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "two-primary-en",
+      "language": "en",
+      "boundary": "competing",
+      "input": {
+        "text": "Your account was charged 17; total debited 19."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "deny-en",
+      "language": "en",
+      "boundary": "denied",
+      "input": {
+        "text": "17 was not debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "deny-ar",
+      "language": "ar",
+      "boundary": "denied",
+      "input": {
+        "text": "لم يخصم 17 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "question-en",
+      "language": "en",
+      "boundary": "question",
+      "input": {
+        "text": "Can you confirm that 17 was debited from your account?"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "question-ar",
+      "language": "ar",
+      "boundary": "question",
+      "input": {
+        "text": "هل أضيف 17 إلى حسابك؟"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "personal-en",
+      "language": "en",
+      "boundary": "personal",
+      "input": {
+        "text": "Personal message: Your account received 17 from me."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "personal-ar",
+      "language": "ar",
+      "boundary": "personal",
+      "input": {
+        "text": "أنا أودعت 17 في حسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "quoted-en",
+      "language": "en",
+      "boundary": "quoted",
+      "input": {
+        "text": "Translation exercise: \"17 was credited to your account.\""
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "unknown-en",
+      "language": "en",
+      "boundary": "unknown",
+      "input": {
+        "text": "Whether 17 was credited to your account is not confirmed."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "unknown-ar",
+      "language": "ar",
+      "boundary": "unknown",
+      "input": {
+        "text": "أضيف 17 إلى حسابك والنتيجة النهائية غير محسومة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "points-en",
+      "language": "en",
+      "boundary": "noncash",
+      "input": {
+        "text": "17 reward points were credited to your profile."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "points-ar",
+      "language": "ar",
+      "boundary": "noncash",
+      "input": {
+        "text": "أضيفت 17 نقطة إلى ملفك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "quantity-count-ar",
+      "language": "ar",
+      "boundary": "excluded",
+      "input": {
+        "text": "استلم حسابك 17 حوالة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      }
+    },
+    {
+      "id": "missing-amount-en",
+      "language": "en",
+      "boundary": "excluded",
+      "input": {
+        "text": "Your account was credited."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "incoming"
+      }
+    }
+  ]
+}

@@ -9,6 +9,7 @@ from unittest.mock import patch
 from src.python.engine import MasroofEngine
 from tools.contracts.validate_transaction_behavior import validate_result
 from tools.node_runtime import node_executable
+from tests.python.direction_review import reviewed_direction
 
 ROOT = Path(__file__).resolve().parents[2]
 NODE = node_executable()
@@ -39,7 +40,7 @@ class DetailedAssessmentTests(unittest.TestCase):
                 self.assertEqual(result, other["typescript"])
                 self.assertEqual(result, other["browser"])
                 self.assertEqual(result["trackingDecision"], case["expected"]["trackingDecision"])
-                for field, value in case["expected"].items():
+                for field, value in reviewed_direction(case['input']['text'],case["expected"]).items():
                     actual = result[field]
                     if (set(actual) != set(value) if field == "reasonCodes" else actual != value):
                         disagreements.append((case["id"], field))

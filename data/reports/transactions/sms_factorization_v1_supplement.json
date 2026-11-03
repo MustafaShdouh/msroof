@@ -1,0 +1,107 @@
+{
+  "combinedRecords": 36,
+  "combinedReviewStateCounts": {
+    "hold": 1,
+    "reviewed_weak": 35
+  },
+  "combinedReviewedContextCounts": {
+    "financial_notice": 28,
+    "instruction_or_example": 2,
+    "known_other": 3,
+    "personal_conversation": 1,
+    "question_or_request": 1
+  },
+  "contextCounts": {
+    "financial_notice": 8,
+    "instruction_or_example": 2,
+    "known_other": 2
+  },
+  "eventCounts": {
+    "completed": 8,
+    "not_completed": 4
+  },
+  "families": [
+    {
+      "candidateFamilies": [
+        "pension-demo",
+        "refund-tutorial",
+        "service-fee-sample"
+      ],
+      "familyId": "scope-v1-pension-demo",
+      "semanticStates": [
+        1,
+        2
+      ],
+      "theme": "illustrative_scope",
+      "topic": "quotation"
+    },
+    {
+      "candidateFamilies": [
+        "cheque-credit",
+        "collection-final",
+        "reward-credit"
+      ],
+      "familyId": "scope-v1-reward-credit",
+      "semanticStates": [
+        1,
+        2
+      ],
+      "theme": "negated_failure",
+      "topic": "negation"
+    },
+    {
+      "candidateFamilies": [
+        "bookshop-pending",
+        "cafe-test"
+      ],
+      "familyId": "scope-v1-bookshop-pending",
+      "semanticStates": [
+        1,
+        3
+      ],
+      "theme": "party_scope",
+      "topic": "party_name_scope"
+    }
+  ],
+  "fullyReviewedTrainingGroups": 0,
+  "groupsWithoutAnyFactorizedReview": 102,
+  "inputSha256": {
+    "config/contracts/sms_factorization_annotations.json": "a8c13bde25855671e6176885f4423b1a9a1c37dce45cd34e517674b979508f6f",
+    "config/experiments/sms_completion_adaptation_v1.json": "aa48190817be42863ee8a1d39b271a0a5bed562e6e67d0207e6613228a1a4b56",
+    "data/annotations/sms_factorization_v1/pilot_annotations.jsonl": "4422969315d5bb4def90f90879fb37b0ad005decd2f0bf45aa9798e90d95abce",
+    "data/annotations/sms_factorization_v1/pilot_queue.json": "a89ea0c9423cee4d94dd12a81a1dc4adbba65bf53a862cae95d08e8dba08c134",
+    "data/annotations/sms_factorization_v1/reviews.json": "660c6b45bc42237a92ccc4700c29400595242d90b99c382716b55e5e8b4b746d",
+    "data/annotations/sms_factorization_v1/supplement_queue.json": "a08e83717210b110d4883fc65356a18a7e6bef750156f03b6c26d738d43d3b57",
+    "data/annotations/sms_factorization_v1/supplement_reviews.json": "31b81e0d949cdb518748cda21eee87baec3cf664ba000ba41e7a91fb254ab435",
+    "data/annotations/sms_scope_v1/manifest.json": "e9cd9beb688bc0f418e466c57f3c344e34c8fe49c9add6df63445435d66a550a",
+    "data/reports/transactions/sms_factorization_v1_readiness.json": "36db686b10d233a8e8672ef716712eb0b5ceb7b383756416cac22acf853ef5ef",
+    "training/corpus/factorization_pilot.py": "493342a87dec946bb6afe5af9018ba564ca9cb9368046ad4ea7bd4405b7ef98a",
+    "training/corpus/factorization_supplement.py": "f40ec7d9766366a87911dc956dcc055e99fc34ee69549eb2065194d7e305a637"
+  },
+  "languageCounts": {
+    "ar": 6,
+    "en": 6
+  },
+  "limits": [
+    "36 source-specific weak annotations are not a training-ready 1158-row factorized corpus.",
+    "No propagation to counterpart, other semantic states or entire source family; remaining records are unreviewed.",
+    "Known-other means message context, not the expense category Other. It does not authenticate a sender.",
+    "The original held unknown context is retained; this supplement supplies no unheld unknown-context class example.",
+    "Fixed contextual contrasts validate annotation applicability only, not model understanding or generalization."
+  ],
+  "missingReviewedContexts": [
+    "unknown"
+  ],
+  "modelFitted": false,
+  "modelInference": false,
+  "originalLabelsChanged": 0,
+  "partiallyReviewedTrainingGroups": 27,
+  "records": 12,
+  "reservedInferred": false,
+  "reviewStateCounts": {
+    "reviewed_weak": 12
+  },
+  "runId": "sms_factorization_v1_supplement",
+  "selectionKind": "Source-theme/state-directed coverage supplement, not a random or label-blind sample; never model-score selected",
+  "unreviewedTrainingRecords": 1122
+}

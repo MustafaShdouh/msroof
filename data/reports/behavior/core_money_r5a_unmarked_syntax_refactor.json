@@ -1,0 +1,19 @@
+{
+  "kind": "Structural monetary-syntax extraction preserves full outputs",
+  "inputs": 2302,
+  "detailedAndLegacyOutputs": 13812,
+  "ownershipOutputs": 210,
+  "allBeforeAfterEqual": true,
+  "modelsUnchanged": 23,
+  "beforeSnapshotSha256": "8d3d70219b2b7df8fd5398d93308aa72d4306c3a221996ef7ae90c56c77b8915",
+  "sources": {
+    "src/python/money_syntax.py": "81874c20c8f222534e311a4f481febf11da4f04c7fc0bc25fbeb17410c5bcd52",
+    "src/python/money_candidates.py": "cf9722f5f613eb7630c3018d561d8c48366e86a80dae9ae9b4c71ef8653915e6",
+    "src/python/account_movement.py": "edb80e9d9c1b6d9907e84ae0744f54f144ecd4f5c2432019d503e6335abc6900",
+    "src/typescript/MoneySyntax.ts": "3f96b046daa8d204d3c64ef3d9d73c58ca042f9a3f7c18edba356d549b85ced8",
+    "src/typescript/MoneyCandidates.ts": "8105c3a06121a058b5ace73178306540639380e2412e372c08d6390b46c628df",
+    "src/typescript/AccountMovement.ts": "bd931641c6b9ec21b29e72e71f0e0461a5c16d776f26129e3e0eee6c964ea655"
+  },
+  "training": false,
+  "reservedInferred": false
+}

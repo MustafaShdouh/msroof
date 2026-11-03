@@ -1,0 +1,2645 @@
+{
+  "kind": "Exposed weak development conformance, not independent accuracy",
+  "cohorts": {
+    "authored74": {
+      "before": {
+        "cases": 74,
+        "allAssertedFieldsCorrect": 20,
+        "statusCheckedCases": 74,
+        "statusCorrect": 21,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 1,
+        "unnecessaryReview": 8,
+        "completedCases": 54,
+        "missedCompletion": 43,
+        "uncertainCases": 4,
+        "wrongCertainty": 2,
+        "endToEndEligible": 48,
+        "endToEndCorrect": 8,
+        "fields": {
+          "transactionStatus": {
+            "checked": 74,
+            "correct": 21
+          },
+          "amount": {
+            "checked": 70,
+            "correct": 58
+          },
+          "currency": {
+            "checked": 70,
+            "correct": 53
+          },
+          "currencyResolution": {
+            "checked": 70,
+            "correct": 53
+          },
+          "direction": {
+            "checked": 70,
+            "correct": 38
+          },
+          "transferRelationship": {
+            "checked": 70,
+            "correct": 48
+          },
+          "trackingDecision": {
+            "checked": 74,
+            "correct": 22
+          }
+        }
+      },
+      "after": {
+        "cases": 74,
+        "allAssertedFieldsCorrect": 21,
+        "statusCheckedCases": 74,
+        "statusCorrect": 22,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 7,
+        "completedCases": 54,
+        "missedCompletion": 43,
+        "uncertainCases": 4,
+        "wrongCertainty": 2,
+        "endToEndEligible": 48,
+        "endToEndCorrect": 8,
+        "fields": {
+          "transactionStatus": {
+            "checked": 74,
+            "correct": 22
+          },
+          "amount": {
+            "checked": 70,
+            "correct": 58
+          },
+          "currency": {
+            "checked": 70,
+            "correct": 54
+          },
+          "currencyResolution": {
+            "checked": 70,
+            "correct": 54
+          },
+          "direction": {
+            "checked": 70,
+            "correct": 39
+          },
+          "transferRelationship": {
+            "checked": 70,
+            "correct": 49
+          },
+          "trackingDecision": {
+            "checked": 74,
+            "correct": 23
+          }
+        }
+      }
+    },
+    "authoredProbe": {
+      "before": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 8,
+        "statusCheckedCases": 24,
+        "statusCorrect": 8,
+        "nonTransactionCases": 12,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 5,
+        "completedCases": 12,
+        "missedCompletion": 11,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 8
+          }
+        }
+      },
+      "after": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 8,
+        "statusCheckedCases": 24,
+        "statusCorrect": 8,
+        "nonTransactionCases": 12,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 5,
+        "completedCases": 12,
+        "missedCompletion": 11,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 8
+          }
+        }
+      }
+    },
+    "core52": {
+      "before": {
+        "cases": 52,
+        "allAssertedFieldsCorrect": 52,
+        "statusCheckedCases": 51,
+        "statusCorrect": 51,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 32,
+        "missedCompletion": 0,
+        "uncertainCases": 3,
+        "wrongCertainty": 0,
+        "endToEndEligible": 28,
+        "endToEndCorrect": 28,
+        "fields": {
+          "transactionStatus": {
+            "checked": 51,
+            "correct": 51
+          },
+          "trackingDecision": {
+            "checked": 52,
+            "correct": 52
+          },
+          "amount": {
+            "checked": 47,
+            "correct": 47
+          },
+          "currency": {
+            "checked": 44,
+            "correct": 44
+          },
+          "currencyResolution": {
+            "checked": 26,
+            "correct": 26
+          },
+          "direction": {
+            "checked": 46,
+            "correct": 46
+          },
+          "transferRelationship": {
+            "checked": 30,
+            "correct": 30
+          }
+        }
+      },
+      "after": {
+        "cases": 52,
+        "allAssertedFieldsCorrect": 52,
+        "statusCheckedCases": 51,
+        "statusCorrect": 51,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 32,
+        "missedCompletion": 0,
+        "uncertainCases": 3,
+        "wrongCertainty": 0,
+        "endToEndEligible": 28,
+        "endToEndCorrect": 28,
+        "fields": {
+          "transactionStatus": {
+            "checked": 51,
+            "correct": 51
+          },
+          "trackingDecision": {
+            "checked": 52,
+            "correct": 52
+          },
+          "amount": {
+            "checked": 47,
+            "correct": 47
+          },
+          "currency": {
+            "checked": 44,
+            "correct": 44
+          },
+          "currencyResolution": {
+            "checked": 26,
+            "correct": 26
+          },
+          "direction": {
+            "checked": 46,
+            "correct": 46
+          },
+          "transferRelationship": {
+            "checked": 30,
+            "correct": 30
+          }
+        }
+      }
+    },
+    "exposedManual": {
+      "before": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 13,
+        "statusCheckedCases": 24,
+        "statusCorrect": 13,
+        "nonTransactionCases": 10,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 3,
+        "completedCases": 12,
+        "missedCompletion": 8,
+        "uncertainCases": 2,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 13
+          }
+        }
+      },
+      "after": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 13,
+        "statusCheckedCases": 24,
+        "statusCorrect": 13,
+        "nonTransactionCases": 10,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 3,
+        "completedCases": 12,
+        "missedCompletion": 8,
+        "uncertainCases": 2,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 13
+          }
+        }
+      }
+    },
+    "newFrameContrasts": {
+      "before": {
+        "cases": 168,
+        "allAssertedFieldsCorrect": 90,
+        "statusCheckedCases": 168,
+        "statusCorrect": 90,
+        "nonTransactionCases": 72,
+        "falseIncludes": 36,
+        "falseCompleted": 54,
+        "unnecessaryReview": 30,
+        "completedCases": 72,
+        "missedCompletion": 0,
+        "uncertainCases": 24,
+        "wrongCertainty": 12,
+        "endToEndEligible": 72,
+        "endToEndCorrect": 72,
+        "fields": {
+          "transactionStatus": {
+            "checked": 168,
+            "correct": 90
+          },
+          "trackingDecision": {
+            "checked": 168,
+            "correct": 90
+          },
+          "amount": {
+            "checked": 144,
+            "correct": 108
+          },
+          "currency": {
+            "checked": 144,
+            "correct": 78
+          },
+          "direction": {
+            "checked": 144,
+            "correct": 78
+          }
+        }
+      },
+      "after": {
+        "cases": 168,
+        "allAssertedFieldsCorrect": 168,
+        "statusCheckedCases": 168,
+        "statusCorrect": 168,
+        "nonTransactionCases": 72,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 72,
+        "missedCompletion": 0,
+        "uncertainCases": 24,
+        "wrongCertainty": 0,
+        "endToEndEligible": 72,
+        "endToEndCorrect": 72,
+        "fields": {
+          "transactionStatus": {
+            "checked": 168,
+            "correct": 168
+          },
+          "trackingDecision": {
+            "checked": 168,
+            "correct": 168
+          },
+          "amount": {
+            "checked": 144,
+            "correct": 144
+          },
+          "currency": {
+            "checked": 144,
+            "correct": 144
+          },
+          "direction": {
+            "checked": 144,
+            "correct": 144
+          }
+        }
+      }
+    },
+    "oldExposedValidation": {
+      "before": {
+        "cases": 18,
+        "allAssertedFieldsCorrect": 16,
+        "statusCheckedCases": 18,
+        "statusCorrect": 16,
+        "nonTransactionCases": 14,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 2,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 18,
+            "correct": 16
+          }
+        }
+      },
+      "after": {
+        "cases": 18,
+        "allAssertedFieldsCorrect": 16,
+        "statusCheckedCases": 18,
+        "statusCorrect": 16,
+        "nonTransactionCases": 14,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 2,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 18,
+            "correct": 16
+          }
+        }
+      }
+    },
+    "quoteControls": {
+      "before": {
+        "cases": 14,
+        "allAssertedFieldsCorrect": 14,
+        "statusCheckedCases": 14,
+        "statusCorrect": 14,
+        "nonTransactionCases": 6,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 4,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 14,
+            "correct": 14
+          }
+        }
+      },
+      "after": {
+        "cases": 14,
+        "allAssertedFieldsCorrect": 14,
+        "statusCheckedCases": 14,
+        "statusCorrect": 14,
+        "nonTransactionCases": 6,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 4,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 14,
+            "correct": 14
+          }
+        }
+      }
+    },
+    "scopeDevelopment": {
+      "before": {
+        "cases": 32,
+        "allAssertedFieldsCorrect": 9,
+        "statusCheckedCases": 32,
+        "statusCorrect": 9,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 1,
+        "unnecessaryReview": 11,
+        "completedCases": 8,
+        "missedCompletion": 6,
+        "uncertainCases": 8,
+        "wrongCertainty": 6,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 32,
+            "correct": 9
+          }
+        }
+      },
+      "after": {
+        "cases": 32,
+        "allAssertedFieldsCorrect": 11,
+        "statusCheckedCases": 32,
+        "statusCorrect": 11,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 9,
+        "completedCases": 8,
+        "missedCompletion": 6,
+        "uncertainCases": 8,
+        "wrongCertainty": 6,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 32,
+            "correct": 11
+          }
+        }
+      }
+    }
+  },
+  "changedDetailedResults": [
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-ar",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-en",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-063",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "currencyResolution": {
+          "expected": "not_applicable",
+          "actual": "default_missing"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_applicable",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-064",
+      "beforeStatus": "non_transaction",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {},
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-ar:0:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-ar:0:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-ar:1:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-ar:1:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-ar:2:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-ar:2:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-ar:0:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-ar:0:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-ar:1:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-ar:1:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-ar:2:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-ar:2:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-passive-ar:0:False",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-passive-ar:0:True",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-passive-ar:1:False",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-passive-ar:1:True",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-passive-ar:2:False",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-passive-ar:2:True",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-credited-en:0:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "incoming"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-credited-en:0:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "incoming"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-credited-en:1:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "incoming"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-credited-en:1:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "incoming"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-credited-en:2:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "incoming"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-credited-en:2:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "incoming"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-posted-en:0:False",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-posted-en:0:True",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-posted-en:1:False",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-posted-en:1:True",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-posted-en:2:False",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-posted-en:2:True",
+      "beforeStatus": "uncertain",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-en:0:False",
+      "beforeStatus": "non_transaction",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {},
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-en:0:True",
+      "beforeStatus": "non_transaction",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {},
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-en:1:False",
+      "beforeStatus": "non_transaction",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {},
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-en:1:True",
+      "beforeStatus": "non_transaction",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {},
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-en:2:False",
+      "beforeStatus": "non_transaction",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {},
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "points-added-en:2:True",
+      "beforeStatus": "non_transaction",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {},
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-en:0:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-en:0:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-en:1:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-en:1:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-en:2:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-en:2:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-ar:0:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-ar:0:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-ar:1:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-ar:1:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-ar:2:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "lesson-ar:2:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-en:0:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-en:0:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-en:1:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-en:1:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-en:2:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-en:2:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-ar:0:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-ar:0:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-ar:1:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-ar:1:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-ar:2:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "translation-ar:2:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-en:0:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-en:0:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-en:1:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-en:1:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-en:2:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-en:2:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-ar:0:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-ar:0:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-ar:1:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-ar:1:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-ar:2:False",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "grammar-ar:2:True",
+      "beforeStatus": "completed",
+      "afterStatus": "non_transaction",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "include"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 17.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "outgoing"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-en:0:False",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-en:0:True",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-en:1:False",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-en:1:True",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-en:2:False",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-en:2:True",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-ar:0:False",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-ar:0:True",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-ar:1:False",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-ar:1:True",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-ar:2:False",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    },
+    {
+      "cohort": "newFrameContrasts",
+      "recordId": "mixed-lesson-ar:2:True",
+      "beforeStatus": "completed",
+      "afterStatus": "uncertain",
+      "beforeMismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "completed"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "include"
+        }
+      },
+      "afterMismatches": {}
+    }
+  ],
+  "expectedFieldRegressions": [],
+  "inputEntries": 406,
+  "reviewedPriorityOneEntries": 37,
+  "newBaseCases": 28,
+  "newScriptAndMetadataVariants": 168,
+  "fullDetailedParity": true,
+  "legacyResultsUnchanged": true,
+  "ownershipRequestsUnchanged": 70,
+  "modelsUnchanged": 23,
+  "training": false,
+  "reservedInferred": false,
+  "newResearchModelInference": false,
+  "artifacts": {
+    "tests/fixtures/completion_frame_cases_v1.json": "08b1e34a63bd98ccc798b861c1edbb0405025f360df7f641110d2d7c7bd9cf29",
+    "data/reports/behavior/core_money_r5a_priority1_review.json": "cc3e7d81998b328efc80613689ce4b23af3f04b12404e0291b87a6617ca49052",
+    "tools/evaluation/evaluate_completion_frames.py": "b4748dccc3149e38b1c9f22d461be8cfd603f8fa23f72eba1901b44f9974f003",
+    "config/contracts/transaction_evidence.json": "b706d84aca865937e063592f21754308ef30265222be687fd2e7a06fa646f2ee",
+    "src/python/detailed_assessment.py": "8bd922f068322ff3973892bb995828942a2138fab5381b86761e49cecab2b95c",
+    "src/typescript/DetailedAssessment.ts": "f6b1b061ec0ed20e367fb99ff86bf7f6521241933dcf1f8361636969a0787ed8",
+    "tools/browser/tester.html": "f8c5aba83b1c5d634bca1dd638ec2d28327f0ee29dd3a8d24d872b4bb841e84d"
+  },
+  "privateSnapshots": {
+    "before": "c0593a711ea3accda22269d9aa7c6c1d32bdea0e1b1d41bc46be2075b5aab0f2"
+  },
+  "limits": [
+    "Only noncash postings and explicit instructional headers repaired in this step.",
+    "Other reviewed priority-one failures remain pending; R5 exit not met.",
+    "No new learning, broad language-coverage, independent accuracy or mobile timing claim."
+  ]
+}

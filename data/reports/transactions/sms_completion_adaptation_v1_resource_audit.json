@@ -1,0 +1,22 @@
+{
+  "runId": "sms_completion_adaptation_v1",
+  "status": "numerical_result_verified_resource_monitor_nonconformant",
+  "memoryBudgetVerified": false,
+  "actualTrainingPeakWorkingSetBytes": null,
+  "processTreeTerminationVerifiedForHistoricalRun": false,
+  "trainingWallSecondsFromWorker": 92.32800000003772,
+  "trainingWithinWallBudget": true,
+  "originalSupervisionSha256": "c9557f37665d4f65665dab34ec311e8cb116515faccf58aa94ab9de23d5b9a9f",
+  "originalReportedPeakBytes": 4878336,
+  "cause": "Virtualenv Windows python.exe is a redirector. Original supervisor sampled Popen launcher PID, not actual interpreter; kill() also targeted launcher only. Historical memory peak cannot be recovered.",
+  "benignPidProbe": {
+    "launcherPid": 22924,
+    "actualInterpreterPid": 18252,
+    "same": false
+  },
+  "correction": "tools/evaluation/python_worker_monitor.py obtains token-bound real interpreter PID before worker code, samples that PID, and terminates the owned process tree. Three harmless process tests pass; no model training rerun.",
+  "historicalProducerPreserved": true,
+  "optimizerRuns": 1,
+  "reservedInferred": false,
+  "limits": "Do not claim the historical 6GiB limit was enforced, or that nominal compliance proves actual peak memory. Numerical outcomes remain weak synthetic research evidence and fail the quality gate."
+}

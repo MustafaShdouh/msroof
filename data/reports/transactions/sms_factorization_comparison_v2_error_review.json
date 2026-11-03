@@ -1,0 +1,996 @@
+{
+  "runId": "sms_factorization_comparison_v2_error_review",
+  "fitting": false,
+  "newModelInference": false,
+  "labelsChanged": 0,
+  "reservedInferred": false,
+  "independentAccuracy": false,
+  "inputs": {
+    "data/reports/transactions/sms_factorization_comparison_v2.json": "c7f24ebe15fb0f425e4bdc432877236d569c35289f9b7c1260e8a66c4b4fedeb",
+    "config/experiments/sms_factorization_comparison_v2.json": "329305d4620e34ceb133f458722175196f302e1ca957078843f9fdb5d1509638",
+    "data/annotations/sms_factorization_eval_v1/development_reviews.tsv": "2a26a10b6374a048aefc089d4a9dfe3d016f06229080812fcf9e078fbe124e2e",
+    "tools/evaluation/review_sms_factorization_errors.py": "7e6dfbd345ce31ac8700adf973a1bf9c29f1b8530be124afada1f7bf7f7347e6"
+  },
+  "pairedTransitions": {
+    "oldExposedValidation": {
+      "all": {
+        "regression": 1,
+        "both_correct": 16,
+        "fix": 1
+      },
+      "ar": {
+        "regression": 1,
+        "both_correct": 9
+      },
+      "en": {
+        "both_correct": 7,
+        "fix": 1
+      }
+    },
+    "exposedManual": {
+      "all": {
+        "both_correct": 20,
+        "regression": 3,
+        "both_wrong": 1
+      },
+      "ar": {
+        "both_correct": 10,
+        "regression": 1,
+        "both_wrong": 1
+      },
+      "en": {
+        "both_correct": 10,
+        "regression": 2
+      }
+    },
+    "authoredProbe": {
+      "all": {
+        "both_correct": 23,
+        "both_wrong": 1
+      },
+      "ar": {
+        "both_correct": 11,
+        "both_wrong": 1
+      },
+      "en": {
+        "both_correct": 12
+      }
+    },
+    "quoteControls": {
+      "all": {
+        "regression": 3,
+        "both_correct": 5,
+        "both_wrong": 6
+      },
+      "ar": {
+        "regression": 2,
+        "both_wrong": 3,
+        "both_correct": 2
+      },
+      "en": {
+        "regression": 1,
+        "both_correct": 3,
+        "both_wrong": 3
+      }
+    },
+    "scopeDevelopment": {
+      "all": {
+        "both_correct": 20,
+        "both_wrong": 2,
+        "regression": 7,
+        "fix": 3
+      },
+      "ar": {
+        "both_correct": 10,
+        "both_wrong": 1,
+        "regression": 4,
+        "fix": 1
+      },
+      "en": {
+        "both_correct": 10,
+        "regression": 3,
+        "fix": 2,
+        "both_wrong": 1
+      }
+    }
+  },
+  "trainingDiagnosticOverlaps": [
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-en",
+      "exactTrainingRecordIds": [
+        "instruction-quote-non_transaction-en"
+      ],
+      "normalizedTrainingRecordIds": [
+        "instruction-quote-non_transaction-en"
+      ],
+      "interpretation": "Training-exposed conformance control; not evidence of unseen-text generalization. Frozen scores retained."
+    }
+  ],
+  "uniquePrimary": {
+    "regression": 11,
+    "both_correct": 79,
+    "fix": 4,
+    "both_wrong": 4
+  },
+  "uniqueIncludingQuoteControls": {
+    "regression": 12,
+    "both_correct": 84,
+    "fix": 4,
+    "both_wrong": 10
+  },
+  "errors": [
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0053",
+      "textSha256": "6e00010d6697a1ad9b8a9cb192fb51184758e366fb40e2d8254135f67ad2cc22",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0289",
+      "textSha256": "37ed8cbb38b17e0a0a5f16e5be132fbbfa8ee36523fb8774cdabb0ffd9af92d1",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "completed",
+      "factorized": "non_transaction",
+      "context": "personal_conversation",
+      "event": "completed",
+      "transition": "fix"
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "quoted-example-ar",
+      "textSha256": "d33b783ff60c81a541f9c9dc364e026f35d018229c90365822b9c482fcdde5df",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "quoted-example-en",
+      "textSha256": "7dd21e82d85a1d4eae16b5f0a1f6973524594e82f455bd87cec43b2336dfaefb",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unsettled-hold-ar",
+      "textSha256": "3568a576be46295b682e10ca7111f1ccdc9e21f5adea93749bd82317626514db",
+      "language": "ar",
+      "target": "uncertain",
+      "direct": "non_transaction",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_wrong"
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unsettled-hold-en",
+      "textSha256": "81a127fdd2380a168867ce5561f346d930749b943adb5981ea48d031fd2004f3",
+      "language": "en",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "financial_notice",
+      "event": "not_completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-completed-ar",
+      "textSha256": "1ed05b0b846ccb0002884ebfc24006391db9b6fa13f5cd9fce4cbe16b7160622",
+      "language": "ar",
+      "target": "completed",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "financial_notice",
+      "event": "not_completed",
+      "transition": "both_wrong"
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "manual-ar",
+      "textSha256": "d33b783ff60c81a541f9c9dc364e026f35d018229c90365822b9c482fcdde5df",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "manual-en",
+      "textSha256": "7dd21e82d85a1d4eae16b5f0a1f6973524594e82f455bd87cec43b2336dfaefb",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-ar",
+      "textSha256": "ae152ae6e782610f9850e884fa0288df5ce16d62208706293bc43a897ebd0fae",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "note-en",
+      "textSha256": "34ee1207b24ef2dce102f90483a8ef4abd861d27ac9b8e0ca6167343d19fa604",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_wrong"
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "note-ar",
+      "textSha256": "d0cc30511bf78646d5af97e71ed146f5c5cba3cccdb09c632defe5119bede980",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_wrong"
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "multisentence-en",
+      "textSha256": "2a3905c634e8dd53284f1eb5606b5f5fed2f5ac574767e5f0e08006989a99a84",
+      "language": "en",
+      "target": "uncertain",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_wrong"
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "multisentence-ar",
+      "textSha256": "80b0e30c8e26eedcc1600ddb42a3ecf79a73a737bcd3caa356ade62dead87bb7",
+      "language": "ar",
+      "target": "uncertain",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_wrong"
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "mixed-en",
+      "textSha256": "fb48b7391ab44158e972ce3539707dcbbe1b8fa37021e4a814a6c5c35db1d0f8",
+      "language": "en",
+      "target": "uncertain",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_wrong"
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "mixed-ar",
+      "textSha256": "a5c255cf81d5a0efc6467fd3b9fc4a34a8e1bb7d169f735627c924fdb82fddf9",
+      "language": "ar",
+      "target": "uncertain",
+      "direct": "non_transaction",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_wrong"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-ar",
+      "textSha256": "391f6b9e3d0905d50c43c4cd684426f5cc7504a9b189d9391ae189ed2658b8b8",
+      "language": "ar",
+      "target": "uncertain",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "both_wrong"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-en",
+      "textSha256": "31f2ef21084250ea7c8d3345c60e1f26186a9e969dac67556186fe59325f3556",
+      "language": "en",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "question_or_request",
+      "event": "not_completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-3-en",
+      "textSha256": "67e1d2099d731d08f3270c2c94d151347a93c3c289cb59556746407fac6e665b",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "question_or_request",
+      "event": "completed",
+      "transition": "fix"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-ar",
+      "textSha256": "a8854aedeafb81e5f05162e07e8addb7781c847e7e6eaac41e2c8affbee7a940",
+      "language": "ar",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-en",
+      "textSha256": "8af346cbdc834a02ca0d50f3a9b0537c6adbd8085548934787fd55544a606efb",
+      "language": "en",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-4-ar",
+      "textSha256": "c55391407819e2698c3cff6a8836ebeeeee3ba3063b2ffc43c85263aef5fb133",
+      "language": "ar",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "financial_notice",
+      "event": "not_completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-4-en",
+      "textSha256": "77968b6ae24ef268594ce9c682cb156ab9f7e458797fe2e0797e1041b596e658",
+      "language": "en",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-ar",
+      "textSha256": "693d3a21784d4fad6298687997972bc40d37e844c568b23dbfd8384cf370e71d",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "regression"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-en",
+      "textSha256": "6e8b665431318b2dc8cf3d8ae403f397c73e35f0fd98295116ea0acdd0d06f7f",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_wrong"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-3-ar",
+      "textSha256": "ef83adb83c7ae1da73258fecf7318b486b92fc9cd2d5c9f111ba48be2e6785b5",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "fix"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-3-en",
+      "textSha256": "a376cc19e350b8aa678c7c6c925e8ad48ecd4dd81374385e92951cbe73a9bb72",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "fix"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-4-ar",
+      "textSha256": "5017853c765d341a64f6ce4e98908b6fd83a486f75148a352e2ca96150d01553",
+      "language": "ar",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "regression"
+    }
+  ],
+  "componentRows": [
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-1-ar",
+      "textSha256": "d3e3775019661877c39d14bd32b948220c711c2ac8a5d2c275406b1779973edc",
+      "language": "ar",
+      "target": "completed",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-1-en",
+      "textSha256": "0a97a6c0283710ffa674413064764f12ecffeb136bd7e171c83f9fc276067b46",
+      "language": "en",
+      "target": "completed",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-2-ar",
+      "textSha256": "a37ba4e156245ad0ab43c7e25709a8fc4d96b5cf30fa76ef24f71313c62db7fa",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "personal_conversation",
+      "event": "completed",
+      "transition": "both_correct",
+      "goldContext": "personal_conversation",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-2-en",
+      "textSha256": "23d42f7d0b764ccff86420f0ad880c34a18fa05f0e1dfd0ad398b19abfd1c5b6",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "personal_conversation",
+      "event": "unknown",
+      "transition": "both_correct",
+      "goldContext": "personal_conversation",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-3-ar",
+      "textSha256": "5a5ed49e82a100533765000e1efa0236a5744a0893b0240a3553c394304898e4",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "known_other",
+      "event": "no_event",
+      "transition": "both_correct",
+      "goldContext": "question_or_request",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-3-en",
+      "textSha256": "d23aa310e2502b92d3e9230c07fca6f10628de9e72c5b5750149f6f1d1e94920",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "question_or_request",
+      "event": "unknown",
+      "transition": "both_correct",
+      "goldContext": "question_or_request",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-ar",
+      "textSha256": "391f6b9e3d0905d50c43c4cd684426f5cc7504a9b189d9391ae189ed2658b8b8",
+      "language": "ar",
+      "target": "uncertain",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "both_wrong",
+      "goldContext": "financial_notice",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-en",
+      "textSha256": "31f2ef21084250ea7c8d3345c60e1f26186a9e969dac67556186fe59325f3556",
+      "language": "en",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "question_or_request",
+      "event": "not_completed",
+      "transition": "regression",
+      "goldContext": "financial_notice",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-ar",
+      "textSha256": "247768197f95c26a3e914ab450f9906443735b2e7259ddddb87455c2994f3d25",
+      "language": "ar",
+      "target": "completed",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-en",
+      "textSha256": "4ba9d93fa0d707350b4579034e3059d769902f88ec1ad775425f5baf3c19830a",
+      "language": "en",
+      "target": "completed",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-2-ar",
+      "textSha256": "112adbe82de7f81c99349aefc38a46d414a4f338bd3a07d5253cf046c4021def",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "question_or_request",
+      "event": "unknown",
+      "transition": "both_correct",
+      "goldContext": "question_or_request",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-2-en",
+      "textSha256": "bf58a58867e6bbd49740d13f9022388a58969cc3e5e7afbe8d4806d5d9d9914c",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "question_or_request",
+      "event": "unknown",
+      "transition": "both_correct",
+      "goldContext": "question_or_request",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-3-ar",
+      "textSha256": "221e00851f2d68dc0cedf7d65420aa5784ecab3ccca362033d5b4fa1163c2199",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "question_or_request",
+      "event": "unknown",
+      "transition": "both_correct",
+      "goldContext": "question_or_request",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-3-en",
+      "textSha256": "67e1d2099d731d08f3270c2c94d151347a93c3c289cb59556746407fac6e665b",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "question_or_request",
+      "event": "completed",
+      "transition": "fix",
+      "goldContext": "question_or_request",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-ar",
+      "textSha256": "a8854aedeafb81e5f05162e07e8addb7781c847e7e6eaac41e2c8affbee7a940",
+      "language": "ar",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "regression",
+      "goldContext": "financial_notice",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-en",
+      "textSha256": "8af346cbdc834a02ca0d50f3a9b0537c6adbd8085548934787fd55544a606efb",
+      "language": "en",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "regression",
+      "goldContext": "financial_notice",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-1-ar",
+      "textSha256": "d7e68f5dda88acbd23f95cb7d18eeff54de458060419227f722990b43b0749a9",
+      "language": "ar",
+      "target": "completed",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-1-en",
+      "textSha256": "d48f2b2095a2432332100c922a8f6e352cfb73f6bf3eeb56962547aa2bca9656",
+      "language": "en",
+      "target": "completed",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-2-ar",
+      "textSha256": "c464d3609c583600ff722d510525d8b0a90b6c96fe48cc35407acb2a1e13698b",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "not_completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-2-en",
+      "textSha256": "ac248399aacb5ed9f9d29260db4cccfca0984c99f07cb39b38affa95eb46ee8b",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "not_completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-3-ar",
+      "textSha256": "b9675199c603ba66388ff791eeb233c90985768891a7847a40c32fb79f2918e1",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "not_completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-3-en",
+      "textSha256": "7e40597bf3ae30b77a9f3997c2299cfb8b0450728fd94ea2157a1c15d5fb0c6b",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "not_completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-4-ar",
+      "textSha256": "c55391407819e2698c3cff6a8836ebeeeee3ba3063b2ffc43c85263aef5fb133",
+      "language": "ar",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "financial_notice",
+      "event": "not_completed",
+      "transition": "regression",
+      "goldContext": "financial_notice",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-4-en",
+      "textSha256": "77968b6ae24ef268594ce9c682cb156ab9f7e458797fe2e0797e1041b596e658",
+      "language": "en",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "regression",
+      "goldContext": "financial_notice",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-1-ar",
+      "textSha256": "c52e6066a709bed2efeca5809206ad5a64e845b090a27264c6f18d6c5d228b00",
+      "language": "ar",
+      "target": "completed",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-1-en",
+      "textSha256": "bc6a164c8e5e1efafed9f3117aaae4b225777a2e1bdf0ad91518b9b00f314a35",
+      "language": "en",
+      "target": "completed",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_correct",
+      "goldContext": "financial_notice",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-ar",
+      "textSha256": "693d3a21784d4fad6298687997972bc40d37e844c568b23dbfd8384cf370e71d",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "non_transaction",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "regression",
+      "goldContext": "instruction_or_example",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-en",
+      "textSha256": "6e8b665431318b2dc8cf3d8ae403f397c73e35f0fd98295116ea0acdd0d06f7f",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "completed",
+      "factorized": "completed",
+      "context": "financial_notice",
+      "event": "completed",
+      "transition": "both_wrong",
+      "goldContext": "instruction_or_example",
+      "goldEvent": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-3-ar",
+      "textSha256": "ef83adb83c7ae1da73258fecf7318b486b92fc9cd2d5c9f111ba48be2e6785b5",
+      "language": "ar",
+      "target": "non_transaction",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "fix",
+      "goldContext": "instruction_or_example",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-3-en",
+      "textSha256": "a376cc19e350b8aa678c7c6c925e8ad48ecd4dd81374385e92951cbe73a9bb72",
+      "language": "en",
+      "target": "non_transaction",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "fix",
+      "goldContext": "instruction_or_example",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-4-ar",
+      "textSha256": "5017853c765d341a64f6ce4e98908b6fd83a486f75148a352e2ca96150d01553",
+      "language": "ar",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "non_transaction",
+      "context": "instruction_or_example",
+      "event": "not_completed",
+      "transition": "regression",
+      "goldContext": "unknown",
+      "goldEvent": "unknown"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-4-en",
+      "textSha256": "cb0b6bc14b6666645e9772a2c770de4fd6e57923addcbb97ea6d754bb3900f5f",
+      "language": "en",
+      "target": "uncertain",
+      "direct": "uncertain",
+      "factorized": "uncertain",
+      "context": "unknown",
+      "event": "not_completed",
+      "transition": "both_correct",
+      "goldContext": "unknown",
+      "goldEvent": "unknown"
+    }
+  ],
+  "labelSubstitution": {
+    "rows": 32,
+    "savedStatusCorrect": 23,
+    "bothFieldsCorrect": 13,
+    "wrongFieldButStatusCorrect": 10,
+    "goldContextOnlyStatusMatches": 26,
+    "goldEventOnlyStatusMatches": 24,
+    "interpretation": "Label substitution using exposed weak truth; not inference, a deployable correction, or predicted performance."
+  },
+  "uncertainDevelopment": {
+    "rows": 8,
+    "directRetained": 7,
+    "factorizedRetained": 1,
+    "predictedContextCounts": {
+      "instruction_or_example": 5,
+      "question_or_request": 1,
+      "financial_notice": 1,
+      "unknown": 1
+    },
+    "predictedEventCounts": {
+      "not_completed": 8
+    }
+  },
+  "trainingCoverage": {
+    "context": {
+      "financial_notice": {
+        "records": 806,
+        "groups": 85,
+        "baseWeight": "155/2"
+      },
+      "instruction_or_example": {
+        "records": 20,
+        "groups": 7,
+        "baseWeight": "13/4"
+      },
+      "known_other": {
+        "records": 214,
+        "groups": 24,
+        "baseWeight": "91/4"
+      },
+      "personal_conversation": {
+        "records": 65,
+        "groups": 11,
+        "baseWeight": "19/2"
+      },
+      "question_or_request": {
+        "records": 64,
+        "groups": 16,
+        "baseWeight": "15"
+      },
+      "unknown": {
+        "records": 8,
+        "groups": 4,
+        "baseWeight": "1"
+      }
+    },
+    "event": {
+      "completed": {
+        "records": 703,
+        "groups": 80,
+        "baseWeight": "267/4"
+      },
+      "no_event": {
+        "records": 172,
+        "groups": 23,
+        "baseWeight": "89/4"
+      },
+      "not_completed": {
+        "records": 120,
+        "groups": 23,
+        "baseWeight": "55/4"
+      },
+      "unknown": {
+        "records": 182,
+        "groups": 36,
+        "baseWeight": "105/4"
+      }
+    }
+  },
+  "limits": [
+    "Assistant weak labels and exposed diagnostics; no independent accuracy or causal attribution.",
+    "Component truth exists only on 32 development rows; do not invent it for older cohorts.",
+    "Four quote-control uncertain targets encode conservative mixed/multisentence scope policy, not solely ambiguous event outcome. Frozen truth retained.",
+    "Correct composed status can conceal wrong components; neither substitution score is achievable-performance evidence.",
+    "No threshold, ensemble, class-weight, or checkpoint search; no label edits or new example generation."
+  ]
+}

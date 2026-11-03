@@ -1,0 +1,20 @@
+{
+  "runId": "sms_factorization_comparison_v1",
+  "ownerApproval": {
+    "date": "2026-10-28",
+    "instruction": "go",
+    "scope": "Implement and execute the fixed matched-data two-run comparison and conditional evaluation, under the published compute budget"
+  },
+  "trainingRunsAuthorized": 2,
+  "binding": {
+    "protocolSha256": "f9894b73e0d620ef6f3e1366801b21ae56b548c1117c26b13d5c2e23de188234",
+    "producerSha256": "e00e5fc818222573b3e5708c06f6ee5bddc7fb7e36db6ea4045d8bc11b5eb262",
+    "viewProducerSha256": "d21828372cec9773296682c57fc24ba2cbc0fc1f3c2738a36bf3c61587991cf6",
+    "environment": {
+      "torch": "2.14.1+cpu",
+      "transformers": "5.21.0",
+      "numpy": "2.5.4",
+      "safetensors": "0.8.0"
+    }
+  }
+}

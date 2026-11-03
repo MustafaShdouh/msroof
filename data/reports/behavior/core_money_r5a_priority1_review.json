@@ -1,0 +1,675 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Assistant source review of exposed weak expectations, not human gold",
+  "sourceQueueSha256": "6b4217b23c6ac86bf43fd8a1fe3de36880bc309793d6f774d8660c08d5ecf605",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "records": [
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-049",
+      "textSha256": "1692e35dcf39ab762ae0bd33b2695ea075d252c866245293905494f569cfefe7",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "explicit_login_only",
+      "rationale": "Login-only code explicitly denies any financial movement.",
+      "evidence": {
+        "start": 27,
+        "end": 44,
+        "sha256": "a80af700fe3794024033e913b7a32655ff3b90593f6c8cebdf62a489a9a53b1f"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-052",
+      "textSha256": "33cce190d66e36a11c4877c70617c83ca64af4d8841cf43a2b92abc651e4e945",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "explicit_failure",
+      "rationale": "Failed withdrawal explicitly states no debit.",
+      "evidence": {
+        "start": 63,
+        "end": 82,
+        "sha256": "06d929d5897091e3db6eac0c9bfcca1d397fa2dd9024f1c45486ce37b32cc4e5"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-054",
+      "textSha256": "10f60afe0e271156cab1834b358e1eeed4b81a5d6772e76061e91a1d3f3b5426",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "approval_request",
+      "rationale": "Approval is awaited and execution has not started.",
+      "evidence": {
+        "start": 50,
+        "end": 75,
+        "sha256": "a6dea966450e7f2fc8a0e4a62caf39c464ae3cb3abb2f89491e3846dd2c1a9fa"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-055",
+      "textSha256": "4fce3c15452c2c32a6d34bf6f0c45b89c514ba550e657fe87f17583da02ad942",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "personal_claim",
+      "rationale": "Personal dinner-payment claim, not a financial notification.",
+      "evidence": {
+        "start": 0,
+        "end": 10,
+        "sha256": "6da1b037d1b1840e0bd26d6471c31f1e9e9f6812c539459e786c97bc27778f6f"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-056",
+      "textSha256": "21fd480f66fb5bc8669189163745bd2652608476f4951a210795f72e7101b575",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "personal_claim",
+      "rationale": "First-person personal payment claim with follow-up request.",
+      "evidence": {
+        "start": 0,
+        "end": 11,
+        "sha256": "38d3bc8b35929b701fa450fa5195eec54d6cfbf83133a3017be5ca914e51fda4"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-061",
+      "textSha256": "06df24d99f95613282fbbbf6b09edf8f6f52862c27fe30cd3c529a1e364b9e17",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "card_administration",
+      "rationale": "Successful PIN change is administrative, not a cash movement.",
+      "evidence": {
+        "start": 3,
+        "end": 20,
+        "sha256": "a694506d53f5b2cc0788024440359eb16897ecb96f21b9447a0e710c56f0e835"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-062",
+      "textSha256": "df2dc519e998af125f4b309f538b0028407e8ba10b096503acc58970d1f9b54f",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "card_administration",
+      "rationale": "Success refers to a PIN change.",
+      "evidence": {
+        "start": 10,
+        "end": 38,
+        "sha256": "bede5c7720b664a3dd343d804dce2f36fa5b78ad703ea3a85d7179aa3a42163b"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-063",
+      "textSha256": "542171c5790d5314246fa8fcc829586d8711538a1d1a84a66955b2e4538cd507",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "noncash_posting",
+      "rationale": "Added quantity is reward points, explicitly not money.",
+      "evidence": {
+        "start": 10,
+        "end": 25,
+        "sha256": "6c4c18cb2cd92183ca5d50673e638384598601f192f417506b287f3a71a5269f"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-065",
+      "textSha256": "375e72fab89c628c5683b2370f767b64b0f6fd2a775d25108e1287e9e62a4fac",
+      "expectedStatus": "uncertain",
+      "reviewedStatus": "uncertain",
+      "boundary": "unknown_outcome",
+      "rationale": "A hold is reported but final settlement is explicitly unconfirmed.",
+      "evidence": {
+        "start": 36,
+        "end": 74,
+        "sha256": "38b370540ac87a97e4933652f832c34769146daa956fe517950a8e571ba1176f"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-068",
+      "textSha256": "eb62dbe3733ae6a9bae7a457c8059d79cbe33c080cf32608216b99cabedb9b99",
+      "expectedStatus": "uncertain",
+      "reviewedStatus": "uncertain",
+      "boundary": "unknown_outcome",
+      "rationale": "Debit and cancellation conflict; final outcome is unresolved.",
+      "evidence": {
+        "start": 70,
+        "end": 101,
+        "sha256": "de645f87f22afa2fa69568463628eeed4ba7449a98fbb8de5647de6091a64100"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-non_transaction-en",
+      "textSha256": "167d7d405427919a1c2879dc86e6d09b00194be255d22945d3cad13713aadf21",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "approval_request",
+      "rationale": "Approval is needed and execution is explicitly denied.",
+      "evidence": {
+        "start": 43,
+        "end": 67,
+        "sha256": "75087cc093fda6f3458cb5a63de6c065331da12b300114025ce208dc9ecba41f"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-non_transaction-ar",
+      "textSha256": "62cd1c02c770254d8bfe969f4a0c785ff069120c1cbde1a4c694a6cde760e10c",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "explicit_failure",
+      "rationale": "Cash dispensing failed; the next sentence denies a debit.",
+      "evidence": {
+        "start": 0,
+        "end": 14,
+        "sha256": "f667d9774d677959fc5ea5f9f950cc0c90667c265a48096c277b37593183735f"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-non_transaction-ar",
+      "textSha256": "be94b456f2ebba8314c39ec059251472bc9cbf104333a54a6cbab8e358851a9f",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "instructional_frame",
+      "rationale": "Introduction explicitly frames quoted content as a test example.",
+      "evidence": {
+        "start": 12,
+        "end": 45,
+        "sha256": "0ec76b6ea49fa0601805aadb5b06523fa7fc42b3837a38e29c3faeee16afe525"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-non_transaction-ar",
+      "textSha256": "2d9afcf6bbcab70b2a9849d38796350f400a645192d0db8935e02d117fff25c9",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "explicit_failure",
+      "rationale": "Payment did not finish and a wallet debit is denied.",
+      "evidence": {
+        "start": 0,
+        "end": 11,
+        "sha256": "55fa517c9847ffa5f6225cd4f05cd618902f2f5d2175d535b4e6dae621d555a0"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-non_transaction-en",
+      "textSha256": "e180809f289c93e83c44fed73f0259a9da2edb38c1ac3ca74b8cbc4033e2a918",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "explicit_failure",
+      "rationale": "Payment did not finish and a wallet debit is denied.",
+      "evidence": {
+        "start": 24,
+        "end": 38,
+        "sha256": "64df366eed4ae23ed0d82226192db78274a9d7be9187672b626776165ba12317"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "declined-ar",
+      "textSha256": "b6a63297b54c8d390bb59522efcc763c2276d3e82ff820cd61e7172ba7fab562",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "explicit_failure",
+      "rationale": "Transfer request refused and any withdrawal denied.",
+      "evidence": {
+        "start": 0,
+        "end": 16,
+        "sha256": "fe7e512b9a02baf22528da39109fe44de67aeb96376438bd1622ba3f59deb735"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "pending-ar",
+      "textSha256": "6207ed3816aec7e05e52f01211646acd412504ed46fb7b4c9878a276c19cce34",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "approval_request",
+      "rationale": "Payment awaits approval and was not executed.",
+      "evidence": {
+        "start": 20,
+        "end": 35,
+        "sha256": "cc9dccea363218f0332d6016b8713ee4378fea9b128316d21658b43f2c4e6b90"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "purchase-otp-ar",
+      "textSha256": "73c32a09105a91f1f7cee9a94fb4ec2291014081eac2fd07e7c89061d74d510c",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "authorization_request",
+      "rationale": "Purchase confirmation code is requested; payment has not executed.",
+      "evidence": {
+        "start": 44,
+        "end": 74,
+        "sha256": "84510a018e8fcc9924e0f8ff830b60032a366162cc1338ace1cf99539f5dab14"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0184",
+      "textSha256": "148735a023312c866d735391b3594f29d2902f63069dce0bc4b57c788d78777a",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "question_request",
+      "rationale": "Request for receipt/screenshot does not assert a financial movement.",
+      "evidence": {
+        "start": 0,
+        "end": 31,
+        "sha256": "26c35a543fc009f8f3a763d8fe2a981b9c1ec17094d9a97170db598396ad075b"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0289",
+      "textSha256": "37ed8cbb38b17e0a0a5f16e5be132fbbfa8ee36523fb8774cdabb0ffd9af92d1",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "question_request",
+      "rationale": "Question asks about completion, not an assertion of completion.",
+      "evidence": {
+        "start": 0,
+        "end": 31,
+        "sha256": "37ed8cbb38b17e0a0a5f16e5be132fbbfa8ee36523fb8774cdabb0ffd9af92d1"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-ar",
+      "textSha256": "693d3a21784d4fad6298687997972bc40d37e844c568b23dbfd8384cf370e71d",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "instructional_frame",
+      "rationale": "Language exercise controls the following quoted debit sentence.",
+      "evidence": {
+        "start": 0,
+        "end": 33,
+        "sha256": "399873ec3fbca9c91f80460857254ae179c958982a6f8c0249216b22187c017d"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-en",
+      "textSha256": "6e8b665431318b2dc8cf3d8ae403f397c73e35f0fd98295116ea0acdd0d06f7f",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "instructional_frame",
+      "rationale": "Language exercise controls the following quoted debit sentence.",
+      "evidence": {
+        "start": 0,
+        "end": 56,
+        "sha256": "bc8c079b8e8d711dc064aa07d27a1b6c8b12e7b639e8345f4fe47d90700f8c97"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-3-ar",
+      "textSha256": "ef83adb83c7ae1da73258fecf7318b486b92fc9cd2d5c9f111ba48be2e6785b5",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "instructional_frame",
+      "rationale": "Lesson editor says all notices on the page are invented.",
+      "evidence": {
+        "start": 50,
+        "end": 79,
+        "sha256": "92ea88d93069f0d42c8d36c6a72533dc8cdde75c7131d9b21e77a3f6012ec4c4"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-4-en",
+      "textSha256": "cb0b6bc14b6666645e9772a2c770de4fd6e57923addcbb97ea6d754bb3900f5f",
+      "expectedStatus": "uncertain",
+      "reviewedStatus": "uncertain",
+      "boundary": "unknown_frame",
+      "rationale": "Missing opening leaves governing context explicitly unresolved.",
+      "evidence": {
+        "start": 76,
+        "end": 120,
+        "sha256": "28bc85187e0dd68425f7e2284864e8352f19ed9dba32881f7c53b306d5ef9419"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-3-en",
+      "textSha256": "d23aa310e2502b92d3e9230c07fca6f10628de9e72c5b5750149f6f1d1e94920",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "question_request",
+      "rationale": "Personal request for a wallet number before a prospective gift.",
+      "evidence": {
+        "start": 16,
+        "end": 42,
+        "sha256": "2942eafb52e5b006909a5aff013d31de6a5a96b050f9ad17c0dbabee62cae9b2"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-ar",
+      "textSha256": "391f6b9e3d0905d50c43c4cd684426f5cc7504a9b189d9391ae189ed2658b8b8",
+      "expectedStatus": "uncertain",
+      "reviewedStatus": "uncertain",
+      "boundary": "unknown_outcome",
+      "rationale": "Request closure does not establish whether posting occurred.",
+      "evidence": {
+        "start": 41,
+        "end": 63,
+        "sha256": "2c504365c1daaf82540173fe574e4ce0bd415272ed1153c9734e673643839a5c"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-en",
+      "textSha256": "31f2ef21084250ea7c8d3345c60e1f26186a9e969dac67556186fe59325f3556",
+      "expectedStatus": "uncertain",
+      "reviewedStatus": "uncertain",
+      "boundary": "unknown_outcome",
+      "rationale": "Request closure leaves posting outcome unspecified.",
+      "evidence": {
+        "start": 48,
+        "end": 82,
+        "sha256": "7f921a8d777fc54d07fb5d63dc56eec085cad4fabdaff90afcc7e5d37ee4df5e"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-2-ar",
+      "textSha256": "c464d3609c583600ff722d510525d8b0a90b6c96fe48cc35407acb2a1e13698b",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "approval_request",
+      "rationale": "Approval awaited and deduction denied.",
+      "evidence": {
+        "start": 27,
+        "end": 52,
+        "sha256": "051161811cbf4351d816d06a71f8771ebe08efa93d89c16c4aefcc8d49ead61b"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-2-en",
+      "textSha256": "ac248399aacb5ed9f9d29260db4cccfca0984c99f07cb39b38affa95eb46ee8b",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "approval_request",
+      "rationale": "Approval awaited and account deduction denied.",
+      "evidence": {
+        "start": 36,
+        "end": 56,
+        "sha256": "68aef07ab2af344d6ec750cbddf12e9cbe7fa7c328cda9b1704c20ee162cbefb"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-3-ar",
+      "textSha256": "b9675199c603ba66388ff791eeb233c90985768891a7847a40c32fb79f2918e1",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "explicit_failure",
+      "rationale": "Payment refused with no resulting deduction.",
+      "evidence": {
+        "start": 20,
+        "end": 30,
+        "sha256": "422b4cab848c78f3ba378c70fc7a412950ee62d0e6d238db8ec0df396c2853bb"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-3-en",
+      "textSha256": "7e40597bf3ae30b77a9f3997c2299cfb8b0450728fd94ea2157a1c15d5fb0c6b",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "explicit_failure",
+      "rationale": "Payment refused with no resulting debit.",
+      "evidence": {
+        "start": 28,
+        "end": 47,
+        "sha256": "d891382c281823d3dd508530fb644651354c439e9e6d01cb5cfe3cb6278e66fa"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-4-en",
+      "textSha256": "77968b6ae24ef268594ce9c682cb156ab9f7e458797fe2e0797e1041b596e658",
+      "expectedStatus": "uncertain",
+      "reviewedStatus": "uncertain",
+      "boundary": "unknown_outcome",
+      "rationale": "Unavailable result leaves executed/pending alternatives unresolved.",
+      "evidence": {
+        "start": 63,
+        "end": 108,
+        "sha256": "660b4953fe4f17e86a83d414c6e63965f364bfe97d09ef0a024980936c28a1da"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-2-en",
+      "textSha256": "bf58a58867e6bbd49740d13f9022388a58969cc3e5e7afbe8d4806d5d9d9914c",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "question_request",
+      "rationale": "Colleague asks whether wages arrived.",
+      "evidence": {
+        "start": 31,
+        "end": 77,
+        "sha256": "a63ac045cb641e63dc63aeeab71135ef9f07686a99ec80455fbeecb844686891"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-3-ar",
+      "textSha256": "221e00851f2d68dc0cedf7d65420aa5784ecab3ccca362033d5b4fa1163c2199",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "question_request",
+      "rationale": "Accountant requests confirmation after checking a statement.",
+      "evidence": {
+        "start": 16,
+        "end": 39,
+        "sha256": "5abbb664eb9d073ad1e80baf1bcbe50889f44fca5f8718485333efa656f22fed"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-3-en",
+      "textSha256": "67e1d2099d731d08f3270c2c94d151347a93c3c289cb59556746407fac6e665b",
+      "expectedStatus": "non_transaction",
+      "reviewedStatus": "non_transaction",
+      "boundary": "question_request",
+      "rationale": "Accountant requests confirmation after checking a statement.",
+      "evidence": {
+        "start": 29,
+        "end": 68,
+        "sha256": "67d2dfc573005370110a8f9fee17492690bba2089e0434b97826f8125639a9bf"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-ar",
+      "textSha256": "a8854aedeafb81e5f05162e07e8addb7781c847e7e6eaac41e2c8affbee7a940",
+      "expectedStatus": "uncertain",
+      "reviewedStatus": "uncertain",
+      "boundary": "unknown_outcome",
+      "rationale": "Sending a processing file establishes neither posting nor failure.",
+      "evidence": {
+        "start": 37,
+        "end": 65,
+        "sha256": "9094b71b4bc4fb5a7eb871f0a13699a54a2ada9c6db5253d729d2621572299b1"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-en",
+      "textSha256": "8af346cbdc834a02ca0d50f3a9b0537c6adbd8085548934787fd55544a606efb",
+      "expectedStatus": "uncertain",
+      "reviewedStatus": "uncertain",
+      "boundary": "unknown_outcome",
+      "rationale": "Processing file sent; neither posting nor failure confirmed.",
+      "evidence": {
+        "start": 59,
+        "end": 101,
+        "sha256": "76a32917a7462f5971d7754cc5d1a498d64d18f0ef2c4c7a63f214b14819f71c"
+      },
+      "reviewState": "assistant_reviewed_weak",
+      "truthChanged": false,
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    }
+  ]
+}

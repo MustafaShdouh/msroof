@@ -1,0 +1,38 @@
+# Existing training-designated uncertainty slice only. No weights/admission; original uncertain labels retained.
+# id|context code F/K/P/Q/I/U|event code C/N/Z/U|context quote|event quote|note|optional hold reason
+authored-sms-v1-065|F|U|إشعار حجز على البطاقة|لا تتوفر معلومات تؤكد التسوية النهائية.|Hold is mentioned, but final settlement status is expressly unavailable; do not force pending or completed.
+authored-sms-v1-066|F|U|Card authorization hold|final settlement has not been confirmed.|Unconfirmed settlement is not a confirmed denial of settlement.
+authored-sms-v1-067|F|U|لنفس العملية|النتيجة النهائية غير محسومة.|Competing debit/cancellation records have no clear selected final event; hold interpretation.|conflicting_event_focus
+authored-sms-v1-068|F|U|are reported|its final outcome is unresolved.|Debit/cancellation conflict has no governing final event; do not invent a chronology.|conflicting_event_focus
+scope-v1-rent-share-4-ar|F|U|متابعة تحويل الإيجار:|حالة الوصول غير متوفرة حالياً|Explicit unavailable arrival outcome.
+scope-v1-rent-share-4-en|F|U|Rent transfer follow-up:|Delivery status is currently unavailable|Transfer outcome unavailable, not refused.
+scope-v1-shared-ride-4-ar|F|U|تفاصيل تسوية أجرة:|لا تظهر نتيجة استقبال المال.|Review status without arrival outcome.
+scope-v1-shared-ride-4-en|F|U|Fare settlement details:|no indication that funds were received.|Receipt outcome unconfirmed, not an assertion of nonreceipt.
+scope-v1-deposit-check-4-ar|F|U|متابعة آلة إيداع:|لا يمكن تحديد إن كان النقد قيد في الحساب.|Deposit result explicitly indeterminate.
+scope-v1-deposit-check-4-en|F|U|Deposit machine follow-up:|whether the cash posted cannot be determined.|Connection loss does not prove success or failure.
+scope-v1-reversal-query-4-ar|F|U|ملف استرداد:|لا تتوفر معلومات عن إعادة المبلغ.|Request handling completed, but the selected refund-credit outcome is unknown.
+scope-v1-reversal-query-4-en|F|U|Refund case:|information about returning the funds is unavailable.|Administrative processing end is not completed refund evidence.
+scope-v1-utility-order-4-ar|F|U|أمر دفع الكهرباء:|دون نتيجة يمكن الاعتماد عليها.|Timed-out payment result is unknown.
+scope-v1-utility-order-4-en|F|U|Electricity payment order:|without a reliable outcome.|Timeout neither proves posting nor refusal.
+scope-v1-cash-out-status-4-ar|F|U|بلاغ صرف نقد:|نتيجة الجهاز غير معروفة|Unknown payout and account posting.
+scope-v1-cash-out-status-4-en|F|U|Cash payout incident:|machine outcome is unknown|Do not infer account debit or physical cash delivery.
+scope-v1-booking-charge-4-ar|F|U|تحديث قيمة حجز:|لا تتضح صفتها كحجز أو خصم مسوى.|Unresolved authorization versus settled debit.
+scope-v1-booking-charge-4-en|F|U|Booking charge update:|without identifying it as a hold or a settled debit.|Displayed card value alone cannot settle event state.
+scope-v1-cheque-credit-4-ar|F|U|إضافة شيك:|لا يوجد أيضاً تأكيد قيد أو إتاحة.|Absence of rejection is not confirmation of posting.
+scope-v1-cheque-credit-4-en|F|U|Cheque credit:|no confirmation of posting or availability.|Not rejected does not establish completed credit.
+scope-v1-reward-credit-4-ar|U|U|دون تحديد أهي نقاط أم مال مضاف فعلياً.|توجد قيمة مكافأة|Text explicitly declares uncertainty between a noncash reward frame and a cash-credit frame; unknown is a reviewed semantic label, not an invented choice.
+scope-v1-reward-credit-4-en|U|U|without specifying whether it is points or actual credited money.|A reward value appears|The source explicitly withholds monetary versus points nature; event and financial/nonfinancial context cannot be resolved.
+scope-v1-collection-final-4-ar|F|U|نتيجة تحصيل دفعة:|لا يمكن التأكد من التنفيذ أو نفيه|Collection outcome explicitly unknown.
+scope-v1-collection-final-4-en|F|U|Collection result:|Execution can neither be confirmed nor ruled out|Incomplete record supports neither execution nor refusal.
+scope-v1-service-fee-sample-4-ar|U|C|لا يتضح إن كان النص نموذجاً أو من كشف الحساب الفعلي.|قيدت عمولة الخدمة.|The visible quoted clause describes a posted fee, while the source explicitly withholds whether its governing frame is example or actual notice.
+scope-v1-service-fee-sample-4-en|U|C|It is unclear whether this is a template or an actual statement entry.|The service fee posted.|Described posting is complete, but the governing context is expressly unresolved.
+scope-v1-pension-demo-4-ar|U|Z|لا يظهر إن كانت تخص حسابك أم مقتبسة من العرض التجريبي.|رسالة معاش معاد توجيهها|The visible text only discusses a forwarded message and its unknown frame; no underlying credit/debit proposition is actually supplied. Do not invent omitted contents.
+scope-v1-pension-demo-4-en|U|Z|It does not show whether it concerns your account or quotes the demo display.|Forwarded pension message|The raw excerpt supplies no pension-credit clause. No-event describes this visible text, not an inferred outcome of an unseen message.
+scope-v1-refund-tutorial-4-ar|U|U|بيانات الحركة حقيقية أو تجريبية؛ نوع المعاينة غير محدد.|بيانات الحركة|The source explicitly leaves real versus simulated frame unspecified; it also supplies no refund outcome.
+scope-v1-refund-tutorial-4-en|U|U|The activity data may be real or simulated; the preview type is unspecified.|The activity data|Reviewed semantic frame uncertainty, not a guess about which frame is true; outcome unspecified.
+scope-v1-cafe-test-4-ar|F|U|تقرير زيارة مقهى اختبار:|دون بيان إن كانت خصماً أو تفويضاً مؤقتاً.|اختبار belongs to the party name; the unknown outcome is debit versus authorization.
+scope-v1-cafe-test-4-en|F|U|Test Cafe visit report:|without indicating whether it is a debit or a temporary authorization.|Merchant-name Test is not an example frame; the posting state is genuinely unspecified.
+scope-v1-bookshop-pending-4-ar|F|U|ملخص مكتبة انتظار:|دون حالة مالية واضحة.|انتظار is part of the party name; reference alone supplies no settlement outcome.
+scope-v1-bookshop-pending-4-en|F|U|Pending Books summary:|without a clear financial status.|Pending is a party-name word, not proof of a pending event.
+scope-v1-vendor-cancel-4-ar|F|U|استعلام متجر إلغاء:|بلا نتيجة تنفيذ.|إلغاء is a party name; the record itself gives no execution result.
+scope-v1-vendor-cancel-4-en|F|U|Cancel Shop inquiry:|without an execution outcome.|Shop name does not determine cancellation; execution outcome is missing.

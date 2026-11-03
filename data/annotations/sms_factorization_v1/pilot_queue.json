@@ -1,0 +1,210 @@
+{
+  "version": "1.0.0",
+  "selectionSeed": "sms-factorization-pilot-2026-10-28",
+  "selection": "Six hash-minimum groups per provenance stratum, then hash-minimum training record in each; no label or model-score ranking",
+  "trainingGroups": 129,
+  "groupStrata": {
+    "legacy_expression": 66,
+    "authored_coverage": 35,
+    "authored_context": 12,
+    "authored_scope": 16
+  },
+  "rows": [
+    {
+      "recordId": "synthetic-v1-0121",
+      "text": "JO\nBalance JOD 78.939 on account 4169.",
+      "target": "non_transaction",
+      "weight": 0.125,
+      "group": "literal-L672-C12",
+      "originStratum": "legacy_expression"
+    },
+    {
+      "recordId": "synthetic-v1-0922",
+      "text": "the bill was 72.6 JOD each",
+      "target": "non_transaction",
+      "weight": 0.06666666666666667,
+      "group": "literal-L751-C8",
+      "originStratum": "legacy_expression"
+    },
+    {
+      "recordId": "synthetic-v1-0068",
+      "text": "دفعت الحساب للمطعم ولا ادفع انا؟",
+      "target": "non_transaction",
+      "weight": 1.0,
+      "group": "literal-L739-C8",
+      "originStratum": "legacy_expression"
+    },
+    {
+      "recordId": "synthetic-v1-0386",
+      "text": "JO\nتم إيداع مبلغ 46.25 JOD نقداً في محفظة زين كاش الخاصة بك عبر صراف آلي. رصيدك الجديد 27.85 JOD.",
+      "target": "completed",
+      "weight": 0.04,
+      "group": "literal-L433-C15",
+      "originStratum": "legacy_expression"
+    },
+    {
+      "recordId": "synthetic-v1-0536",
+      "text": "اشحن خطك الخلوي بقيمة 9 دنانير أو أكثر عبر تطبيق المحفظة واحصل على 49% رصيد مجاني إضافي!",
+      "target": "non_transaction",
+      "weight": 0.06666666666666667,
+      "group": "literal-L706-C12",
+      "originStratum": "legacy_expression"
+    },
+    {
+      "recordId": "synthetic-v1-0794",
+      "text": "JO\nتم دفع فاتورة شركة أمنية للهواتف بنجاح بقيمة 43.766 JOD من خلال خدمة إي فواتيركم. رصيدك الحالي هو 47.63 JOD.",
+      "target": "completed",
+      "weight": 0.05,
+      "group": "literal-L463-C15",
+      "originStratum": "legacy_expression"
+    },
+    {
+      "recordId": "authored-sms-v1-070",
+      "text": "Internal movement completed: JOD 77 from your current account to your own savings account.",
+      "target": "completed",
+      "weight": 0.5,
+      "group": "authored-v1-own",
+      "originStratum": "authored_coverage"
+    },
+    {
+      "recordId": "authored-sms-v1-012",
+      "text": "Merchant wallet payment settled, reducing your wallet by JOD 22.1.",
+      "target": "completed",
+      "weight": 0.5,
+      "group": "authored-v1-merchant-b",
+      "originStratum": "authored_coverage"
+    },
+    {
+      "recordId": "authored-sms-v1-033",
+      "text": "أُودع استرداد نقدي بقيمة ٢٫٤٥ JOD في حسابك؛ المبلغ متاح للاستخدام.",
+      "target": "completed",
+      "weight": 0.5,
+      "group": "authored-v1-cashback-a",
+      "originStratum": "authored_coverage"
+    },
+    {
+      "recordId": "authored-sms-v1-074",
+      "text": "Your bill payment completed and its debit was posted to the wallet. Open the statement for the amount.",
+      "target": "completed",
+      "weight": 0.5,
+      "group": "authored-v1-missing-amount",
+      "originStratum": "authored_coverage"
+    },
+    {
+      "recordId": "authored-sms-v1-031",
+      "text": "أُضيف رد دفعة ملغاة بقيمة ۲۹ دينار إلى حسابك كحركة دائنة.",
+      "target": "completed",
+      "weight": 0.5,
+      "group": "authored-v1-refund-b",
+      "originStratum": "authored_coverage"
+    },
+    {
+      "recordId": "authored-sms-v1-052",
+      "text": "Cash withdrawal of JOD 40 failed. The request was rejected and nothing was debited.",
+      "target": "non_transaction",
+      "weight": 0.5,
+      "group": "authored-v1-declined",
+      "originStratum": "authored_coverage"
+    },
+    {
+      "recordId": "instruction-quote-completed-en",
+      "text": "Actual financial notification: JOD 13 was debited from your account for a completed purchase.",
+      "target": "completed",
+      "weight": 0.25,
+      "group": "context:instruction-quote",
+      "originStratum": "authored_context"
+    },
+    {
+      "recordId": "billed-versus-paid-completed-ar",
+      "text": "سددت فاتورة الكهرباء من حسابك وتم الخصم بنجاح. راجع تفاصيل الدفع لمعرفة المبلغ.",
+      "target": "completed",
+      "weight": 0.25,
+      "group": "context:billed-versus-paid",
+      "originStratum": "authored_context"
+    },
+    {
+      "recordId": "cash-disbursement-completed-en",
+      "text": "Cash was dispensed and the withdrawal debit was posted to your account. See the statement for the withdrawal amount.",
+      "target": "completed",
+      "weight": 0.25,
+      "group": "context:cash-disbursement",
+      "originStratum": "authored_context"
+    },
+    {
+      "recordId": "personal-claim-completed-en",
+      "text": "A personal transfer arrived in your account and the credit was posted. The amount is in the transaction details.",
+      "target": "completed",
+      "weight": 0.25,
+      "group": "context:personal-claim",
+      "originStratum": "authored_context"
+    },
+    {
+      "recordId": "wallet-posting-completed-en",
+      "text": "The wallet debit was successfully posted after bill payment completed. View your statement for the amount.",
+      "target": "completed",
+      "weight": 0.25,
+      "group": "context:wallet-posting",
+      "originStratum": "authored_context"
+    },
+    {
+      "recordId": "refund-refusal-completed-en",
+      "text": "Your purchase refund of JOD 9.75 was credited successfully. The refund is complete.",
+      "target": "completed",
+      "weight": 0.25,
+      "group": "context:refund-refusal",
+      "originStratum": "authored_context"
+    },
+    {
+      "recordId": "scope-v1-rent-share-2-en",
+      "text": "Hey mate, I sent my rent share; open your account and check whether it reached you.",
+      "target": "non_transaction",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-rent-share",
+      "originStratum": "authored_scope"
+    },
+    {
+      "recordId": "scope-v1-booking-charge-1-en",
+      "text": "Booking charge update: The booking amount was booked as a settled debit on your card.",
+      "target": "completed",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-booking-charge",
+      "originStratum": "authored_scope"
+    },
+    {
+      "recordId": "scope-v1-cash-out-status-3-ar",
+      "text": "طلب صرف نقد: فشل قبل إخراج المال وألغي دون خصم.",
+      "target": "non_transaction",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-cash-out-status",
+      "originStratum": "authored_scope"
+    },
+    {
+      "recordId": "scope-v1-shared-ride-1-ar",
+      "text": "إضافة في كشف الحساب: استقبل الحساب تعويض أجرة الرحلة من مشارك آخر وأصبح المبلغ متاحاً.",
+      "target": "completed",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-shared-ride",
+      "originStratum": "authored_scope"
+    },
+    {
+      "recordId": "scope-v1-utility-order-1-ar",
+      "text": "نتيجة أمر دفع الكهرباء: سويت الفاتورة وسجل اقتطاع قيمتها من المحفظة.",
+      "target": "completed",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-utility-order",
+      "originStratum": "authored_scope"
+    },
+    {
+      "recordId": "scope-v1-vendor-cancel-3-ar",
+      "text": "إلغاء دفع قبل التنفيذ: لم تسجل دفعة المشتريات ولم يقتطع رصيد.",
+      "target": "non_transaction",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-vendor-cancel",
+      "originStratum": "authored_scope"
+    }
+  ],
+  "modelPredictionsUsed": false,
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false
+}

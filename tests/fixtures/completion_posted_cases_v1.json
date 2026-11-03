@@ -1,0 +1,542 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Assistant-authored exposed development contrasts, not independent evidence",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false,
+  "cases": [
+    {
+      "id": "posted-debit-en",
+      "language": "en",
+      "boundary": "posted_debit",
+      "input": {
+        "text": "A debit of JOD 17 is now posted to your wallet."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "booked-debit-en",
+      "language": "en",
+      "boundary": "posted_debit",
+      "input": {
+        "text": "JOD 17 was booked as a debit on your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "recorded-debit-en",
+      "language": "en",
+      "boundary": "posted_debit",
+      "input": {
+        "text": "A JOD 17 debit is recorded on your card."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "posted-credit-en",
+      "language": "en",
+      "boundary": "posted_credit",
+      "input": {
+        "text": "JOD 17 has posted as a credit to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "booked-credit-en",
+      "language": "en",
+      "boundary": "posted_credit",
+      "input": {
+        "text": "JOD 17 was booked as a final credit to your wallet."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "refund-credit-en",
+      "language": "en",
+      "boundary": "posted_credit",
+      "input": {
+        "text": "The reversed payment of JOD 17 has posted as a credit to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "recorded-credit-en",
+      "language": "en",
+      "boundary": "posted_credit",
+      "input": {
+        "text": "A JOD 17 credit is recorded on your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "posted-debit-ar",
+      "language": "ar",
+      "boundary": "posted_debit",
+      "input": {
+        "text": "قُيد خصم بقيمة 17 JOD على حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "recorded-debit-ar",
+      "language": "ar",
+      "boundary": "posted_debit",
+      "input": {
+        "text": "سُجل خصم نهائي على بطاقتك بقيمة 17 JOD."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "prefix-debit-ar",
+      "language": "ar",
+      "boundary": "posted_debit",
+      "input": {
+        "text": "تم اقتطاع رسوم بقيمة 17 JOD وقيد الخصم على حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "foreign-debit-en",
+      "language": "en",
+      "boundary": "posted_debit",
+      "input": {
+        "text": "A debit of USD 17 is now posted to your wallet."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 17,
+        "currency": "USD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "foreign-debit-ar",
+      "language": "ar",
+      "boundary": "posted_debit",
+      "input": {
+        "text": "سجل خصم نهائي على بطاقتك بقيمة 17 USD."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 17,
+        "currency": "USD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "denied-post-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "A debit of JOD 17 was not posted to your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "denied-book-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "JOD 17 was not booked as a credit to your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "denied-post-ar",
+      "language": "ar",
+      "boundary": "denial",
+      "input": {
+        "text": "لم يقيد خصم بقيمة 17 JOD على حسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "denied-record-ar",
+      "language": "ar",
+      "boundary": "denial",
+      "input": {
+        "text": "لم يسجل خصم بقيمة 17 JOD على بطاقتك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "future-en",
+      "language": "en",
+      "boundary": "request",
+      "input": {
+        "text": "A debit of JOD 17 will be posted to your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "future-ar",
+      "language": "ar",
+      "boundary": "request",
+      "input": {
+        "text": "سيتم قيد خصم بقيمة 17 JOD على حسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "conditional-en",
+      "language": "en",
+      "boundary": "request",
+      "input": {
+        "text": "If a credit is posted to your account, you will receive JOD 17."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "conditional-ar",
+      "language": "ar",
+      "boundary": "request",
+      "input": {
+        "text": "إذا قيد خصم بقيمة 17 JOD على حسابك راجع الإيصال."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "unknown-post-en",
+      "language": "en",
+      "boundary": "unknown",
+      "input": {
+        "text": "A debit of JOD 17 may have been posted to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown-book-en",
+      "language": "en",
+      "boundary": "unknown",
+      "input": {
+        "text": "A credit of JOD 17 might have been booked to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown-ar",
+      "language": "ar",
+      "boundary": "unknown",
+      "input": {
+        "text": "قيد خصم بقيمة 17 JOD على حسابك؛ نتيجة الخصم غير مؤكدة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "question-en",
+      "language": "en",
+      "boundary": "question",
+      "input": {
+        "text": "Can you confirm that a debit of JOD 17 is posted to your account?"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "question-ar",
+      "language": "ar",
+      "boundary": "question",
+      "input": {
+        "text": "هل يمكنك تأكيد أنه قيد خصم بقيمة 17 JOD على حسابك؟"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "quote-en",
+      "language": "en",
+      "boundary": "quoted",
+      "input": {
+        "text": "Translation exercise: \"A debit of JOD 17 is posted to your account.\""
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "quote-ar",
+      "language": "ar",
+      "boundary": "quoted",
+      "input": {
+        "text": "هذا مثال: «قيد خصم بقيمة 17 JOD على حسابك»."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "claim-en",
+      "language": "en",
+      "boundary": "personal",
+      "input": {
+        "text": "I booked a debit of JOD 17 to your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "claim-ar",
+      "language": "ar",
+      "boundary": "personal",
+      "input": {
+        "text": "أنا سجلت خصم بقيمة 17 JOD على حسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "points-en",
+      "language": "en",
+      "boundary": "noncash",
+      "input": {
+        "text": "150 reward points were posted to your profile."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "missing-amount-en",
+      "language": "en",
+      "boundary": "missing_amount",
+      "input": {
+        "text": "A debit is posted to your account. View the statement for its amount."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "missing-amount-ar",
+      "language": "ar",
+      "boundary": "missing_amount",
+      "input": {
+        "text": "قيد خصم على حسابك. راجع الكشف لمعرفة القيمة."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "both-effects-en",
+      "language": "en",
+      "boundary": "conflicting_effects",
+      "input": {
+        "text": "A debit of JOD 17 is posted to your account and a credit is recorded on your wallet."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "unknown-direction-en",
+      "language": "en",
+      "boundary": "unknown_direction",
+      "input": {
+        "text": "A debit of JOD 17 is posted to your account; direction is unknown."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "negative-merchant-en",
+      "language": "en",
+      "boundary": "merchant_control",
+      "input": {
+        "text": "JOD 17 was debited from your account at Not Posted Cafe."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "legacy-positive-ar",
+      "language": "ar",
+      "boundary": "existing_positive",
+      "input": {
+        "text": "تم إيداع 17 JOD في حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    }
+  ]
+}

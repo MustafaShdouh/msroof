@@ -1,0 +1,568 @@
+{
+  "runId": "sms_completion_adaptation_v1_error_review",
+  "fitting": false,
+  "newInference": false,
+  "reservedInferred": false,
+  "inputSha256": {
+    "data/reports/transactions/sms_completion_adaptation_v1.json": "b3a886e2ad503511c5abac0afbc63a973ce78d02dce890b39ca3341f489096b7",
+    "config/experiments/sms_completion_adaptation_v1.json": "aa48190817be42863ee8a1d39b271a0a5bed562e6e67d0207e6613228a1a4b56",
+    "tools/evaluation/review_sms_adaptation_errors.py": "8e27a49f43a3075c5fd8b1058485ba9d34109ef9f56c765a58ccb2a040a139d6"
+  },
+  "errorCounts": {
+    "missed_completion": 8,
+    "false_completion": 1
+  },
+  "patternCounts": {
+    "posted_deposit": 1,
+    "question": 1,
+    "settled_foreign_purchase": 1,
+    "credit_context": 3,
+    "negation_scope": 1,
+    "party_scope": 2
+  },
+  "allModelsWrong": [
+    "probe-approval-state-completed-ar",
+    "scope-v1-wage-receipt-1-ar"
+  ],
+  "errors": [
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1665",
+      "text": "JO\nJOD 68.821 has been credited to xxxx572 on 01/04/2001 19:22 as an Online ATM Deposit. Available balance 322.981.",
+      "target": "completed",
+      "errorType": "missed_completion",
+      "pattern": "posted_deposit",
+      "labelReview": {
+        "reviewer": "assistant",
+        "state": "weak",
+        "retained": true,
+        "rationale": "The text states that funds have been credited as an ATM deposit. This is a completion label, not ownership proof."
+      },
+      "scores": {
+        "word": 1.4934142684346072,
+        "context": 1.544940643668794,
+        "encoder": 0.22025885892437025,
+        "candidate": -1.3262697458267212
+      },
+      "predictions": {
+        "word": "completed",
+        "context": "completed",
+        "encoder": "completed",
+        "candidate": "non_transaction"
+      },
+      "referencesCorrect": [
+        "word",
+        "context",
+        "encoder"
+      ],
+      "allModelsWrong": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0289",
+      "text": "did you finish the transaction?",
+      "target": "non_transaction",
+      "errorType": "false_completion",
+      "pattern": "question",
+      "labelReview": {
+        "reviewer": "assistant",
+        "state": "weak",
+        "retained": true,
+        "rationale": "A question about finishing a transaction does not report a completed account movement."
+      },
+      "scores": {
+        "word": -2.961914857108052,
+        "context": -2.5682604777211444,
+        "encoder": 0.5874658228899232,
+        "candidate": 0.9838376641273499
+      },
+      "predictions": {
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "encoder": "completed",
+        "candidate": "completed"
+      },
+      "referencesCorrect": [
+        "word",
+        "context"
+      ],
+      "allModelsWrong": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "foreign-purchase-en",
+      "text": "Your card was debited USD 12.40 for a settled purchase. Available balance: JOD 75.00.",
+      "target": "completed",
+      "errorType": "missed_completion",
+      "pattern": "settled_foreign_purchase",
+      "labelReview": {
+        "reviewer": "assistant",
+        "state": "weak",
+        "retained": true,
+        "rationale": "The text explicitly states a debited USD purchase and distinguishes its JOD available balance."
+      },
+      "scores": {
+        "word": 0.9558566979966162,
+        "context": -0.07193591100808454,
+        "encoder": -0.020618554412357347,
+        "candidate": -3.2087886333465576
+      },
+      "predictions": {
+        "word": "completed",
+        "context": "non_transaction",
+        "encoder": "non_transaction",
+        "candidate": "non_transaction"
+      },
+      "referencesCorrect": [
+        "word"
+      ],
+      "allModelsWrong": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-completed-ar",
+      "text": "تنبيه حساب حقيقي: نزل راتبك في الحساب بقيمة ٦٠٠ دينار وأصبح الرصيد متاحاً.",
+      "target": "completed",
+      "errorType": "missed_completion",
+      "pattern": "credit_context",
+      "labelReview": {
+        "reviewer": "assistant",
+        "state": "weak",
+        "retained": true,
+        "rationale": "The text reports salary landing and funds becoming available; the alert wording is not an example introduction."
+      },
+      "scores": {
+        "word": -0.43829944742054966,
+        "context": 0.6141823303455053,
+        "encoder": -0.37651078473826705,
+        "candidate": -1.5543460845947266
+      },
+      "predictions": {
+        "word": "non_transaction",
+        "context": "completed",
+        "encoder": "non_transaction",
+        "candidate": "non_transaction"
+      },
+      "referencesCorrect": [
+        "context"
+      ],
+      "allModelsWrong": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-completed-ar",
+      "text": "تمت الموافقة على سداد ٣٤ دينار وانتهى الخصم. لم يعد الطلب معلقاً.",
+      "target": "completed",
+      "errorType": "missed_completion",
+      "pattern": "negation_scope",
+      "labelReview": {
+        "reviewer": "assistant",
+        "state": "weak",
+        "retained": true,
+        "rationale": "The debit is finished; no longer pending negates the pending state, not the completed payment."
+      },
+      "scores": {
+        "word": -0.7137716843957521,
+        "context": -0.42822561372307627,
+        "encoder": -0.6081803118131771,
+        "candidate": -1.1511555910110474
+      },
+      "predictions": {
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "encoder": "non_transaction",
+        "candidate": "non_transaction"
+      },
+      "referencesCorrect": [],
+      "allModelsWrong": true
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-merchant-en",
+      "text": "JOD 14 was debited from your account at \"Teaching Example\".",
+      "target": "completed",
+      "errorType": "missed_completion",
+      "pattern": "party_scope",
+      "labelReview": {
+        "reviewer": "assistant",
+        "state": "weak",
+        "retained": true,
+        "rationale": "Teaching Example is inside the merchant field after at, not an instruction that the message is a teaching example."
+      },
+      "scores": {
+        "word": 1.364154276119772,
+        "context": 1.1368566025701268,
+        "encoder": 1.9295307189701476,
+        "candidate": -1.2579505443572998
+      },
+      "predictions": {
+        "word": "completed",
+        "context": "completed",
+        "encoder": "completed",
+        "candidate": "non_transaction"
+      },
+      "referencesCorrect": [
+        "word",
+        "context",
+        "encoder"
+      ],
+      "allModelsWrong": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-merchant-ar",
+      "text": "تم خصم ١٤ دينار من حسابك لدى «متجر نموذج تعليمي».",
+      "target": "completed",
+      "errorType": "missed_completion",
+      "pattern": "party_scope",
+      "labelReview": {
+        "reviewer": "assistant",
+        "state": "weak",
+        "retained": true,
+        "rationale": "The quoted shop name follows لدى; its educational wording does not negate the stated debit."
+      },
+      "scores": {
+        "word": 0.6929264455573738,
+        "context": 0.765123959188625,
+        "encoder": -0.19573856127037292,
+        "candidate": -1.753347396850586
+      },
+      "predictions": {
+        "word": "completed",
+        "context": "completed",
+        "encoder": "non_transaction",
+        "candidate": "non_transaction"
+      },
+      "referencesCorrect": [
+        "word",
+        "context"
+      ],
+      "allModelsWrong": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-ar",
+      "text": "إشعار إضافة أجر: قيد أجر العمل في حسابك وبات قابلاً للسحب.",
+      "target": "completed",
+      "errorType": "missed_completion",
+      "pattern": "credit_context",
+      "labelReview": {
+        "reviewer": "assistant",
+        "state": "weak",
+        "retained": true,
+        "rationale": "Posted work pay and withdrawable funds explicitly describe completed credit; no amount is required for completion."
+      },
+      "scores": {
+        "word": -1.1466023558413259,
+        "context": -0.7523322119125322,
+        "encoder": -0.5127142736703161,
+        "candidate": -0.9649592041969299
+      },
+      "predictions": {
+        "word": "non_transaction",
+        "context": "non_transaction",
+        "encoder": "non_transaction",
+        "candidate": "non_transaction"
+      },
+      "referencesCorrect": [],
+      "allModelsWrong": true
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-en",
+      "text": "Wage credit notice: Your work payment was booked to your account and is now withdrawable.",
+      "target": "completed",
+      "errorType": "missed_completion",
+      "pattern": "credit_context",
+      "labelReview": {
+        "reviewer": "assistant",
+        "state": "weak",
+        "retained": true,
+        "rationale": "Booked work payment and withdrawable funds describe completed credit; recording can still require missing fields."
+      },
+      "scores": {
+        "word": -0.12922705469026846,
+        "context": 0.6310147105268815,
+        "encoder": -0.9316853390152697,
+        "candidate": -3.1743526458740234
+      },
+      "predictions": {
+        "word": "non_transaction",
+        "context": "completed",
+        "encoder": "non_transaction",
+        "candidate": "non_transaction"
+      },
+      "referencesCorrect": [
+        "context"
+      ],
+      "allModelsWrong": false
+    }
+  ],
+  "transitions": {
+    "oldExposedValidation": {
+      "word": {
+        "fixes": [],
+        "regressions": [
+          "synthetic-v1-1665",
+          "synthetic-v1-0289"
+        ]
+      },
+      "context": {
+        "fixes": [],
+        "regressions": [
+          "synthetic-v1-1665",
+          "synthetic-v1-0289"
+        ]
+      },
+      "encoder": {
+        "fixes": [
+          "synthetic-v1-0106",
+          "synthetic-v1-0184"
+        ],
+        "regressions": [
+          "synthetic-v1-1665"
+        ]
+      }
+    },
+    "exposedManual": {
+      "word": {
+        "fixes": [
+          "withdrawal-ar",
+          "missing-amount-ar",
+          "missing-amount-en",
+          "declined-ar",
+          "pending-en",
+          "quoted-example-ar",
+          "quoted-example-en"
+        ],
+        "regressions": [
+          "foreign-purchase-en"
+        ]
+      },
+      "context": {
+        "fixes": [
+          "declined-ar",
+          "declined-en",
+          "purchase-otp-ar",
+          "quoted-example-ar"
+        ],
+        "regressions": []
+      },
+      "encoder": {
+        "fixes": [
+          "quoted-example-en"
+        ],
+        "regressions": []
+      }
+    },
+    "authoredProbe": {
+      "word": {
+        "fixes": [
+          "probe-cash-receipt-completed-ar",
+          "probe-cash-receipt-completed-en",
+          "probe-cash-receipt-non_transaction-ar",
+          "probe-unpriced-payment-completed-ar",
+          "probe-unpriced-payment-completed-en",
+          "probe-example-context-completed-en",
+          "probe-approval-state-completed-en",
+          "probe-approval-state-non_transaction-en",
+          "probe-rejected-debit-completed-ar",
+          "probe-rejected-debit-completed-en"
+        ],
+        "regressions": []
+      },
+      "context": {
+        "fixes": [
+          "probe-cash-receipt-completed-ar",
+          "probe-cash-receipt-completed-en",
+          "probe-unpriced-payment-completed-ar",
+          "probe-unpriced-payment-completed-en",
+          "probe-approval-state-completed-en"
+        ],
+        "regressions": [
+          "probe-example-context-completed-ar"
+        ]
+      },
+      "encoder": {
+        "fixes": [
+          "probe-cash-receipt-non_transaction-en",
+          "probe-example-context-non_transaction-en",
+          "probe-rejected-debit-completed-ar"
+        ],
+        "regressions": []
+      }
+    },
+    "quoteControls": {
+      "word": {
+        "fixes": [
+          "manual-ar",
+          "manual-en",
+          "qualified-en",
+          "qualified-ar",
+          "note-en",
+          "note-ar"
+        ],
+        "regressions": [
+          "qualified-merchant-en",
+          "qualified-merchant-ar"
+        ]
+      },
+      "context": {
+        "fixes": [
+          "manual-ar",
+          "qualified-ar",
+          "note-en",
+          "note-ar"
+        ],
+        "regressions": [
+          "qualified-merchant-en",
+          "qualified-merchant-ar"
+        ]
+      },
+      "encoder": {
+        "fixes": [
+          "manual-en",
+          "note-ar"
+        ],
+        "regressions": [
+          "qualified-merchant-en"
+        ]
+      }
+    },
+    "scopeDevelopment": {
+      "word": {
+        "fixes": [
+          "scope-v1-tuition-status-1-ar",
+          "scope-v1-tuition-status-1-en",
+          "scope-v1-tuition-status-2-en",
+          "scope-v1-card-alert-lesson-1-ar",
+          "scope-v1-card-alert-lesson-1-en"
+        ],
+        "regressions": []
+      },
+      "context": {
+        "fixes": [
+          "scope-v1-tuition-status-1-ar",
+          "scope-v1-tuition-status-1-en",
+          "scope-v1-card-alert-lesson-1-ar",
+          "scope-v1-card-alert-lesson-1-en"
+        ],
+        "regressions": [
+          "scope-v1-wage-receipt-1-en"
+        ]
+      },
+      "encoder": {
+        "fixes": [
+          "scope-v1-wage-receipt-2-en",
+          "scope-v1-tuition-status-1-ar",
+          "scope-v1-card-alert-lesson-2-en"
+        ],
+        "regressions": []
+      }
+    }
+  },
+  "trainingLiteralCoverage": {
+    "literal_question_mark": {
+      "records": 36,
+      "groups": 13,
+      "targetCounts": {
+        "non_transaction": 36
+      },
+      "recordIds": [
+        "synthetic-v1-0010",
+        "synthetic-v1-0021",
+        "synthetic-v1-0030",
+        "synthetic-v1-0036",
+        "synthetic-v1-0068",
+        "synthetic-v1-0088",
+        "synthetic-v1-0109",
+        "synthetic-v1-0117",
+        "synthetic-v1-0204",
+        "synthetic-v1-0244",
+        "synthetic-v1-0261",
+        "synthetic-v1-0295",
+        "synthetic-v1-0479",
+        "synthetic-v1-0626",
+        "synthetic-v1-0711",
+        "synthetic-v1-0771",
+        "synthetic-v1-0816",
+        "synthetic-v1-0960",
+        "synthetic-v1-0961",
+        "synthetic-v1-0993",
+        "synthetic-v1-1005",
+        "synthetic-v1-1052",
+        "synthetic-v1-1063",
+        "synthetic-v1-1081",
+        "synthetic-v1-1350",
+        "synthetic-v1-1391",
+        "synthetic-v1-1499",
+        "synthetic-v1-1624",
+        "synthetic-v1-1891",
+        "synthetic-v1-2045",
+        "scope-v1-deposit-check-2-ar",
+        "scope-v1-deposit-check-2-en",
+        "scope-v1-reversal-query-2-ar",
+        "scope-v1-reversal-query-2-en",
+        "scope-v1-pension-demo-3-ar",
+        "scope-v1-pension-demo-3-en"
+      ],
+      "interpretation": "Literal query only, not an event-coverage or semantic-similarity annotation"
+    },
+    "literal_USD": {
+      "records": 2,
+      "groups": 1,
+      "targetCounts": {
+        "completed": 2
+      },
+      "recordIds": [
+        "authored-sms-v1-007",
+        "authored-sms-v1-008"
+      ],
+      "interpretation": "Literal query only, not an event-coverage or semantic-similarity annotation"
+    },
+    "literal_English_wage": {
+      "records": 0,
+      "groups": 0,
+      "targetCounts": {},
+      "recordIds": [],
+      "interpretation": "Literal query only, not an event-coverage or semantic-similarity annotation"
+    },
+    "new_party_scope": {
+      "records": 18,
+      "groups": 3,
+      "targetCounts": {
+        "completed": 12,
+        "non_transaction": 6
+      },
+      "recordIds": [
+        "scope-v1-cafe-test-1-ar",
+        "scope-v1-cafe-test-1-en",
+        "scope-v1-cafe-test-2-ar",
+        "scope-v1-cafe-test-2-en",
+        "scope-v1-cafe-test-3-ar",
+        "scope-v1-cafe-test-3-en",
+        "scope-v1-bookshop-pending-1-ar",
+        "scope-v1-bookshop-pending-1-en",
+        "scope-v1-bookshop-pending-2-ar",
+        "scope-v1-bookshop-pending-2-en",
+        "scope-v1-bookshop-pending-3-ar",
+        "scope-v1-bookshop-pending-3-en",
+        "scope-v1-vendor-cancel-1-ar",
+        "scope-v1-vendor-cancel-1-en",
+        "scope-v1-vendor-cancel-2-ar",
+        "scope-v1-vendor-cancel-2-en",
+        "scope-v1-vendor-cancel-3-ar",
+        "scope-v1-vendor-cancel-3-en"
+      ],
+      "interpretation": "Literal query only, not an event-coverage or semantic-similarity annotation"
+    }
+  },
+  "labelsChanged": 0,
+  "limits": [
+    "All labels remain same-assistant weak, not human gold. Review is not independent validation.",
+    "Scores have different scales across models and are not calibrated confidence; do not compare their magnitudes as certainty.",
+    "No threshold or ensemble search, new predictions, attribution inference, or reserved access occurred.",
+    "The experiment changed training data and representation; no single cause of errors is established.",
+    "Training literal query absence does not establish absence of semantic equivalents or prove root cause."
+  ]
+}

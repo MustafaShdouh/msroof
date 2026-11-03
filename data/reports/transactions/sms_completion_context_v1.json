@@ -1,0 +1,3089 @@
+{
+  "runId": "sms_completion_context_v1",
+  "scope": "Adaptive exposed synthetic development. Six additional authored probe groups frozen before inference; not independent real-world evaluation.",
+  "inputSha256": {
+    "config/experiments/sms_completion_context_v1.json": "dbf26720c414f0e1908d5ee4cdd89c7a71f8cb15316ce03ec941abef966b96f7",
+    "data/training/authored_sms_context_v1/scenarios.json": "2f1b1d2f03a12d3a776d4c3b24dbd743858940b57ac232b9bea7bfbc69297ae7",
+    ".local-backups/sms_research_manual_v1/cases.json": "b1d582d32af849578565ba5404fad96e1922aad873d344d27ae803457c34d875",
+    "data/reports/transactions/sms_semantics_followup_v1.json": "cedd066e3a35a01ceef96b6e527b0de7a3ad673690ae17481ce5ca254c22d080",
+    "data/models/sms_semantics_followup_v1_word_candidate.json": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121",
+    "config/contracts/sms_completion_context.json": "5011125f43d5aa8787198b353ac6d82fe68c7d8c79b39c24ac8aa4b7bc6a16c3",
+    "tools/evaluation/probe_sms_completion_context.ts": "da3c81d146272b06bb9327bc83800192ff521327c172c55dce209caf3edf77d2",
+    "training/transactions/completion_context.py": "457ee216820c51521f0ca4c4053f4f2289a634e954c53b63cf3dffe0fe126881",
+    "src/python/research/sms_completion_context.py": "e3c191bfed84405536fca2df1c03cb09a10ee2a05c7d94083288ad33e44d915b",
+    "src/typescript/research/SmsCompletionContext.ts": "62f7afaefece1d7842f303f7327264a4ad492c38d2ed2ad08699d00eed4acf07",
+    "tests/python/test_sms_completion_context.py": "910b416cb114c4d2708f36435a73b54f5d447735fd0c2deb725c386135d0dab7",
+    "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8",
+    "data/annotations/sms_semantics_v1/propagation_manifest_v1.json": "60e44bb3ca335c36c93660a7385607c8f1fdd0d2a0b0e3497e5d861127d82eac",
+    "data/annotations/sms_semantics_v1/propagation_proposal_v1.jsonl": "d8a23890e73d29ef662b909e21f7c5fc494a85d64dc12aabcf492229e383b2da",
+    "data/annotations/sms_semantics_v1/validation_review_manifest_v1.json": "a910150b95c0bbd2dddd99bed3d88338e57e04ca29de4e28d5afe7955ef223a7",
+    "data/annotations/sms_semantics_v1/validation_text_reviews_v1.jsonl": "d359154638c5e07cc570f7c1bbb52311962cf1c963c1de5cd81a19ffe30fb45e",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/reports/transactions/sms_semantics_ab_v1_cohort.json": "c54d7c82273589cc2186dbe780a0accc7f78bd4180fbe758e4806ab2fd1ee321",
+    "tests/fixtures/sms_semantics_feature_cases.json": "010b52177806212b7e124f780ebeb4eaaf513b681814d1cc1799b5ace4a66a6d",
+    "tools/evaluation/probe_sms_semantics.ts": "6abb1ce1787a329a8a8ea0d90202ac26482d817d04cf807bad7631e17bc4b1cc",
+    "src/python/research/sms_semantics.py": "0eab832392fbcf737a6f9d82102310018eaed13734c7aad977c19e177ebd5d4d",
+    "src/typescript/research/SmsSemantics.ts": "a9509ca002cb11954039ed584789ec39affb64f561177d6f85bd82ac73e43a41",
+    "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+    "training/transactions/semantics_ab.py": "194b434283aa7463a35c69a031c519e09f5de1fea3ae7a1e5fc42abf702a967a",
+    "tests/python/test_sms_semantics_model.py": "1d6b9752cd00e4963f9ae98e287733d26672a7ced8d9979f8d8468f416fcdb30",
+    "tools/node_runtime.py": "1cfaa902ac6caec4217373d4b4b7570f22d23e05f0918a3c73a543bdf1dddbb7",
+    "training/corpus_io.py": "ed29cf5682b3eb514ebc0b149e2f9d47c9fb3d3f478f6b0d692982290f7d2738",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "src/python/__init__.py": "173557702be0af8ba18e41311196952b5c4c246dedf79c4a81e97429c6c5e8d7",
+    "src/python/authorization_request.py": "fa8f7a4598e46c3e637e74d4c485029d008a0486bfb25696851e8d024b333814",
+    "src/python/detailed_assessment.py": "75201ba5fe2ea036f0c3a42eafbfe3c19858986e432a03e1f06df08f6b4bb457",
+    "src/python/engine.py": "cf25218f87e2ea48f1e52dafbf9748e920ef8e61169050dc69d5778ce8d6c605",
+    "src/python/entity_text.py": "688fcf0e4bda7dac395815589464d3f9f88f073d31b58aeadc798c83f3b98948",
+    "src/python/legacy_transaction_model.py": "911c45201bc21c1926ec4b03ef6e340376a5b292491225c0a81f7a1f97f32100",
+    "src/python/ownership_context.py": "e143759e8f9f59e0f65a501423e30519285fa2904052f0e37d6947bfd67238c4",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "src/python/service_notice.py": "92cf27f5255e9a37f53f267063ba12913638c4cc1bfbc75652c2931c6f6136d3",
+    "config/contracts/transaction_evidence.json": "806b2fe67ed517831d9ab087064a19eb643373ec7b06d0bc2374bfd6df61e773",
+    "config/contracts/entity_text.json": "a1d19d070521d50590b2ab9b1925507b936d0ffc19d85431198c4166fc1a1637",
+    "config/contracts/service_notice.json": "1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3",
+    "config/contracts/authorization_request.json": "d927714265710faf8f80a1053a1b17bfbe9a0eff56208b820295dd616f7b555b",
+    "config/contracts/transaction_behavior.json": "e06693e71398f60a220488a779902fc2d38d2ba7c19570df395fddf551e2bf4b",
+    "config/contracts/sms_coverage_batch.json": "71c55a128b71881bd05a98a13abedf4e42917bb10c4e6ee05a66c7e68ad4a99a",
+    "data/annotations/sms_coverage_v1/source_event_reviews.json": "214aa339a75eb844a16501c1485761c862e1bcfe878fed66f89987948f74bb21",
+    "data/training/authored_sms_v1/messages.jsonl": "18ca9e8b943a484ddab90b0f1536d3fed43d546b2d148a3e484591bdf02d409f",
+    "data/reports/transactions/sms_semantics_ab_v1.json": "ad8ceeb72a9cbfa369ee8e46a07e992d0a5745004141d703f9e3ba7cd3ab9706",
+    "data/annotations/sms_semantics_v1/text_reviews_v1.jsonl": "62a3bf3ea2a811064a246069b9d15aede268c5e76c628e64ee6ef7767edc2e3f",
+    "data/annotations/sms_semantics_v1/text_review_manifest_v2.json": "e4892c43990ce7184e00a68103eccf4c859fe5df39724cc475dc47992275ead9",
+    "data/annotations/businesses_200.jsonl": "81f0b434dc4b2549eedef5a1fc0bfec871bcd32f635ec10916a28fb3e74f8d13",
+    "data/training/splits/category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d",
+    "data/sources/businesses/brand_families.json": "34950f9c65e4982fa0df9af3699a3f2979e8b9d07d13251d5d34efa78ac9c66a",
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+    "tests/fixtures/sanitized_v1/qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+    "tests/fixtures/transaction_behavior_cases.json": "68b8e87d29fcc2513886d26efd37adc26934ba74c396f373acbcf78034476bc5",
+    "tests/fixtures/detailed_assessment_cases.json": "12cfd3fec7a19fe0b291074d5124f30d3e0e18299096a653cab92b48a182b13d",
+    "tests/fixtures/authorization_request_cases.json": "35eccc4e56634a1fbd8229ed175640050c5804203f0be222464ad586bdf04ace",
+    "tests/fixtures/ownership_context_cases.json": "295619af9abf4420030bdb4ec9e934d8ad049f993270a0486b9adeec24a4643d",
+    "tests/fixtures/paired_movement_cases.json": "68c01fb8fc6eb3f9699074e5978ed3fd143570bdacc3491868bc4e42ccaa9010",
+    "tests/fixtures/arabic_message_semantics_cases.json": "89262202327afe5b62c97eb6f37a17fa7d9e605e90ad393b7032acddf463d9ab",
+    "training/corpus/coverage.py": "0cba9737e1e8e109eba92431ad3d47d91a919c68aea5b2f869f2c97c1487d5da",
+    "tests/python/test_sms_coverage.py": "8cc5b1f600f1b5296979f4c9574bf25f603de8f67d4333d852abfccb3d6bc92a",
+    "src/python/research/merchant_category.py": "195b17c611acccca6f053a344c31347fa8c09940be95f1295cac88bf371beaa5",
+    "training/corpus/semantics.py": "32c5e50c4ab2506ac59f8b06075593a9bbacc7fdf1ab13ccba7b6dcc37dc85ca",
+    "training/corpus/review_semantics.py": "85ed12b2682f22a42ed9dba2cc741863c5d99665a3f3445c085497ebe37e2ff7",
+    "tools/contracts/validate_sms_semantics.py": "a68d1c2aad74d01e936f17c43859408d5c47408e9a7f76dce5340b18c993710e",
+    "config/contracts/sms_semantics_annotations.json": "843117160a7489d7f1b146dc3c07ed16fcdb853524683cdd212473143b059217",
+    "config/experiments/sms_semantics_followup_v1.json": "baf01bd0c7e38f61269355a0792878fb2a9c25a17bd5f1667422b247b49aa746",
+    "data/reports/transactions/sms_semantics_followup_v1_cohort.json": "9c91de7551e9cb65f04eeba89edef0ddd7308d2e3cd700e9dbf9da1b13a383b8",
+    "data/reports/transactions/sms_coverage_batch_v1.json": "9830e7dbfc3b4ff29cf640c8a9dcb6ac7f1009931fe71fe726969020ee31acc0",
+    "data/models/sms_semantics_ab_v1_browser_runtime.js": "c361f9f94e4757ce3518f0b6703f6ab8de26d3c0cd0508d298d8cbfb275b4890",
+    "training/transactions/semantics_followup.py": "f56be4d317f6cbb50ac230d967f34c7ea68026463d32fd9248a2f5feff070ff5",
+    "tests/python/test_sms_semantics_followup.py": "4954e98ec568ede69fbc358ef775284457ca62fd70e42329029c1414ea45a2f7"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  },
+  "trainingSupport": {
+    "rows": 1062,
+    "targets": {
+      "non_transaction": 489,
+      "completed": 573
+    },
+    "oldWeightGroups": 101,
+    "newContrastGroups": 12,
+    "totalWeight": 113.0
+  },
+  "fitCalls": 1,
+  "fitAudit": {
+    "iterations": 6,
+    "featureCount": 1854,
+    "maximumSklearnExportScoreGap": 9.325873406851315e-15
+  },
+  "overlapBlockers": {
+    "cash-disbursement-completed-ar": [],
+    "cash-disbursement-completed-en": [],
+    "cash-disbursement-non_transaction-ar": [],
+    "cash-disbursement-non_transaction-en": [],
+    "wallet-posting-completed-ar": [],
+    "wallet-posting-completed-en": [],
+    "wallet-posting-non_transaction-ar": [],
+    "wallet-posting-non_transaction-en": [],
+    "settled-payment-completed-ar": [],
+    "settled-payment-completed-en": [],
+    "settled-payment-non_transaction-ar": [],
+    "settled-payment-non_transaction-en": [],
+    "transfer-refusal-completed-ar": [],
+    "transfer-refusal-completed-en": [],
+    "transfer-refusal-non_transaction-ar": [],
+    "transfer-refusal-non_transaction-en": [],
+    "instruction-quote-completed-ar": [],
+    "instruction-quote-completed-en": [],
+    "instruction-quote-non_transaction-ar": [],
+    "instruction-quote-non_transaction-en": [],
+    "sample-credit-completed-ar": [],
+    "sample-credit-completed-en": [],
+    "sample-credit-non_transaction-ar": [],
+    "sample-credit-non_transaction-en": [],
+    "help-quotation-completed-ar": [],
+    "help-quotation-completed-en": [],
+    "help-quotation-non_transaction-ar": [],
+    "help-quotation-non_transaction-en": [],
+    "personal-claim-completed-ar": [],
+    "personal-claim-completed-en": [],
+    "personal-claim-non_transaction-ar": [],
+    "personal-claim-non_transaction-en": [],
+    "refund-refusal-completed-ar": [],
+    "refund-refusal-completed-en": [],
+    "refund-refusal-non_transaction-ar": [],
+    "refund-refusal-non_transaction-en": [],
+    "billed-versus-paid-completed-ar": [],
+    "billed-versus-paid-completed-en": [],
+    "billed-versus-paid-non_transaction-ar": [],
+    "billed-versus-paid-non_transaction-en": [],
+    "otp-versus-settlement-completed-ar": [],
+    "otp-versus-settlement-completed-en": [],
+    "otp-versus-settlement-non_transaction-ar": [],
+    "otp-versus-settlement-non_transaction-en": [],
+    "scheduled-versus-executed-completed-ar": [],
+    "scheduled-versus-executed-completed-en": [],
+    "scheduled-versus-executed-non_transaction-ar": [],
+    "scheduled-versus-executed-non_transaction-en": [],
+    "probe-cash-receipt-completed-ar": [],
+    "probe-cash-receipt-completed-en": [],
+    "probe-cash-receipt-non_transaction-ar": [],
+    "probe-cash-receipt-non_transaction-en": [],
+    "probe-unpriced-payment-completed-ar": [],
+    "probe-unpriced-payment-completed-en": [],
+    "probe-unpriced-payment-non_transaction-ar": [],
+    "probe-unpriced-payment-non_transaction-en": [],
+    "probe-example-context-completed-ar": [],
+    "probe-example-context-completed-en": [],
+    "probe-example-context-non_transaction-ar": [],
+    "probe-example-context-non_transaction-en": [],
+    "probe-approval-state-completed-ar": [],
+    "probe-approval-state-completed-en": [],
+    "probe-approval-state-non_transaction-ar": [],
+    "probe-approval-state-non_transaction-en": [],
+    "probe-message-from-friend-completed-ar": [],
+    "probe-message-from-friend-completed-en": [],
+    "probe-message-from-friend-non_transaction-ar": [],
+    "probe-message-from-friend-non_transaction-en": [],
+    "probe-rejected-debit-completed-ar": [],
+    "probe-rejected-debit-completed-en": [],
+    "probe-rejected-debit-non_transaction-ar": [],
+    "probe-rejected-debit-non_transaction-en": []
+  },
+  "evaluations": {
+    "oldExposedValidation": {
+      "baseline": {
+        "count": 18,
+        "truePositive": 4,
+        "trueNegative": 14,
+        "falsePositive": 0,
+        "falseNegative": 0,
+        "correct": 18
+      },
+      "candidate": {
+        "count": 18,
+        "truePositive": 4,
+        "trueNegative": 14,
+        "falsePositive": 0,
+        "falseNegative": 0,
+        "correct": 18
+      },
+      "uncertainNotBinaryScored": 0,
+      "rows": [
+        {
+          "recordId": "synthetic-v1-0053",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              235,
+              291,
+              327,
+              382
+            ],
+            "score": -1.9042325083365992,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              579,
+              1657,
+              1724,
+              1765,
+              1828
+            ],
+            "score": -1.4914116842351501,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-0140",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              101,
+              182,
+              202,
+              215,
+              219,
+              262,
+              263,
+              294,
+              341,
+              354,
+              381,
+              383,
+              387
+            ],
+            "score": -2.1654438448941984,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              195,
+              368,
+              442,
+              512,
+              605,
+              616,
+              655,
+              658,
+              913,
+              1074,
+              1152,
+              1222,
+              1313,
+              1364,
+              1496,
+              1504,
+              1594,
+              1618,
+              1633,
+              1637,
+              1688,
+              1689,
+              1727,
+              1781,
+              1795,
+              1826,
+              1829,
+              1833
+            ],
+            "score": -2.468749421860561,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-0038",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              289,
+              316
+            ],
+            "score": -1.541384406194911,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              1617,
+              1722,
+              1752
+            ],
+            "score": -1.248084980771061,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-1554",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              2,
+              18,
+              19,
+              32,
+              44,
+              56,
+              75,
+              94,
+              95,
+              102,
+              121,
+              141
+            ],
+            "score": 2.1433023412474457,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              15,
+              41,
+              44,
+              59,
+              79,
+              130,
+              169,
+              184,
+              202,
+              212,
+              233,
+              719,
+              724,
+              738,
+              809,
+              856,
+              920,
+              930,
+              945,
+              1384,
+              1406,
+              1407,
+              1420,
+              1433,
+              1453,
+              1474,
+              1496,
+              1497,
+              1505,
+              1526,
+              1549
+            ],
+            "score": 2.4287811362590506,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-0106",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              54,
+              63,
+              87,
+              138,
+              165
+            ],
+            "score": -3.2925132589112684,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              1451,
+              1461,
+              1487,
+              1546,
+              1575
+            ],
+            "score": -2.71102325522817,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-1398",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              182,
+              207,
+              223,
+              246,
+              275,
+              319,
+              339,
+              348,
+              358,
+              372,
+              402,
+              404
+            ],
+            "score": -0.8498330886306268,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              177,
+              344,
+              372,
+              394,
+              418,
+              474,
+              678,
+              680,
+              1051,
+              1098,
+              1122,
+              1379,
+              1381,
+              1496,
+              1594,
+              1623,
+              1643,
+              1668,
+              1706,
+              1755,
+              1779,
+              1788,
+              1800,
+              1816,
+              1851,
+              1853
+            ],
+            "score": -1.0899290329124027,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-0750",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              75,
+              94,
+              169,
+              208,
+              264,
+              291,
+              299,
+              307,
+              317,
+              360,
+              363,
+              372,
+              377
+            ],
+            "score": 2.547722875261604,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              142,
+              175,
+              504,
+              534,
+              620,
+              876,
+              1328,
+              1474,
+              1496,
+              1579,
+              1624,
+              1691,
+              1724,
+              1732,
+              1742,
+              1753,
+              1802,
+              1805,
+              1816,
+              1822
+            ],
+            "score": 2.0694096952488885,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-1107",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              2,
+              10,
+              33,
+              79,
+              93,
+              94,
+              112,
+              132,
+              138,
+              141,
+              160,
+              166
+            ],
+            "score": -2.44861077490311,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              66,
+              180,
+              308,
+              315,
+              745,
+              1384,
+              1395,
+              1421,
+              1478,
+              1493,
+              1496,
+              1517,
+              1539,
+              1546,
+              1549,
+              1570,
+              1576
+            ],
+            "score": -1.976603163682467,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-1665",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              7,
+              16,
+              17,
+              18,
+              19,
+              22,
+              41,
+              59,
+              75,
+              94,
+              97,
+              141,
+              164
+            ],
+            "score": 1.4934142684346072,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              38,
+              41,
+              45,
+              49,
+              75,
+              104,
+              130,
+              164,
+              173,
+              177,
+              178,
+              208,
+              279,
+              311,
+              720,
+              729,
+              754,
+              789,
+              810,
+              851,
+              859,
+              882,
+              890,
+              926,
+              985,
+              1014,
+              1392,
+              1404,
+              1405,
+              1406,
+              1407,
+              1410,
+              1430,
+              1456,
+              1474,
+              1496,
+              1499,
+              1549,
+              1574
+            ],
+            "score": 1.544940643668794,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-1548",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              101,
+              179,
+              215,
+              294,
+              302,
+              313,
+              354,
+              368,
+              383,
+              387,
+              402
+            ],
+            "score": -2.602265793075257,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              340,
+              616,
+              632,
+              1338,
+              1496,
+              1504,
+              1590,
+              1633,
+              1727,
+              1736,
+              1749,
+              1795,
+              1810,
+              1829,
+              1833,
+              1851
+            ],
+            "score": -2.174447876340833,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-1302",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              75,
+              94,
+              182,
+              191,
+              208,
+              236,
+              258,
+              264,
+              291,
+              293,
+              339,
+              360,
+              363,
+              372,
+              383
+            ],
+            "score": 3.603099618948262,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              137,
+              138,
+              175,
+              356,
+              373,
+              409,
+              434,
+              445,
+              504,
+              511,
+              601,
+              620,
+              658,
+              824,
+              827,
+              871,
+              872,
+              1064,
+              1079,
+              1155,
+              1214,
+              1220,
+              1309,
+              1328,
+              1360,
+              1474,
+              1496,
+              1594,
+              1603,
+              1624,
+              1658,
+              1681,
+              1691,
+              1724,
+              1726,
+              1779,
+              1802,
+              1805,
+              1816,
+              1829
+            ],
+            "score": 3.8234780662810564,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-1914",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              273,
+              284,
+              316,
+              339
+            ],
+            "score": -1.3832193077830914,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              191,
+              471,
+              1496,
+              1704,
+              1716,
+              1752,
+              1779
+            ],
+            "score": -1.259430823398569,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-0334",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              2,
+              11,
+              14,
+              15,
+              20,
+              22,
+              54,
+              59,
+              72,
+              79,
+              112,
+              141,
+              151,
+              166
+            ],
+            "score": -1.2484778847512943,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              35,
+              47,
+              104,
+              145,
+              713,
+              1384,
+              1396,
+              1400,
+              1401,
+              1408,
+              1410,
+              1451,
+              1456,
+              1470,
+              1478,
+              1517,
+              1549,
+              1561,
+              1576
+            ],
+            "score": -1.7249856833193338,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-0289",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              46,
+              138,
+              165
+            ],
+            "score": -2.961914857108052,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              82,
+              1437,
+              1546,
+              1552,
+              1575
+            ],
+            "score": -2.5682604777211444,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-0184",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              82,
+              127,
+              138
+            ],
+            "score": -2.6068653267614907,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              243,
+              1481,
+              1534,
+              1546,
+              1552
+            ],
+            "score": -2.067861471938143,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-0174",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              0,
+              15,
+              16,
+              33,
+              56,
+              71,
+              94,
+              113,
+              119,
+              153,
+              158,
+              166
+            ],
+            "score": -1.599445981227967,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              36,
+              37,
+              64,
+              103,
+              177,
+              181,
+              223,
+              306,
+              316,
+              787,
+              937,
+              1027,
+              1382,
+              1401,
+              1404,
+              1421,
+              1453,
+              1469,
+              1496,
+              1518,
+              1524,
+              1563,
+              1568,
+              1576
+            ],
+            "score": -1.322263291296095,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-1881",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              170,
+              217,
+              249,
+              250,
+              253,
+              268,
+              280,
+              304,
+              313,
+              316,
+              338,
+              365
+            ],
+            "score": -1.2162879912239017,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              177,
+              187,
+              190,
+              421,
+              428,
+              481,
+              547,
+              551,
+              599,
+              899,
+              902,
+              1125,
+              1253,
+              1496,
+              1580,
+              1635,
+              1672,
+              1673,
+              1676,
+              1698,
+              1712,
+              1739,
+              1749,
+              1752,
+              1778,
+              1807
+            ],
+            "score": -0.5326475196646909,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "synthetic-v1-0806",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              200,
+              203,
+              207,
+              298,
+              312,
+              339,
+              358,
+              372,
+              404
+            ],
+            "score": -1.1237852865537377,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              177,
+              372,
+              543,
+              680,
+              1381,
+              1496,
+              1614,
+              1619,
+              1623,
+              1731,
+              1748,
+              1779,
+              1800,
+              1816,
+              1853
+            ],
+            "score": -1.031587990994579,
+            "prediction": "non_transaction"
+          }
+        }
+      ]
+    },
+    "authoredProbe": {
+      "baseline": {
+        "count": 24,
+        "truePositive": 2,
+        "trueNegative": 10,
+        "falsePositive": 2,
+        "falseNegative": 10,
+        "correct": 12
+      },
+      "candidate": {
+        "count": 24,
+        "truePositive": 6,
+        "trueNegative": 12,
+        "falsePositive": 0,
+        "falseNegative": 6,
+        "correct": 18
+      },
+      "uncertainNotBinaryScored": 0,
+      "rows": [
+        {
+          "recordId": "probe-cash-receipt-completed-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              194,
+              231,
+              240,
+              270,
+              308,
+              316
+            ],
+            "score": -0.7507512104873343,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              553,
+              1606,
+              1639,
+              1647,
+              1653,
+              1662,
+              1700,
+              1743,
+              1752,
+              1796
+            ],
+            "score": -0.24523821512692798,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-cash-receipt-completed-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              8,
+              20,
+              29,
+              43,
+              99,
+              104,
+              138,
+              141,
+              151
+            ],
+            "score": -0.9042620545156509,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              30,
+              255,
+              1393,
+              1408,
+              1417,
+              1432,
+              1502,
+              1507,
+              1546,
+              1549,
+              1561
+            ],
+            "score": -0.8625140931600124,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-cash-receipt-non_transaction-ar",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              179,
+              240,
+              270,
+              308,
+              316,
+              360,
+              372
+            ],
+            "score": 0.2141168508374381,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              342,
+              553,
+              1590,
+              1639,
+              1662,
+              1700,
+              1743,
+              1752,
+              1794,
+              1802,
+              1816
+            ],
+            "score": -1.0264689077157088,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-cash-receipt-non_transaction-en",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              2,
+              20,
+              29,
+              43,
+              46,
+              93,
+              106,
+              138,
+              141,
+              166
+            ],
+            "score": -1.4949617313092998,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              81,
+              280,
+              315,
+              986,
+              1384,
+              1408,
+              1417,
+              1432,
+              1437,
+              1493,
+              1509,
+              1546,
+              1549,
+              1576
+            ],
+            "score": -1.2457259037054929,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-unpriced-payment-completed-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              225,
+              235,
+              281,
+              321,
+              327,
+              332,
+              384
+            ],
+            "score": -1.6080410509843799,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              483,
+              579,
+              1630,
+              1645,
+              1657,
+              1713,
+              1757,
+              1765,
+              1770,
+              1830
+            ],
+            "score": -0.7416897332852166,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-unpriced-payment-completed-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              8,
+              23,
+              43,
+              64,
+              71,
+              107,
+              138,
+              155,
+              166
+            ],
+            "score": -1.1799835089545638,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              30,
+              51,
+              77,
+              110,
+              253,
+              255,
+              263,
+              708,
+              1393,
+              1411,
+              1432,
+              1462,
+              1469,
+              1510,
+              1546,
+              1565,
+              1576
+            ],
+            "score": -0.20798038331889268,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-unpriced-payment-non_transaction-ar",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              235,
+              276,
+              281,
+              321,
+              327,
+              399
+            ],
+            "score": -1.9500049617329733,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              483,
+              579,
+              1657,
+              1707,
+              1713,
+              1757,
+              1765,
+              1794,
+              1847
+            ],
+            "score": -2.053170529033028,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-unpriced-payment-non_transaction-en",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              8,
+              23,
+              43,
+              46,
+              64,
+              71,
+              92,
+              93,
+              107,
+              112,
+              138,
+              155,
+              166
+            ],
+            "score": -2.282182281566306,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              28,
+              51,
+              77,
+              81,
+              110,
+              154,
+              263,
+              706,
+              1393,
+              1411,
+              1432,
+              1437,
+              1462,
+              1469,
+              1492,
+              1493,
+              1510,
+              1517,
+              1546,
+              1565,
+              1576
+            ],
+            "score": -2.468805031915834,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-example-context-completed-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              94,
+              210,
+              217,
+              253,
+              269,
+              285,
+              327,
+              384
+            ],
+            "score": -0.43829944742054966,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              428,
+              1134,
+              1496,
+              1626,
+              1635,
+              1676,
+              1699,
+              1717,
+              1765,
+              1830
+            ],
+            "score": 0.6141823303455053,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "probe-example-context-completed-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              2,
+              8,
+              18,
+              59,
+              64,
+              75,
+              94,
+              138,
+              166
+            ],
+            "score": -0.259537845315463,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              9,
+              30,
+              110,
+              130,
+              323,
+              690,
+              1032,
+              1384,
+              1393,
+              1402,
+              1406,
+              1456,
+              1462,
+              1474,
+              1496,
+              1546,
+              1576
+            ],
+            "score": 0.47232480771151925,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "probe-example-context-non_transaction-ar",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              210,
+              217,
+              253,
+              268,
+              285,
+              327,
+              384,
+              399
+            ],
+            "score": -1.0947737255303733,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              428,
+              456,
+              1134,
+              1496,
+              1626,
+              1635,
+              1676,
+              1698,
+              1701,
+              1717,
+              1765,
+              1830,
+              1847
+            ],
+            "score": -0.00852781567954447,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-example-context-non_transaction-en",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              0,
+              2,
+              8,
+              18,
+              59,
+              64,
+              71,
+              75,
+              89,
+              92,
+              94,
+              138,
+              166
+            ],
+            "score": -0.6796136222987181,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              9,
+              30,
+              110,
+              119,
+              130,
+              323,
+              690,
+              1032,
+              1382,
+              1384,
+              1393,
+              1402,
+              1406,
+              1446,
+              1456,
+              1462,
+              1469,
+              1474,
+              1489,
+              1492,
+              1496,
+              1546,
+              1576
+            ],
+            "score": -0.2952726015025753,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-approval-state-completed-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              94,
+              285,
+              300,
+              316
+            ],
+            "score": -0.7137716843957521,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              1496,
+              1630,
+              1717,
+              1733,
+              1752,
+              1794
+            ],
+            "score": -0.42822561372307627,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-approval-state-completed-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              8,
+              43,
+              71,
+              75,
+              92,
+              94,
+              107,
+              122,
+              138,
+              156
+            ],
+            "score": -1.066170517378121,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              30,
+              130,
+              179,
+              255,
+              257,
+              708,
+              812,
+              962,
+              1393,
+              1398,
+              1432,
+              1469,
+              1474,
+              1492,
+              1496,
+              1510,
+              1529,
+              1546,
+              1566
+            ],
+            "score": -0.6467269933958177,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-approval-state-non_transaction-ar",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              196,
+              217,
+              285,
+              300,
+              400
+            ],
+            "score": -1.5224932460808835,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              1496,
+              1610,
+              1635,
+              1717,
+              1733,
+              1794,
+              1848
+            ],
+            "score": -1.7531538644683986,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-approval-state-non_transaction-en",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              8,
+              19,
+              22,
+              59,
+              75,
+              93,
+              94,
+              107,
+              138,
+              166
+            ],
+            "score": 0.05463475666749795,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              105,
+              130,
+              158,
+              179,
+              257,
+              318,
+              791,
+              812,
+              962,
+              1393,
+              1398,
+              1407,
+              1410,
+              1456,
+              1474,
+              1493,
+              1496,
+              1510,
+              1546,
+              1576
+            ],
+            "score": -1.4493152623603232,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-message-from-friend-completed-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              94,
+              182,
+              217,
+              232,
+              270,
+              271,
+              285,
+              372
+            ],
+            "score": 1.2198011830995885,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              384,
+              459,
+              493,
+              910,
+              1496,
+              1594,
+              1635,
+              1647,
+              1654,
+              1700,
+              1702,
+              1717,
+              1816
+            ],
+            "score": 1.3417442605183112,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "probe-message-from-friend-completed-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              2,
+              3,
+              7,
+              8,
+              18,
+              19,
+              26,
+              75,
+              94,
+              118,
+              138,
+              141,
+              144,
+              158,
+              166
+            ],
+            "score": 0.007018240578874041,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              21,
+              30,
+              41,
+              130,
+              278,
+              315,
+              1384,
+              1387,
+              1392,
+              1393,
+              1406,
+              1407,
+              1414,
+              1474,
+              1496,
+              1523,
+              1546,
+              1549,
+              1554,
+              1568,
+              1576
+            ],
+            "score": 0.4621137976150127,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "probe-message-from-friend-non_transaction-ar",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              272,
+              285,
+              350,
+              372
+            ],
+            "score": -0.6009983870195628,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              493,
+              910,
+              1496,
+              1586,
+              1703,
+              1717,
+              1790,
+              1816
+            ],
+            "score": -0.3220919707192665,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-message-from-friend-non_transaction-en",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              2,
+              19,
+              56,
+              63,
+              64,
+              72,
+              75,
+              82,
+              91,
+              94,
+              128,
+              165,
+              166
+            ],
+            "score": -1.076228225949996,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              130,
+              172,
+              318,
+              1384,
+              1407,
+              1453,
+              1461,
+              1462,
+              1470,
+              1474,
+              1481,
+              1491,
+              1496,
+              1535,
+              1575,
+              1576
+            ],
+            "score": -0.2867996893435103,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-rejected-debit-completed-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              94,
+              250,
+              255,
+              276,
+              285,
+              292,
+              304,
+              316
+            ],
+            "score": -0.4049056487982874,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              431,
+              551,
+              1496,
+              1609,
+              1673,
+              1678,
+              1707,
+              1717,
+              1725,
+              1739,
+              1752
+            ],
+            "score": 0.29783702755849706,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "probe-rejected-debit-completed-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              0,
+              28,
+              43,
+              71,
+              75,
+              94,
+              95,
+              97,
+              115,
+              166
+            ],
+            "score": -0.17075429138726067,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              130,
+              174,
+              202,
+              319,
+              920,
+              1382,
+              1416,
+              1432,
+              1469,
+              1474,
+              1496,
+              1497,
+              1499,
+              1520,
+              1576
+            ],
+            "score": 0.23517888751220117,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "probe-rejected-debit-non_transaction-ar",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              250,
+              255,
+              285,
+              292,
+              304,
+              372,
+              400
+            ],
+            "score": -0.7386879138692117,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              431,
+              640,
+              1496,
+              1673,
+              1678,
+              1717,
+              1725,
+              1739,
+              1794,
+              1816,
+              1848
+            ],
+            "score": -1.2295237681589848,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "probe-rejected-debit-non_transaction-en",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              8,
+              20,
+              28,
+              45,
+              46,
+              56,
+              75,
+              93,
+              94,
+              115,
+              138,
+              156,
+              166
+            ],
+            "score": -0.2294017496572986,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              80,
+              81,
+              103,
+              130,
+              161,
+              257,
+              319,
+              764,
+              962,
+              1393,
+              1408,
+              1416,
+              1435,
+              1437,
+              1453,
+              1474,
+              1493,
+              1494,
+              1496,
+              1520,
+              1546,
+              1566,
+              1576
+            ],
+            "score": -0.6819166936885662,
+            "prediction": "non_transaction"
+          }
+        }
+      ]
+    },
+    "exposedManual": {
+      "baseline": {
+        "count": 22,
+        "truePositive": 9,
+        "trueNegative": 6,
+        "falsePositive": 4,
+        "falseNegative": 3,
+        "correct": 15
+      },
+      "candidate": {
+        "count": 22,
+        "truePositive": 11,
+        "trueNegative": 6,
+        "falsePositive": 4,
+        "falseNegative": 1,
+        "correct": 17
+      },
+      "uncertainNotBinaryScored": 2,
+      "rows": [
+        {
+          "recordId": "withdrawal-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              94,
+              209,
+              217,
+              221,
+              231,
+              251,
+              270,
+              285,
+              308,
+              316,
+              377
+            ],
+            "score": -0.029848282588573638,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              374,
+              553,
+              1496,
+              1625,
+              1635,
+              1641,
+              1653,
+              1674,
+              1700,
+              1717,
+              1743,
+              1752,
+              1822
+            ],
+            "score": 0.6711727180423308,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "withdrawal-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              0,
+              2,
+              8,
+              17,
+              19,
+              29,
+              43,
+              64,
+              75,
+              89,
+              94,
+              114,
+              138,
+              141,
+              166
+            ],
+            "score": 1.355140399560013,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              1,
+              11,
+              22,
+              130,
+              280,
+              315,
+              986,
+              1022,
+              1382,
+              1384,
+              1388,
+              1393,
+              1405,
+              1407,
+              1417,
+              1432,
+              1438,
+              1462,
+              1474,
+              1489,
+              1496,
+              1519,
+              1546,
+              1549,
+              1576
+            ],
+            "score": 2.1391820173747282,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "refund-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              75,
+              94,
+              182,
+              250,
+              264,
+              290,
+              304,
+              360
+            ],
+            "score": 1.5111386685013066,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              175,
+              348,
+              620,
+              1328,
+              1474,
+              1496,
+              1594,
+              1673,
+              1691,
+              1721,
+              1723,
+              1739,
+              1761,
+              1802
+            ],
+            "score": 1.4384952277134886,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "refund-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              0,
+              7,
+              19,
+              22,
+              28,
+              41,
+              54,
+              59,
+              75,
+              94,
+              95,
+              115,
+              141,
+              166
+            ],
+            "score": 2.150241611957287,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              49,
+              75,
+              130,
+              171,
+              202,
+              226,
+              280,
+              319,
+              729,
+              755,
+              920,
+              1382,
+              1392,
+              1407,
+              1410,
+              1416,
+              1430,
+              1451,
+              1456,
+              1474,
+              1496,
+              1497,
+              1520,
+              1527,
+              1549,
+              1576
+            ],
+            "score": 1.254189253870758,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "foreign-purchase-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              75,
+              94,
+              147,
+              217,
+              232,
+              250,
+              276,
+              304,
+              372
+            ],
+            "score": 1.0501633308680083,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              175,
+              384,
+              402,
+              635,
+              640,
+              1089,
+              1104,
+              1474,
+              1496,
+              1557,
+              1635,
+              1654,
+              1673,
+              1707,
+              1739,
+              1813,
+              1816
+            ],
+            "score": 0.7687321945548977,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "foreign-purchase-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              0,
+              18,
+              19,
+              28,
+              44,
+              54,
+              75,
+              94,
+              115,
+              131,
+              147,
+              156,
+              166
+            ],
+            "score": 0.9558566979966162,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              41,
+              44,
+              91,
+              130,
+              171,
+              298,
+              319,
+              719,
+              724,
+              1382,
+              1406,
+              1407,
+              1416,
+              1433,
+              1451,
+              1474,
+              1496,
+              1520,
+              1538,
+              1557,
+              1566,
+              1576
+            ],
+            "score": -0.07193591100808454,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "unknown-transfer-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              75,
+              94,
+              210,
+              217,
+              232,
+              253,
+              270,
+              271,
+              327,
+              331,
+              372
+            ],
+            "score": 1.7462396091492518,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              140,
+              175,
+              199,
+              384,
+              402,
+              428,
+              459,
+              580,
+              874,
+              1089,
+              1104,
+              1132,
+              1474,
+              1496,
+              1626,
+              1635,
+              1654,
+              1676,
+              1700,
+              1702,
+              1765,
+              1769,
+              1816
+            ],
+            "score": 2.4845221532961164,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "unknown-transfer-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              2,
+              7,
+              18,
+              19,
+              22,
+              41,
+              56,
+              59,
+              75,
+              94,
+              95,
+              141,
+              144,
+              166
+            ],
+            "score": 2.9386893958014513,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              15,
+              41,
+              44,
+              49,
+              75,
+              104,
+              130,
+              165,
+              172,
+              173,
+              202,
+              280,
+              315,
+              694,
+              719,
+              724,
+              729,
+              755,
+              789,
+              810,
+              852,
+              859,
+              920,
+              986,
+              1384,
+              1392,
+              1406,
+              1407,
+              1410,
+              1430,
+              1453,
+              1456,
+              1474,
+              1496,
+              1497,
+              1549,
+              1554,
+              1576
+            ],
+            "score": 2.7033106709476775,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "own-accounts-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              94,
+              182,
+              195,
+              211,
+              254,
+              269,
+              270,
+              285,
+              372
+            ],
+            "score": 1.3312620488315192,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              346,
+              375,
+              493,
+              642,
+              910,
+              1204,
+              1496,
+              1594,
+              1608,
+              1627,
+              1677,
+              1699,
+              1700,
+              1717,
+              1816
+            ],
+            "score": 1.5714272616685836,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "own-accounts-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              0,
+              2,
+              37,
+              42,
+              56,
+              75,
+              94,
+              95,
+              141,
+              144,
+              166
+            ],
+            "score": 2.306255492146641,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              15,
+              103,
+              130,
+              184,
+              202,
+              280,
+              320,
+              920,
+              1382,
+              1384,
+              1425,
+              1431,
+              1453,
+              1474,
+              1496,
+              1497,
+              1549,
+              1554,
+              1576
+            ],
+            "score": 2.253064867662454,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "missing-amount-ar",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              210,
+              235,
+              258,
+              281,
+              327,
+              332,
+              372
+            ],
+            "score": -1.152563964707756,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              378,
+              598,
+              639,
+              1083,
+              1626,
+              1630,
+              1657,
+              1681,
+              1713,
+              1765,
+              1770,
+              1777,
+              1816
+            ],
+            "score": 0.41146898498115236,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "missing-amount-en",
+          "target": "completed",
+          "baseline": {
+            "activeIndices": [
+              6,
+              8,
+              18,
+              23,
+              43,
+              64,
+              71,
+              107,
+              114,
+              134,
+              138,
+              155,
+              156,
+              166
+            ],
+            "score": -0.5753895446917502,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              24,
+              30,
+              51,
+              78,
+              252,
+              263,
+              295,
+              304,
+              966,
+              998,
+              1391,
+              1393,
+              1406,
+              1411,
+              1432,
+              1462,
+              1469,
+              1510,
+              1519,
+              1541,
+              1542,
+              1546,
+              1565,
+              1566,
+              1576
+            ],
+            "score": 0.6319678484165913,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "declined-ar",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              179,
+              253,
+              270,
+              285,
+              292,
+              360,
+              372
+            ],
+            "score": 1.1222286058701587,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              342,
+              428,
+              642,
+              1134,
+              1496,
+              1590,
+              1676,
+              1700,
+              1717,
+              1725,
+              1745,
+              1794,
+              1802,
+              1816
+            ],
+            "score": 0.38306185799142245,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "declined-en",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              2,
+              54,
+              56,
+              75,
+              92,
+              94,
+              122,
+              138,
+              144,
+              156,
+              158,
+              166
+            ],
+            "score": -0.717174882627725,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              93,
+              103,
+              130,
+              186,
+              238,
+              262,
+              315,
+              773,
+              786,
+              815,
+              1384,
+              1434,
+              1451,
+              1453,
+              1474,
+              1492,
+              1496,
+              1529,
+              1546,
+              1554,
+              1566,
+              1568,
+              1576
+            ],
+            "score": 0.05487903450231066,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "personal-chat-ar",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              285,
+              341
+            ],
+            "score": -1.1233040158019425,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              1496,
+              1717,
+              1781
+            ],
+            "score": -0.6625628409543315,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "personal-chat-en",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              8,
+              63,
+              82,
+              94,
+              106,
+              112,
+              127,
+              159,
+              165
+            ],
+            "score": -3.352388188285822,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              147,
+              243,
+              953,
+              1393,
+              1461,
+              1481,
+              1496,
+              1509,
+              1517,
+              1534,
+              1569,
+              1575
+            ],
+            "score": -2.8920903838490033,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "pending-ar",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              75,
+              94,
+              251,
+              282,
+              400
+            ],
+            "score": -0.3600322252384825,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              175,
+              1474,
+              1496,
+              1670,
+              1674,
+              1714,
+              1848
+            ],
+            "score": -0.5479734135889995,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "pending-en",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              8,
+              22,
+              59,
+              71,
+              75,
+              93,
+              94,
+              107,
+              166
+            ],
+            "score": 0.3101000782751021,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              105,
+              130,
+              158,
+              179,
+              217,
+              323,
+              791,
+              812,
+              1032,
+              1393,
+              1398,
+              1410,
+              1447,
+              1456,
+              1469,
+              1474,
+              1493,
+              1496,
+              1510,
+              1512,
+              1576
+            ],
+            "score": -1.349887967202341,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "purchase-otp-ar",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              216,
+              219,
+              253,
+              285,
+              294,
+              304
+            ],
+            "score": -0.15490935598796057,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              428,
+              1134,
+              1496,
+              1634,
+              1637,
+              1676,
+              1717,
+              1727,
+              1739
+            ],
+            "score": 0.3407986955134639,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "purchase-otp-en",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              0,
+              33,
+              75,
+              93,
+              94,
+              95,
+              107,
+              115,
+              138,
+              141,
+              159,
+              165
+            ],
+            "score": -0.5092811355861699,
+            "prediction": "non_transaction"
+          },
+          "candidate": {
+            "activeIndices": [
+              130,
+              184,
+              202,
+              227,
+              920,
+              1382,
+              1421,
+              1474,
+              1493,
+              1496,
+              1497,
+              1510,
+              1520,
+              1546,
+              1549,
+              1569,
+              1575
+            ],
+            "score": -0.41611854552989624,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "quoted-example-ar",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              94,
+              251,
+              264,
+              270,
+              276,
+              285,
+              372,
+              381
+            ],
+            "score": 0.5437796280468032,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              424,
+              447,
+              475,
+              493,
+              642,
+              910,
+              1157,
+              1180,
+              1204,
+              1496,
+              1607,
+              1640,
+              1674,
+              1691,
+              1700,
+              1707,
+              1717,
+              1816,
+              1826
+            ],
+            "score": 0.511787613216925,
+            "prediction": "completed"
+          }
+        },
+        {
+          "recordId": "quoted-example-en",
+          "target": "non_transaction",
+          "baseline": {
+            "activeIndices": [
+              0,
+              2,
+              7,
+              37,
+              44,
+              56,
+              71,
+              75,
+              93,
+              94,
+              115,
+              138,
+              139,
+              156,
+              166
+            ],
+            "score": 0.705076688471569,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              22,
+              79,
+              90,
+              103,
+              120,
+              130,
+              157,
+              162,
+              186,
+              258,
+              266,
+              298,
+              315,
+              763,
+              770,
+              786,
+              815,
+              849,
+              898,
+              971,
+              1001,
+              1382,
+              1384,
+              1388,
+              1392,
+              1425,
+              1433,
+              1446,
+              1450,
+              1453,
+              1469,
+              1474,
+              1493,
+              1495,
+              1496,
+              1520,
+              1546,
+              1547,
+              1566,
+              1576
+            ],
+            "score": -0.157406240697533,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "unsettled-hold-ar",
+          "target": "uncertain",
+          "baseline": {
+            "activeIndices": [
+              94,
+              182,
+              250,
+              264,
+              276,
+              285,
+              316,
+              336
+            ],
+            "score": 0.13796029917259064,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              192,
+              551,
+              1496,
+              1594,
+              1673,
+              1691,
+              1707,
+              1717,
+              1752,
+              1775,
+              1794
+            ],
+            "score": -0.23257394989115726,
+            "prediction": "non_transaction"
+          }
+        },
+        {
+          "recordId": "unsettled-hold-en",
+          "target": "uncertain",
+          "baseline": {
+            "activeIndices": [
+              0,
+              16,
+              22,
+              28,
+              43,
+              59,
+              72,
+              75,
+              93,
+              94,
+              95,
+              159
+            ],
+            "score": 1.0182980529081151,
+            "prediction": "completed"
+          },
+          "candidate": {
+            "activeIndices": [
+              37,
+              105,
+              130,
+              158,
+              202,
+              791,
+              920,
+              1382,
+              1404,
+              1410,
+              1416,
+              1432,
+              1456,
+              1470,
+              1474,
+              1493,
+              1496,
+              1497,
+              1569
+            ],
+            "score": -0.3573206926223287,
+            "prediction": "non_transaction"
+          }
+        }
+      ]
+    }
+  },
+  "directionReference": {
+    "modelSha256": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121",
+    "headIdentical": true,
+    "allParityOutputsIdentical": true,
+    "oldValidationCount": 4,
+    "oldValidationCorrect": 4
+  },
+  "exportParity": {
+    "texts": 1133,
+    "exactPythonTypescriptBrowser": true,
+    "maximumScoreGap": 0,
+    "browserSourceSha256": {
+      "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+      "src/typescript/research/SmsSemantics.ts": "a9509ca002cb11954039ed584789ec39affb64f561177d6f85bd82ac73e43a41",
+      "src/typescript/research/SmsCompletionContext.ts": "62f7afaefece1d7842f303f7327264a4ad492c38d2ed2ad08699d00eed4acf07",
+      "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8",
+      "config/contracts/sms_completion_context.json": "5011125f43d5aa8787198b353ac6d82fe68c7d8c79b39c24ac8aa4b7bc6a16c3"
+    }
+  },
+  "outputSha256": {
+    "data/models/sms_completion_context_v1_candidate.json": "fad7f42560fae5dfbf55c7c070013e7e95b1eb008c67434219165207891cd73c",
+    "data/models/sms_completion_context_v1_browser_runtime.js": "56a07ac40f55309645df2ef5d4047e7ca1a2b0a3e0baa658eaeca5f08cb552e9"
+  },
+  "productionIntegrated": false,
+  "canonicalAdmissionFlagsChanged": false,
+  "reservedMerchantFinalInferred": false,
+  "limits": [
+    "Assistant authored and labeled all new messages; not human gold or received bank SMS.",
+    "Both new data and representation change in this single experiment; no causal attribution to ngrams alone.",
+    "Generic ngrams do not guarantee correct negation/quote scope or uncertainty.",
+    "All old validation and manual diagnostics are exposed; no independent accuracy or release claim.",
+    "The separate active-assessment quoted-example Include defect remains outside this learned-model trial."
+  ]
+}

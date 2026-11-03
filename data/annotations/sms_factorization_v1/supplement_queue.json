@@ -1,0 +1,176 @@
+{
+  "version": "1.0.0",
+  "selectionSeed": "sms-factorization-supplement-2026-10-28",
+  "selection": "Coverage-directed source metadata only. Among proposed-training families absent from original pilot, hash-select one family per declared theme, then take both languages in declared semantic states; no model predictions.",
+  "families": [
+    {
+      "topic": "quotation",
+      "theme": "illustrative_scope",
+      "familyId": "scope-v1-pension-demo",
+      "semanticStates": [
+        1,
+        2
+      ],
+      "candidateFamilies": [
+        "pension-demo",
+        "refund-tutorial",
+        "service-fee-sample"
+      ]
+    },
+    {
+      "topic": "negation",
+      "theme": "negated_failure",
+      "familyId": "scope-v1-reward-credit",
+      "semanticStates": [
+        1,
+        2
+      ],
+      "candidateFamilies": [
+        "cheque-credit",
+        "collection-final",
+        "reward-credit"
+      ]
+    },
+    {
+      "topic": "party_name_scope",
+      "theme": "party_scope",
+      "familyId": "scope-v1-bookshop-pending",
+      "semanticStates": [
+        1,
+        3
+      ],
+      "candidateFamilies": [
+        "bookshop-pending",
+        "cafe-test"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "recordId": "scope-v1-pension-demo-1-ar",
+      "text": "حركة معاش: وصل المعاش وسجل دائناً في حسابك المتاح.",
+      "target": "completed",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-pension-demo",
+      "topic": "quotation",
+      "language": "ar",
+      "semanticState": 1
+    },
+    {
+      "recordId": "scope-v1-pension-demo-1-en",
+      "text": "Pension activity: The pension arrived and was booked as a credit in your available account balance.",
+      "target": "completed",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-pension-demo",
+      "topic": "quotation",
+      "language": "en",
+      "semanticState": 1
+    },
+    {
+      "recordId": "scope-v1-pension-demo-2-ar",
+      "text": "عرض تجريبي لا يرتبط بحسابك: «وصل المعاش وسجل دائناً في حسابك المتاح.»",
+      "target": "non_transaction",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-pension-demo",
+      "topic": "quotation",
+      "language": "ar",
+      "semanticState": 2
+    },
+    {
+      "recordId": "scope-v1-pension-demo-2-en",
+      "text": "Demo display unrelated to your account: \"The pension arrived and was booked as a credit in your available account balance.\"",
+      "target": "non_transaction",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-pension-demo",
+      "topic": "quotation",
+      "language": "en",
+      "semanticState": 2
+    },
+    {
+      "recordId": "scope-v1-reward-credit-1-ar",
+      "text": "مكافأة نقدية: أضيفت المكافأة بالفعل إلى حسابك. القيمة مال مقيد وليست رصيد نقاط.",
+      "target": "completed",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-reward-credit",
+      "topic": "negation",
+      "language": "ar",
+      "semanticState": 1
+    },
+    {
+      "recordId": "scope-v1-reward-credit-1-en",
+      "text": "Cash reward: The reward has actually been added to your account. The value is posted money, not loyalty points.",
+      "target": "completed",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-reward-credit",
+      "topic": "negation",
+      "language": "en",
+      "semanticState": 1
+    },
+    {
+      "recordId": "scope-v1-reward-credit-2-ar",
+      "text": "مكافأة الحساب: هذه نقاط مكافآت وليست إضافة مالية؛ لم يتغير رصيد المال.",
+      "target": "non_transaction",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-reward-credit",
+      "topic": "negation",
+      "language": "ar",
+      "semanticState": 2
+    },
+    {
+      "recordId": "scope-v1-reward-credit-2-en",
+      "text": "Account reward: These are reward points rather than a cash credit; the money balance has not changed.",
+      "target": "non_transaction",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-reward-credit",
+      "topic": "negation",
+      "language": "en",
+      "semanticState": 2
+    },
+    {
+      "recordId": "scope-v1-bookshop-pending-1-ar",
+      "text": "تسوية مشتريات: سجل خصم الكتب من «مكتبة انتظار» في كشف حسابك.",
+      "target": "completed",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-bookshop-pending",
+      "topic": "party_name_scope",
+      "language": "ar",
+      "semanticState": 1
+    },
+    {
+      "recordId": "scope-v1-bookshop-pending-1-en",
+      "text": "Purchase settlement: The book purchase debit from Pending Books was recorded in your statement.",
+      "target": "completed",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-bookshop-pending",
+      "topic": "party_name_scope",
+      "language": "en",
+      "semanticState": 1
+    },
+    {
+      "recordId": "scope-v1-bookshop-pending-3-ar",
+      "text": "شراء كتب بانتظار التسوية: المبلغ محجوز مؤقتاً فقط ولم يسجل خصم نهائي.",
+      "target": "non_transaction",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-bookshop-pending",
+      "topic": "party_name_scope",
+      "language": "ar",
+      "semanticState": 3
+    },
+    {
+      "recordId": "scope-v1-bookshop-pending-3-en",
+      "text": "Book purchase pending settlement: The amount is temporarily held only; no final debit was recorded.",
+      "target": "non_transaction",
+      "weight": 0.16666666666666666,
+      "group": "scope-v1-bookshop-pending",
+      "topic": "party_name_scope",
+      "language": "en",
+      "semanticState": 3
+    }
+  ],
+  "pilotQueueSha256": "a89ea0c9423cee4d94dd12a81a1dc4adbba65bf53a862cae95d08e8dba08c134",
+  "sourceManifestSha256": "e9cd9beb688bc0f418e466c57f3c344e34c8fe49c9add6df63445435d66a550a",
+  "modelPredictionsUsed": false,
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false
+}

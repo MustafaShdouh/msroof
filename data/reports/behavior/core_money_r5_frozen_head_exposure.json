@@ -1,0 +1,2056 @@
+{
+  "records": [
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0053",
+      "textSha256": "6e00010d6697a1ad9b8a9cb192fb51184758e366fb40e2d8254135f67ad2cc22",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0140",
+      "textSha256": "17af4671c5c3edbd7e2af4767f341a5e647b367383436998babf346daadf8592",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0038",
+      "textSha256": "983aec1699c4100692ab9e7319d9f5fbe15851bc7bcf8bcd43042009cc87f649",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1554",
+      "textSha256": "2921b642e5a733b59eb5f39e47808e31b1dc026ff164b529a2fc900848fdc51a",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0106",
+      "textSha256": "feabcce8977afbd9096d214649e9247702d10ef0b6e6e67873ffa7dc907219dd",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1398",
+      "textSha256": "0058feb11b55814071f55b0a8d0d5592474b705a6013ddaf3f2e82c22b919ab1",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0750",
+      "textSha256": "00122bf81fd52e72351739b54eea57a533282aa99bc21c797edea56af38602dd",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1107",
+      "textSha256": "065b7aa4570a2a690f26e954aede39a480dbdf6f3a333ec5cc823fecb1cf39e8",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1665",
+      "textSha256": "019cf05c906c845344c8ac4495fd8a51fee8411a9d4a8773f20b9a2b8e7f6515",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1548",
+      "textSha256": "0cc825edd6e14677b2bb882f58ca4c9a739cd1b2475fd881af02d03918a07813",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1302",
+      "textSha256": "0b9e71cad47dd0f2ca1d5e92dbdbf2797ef88696dfe4731a07fd0cf05b1ffbe9",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1914",
+      "textSha256": "1591472d609a1b863f83f662978c089e935f0e2e9e4ad38c5c7b34859de2111c",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0334",
+      "textSha256": "17b3f75a2b6d6cd3e65e009517f97dbe0b8bd5691a1094e3b53961bf85a55a70",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0289",
+      "textSha256": "37ed8cbb38b17e0a0a5f16e5be132fbbfa8ee36523fb8774cdabb0ffd9af92d1",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0184",
+      "textSha256": "148735a023312c866d735391b3594f29d2902f63069dce0bc4b57c788d78777a",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0174",
+      "textSha256": "1b98cf5f8bfbb916675b467e1b58d9500948d2c1b7dfe6aa6563f37fd07ee20d",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1881",
+      "textSha256": "0abae17202546f4d6f85ecbda5fcdc11b9a8b0b71d211361aca36712dd46899f",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0806",
+      "textSha256": "28a506b0e63062447d729e53f541e4f29f7f39d8e70b39696ff766ed644ae6d0",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "withdrawal-ar",
+      "textSha256": "6716fe64a8697bdf3f08211a6f71e4f4cef19bf5dba2b447443816691b3e3da7",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "withdrawal-en",
+      "textSha256": "2cc07d193ca57700470a34e4c323526eb884f5accdcffdc966e4978d648ba089",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "refund-ar",
+      "textSha256": "c09a4dca7d1fbe348ccf3ce0a8d459b928d6bb0900d15ad2e55b7a447fa4c22b",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "refund-en",
+      "textSha256": "5f9105e45797c07b41934391cf0f1dc461e52d65b3789b8cd020c7bc109ef92c",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "foreign-purchase-ar",
+      "textSha256": "d7a630fded0da193c963a9cdb715d92187460e8e641c0f8eafab2393b48c34a8",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "foreign-purchase-en",
+      "textSha256": "9f35dd8aad07ba05e20b314cc2827f7fd4e89a42f1c3a9baa456785a900b7b5d",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unknown-transfer-ar",
+      "textSha256": "15fa1231eb0d0ef3ef45f625bdd537432c124fba92aab18ada604a7f9b602828",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unknown-transfer-en",
+      "textSha256": "f4c0d0379306663f54343627e0c38643d403c84a01afc96a124f3af3859ce957",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "own-accounts-ar",
+      "textSha256": "e4635c941a0d28b03c6859afefca0d2c9758aab6e992a8a8c0a85192086fc3a4",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "own-accounts-en",
+      "textSha256": "1b88f64e89b3833f6fcb48620676ddf9b36a926d55e5abbeeee2c6a72fb572f9",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "missing-amount-ar",
+      "textSha256": "2855f40a332062553a1d73a15cad5dbb157a0c9509a7af8064752c31642ad68c",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "missing-amount-en",
+      "textSha256": "6081a90a8ec44a4e6a72e4e76db4a56bc2da647b141a690af4f0f62260602ebd",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "declined-ar",
+      "textSha256": "b6a63297b54c8d390bb59522efcc763c2276d3e82ff820cd61e7172ba7fab562",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "declined-en",
+      "textSha256": "37c6d8a8061c8ec93903b8999e57a0f12223d03f383dbbcfed7877bd50261e26",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "personal-chat-ar",
+      "textSha256": "35b132b584265b6c419ff58dd7f3c912e18b832383003ae4c9608232ed5566d4",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "personal-chat-en",
+      "textSha256": "9da36bbcf2780c593bba697438e89dcf250494886f47b27aa6d27f4dbd8a66b1",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "pending-ar",
+      "textSha256": "6207ed3816aec7e05e52f01211646acd412504ed46fb7b4c9878a276c19cce34",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "pending-en",
+      "textSha256": "b23d1ced14a75aa852576046f635a734c6d4ee01d0bd41a2e79acfd4df54ef05",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "purchase-otp-ar",
+      "textSha256": "73c32a09105a91f1f7cee9a94fb4ec2291014081eac2fd07e7c89061d74d510c",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "purchase-otp-en",
+      "textSha256": "4d696842405c13950e1bf38f3cb0cecd4ac16a0d6ccc9c5daa9d102c41061f07",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "quoted-example-ar",
+      "textSha256": "d33b783ff60c81a541f9c9dc364e026f35d018229c90365822b9c482fcdde5df",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "quoted-example-en",
+      "textSha256": "7dd21e82d85a1d4eae16b5f0a1f6973524594e82f455bd87cec43b2336dfaefb",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unsettled-hold-ar",
+      "textSha256": "3568a576be46295b682e10ca7111f1ccdc9e21f5adea93749bd82317626514db",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unsettled-hold-en",
+      "textSha256": "81a127fdd2380a168867ce5561f346d930749b943adb5981ea48d031fd2004f3",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-completed-ar",
+      "textSha256": "8824c704c8595acaad11c51b42bc5d02382ba3d627bab2056e4e951f8f074a07",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-completed-en",
+      "textSha256": "3d573cf4f0a162c1504c26602fbb8a2c33b161322d0128fff4524ab55fe932d8",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-non_transaction-ar",
+      "textSha256": "62cd1c02c770254d8bfe969f4a0c785ff069120c1cbde1a4c694a6cde760e10c",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-non_transaction-en",
+      "textSha256": "80a3577889628640040a8f3fc8371f03ca1d31c2a466e03292aec33d178b22fb",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-completed-ar",
+      "textSha256": "eb860f112ae2e4cc45cb8383221179ae8c6fe70617cdf764019e2e72a1a2f5ed",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-completed-en",
+      "textSha256": "6d76c90cc631529ac0ae825435f22dced864458bce840be03d727da1e86771c8",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-non_transaction-ar",
+      "textSha256": "2d9afcf6bbcab70b2a9849d38796350f400a645192d0db8935e02d117fff25c9",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-non_transaction-en",
+      "textSha256": "e180809f289c93e83c44fed73f0259a9da2edb38c1ac3ca74b8cbc4033e2a918",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-completed-ar",
+      "textSha256": "4ef3e161683585a522229f19f5921910be7c0dbf4e6791cb457e72ead11be74c",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-completed-en",
+      "textSha256": "c27eaaf678662ec4cccf6df75380aec7c9644fdb45770520f5d0c57f961ab7fb",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-non_transaction-ar",
+      "textSha256": "be94b456f2ebba8314c39ec059251472bc9cbf104333a54a6cbab8e358851a9f",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-non_transaction-en",
+      "textSha256": "c23284ccc1ea87046a251218fce02890ad655191276be15e55cc65a00d0a9141",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-completed-ar",
+      "textSha256": "1ed05b0b846ccb0002884ebfc24006391db9b6fa13f5cd9fce4cbe16b7160622",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-completed-en",
+      "textSha256": "8c1bd723b8908b813e7301794f747e5886017f8be43a321fb9bcdf236307ee42",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-non_transaction-ar",
+      "textSha256": "f4533ab89420679a2837914f106ddd2a32248bcc65b3e08273c031b2b88f094f",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-non_transaction-en",
+      "textSha256": "167d7d405427919a1c2879dc86e6d09b00194be255d22945d3cad13713aadf21",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-completed-ar",
+      "textSha256": "58a43993d111cdb6985de13d5f64ca8b2256eb7be165acd6e94f733b60b4742d",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-completed-en",
+      "textSha256": "ca32a7ca6663b0a86514682eaaef510405e967409e3b7731a0c0c1e2fc9baf38",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-non_transaction-ar",
+      "textSha256": "5e71b2e46fa9a9ba495ef9e2d992738018eeeeedeb78f0123af004b1c3f91316",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-non_transaction-en",
+      "textSha256": "f65be3255256464512230c32ea74eb7d732bba8026882a607ed4f5d990ad2076",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-completed-ar",
+      "textSha256": "c8d3e64e232e7d6efc71e6c5d0043e681779f04d720fc776ba4a3d48c2a1273e",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-completed-en",
+      "textSha256": "f0b537995a25de4c6cebe0acb09a0bdbac93abf7a72b72bd3dddcbab2ef74c5e",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-non_transaction-ar",
+      "textSha256": "5093b73a04e48dd56e17a04b1e2b927010d8d811478b2a0679dd3f8a3c839d65",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-non_transaction-en",
+      "textSha256": "e8005f35ec7434ab2f8ce4f9a05a7b51b1363ed5495d905d8fb515ff64681612",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "manual-ar",
+      "textSha256": "d33b783ff60c81a541f9c9dc364e026f35d018229c90365822b9c482fcdde5df",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "manual-en",
+      "textSha256": "7dd21e82d85a1d4eae16b5f0a1f6973524594e82f455bd87cec43b2336dfaefb",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-en",
+      "textSha256": "e713b611a520e483b9a7da1b9ba58c5efd9cc446239f8b2eea0593c0454ed9f5",
+      "trainingRecordIds": [
+        "instruction-quote-non_transaction-en"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-ar",
+      "textSha256": "ae152ae6e782610f9850e884fa0288df5ce16d62208706293bc43a897ebd0fae",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "note-en",
+      "textSha256": "34ee1207b24ef2dce102f90483a8ef4abd861d27ac9b8e0ca6167343d19fa604",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "note-ar",
+      "textSha256": "d0cc30511bf78646d5af97e71ed146f5c5cba3cccdb09c632defe5119bede980",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "multisentence-en",
+      "textSha256": "2a3905c634e8dd53284f1eb5606b5f5fed2f5ac574767e5f0e08006989a99a84",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "multisentence-ar",
+      "textSha256": "80b0e30c8e26eedcc1600ddb42a3ecf79a73a737bcd3caa356ade62dead87bb7",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "mixed-en",
+      "textSha256": "fb48b7391ab44158e972ce3539707dcbbe1b8fa37021e4a814a6c5c35db1d0f8",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "mixed-ar",
+      "textSha256": "a5c255cf81d5a0efc6467fd3b9fc4a34a8e1bb7d169f735627c924fdb82fddf9",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "merchant-en",
+      "textSha256": "ee8e368482a9bb057de740748b9bee55456698216cb4b48dde024d78975cc5be",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "merchant-ar",
+      "textSha256": "f15d9f957c51b3e7e09a09aae4f5a47e9fe97a4b66f7c251435c8b8e83254bf8",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-merchant-en",
+      "textSha256": "bf9b211cc6d4b7eb0e6bf0d3d496e85cbd40e2b8c0c6a1be59b0125cb048467a",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-merchant-ar",
+      "textSha256": "1d06b7f0f0fc76bd6a5f98c86bd9f8155594e552fe88d313f4b89cdc3e97e912",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-1-ar",
+      "textSha256": "d3e3775019661877c39d14bd32b948220c711c2ac8a5d2c275406b1779973edc",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-1-en",
+      "textSha256": "0a97a6c0283710ffa674413064764f12ecffeb136bd7e171c83f9fc276067b46",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-2-ar",
+      "textSha256": "a37ba4e156245ad0ab43c7e25709a8fc4d96b5cf30fa76ef24f71313c62db7fa",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-2-en",
+      "textSha256": "23d42f7d0b764ccff86420f0ad880c34a18fa05f0e1dfd0ad398b19abfd1c5b6",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-3-ar",
+      "textSha256": "5a5ed49e82a100533765000e1efa0236a5744a0893b0240a3553c394304898e4",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-3-en",
+      "textSha256": "d23aa310e2502b92d3e9230c07fca6f10628de9e72c5b5750149f6f1d1e94920",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-ar",
+      "textSha256": "391f6b9e3d0905d50c43c4cd684426f5cc7504a9b189d9391ae189ed2658b8b8",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-en",
+      "textSha256": "31f2ef21084250ea7c8d3345c60e1f26186a9e969dac67556186fe59325f3556",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-ar",
+      "textSha256": "247768197f95c26a3e914ab450f9906443735b2e7259ddddb87455c2994f3d25",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-en",
+      "textSha256": "4ba9d93fa0d707350b4579034e3059d769902f88ec1ad775425f5baf3c19830a",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-2-ar",
+      "textSha256": "112adbe82de7f81c99349aefc38a46d414a4f338bd3a07d5253cf046c4021def",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-2-en",
+      "textSha256": "bf58a58867e6bbd49740d13f9022388a58969cc3e5e7afbe8d4806d5d9d9914c",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-3-ar",
+      "textSha256": "221e00851f2d68dc0cedf7d65420aa5784ecab3ccca362033d5b4fa1163c2199",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-3-en",
+      "textSha256": "67e1d2099d731d08f3270c2c94d151347a93c3c289cb59556746407fac6e665b",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-ar",
+      "textSha256": "a8854aedeafb81e5f05162e07e8addb7781c847e7e6eaac41e2c8affbee7a940",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-en",
+      "textSha256": "8af346cbdc834a02ca0d50f3a9b0537c6adbd8085548934787fd55544a606efb",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-1-ar",
+      "textSha256": "d7e68f5dda88acbd23f95cb7d18eeff54de458060419227f722990b43b0749a9",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-1-en",
+      "textSha256": "d48f2b2095a2432332100c922a8f6e352cfb73f6bf3eeb56962547aa2bca9656",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-2-ar",
+      "textSha256": "c464d3609c583600ff722d510525d8b0a90b6c96fe48cc35407acb2a1e13698b",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-2-en",
+      "textSha256": "ac248399aacb5ed9f9d29260db4cccfca0984c99f07cb39b38affa95eb46ee8b",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-3-ar",
+      "textSha256": "b9675199c603ba66388ff791eeb233c90985768891a7847a40c32fb79f2918e1",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-3-en",
+      "textSha256": "7e40597bf3ae30b77a9f3997c2299cfb8b0450728fd94ea2157a1c15d5fb0c6b",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-4-ar",
+      "textSha256": "c55391407819e2698c3cff6a8836ebeeeee3ba3063b2ffc43c85263aef5fb133",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-4-en",
+      "textSha256": "77968b6ae24ef268594ce9c682cb156ab9f7e458797fe2e0797e1041b596e658",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-1-ar",
+      "textSha256": "c52e6066a709bed2efeca5809206ad5a64e845b090a27264c6f18d6c5d228b00",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-1-en",
+      "textSha256": "bc6a164c8e5e1efafed9f3117aaae4b225777a2e1bdf0ad91518b9b00f314a35",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-ar",
+      "textSha256": "693d3a21784d4fad6298687997972bc40d37e844c568b23dbfd8384cf370e71d",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-en",
+      "textSha256": "6e8b665431318b2dc8cf3d8ae403f397c73e35f0fd98295116ea0acdd0d06f7f",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-3-ar",
+      "textSha256": "ef83adb83c7ae1da73258fecf7318b486b92fc9cd2d5c9f111ba48be2e6785b5",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-3-en",
+      "textSha256": "a376cc19e350b8aa678c7c6c925e8ad48ecd4dd81374385e92951cbe73a9bb72",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-4-ar",
+      "textSha256": "5017853c765d341a64f6ce4e98908b6fd83a486f75148a352e2ca96150d01553",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-4-en",
+      "textSha256": "cb0b6bc14b6666645e9772a2c770de4fd6e57923addcbb97ea6d754bb3900f5f",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "purchase-en",
+      "textSha256": "f4961f4aed7d2edac22d95816dce8310201603800e149526c62b3df783cc6753",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "purchase-ar",
+      "textSha256": "d0a0bf680af170e4cd728d6c8f92676618cb8a42fa136092aa0529a829c8bfc1",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "persian-digits",
+      "textSha256": "3a55fb3326abbcf40807cb02c51ffe4003afc378f126076597566f0864ccbca7",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "whole-number",
+      "textSha256": "1ea29f3d4b4822cd8e98944c8bba970328ca71ba2b7a15255a0a50c818eb62d5",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "micro-payment",
+      "textSha256": "86fd127173d6f70ec571ebe4ee21e32d2b0c8eedba082c7a7733801021467b18",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "grouped-number",
+      "textSha256": "f8e7ffad6812f2dddfcdd98fe8093704c7d6c77d827af7910a696e5c9e007ff6",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "arabic-grouping",
+      "textSha256": "f6e174ae91b5849f183d4c9909a60b309a495511adeea1b5e8b098fbc604aa5f",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "decimal-comma",
+      "textSha256": "3cc67e0d2235e3f2c176331cc6d0af55aeba701e4f81174abb6809ad03e119be",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "balance-after",
+      "textSha256": "ef8dfcfe25bfd8f075b6e987ba3e55a8e92c94eacb6e011ecbbb985b5ca9cf92",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "balance-before",
+      "textSha256": "ee22f62cd3935883f78486757010a22f5a1765fa91f29c10a4fa7634d44dc663",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "balance-ar",
+      "textSha256": "8d2c5408483a47f38e4a53e2a7dd3ccdb473f85fe17f298beac11d24f42178e0",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "identifier-date",
+      "textSha256": "869bc0fc13cabf1cc9b0474619f68dbabb7e4639c4be1ff14a81e8abf57b4e75",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "salary-en",
+      "textSha256": "d63c4387571ea9d65c2d770221e7b760e4d03b8503cc24f52ef789d3d5660cdf",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "salary-ar",
+      "textSha256": "e2d91c5d200387351d7d0e8822eab502d265e09eae7739219819d8a129bca7d4",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "refund-en",
+      "textSha256": "1e23c234b7cb8f5d14773ee198a95b1b07cbb23550744a156580cb21fb597ac5",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "refund-ar",
+      "textSha256": "d4218ecf173f665ab1f49255f1bbaf8623040f4eb000801b538c62f8593b5dd3",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "withdrawal-en",
+      "textSha256": "4dbcce4dab19b46b13db341507a67cc13a98f632498e5dc2479355b2545cbef0",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "withdrawal-ar",
+      "textSha256": "d062934c88508a0f9aae4a9bdee4889d282b0ab2e00931c5d1676ab6d2547e91",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "deposit-en",
+      "textSha256": "3d8f8319a72cb59de303c18d56420ac30970465cfbade1548d4bc79a68dd8891",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "deposit-ar",
+      "textSha256": "63be71015f711194bdecbae71dad355ff5af43653aba42aea58f131a8329256e",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "bill-en",
+      "textSha256": "8702322067ba397894b23cfc8ec90ffc0e2e1d7d9b50b28f477827b687e78a05",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "bill-ar",
+      "textSha256": "3020975791a5d52f77736f1ca0ca739a6ad9647fed94b3d5ed20fe2442428555",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "fee-only",
+      "textSha256": "7948223a17a323d6a93537a9ea1148aa742cab3e1a1024397ce588f2b2acaf9e",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "missing-currency",
+      "textSha256": "9c4557daf941b455bbf57af0ba1e83858245d67ae802b182d2fd9b855e0cc078",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "foreign-balance",
+      "textSha256": "4016dae627d472526bff1c21e37bf1ff258d7d456faf074b7279e8e1ff62ef1a",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "mixed-script",
+      "textSha256": "dcb0fb9f3fd3117428ce42bee9ca83924431e076e204c723812ac7377fa240b6",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "p2p-out",
+      "textSha256": "51f85325dd02a7f008ad111a9d63a536a49a596617b9bf4ae5d980d9aef4a6b6",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "p2p-in",
+      "textSha256": "f6c9bdaeed607e037a0a1e56dfcc01e2f9c682cab8c0df39756cd99a39e34d00",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "own-transfer",
+      "textSha256": "41842a7455b9a35c667ec44af9b7e98e342bcd0888bd7cb34cb1df0dc0909c32",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "named-unknown-transfer",
+      "textSha256": "6aa00328c1182e2e4e868a4a6fa31b3446e7ab70d0d847896389fb1bd93513d3",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "chat-en",
+      "textSha256": "d9bf9f81487b201ebb5f2c994d4aee1525e310b404796c1f52b83e5160560f5c",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "chat-ar",
+      "textSha256": "9c8f533d63617dd12ffa5ae41c37062dbb92518227e216a2dcca753bf2818f72",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "otp-en",
+      "textSha256": "87a3ab6dee1007c5d344356730c66d9337c2cfc9f9e2a2fecb819dfe3054e460",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "otp-ar",
+      "textSha256": "26a5a38af9fd556e297b467c45656eb29d6a418e13698994a6bec766c62b3078",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "declined-en",
+      "textSha256": "7d1a1db1a22efbebc1628646a10cf08cade09c7d1bdcfc3dc40d99b2604413d3",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "declined-ar",
+      "textSha256": "d27c42cd65fadba8064725dc64fc66d6f9dce66e3222c7d5e0323ba76a523fba",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "pending-en",
+      "textSha256": "bda5beb214e512a46414c804ccb5005888b7e2c345a3dec80b3f1c880f1c3450",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "pending-ar",
+      "textSha256": "ce5349f7c092f40c62266f8bf1bf1fc1bff0e87f1e879a89ea81943478c665be",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "balance-only",
+      "textSha256": "ab8b2182ac0f1b316b3b6ebae805bae8bd97deaa49ffa292cf20294b3d8c9f00",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "balance-question",
+      "textSha256": "6e00010d6697a1ad9b8a9cb192fb51184758e366fb40e2d8254135f67ad2cc22",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "promo",
+      "textSha256": "ca161e94f921139121c205f7b22e719129c03424f2c075d225efab63efba3351",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "maintenance",
+      "textSha256": "7ef9b71d02261eafa2940c9b98cb08a3448ce9fd1795b7ee35892ccae9e25c97",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "example-en",
+      "textSha256": "00dcb4a23dba9464f55073ba6fdd470b7ea5102bf9c471f12e29126946a43ed5",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "example-ar",
+      "textSha256": "5080a697888a1f002f69559026babf6e0ad82f09daafceb87d5517b239b38613",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "empty",
+      "textSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "null",
+      "textSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "unknown-outcome",
+      "textSha256": "06fcf3bc2ed78245f2efb50477c462d2902dc65a528929ea101a02b2bf6f517d",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "missing-amount",
+      "textSha256": "ea37500080875f77aaeccb469f436cc0d162f27d6f9fefdbe67b8b53f5927337",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "unknown-direction",
+      "textSha256": "9baa74bdecc982c70b4530e4a1a13971514e28391c36eee3866b75b537c30fb5",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "two-events",
+      "textSha256": "21b1bb788e5e35711c030f9f23b69b043331752d4cafb1b52dee52b389a069b2",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "conflicting-outcome",
+      "textSha256": "693fe85ae685a748412909cd8507e24939b0f8f30f7aaa62ce9bca8296138fd6",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "core52",
+      "recordId": "two-unresolved-amounts",
+      "textSha256": "4cfbe635c32509e9281f146851532a1e41a4ee78338aa6a9d7858a8ec6f10163",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-001",
+      "textSha256": "443bb42ae4d975f624360478d0db5bc5528a21498031c2f63778db6c80dcf8b0",
+      "trainingRecordIds": [
+        "authored-sms-v1-001"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-002",
+      "textSha256": "4965f63e574f41458a74b0983633c94d010b526abc619f214912df71c63b7a0e",
+      "trainingRecordIds": [
+        "authored-sms-v1-002"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-003",
+      "textSha256": "f075c019d6e80e5652b8334648230587ee656aba0039ddfa86debfe2a89a048f",
+      "trainingRecordIds": [
+        "authored-sms-v1-003"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-004",
+      "textSha256": "b3f57db5f67d81447813668a81689073d92853771a9a010b92d0d609dd81fc4d",
+      "trainingRecordIds": [
+        "authored-sms-v1-004"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-005",
+      "textSha256": "2f365115e588b52fb0f4c1b9b9183d6099d5490a1e5c06bd91b0b8bea79544c1",
+      "trainingRecordIds": [
+        "authored-sms-v1-005"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-006",
+      "textSha256": "345f598d209ca8e89ea69c3d64c9e1dfddb068974bcf328f22c99c5327df4b20",
+      "trainingRecordIds": [
+        "authored-sms-v1-006"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-007",
+      "textSha256": "c3191fac7112238825892df8e79c3593dc10f7f8903580149084026f3cc83259",
+      "trainingRecordIds": [
+        "authored-sms-v1-007"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-008",
+      "textSha256": "098f8375fe0d3b3e0d59a425192271e27b30645174ac287419151a9f8d238be0",
+      "trainingRecordIds": [
+        "authored-sms-v1-008"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-009",
+      "textSha256": "203cc6106f547776391a0fdf6ae14332fac0536a404582e4ff4427294f0cd00a",
+      "trainingRecordIds": [
+        "authored-sms-v1-009"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-010",
+      "textSha256": "243fb4551269c9e01ee2ee65a0cd9132e7ecfb31f7223e50b65f0af178c8d1c6",
+      "trainingRecordIds": [
+        "authored-sms-v1-010"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-011",
+      "textSha256": "941db728f3f161c982d9aebe866e423468e68f10c089e6d9c59e45e781b73ebe",
+      "trainingRecordIds": [
+        "authored-sms-v1-011"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-012",
+      "textSha256": "bec0831fcb025b61abbb0d79c4811711d23eb8b0cca068cc43c5d96be0eafc19",
+      "trainingRecordIds": [
+        "authored-sms-v1-012"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-013",
+      "textSha256": "fdf7b4149037619d45b632b173350d7eb1f44e58955597688ba35e1b1b7d5aca",
+      "trainingRecordIds": [
+        "authored-sms-v1-013"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-014",
+      "textSha256": "7d47d4e21ee50d7c9d7d76ed877440c6109476ebe12a4251dc19c7c18fba56f7",
+      "trainingRecordIds": [
+        "authored-sms-v1-014"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-015",
+      "textSha256": "c3a2a6d189afdf97cc4d8fbccfc6f8645f16a21bec8eee21cc93f81a4942d3a6",
+      "trainingRecordIds": [
+        "authored-sms-v1-015"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-016",
+      "textSha256": "4835d7f1f297da37e137e9182f2b2f9d603858b1296f7b0f4cf39dc46631c8b7",
+      "trainingRecordIds": [
+        "authored-sms-v1-016"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-017",
+      "textSha256": "547a2f12e046891df287cd31c46b79c7b97eeb2004483c54651bf86c3f1864f8",
+      "trainingRecordIds": [
+        "authored-sms-v1-017"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-018",
+      "textSha256": "d205432f3ef55d5a1b198d4317d6f0b282322df55063b58d03d9c0bf87682094",
+      "trainingRecordIds": [
+        "authored-sms-v1-018"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-019",
+      "textSha256": "89a53461720a740c8cd8298595ae9b45eafeeb8c4dad7799d1ec07cf2192acf3",
+      "trainingRecordIds": [
+        "authored-sms-v1-019"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-020",
+      "textSha256": "524bbfb3fe641fde324394259c770fd67da9e2cf6850c2473b1d16eec7ba64c5",
+      "trainingRecordIds": [
+        "authored-sms-v1-020"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-021",
+      "textSha256": "e2ce49f1519f9bffcff5c2548cc5ab0047ba7aa07d0ce4cf3f14fe676531040b",
+      "trainingRecordIds": [
+        "authored-sms-v1-021"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-022",
+      "textSha256": "b256bbbebe289d980e6b3ce2e026eb51e77693773ae02364e8964f66eb4f0487",
+      "trainingRecordIds": [
+        "authored-sms-v1-022"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-023",
+      "textSha256": "7adec7a60dc4e03d3d8887b4a97767b45a39bed752be33fc6b28a182257b4350",
+      "trainingRecordIds": [
+        "authored-sms-v1-023"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-024",
+      "textSha256": "bdab4a4192aff2c91b8aff6edc8d8ecaa8a8db30abaab7b755233ec75c60df68",
+      "trainingRecordIds": [
+        "authored-sms-v1-024"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-025",
+      "textSha256": "2a1059b1062a4602ccdce79ea8fbb64bd9f812ce5f7e281194bf9365e29907f3",
+      "trainingRecordIds": [
+        "authored-sms-v1-025"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-026",
+      "textSha256": "94a3ccae2e77a965599879f50ae65bdfd3a3786c738ed9ea9c1caf86078acee6",
+      "trainingRecordIds": [
+        "authored-sms-v1-026"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-027",
+      "textSha256": "c8f60525404d28f147a33eae8154e45882a06c33252ddfefb68364c2d9bf09f0",
+      "trainingRecordIds": [
+        "authored-sms-v1-027"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-028",
+      "textSha256": "8fec74c618afd85ef46f25a064c6bbac823be16eb050c808c0e0373a9fe837a7",
+      "trainingRecordIds": [
+        "authored-sms-v1-028"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-029",
+      "textSha256": "fc9b5b6ed9fab277673f57e5afb530b7c11cf99f08b79046d13bdee90e01b2c8",
+      "trainingRecordIds": [
+        "authored-sms-v1-029"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-030",
+      "textSha256": "a03903307df8838a8203daf4e14c1bf525f5e47528119c088d34c9eb604c164f",
+      "trainingRecordIds": [
+        "authored-sms-v1-030"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-031",
+      "textSha256": "934e5f59bdb4ac7b71978255fca261ead85aa96d4e5c4ef206c65d49cc57de8c",
+      "trainingRecordIds": [
+        "authored-sms-v1-031"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-032",
+      "textSha256": "ca9eb9fb766e87553028ab797344655c87b4cd18ff91fc8454c832ce8283a6fb",
+      "trainingRecordIds": [
+        "authored-sms-v1-032"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-033",
+      "textSha256": "33747aad5ffb9d548e19c98167261783268a496b014d7e191843127e763638da",
+      "trainingRecordIds": [
+        "authored-sms-v1-033"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-034",
+      "textSha256": "8f40a520b4121a8095de769debb49b939b8f6786c0c69543942dd7d97024d5e9",
+      "trainingRecordIds": [
+        "authored-sms-v1-034"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-035",
+      "textSha256": "80af0fdcb403823c98ed3e4eb0109ee9b778b1c946329b7918223c99c81065d7",
+      "trainingRecordIds": [
+        "authored-sms-v1-035"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-036",
+      "textSha256": "5f3a92c94e092a20119130452a39f09dded9ac11f306479967fca6765801670f",
+      "trainingRecordIds": [
+        "authored-sms-v1-036"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-037",
+      "textSha256": "d30e4de1e6080855e347234fbccd002c725f1045bf044f23d1d5cb313f104bf8",
+      "trainingRecordIds": [
+        "authored-sms-v1-037"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-038",
+      "textSha256": "808213a6481052e98be86a273b3fb6049f8ada7e8ba1ac6856f8bf3160d578f1",
+      "trainingRecordIds": [
+        "authored-sms-v1-038"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-039",
+      "textSha256": "7edff6987ede904b709cd4e0a4f763ba0f0a77db9accda21a92ff454725097fd",
+      "trainingRecordIds": [
+        "authored-sms-v1-039"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-040",
+      "textSha256": "2fbc7a70dea3b56c44a63fa321fec55d6fa4a6df8ef8da96206f1bc3a65aef30",
+      "trainingRecordIds": [
+        "authored-sms-v1-040"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-041",
+      "textSha256": "f55736b0a8eedbb1684959044ee69d54bb70fba5f777a4113a282563c87a0ffb",
+      "trainingRecordIds": [
+        "authored-sms-v1-041"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-042",
+      "textSha256": "7212d451cd678e1c6a4b8b50efc9a921ae1676fcc260087197021006201310ea",
+      "trainingRecordIds": [
+        "authored-sms-v1-042"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-043",
+      "textSha256": "0bcb10c143a60e5d48bf994f3ebfb278072d46e60dc53e93a4f8e21e11cb519d",
+      "trainingRecordIds": [
+        "authored-sms-v1-043"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-044",
+      "textSha256": "088a69df48441554d2e7ad07084ed1ebcb876e42a0d6be321c68434d5ad66132",
+      "trainingRecordIds": [
+        "authored-sms-v1-044"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-045",
+      "textSha256": "b69744c585616cde3e4bc09924822de85dd2e9ced1245ef76d561226dac2e6a2",
+      "trainingRecordIds": [
+        "authored-sms-v1-045"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-046",
+      "textSha256": "0beef6e954f3e03da28699bb338115653746a314c7dcfed8dbd4204c946c2478",
+      "trainingRecordIds": [
+        "authored-sms-v1-046"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-047",
+      "textSha256": "2fbe61a523cb515b443234e75435bed11db8fa9fb2f9aafd86663f68edc10f3c",
+      "trainingRecordIds": [
+        "authored-sms-v1-047"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-048",
+      "textSha256": "300f1cef0e39d0ea6574081895c46e82c9169b286c71c3f9b664de09fdb8c2b2",
+      "trainingRecordIds": [
+        "authored-sms-v1-048"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-049",
+      "textSha256": "1692e35dcf39ab762ae0bd33b2695ea075d252c866245293905494f569cfefe7",
+      "trainingRecordIds": [
+        "authored-sms-v1-049"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-050",
+      "textSha256": "1a5410cc24cb5305a2c466d35e1b11e515d5df10e4f4cf97a87cd9262e9ab71f",
+      "trainingRecordIds": [
+        "authored-sms-v1-050"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-051",
+      "textSha256": "07cd89000661a911300d6829486b963b96d8ac19917613650f07dcb195f52d6e",
+      "trainingRecordIds": [
+        "authored-sms-v1-051"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-052",
+      "textSha256": "33cce190d66e36a11c4877c70617c83ca64af4d8841cf43a2b92abc651e4e945",
+      "trainingRecordIds": [
+        "authored-sms-v1-052"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-053",
+      "textSha256": "bd9cb81cb05998cf3a7f6665e0179f2220406906b6499bfd930cd1b95449d37a",
+      "trainingRecordIds": [
+        "authored-sms-v1-053"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-054",
+      "textSha256": "10f60afe0e271156cab1834b358e1eeed4b81a5d6772e76061e91a1d3f3b5426",
+      "trainingRecordIds": [
+        "authored-sms-v1-054"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-055",
+      "textSha256": "4fce3c15452c2c32a6d34bf6f0c45b89c514ba550e657fe87f17583da02ad942",
+      "trainingRecordIds": [
+        "authored-sms-v1-055"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-056",
+      "textSha256": "21fd480f66fb5bc8669189163745bd2652608476f4951a210795f72e7101b575",
+      "trainingRecordIds": [
+        "authored-sms-v1-056"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-057",
+      "textSha256": "3175dd3c345c451facd082b9c7f8e652ddde180adc3fd569f870ea0422a78df4",
+      "trainingRecordIds": [
+        "authored-sms-v1-057"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-058",
+      "textSha256": "1f889603a59ac490ffe8bea61d495fd24fdaa64b3db54d2e0723063b8a3ec878",
+      "trainingRecordIds": [
+        "authored-sms-v1-058"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-059",
+      "textSha256": "9180bb2a57165626c8aa363e7966c564420b5b90f5839f3b30f46824cde938d3",
+      "trainingRecordIds": [
+        "authored-sms-v1-059"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-060",
+      "textSha256": "210507c47f79e24b1d9053cd1359d528b0abc852701bce363f9c1ccd019d83aa",
+      "trainingRecordIds": [
+        "authored-sms-v1-060"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-061",
+      "textSha256": "06df24d99f95613282fbbbf6b09edf8f6f52862c27fe30cd3c529a1e364b9e17",
+      "trainingRecordIds": [
+        "authored-sms-v1-061"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-062",
+      "textSha256": "df2dc519e998af125f4b309f538b0028407e8ba10b096503acc58970d1f9b54f",
+      "trainingRecordIds": [
+        "authored-sms-v1-062"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-063",
+      "textSha256": "542171c5790d5314246fa8fcc829586d8711538a1d1a84a66955b2e4538cd507",
+      "trainingRecordIds": [
+        "authored-sms-v1-063"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-064",
+      "textSha256": "6448912cb8aa2067a543a476da1ca63103188a38a8403718e2779c05c9c79ac5",
+      "trainingRecordIds": [
+        "authored-sms-v1-064"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-065",
+      "textSha256": "375e72fab89c628c5683b2370f767b64b0f6fd2a775d25108e1287e9e62a4fac",
+      "trainingRecordIds": [
+        "authored-sms-v1-065"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-066",
+      "textSha256": "dcd1b1f44dba8b543268daffab8834bda910f347dc08fece97390e2cbb7ea344",
+      "trainingRecordIds": [
+        "authored-sms-v1-066"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-067",
+      "textSha256": "92bf5dd3920dced251f6f17036df81b9f8b794e59a864f83192208e0cf4da980",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-068",
+      "textSha256": "eb62dbe3733ae6a9bae7a457c8059d79cbe33c080cf32608216b99cabedb9b99",
+      "trainingRecordIds": [],
+      "role": "text_disjoint_exposed_diagnostic",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-069",
+      "textSha256": "f26fe041147847177fae7ba4360fd920c732551a1d8a87aa18cdc285c1ab6de1",
+      "trainingRecordIds": [
+        "authored-sms-v1-069"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-070",
+      "textSha256": "31f104f885eff9dddcf642e5eccbf5b0c06d5098e927eefd5c423672a3fcb1bd",
+      "trainingRecordIds": [
+        "authored-sms-v1-070"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-071",
+      "textSha256": "daecb1761169d2353fe877d43974f0b756762b30549ecc605ef4b715d2fed9d5",
+      "trainingRecordIds": [
+        "authored-sms-v1-071"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-072",
+      "textSha256": "b27eb76f3bde06ed41b7f7e63cb81f95e7faedf3b252a8e8c7c999c920d4b4e8",
+      "trainingRecordIds": [
+        "authored-sms-v1-072"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-073",
+      "textSha256": "ad1595c674760e18cc95398959056906c5f5751922484363290772ceb243afa2",
+      "trainingRecordIds": [
+        "authored-sms-v1-073"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-074",
+      "textSha256": "6897bb3df83beeb58d4b7fe397fb47d3e556a472e3d092645d0d88efa6088828",
+      "trainingRecordIds": [
+        "authored-sms-v1-074"
+      ],
+      "role": "in_sample_conformance",
+      "independentEvaluationEligible": false
+    }
+  ],
+  "training": false,
+  "newInference": false
+}

@@ -1,0 +1,943 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Assistant-authored exposed development contrasts, not independent evidence",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false,
+  "cases": [
+    {
+      "id": "settled-en",
+      "language": "en",
+      "boundary": "settled",
+      "input": {
+        "text": "Settled card payment: USD 17 deducted. This is a posted charge."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "USD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "settled-wallet-en",
+      "language": "en",
+      "boundary": "settled",
+      "input": {
+        "text": "Merchant wallet payment settled, reducing your wallet by JOD 17."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "completed-bill-ar",
+      "language": "ar",
+      "boundary": "settled",
+      "input": {
+        "text": "اكتمل سداد الفاتورة بقيمة 17 JOD من رصيد محفظتك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "finished-bill-ar",
+      "language": "ar",
+      "boundary": "missing_amount",
+      "input": {
+        "text": "انتهى دفع الفاتورة وجرى الخصم من المحفظة بنجاح."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "debit-finished-en",
+      "language": "en",
+      "boundary": "settled",
+      "input": {
+        "text": "The JOD 17 payment was approved and the debit finished. The request is no longer pending."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "debit-finished-ar",
+      "language": "ar",
+      "boundary": "settled",
+      "input": {
+        "text": "تمت الموافقة على سداد 17 JOD وانتهى الخصم. لم يعد الطلب معلقا."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "settlement-ar",
+      "language": "ar",
+      "boundary": "settled",
+      "input": {
+        "text": "خصم شراء بمبلغ 17 JOD مثبت على بطاقتك. اكتملت التسوية دون رفض."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "invoice-success-ar",
+      "language": "ar",
+      "boundary": "settled",
+      "input": {
+        "text": "سُددت الفاتورة رقم 731 بنجاح، وخصم الحساب مبلغ 17 JOD."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "installment-collected-en",
+      "language": "en",
+      "boundary": "collected",
+      "input": {
+        "text": "The due installment of JOD 17 has been collected by deducting it from your balance."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "installment-collected-ar",
+      "language": "ar",
+      "boundary": "collected",
+      "input": {
+        "text": "تم استيفاء دفعة التقسيط المستحقة بقيمة 17 JOD عبر خصمها من رصيدك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "recorded-debit-ar",
+      "language": "ar",
+      "boundary": "posted",
+      "input": {
+        "text": "قيدت قيمة 17 JOD كحركة مدينة على محفظتك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "recorded-amount-ar",
+      "language": "ar",
+      "boundary": "missing_amount",
+      "input": {
+        "text": "سجل البنك المبلغ مدينا على حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "recorded-cash-ar",
+      "language": "ar",
+      "boundary": "posted",
+      "input": {
+        "text": "صرف لك نقدا 17 JOD وقيدت العملية على حسابك كخصم."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "cash-balance-ar",
+      "language": "ar",
+      "boundary": "balance_role",
+      "input": {
+        "text": "صرف الصراف 17.250 JOD نقدا، وسجل المبلغ خصما على حسابك. الرصيد بعد الحركة 88.400 JOD."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "cash-balance-en",
+      "language": "en",
+      "boundary": "balance_role",
+      "input": {
+        "text": "The ATM dispensed JOD 17.250 and posted a debit to your account. Balance after the movement: JOD 88.400."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "deposit-posted-ar",
+      "language": "ar",
+      "boundary": "posted_credit",
+      "input": {
+        "text": "قبل إيداعك النقدي وأصبح مبلغ 17 JOD مضافا إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "credit-recorded-ar",
+      "language": "ar",
+      "boundary": "missing_amount",
+      "input": {
+        "text": "أُنجز القيد الدائن في حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "gift-recorded-ar",
+      "language": "ar",
+      "boundary": "missing_amount",
+      "input": {
+        "text": "سجل المحفظة: قيدت هدية مرسلة من شخص آخر كإضافة نهائية إلى رصيدك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "card-recorded-ar",
+      "language": "ar",
+      "boundary": "missing_amount",
+      "input": {
+        "text": "دفعت قيمة المشتريات وقيدت مدينا على البطاقة."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "incoming-transfer-ar",
+      "language": "ar",
+      "boundary": "unknown_owner",
+      "input": {
+        "text": "قيدت حوالة واردة بقيمة 17 JOD في حسابك *1111 من الحساب *2222."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "internal-own-ar",
+      "language": "ar",
+      "boundary": "own_transfer",
+      "input": {
+        "text": "اكتملت حركة داخلية بقيمة 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "internal-unknown-ar",
+      "language": "ar",
+      "boundary": "unknown_owner",
+      "input": {
+        "text": "اكتملت حركة داخلية بقيمة 17 JOD من الحساب *1111 إلى الحساب *2222."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "returned-refund-en",
+      "language": "en",
+      "boundary": "returned_credit",
+      "input": {
+        "text": "Refund completed. JOD 17 returned to your card balance for an earlier purchase."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "commission-en",
+      "language": "en",
+      "boundary": "fee_purpose",
+      "input": {
+        "text": "Transfer commission collected: a JOD 17 debit has settled on your wallet."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "commission-ar",
+      "language": "ar",
+      "boundary": "fee_purpose",
+      "input": {
+        "text": "سجلت عمولة تحويل مستوفاة بمقدار 17 JOD على محفظتك كحركة مدينة."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "salary-transfer-ar",
+      "language": "ar",
+      "boundary": "salary_purpose",
+      "input": {
+        "text": "قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "fee-plus-transfer-en",
+      "language": "en",
+      "boundary": "actual_transfer",
+      "input": {
+        "text": "Transfer commission collected. A transfer of JOD 17 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "fee-plus-person-en",
+      "language": "en",
+      "boundary": "actual_transfer",
+      "input": {
+        "text": "Transfer commission collected. A transfer of JOD 17 to another person was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "fee-plus-paired-en",
+      "language": "en",
+      "boundary": "paired_transfer",
+      "input": {
+        "text": "Transfer fee: JOD 17 has been debited from *1111 and has been credited to *2222."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "salary-own-ar",
+      "language": "ar",
+      "boundary": "own_transfer",
+      "input": {
+        "text": "قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "salary-person-ar",
+      "language": "ar",
+      "boundary": "actual_transfer",
+      "input": {
+        "text": "قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD من شخص آخر."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "salary-cliq-ar",
+      "language": "ar",
+      "boundary": "unknown_owner",
+      "input": {
+        "text": "قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD عبر كليك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "approved-not-debited-en",
+      "language": "en",
+      "boundary": "approval",
+      "input": {
+        "text": "The JOD 17 payment was approved, but no funds were debited."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "approved-not-debited-ar",
+      "language": "ar",
+      "boundary": "approval",
+      "input": {
+        "text": "تمت الموافقة على دفع 17 JOD، لكن لم يتم الخصم."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "not-settled-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "Your card payment has not settled."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "not-finished-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "The debit did not finish and no debit is posted."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "not-finished-ar",
+      "language": "ar",
+      "boundary": "denial",
+      "input": {
+        "text": "لم ينته دفع الفاتورة ولا يوجد خصم مثبت."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "not-collected-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "The installment of JOD 17 has not been collected."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "not-collected-ar",
+      "language": "ar",
+      "boundary": "denial",
+      "input": {
+        "text": "لم يتم استيفاء دفعة التقسيط بقيمة 17 JOD."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "no-posted-charge-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "This is not a posted charge; no funds were debited."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "future-collection-en",
+      "language": "en",
+      "boundary": "future",
+      "input": {
+        "text": "The installment of JOD 17 will be collected tomorrow."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "future-collection-ar",
+      "language": "ar",
+      "boundary": "future",
+      "input": {
+        "text": "سيتم استيفاء دفعة التقسيط بقيمة 17 JOD."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "if-finished-en",
+      "language": "en",
+      "boundary": "conditional",
+      "input": {
+        "text": "If the JOD 17 payment settled, check your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "if-finished-ar",
+      "language": "ar",
+      "boundary": "conditional",
+      "input": {
+        "text": "إذا اكتمل سداد الفاتورة بقيمة 17 JOD راجع حسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "question-settled-en",
+      "language": "en",
+      "boundary": "question",
+      "input": {
+        "text": "Can you confirm that the JOD 17 payment settled?"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "question-settled-ar",
+      "language": "ar",
+      "boundary": "question",
+      "input": {
+        "text": "هل اكتمل سداد الفاتورة بقيمة 17 JOD؟"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "claimed-settled-en",
+      "language": "en",
+      "boundary": "personal",
+      "input": {
+        "text": "I settled your JOD 17 payment."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "claimed-settled-ar",
+      "language": "ar",
+      "boundary": "personal",
+      "input": {
+        "text": "أنا سددت الفاتورة بقيمة 17 JOD بنجاح."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "quoted-settled-en",
+      "language": "en",
+      "boundary": "quoted",
+      "input": {
+        "text": "Translation exercise: \"Settled card payment: JOD 17 deducted.\""
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "quoted-settled-ar",
+      "language": "ar",
+      "boundary": "quoted",
+      "input": {
+        "text": "هذا مثال: «اكتمل سداد الفاتورة بقيمة 17 JOD»."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "unknown-collected-en",
+      "language": "en",
+      "boundary": "unknown",
+      "input": {
+        "text": "Whether the installment of JOD 17 has been collected is not confirmed."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown-settled-ar",
+      "language": "ar",
+      "boundary": "unknown",
+      "input": {
+        "text": "اكتملت التسوية بمبلغ 17 JOD؛ نتيجة التسوية غير مؤكدة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown-debit-ar",
+      "language": "ar",
+      "boundary": "unknown",
+      "input": {
+        "text": "قيدت قيمة 17 JOD كحركة مدينة على محفظتك والنتيجة النهائية غير محسومة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "pending-settled-en",
+      "language": "en",
+      "boundary": "unknown",
+      "input": {
+        "text": "The JOD 17 payment settled. A conflicting notice still says pending."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "card-limit-en",
+      "language": "en",
+      "boundary": "administration",
+      "input": {
+        "text": "Your card spending limit was reduced by JOD 17."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "file-collected-en",
+      "language": "en",
+      "boundary": "administration",
+      "input": {
+        "text": "Your loan application documents have been collected."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "gift-points-ar",
+      "language": "ar",
+      "boundary": "noncash",
+      "input": {
+        "text": "قيدت هدية 150 نقطة مكافآت إلى ملفك؛ ليست مبلغا نقديا."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "balance-only-ar",
+      "language": "ar",
+      "boundary": "balance",
+      "input": {
+        "text": "الرصيد بعد الحركة 88.400 JOD."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "merchant-words-en",
+      "language": "en",
+      "boundary": "merchant_control",
+      "input": {
+        "text": "JOD 17 was debited from your account at Not Settled Cafe."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "old-credit-ar",
+      "language": "ar",
+      "boundary": "existing",
+      "input": {
+        "text": "تم إيداع 17 JOD في حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    }
+  ]
+}

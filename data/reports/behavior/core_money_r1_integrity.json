@@ -1,0 +1,16 @@
+{
+  "coreChangedCases": [
+    "bill-ar",
+    "otp-en",
+    "declined-en",
+    "promo",
+    "unknown-outcome"
+  ],
+  "unchangedCoreCases": 47,
+  "learnedModelFilesUnchanged": 23,
+  "newContrastTexts": 14,
+  "threeRuntimeFullResultComparisons": 42,
+  "newModelTraining": false,
+  "reservedInferred": false,
+  "historicalProposalAssertionsPreserved": true
+}

@@ -1,0 +1,1172 @@
+{
+  "runId": "sms_completion_encoder_v1",
+  "fitCalls": 1,
+  "iterations": [
+    5
+  ],
+  "maximumExportGap": 5.329070518200751e-15,
+  "researchContinuationGatePassed": false,
+  "independentAccuracy": false,
+  "productionIntegrated": false,
+  "encodingSeconds": 23.755149899981916,
+  "warmSingleMessageMilliseconds": [
+    46.68520000996068,
+    31.848200014792383,
+    30.30479996232316,
+    33.520700002554804,
+    33.8130000163801,
+    29.364599962718785,
+    32.181199989281595,
+    31.759999983478338,
+    33.81789999548346,
+    33.31440000329167
+  ],
+  "encoderBytes": 470641600,
+  "binding": {
+    "protocolSha256": "30d9eae6350b5d42be638b5571c2c12045a67459a8c6a75e4527b205086b0b12",
+    "producerSha256": "5855214afeba920074409da9621355f54e2092e4718d198fa122987325d4c99a",
+    "inputSha256": {
+      "data/reports/transactions/sms_semantics_followup_v1_cohort.json": "9c91de7551e9cb65f04eeba89edef0ddd7308d2e3cd700e9dbf9da1b13a383b8",
+      "data/reports/transactions/sms_semantics_followup_v1.json": "cedd066e3a35a01ceef96b6e527b0de7a3ad673690ae17481ce5ca254c22d080",
+      "data/reports/transactions/sms_completion_context_v1.json": "e1b4127fae4c674a91dfe122d98a85485c384278728e65abd7fa0e2473be9f09",
+      "data/models/sms_semantics_followup_v1_word_candidate.json": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121",
+      "data/models/sms_completion_context_v1_candidate.json": "fad7f42560fae5dfbf55c7c070013e7e95b1eb008c67434219165207891cd73c",
+      "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+      "data/training/authored_sms_v1/messages.jsonl": "18ca9e8b943a484ddab90b0f1536d3fed43d546b2d148a3e484591bdf02d409f",
+      "data/training/authored_sms_context_v1/scenarios.json": "2f1b1d2f03a12d3a776d4c3b24dbd743858940b57ac232b9bea7bfbc69297ae7",
+      ".local-backups/sms_research_manual_v1/cases.json": "b1d582d32af849578565ba5404fad96e1922aad873d344d27ae803457c34d875",
+      "tests/fixtures/quoted_example_cases.json": "0b51454d63b3d41914bbf4daab7a24b34ffe9ffc4c7199cf524160e1e8539965",
+      "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8",
+      "src/python/research/sms_semantics.py": "0eab832392fbcf737a6f9d82102310018eaed13734c7aad977c19e177ebd5d4d",
+      "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1"
+    },
+    "environment": {
+      "torch": "2.14.1+cpu",
+      "transformers": "5.21.0",
+      "huggingface-hub": "2.3.0",
+      "numpy": "2.5.4",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "tokenizers": "0.23.3"
+    },
+    "encoderSha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+    "vectorsSha256": "0d5002683c7f723c53f3139258c49bf5fdb365ef28e227da22e91d1f2b48d26c",
+    "normalizedInputsSha256": "168e3e1eef89658cb44bd6c77d9d380d1d7ea825beaae79f32c2c7a12b1d488c",
+    "tokenizerAssets": {
+      "config.json": {
+        "sha256": "6300193cb75e01cf80c96decef7187dfb33094d97cc1490b7ead6ff134476e4e",
+        "bytes": 645
+      },
+      "config_sentence_transformers.json": {
+        "sha256": "b8c64b5cece00d8424b4896ea75b512b6008576088497609dfeb6bd63e6d36b8",
+        "bytes": 122
+      },
+      "modules.json": {
+        "sha256": "8f4b264b80206c830bebbdcae377e137925650a433b689343a63bdc9b3145460",
+        "bytes": 229
+      },
+      "README.md": {
+        "sha256": "1e98ea05b0de579fcaad3d625b62ea55647142ed674d5f5ebf1440e4bbbb6f23",
+        "bytes": 3888
+      },
+      "sentencepiece.bpe.model": {
+        "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+        "bytes": 5069051
+      },
+      "sentence_bert_config.json": {
+        "sha256": "70f4448f31320443fe3557cacea5abf2dcc4915dda8c80646bec9f3bb0aa5a1f",
+        "bytes": 53
+      },
+      "special_tokens_map.json": {
+        "sha256": "378eb3bf733eb16e65792d7e3fda5b8a4631387ca04d2015199c4d4f22ae554d",
+        "bytes": 239
+      },
+      "tokenizer.json": {
+        "sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+        "bytes": 9081518
+      },
+      "tokenizer_config.json": {
+        "sha256": "5036ea374ffedd706e3bef33e2e0d6953cb868ef8a490e76e32ba0faa37a6b9b",
+        "bytes": 526
+      },
+      "unigram.json": {
+        "sha256": "71b44701d7efd054205115acfa6ef126c5d2f84bd3affe0c59e48163674d19a6",
+        "bytes": 14763234
+      },
+      "1_Pooling/config.json": {
+        "sha256": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23",
+        "bytes": 190
+      }
+    }
+  },
+  "evaluations": {
+    "oldExposedValidation": {
+      "metrics": {
+        "all": {
+          "word": {
+            "TP": 4,
+            "TN": 14,
+            "FP": 0,
+            "FN": 0
+          },
+          "context": {
+            "TP": 4,
+            "TN": 14,
+            "FP": 0,
+            "FN": 0
+          },
+          "candidate": {
+            "TP": 4,
+            "TN": 11,
+            "FP": 3,
+            "FN": 0
+          }
+        },
+        "ar": {
+          "word": {
+            "TP": 2,
+            "TN": 8,
+            "FP": 0,
+            "FN": 0
+          },
+          "context": {
+            "TP": 2,
+            "TN": 8,
+            "FP": 0,
+            "FN": 0
+          },
+          "candidate": {
+            "TP": 2,
+            "TN": 8,
+            "FP": 0,
+            "FN": 0
+          }
+        },
+        "en": {
+          "word": {
+            "TP": 2,
+            "TN": 6,
+            "FP": 0,
+            "FN": 0
+          },
+          "context": {
+            "TP": 2,
+            "TN": 6,
+            "FP": 0,
+            "FN": 0
+          },
+          "candidate": {
+            "TP": 2,
+            "TN": 3,
+            "FP": 3,
+            "FN": 0
+          }
+        }
+      },
+      "rows": [
+        {
+          "recordId": "synthetic-v1-0053",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -0.9498864397144468,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-0140",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -2.5808032548936013,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-0038",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -4.8175902054421025,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-1554",
+          "language": "en",
+          "target": "completed",
+          "score": 2.277581652145259,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-0106",
+          "language": "en",
+          "target": "non_transaction",
+          "score": 0.2757530689728911,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-1398",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -5.1509923677269365,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-0750",
+          "language": "ar",
+          "target": "completed",
+          "score": 1.5716948370870274,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-1107",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -4.0653534090028955,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-1665",
+          "language": "en",
+          "target": "completed",
+          "score": 0.22025818164840022,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-1548",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -1.7520576955554492,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-1302",
+          "language": "ar",
+          "target": "completed",
+          "score": 1.116571820467797,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-1914",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -1.4249999447113502,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-0334",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -2.3621187373417176,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-0289",
+          "language": "en",
+          "target": "non_transaction",
+          "score": 0.5874658228899232,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-0184",
+          "language": "en",
+          "target": "non_transaction",
+          "score": 0.8084804758807379,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-0174",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -3.2463072755280575,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-1881",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -1.320444076053091,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "synthetic-v1-0806",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -3.0030675828113056,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        }
+      ],
+      "uncertainNotBinaryScored": 0
+    },
+    "exposedManual": {
+      "metrics": {
+        "all": {
+          "word": {
+            "TP": 9,
+            "TN": 6,
+            "FP": 4,
+            "FN": 3
+          },
+          "context": {
+            "TP": 11,
+            "TN": 6,
+            "FP": 4,
+            "FN": 1
+          },
+          "candidate": {
+            "TP": 11,
+            "TN": 9,
+            "FP": 1,
+            "FN": 1
+          }
+        },
+        "ar": {
+          "word": {
+            "TP": 4,
+            "TN": 3,
+            "FP": 2,
+            "FN": 2
+          },
+          "context": {
+            "TP": 6,
+            "TN": 2,
+            "FP": 3,
+            "FN": 0
+          },
+          "candidate": {
+            "TP": 6,
+            "TN": 5,
+            "FP": 0,
+            "FN": 0
+          }
+        },
+        "en": {
+          "word": {
+            "TP": 5,
+            "TN": 3,
+            "FP": 2,
+            "FN": 1
+          },
+          "context": {
+            "TP": 5,
+            "TN": 4,
+            "FP": 1,
+            "FN": 1
+          },
+          "candidate": {
+            "TP": 5,
+            "TN": 4,
+            "FP": 1,
+            "FN": 1
+          }
+        }
+      },
+      "rows": [
+        {
+          "recordId": "withdrawal-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": 0.35027639307939606,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "withdrawal-en",
+          "language": "en",
+          "target": "completed",
+          "score": 2.502694400097277,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "refund-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": 1.9112039343133054,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "refund-en",
+          "language": "en",
+          "target": "completed",
+          "score": 2.352879532326993,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "foreign-purchase-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": 0.3305624466590469,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "foreign-purchase-en",
+          "language": "en",
+          "target": "completed",
+          "score": -0.020618554412357347,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "unknown-transfer-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": 1.3878418074620196,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "unknown-transfer-en",
+          "language": "en",
+          "target": "completed",
+          "score": 1.6603084632941276,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "own-accounts-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": 1.0687690810905273,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "own-accounts-en",
+          "language": "en",
+          "target": "completed",
+          "score": 2.7925087058178346,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "missing-amount-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": 2.358861120518042,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "missing-amount-en",
+          "language": "en",
+          "target": "completed",
+          "score": 2.7468795877849446,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "declined-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -1.849265978879883,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "declined-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -0.5946526092347283,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "personal-chat-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -1.6356054021399844,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "personal-chat-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -2.220717790897185,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "pending-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -3.403632312022381,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "pending-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -2.35964697119358,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "purchase-otp-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -0.8495690358267577,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "purchase-otp-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -0.17708191433661125,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "quoted-example-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -0.3965122966716145,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "quoted-example-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": 0.9582506298124233,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "unsettled-hold-ar",
+          "language": "ar",
+          "target": "uncertain",
+          "score": -0.14546212223658136,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "unsettled-hold-en",
+          "language": "en",
+          "target": "uncertain",
+          "score": -0.49955414372532325,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        }
+      ],
+      "uncertainNotBinaryScored": 2
+    },
+    "authoredProbe": {
+      "metrics": {
+        "all": {
+          "word": {
+            "TP": 2,
+            "TN": 10,
+            "FP": 2,
+            "FN": 10
+          },
+          "context": {
+            "TP": 6,
+            "TN": 12,
+            "FP": 0,
+            "FN": 6
+          },
+          "candidate": {
+            "TP": 9,
+            "TN": 10,
+            "FP": 2,
+            "FN": 3
+          }
+        },
+        "ar": {
+          "word": {
+            "TP": 1,
+            "TN": 5,
+            "FP": 1,
+            "FN": 5
+          },
+          "context": {
+            "TP": 3,
+            "TN": 6,
+            "FP": 0,
+            "FN": 3
+          },
+          "candidate": {
+            "TP": 3,
+            "TN": 6,
+            "FP": 0,
+            "FN": 3
+          }
+        },
+        "en": {
+          "word": {
+            "TP": 1,
+            "TN": 5,
+            "FP": 1,
+            "FN": 5
+          },
+          "context": {
+            "TP": 3,
+            "TN": 6,
+            "FP": 0,
+            "FN": 3
+          },
+          "candidate": {
+            "TP": 6,
+            "TN": 4,
+            "FP": 2,
+            "FN": 0
+          }
+        }
+      },
+      "rows": [
+        {
+          "recordId": "probe-cash-receipt-completed-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": 0.284611379576871,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-cash-receipt-completed-en",
+          "language": "en",
+          "target": "completed",
+          "score": 5.227720642707895,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-cash-receipt-non_transaction-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -1.2171785652640323,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-cash-receipt-non_transaction-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": 0.06655903022732632,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-unpriced-payment-completed-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": 3.0323719453908797,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-unpriced-payment-completed-en",
+          "language": "en",
+          "target": "completed",
+          "score": 4.4745429473527505,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-unpriced-payment-non_transaction-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -2.9840326261739736,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-unpriced-payment-non_transaction-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -1.836134488966618,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-example-context-completed-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": -0.37651078473826705,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-example-context-completed-en",
+          "language": "en",
+          "target": "completed",
+          "score": 1.3041457795676,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-example-context-non_transaction-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -0.5956163732721867,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-example-context-non_transaction-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": 0.4710046858407955,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-approval-state-completed-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": -0.6081803118131771,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-approval-state-completed-en",
+          "language": "en",
+          "target": "completed",
+          "score": 1.5023054069705977,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-approval-state-non_transaction-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -3.0451663578524775,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-approval-state-non_transaction-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -2.8472540470232115,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-message-from-friend-completed-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": 1.5705087375965463,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-message-from-friend-completed-en",
+          "language": "en",
+          "target": "completed",
+          "score": 3.748509061904269,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-message-from-friend-non_transaction-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -1.378597012301793,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-message-from-friend-non_transaction-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -1.5943446487867599,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-rejected-debit-completed-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": -0.24057096900024025,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-rejected-debit-completed-en",
+          "language": "en",
+          "target": "completed",
+          "score": 1.8295440213214182,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-rejected-debit-non_transaction-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -1.7786146946337555,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "probe-rejected-debit-non_transaction-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -0.013835255176139568,
+          "candidate": "non_transaction",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        }
+      ],
+      "uncertainNotBinaryScored": 0
+    },
+    "quoteControls": {
+      "metrics": {
+        "all": {
+          "word": {
+            "TP": 4,
+            "TN": 0,
+            "FP": 6,
+            "FN": 0
+          },
+          "context": {
+            "TP": 4,
+            "TN": 2,
+            "FP": 4,
+            "FN": 0
+          },
+          "candidate": {
+            "TP": 3,
+            "TN": 4,
+            "FP": 2,
+            "FN": 1
+          }
+        },
+        "ar": {
+          "word": {
+            "TP": 2,
+            "TN": 0,
+            "FP": 3,
+            "FN": 0
+          },
+          "context": {
+            "TP": 2,
+            "TN": 0,
+            "FP": 3,
+            "FN": 0
+          },
+          "candidate": {
+            "TP": 1,
+            "TN": 2,
+            "FP": 1,
+            "FN": 1
+          }
+        },
+        "en": {
+          "word": {
+            "TP": 2,
+            "TN": 0,
+            "FP": 3,
+            "FN": 0
+          },
+          "context": {
+            "TP": 2,
+            "TN": 2,
+            "FP": 1,
+            "FN": 0
+          },
+          "candidate": {
+            "TP": 2,
+            "TN": 2,
+            "FP": 1,
+            "FN": 0
+          }
+        }
+      },
+      "rows": [
+        {
+          "recordId": "manual-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -0.3965122966716145,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": true
+        },
+        {
+          "recordId": "manual-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": 0.9582506298124233,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "non_transaction",
+          "duplicatesManual": true
+        },
+        {
+          "recordId": "qualified-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -0.5241871418431131,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "qualified-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": -0.7063507151316494,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "note-en",
+          "language": "en",
+          "target": "non_transaction",
+          "score": -0.19401792010193253,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "note-ar",
+          "language": "ar",
+          "target": "non_transaction",
+          "score": 0.3806233881125439,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "multisentence-en",
+          "language": "en",
+          "target": "uncertain",
+          "score": 2.92014864392861,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "multisentence-ar",
+          "language": "ar",
+          "target": "uncertain",
+          "score": 0.8732449352993537,
+          "candidate": "completed",
+          "word": "non_transaction",
+          "context": "non_transaction",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "mixed-en",
+          "language": "en",
+          "target": "uncertain",
+          "score": 2.5086926679628103,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "mixed-ar",
+          "language": "ar",
+          "target": "uncertain",
+          "score": -0.6149271864714301,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "merchant-en",
+          "language": "en",
+          "target": "completed",
+          "score": 1.9467876717108064,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "merchant-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": 0.4214741070201789,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "qualified-merchant-en",
+          "language": "en",
+          "target": "completed",
+          "score": 1.9295307189701476,
+          "candidate": "completed",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        },
+        {
+          "recordId": "qualified-merchant-ar",
+          "language": "ar",
+          "target": "completed",
+          "score": -0.19573856127037292,
+          "candidate": "non_transaction",
+          "word": "completed",
+          "context": "completed",
+          "duplicatesManual": false
+        }
+      ],
+      "uncertainNotBinaryScored": 4
+    }
+  }
+}

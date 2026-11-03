@@ -1,0 +1,136 @@
+{
+  "runId": "sms_auxiliary_status_v1",
+  "sourceReportSha256": "762803fb85218df2fe66743f746ba8e7e74c12ff2ed57978861577efff860c31",
+  "newInference": false,
+  "swaps": [
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0184",
+      "kind": "regression",
+      "target": "non_transaction",
+      "control": "non_transaction",
+      "candidate": "completed"
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "quoted-example-en",
+      "kind": "regression",
+      "target": "non_transaction",
+      "control": "non_transaction",
+      "candidate": "completed"
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-non_transaction-en",
+      "kind": "regression",
+      "target": "non_transaction",
+      "control": "non_transaction",
+      "candidate": "uncertain"
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-completed-ar",
+      "kind": "fix",
+      "target": "completed",
+      "control": "non_transaction",
+      "candidate": "completed"
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "manual-en",
+      "kind": "regression",
+      "target": "non_transaction",
+      "control": "non_transaction",
+      "candidate": "completed"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-ar",
+      "kind": "fix",
+      "target": "uncertain",
+      "control": "non_transaction",
+      "candidate": "uncertain"
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-3-ar",
+      "kind": "regression",
+      "target": "non_transaction",
+      "control": "non_transaction",
+      "candidate": "uncertain"
+    }
+  ],
+  "statusVsAuxiliaryProjectionDisagreements": {
+    "oldExposedValidation": [
+      {
+        "recordId": "synthetic-v1-0106",
+        "directStatus": "non_transaction",
+        "auxiliaryProjection": "completed"
+      },
+      {
+        "recordId": "synthetic-v1-0184",
+        "directStatus": "completed",
+        "auxiliaryProjection": "non_transaction"
+      }
+    ],
+    "exposedManual": [
+      {
+        "recordId": "quoted-example-ar",
+        "directStatus": "non_transaction",
+        "auxiliaryProjection": "completed"
+      },
+      {
+        "recordId": "quoted-example-en",
+        "directStatus": "completed",
+        "auxiliaryProjection": "non_transaction"
+      },
+      {
+        "recordId": "unsettled-hold-en",
+        "directStatus": "uncertain",
+        "auxiliaryProjection": "non_transaction"
+      }
+    ],
+    "authoredProbe": [
+      {
+        "recordId": "probe-example-context-non_transaction-en",
+        "directStatus": "uncertain",
+        "auxiliaryProjection": "non_transaction"
+      },
+      {
+        "recordId": "probe-approval-state-completed-ar",
+        "directStatus": "completed",
+        "auxiliaryProjection": "non_transaction"
+      }
+    ],
+    "quoteControls": [
+      {
+        "recordId": "manual-ar",
+        "directStatus": "non_transaction",
+        "auxiliaryProjection": "completed"
+      },
+      {
+        "recordId": "manual-en",
+        "directStatus": "completed",
+        "auxiliaryProjection": "non_transaction"
+      },
+      {
+        "recordId": "qualified-ar",
+        "directStatus": "non_transaction",
+        "auxiliaryProjection": "completed"
+      }
+    ],
+    "scopeDevelopment": [
+      {
+        "recordId": "scope-v1-wage-receipt-3-en",
+        "directStatus": "uncertain",
+        "auxiliaryProjection": "non_transaction"
+      },
+      {
+        "recordId": "scope-v1-card-alert-lesson-3-en",
+        "directStatus": "uncertain",
+        "auxiliaryProjection": "non_transaction"
+      }
+    ]
+  },
+  "productionIntegrated": false
+}

@@ -1,0 +1,2515 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "assistant-authored exposed development conformance, NOT real bank SMS or independent accuracy",
+  "cases": 52,
+  "counts": {
+    "python": {
+      "passed": 52
+    },
+    "typescript": {
+      "passed": 52
+    },
+    "browser": {
+      "passed": 52
+    }
+  },
+  "coreParityMismatches": [],
+  "familyCounts": {
+    "purchase": 2,
+    "digit_scripts": 3,
+    "separators": 3,
+    "amount_roles": 3,
+    "identifiers": 1,
+    "salary": 2,
+    "refund": 2,
+    "cash": 4,
+    "bill": 2,
+    "fee": 1,
+    "currency": 2,
+    "mixed_language": 1,
+    "transfer": 2,
+    "ownership": 2,
+    "chat": 2,
+    "authorization": 2,
+    "declined": 2,
+    "pending": 2,
+    "balance_only": 2,
+    "administration": 2,
+    "example": 2,
+    "malformed": 2,
+    "outcome_uncertainty": 2,
+    "incomplete": 2,
+    "multiple_events": 2
+  },
+  "results": [
+    {
+      "id": "purchase-en",
+      "family": "purchase",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 12.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 12.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 12.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "purchase-ar",
+      "family": "purchase",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 12.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 12.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 12.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "persian-digits",
+      "family": "digit_scripts",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 12.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 12.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 12.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "whole-number",
+      "family": "digit_scripts",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 7.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 7,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 7,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "micro-payment",
+      "family": "digit_scripts",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 0.05,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 0.05,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 0.05,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 0.05,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "grouped-number",
+      "family": "separators",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 1250.375,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 1250.375,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 1250.375,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 1250.375,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "arabic-grouping",
+      "family": "separators",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 1250.375,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 1250.375,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 1250.375,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 1250.375,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "decimal-comma",
+      "family": "separators",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "currency": "EUR",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 17.5,
+          "currency": "EUR",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 17.5,
+          "currency": "EUR",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 17.5,
+          "currency": "EUR",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "balance-after",
+      "family": "amount_roles",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 8.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 8.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 8.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 8.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "balance-before",
+      "family": "amount_roles",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 8.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 8.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 8.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 8.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "balance-ar",
+      "family": "amount_roles",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 8.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 8.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 8.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 8.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "identifier-date",
+      "family": "identifiers",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 16.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 16.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 16.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 16.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "salary-en",
+      "family": "salary",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 620,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 620.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 620,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 620,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "salary-ar",
+      "family": "salary",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 620,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 620.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 620,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 620,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "refund-en",
+      "family": "refund",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 14.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 14.5,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 14.5,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 14.5,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "refund-ar",
+      "family": "refund",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 14.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 14.5,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 14.5,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 14.5,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "withdrawal-en",
+      "family": "cash",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 40,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 40.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 40,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 40,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "withdrawal-ar",
+      "family": "cash",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 40,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 40.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 40,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 40,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "deposit-en",
+      "family": "cash",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 85,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 85.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 85,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 85,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "deposit-ar",
+      "family": "cash",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 85,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 85.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 85,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 85,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "bill-en",
+      "family": "bill",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 28.375,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 28.375,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 28.375,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 28.375,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "bill-ar",
+      "family": "bill",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 19.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 19.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 19.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 19.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "fee-only",
+      "family": "fee",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 0.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 0.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 0.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 0.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "missing-currency",
+      "family": "currency",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 18.25,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 18.25,
+          "currency": "JOD",
+          "currencyResolution": "default_missing",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 18.25,
+          "currency": "JOD",
+          "currencyResolution": "default_missing",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 18.25,
+          "currency": "JOD",
+          "currencyResolution": "default_missing",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "foreign-balance",
+      "family": "currency",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 23,
+        "currency": "USD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 23.0,
+          "currency": "USD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 23,
+          "currency": "USD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 23,
+          "currency": "USD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "mixed-script",
+      "family": "mixed_language",
+      "language": "mixed",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 6.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 6.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 6.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 6.25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "p2p-out",
+      "family": "transfer",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 25,
+        "currency": "JOD",
+        "direction": "outgoing",
+        "transferRelationship": "other_person"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 25.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "other_person"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "other_person"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "other_person"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "p2p-in",
+      "family": "transfer",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 25,
+        "currency": "JOD",
+        "direction": "incoming",
+        "transferRelationship": "other_person"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 25.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "other_person"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "other_person"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "amount": 25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "other_person"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "own-transfer",
+      "family": "ownership",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "transferRelationship": "own_accounts"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "exclude",
+          "amount": 45.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "not_applicable",
+          "transferRelationship": "own_accounts"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "exclude",
+          "amount": 45,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "not_applicable",
+          "transferRelationship": "own_accounts"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "exclude",
+          "amount": 45,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "not_applicable",
+          "transferRelationship": "own_accounts"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "named-unknown-transfer",
+      "family": "ownership",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "transferRelationship": "unknown"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": 25.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "unknown"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": 25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "unknown"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": 25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "unknown"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "chat-en",
+      "family": "chat",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "chat-ar",
+      "family": "chat",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "otp-en",
+      "family": "authorization",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "otp-ar",
+      "family": "authorization",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "declined-en",
+      "family": "declined",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "declined-ar",
+      "family": "declined",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "pending-en",
+      "family": "pending",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "pending-ar",
+      "family": "pending",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "balance-only",
+      "family": "balance_only",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "balance-question",
+      "family": "balance_only",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "promo",
+      "family": "administration",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "maintenance",
+      "family": "administration",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "example-en",
+      "family": "example",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "example-ar",
+      "family": "example",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "empty",
+      "family": "malformed",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "null",
+      "family": "malformed",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "typescript": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        },
+        "browser": {
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "unknown-outcome",
+      "family": "outcome_uncertainty",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "amount": 22.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "amount": 22,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "amount": 22,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "missing-amount",
+      "family": "incomplete",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "default_missing",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "default_missing",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "default_missing",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "unknown-direction",
+      "family": "incomplete",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": 25,
+        "direction": "uncertain"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": 25.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "uncertain",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": 25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "uncertain",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": 25,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "uncertain",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "two-events",
+      "family": "multiple_events",
+      "language": "en",
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "uncertain",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "uncertain",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "uncertain",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "conflicting-outcome",
+      "family": "outcome_uncertainty",
+      "language": "ar",
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "amount": 30.0,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "amount": 30,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "amount": 30,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    },
+    {
+      "id": "two-unresolved-amounts",
+      "family": "multiple_events",
+      "language": "en",
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "outputs": {
+        "python": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "typescript": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        },
+        "browser": {
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer"
+        }
+      },
+      "mismatches": {
+        "python": {},
+        "typescript": {},
+        "browser": {}
+      }
+    }
+  ],
+  "pendingPolicyCases": [
+    {
+      "id": "fee-total",
+      "text": "Purchase JOD 10; fee JOD 0.500; total debit JOD 10.500.",
+      "question": "Choose posted total debit versus purchase-only amount and whether a separate fee event is ever emitted."
+    },
+    {
+      "id": "fx-dual",
+      "text": "Purchase USD 10; your JOD account was charged JOD 7.090.",
+      "question": "Choose account-currency posted amount versus original purchase amount; keep original pair separately if later contracted."
+    },
+    {
+      "id": "zero-signed",
+      "text": "An alert reports a zero amount or signed negative adjustment.",
+      "question": "Define zero-amount movement and signed-amount semantics before assigning truth."
+    },
+    {
+      "id": "duplicate-delivery",
+      "text": "The same bank SMS arrives twice.",
+      "question": "Define event identity and deduplication at ingestion; text alone cannot distinguish identical genuine events."
+    }
+  ],
+  "inputs": {
+    "tests/fixtures/core_money_v1.json": "ea36d5a469e07cbd80255e71b28f36bbb26ef9f864eac9d227bc56b477d1b3bb",
+    "tools/evaluation/core_money.py": "0df96d9bbcafcb0870653b4546a101556d7cbe04abb765348f89038f18b09dfc",
+    "src/python/engine.py": "cf25218f87e2ea48f1e52dafbf9748e920ef8e61169050dc69d5778ce8d6c605",
+    "src/python/detailed_assessment.py": "b590edf0b60e4defc5de81a35cb58dff07fef9631d3b24fae7cab5f9f28c03d1",
+    "src/typescript/MasroofEngine.ts": "4eea48841f21c7bb6b75734df65af37878731151e75905ec580abd60b71f5113",
+    "src/typescript/DetailedAssessment.ts": "d7f7d851d461dac2fd809483f48fba6fca4b6e5ed4b4cae3f2cab977d35c7bf4",
+    "config/contracts/transaction_evidence.json": "42d2a5c02fd4589d6a1e0fe7934d4fa18169ef5ada09949686f72e473805bc2f",
+    "tools/browser/tester.html": "70da2b9eddd0a73653e0b8009ce703db7ed24d7c0b7bedf32c30ef85e78d1f04"
+  },
+  "training": false,
+  "reservedInferred": false,
+  "independentAccuracy": false,
+  "limits": [
+    "Assistant-authored exposed conformance; expected fields are a new scope-specific evaluation subset, not human gold.",
+    "No category or party-name scoring. Existing category computation/API is unchanged.",
+    "Partial expected-field cases measure only asserted fields; zero mismatches does not prove full correctness.",
+    "All text origin is unauthenticated; no runtime can authenticate a bank from text alone."
+  ]
+}

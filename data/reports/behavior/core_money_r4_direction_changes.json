@@ -1,0 +1,12 @@
+{
+  "cases": 511,
+  "structuralFullOutputEqualities": 3066,
+  "postPolicyDetailedChangedInputIndices": [
+    196,
+    228
+  ],
+  "legacyOutputsUnchanged": true,
+  "modelArtifactsUnchanged": 23,
+  "independentAccuracy": false,
+  "reservedInferred": false
+}

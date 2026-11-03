@@ -1,0 +1,843 @@
+{
+  "runId": "sms_semantics_followup_v1",
+  "scope": "Adaptive, previously exposed synthetic development validation; authored gap filling does not establish independent accuracy",
+  "inputSha256": {
+    "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8",
+    "data/annotations/sms_semantics_v1/propagation_manifest_v1.json": "60e44bb3ca335c36c93660a7385607c8f1fdd0d2a0b0e3497e5d861127d82eac",
+    "data/annotations/sms_semantics_v1/propagation_proposal_v1.jsonl": "d8a23890e73d29ef662b909e21f7c5fc494a85d64dc12aabcf492229e383b2da",
+    "data/annotations/sms_semantics_v1/validation_review_manifest_v1.json": "a910150b95c0bbd2dddd99bed3d88338e57e04ca29de4e28d5afe7955ef223a7",
+    "data/annotations/sms_semantics_v1/validation_text_reviews_v1.jsonl": "d359154638c5e07cc570f7c1bbb52311962cf1c963c1de5cd81a19ffe30fb45e",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/reports/transactions/sms_semantics_ab_v1_cohort.json": "c54d7c82273589cc2186dbe780a0accc7f78bd4180fbe758e4806ab2fd1ee321",
+    "tests/fixtures/sms_semantics_feature_cases.json": "010b52177806212b7e124f780ebeb4eaaf513b681814d1cc1799b5ace4a66a6d",
+    "tools/evaluation/probe_sms_semantics.ts": "6abb1ce1787a329a8a8ea0d90202ac26482d817d04cf807bad7631e17bc4b1cc",
+    "src/python/research/sms_semantics.py": "0eab832392fbcf737a6f9d82102310018eaed13734c7aad977c19e177ebd5d4d",
+    "src/typescript/research/SmsSemantics.ts": "a9509ca002cb11954039ed584789ec39affb64f561177d6f85bd82ac73e43a41",
+    "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+    "training/transactions/semantics_ab.py": "194b434283aa7463a35c69a031c519e09f5de1fea3ae7a1e5fc42abf702a967a",
+    "tests/python/test_sms_semantics_model.py": "1d6b9752cd00e4963f9ae98e287733d26672a7ced8d9979f8d8468f416fcdb30",
+    "tools/node_runtime.py": "1cfaa902ac6caec4217373d4b4b7570f22d23e05f0918a3c73a543bdf1dddbb7",
+    "training/corpus_io.py": "ed29cf5682b3eb514ebc0b149e2f9d47c9fb3d3f478f6b0d692982290f7d2738",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "src/python/__init__.py": "173557702be0af8ba18e41311196952b5c4c246dedf79c4a81e97429c6c5e8d7",
+    "src/python/authorization_request.py": "fa8f7a4598e46c3e637e74d4c485029d008a0486bfb25696851e8d024b333814",
+    "src/python/detailed_assessment.py": "75201ba5fe2ea036f0c3a42eafbfe3c19858986e432a03e1f06df08f6b4bb457",
+    "src/python/engine.py": "cf25218f87e2ea48f1e52dafbf9748e920ef8e61169050dc69d5778ce8d6c605",
+    "src/python/entity_text.py": "688fcf0e4bda7dac395815589464d3f9f88f073d31b58aeadc798c83f3b98948",
+    "src/python/legacy_transaction_model.py": "911c45201bc21c1926ec4b03ef6e340376a5b292491225c0a81f7a1f97f32100",
+    "src/python/ownership_context.py": "e143759e8f9f59e0f65a501423e30519285fa2904052f0e37d6947bfd67238c4",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "src/python/service_notice.py": "92cf27f5255e9a37f53f267063ba12913638c4cc1bfbc75652c2931c6f6136d3",
+    "config/contracts/transaction_evidence.json": "806b2fe67ed517831d9ab087064a19eb643373ec7b06d0bc2374bfd6df61e773",
+    "config/contracts/entity_text.json": "a1d19d070521d50590b2ab9b1925507b936d0ffc19d85431198c4166fc1a1637",
+    "config/contracts/service_notice.json": "1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3",
+    "config/contracts/authorization_request.json": "d927714265710faf8f80a1053a1b17bfbe9a0eff56208b820295dd616f7b555b",
+    "config/contracts/transaction_behavior.json": "e06693e71398f60a220488a779902fc2d38d2ba7c19570df395fddf551e2bf4b",
+    "config/contracts/sms_coverage_batch.json": "71c55a128b71881bd05a98a13abedf4e42917bb10c4e6ee05a66c7e68ad4a99a",
+    "data/annotations/sms_coverage_v1/source_event_reviews.json": "214aa339a75eb844a16501c1485761c862e1bcfe878fed66f89987948f74bb21",
+    "data/training/authored_sms_v1/messages.jsonl": "18ca9e8b943a484ddab90b0f1536d3fed43d546b2d148a3e484591bdf02d409f",
+    "data/reports/transactions/sms_semantics_ab_v1.json": "ad8ceeb72a9cbfa369ee8e46a07e992d0a5745004141d703f9e3ba7cd3ab9706",
+    "data/annotations/sms_semantics_v1/text_reviews_v1.jsonl": "62a3bf3ea2a811064a246069b9d15aede268c5e76c628e64ee6ef7767edc2e3f",
+    "data/annotations/sms_semantics_v1/text_review_manifest_v2.json": "e4892c43990ce7184e00a68103eccf4c859fe5df39724cc475dc47992275ead9",
+    "data/annotations/businesses_200.jsonl": "81f0b434dc4b2549eedef5a1fc0bfec871bcd32f635ec10916a28fb3e74f8d13",
+    "data/training/splits/category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d",
+    "data/sources/businesses/brand_families.json": "34950f9c65e4982fa0df9af3699a3f2979e8b9d07d13251d5d34efa78ac9c66a",
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+    "tests/fixtures/sanitized_v1/qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+    "tests/fixtures/transaction_behavior_cases.json": "68b8e87d29fcc2513886d26efd37adc26934ba74c396f373acbcf78034476bc5",
+    "tests/fixtures/detailed_assessment_cases.json": "12cfd3fec7a19fe0b291074d5124f30d3e0e18299096a653cab92b48a182b13d",
+    "tests/fixtures/authorization_request_cases.json": "35eccc4e56634a1fbd8229ed175640050c5804203f0be222464ad586bdf04ace",
+    "tests/fixtures/ownership_context_cases.json": "295619af9abf4420030bdb4ec9e934d8ad049f993270a0486b9adeec24a4643d",
+    "tests/fixtures/paired_movement_cases.json": "68c01fb8fc6eb3f9699074e5978ed3fd143570bdacc3491868bc4e42ccaa9010",
+    "tests/fixtures/arabic_message_semantics_cases.json": "89262202327afe5b62c97eb6f37a17fa7d9e605e90ad393b7032acddf463d9ab",
+    "training/corpus/coverage.py": "0cba9737e1e8e109eba92431ad3d47d91a919c68aea5b2f869f2c97c1487d5da",
+    "tests/python/test_sms_coverage.py": "8cc5b1f600f1b5296979f4c9574bf25f603de8f67d4333d852abfccb3d6bc92a",
+    "src/python/research/merchant_category.py": "195b17c611acccca6f053a344c31347fa8c09940be95f1295cac88bf371beaa5",
+    "training/corpus/semantics.py": "32c5e50c4ab2506ac59f8b06075593a9bbacc7fdf1ab13ccba7b6dcc37dc85ca",
+    "training/corpus/review_semantics.py": "85ed12b2682f22a42ed9dba2cc741863c5d99665a3f3445c085497ebe37e2ff7",
+    "tools/contracts/validate_sms_semantics.py": "a68d1c2aad74d01e936f17c43859408d5c47408e9a7f76dce5340b18c993710e",
+    "config/contracts/sms_semantics_annotations.json": "843117160a7489d7f1b146dc3c07ed16fcdb853524683cdd212473143b059217",
+    "config/experiments/sms_semantics_followup_v1.json": "baf01bd0c7e38f61269355a0792878fb2a9c25a17bd5f1667422b247b49aa746",
+    "data/reports/transactions/sms_semantics_followup_v1_cohort.json": "9c91de7551e9cb65f04eeba89edef0ddd7308d2e3cd700e9dbf9da1b13a383b8",
+    "data/reports/transactions/sms_coverage_batch_v1.json": "9830e7dbfc3b4ff29cf640c8a9dcb6ac7f1009931fe71fe726969020ee31acc0",
+    "data/models/sms_semantics_ab_v1_browser_runtime.js": "c361f9f94e4757ce3518f0b6703f6ab8de26d3c0cd0508d298d8cbfb275b4890",
+    "training/transactions/semantics_followup.py": "f56be4d317f6cbb50ac230d967f34c7ea68026463d32fd9248a2f5feff070ff5",
+    "tests/python/test_sms_semantics_followup.py": "4954e98ec568ede69fbc358ef775284457ca62fd70e42329029c1414ea45a2f7"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  },
+  "fitCalls": 2,
+  "trainingSupport": {
+    "completion": {
+      "rows": 1014,
+      "targets": {
+        "non_transaction": 465,
+        "completed": 549
+      },
+      "weightGroups": 101,
+      "totalWeight": 101.0,
+      "originalRows": 944,
+      "authoredRows": 70
+    },
+    "direction": {
+      "rows": 371,
+      "targets": {
+        "incoming": 218,
+        "outgoing": 153
+      },
+      "weightGroups": 38,
+      "totalWeight": 38.0,
+      "originalRows": 321,
+      "authoredRows": 50
+    }
+  },
+  "validationSupport": {
+    "completion": 18,
+    "direction": 4
+  },
+  "exportParity": {
+    "textsPerArm": 1037,
+    "arms": 1,
+    "headsPerArm": 2,
+    "typescriptAndBrowser": true,
+    "maximumScoreGap": 0.0,
+    "browserSourceSha256": {
+      "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+      "src/typescript/research/SmsSemantics.ts": "a9509ca002cb11954039ed584789ec39affb64f561177d6f85bd82ac73e43a41",
+      "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8"
+    },
+    "scope": "Actual stripped browser-compatible source in Node VM; no interactive UI or Hermes claim"
+  },
+  "candidate": {
+    "heads": {
+      "completion": {
+        "raw": {
+          "count": 18,
+          "truePositive": 4,
+          "trueNegative": 14,
+          "falsePositive": 0,
+          "falseNegative": 0,
+          "correct": 18
+        },
+        "scriptSlices": {
+          "arabic": {
+            "count": 4,
+            "truePositive": 0,
+            "trueNegative": 4,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "correct": 4
+          },
+          "english": {
+            "count": 8,
+            "truePositive": 2,
+            "trueNegative": 6,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "correct": 8
+          },
+          "mixed": {
+            "count": 6,
+            "truePositive": 2,
+            "trueNegative": 4,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "correct": 6
+          },
+          "arabicContaining": {
+            "count": 10,
+            "truePositive": 2,
+            "trueNegative": 8,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "correct": 10
+          }
+        },
+        "byExpression": {
+          "literal-L731-C8": {
+            "recordId": "synthetic-v1-0053",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -1.9042325083365992,
+            "script": "arabic"
+          },
+          "literal-L605-C12": {
+            "recordId": "synthetic-v1-0140",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -2.1654438448941984,
+            "script": "mixed"
+          },
+          "literal-L712-C12": {
+            "recordId": "synthetic-v1-0038",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -1.541384406194911,
+            "script": "arabic"
+          },
+          "literal-L286-C15": {
+            "recordId": "synthetic-v1-1554",
+            "target": "completed",
+            "prediction": "completed",
+            "score": 2.1433023412474457,
+            "script": "english"
+          },
+          "literal-L742-C8": {
+            "recordId": "synthetic-v1-0106",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -3.2925132589112684,
+            "script": "english"
+          },
+          "literal-L683-C12": {
+            "recordId": "synthetic-v1-1398",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -0.8498330886306268,
+            "script": "mixed"
+          },
+          "literal-L448-C15": {
+            "recordId": "synthetic-v1-0750",
+            "target": "completed",
+            "prediction": "completed",
+            "score": 2.547722875261604,
+            "script": "mixed"
+          },
+          "literal-L599-C12": {
+            "recordId": "synthetic-v1-1107",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -2.44861077490311,
+            "script": "english"
+          },
+          "literal-L168-C15": {
+            "recordId": "synthetic-v1-1665",
+            "target": "completed",
+            "prediction": "completed",
+            "score": 1.4934142684346072,
+            "script": "english"
+          },
+          "literal-L600-C12": {
+            "recordId": "synthetic-v1-1548",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -2.602265793075257,
+            "script": "mixed"
+          },
+          "literal-L337-C15": {
+            "recordId": "synthetic-v1-1302",
+            "target": "completed",
+            "prediction": "completed",
+            "score": 3.603099618948262,
+            "script": "mixed"
+          },
+          "literal-L726-C8": {
+            "recordId": "synthetic-v1-1914",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -1.3832193077830914,
+            "script": "arabic"
+          },
+          "literal-L679-C12": {
+            "recordId": "synthetic-v1-0334",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -1.2484778847512943,
+            "script": "english"
+          },
+          "literal-L734-C8": {
+            "recordId": "synthetic-v1-0289",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -2.961914857108052,
+            "script": "english"
+          },
+          "literal-L738-C8": {
+            "recordId": "synthetic-v1-0184",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -2.6068653267614907,
+            "script": "english"
+          },
+          "literal-L704-C12": {
+            "recordId": "synthetic-v1-0174",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -1.599445981227967,
+            "script": "english"
+          },
+          "literal-L652-C12": {
+            "recordId": "synthetic-v1-1881",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -1.2162879912239017,
+            "script": "mixed"
+          },
+          "literal-L681-C12": {
+            "recordId": "synthetic-v1-0806",
+            "target": "non_transaction",
+            "prediction": "non_transaction",
+            "score": -1.1237852865537377,
+            "script": "arabic"
+          }
+        }
+      },
+      "direction": {
+        "raw": {
+          "count": 4,
+          "truePositive": 2,
+          "trueNegative": 2,
+          "falsePositive": 0,
+          "falseNegative": 0,
+          "correct": 4
+        },
+        "scriptSlices": {
+          "arabic": {
+            "count": 0,
+            "truePositive": 0,
+            "trueNegative": 0,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "correct": 0
+          },
+          "english": {
+            "count": 2,
+            "truePositive": 1,
+            "trueNegative": 1,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "correct": 2
+          },
+          "mixed": {
+            "count": 2,
+            "truePositive": 1,
+            "trueNegative": 1,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "correct": 2
+          },
+          "arabicContaining": {
+            "count": 2,
+            "truePositive": 1,
+            "trueNegative": 1,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "correct": 2
+          }
+        },
+        "byExpression": {
+          "literal-L286-C15": {
+            "recordId": "synthetic-v1-1554",
+            "target": "outgoing",
+            "prediction": "outgoing",
+            "score": -0.7291573529372205,
+            "script": "english"
+          },
+          "literal-L448-C15": {
+            "recordId": "synthetic-v1-0750",
+            "target": "outgoing",
+            "prediction": "outgoing",
+            "score": -0.3967386484254552,
+            "script": "mixed"
+          },
+          "literal-L168-C15": {
+            "recordId": "synthetic-v1-1665",
+            "target": "incoming",
+            "prediction": "incoming",
+            "score": 1.5430956985377164,
+            "script": "english"
+          },
+          "literal-L337-C15": {
+            "recordId": "synthetic-v1-1302",
+            "target": "incoming",
+            "prediction": "incoming",
+            "score": 0.6001701603463995,
+            "script": "mixed"
+          }
+        }
+      }
+    },
+    "jointCompletedAndCorrectDirection": {
+      "correct": 4,
+      "count": 4
+    },
+    "candidateBytes": 30772,
+    "fitAudit": {
+      "completion": {
+        "iterations": 5,
+        "featureCount": 405,
+        "maximumSklearnExportScoreGap": 1.3322676295501878e-15
+      },
+      "direction": {
+        "iterations": 4,
+        "featureCount": 166,
+        "maximumSklearnExportScoreGap": 4.440892098500626e-16
+      }
+    }
+  },
+  "comparisonToPriorWord": {
+    "completion": {
+      "before": {
+        "count": 18,
+        "truePositive": 4,
+        "trueNegative": 14,
+        "falsePositive": 0,
+        "falseNegative": 0,
+        "correct": 18
+      },
+      "after": {
+        "count": 18,
+        "truePositive": 4,
+        "trueNegative": 14,
+        "falsePositive": 0,
+        "falseNegative": 0,
+        "correct": 18
+      },
+      "changedPredictions": []
+    },
+    "direction": {
+      "before": {
+        "count": 4,
+        "truePositive": 2,
+        "trueNegative": 1,
+        "falsePositive": 1,
+        "falseNegative": 0,
+        "correct": 3
+      },
+      "after": {
+        "count": 4,
+        "truePositive": 2,
+        "trueNegative": 2,
+        "falsePositive": 0,
+        "falseNegative": 0,
+        "correct": 4
+      },
+      "changedPredictions": [
+        {
+          "expression": "literal-L448-C15",
+          "recordId": "synthetic-v1-0750",
+          "target": "outgoing",
+          "previousPrediction": "incoming",
+          "currentPrediction": "outgoing"
+        }
+      ]
+    }
+  },
+  "unchangedStructuralBaseline": {
+    "scope": "Unchanged active detailed assessment, reported separately; candidates are not wired into its guards",
+    "trackingCounts": {
+      "exclude": 12,
+      "review": 4,
+      "include": 2
+    },
+    "fullyMatchingWeakReviews": 13,
+    "rows": [
+      {
+        "recordId": "synthetic-v1-0053",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "balance_only"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0140",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "otp_or_authorization"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0038",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1554",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "reasonCodes": [
+            "completed_transaction",
+            "transfer_ownership_unresolved"
+          ],
+          "amount": 8.396,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "unknown",
+          "merchantOrCounterparty": "Reflect account 7019 to ECJM LGLTEQ BCHHKF",
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "recordId": "synthetic-v1-0106",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1398",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "promotion_or_administration"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0750",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "reasonCodes": [
+            "category_unresolved",
+            "completed_transaction"
+          ],
+          "amount": 27.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer",
+          "merchantOrCounterparty": "صراف آلي بنك القاهرة عمان",
+          "expenseCategory": null,
+          "categoryStatus": "uncertain"
+        },
+        "mismatchFields": [
+          "merchantOrCounterparty",
+          "expenseCategory",
+          "categoryStatus"
+        ]
+      },
+      {
+        "recordId": "synthetic-v1-1107",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1665",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "reasonCodes": [
+            "completed_transaction"
+          ],
+          "amount": 68.821,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1548",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "otp_or_authorization"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1302",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "reasonCodes": [
+            "completed_transaction",
+            "transfer_ownership_unresolved"
+          ],
+          "amount": 87.815,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "unknown",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "recordId": "synthetic-v1-1914",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0334",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0289",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "reasonCodes": [
+            "amount_unresolved",
+            "completion_unresolved",
+            "direction_unresolved"
+          ],
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "default_missing",
+          "direction": "uncertain",
+          "transferRelationship": "not_transfer",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": [
+          "transactionStatus",
+          "trackingDecision",
+          "currency",
+          "currencyResolution",
+          "direction",
+          "transferRelationship"
+        ]
+      },
+      {
+        "recordId": "synthetic-v1-0184",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "reasonCodes": [
+            "amount_unresolved",
+            "completion_unresolved",
+            "direction_unresolved"
+          ],
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "default_missing",
+          "direction": "uncertain",
+          "transferRelationship": "not_transfer",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": [
+          "transactionStatus",
+          "trackingDecision",
+          "currency",
+          "currencyResolution",
+          "direction",
+          "transferRelationship"
+        ]
+      },
+      {
+        "recordId": "synthetic-v1-0174",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1881",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "declined_or_failed"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0806",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "promotion_or_administration"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      }
+    ]
+  },
+  "outputSha256": {
+    "data/models/sms_semantics_followup_v1_word_candidate.json": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121"
+  },
+  "productionIntegrated": false,
+  "canonicalAdmissionFlagsChanged": false,
+  "reservedMerchantFinalInferred": false,
+  "limits": [
+    "Adaptive gap filling was informed by an exposed development failure; these scores cannot establish independent accuracy.",
+    "Only 18 weak validation representatives, four completed; authored messages are not verified bank formats or genuine received SMS.",
+    "Unknown ownership and uncertain settlement are not learned by these binary heads. No guard integration or promotion.",
+    "The structural baseline is copied unchanged from the hash-bound prior run, whose source/model inputs are verified unchanged.",
+    "The frozen 226-case active-engine check is separate; neither the candidate nor authored data replaces it."
+  ]
+}

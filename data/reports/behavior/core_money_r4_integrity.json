@@ -1,0 +1,17 @@
+{
+  "coreInputs": 511,
+  "coreAndLegacyFullOutputs": 3066,
+  "ownershipRequests": 70,
+  "ownershipFullOutputs": 210,
+  "allBeforeAfterEqual": true,
+  "allDetailedThreeRuntimeEqual": true,
+  "modelFilesUnchanged": 23,
+  "training": false,
+  "reservedInferred": false,
+  "snapshots": {
+    "after.json": "616b3e7b763fe223df9b50013dbd4d76781d895f3066b8e55266fa197330fca3",
+    "before.json": "616b3e7b763fe223df9b50013dbd4d76781d895f3066b8e55266fa197330fca3",
+    "ownership_after.json": "c94ba99c8cd0199ff728cddc38ce1ba915260f24b4d22d07b5308a66c888b75e",
+    "ownership_before.json": "c94ba99c8cd0199ff728cddc38ce1ba915260f24b4d22d07b5308a66c888b75e"
+  }
+}

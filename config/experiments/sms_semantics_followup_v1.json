@@ -1,0 +1,21 @@
+{
+  "runId": "sms_semantics_followup_v1",
+  "ownerApproval": "2026-10-27 go: one word-only follow-up using the prepared batch and unchanged validation",
+  "arm": "word",
+  "fitCalls": 2,
+  "featureAndSolverContract": "config/contracts/sms_semantics_model.json",
+  "frozenInputs": {
+    "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8",
+    "data/reports/transactions/sms_semantics_ab_v1.json": "ad8ceeb72a9cbfa369ee8e46a07e992d0a5745004141d703f9e3ba7cd3ab9706",
+    "data/reports/transactions/sms_semantics_ab_v1_cohort.json": "c54d7c82273589cc2186dbe780a0accc7f78bd4180fbe758e4806ab2fd1ee321",
+    "data/models/sms_semantics_ab_v1_browser_runtime.js": "c361f9f94e4757ce3518f0b6703f6ab8de26d3c0cd0508d298d8cbfb275b4890",
+    "data/training/authored_sms_v1/messages.jsonl": "18ca9e8b943a484ddab90b0f1536d3fed43d546b2d148a3e484591bdf02d409f",
+    "data/reports/transactions/sms_coverage_batch_v1.json": "9830e7dbfc3b4ff29cf640c8a9dcb6ac7f1009931fe71fe726969020ee31acc0"
+  },
+  "trainingCounts": {"completion": {"completed": 549, "non_transaction": 465}, "direction": {"incoming": 218, "outgoing": 153}},
+  "validationCounts": {"completion": 18, "direction": 4},
+  "weighting": "Original expression total one/head; each new bilingual authoring group total one/head, one half per counterpart",
+  "excluded": "Four new uncertain-completion records from completion; own-account not-applicable and unresolved directions from direction. Preserve all old excluded/blocked rows.",
+  "evaluationStatus": "Adaptive, previously exposed synthetic development validation; authored gap filling does not establish independent accuracy",
+  "constraints": ["Exactly two fits and no threshold/feature/parameter search", "Reuse frozen research feature math/export/browser source and solver settings", "Do not change source eligibility flags, prior artifacts, active model, tester or mobile app", "No new augmentation, category/ownership/BIO fitting, reserved final inference, promotion or publication"]
+}

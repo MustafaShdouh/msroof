@@ -4,7 +4,9 @@ import { isAuthorizationRequest, AUTHORIZATION_REQUEST_REASON } from './Authoriz
 import { scoreLegacyTransactionModel } from './LegacyTransactionModel.ts';
 import { EntityText } from './EntityText.ts';
 import { assess } from './DetailedAssessment.ts';
-import type { DetailedInput, DetailedResult } from './DetailedAssessment.ts';
+import type { DetailedInput, DetailedResult, OwnershipOverride } from './DetailedAssessment.ts';
+import { assessWithOwnership } from './OwnershipContext.ts';
+import type { OwnershipRequest, OwnershipResponse } from './OwnershipContext.ts';
 
 /**
  * Masroof Financial Transaction Engine (React Native / TypeScript)
@@ -471,6 +473,14 @@ export class MasroofEngine {
    * Analyzes an incoming SMS payload from Apple Shortcuts
    */
   public static analyzeDetailed(input: DetailedInput): DetailedResult {
+    return this.assessDetailed(input);
+  }
+
+  public static analyzeWithOwnership(request: OwnershipRequest): OwnershipResponse {
+    return assessWithOwnership(request, (input, override) => this.assessDetailed(input, override));
+  }
+
+  private static assessDetailed(input: DetailedInput, override?: OwnershipOverride): DetailedResult {
     return assess(input,
       (body, type) => this.extractEntities(body, type, 'JOD', false),
       value => this.parseNumber(value),
@@ -478,7 +488,7 @@ export class MasroofEngine {
         if (!this.model) return false;
         scoreLegacyTransactionModel(this.model, this.tokenize(this.preprocess(text)), this.MODEL_SCORE_BUFFER);
         return this.MODEL_SCORE_BUFFER[0] >= 0.70;
-      });
+      }, override);
   }
 
   public static analyze(input: MasroofInput): MasroofResult {

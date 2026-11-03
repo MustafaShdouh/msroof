@@ -1,0 +1,34 @@
+# Existing development fold only; weak assistant labels, not training or independent gold.
+# id|context F/P/Q/I/U|event C/N/U|context evidence|event evidence|review note
+scope-v1-gift-wallet-1-ar|F|C|سجل المحفظة:|قيدت هدية|Final available gift credit is reported.
+scope-v1-gift-wallet-1-en|F|C|Wallet ledger:|has been booked as a final credit|Gift credited, not personal claim.
+scope-v1-gift-wallet-2-ar|P|C|مرحبا، أنا خالتك.|حولتلك العيدية|Personal relative claims completed send; no bank receipt.
+scope-v1-gift-wallet-2-en|P|C|Hi, it is your aunt.|I sent your gift|Completed event described in personal conversation.
+scope-v1-gift-wallet-3-ar|Q|U|رسالة عائلية:|ابعتلي رقم المحفظة عشان أحول الهدية.|Request with intended future transfer but no outcome.
+scope-v1-gift-wallet-3-en|Q|U|Family message:|so I can transfer the gift.|Requested wallet identifier for intended transfer, not asserted execution.
+scope-v1-gift-wallet-4-ar|F|U|استعلام عن إضافة الهدية:|نتيجة القيد غير مذكورة.|Request closure is not final money posting.
+scope-v1-gift-wallet-4-en|F|U|Gift credit inquiry:|its posting outcome is unspecified.|Closure does not establish credited money.
+scope-v1-wage-receipt-1-ar|F|C|إشعار إضافة أجر:|قيد أجر العمل في حسابك|Withdrawable work pay is explicitly booked.
+scope-v1-wage-receipt-1-en|F|C|Wage credit notice:|was booked to your account|Posted withdrawable wage.
+scope-v1-wage-receipt-2-ar|Q|U|محادثة مع زميل:|شيكت إذا الأجر نزل ولا بعده؟|Question about arrival does not assert its outcome.
+scope-v1-wage-receipt-2-en|Q|U|Conversation with a colleague:|whether the wage arrived yet?|Only asks whether wage arrived.
+scope-v1-wage-receipt-3-ar|Q|U|طلب من المحاسب:|ابعث تأكيد استلام الأجر|Request for confirmation after checking, not an independent posting statement.
+scope-v1-wage-receipt-3-en|Q|U|Request from the accountant:|Send confirmation of receiving the wage|Receipt-confirmation request does not assert bank credit.
+scope-v1-wage-receipt-4-ar|F|U|تقرير صرف الأجر:|دون تأكيد حصول القيد أو فشله.|Processing file is not a known posting outcome.
+scope-v1-wage-receipt-4-en|F|U|Wage distribution report:|without confirmation of posting or failure.|Processing and money credit remain separate.
+scope-v1-tuition-status-1-ar|F|C|تحديث سداد الدراسة:|اكتمل سداد الدفعة الدراسية|Payment complete and final debit recorded.
+scope-v1-tuition-status-1-en|F|C|Tuition payment update:|payment completed|Completed tuition debit.
+scope-v1-tuition-status-2-ar|F|N|تحديث سداد الدراسة:|لم تقتطع من الحساب.|Pending approval with explicit no deduction.
+scope-v1-tuition-status-2-en|F|N|Tuition payment update:|has not been taken from the account.|No debit yet, not unknown outcome.
+scope-v1-tuition-status-3-ar|F|N|تحديث سداد الدراسة:|رفض السداد ولم ينشأ عنه أي خصم.|Explicit refused payment.
+scope-v1-tuition-status-3-en|F|N|Tuition payment update:|payment was refused and produced no debit.|Refusal and no debit.
+scope-v1-tuition-status-4-ar|F|U|تحديث سداد الدراسة:|قد تكون الدفعة نفذت أو بقيت معلقة.|Result retrieval failed; neither success nor pending is confirmed.
+scope-v1-tuition-status-4-en|F|U|Tuition payment update:|payment may have executed or remained pending.|Timeout leaves outcome uncertain.
+scope-v1-card-alert-lesson-1-ar|F|C|نتيجة مشتريات البطاقة:|قيدت مديناً على البطاقة.|Card purchase posted as debit.
+scope-v1-card-alert-lesson-1-en|F|C|Card purchase result:|booked as a debit on the card.|Completed card debit.
+scope-v1-card-alert-lesson-2-ar|I|C|اختبار فهم لغوي، اقرأ العبارة فقط:|دفعت قيمة المشتريات وقيدت مديناً على البطاقة.|Completed payment is inside a comprehension exercise.
+scope-v1-card-alert-lesson-2-en|I|C|Language comprehension exercise, read this sentence only:|The purchase value was paid and booked as a debit on the card.|Quoted completed event, not a real account notification.
+scope-v1-card-alert-lesson-3-ar|I|U|ملاحظة محرر الدرس:|كل إشعارات الخصم في هذه الصفحة مختلقة|The lesson declares unspecified notices fictional; no particular sample outcome clause is supplied.
+scope-v1-card-alert-lesson-3-en|I|U|Lesson editor's note:|All debit notices on this page are invented|Generic fictional debit notices, not a particular asserted sample payment outcome.
+scope-v1-card-alert-lesson-4-ar|U|U|بداية الرسالة مفقودة|فلا نعرف هل السطر المتبقي اقتباس تعليمي أم حركة فعلية.|Source explicitly withholds governing frame and supplies no resolved event outcome.
+scope-v1-card-alert-lesson-4-en|U|U|The message opening is missing|remaining line could be a teaching quote or actual activity.|Explicitly unresolved frame and event, not an annotator guess.

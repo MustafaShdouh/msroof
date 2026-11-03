@@ -1,0 +1,245 @@
+{
+  "version": "1.0.0",
+  "scope": "Readiness audit of existing exposed development evidence; no independent accuracy claim",
+  "inputSha256": {
+    "tests/fixtures/transaction_behavior_cases.json": "68b8e87d29fcc2513886d26efd37adc26934ba74c396f373acbcf78034476bc5",
+    "tests/fixtures/detailed_assessment_cases.json": "12cfd3fec7a19fe0b291074d5124f30d3e0e18299096a653cab92b48a182b13d",
+    "tests/fixtures/authorization_request_cases.json": "35eccc4e56634a1fbd8229ed175640050c5804203f0be222464ad586bdf04ace",
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+    "tests/fixtures/sanitized_v1/qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "config/contracts/transaction_behavior.json": "e06693e71398f60a220488a779902fc2d38d2ba7c19570df395fddf551e2bf4b",
+    "src/python/engine.py": "cf25218f87e2ea48f1e52dafbf9748e920ef8e61169050dc69d5778ce8d6c605",
+    "src/python/detailed_assessment.py": "75201ba5fe2ea036f0c3a42eafbfe3c19858986e432a03e1f06df08f6b4bb457",
+    "src/python/entity_text.py": "688fcf0e4bda7dac395815589464d3f9f88f073d31b58aeadc798c83f3b98948",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "src/python/authorization_request.py": "fa8f7a4598e46c3e637e74d4c485029d008a0486bfb25696851e8d024b333814",
+    "src/python/service_notice.py": "92cf27f5255e9a37f53f267063ba12913638c4cc1bfbc75652c2931c6f6136d3",
+    "src/python/legacy_transaction_model.py": "911c45201bc21c1926ec4b03ef6e340376a5b292491225c0a81f7a1f97f32100",
+    "tools/evaluation/probe_detailed.ts": "4f585c431403304082928be0e7258f09ec1350dd1fd62bdaa5ad1865d72430e9",
+    "tools/browser/tester.html": "2d1f37b9efd3dd677da8cce7de0069f582b205a6847cf2d18c882bb973db6060",
+    "tools/browser/build_tester_ui.py": "73238f77e1ebc9b26363eae0dcf859d3b9017d4ffa719fe3589c872211c63991",
+    "tools/browser/bundle_engine.mjs": "45284623bfeed0f4905c71faa139aa588d3405acb75deebdef3e9c5ec53369c3",
+    "tools/contracts/validate_transaction_behavior.py": "a915648f5132394f522947d4dfba94113a78b37ac0314e8fc3fe06274b8e9af2",
+    "training/corpus_io.py": "ed29cf5682b3eb514ebc0b149e2f9d47c9fb3d3f478f6b0d692982290f7d2738",
+    "training/evaluation/behavior.py": "c071aa5854f9cf088c673e989bad28caa1244a441726710deea844cf65ed934f",
+    "training/evaluation/detailed.py": "028676a4fdc16fdc18a901c9f91e60b63a2c8b806bb3816ce5c1e2c968e0c0de",
+    "tools/node_runtime.py": "1cfaa902ac6caec4217373d4b4b7570f22d23e05f0918a3c73a543bdf1dddbb7",
+    "tools/browser/tester.css": "efca56e709aa2e5b8e9fd528d7cb9e370c71a97c726fd86da4e8e51cbecb3ab6",
+    "src/typescript/MasroofEngine.ts": "4eea48841f21c7bb6b75734df65af37878731151e75905ec580abd60b71f5113",
+    "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+    "src/typescript/ServiceNotice.ts": "a6e9976cd5f62e18d926260a2681cac6c0834ab317eeeb33df609d7bf8c907c5",
+    "config/contracts/service_notice.json": "1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3",
+    "src/typescript/AuthorizationRequest.ts": "0c45b2b8c327e53576495a3a7b2fa0ec3b7757197eb6fd0cab9571a212b281c2",
+    "config/contracts/authorization_request.json": "d927714265710faf8f80a1053a1b17bfbe9a0eff56208b820295dd616f7b555b",
+    "src/typescript/LegacyTransactionModel.ts": "5f060dd375f4a3f568971282339c0c389fdaeb54951ffa80f83642193a7d0f59",
+    "src/typescript/EntityText.ts": "99fdd47bce69d1df5096ab9533158fbf525cd471b36caaa9ce7026b4c355dc7e",
+    "src/typescript/DetailedAssessment.ts": "847a5cc6e2af6e3c8b41d9e3a5d53fa5579cf7fb9f40bb07bb5f26ec218c95a2",
+    "config/contracts/transaction_evidence.json": "806b2fe67ed517831d9ab087064a19eb643373ec7b06d0bc2374bfd6df61e773",
+    "src/typescript/OwnershipContext.ts": "c45f4ade087828389a7ef1425f07d2d1abfd72334215815c39b6b753fd0b95a4",
+    "config/contracts/ownership_context.json": "faeabebe5f6c15a6cb855077dd68ab907db713b9c3ddaaf14c7f66c296905914",
+    "data/reports/behavior/ownership_tester_v1.json": "db49dc8c682b84add04a676a216d55e302bcee3b03fc632335d2c8dd27abee2e",
+    "tests/fixtures/ownership_context_cases.json": "295619af9abf4420030bdb4ec9e934d8ad049f993270a0486b9adeec24a4643d",
+    "tests/fixtures/paired_movement_cases.json": "68c01fb8fc6eb3f9699074e5978ed3fd143570bdacc3491868bc4e42ccaa9010",
+    "src/python/ownership_context.py": "e143759e8f9f59e0f65a501423e30519285fa2904052f0e37d6947bfd67238c4",
+    "tools/contracts/validate_ownership_context.py": "6c8948979a46214531c33c3250b875d547f0b27ab5c1b2ab3366358b8d52b635",
+    "tests/python/test_ownership_context.py": "991923a4d72ba78a480dca9b8a466f3a53943a2e2d2f26ab09b23b6a92b18f8d",
+    "training/evaluation/ownership.py": "0876f3856938c9d1d81c77cead79a5a9900222dbb64793b1ce69012c547af3a4",
+    "tools/browser/ownership_tester.js": "90feeb20fbeccb75f395e044ef5fc8460bd1aa709f4a6383f92c3d690b0e6d65",
+    "tests/typescript/test_ownership_tester.ts": "2234f6304878b3e4a1fe7ec2d71cd1e88f8c88b5c2af9e1a9f696f9bdc4f07cd",
+    "tests/fixtures/arabic_message_semantics_cases.json": "89262202327afe5b62c97eb6f37a17fa7d9e605e90ad393b7032acddf463d9ab",
+    "training/evaluation/paired.py": "6e5ceb2d0900f0f0f93c0ad1271a83ec05c4a7543c370015b31b997a918c97a6",
+    "tests/python/test_paired_movement.py": "2fac8e3b2f08d44d0cd7b2945f327e1fee5c0b208ce60afcef63fcd322a7efbd",
+    "tools/browser/presets.json": "d9fa497e8dd4627cd4fc83f30749f31aa6f07e1d0858143162d94c50808266b3",
+    "data/reports/behavior/paired_movement_v1.json": "9d640d4754f1be0051e2f079e2fcb912b7e5afe12da2677a0d9a16842b7246ce",
+    "training/evaluation/arabic_semantics.py": "27b830b66e1304b09b2317bf75bdd3ddefb046cd85376fdd9ac08eb71f7af119",
+    "tests/python/test_arabic_message_semantics.py": "d780f79c00082a4b922662fee2071fbe9bbd18bf802b9d41935787a82a063c99",
+    "data/reports/behavior/arabic_message_semantics_v1.json": "6068fae3be42f7c75e88ee0e3be928e15326551751c66d7e2ff2630caec2703c",
+    "data/reports/merchant_category_research_jordan_data_v3.json": "19e9746de51665558181251f3890e1ec527fc53c38882642b4e688002a4c769f",
+    "data/reports/bio/context_labels_v2_context_v1_evaluation.json": "b58973e5324f4e597db2e36f5856bd4ac83df169aa270eb889f57d22e4407ade",
+    "data/reports/transaction_direction_jordan_sanitized_v1_evaluation.json": "b2366563182485ecb14f94f4eb2dc1f966e5db8035b184ad9f8ec9ca021a82a1",
+    "data/reports/behavior/jordan_sanitized_v1_final_comparison.json": "ecb6e7e0b58fd3bedd944881358ded69fad1cbdbcfa67ab68f5d9d676c5c74ed",
+    "data/reports/behavior/jordan_sanitized_liblinear_v1_final_comparison.json": "d347f92ce7f5ac66e4aa5c3a70c0710b27e0e01bc248d6236de7436bd0372aa1",
+    "data/annotations/category_labels.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/training/splits/transaction_direction_sanitized_v1.json": "512af5213d2c34ab3f6f8a501163e261102e3dbf5e7cf52d0439735b204a4668",
+    "data/reports/category_evaluation_readiness.json": "1fb44986346322e96f92ef981c23219b5f06bd3eca7771159d4e088610bfac58",
+    "data/annotations/CATEGORY_LABELING.md": "38b5b91466e1a59c8390a9d355052612ff35f2748ff7e50c77157bc0454861e3",
+    "training/evaluation/readiness.py": "d659efe6b55b82d41505081ba2c0c16f8afa1e7827be483502c50ea609f16ea8"
+  },
+  "modelFitted": false,
+  "activeModelChanged": false,
+  "reservedMerchantFinalTestInferred": false,
+  "corpus": {
+    "records": 2120,
+    "originCounts": {
+      "synthetic_privacy_transformation_of_legacy_generator": 2120
+    },
+    "labelOriginCounts": {
+      "legacy_generator_not_human_gold": 2120
+    },
+    "legacyLabelCounts": {
+      "PROMO": 120,
+      "TRANSACTION_CREDIT": 375,
+      "OTP": 240,
+      "TRANSACTION_DEBIT": 755,
+      "CHAT_NOISE": 350,
+      "ANNOUNCEMENT": 160,
+      "DECLINED": 120
+    },
+    "canonicalNamedTargetPresence": {
+      "transactionStatus": 0,
+      "trackingDecision": 0,
+      "transferRelationship": 0,
+      "direction": 0,
+      "expenseCategory": 0
+    },
+    "legacyExtractionTargetPresence": {
+      "expected_amount": 2120,
+      "expected_currency": 2120,
+      "expected_merchant": 2120,
+      "type": 2120
+    },
+    "folds": {
+      "train": {
+        "records": 1702,
+        "sourceExpressions": 80
+      },
+      "validation": {
+        "records": 418,
+        "sourceExpressions": 22
+      }
+    },
+    "interpretation": "Legacy class/type/expected fields provide weak targets; absent canonical names do not mean zero usable supervision. They do not establish ownership or purpose."
+  },
+  "publicDevelopmentDiagnostic": {
+    "records": 389,
+    "decisions": {
+      "include": 138,
+      "exclude": 129,
+      "review": 122
+    },
+    "overlappingReviewReasons": {
+      "completed_transaction": 79,
+      "transfer_ownership_unresolved": 68,
+      "amount_unresolved": 25,
+      "direction_unresolved": 33,
+      "completion_unresolved": 43,
+      "own_account_transfer": 2
+    },
+    "includedOutgoing": 120,
+    "assignedPurpose": 15,
+    "categoryPredictions": {
+      "Food": 7,
+      "Groceries": 1,
+      "<uncertain>": 105,
+      "Other": 1,
+      "Water and Electricity": 2,
+      "Cash Withdrawals": 4
+    },
+    "conditionalAssignmentRate": 0.125,
+    "interpretation": "Output coverage among accepted outgoing controls, not accuracy or all-eligible coverage; records are not independent samples."
+  },
+  "candidates": {
+    "transactionComparisons": [
+      {
+        "report": "data/reports/behavior/jordan_sanitized_v1_final_comparison.json",
+        "validationCases": 418,
+        "falsePositives": 0,
+        "falseNegatives": 45,
+        "missedSourceExpressions": {
+          "literal-L566-C15": 45
+        },
+        "frozenFalseNegatives": 20,
+        "promotionAllowed": false
+      },
+      {
+        "report": "data/reports/behavior/jordan_sanitized_liblinear_v1_final_comparison.json",
+        "validationCases": 418,
+        "falsePositives": 0,
+        "falseNegatives": 45,
+        "missedSourceExpressions": {
+          "literal-L566-C15": 45
+        },
+        "frozenFalseNegatives": 20,
+        "promotionAllowed": false
+      }
+    ],
+    "rawDirection": {
+      "accuracy": 0.46511627906976744,
+      "correct": 100,
+      "expenseAsIncome": 70,
+      "expenseCorrect": 80,
+      "incomeAsExpense": 45,
+      "incomeCorrect": 20,
+      "incomePredicted": 90,
+      "incomeTrue": 65,
+      "total": 215
+    },
+    "bioValidationCount": 16,
+    "bioCompleteFields": {
+      "count": 13,
+      "total": 16,
+      "rate": 0.8125
+    },
+    "wordCompleteFields": {
+      "count": 0,
+      "total": 16,
+      "rate": 0.0
+    },
+    "regexCompleteFields": {
+      "count": 16,
+      "total": 16,
+      "rate": 1.0
+    }
+  },
+  "purposeData": {
+    "transactionLabelRecords": 0,
+    "merchantTrainingBusinesses": 166,
+    "humanMerchantValidation": {
+      "abstained": 3,
+      "accuracyAmongAnswered": 1.0,
+      "answered": 2,
+      "businessCount": 5,
+      "correctAnswered": 2,
+      "correctIncludingAbstentionsAsMisses": 0.4,
+      "coverage": 0.4,
+      "top1AccuracyBeforeAbstention": 0.6,
+      "top1Confusion": [
+        {
+          "count": 2,
+          "expected": "Food",
+          "predicted": "Food"
+        },
+        {
+          "count": 1,
+          "expected": "Groceries",
+          "predicted": "Groceries"
+        },
+        {
+          "count": 1,
+          "expected": "Transportation",
+          "predicted": "Food"
+        },
+        {
+          "count": 1,
+          "expected": "Transportation",
+          "predicted": "Shopping"
+        }
+      ],
+      "wrongAnswered": 0
+    },
+    "arabicMerchantValidation": {
+      "allFormsAbstained": 3,
+      "allFormsCorrect": 0,
+      "businessCount": 3
+    },
+    "merchantFinalInferencePerformed": false,
+    "interpretation": "Merchant defaults are not transaction-purpose labels; assistant labels are not human gold."
+  },
+  "independentFinalEvaluationAvailable": false,
+  "releaseThresholds": null,
+  "historicalActiveExportAccuracyClaim": "100.00%",
+  "documentationConflict": "CATEGORY_LABELING.md treats Other as unknown; approved transaction contract reserves Other for understood out-of-taxonomy purpose. Resolve before new label admission.",
+  "recommendedNext": "Versioned field-level SMS annotation view over existing training-fold families; explicit provenance/evidence, unannotated distinct from uncertain, no fitting or teacher-as-gold."
+}

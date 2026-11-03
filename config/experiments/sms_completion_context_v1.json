@@ -1,0 +1,30 @@
+{
+  "runId": "sms_completion_context_v1",
+  "ownerApproval": "2026-10-27 go after completion-recognition next step: one scoped context-feature/data experiment; no promotion",
+  "fitCalls": 1,
+  "features": "Fixed binary word unigrams/bigrams/trigrams; original normalization; train-only minDF 2",
+  "solver": "Reuse frozen liblinear C=1 settings/seed; threshold zero, no tuning",
+  "weighting": "Keep all 1014 old rows/weights. Add 48 authored contrasts, twelve four-member bilingual groups, total weight one/group (0.25/row).",
+  "evaluationStatus": "Adaptive exposed synthetic development. Six additional authored probe groups frozen before inference; not independent real-world evaluation.",
+  "frozenInputs": {
+    "data/training/authored_sms_context_v1/scenarios.json": "2f1b1d2f03a12d3a776d4c3b24dbd743858940b57ac232b9bea7bfbc69297ae7",
+    ".local-backups/sms_research_manual_v1/cases.json": "b1d582d32af849578565ba5404fad96e1922aad873d344d27ae803457c34d875",
+    "data/models/sms_semantics_followup_v1_word_candidate.json": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121",
+    "data/reports/transactions/sms_semantics_followup_v1.json": "cedd066e3a35a01ceef96b6e527b0de7a3ad673690ae17481ce5ca254c22d080",
+    "config/contracts/sms_completion_context.json": "5011125f43d5aa8787198b353ac6d82fe68c7d8c79b39c24ac8aa4b7bc6a16c3"
+  },
+  "constraints": [
+    "Exactly one completion fit; direction head copied unchanged",
+    "No threshold/feature/parameter search or refit on failures",
+    "No old source/flag/fold edits; no merchant-final, category or BIO inference",
+    "The 24 old manual cases and 24 new probes are excluded from training/vocabulary",
+    "No active engine migration or publishing; optional tester only if evidence supports comparison"
+  ],
+  "limits": [
+    "Assistant authored and labeled all new messages; not human gold or received bank SMS.",
+    "Both new data and representation change in this single experiment; no causal attribution to ngrams alone.",
+    "Generic ngrams do not guarantee correct negation/quote scope or uncertainty.",
+    "All old validation and manual diagnostics are exposed; no independent accuracy or release claim.",
+    "The separate active-assessment quoted-example Include defect remains outside this learned-model trial."
+  ]
+}

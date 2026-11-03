@@ -14,6 +14,7 @@ const browser = vm.createContext({ performance, document: { addEventListener() {
 vm.runInContext(script, browser);
 const detailed = vm.runInContext('(input) => MasroofRuntime.MasroofEngine.analyzeDetailed(input)', browser);
 const legacy = vm.runInContext('(input) => MasroofRuntime.MasroofEngine.analyze(input)', browser);
+const ownership = vm.runInContext('(request) => MasroofRuntime.MasroofEngine.analyzeWithOwnership(request)', browser);
 const inputData = JSON.parse(fs.readFileSync(0, 'utf8'));
 const cases = inputData.cases;
 const rows = cases.map((row: any) => {
@@ -32,4 +33,6 @@ if (inputData.uiCase) {
   vm.runInContext('updateMerchantSms = function() {}; runAnalysis();', browser);
   ui = { title: elements.detailedDecision.innerText, assessment: JSON.parse(elements.detailedOutput.innerText) };
 }
-process.stdout.write(JSON.stringify({ rows, ui, bundleSources: vm.runInContext('MasroofRuntime.sourceSha256', browser) }));
+const ownershipRows = (inputData.ownershipCases ?? []).map((row: any) => ({ id: row.id,
+  typescript: MasroofEngine.analyzeWithOwnership(row.request), browser: ownership(row.request) }));
+process.stdout.write(JSON.stringify({ rows, ownershipRows, ui, bundleSources: vm.runInContext('MasroofRuntime.sourceSha256', browser) }));

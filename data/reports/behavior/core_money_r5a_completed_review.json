@@ -1,0 +1,1577 @@
+{
+  "kind": "Source review of exposed weak completed-event expectations, not human gold",
+  "sourceCohortSha256": "fcf919ae53cb7683dd6698df65798936f399d2ea1d6a2bcba617dd7ea9897ea9",
+  "records": [
+    {
+      "cohort": "exposedManual",
+      "recordId": "withdrawal-ar",
+      "textSha256": "6716fe64a8697bdf3f08211a6f71e4f4cef19bf5dba2b447443816691b3e3da7",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "cash_withdrawal",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "withdrawal-en",
+      "textSha256": "2cc07d193ca57700470a34e4c323526eb884f5accdcffdc966e4978d648ba089",
+      "language": "en",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "cash_withdrawal",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "refund-ar",
+      "textSha256": "c09a4dca7d1fbe348ccf3ce0a8d459b928d6bb0900d15ad2e55b7a447fa4c22b",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "refund",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "foreign-purchase-ar",
+      "textSha256": "d7a630fded0da193c963a9cdb715d92187460e8e641c0f8eafab2393b48c34a8",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "card_purchase",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unknown-transfer-ar",
+      "textSha256": "15fa1231eb0d0ef3ef45f625bdd537432c124fba92aab18ada604a7f9b602828",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "bank_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "own-accounts-ar",
+      "textSha256": "e4635c941a0d28b03c6859afefca0d2c9758aab6e992a8a8c0a85192086fc3a4",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "own_account_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "missing-amount-ar",
+      "textSha256": "2855f40a332062553a1d73a15cad5dbb157a0c9509a7af8064752c31642ad68c",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "bill_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "missing-amount-en",
+      "textSha256": "6081a90a8ec44a4e6a72e4e76db4a56bc2da647b141a690af4f0f62260602ebd",
+      "language": "en",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "bill_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-completed-ar",
+      "textSha256": "8824c704c8595acaad11c51b42bc5d02382ba3d627bab2056e4e951f8f074a07",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "cash_withdrawal",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-completed-ar",
+      "textSha256": "eb860f112ae2e4cc45cb8383221179ae8c6fe70617cdf764019e2e72a1a2f5ed",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "bill_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-completed-en",
+      "textSha256": "6d76c90cc631529ac0ae825435f22dced864458bce840be03d727da1e86771c8",
+      "language": "en",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "bill_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-completed-ar",
+      "textSha256": "4ef3e161683585a522229f19f5921910be7c0dbf4e6791cb457e72ead11be74c",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "salary_credit",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-completed-en",
+      "textSha256": "c27eaaf678662ec4cccf6df75380aec7c9644fdb45770520f5d0c57f961ab7fb",
+      "language": "en",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "salary_credit",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-completed-ar",
+      "textSha256": "1ed05b0b846ccb0002884ebfc24006391db9b6fa13f5cd9fce4cbe16b7160622",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "bill_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-completed-en",
+      "textSha256": "8c1bd723b8908b813e7301794f747e5886017f8be43a321fb9bcdf236307ee42",
+      "language": "en",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "bill_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-completed-ar",
+      "textSha256": "58a43993d111cdb6985de13d5f64ca8b2256eb7be165acd6e94f733b60b4742d",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "bank_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-completed-en",
+      "textSha256": "ca32a7ca6663b0a86514682eaaef510405e967409e3b7731a0c0c1e2fc9baf38",
+      "language": "en",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "bank_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-completed-ar",
+      "textSha256": "c8d3e64e232e7d6efc71e6c5d0043e681779f04d720fc776ba4a3d48c2a1273e",
+      "language": "ar",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "card_purchase",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-completed-en",
+      "textSha256": "f0b537995a25de4c6cebe0acb09a0bdbac93abf7a72b72bd3dddcbab2ef74c5e",
+      "language": "en",
+      "sourceFamily": "unspecified_prior_diagnostic",
+      "reviewFamily": "card_purchase",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-1-ar",
+      "textSha256": "d3e3775019661877c39d14bd32b948220c711c2ac8a5d2c275406b1779973edc",
+      "language": "ar",
+      "sourceFamily": "personal_claim",
+      "reviewFamily": "gift_credit",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-1-en",
+      "textSha256": "0a97a6c0283710ffa674413064764f12ecffeb136bd7e171c83f9fc276067b46",
+      "language": "en",
+      "sourceFamily": "personal_claim",
+      "reviewFamily": "gift_credit",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-ar",
+      "textSha256": "247768197f95c26a3e914ab450f9906443735b2e7259ddddb87455c2994f3d25",
+      "language": "ar",
+      "sourceFamily": "question_request",
+      "reviewFamily": "salary_credit",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-en",
+      "textSha256": "4ba9d93fa0d707350b4579034e3059d769902f88ec1ad775425f5baf3c19830a",
+      "language": "en",
+      "sourceFamily": "question_request",
+      "reviewFamily": "salary_credit",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-1-ar",
+      "textSha256": "d7e68f5dda88acbd23f95cb7d18eeff54de458060419227f722990b43b0749a9",
+      "language": "ar",
+      "sourceFamily": "pending_settled",
+      "reviewFamily": "bill_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-1-ar",
+      "textSha256": "c52e6066a709bed2efeca5809206ad5a64e845b090a27264c6f18d6c5d228b00",
+      "language": "ar",
+      "sourceFamily": "illustrative_scope",
+      "reviewFamily": "card_purchase",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-001",
+      "textSha256": "443bb42ae4d975f624360478d0db5bc5528a21498031c2f63778db6c80dcf8b0",
+      "language": "ar",
+      "sourceFamily": "cash_withdrawal",
+      "reviewFamily": "cash_withdrawal",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-003",
+      "textSha256": "f075c019d6e80e5652b8334648230587ee656aba0039ddfa86debfe2a89a048f",
+      "language": "ar",
+      "sourceFamily": "cash_withdrawal",
+      "reviewFamily": "cash_withdrawal",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-004",
+      "textSha256": "b3f57db5f67d81447813668a81689073d92853771a9a010b92d0d609dd81fc4d",
+      "language": "en",
+      "sourceFamily": "cash_withdrawal",
+      "reviewFamily": "cash_withdrawal",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "outgoing",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-005",
+      "textSha256": "2f365115e588b52fb0f4c1b9b9183d6099d5490a1e5c06bd91b0b8bea79544c1",
+      "language": "ar",
+      "sourceFamily": "card_purchase",
+      "reviewFamily": "card_purchase",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-006",
+      "textSha256": "345f598d209ca8e89ea69c3d64c9e1dfddb068974bcf328f22c99c5327df4b20",
+      "language": "en",
+      "sourceFamily": "card_purchase",
+      "reviewFamily": "card_purchase",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-007",
+      "textSha256": "c3191fac7112238825892df8e79c3593dc10f7f8903580149084026f3cc83259",
+      "language": "ar",
+      "sourceFamily": "card_purchase",
+      "reviewFamily": "card_purchase",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-008",
+      "textSha256": "098f8375fe0d3b3e0d59a425192271e27b30645174ac287419151a9f8d238be0",
+      "language": "en",
+      "sourceFamily": "card_purchase",
+      "reviewFamily": "card_purchase",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-009",
+      "textSha256": "203cc6106f547776391a0fdf6ae14332fac0536a404582e4ff4427294f0cd00a",
+      "language": "ar",
+      "sourceFamily": "merchant_payment",
+      "reviewFamily": "merchant_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-011",
+      "textSha256": "941db728f3f161c982d9aebe866e423468e68f10c089e6d9c59e45e781b73ebe",
+      "language": "ar",
+      "sourceFamily": "merchant_payment",
+      "reviewFamily": "merchant_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-012",
+      "textSha256": "bec0831fcb025b61abbb0d79c4811711d23eb8b0cca068cc43c5d96be0eafc19",
+      "language": "en",
+      "sourceFamily": "merchant_payment",
+      "reviewFamily": "merchant_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-013",
+      "textSha256": "fdf7b4149037619d45b632b173350d7eb1f44e58955597688ba35e1b1b7d5aca",
+      "language": "ar",
+      "sourceFamily": "bill_payment",
+      "reviewFamily": "bill_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-015",
+      "textSha256": "c3a2a6d189afdf97cc4d8fbccfc6f8645f16a21bec8eee21cc93f81a4942d3a6",
+      "language": "ar",
+      "sourceFamily": "bill_payment",
+      "reviewFamily": "bill_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-016",
+      "textSha256": "4835d7f1f297da37e137e9182f2b2f9d603858b1296f7b0f4cf39dc46631c8b7",
+      "language": "en",
+      "sourceFamily": "bill_payment",
+      "reviewFamily": "bill_payment",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "amount": {
+          "expected": 13.25,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "outgoing",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-017",
+      "textSha256": "547a2f12e046891df287cd31c46b79c7b97eeb2004483c54651bf86c3f1864f8",
+      "language": "ar",
+      "sourceFamily": "bank_transfer",
+      "reviewFamily": "bank_transfer",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "amount": {
+          "expected": 56.0,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "outgoing",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "other_person",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-018",
+      "textSha256": "d205432f3ef55d5a1b198d4317d6f0b282322df55063b58d03d9c0bf87682094",
+      "language": "en",
+      "sourceFamily": "bank_transfer",
+      "reviewFamily": "bank_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "outgoing",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-019",
+      "textSha256": "89a53461720a740c8cd8298595ae9b45eafeeb8c4dad7799d1ec07cf2192acf3",
+      "language": "ar",
+      "sourceFamily": "bank_transfer",
+      "reviewFamily": "bank_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-020",
+      "textSha256": "524bbfb3fe641fde324394259c770fd67da9e2cf6850c2473b1d16eec7ba64c5",
+      "language": "en",
+      "sourceFamily": "bank_transfer",
+      "reviewFamily": "bank_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-021",
+      "textSha256": "e2ce49f1519f9bffcff5c2548cc5ab0047ba7aa07d0ce4cf3f14fe676531040b",
+      "language": "ar",
+      "sourceFamily": "bank_transfer",
+      "reviewFamily": "bank_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "incoming",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-023",
+      "textSha256": "7adec7a60dc4e03d3d8887b4a97767b45a39bed752be33fc6b28a182257b4350",
+      "language": "ar",
+      "sourceFamily": "bank_transfer",
+      "reviewFamily": "bank_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "incoming",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-024",
+      "textSha256": "bdab4a4192aff2c91b8aff6edc8d8ecaa8a8db30abaab7b755233ec75c60df68",
+      "language": "en",
+      "sourceFamily": "bank_transfer",
+      "reviewFamily": "bank_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "incoming",
+          "actual": "outgoing"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-025",
+      "textSha256": "2a1059b1062a4602ccdce79ea8fbb64bd9f812ce5f7e281194bf9365e29907f3",
+      "language": "ar",
+      "sourceFamily": "cash_deposit",
+      "reviewFamily": "cash_deposit",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-027",
+      "textSha256": "c8f60525404d28f147a33eae8154e45882a06c33252ddfefb68364c2d9bf09f0",
+      "language": "ar",
+      "sourceFamily": "cash_deposit",
+      "reviewFamily": "cash_deposit",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-028",
+      "textSha256": "8fec74c618afd85ef46f25a064c6bbac823be16eb050c808c0e0373a9fe837a7",
+      "language": "en",
+      "sourceFamily": "cash_deposit",
+      "reviewFamily": "cash_deposit",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "amount": {
+          "expected": 68.25,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-029",
+      "textSha256": "fc9b5b6ed9fab277673f57e5afb530b7c11cf99f08b79046d13bdee90e01b2c8",
+      "language": "ar",
+      "sourceFamily": "refund",
+      "reviewFamily": "refund",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "incoming",
+          "actual": "outgoing"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-031",
+      "textSha256": "934e5f59bdb4ac7b71978255fca261ead85aa96d4e5c4ef206c65d49cc57de8c",
+      "language": "ar",
+      "sourceFamily": "refund",
+      "reviewFamily": "refund",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "incoming",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-032",
+      "textSha256": "ca9eb9fb766e87553028ab797344655c87b4cd18ff91fc8454c832ce8283a6fb",
+      "language": "en",
+      "sourceFamily": "refund",
+      "reviewFamily": "refund",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "incoming",
+          "actual": "outgoing"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-033",
+      "textSha256": "33747aad5ffb9d548e19c98167261783268a496b014d7e191843127e763638da",
+      "language": "ar",
+      "sourceFamily": "cashback",
+      "reviewFamily": "cashback",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "amount": {
+          "expected": 2.45,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-035",
+      "textSha256": "80af0fdcb403823c98ed3e4eb0109ee9b778b1c946329b7918223c99c81065d7",
+      "language": "ar",
+      "sourceFamily": "cashback",
+      "reviewFamily": "cashback",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "amount": {
+          "expected": 3.8,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-037",
+      "textSha256": "d30e4de1e6080855e347234fbccd002c725f1045bf044f23d1d5cb313f104bf8",
+      "language": "ar",
+      "sourceFamily": "fee",
+      "reviewFamily": "fee",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-038",
+      "textSha256": "808213a6481052e98be86a273b3fb6049f8ada7e8ba1ac6856f8bf3160d578f1",
+      "language": "en",
+      "sourceFamily": "fee",
+      "reviewFamily": "fee",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "outgoing",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-039",
+      "textSha256": "7edff6987ede904b709cd4e0a4f763ba0f0a77db9accda21a92ff454725097fd",
+      "language": "ar",
+      "sourceFamily": "fee",
+      "reviewFamily": "fee",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "outgoing",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "unknown"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-040",
+      "textSha256": "2fbc7a70dea3b56c44a63fa321fec55d6fa4a6df8ef8da96206f1bc3a65aef30",
+      "language": "en",
+      "sourceFamily": "fee",
+      "reviewFamily": "fee",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "outgoing",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "unknown"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-041",
+      "textSha256": "f55736b0a8eedbb1684959044ee69d54bb70fba5f777a4113a282563c87a0ffb",
+      "language": "ar",
+      "sourceFamily": "installment",
+      "reviewFamily": "installment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-043",
+      "textSha256": "0bcb10c143a60e5d48bf994f3ebfb278072d46e60dc53e93a4f8e21e11cb519d",
+      "language": "ar",
+      "sourceFamily": "installment",
+      "reviewFamily": "installment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-044",
+      "textSha256": "088a69df48441554d2e7ad07084ed1ebcb876e42a0d6be321c68434d5ad66132",
+      "language": "en",
+      "sourceFamily": "installment",
+      "reviewFamily": "installment",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "amount": {
+          "expected": 82.6,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "outgoing",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-045",
+      "textSha256": "b69744c585616cde3e4bc09924822de85dd2e9ced1245ef76d561226dac2e6a2",
+      "language": "ar",
+      "sourceFamily": "salary_credit",
+      "reviewFamily": "salary_credit",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "amount": {
+          "expected": 625.0,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-046",
+      "textSha256": "0beef6e954f3e03da28699bb338115653746a314c7dcfed8dbd4204c946c2478",
+      "language": "en",
+      "sourceFamily": "salary_credit",
+      "reviewFamily": "salary_credit",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "amount": {
+          "expected": 625.0,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-047",
+      "textSha256": "2fbe61a523cb515b443234e75435bed11db8fa9fb2f9aafd86663f68edc10f3c",
+      "language": "ar",
+      "sourceFamily": "salary_credit",
+      "reviewFamily": "salary_credit",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "incoming",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "unknown"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-048",
+      "textSha256": "300f1cef0e39d0ea6574081895c46e82c9169b286c71c3f9b664de09fdb8c2b2",
+      "language": "en",
+      "sourceFamily": "salary_credit",
+      "reviewFamily": "salary_credit",
+      "previousStatus": "non_transaction",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "amount": {
+          "expected": 910.5,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-069",
+      "textSha256": "f26fe041147847177fae7ba4360fd920c732551a1d8a87aa18cdc285c1ab6de1",
+      "language": "ar",
+      "sourceFamily": "own_account_transfer",
+      "reviewFamily": "own_account_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "own_accounts",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-070",
+      "textSha256": "31f104f885eff9dddcf642e5eccbf5b0c06d5098e927eefd5c423672a3fcb1bd",
+      "language": "en",
+      "sourceFamily": "own_account_transfer",
+      "reviewFamily": "own_account_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "own_accounts",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-071",
+      "textSha256": "daecb1761169d2353fe877d43974f0b756762b30549ecc605ef4b715d2fed9d5",
+      "language": "ar",
+      "sourceFamily": "ambiguous_transfer",
+      "reviewFamily": "ambiguous_transfer",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-073",
+      "textSha256": "ad1595c674760e18cc95398959056906c5f5751922484363290772ceb243afa2",
+      "language": "ar",
+      "sourceFamily": "bill_payment",
+      "reviewFamily": "bill_payment",
+      "previousStatus": "uncertain",
+      "reviewedStatus": "completed",
+      "truthChanged": false,
+      "reviewState": "assistant_reviewed_weak",
+      "rationale": "Source asserts an executed financial movement or final ledger posting; missing amount, direction or ownership cannot erase completion and must be resolved separately before inclusion.",
+      "otherAssertedFieldMismatches": {},
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    }
+  ],
+  "byLanguage": {
+    "ar": 43,
+    "en": 25
+  },
+  "byFamily": {
+    "cash_withdrawal": 6,
+    "refund": 4,
+    "card_purchase": 8,
+    "bank_transfer": 10,
+    "own_account_transfer": 3,
+    "bill_payment": 11,
+    "salary_credit": 8,
+    "gift_credit": 2,
+    "merchant_payment": 3,
+    "cash_deposit": 3,
+    "cashback": 2,
+    "fee": 4,
+    "installment": 3,
+    "ambiguous_transfer": 1
+  },
+  "trainingEligible": false,
+  "independentEvaluationEligible": false
+}

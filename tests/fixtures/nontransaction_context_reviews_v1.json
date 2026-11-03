@@ -1,0 +1,85 @@
+{
+  "sourceFixture": "tests/fixtures/sanitized_v1/test_suite_cases.json",
+  "sourceFixtureSha256": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "reviews": [
+    {
+      "caseId": "test_suite_cases:TC_ADV_CHAT_003",
+      "textSha256": "e2f4b69b05be9edb17f594855fd05ffc83c2a5aa6abf9ec60eb4a009e2ccf072",
+      "previous": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": "Zara",
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "current": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "rationale": "An explicit completion question or receipt request must exclude rather than retain review; original corpus and frozen before assessment remain intact."
+    },
+    {
+      "caseId": "test_suite_cases:TC_ADV_CHAT_013",
+      "textSha256": "590a37a1f479ecad726fbfceb1fba66359c3c5ce81d19effbc3907aecead3daa",
+      "previous": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "reasonCodes": [
+          "amount_unresolved",
+          "completion_unresolved",
+          "direction_unresolved"
+        ],
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer",
+        "merchantOrCounterparty": "Arab Bank app",
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "current": {
+        "contractVersion": "1.0.0",
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "reasonCodes": [
+          "personal_conversation"
+        ],
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "merchantOrCounterparty": null,
+        "expenseCategory": null,
+        "categoryStatus": "not_applicable"
+      },
+      "rationale": "An explicit completion question or receipt request must exclude rather than retain review; original corpus and frozen before assessment remain intact."
+    }
+  ]
+}

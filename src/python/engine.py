@@ -310,11 +310,19 @@ class MasroofEngine:
         return False
 
     def predict_detailed(self, input_value):
+        return self._assess_detailed(input_value)
+
+    def predict_with_ownership(self, request):
+        from .ownership_context import assess_with_ownership
+        return assess_with_ownership(request, self._assess_detailed)
+
+    def _assess_detailed(self, input_value, ownership_override=None):
         from .detailed_assessment import assess
         return assess(input_value,
                       lambda body, direction: self.extract_entities(body, direction, categorize=False),
                       self.parse_number,
-                      lambda text: self._score_tokens(self.tokenize(self.preprocess(text)))[0] >= 0.70)
+                      lambda text: self._score_tokens(self.tokenize(self.preprocess(text)))[0] >= 0.70,
+                      ownership_override)
 
     def predict(self, sender, body, is_contact=False, default_currency="JOD"):
         if is_contact:
@@ -636,7 +644,7 @@ class MasroofEngine:
                     cand = m.group(1).strip()
                     cand = re.sub(r'^(?:تاجر\s+)', '', cand).strip()
                     cand_lower = cand.lower()
-                    if re.search(r'\b(?:account|acc\.?|card|wallet|حساب|بطاق|محفظ)', cand_lower):
+                    if re.search(r'(?:account|acc\.?|card|wallet|حساب|بطاق|محفظ)', cand_lower):
                         continue
                     if re.match(r'^[x\*0-9]+$', cand) or re.match(r'^acc(?:\.|ount)?\s*(?:no\.?)?\s*[\*x0-9]+', cand_lower):
                         continue

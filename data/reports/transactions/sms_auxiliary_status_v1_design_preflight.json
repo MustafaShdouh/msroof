@@ -1,0 +1,20 @@
+{
+  "runId": "sms_auxiliary_status_v1",
+  "status": "design_preflight_only",
+  "trainingRows": 1177,
+  "trainingViewSha256": "e169213308c680ba7e5210ad6922ec6f8dee77f0f14c11d3539f2d22697919a3",
+  "diagnosticEntries": 112,
+  "roles": {
+    "text_disjoint_exposed_diagnostic": 111,
+    "in_sample_conformance": 1
+  },
+  "totalTrainableParameters": 3553933,
+  "proposedOptimizerSteps": 444,
+  "proposedTrainingRuns": 1,
+  "trainingRunsAuthorized": 0,
+  "training": false,
+  "newModelInference": false,
+  "reservedInferred": false,
+  "protocolSha256": "8048b91c7bf8d0af3566b121850687b48805488041708fcbda45cce31329d041",
+  "validatorSha256": "c3340261cde1a4cc26a7363d75b0f8160fa23e41cf79f211567cdd6c11dc2009"
+}

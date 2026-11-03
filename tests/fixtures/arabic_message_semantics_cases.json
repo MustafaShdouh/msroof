@@ -1,0 +1,552 @@
+{
+  "dataKind": "assistant_authored_development_controls",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "evidenceVersion": "1.0.5",
+  "baselineReport": "data/reports/behavior/paired_movement_v1.json",
+  "cases": [
+    {
+      "id": "arabic_definite_credit",
+      "text": "تم إضافة المبلغ 7.333 دينار إلى الحساب *1111.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 7.333,
+        "currency": "JOD",
+        "transferRelationship": "not_transfer",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_indefinite_credit",
+      "text": "تم إضافة مبلغ 7.333 دينار إلى حسابك *1111.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 7.333,
+        "currency": "JOD",
+        "transferRelationship": "not_transfer",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_credit_pronoun",
+      "text": "المبلغ JOD 7.333 تمت إضافته إلى الحساب *1111.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 7.333,
+        "currency": "JOD",
+        "transferRelationship": "not_transfer",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_credit_wallet",
+      "text": "المبلغ JOD 7.333 تم إضافته إلى محفظتك.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 7.333,
+        "currency": "JOD",
+        "transferRelationship": "not_transfer",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_credit_diacritics",
+      "text": "تَمَّ إِضَافَةُ الْمَبْلَغِ 7.333 د.أ إِلَى الْحِسَابِ *1111.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 7.333,
+        "currency": "JOD",
+        "transferRelationship": "not_transfer",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_foreign_credit",
+      "text": "تم إضافة المبلغ 7.333 USD إلى حسابك *1111.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 7.333,
+        "currency": "USD",
+        "transferRelationship": "not_transfer",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "english_credit",
+      "text": "JOD 7.333 has been credited to your account *1111.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 7.333,
+        "currency": "JOD",
+        "transferRelationship": "not_transfer",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_if",
+      "text": "إذا تم إضافة المبلغ 7.333 دينار إلى الحساب *1111، تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_if_plain",
+      "text": "اذا تم إضافة المبلغ 7.333 دينار إلى الحساب *1111، تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_would",
+      "text": "لو تم إضافة المبلغ 7.333 دينار إلى الحساب *1111، تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_when",
+      "text": "عندما تم إضافة المبلغ 7.333 دينار إلى الحساب *1111، تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_whenever",
+      "text": "كلما تم إضافة المبلغ 7.333 دينار إلى الحساب *1111، تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_in_case",
+      "text": "في حال تم إضافة المبلغ 7.333 دينار إلى الحساب *1111، تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_in_case_formal",
+      "text": "في حالة تم إضافة المبلغ 7.333 دينار إلى الحساب *1111، تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_conjoined",
+      "text": "وإذا تم إضافة المبلغ 7.333 دينار إلى الحساب *1111، تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_then_if",
+      "text": "فإذا تم إضافة المبلغ 7.333 دينار إلى الحساب *1111، تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_pronoun",
+      "text": "إذا المبلغ JOD 7.333 تمت إضافته إلى الحساب *1111، تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_received",
+      "text": "إذا استلمت مبلغ 7.333 دينار من LOCAL PERSON، تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_condition_diacritics",
+      "text": "إِذَا تَمَّ إِضَافَةُ الْمَبْلَغِ 7.333 د.أ إِلَى الْحِسَابِ *1111، انتظر.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "english_condition",
+      "text": "If JOD 7.333 has been credited to your account, check later.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_failed_operation",
+      "text": "فشلت العملية بقيمة JOD 7.333.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable",
+        "reasonCodes": [
+          "declined_or_failed"
+        ]
+      }
+    },
+    {
+      "id": "arabic_failed_movement",
+      "text": "فشلت الحركة بقيمة JOD 7.333.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable",
+        "reasonCodes": [
+          "declined_or_failed"
+        ]
+      }
+    },
+    {
+      "id": "arabic_failed_indefinite",
+      "text": "فشلت عملية بقيمة JOD 7.333.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable",
+        "reasonCodes": [
+          "declined_or_failed"
+        ]
+      }
+    },
+    {
+      "id": "arabic_failure_diacritics",
+      "text": "فَشِلَتِ الْعَمَلِيَّةُ بِقِيمَةِ JOD 7.333.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable",
+        "reasonCodes": [
+          "declined_or_failed"
+        ]
+      }
+    },
+    {
+      "id": "english_failed",
+      "text": "Payment of JOD 7.333 failed.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable",
+        "reasonCodes": [
+          "declined_or_failed"
+        ]
+      }
+    },
+    {
+      "id": "arabic_denied_credit",
+      "text": "لم تتم إضافة المبلغ 7.333 دينار إلى الحساب *1111.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_future_credit",
+      "text": "سيتم إضافة المبلغ 7.333 دينار إلى الحساب *1111.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_declined_credit",
+      "text": "تم رفض إضافة المبلغ 7.333 دينار إلى الحساب *1111.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_help_after_credit",
+      "text": "تم إضافة المبلغ 7.333 دينار إلى الحساب *1111، إذا احتجت مساعدة اتصل بالدعم.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 7.333,
+        "currency": "JOD",
+        "transferRelationship": "not_transfer",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_help_conjoined",
+      "text": "تم إضافة المبلغ 7.333 دينار إلى الحساب *1111،وإذا احتجت مساعدة اتصل بالدعم.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 7.333,
+        "currency": "JOD",
+        "transferRelationship": "not_transfer",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "english_help_after_credit",
+      "text": "JOD 7.333 credited to your account. If you need help, call support.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 7.333,
+        "currency": "JOD",
+        "transferRelationship": "not_transfer",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_actual_then_conditional",
+      "text": "تم إضافة المبلغ 7.333 دينار إلى الحساب *1111، وإذا تم خصم المبلغ لاحقا تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "amount": 7.333
+      }
+    },
+    {
+      "id": "arabic_actual_then_failed",
+      "text": "تم إضافة المبلغ 7.333 دينار إلى الحساب *1111. فشلت العملية.",
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "amount": 7.333
+      }
+    },
+    {
+      "id": "arabic_debit_credit_separate",
+      "text": "تم خصم مبلغ 7.333 دينار من حساب *1111. تم إضافة المبلغ إلى حساب *2222.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "amount": 7.333,
+        "transferRelationship": "not_transfer"
+      }
+    },
+    {
+      "id": "arabic_debit_credit_same_mask",
+      "text": "تم خصم مبلغ 7.333 دينار من حساب *1111 وتم إضافة المبلغ إلى حساب *1111.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "amount": 7.333,
+        "transferRelationship": "not_transfer"
+      }
+    },
+    {
+      "id": "arabic_debit_credit_pronoun",
+      "text": "تم خصم مبلغ 7.333 دينار من حساب *1111. المبلغ تم إضافته إلى حساب *2222.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "amount": 7.333,
+        "transferRelationship": "not_transfer"
+      }
+    },
+    {
+      "id": "arabic_posting_is_not_credit",
+      "text": "تم قيد مبلغ 7.333 دينار على الحساب *1111.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "amount": 7.333
+      }
+    },
+    {
+      "id": "arabic_product_not_credit",
+      "text": "طلب بقيمة JOD 7.333 تمت إضافته إلى سلتك.",
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "id": "arabic_marker_in_name",
+      "text": "تم إضافة المبلغ 7.333 دينار إلى حساب شركة لو التجارية.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "amount": 7.333,
+        "currency": "JOD",
+        "transferRelationship": "not_transfer",
+        "categoryStatus": "not_applicable"
+      }
+    },
+    {
+      "id": "arabic_failed_then_credit",
+      "text": "فشلت العملية. تم إضافة المبلغ 7.333 دينار إلى الحساب *1111.",
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "amount": 7.333
+      }
+    },
+    {
+      "id": "arabic_long_conditional",
+      "text": "إذا تحققت الشروط المذكورة تحققت الشروط المذكورة تحققت الشروط المذكورة تحققت الشروط المذكورة تحققت الشروط المذكورة تحققت الشروط المذكورة تحققت الشروط المذكورة تحققت الشروط المذكورة تحققت الشروط المذكورة تحققت الشروط المذكورة تحققت الشروط المذكورة تحققت الشروط المذكورة تم إضافة المبلغ 7.333 دينار إلى الحساب *1111.",
+      "expect": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "amount": null
+      }
+    },
+    {
+      "id": "arabic_actual_debit",
+      "text": "تم خصم مبلغ 7.333 دينار من حسابك *1111 لدى LOCAL SHOP.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 7.333
+      }
+    },
+    {
+      "id": "arabic_debit_then_help",
+      "text": "تم خصم مبلغ 7.333 دينار من حسابك *1111، إذا احتجت مساعدة اتصل بالدعم.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 7.333
+      }
+    },
+    {
+      "id": "arabic_debit_then_conditional_credit",
+      "text": "تم خصم مبلغ 7.333 دينار من حسابك *1111، وإذا تمت إضافة المبلغ إلى حسابك لاحقا تحقق من الرصيد.",
+      "expect": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "amount": 7.333
+      }
+    },
+    {
+      "id": "english_debit_then_help",
+      "text": "JOD 7.333 debited from your account *1111. If you need help, call support.",
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 7.333
+      }
+    }
+  ],
+  "pairedControlRevisions": {
+    "arabic_failed": {
+      "transactionStatus": "uncertain",
+      "trackingDecision": "review",
+      "direction": "uncertain",
+      "categoryStatus": "not_applicable",
+      "reasonCodes": [
+        "completion_unresolved",
+        "direction_unresolved"
+      ]
+    },
+    "arabic_conditional": {
+      "transactionStatus": "non_transaction",
+      "trackingDecision": "exclude",
+      "direction": "not_applicable",
+      "transferRelationship": "not_applicable",
+      "amount": null,
+      "currency": null,
+      "currencyResolution": "not_applicable",
+      "categoryStatus": "not_applicable",
+      "reasonCodes": [
+        "pending_or_requested"
+      ]
+    },
+    "arabic_separate": {
+      "trackingDecision": "review",
+      "direction": "uncertain",
+      "categoryStatus": "not_applicable",
+      "reasonCodes": [
+        "completed_transaction",
+        "direction_unresolved"
+      ]
+    },
+    "arabic_same_identifier": {
+      "trackingDecision": "review",
+      "direction": "uncertain",
+      "categoryStatus": "not_applicable",
+      "reasonCodes": [
+        "completed_transaction",
+        "direction_unresolved"
+      ]
+    }
+  }
+}

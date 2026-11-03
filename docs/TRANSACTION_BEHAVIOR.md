@@ -264,27 +264,58 @@ measured compatibility differences. See `docs/BEHAVIOR_EVALUATION.md` for result
 Training, final-test evaluation, promotion/publication and legacy deletion remain
 separate decisions.
 
-## Proposed ownership context,2026-10-26
+## Opt-in ownership context,2026-10-26
 
-Status: concrete design for owner review; not implemented. The latest measured
-runtime is `data/reports/behavior/arabic_direction_v1.json`. It leaves37 transfer
+Status: owner approved implementation; available as a separate optional API.
+The current implementation report is `data/reports/behavior/arabic_message_semantics_v1.json`.
+The unchanged no-context baseline leaves37 transfer
 relationships unresolved among the legacy-included development cases. The owner
 answered **Mixed or unknown** for the original named Capital transfers; no
 individual ownership label follows from that answer. A context interface cannot
 resolve these records until actual ownership information is supplied.
 
-### Recommended first slice
+### Implemented first slice
 
 Accept an explicit human confirmation of the relationship for one particular
 message. A confirmation says either “between my own accounts”, “with another
 person”, or “I do not know”. It supplies ownership only. It does not establish
 completion, amount, direction, sender authenticity or purchase category.
 
-Keep `analyzeDetailed` / `predict_detailed` and their existing input/result contract
-unchanged. Add a separate opt-in TypeScript `analyzeWithOwnership(request)` and
-Python `predict_with_ownership(request)`. Their proposed wrapper version is1.0.0;
+`analyzeDetailed` / `predict_detailed` and their existing input/result contract
+remain unchanged. TypeScript `analyzeWithOwnership(request)` and
+Python `predict_with_ownership(request)` are separate opt-in methods. Their wrapper version is1.0.0;
 the nested assessment retains the existing transaction contract1.0.0. The active
-JSON schema, validator, weights and default callers are unchanged by this design.
+canonical contract, validator, weights and default callers remain unchanged.
+The wrapper contract is `config/contracts/ownership_context.json`; its response
+validator is `tools/contracts/validate_ownership_context.py`. Optional metadata
+fields follow the existing input interface's types; they supply no ownership fact.
+The optional tester panel constructs a confirmation only after an explicit button
+click; it stores nothing across reloads and revokes confirmation after body/sender/
+contact edits, sample loading or New message. Mobile callers remain separate.
+
+Python usage (the caller must first obtain the actual human confirmation):
+
+```python
+from src.python.engine import MasroofEngine
+
+text = "JOD 20.00 debited. Transfer to LOCAL PERSON completed."
+result = MasroofEngine().predict_with_ownership({
+    "ownerScopeId": "profile-1",
+    "messageId": "received-sms-1",
+    "message": {"text": text},
+    "ownershipContext": {
+        "schemaVersion": "1.0.0", "ownerScopeId": "profile-1",
+        "messageId": "received-sms-1", "text": text,
+        "evidence": "user_confirmed", "relationship": "other_person",
+    },
+})
+```
+
+The TypeScript method accepts the same object. A valid request without
+`ownershipContext`, or with null context, returns the existing detailed assessment
+inside the wrapper with `absent/not_provided`. It does not resolve the37 records
+without new facts. Reproduce the authored acceptance and baseline comparison with
+`py -X utf8 -m training.evaluation.arabic_semantics --run-id arabic_message_semantics_v1 --check`.
 
 ```typescript
 interface OwnershipRequest {
@@ -392,10 +423,11 @@ unknown/agreement/conflict resolution. No-context requests still validate the
 wrapper's required fields; malformed wrappers use invalid_request rather than
 the absent fast path. This gives both languages a deterministic error order.
 
-### Proposed acceptance cases
+### Acceptance cases
 
 These are authored design cases, not source labels, training rows, or accuracy
-measurements. Add executable controls only when this API slice is approved.
+measurements. Executable controls are in `tests/fixtures/ownership_context_cases.json`
+and `tests/python/test_ownership_context.py`.
 
 | Message evidence / context | Required assessment and diagnostic |
 | --- | --- |
@@ -432,15 +464,122 @@ does not make `*6284`, `xxxx6284` and a full account number equivalent. No accou
 alias inference, bank registry, person-name ownership registry or completeness
 assumption belongs in this first slice.
 
+### Sample review and proposed paired-movement repair
+
+After the ownership tester was added, a read-only review checked the CliQ In,
+CliQ Out and `internal_transfer` presets, plus the English/Arabic explicit-own
+contract examples. Five texts × four context choices × three numeral scripts
+(Latin, Arabic-Indic, Eastern Arabic-Indic) produced60 complete Python/TypeScript/
+browser matches. These are exposed development checks; the context choices are
+hypothetical test inputs, not new human ownership facts or training labels.
+
+CliQ In/Out preserve incoming/outgoing direction and amount, review unknown
+ownership, include confirmed other-person movements, and exclude confirmed own
+movements. Outgoing CliQ purpose remains unknown rather than inventing a category.
+Explicit-own text is excluded without context; a contrary other-person confirmation
+correctly requires review.
+
+The preset button called Own-account transfer is only a historical label. Its body
+describes one shared amount debited from a masked identifier and credited to
+another; it does not establish ownership or explicitly use transfer wording.
+Current detailed output is completed + review + uncertain direction + not_transfer;
+valid context returns not_applicable/not_a_transfer. This is the event-detection
+limitation already reserved in the ownership design, not a failing binding rule.
+Do not use the preset name as a label or let context manufacture a transfer.
+
+Proposed next bounded change (not implemented in this review):
+
+- Recognize a narrowly linked debit-from / credit-to movement with one shared
+  transaction amount and two explicit account-identifier roles, in parallel
+  English/Arabic structural patterns. Apply existing negative/completion guards;
+  reject unrelated events, OTP/requests/declines, multiple competing amounts and
+  identifiers occurring only in balance/date/authorization text.
+- Set transferRelationship to unknown. Two identifiers establish neither own
+  ownership nor another person. Preserve unresolved physical direction when both
+  legs are present and the owner's role is not stated.
+- For the preset, no context or unknown confirmation must still review. Explicit
+  own confirmation may exclude a completed movement; other-person confirmation
+  must still review if direction is unresolved. Do not change amount/currency or
+  infer a category from ownership.
+- Add bilingual linked/unlinked and negative-event contrasts with the same numeral
+  scripts. Measure every changed detailed output against archived source **and**
+  evidence-contract bytes; preserve the legacy226-case gate, all frozen labels,
+  model bytes and reservations. Existing ownership baseline checks deliberately
+  assert an unchanged evidence contract: replace that assumption with an explicit
+  reviewed change comparison for this future repair, rather than silently relaxing
+  it or attempting historical replay with the new patterns.
+- Rename the tester sample to Paired debit / credit during the repair. Keep the
+  underlying preset/fixtures intact; no default caller migration, training,
+  account-list automation or production publication follows from this proposal.
+
 ### Implementation and review boundary
 
-After approval, define a separate versioned wrapper schema/validator and authored
-controls. Refactor internal evidence collection/finalization just enough to
-apply ownership before the existing decision/category stage. Both old detailed
-methods must call the unchanged no-context path; new methods return the wrapper.
-Re-evaluate purpose after a reviewed transfer becomes included outgoing; do not
-leave a formerly not_applicable category state on an included expense. Preserve
-raw names, numeric handling, negative-event guards and the approved tester layout.
+The paired-movement proposal above was subsequently approved and implemented in
+evidence grammar1.0.4. Two strict shared templates recognize one explicit amount
+with linked debited-from/credited-to masked endpoints in English or Arabic. No
+other financial event may remain outside the match; dates and balances retain
+their existing handling. Missing/competing amounts, same masks, unlinked events,
+card/reference slots and negative/conditional language cannot acquire ownership
+confirmation through this detector. Account abbreviations such as Acc. are
+supported without joining unrelated sentences. Scope is deliberately narrow;
+there is no account registry, alias inference or new authenticity claim.
+
+Without explicit text ownership the movement remains unknown + review + uncertain
+direction. Own-account confirmation excludes a completed movement; another-person
+confirmation still reviews unresolved direction. Explicit-own Arabic wording
+continues to count as a body fact. The tester sample title is now Paired debit /
+credit; its text and all older fixtures remain unchanged.
+
+The39 new texts across three numeral scripts produce117 body/legacy comparisons
+and468 wrapper comparisons in all three runtimes. Thirty body variants change
+relative to the archived source and grammar; their full field differences are in
+the report. One previously unrecognized ownership control has a versioned expected
+outcome override in paired_movement_cases.json, preserving the old fixture bytes.
+All389 prior detailed AND legacy assessments remain identical;778 omitted/null
+context requests per runtime retain them. A Python-only legacy word-boundary
+inconsistency also needed correction: three new numeral variants stop treating
+«الحساب …» as a party name and now match TypeScript/browser.
+
+At the paired-movement milestone, remaining findings were explicit in its report:
+four unrecognized Arabic controls, in all three scripts, retain pre-existing
+message-only inclusions (failure with definite العملية, conditional wording,
+separate debit/credit sentences, and same-mask debit/credit). They gain no new
+transfer recognition or ownership application. Their ordinary completion/direction
+assessment was subsequently repaired below; these controls are not independent data.
+
+### Arabic completion and credit repair, evidence1.0.5
+
+The failed-operation grammar now covers definite العملية/الحركة. Pure Arabic
+conditions (including clitic-prefixed إذا, لو, عندما, كلما and في حال/حالة) cannot
+prove completion. Conditional clauses are scoped separately: a receipt followed
+by help text stays factual, while an additional hypothetical money movement
+requires review without erasing the earlier amount/direction. Long conditional
+clauses and decimal amounts cannot bypass the guard.
+
+Definite monetary credit wording «إضافة المبلغ» supplies incoming evidence.
+Pronominal «إضافته إلى الحساب/محفظتك» requires an account/wallet target; a
+perfective تم/تمت phrase can establish completion. Product/cart additions and
+generic ledger posting do not become incoming payments through these rules.
+When both debit and credit facts remain, direction stays uncertain; neither
+same masks nor ownership confirmation resolves it automatically.
+
+The four earlier inclusion findings now produce review for the contradictory
+failure and ambiguous debit/credit texts, or exclusion for the purely conditional
+text. Their exact field revisions live in the new
+`tests/fixtures/arabic_message_semantics_cases.json`; the39-text prior fixture and
+its historical report remain unchanged. Forty-five authored bilingual contrasts,
+three digit scripts,135 body and540 wrapper comparisons agree across Python,
+TypeScript and the browser. Eighteen previously included variants now exclude or
+review; all changes against the saved1.0.4 source/engine/grammar are recorded.
+All389 earlier detailed and legacy outputs remain identical.153 Python tests,
+ten TypeScript suites and226 frozen cases pass. The tester's detailed comparison
+and optional panel expose the repair; its default legacy view remains unchanged.
+These are conformance checks, not independent accuracy or a model promotion.
+
+The implemented ownership wrapper keeps the separate versioned contract/validator
+and canonical result schema. It applies ownership before decision/category,
+re-evaluates purpose after a reviewed transfer becomes included outgoing, and
+preserves raw names, numeral handling and the approved tester layout.
 
 Verify Python/TypeScript/browser equality including wrapper diagnostics, all
 acceptance cases and numeral/name contrasts, current no-context measurements,
@@ -449,3 +588,28 @@ measurements, report their coverage/abstentions, and preserve new source hashes
 under a new report ID. No promotion or accuracy claim follows from passing these
 authored cases. A developer-only opt-in comparison control can be considered
 after the engine contract works; default caller migration remains a separate gate.
+
+### Explicit example introductions, evidence 1.0.6
+
+The shared `reportedSpeech` pattern now recognizes explicit introductions such as
+“This is an example…” and “هذا مثال توضيحي…”, including qualified teaching/test
+examples and optional Note/ملاحظة prefixes. These new alternatives are anchored
+to the start of a clause. The existing detailed assessment consequently treats
+their transaction wording as reported speech rather than completion evidence.
+Both originally reported examples now return `non_transaction` / `exclude`,
+reason `personal_conversation`, with no monetary or party fields.
+
+Quotation marks alone do not reject a notification. Quoted merchant names,
+including “Example Shop” and “Teaching Example”, remain valid receipt content.
+The current conservative conflict policy remains: mixed actual/example clauses
+or examples containing additional completed-looking sentences return review.
+This correction does not implement a general parser for nested quotations or
+arbitrary reported speech.
+
+The correction applies to `predict_detailed` / `analyzeDetailed` and the tester's
+existing message-only recording assessment. Legacy caller outputs and all
+learned heads remain unchanged; no model training or promotion occurred. Fourteen
+authored controls, expanded over three numeric scripts and two sender/contact
+settings, provide 84 complete Python/TypeScript/built-browser comparisons. A
+436-input before/after check changes only the two reported examples. These are
+structural conformance results, not learned-model or independent accuracy gains.

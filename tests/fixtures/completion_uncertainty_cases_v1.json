@@ -1,0 +1,441 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Assistant-authored exposed development contrasts, not independent evidence",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false,
+  "cases": [
+    {
+      "id": "closed-unknown-en",
+      "language": "en",
+      "boundary": "outcome_unknown",
+      "input": {
+        "text": "Credit notice: The request is closed, but its posting outcome is unspecified."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "closed-unknown-ar",
+      "language": "ar",
+      "boundary": "outcome_unknown",
+      "input": {
+        "text": "إشعار القيد: الطلب مغلق، لكن نتيجة القيد غير مذكورة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "processing-unknown-en",
+      "language": "en",
+      "boundary": "outcome_unknown",
+      "input": {
+        "text": "Wage report: The file was submitted without confirmation of posting or failure."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "processing-unknown-ar",
+      "language": "ar",
+      "boundary": "outcome_unknown",
+      "input": {
+        "text": "تقرير الأجر: أرسل الملف للمعالجة دون تأكيد حصول القيد أو فشله."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "hold-unknown-ar",
+      "language": "ar",
+      "boundary": "settlement_unknown",
+      "input": {
+        "text": "إشعار حجز على البطاقة بقيمة 17 JOD؛ لا تتوفر معلومات تؤكد التسوية النهائية."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "hold-unknown-en",
+      "language": "en",
+      "boundary": "settlement_unknown",
+      "input": {
+        "text": "Card hold of JOD 17; the settlement outcome is unconfirmed."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "cancel-unknown-en",
+      "language": "en",
+      "boundary": "final_outcome_unknown",
+      "input": {
+        "text": "A debit and a cancellation concern the same JOD 17 operation; its final outcome is unresolved."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "cancel-unknown-ar",
+      "language": "ar",
+      "boundary": "outcome_unknown",
+      "input": {
+        "text": "ورد خصم وإلغاء لنفس العملية بقيمة 17 JOD؛ نتيجة الخصم غير معروفة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "execution-alternatives-en",
+      "language": "en",
+      "boundary": "outcome_unknown",
+      "input": {
+        "text": "Payment status unavailable: the payment may have executed or remained pending."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "execution-alternatives-ar",
+      "language": "ar",
+      "boundary": "outcome_unknown",
+      "input": {
+        "text": "حالة الدفعة غير متوفرة؛ حصول الخصم غير مؤكد."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "context-unknown-en",
+      "language": "en",
+      "boundary": "context_unknown",
+      "input": {
+        "text": "The message opening is missing; the remaining line could be a teaching quote or actual activity."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "context-unknown-ar",
+      "language": "ar",
+      "boundary": "context_unknown",
+      "input": {
+        "text": "مقدمة الرسالة مفقودة؛ قد تكون العبارة اقتباسا تعليميا أو حركة حقيقية."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown-debit-en",
+      "language": "en",
+      "boundary": "outcome_unknown",
+      "input": {
+        "text": "Whether JOD 17 was debited from your account is not confirmed."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown-debit-ar",
+      "language": "ar",
+      "boundary": "outcome_unknown",
+      "input": {
+        "text": "نتيجة الخصم بقيمة 17 JOD غير مؤكدة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "deny-debit-en",
+      "language": "en",
+      "boundary": "explicit_denial",
+      "input": {
+        "text": "No funds were debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "deny-debit-ar",
+      "language": "ar",
+      "boundary": "explicit_denial",
+      "input": {
+        "text": "لم يتم خصم أي مبلغ من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "pending-en",
+      "language": "en",
+      "boundary": "explicit_pending",
+      "input": {
+        "text": "Your JOD 17 payment is pending and has not been completed."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "pending-ar",
+      "language": "ar",
+      "boundary": "explicit_pending",
+      "input": {
+        "text": "دفعة بقيمة 17 JOD قيد المعالجة ولم يتم الخصم."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "declined-en",
+      "language": "en",
+      "boundary": "explicit_failure",
+      "input": {
+        "text": "Your JOD 17 payment was declined."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "declined-ar",
+      "language": "ar",
+      "boundary": "explicit_failure",
+      "input": {
+        "text": "تم رفض الدفع بقيمة 17 JOD."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "cash-debit-en",
+      "language": "en",
+      "boundary": "completed_contrast",
+      "input": {
+        "text": "JOD 17 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include"
+      }
+    },
+    {
+      "id": "cash-debit-ar",
+      "language": "ar",
+      "boundary": "completed_contrast",
+      "input": {
+        "text": "تم خصم 17 JOD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include"
+      }
+    },
+    {
+      "id": "cash-credit-en",
+      "language": "en",
+      "boundary": "completed_contrast",
+      "input": {
+        "text": "JOD 17 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include"
+      }
+    },
+    {
+      "id": "cash-credit-ar",
+      "language": "ar",
+      "boundary": "completed_contrast",
+      "input": {
+        "text": "تم إيداع 17 JOD في حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include"
+      }
+    },
+    {
+      "id": "example-unknown-en",
+      "language": "en",
+      "boundary": "instruction_contrast",
+      "input": {
+        "text": "This is an example: \"The posting outcome is unknown.\""
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "example-unknown-ar",
+      "language": "ar",
+      "boundary": "instruction_contrast",
+      "input": {
+        "text": "مثال: «نتيجة القيد غير مؤكدة.»"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "question-unknown-en",
+      "language": "en",
+      "boundary": "question_contrast",
+      "input": {
+        "text": "Can you confirm whether JOD 17 was credited? The result is not confirmed."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "question-unknown-ar",
+      "language": "ar",
+      "boundary": "question_contrast",
+      "input": {
+        "text": "هل يمكنك تأكيد نتيجة القيد غير المذكورة؟"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "otp-unknown-en",
+      "language": "en",
+      "boundary": "authorization_contrast",
+      "input": {
+        "text": "Use code 934821 to authorize a JOD 17 payment whose settlement outcome is unconfirmed."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "otp-unknown-ar",
+      "language": "ar",
+      "boundary": "authorization_contrast",
+      "input": {
+        "text": "أدخل رمز 934821 لتأكيد شراء بقيمة 17 JOD ونتيجة السداد غير مؤكدة."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "sport-unknown-en",
+      "language": "en",
+      "boundary": "nonfinancial_contrast",
+      "input": {
+        "text": "The final outcome is unresolved for the football match."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "profile-unknown-ar",
+      "language": "ar",
+      "boundary": "nonfinancial_contrast",
+      "input": {
+        "text": "نتيجة مباراة كرة القدم غير معروفة."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "points-unknown-en",
+      "language": "en",
+      "boundary": "noncash_contrast",
+      "input": {
+        "text": "150 reward points were credited to your profile; the posting outcome is unknown."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "points-unknown-ar",
+      "language": "ar",
+      "boundary": "noncash_contrast",
+      "input": {
+        "text": "تمت إضافة 150 نقطة مكافآت إلى ملفك؛ نتيجة القيد غير مؤكدة."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude"
+      }
+    },
+    {
+      "id": "points-cash-unknown-en",
+      "language": "en",
+      "boundary": "mixed_cash_unknown",
+      "input": {
+        "text": "150 reward points were credited and a payment of JOD 17 is mentioned; the settlement outcome is unconfirmed."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "points-cash-unknown-ar",
+      "language": "ar",
+      "boundary": "mixed_cash_unknown",
+      "input": {
+        "text": "تمت إضافة 150 نقطة مكافآت وورد دفع بقيمة 17 JOD؛ نتيجة الخصم غير مؤكدة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    }
+  ]
+}

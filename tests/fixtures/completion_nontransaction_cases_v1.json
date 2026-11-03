@@ -1,0 +1,747 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Assistant-authored exposed development contrasts, not independent evidence",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false,
+  "cases": [
+    {
+      "id": "nothing-debited-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "Withdrawal failed; nothing was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "payment-refused-en",
+      "language": "en",
+      "boundary": "failure",
+      "input": {
+        "text": "The JOD 17 payment was refused."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "payment-unfinished-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "Your payment did not finish and no debit is recorded in the wallet."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "not-withdrawn-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "No funds were withdrawn from your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "not-executed-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "Your JOD 17 payment has not been carried out."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "no-posted-debit-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "No debit is posted for the JOD 17 operation."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "refused-request-ar",
+      "language": "ar",
+      "boundary": "failure",
+      "input": {
+        "text": "رُفض طلب التحويل بقيمة 17 JOD؛ لم يُسحب أي مبلغ من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "cash-failure-ar",
+      "language": "ar",
+      "boundary": "failure",
+      "input": {
+        "text": "تعذر صرف النقد؛ لم يسجل البنك أي مبلغ مدين على حسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "unfinished-ar",
+      "language": "ar",
+      "boundary": "denial",
+      "input": {
+        "text": "لم ينته دفع الفاتورة ولا يوجد خصم مثبت في المحفظة."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "no-withdrawal-ar",
+      "language": "ar",
+      "boundary": "denial",
+      "input": {
+        "text": "لم يُسحب أي مبلغ من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "no-debit-ar",
+      "language": "ar",
+      "boundary": "denial",
+      "input": {
+        "text": "لا يوجد خصم مسجل في حسابك لهذه الدفعة."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "not-executed-ar",
+      "language": "ar",
+      "boundary": "denial",
+      "input": {
+        "text": "لم تُنفذ الدفعة بعد."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "approval-needs-en",
+      "language": "en",
+      "boundary": "approval_request",
+      "input": {
+        "text": "The JOD 17 payment needs your approval and has not been carried out."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "approval-awaits-en",
+      "language": "en",
+      "boundary": "approval_request",
+      "input": {
+        "text": "Transfer request for JOD 17 awaits your approval. No debit is posted."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "approval-ar",
+      "language": "ar",
+      "boundary": "approval_request",
+      "input": {
+        "text": "الدفعة بقيمة 17 JOD بانتظار موافقتك ولم تنفذ بعد."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "adoption-ar",
+      "language": "ar",
+      "boundary": "approval_request",
+      "input": {
+        "text": "تحديث الدفعة: بانتظار اعتمادك ولم تقتطع من الحساب."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "finish-question-en",
+      "language": "en",
+      "boundary": "inquiry",
+      "input": {
+        "text": "Did you finish the payment?"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "receipt-request-en",
+      "language": "en",
+      "boundary": "inquiry",
+      "input": {
+        "text": "Send me the payment receipt or screenshot."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "confirmation-request-en",
+      "language": "en",
+      "boundary": "inquiry",
+      "input": {
+        "text": "Send confirmation of receiving the wage after checking your statement."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "family-request-en",
+      "language": "en",
+      "boundary": "personal_frame",
+      "input": {
+        "text": "Family message: Send me your wallet number so I can send the gift."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "accountant-request-ar",
+      "language": "ar",
+      "boundary": "personal_frame",
+      "input": {
+        "text": "طلب من المحاسب: ابعث تأكيد استلام الأجر بعد مراجعة كشفك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "direct-confirmation-ar",
+      "language": "ar",
+      "boundary": "inquiry",
+      "input": {
+        "text": "ابعث تأكيد استلام الأجر بعد مراجعة كشفك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "paid-claim-en",
+      "language": "en",
+      "boundary": "personal_claim",
+      "input": {
+        "text": "I paid JOD 17 for dinner; message me when you check."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "paid-your-claim-en",
+      "language": "en",
+      "boundary": "personal_claim",
+      "input": {
+        "text": "I paid your JOD 17 taxi fare."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "paid-claim-ar",
+      "language": "ar",
+      "boundary": "personal_claim",
+      "input": {
+        "text": "أنا دفعتلك 17 JOD عن العشا، ابعثلي لما تتأكد."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "paid-claim-direct-ar",
+      "language": "ar",
+      "boundary": "personal_claim",
+      "input": {
+        "text": "دفعتلك 17 JOD عن الغدا."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "pin-change-en",
+      "language": "en",
+      "boundary": "administration",
+      "input": {
+        "text": "Your card PIN was changed successfully."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "pin-reset-en",
+      "language": "en",
+      "boundary": "administration",
+      "input": {
+        "text": "Your PIN has been reset. Open card settings for details."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "pin-change-ar",
+      "language": "ar",
+      "boundary": "administration",
+      "input": {
+        "text": "تم تغيير الرقم السري لبطاقتك بنجاح."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "pin-update-ar",
+      "language": "ar",
+      "boundary": "administration",
+      "input": {
+        "text": "تم تحديث الرقم السري لبطاقتك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "login-code-en",
+      "language": "en",
+      "boundary": "login_only",
+      "input": {
+        "text": "Your login code is 934821. Use it only to sign in."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "login-code-ar",
+      "language": "ar",
+      "boundary": "login_only",
+      "input": {
+        "text": "رمز دخولك هو 934821. أدخله لتسجيل الدخول فقط."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "following-example-ar",
+      "language": "ar",
+      "boundary": "instructional",
+      "input": {
+        "text": "النص التالي مثال للاختبار: «تم خصم 17 JOD من حسابك»."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "following-example-en",
+      "language": "en",
+      "boundary": "instructional",
+      "input": {
+        "text": "The following text is a test example: \"JOD 17 was debited from your account.\""
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "editor-note-ar",
+      "language": "ar",
+      "boundary": "instructional",
+      "input": {
+        "text": "ملاحظة محرر الدرس: كل إشعارات الخصم في هذه الصفحة مختلقة ولا تخص حسابا حقيقيا."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "editor-note-en",
+      "language": "en",
+      "boundary": "instructional",
+      "input": {
+        "text": "Lesson editor note: All debit notices on this page are fictional and do not concern a real account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "debit-en",
+      "language": "en",
+      "boundary": "completed_control",
+      "input": {
+        "text": "JOD 17 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "debit-ar",
+      "language": "ar",
+      "boundary": "completed_control",
+      "input": {
+        "text": "تم خصم 17 JOD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "credit-en",
+      "language": "en",
+      "boundary": "completed_control",
+      "input": {
+        "text": "JOD 17 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "credit-ar",
+      "language": "ar",
+      "boundary": "completed_control",
+      "input": {
+        "text": "تم إيداع 17 JOD في حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "pin-and-cash-en",
+      "language": "en",
+      "boundary": "admin_cash_control",
+      "input": {
+        "text": "Your PIN was changed and JOD 17 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "pin-and-cash-ar",
+      "language": "ar",
+      "boundary": "admin_cash_control",
+      "input": {
+        "text": "تم تغيير الرقم السري وتم خصم 17 JOD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "question-merchant-en",
+      "language": "en",
+      "boundary": "merchant_control",
+      "input": {
+        "text": "JOD 17 was debited from your account at Did You Finish Cafe."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "receipt-merchant-ar",
+      "language": "ar",
+      "boundary": "merchant_control",
+      "input": {
+        "text": "تم خصم 17 JOD من حسابك لدى متجر الإيصال."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "login-plus-cash-en",
+      "language": "en",
+      "boundary": "login_cash_control",
+      "input": {
+        "text": "JOD 17 was debited from your account. Your login code is 934821."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "login-plus-cash-ar",
+      "language": "ar",
+      "boundary": "login_cash_control",
+      "input": {
+        "text": "تم خصم 17 JOD من حسابك. رمز دخولك هو 934821."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "debit-failure-conflict-en",
+      "language": "en",
+      "boundary": "conflict_control",
+      "input": {
+        "text": "JOD 17 was debited from your account. The payment was refused."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "debit-failure-conflict-ar",
+      "language": "ar",
+      "boundary": "conflict_control",
+      "input": {
+        "text": "تم خصم 17 JOD من حسابك. رفض الدفع."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown-control-en",
+      "language": "en",
+      "boundary": "unknown_control",
+      "input": {
+        "text": "The payment outcome is unknown."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown-control-ar",
+      "language": "ar",
+      "boundary": "unknown_control",
+      "input": {
+        "text": "نتيجة الخصم غير مؤكدة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    }
+  ]
+}

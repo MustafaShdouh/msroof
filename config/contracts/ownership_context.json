@@ -1,0 +1,20 @@
+{
+  "contractVersion": "1.0.0",
+  "assessmentContractVersion": "1.0.0",
+  "blankIdentifierPattern": "^[\\u0009-\\u000D\\u001C-\\u0020\\u0085\\u00A0\\u1680\\u2000-\\u200A\\u2028\\u2029\\u202F\\u205F\\u3000\\uFEFF]*$",
+  "requestRequired": ["ownerScopeId", "messageId", "message"],
+  "requestOptional": ["ownershipContext"],
+  "messageRequired": ["text"],
+  "messageOptional": ["sender", "isContact", "receivedAt"],
+  "contextFields": ["schemaVersion", "ownerScopeId", "messageId", "text", "evidence", "relationship"],
+  "responseFields": ["ownershipContractVersion", "assessment", "contextStatus", "contextReason"],
+  "relationships": ["own_accounts", "other_person", "unknown"],
+  "diagnostics": {
+    "absent": ["not_provided"],
+    "applied": ["confirmed_relationship"],
+    "unresolved": ["confirmation_unknown"],
+    "not_applicable": ["non_transaction", "not_a_transfer"],
+    "invalid": ["invalid_request", "invalid_context", "unsupported_version", "owner_mismatch", "message_mismatch", "untrusted_evidence"],
+    "conflict": ["text_context_conflict"]
+  }
+}
