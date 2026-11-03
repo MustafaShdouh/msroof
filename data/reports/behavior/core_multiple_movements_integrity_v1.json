@@ -1,0 +1,56 @@
+{
+  "kind": "Exposed source-derived development conformance, NOT independent accuracy",
+  "before": {
+    "entries": 426,
+    "allAssertedFieldsCorrect": 36,
+    "multipleMovementEntries": 384,
+    "multipleWrongIncludes": 120,
+    "multipleWrongExcludes": 48,
+    "multipleReviewWithoutAmount": 168,
+    "singleEventControls": 42,
+    "singleEventControlsCorrect": 36
+  },
+  "after": {
+    "entries": 426,
+    "allAssertedFieldsCorrect": 426,
+    "multipleMovementEntries": 384,
+    "multipleWrongIncludes": 0,
+    "multipleWrongExcludes": 0,
+    "multipleReviewWithoutAmount": 384,
+    "singleEventControls": 42,
+    "singleEventControlsCorrect": 42
+  },
+  "unchangedOriginalDetailedAndLegacyEntries": 2302,
+  "unchangedOwnershipRequests": 70,
+  "unchangedModelArtifacts": 23,
+  "originalSnapshotSha256": "68874901b1ef4af25ec7e7c30a48b50255c34b74de86294b05de6d4cc312c109",
+  "privateRegressionSnapshotSha256": "c8e05b714542f2d09e51770047827b426b3ae64e75f0c19c8fd390ea504c03bf",
+  "sourceSha256": {
+    "tools/evaluation/core_boundary_check.py": "ce31b43f8232b947c3390681a63845d84ab673157f4d58c9941420abe38d3489",
+    "src/python/money_syntax.py": "d8a37c4f329a247f319370200c84032f5e07fc9d91e4cb16f0ca2ff1ef27c9ac",
+    "src/typescript/MoneySyntax.ts": "344772e1695867d7b5b3a6c223cfb709a74ee5d68732a5ab345896fea259a5f7",
+    "src/python/account_movement.py": "9a2595e2a5478811f18e6d9dde3129ff1936283e6f4ea0cf6d8adcdaf5f07e00",
+    "src/typescript/AccountMovement.ts": "5068854995974fc52f24c98484edc461453a62e5184f65be1ff0ae0182682198",
+    "src/python/direction_policy.py": "725767c650b2a99cc7f61455066b20e45803aaaea83901832d51647943d6dd74",
+    "src/typescript/DirectionPolicy.ts": "a9c6d2ef1b1b1d5e5dd4b4289f17bc076c917c1bc824d311a44e62a55795559a",
+    "src/python/money_candidates.py": "392c1a8d7268203d77bf22cf86523fc751364e95ca7ffb9922db08c7f36df4c1",
+    "src/typescript/MoneyCandidates.ts": "453cb9107e6880497ee0ec134e632ceb2f377a574e5a1c695444d2fc23ea15e5",
+    "src/python/detailed_assessment.py": "e8fc67d76bd8ded8993e0d8b993035d540a9d6fc23c387380cde080c18f3ef22",
+    "src/typescript/DetailedAssessment.ts": "4a59788c2f55a77b9a4a994a71d94f74943b4942e99758141acce72ffbd4b28f",
+    "config/contracts/transaction_evidence.json": "bd2558633a737c9cdfee27354e3eb8846c84f5638629ee4c1f2402c80d547e6c",
+    "tools/browser/tester.html": "7a1fe71583cfbdffd04f81fb73a526051c0b44dab16ffd60e1e58b38d78eae7d",
+    "tests/fixtures/core_multiple_movements_v1.json": "b8bdd869d383dd3806ea59b3c4af91c6ddf9183e37e582079e337219983d7162",
+    "tests/python/test_core_multiple_movements.py": "512fafe73c86456a802b79fb38beacf928470a8b58c44f308d90e2113a0659f8",
+    "tests/python/test_quoted_examples.py": "71c30a934e3a93ace2d5e572ed4629e45d1543fd1096e8b9d79737d7f015a830",
+    "data/reports/behavior/core_multiple_movements_v1_comparison.json": "02518f51b9e1d930d7ecbe59cce914f1bb04c7544748dbce98536182e2311e1b"
+  },
+  "training": false,
+  "reservedInferred": false,
+  "newResearchModelInference": false,
+  "independentEvaluationEligible": false,
+  "limits": [
+    "All compositions/variants are exposed assistant-authored development cases, not genuine new SMS.",
+    "This guard counts amount-bearing completed clauses, not a general same-clause event segmentation model.",
+    "Optional party/category invariance and actual mobile performance are not claimed."
+  ]
+}
