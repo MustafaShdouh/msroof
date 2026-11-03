@@ -40,6 +40,44 @@ class MoneyCandidateTests(unittest.TestCase):
         self.assertEqual({r['role'] for r in other[1]['exclusions']},{'balance','identifier','date'})
         self.assertEqual([c['value'] for c in other[5]['monetary']],[20])
 
+    def test_balance_preserves_the_currency_of_a_debit_on_the_next_line(self):
+        debit = 'USD 8.250 was debited from your account.'
+        cases = [
+            ('Available balance 630.500\n' + debit, 'USD', 'explicit'),
+            ('Available balance JOD 630.500\r\n' + debit, 'USD', 'explicit'),
+            ('Available balance 630.500\\r\\n' + debit, 'USD', 'explicit'),
+            ('📩 الرصيد المتاح ٦٣٠٫٥٠٠\nUSD ٨٫٢٥٠ was debited from your account.', 'USD', 'explicit'),
+            ('Available balance 630.500 JOD\n' + debit, 'USD', 'explicit'),
+            ('Available balance 630.500\nUSD\nYour account was debited 8.250.', 'JOD', 'default_missing'),
+        ]
+        inputs = [dict(id=str(i), input=dict(text=text)) for i, (text, _, _) in enumerate(cases)]
+        detailed = subprocess.run(
+            [node_executable(), str(ROOT/'tools/evaluation/probe_detailed.ts')],
+            input=json.dumps(dict(cases=inputs)), capture_output=True, text=True,
+            encoding='utf-8', cwd=ROOT, check=True,
+        )
+        candidates = subprocess.run(
+            [node_executable(), str(ROOT/'tools/evaluation/probe_money_candidates.ts')],
+            input=json.dumps([text for text, _, _ in cases]), capture_output=True, text=True,
+            encoding='utf-8', cwd=ROOT, check=True,
+        )
+        engine = MasroofEngine()
+        for (text, currency, resolution), row, js_candidates in zip(
+            cases, json.loads(detailed.stdout)['rows'], json.loads(candidates.stdout), strict=True
+        ):
+            with self.subTest(text=text):
+                actual = engine.predict_detailed(dict(text=text))
+                self.assertEqual(actual, row['typescript'])
+                self.assertEqual(actual, row['browser'])
+                self.assertEqual(actual['trackingDecision'], 'include')
+                self.assertEqual(actual['amount'], 8.25)
+                self.assertEqual(actual['currency'], currency)
+                self.assertEqual(actual['currencyResolution'], resolution)
+                evidence = collect_candidates(EntityText(text), engine.parse_number)
+                self.assertEqual(evidence, js_candidates)
+                balance, = [item for item in evidence['exclusions'] if item['role'] == 'balance']
+                self.assertEqual('USD' in text[balance['start']:balance['end']], resolution == 'default_missing')
+
     def test_owner_selected_posted_total_and_account_charge(self):
         examples=[
             ('Purchase JOD 10; fee JOD 0.500; total debited JOD 10.500.',10.5,'JOD'),

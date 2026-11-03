@@ -9,9 +9,14 @@ MONEY = re.compile("(" + currency + r")\s*(" + number + ")|(" + number + r")\s*(
 PRIMARY = re.compile(RULES["patterns"]["explicitPrimary"] + "(?:" + MONEY.pattern + ")", re.I | re.ASCII)
 RECEIVER = re.compile(RULES["patterns"]["amountReceiverAnchor"] + "(?:" + MONEY.pattern + ")", re.I | re.ASCII)
 CURRENCY = re.compile(currency, re.I | re.ASCII)
-balance_value = "(?:" + currency + r"\s*)?[+-]?" + number + "(?:\\s*" + currency + ")?"
-BALANCE = re.compile("(?:" + RULES["patterns"]["balance"] + ")" + RULES["patterns"]["balanceJoin"] + balance_value, re.I | re.ASCII)
-BALANCE_SUFFIX = re.compile(balance_value + RULES["patterns"]["balanceSuffix"], re.I | re.ASCII)
+balance_number = "(?:" + currency + r"\s*)?[+-]?" + number
+balance_unit = r"(\s*)" + currency
+BALANCE = re.compile("(?:" + RULES["patterns"]["balance"] + ")" + RULES["patterns"]["balanceJoin"]
+                     + balance_number + "(?:" + balance_unit + ")?", re.I | re.ASCII)
+BALANCE_SUFFIX = re.compile(balance_number + r"(?:\s*" + currency + ")?"
+                            + RULES["patterns"]["balanceSuffix"], re.I | re.ASCII)
+FOLLOWING_AMOUNT = re.compile(r"\s*(" + number + ")", re.ASCII)
+SOURCE_LINE_BREAK = re.compile(r"[\r\n]|\\[nr]")
 UNMARKED = re.compile("(?:" + RULES["patterns"]["amountAnchor"] + ")(" + number + ")", re.I | re.ASCII)
 BARE_PRIMARY = re.compile(RULES['patterns']['explicitPrimary'] + bare_amount, re.I | re.ASCII)
 BARE_LIST = re.compile(RULES['unmarkedAccountAmount']['list'], re.I | re.ASCII)
@@ -22,13 +27,24 @@ def bare_primary_spans(text):
     return [dict(start=m.start(1),end=m.end(1),contextStart=m.start(),resolution='default_ambiguous' if m[2] else 'default_missing')
             for m in BARE_PRIMARY.finditer(text)]
 
-def mask_balances(text, on_excluded=None):
+def mask_balances(text, on_excluded=None, source=None):
     # Prefixes win: in "20 JOD الرصيد 100 JOD", only 100 is a balance.
-    def blank(match):
-        if on_excluded is not None: on_excluded(match.start(),match.end())
-        return " " * len(match.group())
-    working = BALANCE.sub(blank, text)
-    return BALANCE_SUFFIX.sub(blank, working)
+    def blank(start, end):
+        if on_excluded is not None:
+            on_excluded(start, end)
+        return " " * (end - start)
+
+    def blank_prefix(match):
+        end = match.end()
+        if source is not None and match[1] and SOURCE_LINE_BREAK.search(source.exact(*match.span(1)) or ""):
+            following = FOLLOWING_AMOUNT.match(text, end)
+            if following and not SOURCE_LINE_BREAK.search(source.exact(end, following.start(1)) or ""):
+                # The currency starts the amount on the next source line.
+                return blank(match.start(), match.start(1)) + text[match.start(1):end]
+        return blank(match.start(), end)
+
+    working = BALANCE.sub(blank_prefix, text)
+    return BALANCE_SUFFIX.sub(lambda match: blank(*match.span()), working)
 
 
 def collect_candidates(source, parse_number):
@@ -37,7 +53,7 @@ def collect_candidates(source, parse_number):
     def excluded(start,end):
         a,b=source.starts[start],source.ends[end-1]
         exclusions.append(dict(role="balance",start=a,end=b))
-    working = mask_balances(source.text,excluded)
+    working = mask_balances(source.text, excluded, source)
     account_spans=[];primary_spans=[]
     for role, pattern in (("date", RX["date"]), ("identifier", RX["identifier"])):
         # Receipt amounts after an account subject are not account identifiers.

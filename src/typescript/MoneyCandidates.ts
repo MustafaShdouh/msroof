@@ -12,9 +12,12 @@ export const MONEY = new RegExp('(' + currency + ')\\s*(' + number + ')|(' + num
 const PRIMARY = new RegExp(rules.patterns.explicitPrimary + '(?:' + MONEY.source + ')','gdi');
 const RECEIVER = new RegExp(rules.patterns.amountReceiverAnchor + '(?:' + MONEY.source + ')','gdi');
 const CURRENCY = new RegExp(currency, 'gi');
-const balanceValue = '(?:' + currency + '\\s*)?[+-]?' + number + '(?:\\s*' + currency + ')?';
-const BALANCE = new RegExp('(?:' + rules.patterns.balance + ')' + rules.patterns.balanceJoin + balanceValue, 'gi');
-const BALANCE_SUFFIX = new RegExp(balanceValue + rules.patterns.balanceSuffix, 'gi');
+const balanceNumber = '(?:' + currency + '\\s*)?[+-]?' + number;
+const BALANCE = new RegExp('(?:' + rules.patterns.balance + ')' + rules.patterns.balanceJoin
+  + balanceNumber + '(?:(\\s*)(' + currency + '))?', 'gi');
+const BALANCE_SUFFIX = new RegExp(balanceNumber + '(?:\\s*' + currency + ')?' + rules.patterns.balanceSuffix, 'gi');
+const FOLLOWING_AMOUNT = new RegExp('^(\\s*)' + number);
+const SOURCE_LINE_BREAK = /[\r\n]|\\[nr]/;
 const UNMARKED = new RegExp('(?:' + rules.patterns.amountAnchor + ')(' + number + ')', 'gdi');
 const BARE_PRIMARY = new RegExp(rules.patterns.explicitPrimary + bareAmount,'gdi');
 const BARE_LIST = new RegExp(rules.unmarkedAccountAmount.list,'i');
@@ -25,20 +28,35 @@ function barePrimarySpans(text: string) {
 }
 interface Candidate {value: number;currency: string|null;role: string;start: number;end: number;text: string;currencyResolution?: Resolution;}
 
-export function maskBalances(text: string, onExcluded?: (start: number,end: number) => void): string {
+export function maskBalances(text: string, onExcluded?: (start: number,end: number) => void, source?: EntityText): string {
   // Prefixes win: in "20 JOD الرصيد 100 JOD", only 100 is a balance.
-  const blank=(match: string,...parts: any[]) => {
-    const start=parts[parts.length-2];
-    onExcluded?.(start,start+match.length);
-    return ' '.repeat(match.length);
+  const blank = (start: number, end: number) => {
+    onExcluded?.(start,end);
+    return ' '.repeat(end-start);
   };
-  return text.replace(BALANCE,blank).replace(BALANCE_SUFFIX,blank);
+  const working = text.replace(BALANCE,(match: string, gap: string | undefined, unit: string | undefined, start: number) => {
+    const end = start + match.length;
+    if (source && gap && unit) {
+      const currencyStart = end - unit.length;
+      const gapStart = currencyStart - gap.length;
+      if (SOURCE_LINE_BREAK.test(source.exact(gapStart,currencyStart) ?? '')) {
+        const following = FOLLOWING_AMOUNT.exec(text.slice(end));
+        if (following && !SOURCE_LINE_BREAK.test(source.exact(end,end+following[1].length) ?? '')) {
+          // The currency starts the amount on the next source line.
+          return blank(start,gapStart) + text.slice(gapStart,end);
+        }
+      }
+    }
+    return blank(start,end);
+  });
+  return working.replace(BALANCE_SUFFIX,(match: string, start: number) => blank(start,start+match.length));
 }
+
 
 export function collectCandidates(source: EntityText, parseNumber: (text: string) => number | null) {
   const exclusions: {role: string;start: number;end: number}[]=[];
   const rawOffset=(index: number) => Array.from(source.source.slice(0,index)).length;
-  let working=maskBalances(source.text,(start,end)=>exclusions.push({role:'balance',start:rawOffset(source.starts[start]),end:rawOffset(source.ends[end-1])}));
+  let working=maskBalances(source.text,(start,end)=>exclusions.push({role:'balance',start:rawOffset(source.starts[start]),end:rawOffset(source.ends[end-1])}),source);
   let accountSpans: ReturnType<typeof bareAccountSpans>=[],primarySpans: ReturnType<typeof barePrimarySpans>=[];
   for (const role of ['date','identifier']) {
     const rx=new RegExp(rules.patterns[role as keyof typeof rules.patterns],'gi');

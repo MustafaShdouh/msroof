@@ -2,7 +2,7 @@
 
 Optional smoke checks for the current parser. These are existing authored development examples, not a final accuracy test. No labeling or new SMS collection is required.
 
-Open [the tester](../tools/browser/tester.html) and refresh it. Wait for **Engine ready**. Paste each message into **SMS message**; results update as you type. Read **Message-only assessment**. The optional ownership result appears separately.
+Open the tester and refresh it. Wait for the default card purchase result to appear under **Message-only assessment**. Paste each example into **SMS message**. Results update as you type, and ownership confirmations appear in their own panel. [Open the tester](../tools/browser/tester.html)
 
 | # | Check | Message to paste | Expected main result |
 | --- | --- | --- | --- | --- |
@@ -35,6 +35,6 @@ Review required is expected when the supplied evidence cannot resolve one record
 
 If a check differs, save the exact text, the field that differed and **Assessment response** locally so it can become a traceable regression case. Do not change the expected label just to match the output.
 
-All 14 message examples and the three ownership choices were checked against Python, TypeScript and the actual generated tester bundle on 2026-11-03. The broader passing gate is 358 Python tests, 14 TypeScript suites and 226 frozen cases. These checks establish developer behavior, not independent real-world accuracy.
+All 14 message examples and three ownership choices were checked in Python, TypeScript and the generated tester bundle. A 440 px Edge run also verified the visible results, five ways to reset an ownership confirmation, and clearing the message box. The full regression gate passed 359 Python tests, 14 TypeScript suites and 226 frozen cases. These checks establish developer behavior, not independent real-world accuracy.
 
-Source IDs and asserted fields are recorded in [the readiness refresh](../data/reports/behavior/core_money_r6_readiness_refresh_v1.json). See [current readiness and remaining limits](CORE_MONEY_READINESS.md).
+The readiness refresh records the source IDs and asserted fields from the published checklist. [Readiness evidence](../data/reports/behavior/core_money_r6_readiness_refresh_v1.json) · [Current readiness and remaining limits](CORE_MONEY_READINESS.md)
