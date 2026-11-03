@@ -1,0 +1,5387 @@
+{
+  "schemaVersion": "1.0.0",
+  "trainingRows": 1177,
+  "trainingViewSha256": "e169213308c680ba7e5210ad6922ec6f8dee77f0f14c11d3539f2d22697919a3",
+  "rawDuplicates": {
+    "uniqueInputs": 1177,
+    "duplicateGroups": 0,
+    "rowsInDuplicateGroups": 0,
+    "conflictingGroups": 0,
+    "crossSourceGroupDuplicates": 0,
+    "groups": []
+  },
+  "normalizedDuplicates": {
+    "uniqueInputs": 754,
+    "duplicateGroups": 61,
+    "rowsInDuplicateGroups": 484,
+    "conflictingGroups": 0,
+    "crossSourceGroupDuplicates": 0,
+    "groups": [
+      {
+        "inputSha256": "fde5f6297f3312fc0e84b56ba08290a72b8eaf4dff1c639749fd84738b9ec864",
+        "recordIds": [
+          "synthetic-v1-0000",
+          "synthetic-v1-0124",
+          "synthetic-v1-0158",
+          "synthetic-v1-0254",
+          "synthetic-v1-0553",
+          "synthetic-v1-0687",
+          "synthetic-v1-0758",
+          "synthetic-v1-0846",
+          "synthetic-v1-1132",
+          "synthetic-v1-1368",
+          "synthetic-v1-1513",
+          "synthetic-v1-1795",
+          "synthetic-v1-1827"
+        ],
+        "sourceGroups": [
+          "literal-L707-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "unknown"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "81e6b55e75b2c183f00e08caeb2b6eff00d0ddc46858636e8f869a8da50dc330",
+        "recordIds": [
+          "synthetic-v1-0011",
+          "synthetic-v1-0585",
+          "synthetic-v1-0691",
+          "synthetic-v1-0742",
+          "synthetic-v1-0819",
+          "synthetic-v1-1300",
+          "synthetic-v1-1430",
+          "synthetic-v1-2020",
+          "synthetic-v1-2083"
+        ],
+        "sourceGroups": [
+          "literal-L732-C8"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "personal_conversation"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "fa04323ffa982e7faf25fd9e430b1f2cbd9d47ef18eb935675812715caff1776",
+        "recordIds": [
+          "synthetic-v1-0014",
+          "synthetic-v1-0045",
+          "synthetic-v1-0413",
+          "synthetic-v1-0709",
+          "synthetic-v1-0721",
+          "synthetic-v1-0765",
+          "synthetic-v1-1067",
+          "synthetic-v1-1071",
+          "synthetic-v1-1219",
+          "synthetic-v1-1805",
+          "synthetic-v1-1903",
+          "synthetic-v1-1930"
+        ],
+        "sourceGroups": [
+          "literal-L711-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "unknown"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "b44ab1b22f8c5d380bafb5ec38885aea06d5003c077ff6d04f2eae440c6dfae1",
+        "recordIds": [
+          "synthetic-v1-0020",
+          "synthetic-v1-0073",
+          "synthetic-v1-0192",
+          "synthetic-v1-0291",
+          "synthetic-v1-0345",
+          "synthetic-v1-0583",
+          "synthetic-v1-0755",
+          "synthetic-v1-0912",
+          "synthetic-v1-0959",
+          "synthetic-v1-0997",
+          "synthetic-v1-1015",
+          "synthetic-v1-1117",
+          "synthetic-v1-1129",
+          "synthetic-v1-1160",
+          "synthetic-v1-1177",
+          "synthetic-v1-1227",
+          "synthetic-v1-1257",
+          "synthetic-v1-1417",
+          "synthetic-v1-1450",
+          "synthetic-v1-1477",
+          "synthetic-v1-1524",
+          "synthetic-v1-1535",
+          "synthetic-v1-1575",
+          "synthetic-v1-1636",
+          "synthetic-v1-1775",
+          "synthetic-v1-1813",
+          "synthetic-v1-2103"
+        ],
+        "sourceGroups": [
+          "literal-L626-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "unknown"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "3576474d75bce9f3637086fa5187a58e06b1589e59044cc3ee984b47c4546871",
+        "recordIds": [
+          "synthetic-v1-0025",
+          "synthetic-v1-0063",
+          "synthetic-v1-0387",
+          "synthetic-v1-0433",
+          "synthetic-v1-0578",
+          "synthetic-v1-1118",
+          "synthetic-v1-1755",
+          "synthetic-v1-1766",
+          "synthetic-v1-1838",
+          "synthetic-v1-1941",
+          "synthetic-v1-2003"
+        ],
+        "sourceGroups": [
+          "literal-L745-C8"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "personal_conversation"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "2bd5c8da949afb3ba5a315e34254b3430e9902529fa54d29386f150581e41025",
+        "recordIds": [
+          "synthetic-v1-0030",
+          "synthetic-v1-0036",
+          "synthetic-v1-0261",
+          "synthetic-v1-0626",
+          "synthetic-v1-0816",
+          "synthetic-v1-0960",
+          "synthetic-v1-0961",
+          "synthetic-v1-1005",
+          "synthetic-v1-1081",
+          "synthetic-v1-1391",
+          "synthetic-v1-1499",
+          "synthetic-v1-1891"
+        ],
+        "sourceGroups": [
+          "literal-L727-C8"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "personal_conversation"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "b720738dc06f1d646e0c9408b07f43814e2766c6273ad6983dc112827615d664",
+        "recordIds": [
+          "synthetic-v1-0040",
+          "synthetic-v1-0121",
+          "synthetic-v1-0417",
+          "synthetic-v1-1264",
+          "synthetic-v1-1586"
+        ],
+        "sourceGroups": [
+          "literal-L672-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "dfe9a7880d70192fcd7b85ec6da7d884998017cc87a8c9bad0c2ad48357e1b3a",
+        "recordIds": [
+          "synthetic-v1-0052",
+          "synthetic-v1-2039"
+        ],
+        "sourceGroups": [
+          "literal-L463-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "0ad6e07cd54129dc7b8ccd176fcb341f3ca60da9c03f29c28ea32882f87dd65e",
+        "recordIds": [
+          "synthetic-v1-0055",
+          "synthetic-v1-0058",
+          "synthetic-v1-0086",
+          "synthetic-v1-0181",
+          "synthetic-v1-0686",
+          "synthetic-v1-1265",
+          "synthetic-v1-1517",
+          "synthetic-v1-1604",
+          "synthetic-v1-1705",
+          "synthetic-v1-1756",
+          "synthetic-v1-2080"
+        ],
+        "sourceGroups": [
+          "literal-L703-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "d38b2cad4fdc39cd7a0cbb9064d2dd8013d88fe307dd50b275363cd43731e817",
+        "recordIds": [
+          "synthetic-v1-0067",
+          "synthetic-v1-0377",
+          "synthetic-v1-0668",
+          "synthetic-v1-0954"
+        ],
+        "sourceGroups": [
+          "literal-L369-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "1c817993c7b1d696b965f6602e7508edf6fc2ab886eb25690157d923898ae17c",
+        "recordIds": [
+          "synthetic-v1-0077",
+          "synthetic-v1-0083",
+          "synthetic-v1-0139",
+          "synthetic-v1-0165",
+          "synthetic-v1-0180",
+          "synthetic-v1-0233",
+          "synthetic-v1-0323",
+          "synthetic-v1-0449",
+          "synthetic-v1-0526",
+          "synthetic-v1-0655",
+          "synthetic-v1-0665",
+          "synthetic-v1-0848",
+          "synthetic-v1-1023",
+          "synthetic-v1-1270",
+          "synthetic-v1-1336",
+          "synthetic-v1-1525",
+          "synthetic-v1-1603",
+          "synthetic-v1-2014"
+        ],
+        "sourceGroups": [
+          "literal-L603-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "1beaf1ec8586b00245d5fd1da68a4638d5f647045d4f66dc3cb62287a14df4d4",
+        "recordIds": [
+          "synthetic-v1-0094",
+          "synthetic-v1-0764",
+          "synthetic-v1-0794"
+        ],
+        "sourceGroups": [
+          "literal-L463-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "5d8f27d174ff8480f2860a48372edb3160590ccbdad35cb0535e037d68e85d50",
+        "recordIds": [
+          "synthetic-v1-0103",
+          "synthetic-v1-0105",
+          "synthetic-v1-0116",
+          "synthetic-v1-0343",
+          "synthetic-v1-0480",
+          "synthetic-v1-0587",
+          "synthetic-v1-0809",
+          "synthetic-v1-0828",
+          "synthetic-v1-1038",
+          "synthetic-v1-1255",
+          "synthetic-v1-1542",
+          "synthetic-v1-1660",
+          "synthetic-v1-1738",
+          "synthetic-v1-1947",
+          "synthetic-v1-2098"
+        ],
+        "sourceGroups": [
+          "literal-L602-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "fbd9f7fdd851aaebbf93017399fdb41eb8484fbe79d6faa7a4e7a0d864338dd4",
+        "recordIds": [
+          "synthetic-v1-0111",
+          "synthetic-v1-0322",
+          "synthetic-v1-0502",
+          "synthetic-v1-0536",
+          "synthetic-v1-0963",
+          "synthetic-v1-0979",
+          "synthetic-v1-1036",
+          "synthetic-v1-1245",
+          "synthetic-v1-1246",
+          "synthetic-v1-1308",
+          "synthetic-v1-1421",
+          "synthetic-v1-1600",
+          "synthetic-v1-1686",
+          "synthetic-v1-1758",
+          "synthetic-v1-1840"
+        ],
+        "sourceGroups": [
+          "literal-L706-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "unknown"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "4ab23929c29af20dc03eadef480ff5bf30ea9828a823dc636c418eca7065372b",
+        "recordIds": [
+          "synthetic-v1-0113",
+          "synthetic-v1-0337",
+          "synthetic-v1-0551",
+          "synthetic-v1-0888",
+          "synthetic-v1-1000",
+          "synthetic-v1-1335",
+          "synthetic-v1-1500",
+          "synthetic-v1-1952"
+        ],
+        "sourceGroups": [
+          "literal-L647-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "not_completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "49f0a235221e93cc709f40e14d8f6d7111dce9f4586fbd74e3bb1a714864f62e",
+        "recordIds": [
+          "synthetic-v1-0117",
+          "synthetic-v1-0204",
+          "synthetic-v1-0711",
+          "synthetic-v1-0771",
+          "synthetic-v1-1350"
+        ],
+        "sourceGroups": [
+          "literal-L747-C8"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "question_or_request"
+          ],
+          "event": [
+            "unknown"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "85a78f22a122e5716a4e81147cdf240ba3c49379074afa6a7e1e4037cf6e46bc",
+        "recordIds": [
+          "synthetic-v1-0122",
+          "synthetic-v1-0123",
+          "synthetic-v1-0221",
+          "synthetic-v1-0270",
+          "synthetic-v1-0547",
+          "synthetic-v1-0604",
+          "synthetic-v1-1100",
+          "synthetic-v1-1222",
+          "synthetic-v1-1612",
+          "synthetic-v1-1622",
+          "synthetic-v1-1673",
+          "synthetic-v1-1772",
+          "synthetic-v1-1859",
+          "synthetic-v1-2119"
+        ],
+        "sourceGroups": [
+          "literal-L705-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "c7ca88ae5006826234c9ed418b66578e2eb4138f8364edbbaaba650501f6ecc3",
+        "recordIds": [
+          "synthetic-v1-0126",
+          "synthetic-v1-0197",
+          "synthetic-v1-0239",
+          "synthetic-v1-1342",
+          "synthetic-v1-1491",
+          "synthetic-v1-1693",
+          "synthetic-v1-1760",
+          "synthetic-v1-1781",
+          "synthetic-v1-1798",
+          "synthetic-v1-1886",
+          "synthetic-v1-2012"
+        ],
+        "sourceGroups": [
+          "literal-L433-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "bb65371ac4343b260327abbe5c2d48ac9b4016059cdc2d69ce82dda35895d8bf",
+        "recordIds": [
+          "synthetic-v1-0131",
+          "synthetic-v1-0494",
+          "synthetic-v1-0601",
+          "synthetic-v1-1115",
+          "synthetic-v1-1948"
+        ],
+        "sourceGroups": [
+          "literal-L647-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "not_completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "46f227aef8cba8c296035095cbb80b61ed11f1d73bfcfc07f0eef9901b5b20d7",
+        "recordIds": [
+          "synthetic-v1-0132",
+          "synthetic-v1-0168",
+          "synthetic-v1-0996",
+          "synthetic-v1-2007"
+        ],
+        "sourceGroups": [
+          "literal-L676-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "79cd8e29e871f55a68f9b61ac3452ede0df720ffa90eabe56397108a3a5b046e",
+        "recordIds": [
+          "synthetic-v1-0141",
+          "synthetic-v1-0540",
+          "synthetic-v1-0631",
+          "synthetic-v1-0656",
+          "synthetic-v1-1387",
+          "synthetic-v1-1541",
+          "synthetic-v1-1842"
+        ],
+        "sourceGroups": [
+          "literal-L433-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "4c106563daca3dc95ee4aa72538e13c6a7e525eb0566ac774154c7e70b1d8a86",
+        "recordIds": [
+          "synthetic-v1-0163",
+          "synthetic-v1-0324",
+          "synthetic-v1-0420",
+          "synthetic-v1-0778",
+          "synthetic-v1-0826",
+          "synthetic-v1-0995",
+          "synthetic-v1-1396",
+          "synthetic-v1-1522",
+          "synthetic-v1-1582",
+          "synthetic-v1-1639",
+          "synthetic-v1-1929",
+          "synthetic-v1-2056"
+        ],
+        "sourceGroups": [
+          "literal-L733-C8"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "personal_conversation"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "3bad2a2883b76f8bcd002138a23b4c13319a41800d7f1f04e82f646588533eff",
+        "recordIds": [
+          "synthetic-v1-0173",
+          "synthetic-v1-1075",
+          "synthetic-v1-1415",
+          "synthetic-v1-1801"
+        ],
+        "sourceGroups": [
+          "literal-L676-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "488e3d3d7622a8404592b186ed0e254d0cea39d320bb105cfd733e328f2c9547",
+        "recordIds": [
+          "synthetic-v1-0205",
+          "synthetic-v1-0215",
+          "synthetic-v1-0271",
+          "synthetic-v1-0520",
+          "synthetic-v1-0640",
+          "synthetic-v1-0875",
+          "synthetic-v1-0917",
+          "synthetic-v1-1324",
+          "synthetic-v1-1609",
+          "synthetic-v1-1649",
+          "synthetic-v1-1828",
+          "synthetic-v1-1926"
+        ],
+        "sourceGroups": [
+          "literal-L709-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "unknown"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "08d8715821c3b692206ea2b6c35cb895ba3c6af7321968a198834ac4c22f9ce4",
+        "recordIds": [
+          "synthetic-v1-0212",
+          "synthetic-v1-0222",
+          "synthetic-v1-0429",
+          "synthetic-v1-0577",
+          "synthetic-v1-0617",
+          "synthetic-v1-0670",
+          "synthetic-v1-0675",
+          "synthetic-v1-0685",
+          "synthetic-v1-0739",
+          "synthetic-v1-1092",
+          "synthetic-v1-1169",
+          "synthetic-v1-1383",
+          "synthetic-v1-1478",
+          "synthetic-v1-1558",
+          "synthetic-v1-1619",
+          "synthetic-v1-1943",
+          "synthetic-v1-2063"
+        ],
+        "sourceGroups": [
+          "literal-L601-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "3a5651fe163cb07934e9f173e7979ddad1b885b65c310f0e0167ebd1c6230a42",
+        "recordIds": [
+          "synthetic-v1-0218",
+          "synthetic-v1-0331",
+          "synthetic-v1-0466",
+          "synthetic-v1-0541",
+          "synthetic-v1-0555",
+          "synthetic-v1-0746",
+          "synthetic-v1-0813",
+          "synthetic-v1-0857",
+          "synthetic-v1-1103",
+          "synthetic-v1-1130",
+          "synthetic-v1-1248",
+          "synthetic-v1-1304",
+          "synthetic-v1-1333",
+          "synthetic-v1-1431",
+          "synthetic-v1-1482",
+          "synthetic-v1-1502",
+          "synthetic-v1-1675",
+          "synthetic-v1-1724",
+          "synthetic-v1-1833",
+          "synthetic-v1-1837",
+          "synthetic-v1-1955",
+          "synthetic-v1-2031",
+          "synthetic-v1-2097"
+        ],
+        "sourceGroups": [
+          "literal-L651-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "not_completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "8a95013b3731e5e58b7a93495de214cb5fb4900ab3e192db54d9b48d6f7defae",
+        "recordIds": [
+          "synthetic-v1-0225",
+          "synthetic-v1-0367",
+          "synthetic-v1-0511",
+          "synthetic-v1-0639",
+          "synthetic-v1-0681",
+          "synthetic-v1-0682",
+          "synthetic-v1-0909",
+          "synthetic-v1-1355",
+          "synthetic-v1-1377",
+          "synthetic-v1-1426",
+          "synthetic-v1-1489",
+          "synthetic-v1-1656",
+          "synthetic-v1-1750",
+          "synthetic-v1-1847",
+          "synthetic-v1-1880",
+          "synthetic-v1-1935",
+          "synthetic-v1-2016"
+        ],
+        "sourceGroups": [
+          "literal-L604-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "4c69a77e0f010bbdba344e7c7e6afdf40f6103d9e53c2963020dbffe193915c9",
+        "recordIds": [
+          "synthetic-v1-0226",
+          "synthetic-v1-0465",
+          "synthetic-v1-0602",
+          "synthetic-v1-0797",
+          "synthetic-v1-0929",
+          "synthetic-v1-1287",
+          "synthetic-v1-1370"
+        ],
+        "sourceGroups": [
+          "literal-L741-C8"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "personal_conversation"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "f6d44dd51d4d8554f82c052a18c3c6a98aa6206d409e681e95e71b65a391f664",
+        "recordIds": [
+          "synthetic-v1-0237",
+          "synthetic-v1-0590",
+          "synthetic-v1-0695",
+          "synthetic-v1-0740",
+          "synthetic-v1-0856",
+          "synthetic-v1-1008",
+          "synthetic-v1-1013",
+          "synthetic-v1-1332",
+          "synthetic-v1-1372",
+          "synthetic-v1-1591",
+          "synthetic-v1-1855",
+          "synthetic-v1-2042",
+          "synthetic-v1-2057"
+        ],
+        "sourceGroups": [
+          "literal-L675-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "c7e11bf1afc1acd44b6db4dcc334b608f9c3c7b4e46347d02ed2b3109d9931dc",
+        "recordIds": [
+          "synthetic-v1-0241",
+          "synthetic-v1-1123",
+          "synthetic-v1-1625",
+          "synthetic-v1-1984"
+        ],
+        "sourceGroups": [
+          "literal-L369-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "8e93e6b108e6a9af12735d1c7d242e912db69ae080e0e1177fd4b71fcf42d66a",
+        "recordIds": [
+          "synthetic-v1-0275",
+          "synthetic-v1-1733"
+        ],
+        "sourceGroups": [
+          "literal-L671-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "d6ae3ed41a000099436a6abce1668ae4a74a5d3a0c86af7ca8a52d92b8bc3070",
+        "recordIds": [
+          "synthetic-v1-0286",
+          "synthetic-v1-0851",
+          "synthetic-v1-1040",
+          "synthetic-v1-1773"
+        ],
+        "sourceGroups": [
+          "literal-L369-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "583f8fa81997c0375157567ed55a99bb375447d1d470b812352fe88941d79191",
+        "recordIds": [
+          "synthetic-v1-0295",
+          "synthetic-v1-0993",
+          "synthetic-v1-1052",
+          "synthetic-v1-1063",
+          "synthetic-v1-1624",
+          "synthetic-v1-2045"
+        ],
+        "sourceGroups": [
+          "literal-L740-C8"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "question_or_request"
+          ],
+          "event": [
+            "unknown"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "c405ba16da7779248ef3f4add309a2ed1c37ef69e13bc198a51d947e71e617d5",
+        "recordIds": [
+          "synthetic-v1-0302",
+          "synthetic-v1-0359",
+          "synthetic-v1-0458",
+          "synthetic-v1-0831",
+          "synthetic-v1-0887",
+          "synthetic-v1-0969",
+          "synthetic-v1-1866",
+          "synthetic-v1-2046",
+          "synthetic-v1-2092"
+        ],
+        "sourceGroups": [
+          "literal-L753-C8"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "question_or_request"
+          ],
+          "event": [
+            "unknown"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "41b7276b3adcb535bbb062c8ae4f2f0336e285808f2bcb8c3322631ae37bfdf7",
+        "recordIds": [
+          "synthetic-v1-0325",
+          "synthetic-v1-1910"
+        ],
+        "sourceGroups": [
+          "literal-L463-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "5c222de86a4e83de9c89767fd57c6cd487a4768d1fa4052ce485eb5557b9459f",
+        "recordIds": [
+          "synthetic-v1-0348",
+          "synthetic-v1-0616",
+          "synthetic-v1-0950",
+          "synthetic-v1-1193",
+          "synthetic-v1-1356",
+          "synthetic-v1-1674",
+          "synthetic-v1-1702",
+          "synthetic-v1-1723",
+          "synthetic-v1-1761",
+          "synthetic-v1-1771",
+          "synthetic-v1-1785",
+          "synthetic-v1-1942",
+          "synthetic-v1-2077"
+        ],
+        "sourceGroups": [
+          "literal-L680-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "233cd4fffd806b9a054d3a68cec7bf48a3264eb9b02f33b28294aed0e00c273e",
+        "recordIds": [
+          "synthetic-v1-0350",
+          "synthetic-v1-1392",
+          "synthetic-v1-1872",
+          "synthetic-v1-1964"
+        ],
+        "sourceGroups": [
+          "literal-L369-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "34f210e0db8286392fd924a14ade1b84a0bd3eaa33c7fcc6a1818a833be10ea0",
+        "recordIds": [
+          "synthetic-v1-0365",
+          "synthetic-v1-0454",
+          "synthetic-v1-0493",
+          "synthetic-v1-0629",
+          "synthetic-v1-0684",
+          "synthetic-v1-0814",
+          "synthetic-v1-0937",
+          "synthetic-v1-0983",
+          "synthetic-v1-1120",
+          "synthetic-v1-1305",
+          "synthetic-v1-1435",
+          "synthetic-v1-1484",
+          "synthetic-v1-1869"
+        ],
+        "sourceGroups": [
+          "literal-L736-C8"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "question_or_request"
+          ],
+          "event": [
+            "unknown"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "36cbf9f41365ea1a67da499037799a451fc885a48da5f31c069d8536aa765db1",
+        "recordIds": [
+          "synthetic-v1-0372",
+          "synthetic-v1-0508",
+          "synthetic-v1-0550",
+          "synthetic-v1-0688",
+          "synthetic-v1-0756",
+          "synthetic-v1-0811",
+          "synthetic-v1-0970",
+          "synthetic-v1-1137",
+          "synthetic-v1-1427",
+          "synthetic-v1-1437",
+          "synthetic-v1-1472",
+          "synthetic-v1-1823",
+          "synthetic-v1-1873",
+          "synthetic-v1-1949"
+        ],
+        "sourceGroups": [
+          "literal-L737-C8"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "question_or_request"
+          ],
+          "event": [
+            "unknown"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "2368a3d74a3045bf0cd0a77882fdc35c305e799a1ea010c73d45f141cf09cd55",
+        "recordIds": [
+          "synthetic-v1-0373",
+          "synthetic-v1-0379",
+          "synthetic-v1-0881",
+          "synthetic-v1-0951",
+          "synthetic-v1-1153",
+          "synthetic-v1-1174",
+          "synthetic-v1-1209",
+          "synthetic-v1-1258",
+          "synthetic-v1-1351",
+          "synthetic-v1-1424",
+          "synthetic-v1-1485",
+          "synthetic-v1-1791"
+        ],
+        "sourceGroups": [
+          "literal-L678-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "eac0d959ba4436bbe104fec4d464b1b9ffc9b4c41bfd12c3a42c7bc05a0961b6",
+        "recordIds": [
+          "synthetic-v1-0386",
+          "synthetic-v1-1536"
+        ],
+        "sourceGroups": [
+          "literal-L433-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "17f06603ca50000270726e1a861f067ccec2e63c5f48fb5b2343d38f2d34f44e",
+        "recordIds": [
+          "synthetic-v1-0394",
+          "synthetic-v1-0622",
+          "synthetic-v1-1986"
+        ],
+        "sourceGroups": [
+          "literal-L463-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "ccdfb9bec20da818a428e9c838857e885a684731e65dc5d1694c7a9f04e53415",
+        "recordIds": [
+          "synthetic-v1-0412",
+          "synthetic-v1-0645",
+          "synthetic-v1-1574",
+          "synthetic-v1-2113"
+        ],
+        "sourceGroups": [
+          "literal-L369-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "e0655e8c632fa8ca5abab41ace4a56a0af769972d84b5d2a412bbbff038566f8",
+        "recordIds": [
+          "synthetic-v1-0414",
+          "synthetic-v1-0496",
+          "synthetic-v1-0542"
+        ],
+        "sourceGroups": [
+          "literal-L647-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "not_completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "d20659847115410b56d0b3d6ce01fcc9778cb4da1496bb8bac1a2350433e9a6e",
+        "recordIds": [
+          "synthetic-v1-0427",
+          "synthetic-v1-0683",
+          "synthetic-v1-0703",
+          "synthetic-v1-1024",
+          "synthetic-v1-1173",
+          "synthetic-v1-1198",
+          "synthetic-v1-1371",
+          "synthetic-v1-1641",
+          "synthetic-v1-1965"
+        ],
+        "sourceGroups": [
+          "literal-L674-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "7f19b39e808149234473c3a373528109a047cac68b8a97185bc84ca6f5df3a5f",
+        "recordIds": [
+          "synthetic-v1-0438",
+          "synthetic-v1-0464",
+          "synthetic-v1-0591",
+          "synthetic-v1-0634",
+          "synthetic-v1-0657",
+          "synthetic-v1-0844",
+          "synthetic-v1-0895",
+          "synthetic-v1-1171",
+          "synthetic-v1-1206",
+          "synthetic-v1-1267",
+          "synthetic-v1-1385",
+          "synthetic-v1-1388",
+          "synthetic-v1-1480",
+          "synthetic-v1-1553",
+          "synthetic-v1-1697",
+          "synthetic-v1-1786",
+          "synthetic-v1-1867",
+          "synthetic-v1-1911",
+          "synthetic-v1-1996",
+          "synthetic-v1-2096"
+        ],
+        "sourceGroups": [
+          "literal-L650-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "not_completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "fd4bc22183c7e545ec0b588512dfb41e863842967ed7af55b0e22dd717b063f1",
+        "recordIds": [
+          "synthetic-v1-0451",
+          "synthetic-v1-0589",
+          "synthetic-v1-0672",
+          "synthetic-v1-0753",
+          "synthetic-v1-0859",
+          "synthetic-v1-1017",
+          "synthetic-v1-1187",
+          "synthetic-v1-1189",
+          "synthetic-v1-1266",
+          "synthetic-v1-1937"
+        ],
+        "sourceGroups": [
+          "literal-L647-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "not_completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "ff74b49187b104581b792af3347982b9b4b1cdfa74adee774d5e0f3d51e14658",
+        "recordIds": [
+          "synthetic-v1-0523",
+          "synthetic-v1-0647",
+          "synthetic-v1-1064",
+          "synthetic-v1-1631",
+          "synthetic-v1-1671"
+        ],
+        "sourceGroups": [
+          "literal-L433-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "9f792ef1c850f2e9e0ca0529c740b1c66bcd7ae32a8c8d3d2661a92011aa754e",
+        "recordIds": [
+          "synthetic-v1-0546",
+          "synthetic-v1-1145"
+        ],
+        "sourceGroups": [
+          "literal-L673-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "d81bf259e43038210f85ecc0b9812c7130eead735ea12ac4b2b8b4c584d7c3d5",
+        "recordIds": [
+          "synthetic-v1-0671",
+          "synthetic-v1-1456",
+          "synthetic-v1-1685",
+          "synthetic-v1-1784"
+        ],
+        "sourceGroups": [
+          "literal-L673-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "ce5c6f5abe8522df7b249c1919b78b77cc858863d30436387e68698e9e8b238e",
+        "recordIds": [
+          "synthetic-v1-0720",
+          "synthetic-v1-1110"
+        ],
+        "sourceGroups": [
+          "literal-L369-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "213d1f525577f3b4e300eb0ec3431cd94cfc4dcbcfbfc9bda56f3a882ffcaefd",
+        "recordIds": [
+          "synthetic-v1-0808",
+          "synthetic-v1-1471",
+          "synthetic-v1-1518"
+        ],
+        "sourceGroups": [
+          "literal-L673-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "fc680db09f819076ba44ca49b6ad9a1b142cd208687b242d7535037bff681967",
+        "recordIds": [
+          "synthetic-v1-0818",
+          "synthetic-v1-1084"
+        ],
+        "sourceGroups": [
+          "literal-L463-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "ee2730f6ba35d8d39293b8d8242f4f96ea032585e4a30d9949ee76bac0da36ca",
+        "recordIds": [
+          "synthetic-v1-0913",
+          "synthetic-v1-1731"
+        ],
+        "sourceGroups": [
+          "literal-L463-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "65d6833ad98a33fbcad237ecf156f9d96996f0aa6c5f7e5dbc39875750141234",
+        "recordIds": [
+          "synthetic-v1-0925",
+          "synthetic-v1-1143"
+        ],
+        "sourceGroups": [
+          "literal-L624-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "known_other"
+          ],
+          "event": [
+            "unknown"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "ffeeab8f0cb42c5658e2409e9b927c2d94c3589e749c6858bdba9062e8a937be",
+        "recordIds": [
+          "synthetic-v1-1119",
+          "synthetic-v1-1432"
+        ],
+        "sourceGroups": [
+          "literal-L369-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "48e20f18deeb8acd46cc96907fc73f08448f507dbc7fa4ef499a3d4eedb8ff02",
+        "recordIds": [
+          "synthetic-v1-1228",
+          "synthetic-v1-1526"
+        ],
+        "sourceGroups": [
+          "literal-L369-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "99b91ed6e8430da1312d2314920cf38f204235b56351222211a200e7ece8702b",
+        "recordIds": [
+          "synthetic-v1-1247",
+          "synthetic-v1-1444"
+        ],
+        "sourceGroups": [
+          "literal-L463-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "8d057f2117255b4c7488d04cbc79849dd2759a0eb5d15508dce44597322b1776",
+        "recordIds": [
+          "synthetic-v1-1358",
+          "synthetic-v1-1874"
+        ],
+        "sourceGroups": [
+          "literal-L369-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "bfb92023030c1a2d9e853512c6e31118765aa8632a574292d7be37a88541b3ed",
+        "recordIds": [
+          "synthetic-v1-1521",
+          "synthetic-v1-1568"
+        ],
+        "sourceGroups": [
+          "literal-L463-C15"
+        ],
+        "targets": {
+          "status": [
+            "completed"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "completed"
+          ]
+        },
+        "conflictingFields": []
+      },
+      {
+        "inputSha256": "e2c5b3dd0bee65201d310e4b624952fecc6eb8fc5a45959bec523deb877aa356",
+        "recordIds": [
+          "synthetic-v1-1691",
+          "synthetic-v1-1715"
+        ],
+        "sourceGroups": [
+          "literal-L671-C12"
+        ],
+        "targets": {
+          "status": [
+            "non_transaction"
+          ],
+          "context": [
+            "financial_notice"
+          ],
+          "event": [
+            "no_event"
+          ]
+        },
+        "conflictingFields": []
+      }
+    ]
+  },
+  "duplicateConnectedComponents": [],
+  "diagnosticOverlaps": [
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-en",
+      "trainingRecordIds": [
+        "instruction-quote-non_transaction-en"
+      ]
+    }
+  ],
+  "legacyInventory": {
+    "rows": 2120,
+    "labelOrigins": {
+      "legacy_generator_not_human_gold": 2120
+    },
+    "origins": {
+      "synthetic_privacy_transformation_of_legacy_generator": 2120
+    },
+    "directionClaims": {
+      "NONE": 990,
+      "CREDIT": 375,
+      "DEBIT": 755
+    },
+    "amountClaims": 1130,
+    "amountSourceSpans": 0,
+    "directionSourceSpans": 0,
+    "interpretation": "Generator/legacy claims, not span-reviewed primary amount/direction truth. All rows synthetic development; neither type nor realistic provider metadata authenticates a message.",
+    "normalizedCrossFoldGroups": 0,
+    "normalizedCrossFoldRows": 0
+  },
+  "bioInventory": {
+    "rows": 83,
+    "foldCounts": {
+      "train": 63,
+      "validation": 16,
+      "quarantined": 4
+    },
+    "invalidSpanRecordIds": [],
+    "origin": "assistant_policy_corrected_existing_synthetic_records",
+    "records": [
+      {
+        "recordId": "TC_POS_ARAB_001",
+        "fold": "train",
+        "textSha256": "cd36e49a8b6fc5926065ae8a244b7b93647be1787d400fbb09861b919c67fb67",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ARAB_002",
+        "fold": "train",
+        "textSha256": "40867a8206d73bdbbe7d2f6f557c28bfd38918aeebca7bf5a31872dfa2146b9c",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ARAB_003",
+        "fold": "train",
+        "textSha256": "32c9a052309208bee535d57644ed3416dde6f7eb1d22cc7745dc2311dee2e257",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ARAB_004",
+        "fold": "train",
+        "textSha256": "e27ccead109ca2545eb345cae05fa34cabce0b7e1013eb04c2faa97b3e5b8119",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ARAB_005",
+        "fold": "validation",
+        "textSha256": "e9f23babed44c2310261607ee5e750121942098b700c120e4cb93fdfa1ea80fa",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_ARAB_006",
+        "fold": "train",
+        "textSha256": "ad15c4fe5542fa5c3c8a6d7af1ad67459d7e56cd7011acaa9869f0860d6b7133",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ARAB_007",
+        "fold": "validation",
+        "textSha256": "a62f9054a9723e84f171b8d667225018da064f14c61dfff79770dd52243c7951",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_ARAB_008",
+        "fold": "train",
+        "textSha256": "49129a5de40cc2464f4aab9a1a75ca7182aecab2bba171c179de2cc74dfc087d",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ARAB_009",
+        "fold": "train",
+        "textSha256": "71671a8ff240439e34e531805fe11da505b00dd9c93dd918e308a1ae62d7a5ed",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ARAB_010",
+        "fold": "validation",
+        "textSha256": "0fa451b6b7a1b2a3cf722dd66e645d970341658026fa8c4888e246a471fa5c3e",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_CAP_001",
+        "fold": "train",
+        "textSha256": "8509fde420a79009182144445cd3ff8f4f494d75f43ffb45e936e5038df82692",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAP_002",
+        "fold": "train",
+        "textSha256": "addccc1c64f87986bb87373105414a6d72a242bc73ec9525264ff8033a7f15d1",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAP_003",
+        "fold": "train",
+        "textSha256": "12520f0f231f5ad68a731d12eec43adfe8abc0ca33778570ab1f17c22844af48",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAP_004",
+        "fold": "train",
+        "textSha256": "4e4839d9334386368185dfb1284cb4cc7555fed03fb428540912499ae78dec40",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAP_005",
+        "fold": "train",
+        "textSha256": "16ebee41648a54f00da1da14282173f8f2a17270961839dc8e8c2bf59f9aefa5",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAP_006",
+        "fold": "train",
+        "textSha256": "7a86600bf614f228d65f139397e7f4391486414a00c03efbb4a4d83e13856fdd",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAP_007",
+        "fold": "train",
+        "textSha256": "dc1aa4aaf8d0f733f87ac877248ef52e6e2265166300c1ac9f16e85974c1bbdf",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_REF_001",
+        "fold": "quarantined",
+        "textSha256": "53d2cdf5ee4a88f413b6be3229807064d1c3463c7046d5566e2f5e3bcb7fb1b6",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_REF_002",
+        "fold": "train",
+        "textSha256": "d139bbbce4d01415fa87809ddeb9e0e7b2fefdfce0837a66d6b4cb69264cf093",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_REF_003",
+        "fold": "train",
+        "textSha256": "2d8476efe4b6ee93703889616fbdefc306b5550e99eafc912f96f56e0c53758b",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_REF_004",
+        "fold": "train",
+        "textSha256": "8bd3ce97bcfb38fd3a2db23caf688f2e5e441123fdba3ec39a396eac97b03ac2",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_REF_005",
+        "fold": "train",
+        "textSha256": "4f730e08b3e1f3e42ce29fe80f78639522b74d06afd3bf40a022cfb9d48942ed",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_REF_006",
+        "fold": "train",
+        "textSha256": "3da9b58b271de4179e8e9d93080786a4e9f79d346afeadb9947a6808e0a5117c",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ETI_001",
+        "fold": "train",
+        "textSha256": "ecc5c53a47acbeb1e49a054afb9a0526dd50d0674aeb56e9e4d8cd99f975c326",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ETI_002",
+        "fold": "train",
+        "textSha256": "7be44672ec724b383015a33a79445498e33b6a05b8324cda66d8ad00e87c9d16",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ETI_003",
+        "fold": "validation",
+        "textSha256": "490c4cccb9f9dbcd6b477e8d229f514c86bab8d22eef3f6ff2e42efae595b703",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_ETI_004",
+        "fold": "train",
+        "textSha256": "7c79f20d3ae5569b7378daaba5917e03eca5f3a32088ee6a9cc580d22eb01cce",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ETI_005",
+        "fold": "train",
+        "textSha256": "fbd70451d0b6306318cceab806d6b013ff438a41cb77962c7e0d49249bf66636",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ETI_006",
+        "fold": "train",
+        "textSha256": "b6d8e186d467d873351a6793d5109e94d5e48a1ba73700dfa12334322ca1e29f",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ETI_007",
+        "fold": "validation",
+        "textSha256": "2b3ea568e90c180cf15fa10da19f84ba5b2bbfb65cd103bae14f58a05f6caf4b",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_HOU_001",
+        "fold": "validation",
+        "textSha256": "04984a1cb21633066b8b067a09557d1eed0558402b3a7e2cddce9b567c1a65e9",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_HOU_002",
+        "fold": "validation",
+        "textSha256": "e6d75c95bd3b25f985e42bbd1220df933b74d528539812241ca55d837e088879",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_HOU_003",
+        "fold": "train",
+        "textSha256": "4dca56008eba239cb44d6454fa8b7fc8c45fe4f05ceaf2898a2ecc3aae968f50",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_HOU_004",
+        "fold": "train",
+        "textSha256": "d42e8acab0124bad0031a9f2bc55bb1c80032891d13a55d4a6b2df8fb4e751b5",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_HOU_005",
+        "fold": "train",
+        "textSha256": "2f08d54b421fc4bdac089a76d1e9e944456a50ecc71d7fb71a4db62bdf408a97",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_HOU_006",
+        "fold": "validation",
+        "textSha256": "7eeb16fb1ec4e7e530ff1d9e7111c05467388caf44723e84b8bdc6506246e7d0",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_ORA_001",
+        "fold": "train",
+        "textSha256": "e068a7d03821d6d71bce3c6dae7e15f2ac2db48681c1885b777640c462a1887b",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ORA_002",
+        "fold": "train",
+        "textSha256": "658249400081b870529425ae29cabf2cd7539c8986b8d692c2d8466794ff5bea",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ORA_003",
+        "fold": "validation",
+        "textSha256": "d3f48611f1e281abc6ff119457e3562837e97e47c5789e70b3822564b10368ad",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_ORA_004",
+        "fold": "train",
+        "textSha256": "ec0ae9110000f79645bd45d366dd1a8312a48af2ff219a9b1576060897e1651e",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ORA_005",
+        "fold": "quarantined",
+        "textSha256": "aecdfd680b0586b801633c22c7a12ba6d37422452946387e86516803d6382977",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": false,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_ORA_006",
+        "fold": "train",
+        "textSha256": "1e4d9dbd67237157b26070c6a2110c618809525b448d0305fdfd97aab5710a60",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ZAI_001",
+        "fold": "validation",
+        "textSha256": "2bd1941ead76e3fa6d7b740416d472c140df8e9621868b619f1c7ae1a4e6e240",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_ZAI_002",
+        "fold": "train",
+        "textSha256": "4baac98042cf28ae91bcdee4d9d3a5a7fa89906e0b73c1a4b225837eebffc93c",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ZAI_003",
+        "fold": "quarantined",
+        "textSha256": "8c49036f33549a41ba964995e3e47aea71c6d757425b611aa8a53ef1fea72bf4",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_ZAI_004",
+        "fold": "train",
+        "textSha256": "17521d4d9a3afae054d127367d539950ebafd9c74b07e706dc4532b9daead91f",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_ZAI_005",
+        "fold": "validation",
+        "textSha256": "c66de04d517eae35a0dfb4f7a5494e6b21263d04c6cee2666e6de718dcaebb49",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_POS_UWA_001",
+        "fold": "train",
+        "textSha256": "212a5b7030e3b9ea1671ac68520eb4ae4a53546b9c2d5ed2c28c8a92edb5e108",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_UWA_002",
+        "fold": "train",
+        "textSha256": "6b0be179030c5bb1c93187b282f7d10e5e0fbada8a1507c112ff564c8d1b8722",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_UWA_003",
+        "fold": "train",
+        "textSha256": "e5a817585e8ef98db8934622f7fe75b47ab1447f40b250e21f7434c746e80592",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_UWA_004",
+        "fold": "train",
+        "textSha256": "622537cfaf4a0cf9e56cdb3f4d3514354a65fae23bc7663bb7f2a92e070c11ea",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_UWA_005",
+        "fold": "train",
+        "textSha256": "dd348194fbf13bcf79c16bd8f5a032446fa5ca2aa6aabb35610fe274d882b365",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_JIB_001",
+        "fold": "train",
+        "textSha256": "4422f50ce10473635ce476a98866e2aee4fea94e627ff78738fcb97ea2879b80",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_JIB_002",
+        "fold": "train",
+        "textSha256": "868e5abef934cc9cc6c273ee9c50cfc57964f42e418d78f1310cbec1ac414cb4",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_JIB_003",
+        "fold": "train",
+        "textSha256": "aed2d1ec13f79b2e44366ee021307b75a3886417d0ce37f40ea4a6e6abdaa64d",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_JIB_004",
+        "fold": "train",
+        "textSha256": "44c83703068e802a7ac7ff75d1cc61841a38415325d8cae1cdd3015f7b30e676",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_JIB_005",
+        "fold": "train",
+        "textSha256": "0fd6e292999a2684373fad27f3ce67bb3b10ee8e4ce306e582d76879a2850263",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_JIB_006",
+        "fold": "train",
+        "textSha256": "335ef3a558b36952943760304d2781038433bb2323621b5119b7dc865b4ee0f1",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAB_001",
+        "fold": "train",
+        "textSha256": "9ea94b3dcfcf39fb4e90d0a73d0491f87b261edba43516f08376f3104d964185",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAB_002",
+        "fold": "train",
+        "textSha256": "5cc54324d98f401eb2c08e421288acaedd003629ab458db5ea9f07b7143a0186",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAB_003",
+        "fold": "train",
+        "textSha256": "c633991af8dd66a94f367f53f64efb8bd0389917662fdd8cfb9ef697b72a5641",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAB_004",
+        "fold": "train",
+        "textSha256": "c2a86c0212464a37ff3c13cff8f8c5f4406f4a1ea9ba56fbbd291ef229450f66",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAB_005",
+        "fold": "train",
+        "textSha256": "a1dee0ae0d4dd576e73bbffd16b894b33bef089d9c40485dbfaa01f435f01444",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_POS_CAB_006",
+        "fold": "train",
+        "textSha256": "bcf4b4fd6d41cb7c2e8801d522056c8d8bfabacb4bf32dcfaedcef44a6161be3",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_DEC_001",
+        "fold": "train",
+        "textSha256": "53abcdb763c7fffff6c57220da620c0a08f76f373c727e2669e4688feda946dd",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_DEC_002",
+        "fold": "validation",
+        "textSha256": "ce7d15eab4d9a6eaa976dd1ea99b368c36a88b05618813fbae63a76241b802a2",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_EDG_DEC_003",
+        "fold": "train",
+        "textSha256": "a13370838157f1b4e49215d621e50ad8e6e50eab19839114d3d244c7fe87c861",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_DEC_004",
+        "fold": "train",
+        "textSha256": "1a6c203a4556dc8473ffbba2b2f080595af44aa4f80f91b5e396b576801902a0",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_DEC_005",
+        "fold": "train",
+        "textSha256": "10731a02567863b8a98c65d30c41599c2e788fbb8d7c204e003802cca8b4d809",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_DEC_006",
+        "fold": "train",
+        "textSha256": "f638747aa066d45f5c1afc878e46534a807b9e7214981f7fac6701c8aaf13f2e",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_DEC_007",
+        "fold": "validation",
+        "textSha256": "e679076cf8a67ce646f4901444ae9ec8c1fe816d2a31ba5bff47c256f8025c95",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_EDG_WSP_001",
+        "fold": "train",
+        "textSha256": "e40eb1af9230ff4aa5e975f9f17b4b4c500cfbd2147f765d27cb637b9947e46d",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_WSP_002",
+        "fold": "train",
+        "textSha256": "c69d9a04131881acf2e57fa1c8cdbcb2309bcc29ab4277626f4e8e90d25e8017",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_WSP_003",
+        "fold": "train",
+        "textSha256": "60f4ea1e541d769b5828061b1594f1a1b80e6793e1d12d602d8e61dc251e11ad",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_DIA_001",
+        "fold": "validation",
+        "textSha256": "d396fe5437172262fc123faf0f3957132e7db17c02221341235eee898e253b25",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_EDG_DIA_002",
+        "fold": "quarantined",
+        "textSha256": "05208fe5a7961328bb4a4e1cebee91f9c9c31d7930cf1917cbfb3888a88f436c",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "INCOME",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": false,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_EDG_DIA_003",
+        "fold": "train",
+        "textSha256": "66268015fb848396c8f630c6e76a301e055e03ebc4632b1706326a4d0dfefc75",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_TYP_001",
+        "fold": "train",
+        "textSha256": "e6ec74764ab119b0441dadf5f15999d70210ce40a3ead0accd0565dc04f6eda8",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_TYP_002",
+        "fold": "train",
+        "textSha256": "d56a39d8ca0378cbbda5f443d809628188122e9fd4797583811f38f8eb37a8e6",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_TYP_003",
+        "fold": "validation",
+        "textSha256": "7687ac9da68e91224c7f0bf0f97292da8a2b94ad17e1312d9fe62a9db1db7114",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_EDG_MIS_001",
+        "fold": "validation",
+        "textSha256": "bc8731fdbbcf6a8423ec5e6fb840a325153ac3da80337c3c2652c456b464f0fb",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": false
+      },
+      {
+        "recordId": "TC_EDG_MIS_002",
+        "fold": "train",
+        "textSha256": "a0db352b8be6dcf8f05afcd2bea1124e706e20910a01f4e7f29431ea5932ae87",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      },
+      {
+        "recordId": "TC_EDG_MIS_003",
+        "fold": "train",
+        "textSha256": "27f90c10ca2ba57e9e0d64e0caf79e8cc58043dbd042ee7416e86ff0595655db",
+        "amountSpans": 1,
+        "currencySpans": 1,
+        "directionClaim": "EXPENSE",
+        "directionClaimOrigin": "inherited synthetic fixture field, not a reviewed direction evidence span",
+        "annotationComplete": true,
+        "unresolved": [],
+        "humanReviewed": false,
+        "reviewCandidate": true
+      }
+    ]
+  },
+  "authoredInventory": {
+    "rows": 74,
+    "records": [
+      {
+        "recordId": "authored-sms-v1-001",
+        "group": "authored-v1-withdraw-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 18.5,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-002",
+        "group": "authored-v1-withdraw-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 18.5,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-003",
+        "group": "authored-v1-withdraw-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 27.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-004",
+        "group": "authored-v1-withdraw-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 27.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-005",
+        "group": "authored-v1-purchase-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 34.2,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-006",
+        "group": "authored-v1-purchase-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 34.2,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-007",
+        "group": "authored-v1-purchase-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 6.4,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "USD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-008",
+        "group": "authored-v1-purchase-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 6.4,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "USD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-009",
+        "group": "authored-v1-merchant-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 9.75,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-010",
+        "group": "authored-v1-merchant-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 9.75,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-011",
+        "group": "authored-v1-merchant-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 22.1,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-012",
+        "group": "authored-v1-merchant-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 22.1,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-013",
+        "group": "authored-v1-bill-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 41.6,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-014",
+        "group": "authored-v1-bill-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 41.6,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-015",
+        "group": "authored-v1-bill-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 13.25,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-016",
+        "group": "authored-v1-bill-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 13.25,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-017",
+        "group": "authored-v1-transfer-out-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 56.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-018",
+        "group": "authored-v1-transfer-out-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 56.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-019",
+        "group": "authored-v1-transfer-out-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 7.5,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-020",
+        "group": "authored-v1-transfer-out-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 7.5,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-021",
+        "group": "authored-v1-transfer-in-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 46.3,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-022",
+        "group": "authored-v1-transfer-in-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 46.3,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-023",
+        "group": "authored-v1-transfer-in-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 12.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-024",
+        "group": "authored-v1-transfer-in-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 12.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-025",
+        "group": "authored-v1-deposit-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 120.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-026",
+        "group": "authored-v1-deposit-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 120.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-027",
+        "group": "authored-v1-deposit-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 68.25,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-028",
+        "group": "authored-v1-deposit-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 68.25,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-029",
+        "group": "authored-v1-refund-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 15.8,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-030",
+        "group": "authored-v1-refund-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 15.8,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-031",
+        "group": "authored-v1-refund-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 29.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-032",
+        "group": "authored-v1-refund-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 29.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-033",
+        "group": "authored-v1-cashback-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 2.45,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-034",
+        "group": "authored-v1-cashback-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 2.45,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-035",
+        "group": "authored-v1-cashback-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 3.8,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-036",
+        "group": "authored-v1-cashback-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 3.8,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-037",
+        "group": "authored-v1-fee-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 0.75,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-038",
+        "group": "authored-v1-fee-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 0.75,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-039",
+        "group": "authored-v1-fee-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 1.25,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-040",
+        "group": "authored-v1-fee-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 1.25,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-041",
+        "group": "authored-v1-installment-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 145.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-042",
+        "group": "authored-v1-installment-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 145.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-043",
+        "group": "authored-v1-installment-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 82.6,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-044",
+        "group": "authored-v1-installment-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 82.6,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-045",
+        "group": "authored-v1-salary-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 625.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-046",
+        "group": "authored-v1-salary-a",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 625.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-047",
+        "group": "authored-v1-salary-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 910.5,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-048",
+        "group": "authored-v1-salary-b",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 910.5,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "incoming",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-049",
+        "group": "authored-v1-otp",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-050",
+        "group": "authored-v1-otp",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-051",
+        "group": "authored-v1-declined",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-052",
+        "group": "authored-v1-declined",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-053",
+        "group": "authored-v1-pending",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-054",
+        "group": "authored-v1-pending",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-055",
+        "group": "authored-v1-chat",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-056",
+        "group": "authored-v1-chat",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-057",
+        "group": "authored-v1-balance",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-058",
+        "group": "authored-v1-balance",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-059",
+        "group": "authored-v1-promotion",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-060",
+        "group": "authored-v1-promotion",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-061",
+        "group": "authored-v1-admin",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-062",
+        "group": "authored-v1-admin",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-063",
+        "group": "authored-v1-points",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-064",
+        "group": "authored-v1-points",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-065",
+        "group": "authored-v1-authorization",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": null,
+          "currency": null,
+          "direction": null
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-066",
+        "group": "authored-v1-authorization",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": null,
+          "currency": null,
+          "direction": null
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-067",
+        "group": "authored-v1-conflict",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": null,
+          "currency": null,
+          "direction": null
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-068",
+        "group": "authored-v1-conflict",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": null,
+          "currency": null,
+          "direction": null
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-069",
+        "group": "authored-v1-own",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 77.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-070",
+        "group": "authored-v1-own",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 77.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "not_applicable",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-071",
+        "group": "authored-v1-unknown",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 36.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "uncertain",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-072",
+        "group": "authored-v1-unknown",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": 36.0,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "uncertain",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": true,
+        "directionReviewCandidate": false,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-073",
+        "group": "authored-v1-missing-amount",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      },
+      {
+        "recordId": "authored-sms-v1-074",
+        "group": "authored-v1-missing-amount",
+        "fold": "proposed_training",
+        "claims": {
+          "amount": {
+            "value": null,
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "currency": {
+            "value": "JOD",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          },
+          "direction": {
+            "value": "outgoing",
+            "state": "weak",
+            "origin": "assistant_reviewed_text",
+            "sourceSpans": 1,
+            "validSourceSpans": true
+          }
+        },
+        "invalidFields": [],
+        "amountReviewCandidate": false,
+        "directionReviewCandidate": true,
+        "reviewCandidate": true,
+        "trainingEligible": false,
+        "independentEvaluationEligible": false
+      }
+    ]
+  },
+  "propagationInventory": {
+    "rows": 1702,
+    "proposedDirectionRows": 321,
+    "amountTargets": 0,
+    "interpretation": "Guarded weak propagation proposals; no automatic admission or independently reviewed direction ground truth."
+  },
+  "contextAndScopeInventory": {
+    "contextGroups": 18,
+    "scopeRows": 192,
+    "interpretation": "Status/context/event evidence does not supply general amount/direction annotations. Keep original family/fold memberships; do not parse numbers into gold labels."
+  },
+  "developmentFixtureInventory": {
+    "records": 52,
+    "pendingPolicies": 4,
+    "trainingEligible": false,
+    "independentEvaluationEligible": false
+  },
+  "originalSourceInventory": {
+    "seedBlockCount": 26,
+    "sourceAuthentication": "user_attested_not_independently_authenticated",
+    "independentEvaluationEligibleCount": 0,
+    "trainingAdmittedCount": 0,
+    "confirmedGeminiParentEdges": 0,
+    "unresolvedOtherRawBlockCount": 85
+  },
+  "modelTraining": false,
+  "newInference": false,
+  "labelsChanged": 0,
+  "reservedInferred": false,
+  "inputs": {
+    ".local-backups/sms_completion_adaptation_v1/final.safetensors": "fdb0869f7f5cc33ad406835ceefa4b14c71ece8a4d2da4b5e1599aad87cc0fd1",
+    ".local-backups/sms_completion_encoder_v1/requirements.lock.txt": "bb9298d873ca20862ea37956b71361f72a511ae3fd0460ea996f6fd13f242c85",
+    ".local-backups/sms_research_manual_v1/cases.json": "b1d582d32af849578565ba5404fad96e1922aad873d344d27ae803457c34d875",
+    "config/contracts/sms_factorization_annotations.json": "a8c13bde25855671e6176885f4423b1a9a1c37dce45cd34e517674b979508f6f",
+    "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8",
+    "config/experiments/sms_completion_adaptation_v1.json": "aa48190817be42863ee8a1d39b271a0a5bed562e6e67d0207e6613228a1a4b56",
+    "config/experiments/sms_completion_encoder_v1.json": "30d9eae6350b5d42be638b5571c2c12045a67459a8c6a75e4527b205086b0b12",
+    "config/experiments/sms_factorization_comparison_v1.json": "f9894b73e0d620ef6f3e1366801b21ae56b548c1117c26b13d5c2e23de188234",
+    "config/experiments/sms_factorization_comparison_v2.json": "329305d4620e34ceb133f458722175196f302e1ca957078843f9fdb5d1509638",
+    "data/annotations/sms_factorization_eval_v1/development_annotations.jsonl": "92799a5c97bde714a4d985f8c141c2c3c9a38145cf8ed9f24d9e2214d2e29c8c",
+    "data/annotations/sms_factorization_eval_v1/development_reviews.tsv": "2a26a10b6374a048aefc089d4a9dfe3d016f06229080812fcf9e078fbe124e2e",
+    "data/annotations/sms_factorization_v1/full_annotations.jsonl": "3e4aac5cc4c427598b76d21b54911f9bb78027dd9d76135babe541a29af1b677",
+    "data/annotations/sms_factorization_v1/uncertainty_annotations.jsonl": "8ef6cd3bfa7f119891317043b6ec3d998b47aa449657dd2f7ef39ccf759600a1",
+    "data/annotations/sms_scope_v1/manifest.json": "e9cd9beb688bc0f418e466c57f3c344e34c8fe49c9add6df63445435d66a550a",
+    "data/annotations/sms_scope_v1/scenarios.txt": "964439ce1a78604f25ff9b0842fd2b6caf932994ff638b9648ead4240abfc999",
+    "data/annotations/sms_semantics_v1/propagation_proposal_v1.jsonl": "d8a23890e73d29ef662b909e21f7c5fc494a85d64dc12aabcf492229e383b2da",
+    "data/models/sms_completion_context_v1_candidate.json": "fad7f42560fae5dfbf55c7c070013e7e95b1eb008c67434219165207891cd73c",
+    "data/models/sms_completion_encoder_v1_candidate.json": "8080e66ef95ff87d8f8d5d461b7dd825c7fc7467ed397c4ecf92d11896700889",
+    "data/models/sms_semantics_followup_v1_word_candidate.json": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121",
+    "data/reports/real_sms_provenance_audit.json": "ec06608f92cd59208a3bdaa08d36dbddbeae763a7cf6a10d3df716bee20d7b31",
+    "data/reports/transactions/sms_completion_adaptation_v1.json": "b3a886e2ad503511c5abac0afbc63a973ce78d02dce890b39ca3341f489096b7",
+    "data/reports/transactions/sms_completion_adaptation_v1_resource_audit.json": "a7ffc61ec6918e1740f40fa086bdca3fbc2a51c8ef21d6aba478bb87373e38c6",
+    "data/reports/transactions/sms_completion_context_v1.json": "e1b4127fae4c674a91dfe122d98a85485c384278728e65abd7fa0e2473be9f09",
+    "data/reports/transactions/sms_completion_encoder_v1.json": "6b6233a56430224f6983a7ea5f64bee2f6f251baee26021c36b0932f77f60e45",
+    "data/reports/transactions/sms_factorization_comparison_v1_cohort.json": "ba54cf0bdb45851aaf1b71e7dcb205bc95c6108c7d17b9a2430c9499058af180",
+    "data/reports/transactions/sms_factorization_v1_full.json": "2d659bc99a7fa048b4cf584c114fab4927c2f9c66d600e625ad861be09dab658",
+    "data/reports/transactions/sms_factorization_v1_uncertainty.json": "150e1814354e835f79f9952c7d113d0293d8b86a16127bae35545c86b8f60372",
+    "data/reports/transactions/sms_scope_v1_preparation.json": "8382903448404c97739935cb49d71f9439031d99ad03a4f8b429bed37965255e",
+    "data/reports/transactions/sms_semantics_followup_v1.json": "cedd066e3a35a01ceef96b6e527b0de7a3ad673690ae17481ce5ca254c22d080",
+    "data/reports/transactions/sms_semantics_followup_v1_cohort.json": "9c91de7551e9cb65f04eeba89edef0ddd7308d2e3cd700e9dbf9da1b13a383b8",
+    "data/training/authored_sms_context_v1/scenarios.json": "2f1b1d2f03a12d3a776d4c3b24dbd743858940b57ac232b9bea7bfbc69297ae7",
+    "data/training/authored_sms_scope_v1/messages.jsonl": "a1c67be6a114a9936702ebac948c97d2d1a87bd2955ad64290f845d1d2bfaea2",
+    "data/training/authored_sms_v1/messages.jsonl": "18ca9e8b943a484ddab90b0f1536d3fed43d546b2d148a3e484591bdf02d409f",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/training/sanitized_v2/bio_training_data.json": "fe5aa5f0012499f27a7505504c494d734bfc60d1c4546b670b91534c4a770f42",
+    "data/training/splits/bio_sanitized_v2.json": "4fdc75b9386ba111fb4275b31d091ac2a89a6fbc477285eda681f032f2d73b7c",
+    "data/training/splits/transaction_direction_sanitized_v1.json": "512af5213d2c34ab3f6f8a501163e261102e3dbf5e7cf52d0439735b204a4668",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "src/python/research/sms_semantics.py": "0eab832392fbcf737a6f9d82102310018eaed13734c7aad977c19e177ebd5d4d",
+    "tests/fixtures/core_money_v1.json": "ea36d5a469e07cbd80255e71b28f36bbb26ef9f864eac9d227bc56b477d1b3bb",
+    "tests/fixtures/quoted_example_cases.json": "0b51454d63b3d41914bbf4daab7a24b34ffe9ffc4c7199cf524160e1e8539965",
+    "tools/evaluation/audit_core_money_data.py": "f5a2dd5f89ad50b70387ea214740ed4e10fc95340331971ce9329b0040211e40",
+    "tools/evaluation/python_worker_monitor.py": "bb1aefc0d7a7f83bd7b2aae2c753d0dd63e48f8f2ceda3bedb8d90eb63678145",
+    "tools/evaluation/worker_supervision.py": "221433b5b6d77e9e22bd1dc672e7096af723fe67a5297a7a8ffb2bd2fe64dda0",
+    "training/corpus/factorization_full.py": "d395846be1a0e59fb71ddf15af262599f7c18f9207672763046206c09b883238",
+    "training/corpus/factorization_pilot.py": "493342a87dec946bb6afe5af9018ba564ca9cb9368046ad4ea7bd4405b7ef98a",
+    "training/corpus/factorization_supplement.py": "f40ec7d9766366a87911dc956dcc055e99fc34ee69549eb2065194d7e305a637",
+    "training/corpus/factorization_uncertainty.py": "6e2d8fc76f01657862ed09e7df40855446dbbb8bed0d4c7395eb729493b7c812",
+    "training/corpus/scope_contrasts.py": "966a91e73ec82bf06657b3e244a14306c6cff3119a83fd7ce2c2cd43cfd367db",
+    "training/transactions/completion_adaptation.py": "3e434f9bc9b546d85cfee5302b20f4e7c0cc48f99c50cf2c1b60f1af31195261",
+    "training/transactions/completion_encoder.py": "5855214afeba920074409da9621355f54e2092e4718d198fa122987325d4c99a",
+    "training/transactions/factorization_comparison.py": "e00e5fc818222573b3e5708c06f6ee5bddc7fb7e36db6ea4045d8bc11b5eb262",
+    "training/transactions/factorization_protocol.py": "d21828372cec9773296682c57fc24ba2cbc0fc1f3c2738a36bf3c61587991cf6"
+  },
+  "limitations": [
+    "Duplicate/conflict checks operate on exact text and existing number-masking normalization, not semantic equivalence.",
+    "Evidence-span integrity is syntactic; it does not certify that a value is the correct event amount or direction.",
+    "Amount/direction inventories overlap in ancestry; counts must not be pooled as independent receipts.",
+    "Assistant-weak/synthetic labels and exposed originals are not independent real-world evaluation.",
+    "No record is admitted, reweighted, relabeled, moved between folds or deduplicated by this audit."
+  ]
+}

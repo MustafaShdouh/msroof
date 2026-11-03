@@ -1,0 +1,3052 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Frozen source-derived exposed development contrasts; NOT independent accuracy",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false,
+  "sourceSnapshot": ".local-backups/core_money_r5a_unmarked/after.json",
+  "sourceSnapshotSha256": "68874901b1ef4af25ec7e7c30a48b50255c34b74de86294b05de6d4cc312c109",
+  "balanceSource": {
+    "cohort": "core52",
+    "recordId": "balance-before",
+    "fragment": "Available balance JOD 630.500."
+  },
+  "expectedFieldPolicy": "Only inherit existing asserted core fields. Clause permutations preserve wording and numeric facts; balance fragments assert no new event or ownership.",
+  "cases": [
+    {
+      "id": "contrast-1",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "bare-primary-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-2",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "your account was charged 7.090; Purchase USD 10.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "bare-primary-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-3",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "bare-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-4",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "17 was debited from your account; total debited 17.500; fee 0.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "bare-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-5",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "fee 0.500; 17 was debited from your account; total debited 17.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "bare-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-6",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "fee 0.500; total debited 17.500; 17 was debited from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "bare-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-7",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "total debited 17.500; 17 was debited from your account; fee 0.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "bare-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-8",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "total debited 17.500; fee 0.500; 17 was debited from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "bare-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-9",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "explicit-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-10",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "17 was debited from your account; total debited JOD 17.500; fee JOD 0.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "explicit-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-11",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "fee JOD 0.500; 17 was debited from your account; total debited JOD 17.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "explicit-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-12",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "fee JOD 0.500; total debited JOD 17.500; 17 was debited from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "explicit-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-13",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "total debited JOD 17.500; 17 was debited from your account; fee JOD 0.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "explicit-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-14",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "total debited JOD 17.500; fee JOD 0.500; 17 was debited from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "explicit-total-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-15",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "bare-and-fee-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-16",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "fee JOD 0.500; 17 was debited from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "bare-and-fee-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-17",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "Your account was charged 17; total debited 19.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "two-primary-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-18",
+      "language": "en",
+      "boundary": "amount_clause_order",
+      "input": {
+        "text": "total debited 19; Your account was charged 17.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "two-primary-en:0:False",
+        "transform": "amount_clause_order"
+      }
+    },
+    {
+      "id": "contrast-19",
+      "language": "en",
+      "boundary": "equal_competing_primaries",
+      "input": {
+        "text": "Your account was charged 17; total debited 17.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      },
+      "source": {
+        "cohort": "core_unmarked_amounts_v1",
+        "recordId": "two-primary-en:0:False",
+        "transform": "equal_competing_primaries"
+      }
+    },
+    {
+      "id": "contrast-20",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Outward transfer of JOD 25 completed from your account to another person, Ali."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 25,
+        "currency": "JOD",
+        "direction": "outgoing",
+        "transferRelationship": "other_person"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "p2p-out",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-21",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Outward transfer of JOD 25 completed from your account to another person, Ali."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 25,
+        "currency": "JOD",
+        "direction": "outgoing",
+        "transferRelationship": "other_person"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "p2p-out",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-22",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Outward transfer of JOD 25 completed from your account to another person, Ali. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 25,
+        "currency": "JOD",
+        "direction": "outgoing",
+        "transferRelationship": "other_person"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "p2p-out",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-23",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "تم تحويل ٢٥ دينار من شخص آخر إلى حسابك وإضافتها إلى رصيدك بنجاح."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 25,
+        "currency": "JOD",
+        "direction": "incoming",
+        "transferRelationship": "other_person"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "p2p-in",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-24",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. تم تحويل ٢٥ دينار من شخص آخر إلى حسابك وإضافتها إلى رصيدك بنجاح."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 25,
+        "currency": "JOD",
+        "direction": "incoming",
+        "transferRelationship": "other_person"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "p2p-in",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-25",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "تم تحويل ٢٥ دينار من شخص آخر إلى حسابك وإضافتها إلى رصيدك بنجاح. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 25,
+        "currency": "JOD",
+        "direction": "incoming",
+        "transferRelationship": "other_person"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "p2p-in",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-26",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Transfer of JOD 45 between your own accounts completed."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "transferRelationship": "own_accounts"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "own-transfer",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-27",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Transfer of JOD 45 between your own accounts completed."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "transferRelationship": "own_accounts"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "own-transfer",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-28",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Transfer of JOD 45 between your own accounts completed. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "transferRelationship": "own_accounts"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "own-transfer",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-29",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Outward transfer of JOD 25 completed from account *4321 to SAMER."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "transferRelationship": "unknown"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "named-unknown-transfer",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-30",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Outward transfer of JOD 25 completed from account *4321 to SAMER."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "transferRelationship": "unknown"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "named-unknown-transfer",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-31",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Outward transfer of JOD 25 completed from account *4321 to SAMER. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "transferRelationship": "unknown"
+      },
+      "source": {
+        "cohort": "core52",
+        "recordId": "named-unknown-transfer",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-32",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "نُفذت حوالتك إلى حساب شخص آخر. تم تنزيل ٥٦ JOD من رصيد حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 56.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-017",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-33",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. نُفذت حوالتك إلى حساب شخص آخر. تم تنزيل ٥٦ JOD من رصيد حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 56.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-017",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-34",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "نُفذت حوالتك إلى حساب شخص آخر. تم تنزيل ٥٦ JOD من رصيد حسابك. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 56.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-017",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-35",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Your transfer to another person is complete. JOD 56 was removed from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 56.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-018",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-36",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Your transfer to another person is complete. JOD 56 was removed from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 56.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-018",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-37",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Your transfer to another person is complete. JOD 56 was removed from your account. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 56.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-018",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-38",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "أُرسلت دفعة كليك لشخص آخر وقُيد خصم ۷٫۵۰ دينار على محفظتك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 7.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-019",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-39",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. أُرسلت دفعة كليك لشخص آخر وقُيد خصم ۷٫۵۰ دينار على محفظتك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 7.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-019",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-40",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "أُرسلت دفعة كليك لشخص آخر وقُيد خصم ۷٫۵۰ دينار على محفظتك. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 7.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-019",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-41",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "CliQ payment sent to another person; a 7.50 JOD debit is posted to your wallet."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 7.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-020",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-42",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. CliQ payment sent to another person; a 7.50 JOD debit is posted to your wallet."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 7.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-020",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-43",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "CliQ payment sent to another person; a 7.50 JOD debit is posted to your wallet. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 7.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-020",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-44",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "وصلت حوالة من شخص آخر وأُضيف ٤٦٫٣٠ JOD إلى رصيد حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 46.3,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-021",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-45",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. وصلت حوالة من شخص آخر وأُضيف ٤٦٫٣٠ JOD إلى رصيد حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 46.3,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-021",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-46",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "وصلت حوالة من شخص آخر وأُضيف ٤٦٫٣٠ JOD إلى رصيد حسابك. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 46.3,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-021",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-47",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Transfer received from another person. JOD 46.30 added to your account balance."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 46.3,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-022",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-48",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Transfer received from another person. JOD 46.30 added to your account balance."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 46.3,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-022",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-49",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Transfer received from another person. JOD 46.30 added to your account balance. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 46.3,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-022",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-50",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك ۱۲ دينار."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 12.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-023",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-51",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك ۱۲ دينار."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 12.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-023",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-52",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك ۱۲ دينار. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 12.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-023",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-53",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Another person's CliQ payment has arrived; your wallet increased by 12 JOD."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 12.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-024",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-54",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Another person's CliQ payment has arrived; your wallet increased by 12 JOD."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 12.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-024",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-55",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Another person's CliQ payment has arrived; your wallet increased by 12 JOD. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 12.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-024",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-56",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "اكتملت حركة داخلية بقيمة ٧٧ JOD من حسابك الجاري إلى حساب التوفير المملوك لك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 77.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "trackingDecision": "exclude"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-069",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-57",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. اكتملت حركة داخلية بقيمة ٧٧ JOD من حسابك الجاري إلى حساب التوفير المملوك لك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 77.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "trackingDecision": "exclude"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-069",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-58",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "اكتملت حركة داخلية بقيمة ٧٧ JOD من حسابك الجاري إلى حساب التوفير المملوك لك. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 77.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "trackingDecision": "exclude"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-069",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-59",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Internal movement completed: JOD 77 from your current account to your own savings account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 77.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "trackingDecision": "exclude"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-070",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-60",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Internal movement completed: JOD 77 from your current account to your own savings account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 77.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "trackingDecision": "exclude"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-070",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-61",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Internal movement completed: JOD 77 from your current account to your own savings account. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 77.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "trackingDecision": "exclude"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-070",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-62",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "أُنجزت حوالة ٣٦ JOD؛ الحساب المصدر *2104 والحساب المستفيد *7601، رقم المرجع 98351."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 36.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "trackingDecision": "review"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-071",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-63",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. أُنجزت حوالة ٣٦ JOD؛ الحساب المصدر *2104 والحساب المستفيد *7601، رقم المرجع 98351."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 36.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "trackingDecision": "review"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-071",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-64",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "أُنجزت حوالة ٣٦ JOD؛ الحساب المصدر *2104 والحساب المستفيد *7601، رقم المرجع 98351. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 36.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "trackingDecision": "review"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-071",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-65",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Transfer completed for JOD 36. Source account *2104, destination account *7601, reference 98351."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 36.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "trackingDecision": "review"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-072",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-66",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Transfer completed for JOD 36. Source account *2104, destination account *7601, reference 98351."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 36.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "trackingDecision": "review"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-072",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-67",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Transfer completed for JOD 36. Source account *2104, destination account *7601, reference 98351. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 36.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "trackingDecision": "review"
+      },
+      "source": {
+        "cohort": "authored74",
+        "recordId": "authored-sms-v1-072",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-68",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Your account received JOD 17 by a transfer from another person.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "account-received-en:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-69",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Your account received JOD 17 by a transfer from another person.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "account-received-en:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-70",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Your account received JOD 17 by a transfer from another person. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "account-received-en:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-71",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "استلم حسابك 17 JOD من حوالة مرسلة من شخص آخر.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "account-received-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-72",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. استلم حسابك 17 JOD من حوالة مرسلة من شخص آخر.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "account-received-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-73",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "استلم حسابك 17 JOD من حوالة مرسلة من شخص آخر. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "account-received-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-74",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Another person's CliQ payment has arrived; your wallet increased by 17 JOD.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "wallet-increased-en:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-75",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Another person's CliQ payment has arrived; your wallet increased by 17 JOD.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "wallet-increased-en:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-76",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Another person's CliQ payment has arrived; your wallet increased by 17 JOD. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "wallet-increased-en:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-77",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك 17 JOD.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "wallet-increased-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-78",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك 17 JOD.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "wallet-increased-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-79",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك 17 JOD. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "wallet-increased-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-80",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Your transfer to another person is complete. JOD 17 was removed from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-complete-en:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-81",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Your transfer to another person is complete. JOD 17 was removed from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-complete-en:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-82",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Your transfer to another person is complete. JOD 17 was removed from your account. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-complete-en:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-83",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "نفذت حوالتك إلى حساب شخص آخر. تم تنزيل 17 JOD من رصيد حسابك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-executed-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-84",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. نفذت حوالتك إلى حساب شخص آخر. تم تنزيل 17 JOD من رصيد حسابك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-executed-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-85",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "نفذت حوالتك إلى حساب شخص آخر. تم تنزيل 17 JOD من رصيد حسابك. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-executed-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-86",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Your transfer is complete: JOD 17 was removed from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-unknown-en:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-87",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Your transfer is complete: JOD 17 was removed from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-unknown-en:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-88",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Your transfer is complete: JOD 17 was removed from your account. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-unknown-en:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-89",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "أُنجزت حوالة بقيمة 17 JOD بين الحساب *1111 والحساب *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-unknown-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-90",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. أُنجزت حوالة بقيمة 17 JOD بين الحساب *1111 والحساب *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-unknown-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-91",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "أُنجزت حوالة بقيمة 17 JOD بين الحساب *1111 والحساب *2222. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "transfer-unknown-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-92",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Internal movement completed: JOD 17 from your current account to your own savings account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "own-accounts-en:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-93",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Internal movement completed: JOD 17 from your current account to your own savings account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "own-accounts-en:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-94",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Internal movement completed: JOD 17 from your current account to your own savings account. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "own-accounts-en:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-95",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "own-accounts-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-96",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "own-accounts-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-97",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "own-accounts-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-98",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري *1111 إلى حساب التوفير الخاص بك *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "own-masked-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-99",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. اكتمل نقل 17 JOD من حسابك الجاري *1111 إلى حساب التوفير الخاص بك *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "own-masked-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-100",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري *1111 إلى حساب التوفير الخاص بك *2222. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "own-masked-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-101",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Internal transfer to another person completed. JOD 17 was removed from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "internal-person-en:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-102",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Internal transfer to another person completed. JOD 17 was removed from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "internal-person-en:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-103",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Internal transfer to another person completed. JOD 17 was removed from your account. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "internal-person-en:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-104",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Internal movement completed: JOD 17 between account *1111 and account *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "internal-unknown-en:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-105",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Internal movement completed: JOD 17 between account *1111 and account *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "internal-unknown-en:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-106",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Internal movement completed: JOD 17 between account *1111 and account *2222. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_income_transfers_v1",
+        "recordId": "internal-unknown-en:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-107",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "قيدت حوالة واردة بقيمة 17 JOD في حسابك *1111 من الحساب *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "incoming-transfer-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-108",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. قيدت حوالة واردة بقيمة 17 JOD في حسابك *1111 من الحساب *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "incoming-transfer-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-109",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "قيدت حوالة واردة بقيمة 17 JOD في حسابك *1111 من الحساب *2222. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "incoming-transfer-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-110",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "اكتملت حركة داخلية بقيمة 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "internal-own-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-111",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. اكتملت حركة داخلية بقيمة 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "internal-own-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-112",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "اكتملت حركة داخلية بقيمة 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "internal-own-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-113",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "اكتملت حركة داخلية بقيمة 17 JOD من الحساب *1111 إلى الحساب *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "internal-unknown-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-114",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. اكتملت حركة داخلية بقيمة 17 JOD من الحساب *1111 إلى الحساب *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "internal-unknown-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-115",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "اكتملت حركة داخلية بقيمة 17 JOD من الحساب *1111 إلى الحساب *2222. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "internal-unknown-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-116",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Transfer commission collected. A transfer of JOD 17 was debited from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "fee-plus-transfer-en:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-117",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Transfer commission collected. A transfer of JOD 17 was debited from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "fee-plus-transfer-en:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-118",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Transfer commission collected. A transfer of JOD 17 was debited from your account. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "fee-plus-transfer-en:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-119",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Transfer commission collected. A transfer of JOD 17 to another person was debited from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "fee-plus-person-en:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-120",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Transfer commission collected. A transfer of JOD 17 to another person was debited from your account.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "fee-plus-person-en:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-121",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Transfer commission collected. A transfer of JOD 17 to another person was debited from your account. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "fee-plus-person-en:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-122",
+      "language": "en",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "Transfer fee: JOD 17 has been debited from *1111 and has been credited to *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "fee-plus-paired-en:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-123",
+      "language": "en",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. Transfer fee: JOD 17 has been debited from *1111 and has been credited to *2222.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "fee-plus-paired-en:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-124",
+      "language": "en",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "Transfer fee: JOD 17 has been debited from *1111 and has been credited to *2222. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "fee-plus-paired-en:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-125",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "salary-own-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-126",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "salary-own-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-127",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "salary-own-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-128",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD من شخص آخر.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "salary-person-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-129",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD من شخص آخر.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "salary-person-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-130",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD من شخص آخر. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "salary-person-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    },
+    {
+      "id": "contrast-131",
+      "language": "ar",
+      "boundary": "ownership_identity",
+      "input": {
+        "text": "قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD عبر كليك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "salary-cliq-ar:0:False",
+        "transform": "ownership_identity"
+      }
+    },
+    {
+      "id": "contrast-132",
+      "language": "ar",
+      "boundary": "balance_before_transfer",
+      "input": {
+        "text": "Available balance JOD 630.500. قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD عبر كليك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "salary-cliq-ar:0:False",
+        "transform": "balance_before_transfer"
+      }
+    },
+    {
+      "id": "contrast-133",
+      "language": "ar",
+      "boundary": "balance_after_transfer",
+      "input": {
+        "text": "قيدت حوالة الراتب كزيادة على رصيدك بمبلغ 17 JOD عبر كليك. Available balance JOD 630.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "source": {
+        "cohort": "completion_settlement_v1",
+        "recordId": "salary-cliq-ar:0:False",
+        "transform": "balance_after_transfer"
+      }
+    }
+  ]
+}

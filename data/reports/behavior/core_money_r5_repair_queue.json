@@ -1,0 +1,3894 @@
+{
+  "sourceReportSha256": "4199911d9c1933215abfb122439c235ddd0d862a74ebb4be59344f2291fa3a56",
+  "records": [
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-049",
+      "textSha256": "1692e35dcf39ab762ae0bd33b2695ea075d252c866245293905494f569cfefe7",
+      "language": "ar",
+      "family": "otp",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "trackingDecision": "exclude"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "currencyResolution": {
+          "expected": "not_applicable",
+          "actual": "default_missing"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_applicable",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-052",
+      "textSha256": "33cce190d66e36a11c4877c70617c83ca64af4d8841cf43a2b92abc651e4e945",
+      "language": "en",
+      "family": "declined_or_failed",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "trackingDecision": "exclude"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 40.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 40.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "currencyResolution": {
+          "expected": "not_applicable",
+          "actual": "explicit"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_applicable",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-054",
+      "textSha256": "10f60afe0e271156cab1834b358e1eeed4b81a5d6772e76061e91a1d3f3b5426",
+      "language": "en",
+      "family": "pending_or_requested",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "trackingDecision": "exclude"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 60.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 60.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "currencyResolution": {
+          "expected": "not_applicable",
+          "actual": "explicit"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_applicable",
+          "actual": "unknown"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-055",
+      "textSha256": "4fce3c15452c2c32a6d34bf6f0c45b89c514ba550e657fe87f17583da02ad942",
+      "language": "ar",
+      "family": "personal_conversation",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "trackingDecision": "exclude"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 11.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "amount": {
+          "expected": null,
+          "actual": 11.0
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "currencyResolution": {
+          "expected": "not_applicable",
+          "actual": "explicit"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_applicable",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-056",
+      "textSha256": "21fd480f66fb5bc8669189163745bd2652608476f4951a210795f72e7101b575",
+      "language": "en",
+      "family": "personal_conversation",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "trackingDecision": "exclude"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "currencyResolution": {
+          "expected": "not_applicable",
+          "actual": "default_missing"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_applicable",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-061",
+      "textSha256": "06df24d99f95613282fbbbf6b09edf8f6f52862c27fe30cd3c529a1e364b9e17",
+      "language": "ar",
+      "family": "administration",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "trackingDecision": "exclude"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "currencyResolution": {
+          "expected": "not_applicable",
+          "actual": "default_missing"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_applicable",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-062",
+      "textSha256": "df2dc519e998af125f4b309f538b0028407e8ba10b096503acc58970d1f9b54f",
+      "language": "en",
+      "family": "administration",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "trackingDecision": "exclude"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "currencyResolution": {
+          "expected": "not_applicable",
+          "actual": "default_missing"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_applicable",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-063",
+      "textSha256": "542171c5790d5314246fa8fcc829586d8711538a1d1a84a66955b2e4538cd507",
+      "language": "ar",
+      "family": "loyalty",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable",
+        "trackingDecision": "exclude"
+      },
+      "actual": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        },
+        "currency": {
+          "expected": null,
+          "actual": "JOD"
+        },
+        "currencyResolution": {
+          "expected": "not_applicable",
+          "actual": "default_missing"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_applicable",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-065",
+      "textSha256": "375e72fab89c628c5683b2370f767b64b0f6fd2a775d25108e1287e9e62a4fac",
+      "language": "ar",
+      "family": "settlement_uncertain",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-068",
+      "textSha256": "eb62dbe3733ae6a9bae7a457c8059d79cbe33c080cf32608216b99cabedb9b99",
+      "language": "en",
+      "family": "settlement_uncertain",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        },
+        "trackingDecision": {
+          "expected": "review",
+          "actual": "exclude"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-non_transaction-en",
+      "textSha256": "167d7d405427919a1c2879dc86e6d09b00194be255d22945d3cad13713aadf21",
+      "language": "en",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 34.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-non_transaction-ar",
+      "textSha256": "62cd1c02c770254d8bfe969f4a0c785ff069120c1cbde1a4c694a6cde760e10c",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-non_transaction-ar",
+      "textSha256": "be94b456f2ebba8314c39ec059251472bc9cbf104333a54a6cbab8e358851a9f",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 600.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-non_transaction-ar",
+      "textSha256": "2d9afcf6bbcab70b2a9849d38796350f400a645192d0db8935e02d117fff25c9",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-non_transaction-en",
+      "textSha256": "e180809f289c93e83c44fed73f0259a9da2edb38c1ac3ca74b8cbc4033e2a918",
+      "language": "en",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "TRY",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "declined-ar",
+      "textSha256": "b6a63297b54c8d390bb59522efcc763c2276d3e82ff820cd61e7172ba7fab562",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 83.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "unknown"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "pending-ar",
+      "textSha256": "6207ed3816aec7e05e52f01211646acd412504ed46fb7b4c9878a276c19cce34",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 6.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "purchase-otp-ar",
+      "textSha256": "73c32a09105a91f1f7cee9a94fb4ec2291014081eac2fd07e7c89061d74d510c",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 16.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0184",
+      "textSha256": "148735a023312c866d735391b3594f29d2902f63069dce0bc4b57c788d78777a",
+      "language": "en",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0289",
+      "textSha256": "37ed8cbb38b17e0a0a5f16e5be132fbbfa8ee36523fb8774cdabb0ffd9af92d1",
+      "language": "en",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-ar",
+      "textSha256": "693d3a21784d4fad6298687997972bc40d37e844c568b23dbfd8384cf370e71d",
+      "language": "ar",
+      "family": "illustrative_scope",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-en",
+      "textSha256": "6e8b665431318b2dc8cf3d8ae403f397c73e35f0fd98295116ea0acdd0d06f7f",
+      "language": "en",
+      "family": "illustrative_scope",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "completed"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-3-ar",
+      "textSha256": "ef83adb83c7ae1da73258fecf7318b486b92fc9cd2d5c9f111ba48be2e6785b5",
+      "language": "ar",
+      "family": "illustrative_scope",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-4-en",
+      "textSha256": "cb0b6bc14b6666645e9772a2c770de4fd6e57923addcbb97ea6d754bb3900f5f",
+      "language": "en",
+      "family": "illustrative_scope",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "uncertain"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-3-en",
+      "textSha256": "d23aa310e2502b92d3e9230c07fca6f10628de9e72c5b5750149f6f1d1e94920",
+      "language": "en",
+      "family": "personal_claim",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "unknown"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-ar",
+      "textSha256": "391f6b9e3d0905d50c43c4cd684426f5cc7504a9b189d9391ae189ed2658b8b8",
+      "language": "ar",
+      "family": "personal_claim",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "uncertain"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-en",
+      "textSha256": "31f2ef21084250ea7c8d3345c60e1f26186a9e969dac67556186fe59325f3556",
+      "language": "en",
+      "family": "personal_claim",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "uncertain"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-2-ar",
+      "textSha256": "c464d3609c583600ff722d510525d8b0a90b6c96fe48cc35407acb2a1e13698b",
+      "language": "ar",
+      "family": "pending_settled",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-2-en",
+      "textSha256": "ac248399aacb5ed9f9d29260db4cccfca0984c99f07cb39b38affa95eb46ee8b",
+      "language": "en",
+      "family": "pending_settled",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-3-ar",
+      "textSha256": "b9675199c603ba66388ff791eeb233c90985768891a7847a40c32fb79f2918e1",
+      "language": "ar",
+      "family": "pending_settled",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-3-en",
+      "textSha256": "7e40597bf3ae30b77a9f3997c2299cfb8b0450728fd94ea2157a1c15d5fb0c6b",
+      "language": "en",
+      "family": "pending_settled",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-4-en",
+      "textSha256": "77968b6ae24ef268594ce9c682cb156ab9f7e458797fe2e0797e1041b596e658",
+      "language": "en",
+      "family": "pending_settled",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "uncertain"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-2-en",
+      "textSha256": "bf58a58867e6bbd49740d13f9022388a58969cc3e5e7afbe8d4806d5d9d9914c",
+      "language": "en",
+      "family": "question_request",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-3-ar",
+      "textSha256": "221e00851f2d68dc0cedf7d65420aa5784ecab3ccca362033d5b4fa1163c2199",
+      "language": "ar",
+      "family": "question_request",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-3-en",
+      "textSha256": "67e1d2099d731d08f3270c2c94d151347a93c3c289cb59556746407fac6e665b",
+      "language": "en",
+      "family": "question_request",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "non_transaction"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "non_transaction",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-ar",
+      "textSha256": "a8854aedeafb81e5f05162e07e8addb7781c847e7e6eaac41e2c8affbee7a940",
+      "language": "ar",
+      "family": "question_request",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "uncertain"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-en",
+      "textSha256": "8af346cbdc834a02ca0d50f3a9b0537c6adbd8085548934787fd55544a606efb",
+      "language": "en",
+      "family": "question_request",
+      "priority": 1,
+      "expected": {
+        "transactionStatus": "uncertain"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "uncertain",
+          "actual": "non_transaction"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-001",
+      "textSha256": "443bb42ae4d975f624360478d0db5bc5528a21498031c2f63778db6c80dcf8b0",
+      "language": "ar",
+      "family": "cash_withdrawal",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 18.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 18.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-003",
+      "textSha256": "f075c019d6e80e5652b8334648230587ee656aba0039ddfa86debfe2a89a048f",
+      "language": "ar",
+      "family": "cash_withdrawal",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 27.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 27.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-004",
+      "textSha256": "b3f57db5f67d81447813668a81689073d92853771a9a010b92d0d609dd81fc4d",
+      "language": "en",
+      "family": "cash_withdrawal",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 27.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 27.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "outgoing",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-005",
+      "textSha256": "2f365115e588b52fb0f4c1b9b9183d6099d5490a1e5c06bd91b0b8bea79544c1",
+      "language": "ar",
+      "family": "card_purchase",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 34.2,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 34.2,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-006",
+      "textSha256": "345f598d209ca8e89ea69c3d64c9e1dfddb068974bcf328f22c99c5327df4b20",
+      "language": "en",
+      "family": "card_purchase",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 34.2,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 34.2,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-007",
+      "textSha256": "c3191fac7112238825892df8e79c3593dc10f7f8903580149084026f3cc83259",
+      "language": "ar",
+      "family": "card_purchase",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 6.4,
+        "currency": "USD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 6.4,
+        "currency": "USD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-008",
+      "textSha256": "098f8375fe0d3b3e0d59a425192271e27b30645174ac287419151a9f8d238be0",
+      "language": "en",
+      "family": "card_purchase",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 6.4,
+        "currency": "USD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 6.4,
+        "currency": "USD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-009",
+      "textSha256": "203cc6106f547776391a0fdf6ae14332fac0536a404582e4ff4427294f0cd00a",
+      "language": "ar",
+      "family": "merchant_payment",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 9.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 9.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-011",
+      "textSha256": "941db728f3f161c982d9aebe866e423468e68f10c089e6d9c59e45e781b73ebe",
+      "language": "ar",
+      "family": "merchant_payment",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 22.1,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 22.1,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-012",
+      "textSha256": "bec0831fcb025b61abbb0d79c4811711d23eb8b0cca068cc43c5d96be0eafc19",
+      "language": "en",
+      "family": "merchant_payment",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 22.1,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 22.1,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-013",
+      "textSha256": "fdf7b4149037619d45b632b173350d7eb1f44e58955597688ba35e1b1b7d5aca",
+      "language": "ar",
+      "family": "bill_payment",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 41.6,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 41.6,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-015",
+      "textSha256": "c3a2a6d189afdf97cc4d8fbccfc6f8645f16a21bec8eee21cc93f81a4942d3a6",
+      "language": "ar",
+      "family": "bill_payment",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 13.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 13.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-016",
+      "textSha256": "4835d7f1f297da37e137e9182f2b2f9d603858b1296f7b0f4cf39dc46631c8b7",
+      "language": "en",
+      "family": "bill_payment",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 13.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        },
+        "amount": {
+          "expected": 13.25,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "outgoing",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-017",
+      "textSha256": "547a2f12e046891df287cd31c46b79c7b97eeb2004483c54651bf86c3f1864f8",
+      "language": "ar",
+      "family": "bank_transfer",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 56.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        },
+        "amount": {
+          "expected": 56.0,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "outgoing",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "other_person",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-018",
+      "textSha256": "d205432f3ef55d5a1b198d4317d6f0b282322df55063b58d03d9c0bf87682094",
+      "language": "en",
+      "family": "bank_transfer",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 56.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 56.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "other_person"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "outgoing",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-019",
+      "textSha256": "89a53461720a740c8cd8298595ae9b45eafeeb8c4dad7799d1ec07cf2192acf3",
+      "language": "ar",
+      "family": "bank_transfer",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 7.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 7.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-020",
+      "textSha256": "524bbfb3fe641fde324394259c770fd67da9e2cf6850c2473b1d16eec7ba64c5",
+      "language": "en",
+      "family": "bank_transfer",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 7.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 7.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-021",
+      "textSha256": "e2ce49f1519f9bffcff5c2548cc5ab0047ba7aa07d0ce4cf3f14fe676531040b",
+      "language": "ar",
+      "family": "bank_transfer",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 46.3,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 46.3,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "other_person"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-023",
+      "textSha256": "7adec7a60dc4e03d3d8887b4a97767b45a39bed752be33fc6b28a182257b4350",
+      "language": "ar",
+      "family": "bank_transfer",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 12.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 12.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "other_person"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-024",
+      "textSha256": "bdab4a4192aff2c91b8aff6edc8d8ecaa8a8db30abaab7b755233ec75c60df68",
+      "language": "en",
+      "family": "bank_transfer",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 12.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 12.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "other_person"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "outgoing"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-025",
+      "textSha256": "2a1059b1062a4602ccdce79ea8fbb64bd9f812ce5f7e281194bf9365e29907f3",
+      "language": "ar",
+      "family": "cash_deposit",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 120.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 120.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-027",
+      "textSha256": "c8f60525404d28f147a33eae8154e45882a06c33252ddfefb68364c2d9bf09f0",
+      "language": "ar",
+      "family": "cash_deposit",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 68.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 68.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-028",
+      "textSha256": "8fec74c618afd85ef46f25a064c6bbac823be16eb050c808c0e0373a9fe837a7",
+      "language": "en",
+      "family": "cash_deposit",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 68.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        },
+        "amount": {
+          "expected": 68.25,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-029",
+      "textSha256": "fc9b5b6ed9fab277673f57e5afb530b7c11cf99f08b79046d13bdee90e01b2c8",
+      "language": "ar",
+      "family": "refund",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 15.8,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 15.8,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "outgoing"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-031",
+      "textSha256": "934e5f59bdb4ac7b71978255fca261ead85aa96d4e5c4ef206c65d49cc57de8c",
+      "language": "ar",
+      "family": "refund",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 29.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 29.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-032",
+      "textSha256": "ca9eb9fb766e87553028ab797344655c87b4cd18ff91fc8454c832ce8283a6fb",
+      "language": "en",
+      "family": "refund",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 29.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 29.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "outgoing"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-033",
+      "textSha256": "33747aad5ffb9d548e19c98167261783268a496b014d7e191843127e763638da",
+      "language": "ar",
+      "family": "cashback",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 2.45,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        },
+        "amount": {
+          "expected": 2.45,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-035",
+      "textSha256": "80af0fdcb403823c98ed3e4eb0109ee9b778b1c946329b7918223c99c81065d7",
+      "language": "ar",
+      "family": "cashback",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 3.8,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        },
+        "amount": {
+          "expected": 3.8,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-037",
+      "textSha256": "d30e4de1e6080855e347234fbccd002c725f1045bf044f23d1d5cb313f104bf8",
+      "language": "ar",
+      "family": "fee",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 0.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 0.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-038",
+      "textSha256": "808213a6481052e98be86a273b3fb6049f8ada7e8ba1ac6856f8bf3160d578f1",
+      "language": "en",
+      "family": "fee",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 0.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 0.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "outgoing",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-039",
+      "textSha256": "7edff6987ede904b709cd4e0a4f763ba0f0a77db9accda21a92ff454725097fd",
+      "language": "ar",
+      "family": "fee",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 1.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 1.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "outgoing",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "unknown"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-040",
+      "textSha256": "2fbc7a70dea3b56c44a63fa321fec55d6fa4a6df8ef8da96206f1bc3a65aef30",
+      "language": "en",
+      "family": "fee",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 1.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 1.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "outgoing",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "unknown"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-041",
+      "textSha256": "f55736b0a8eedbb1684959044ee69d54bb70fba5f777a4113a282563c87a0ffb",
+      "language": "ar",
+      "family": "installment",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 145.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 145.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-043",
+      "textSha256": "0bcb10c143a60e5d48bf994f3ebfb278072d46e60dc53e93a4f8e21e11cb519d",
+      "language": "ar",
+      "family": "installment",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 82.6,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 82.6,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-044",
+      "textSha256": "088a69df48441554d2e7ad07084ed1ebcb876e42a0d6be321c68434d5ad66132",
+      "language": "en",
+      "family": "installment",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 82.6,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        },
+        "amount": {
+          "expected": 82.6,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "outgoing",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-045",
+      "textSha256": "b69744c585616cde3e4bc09924822de85dd2e9ced1245ef76d561226dac2e6a2",
+      "language": "ar",
+      "family": "salary_credit",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 625.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        },
+        "amount": {
+          "expected": 625.0,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-046",
+      "textSha256": "0beef6e954f3e03da28699bb338115653746a314c7dcfed8dbd4204c946c2478",
+      "language": "en",
+      "family": "salary_credit",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 625.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        },
+        "amount": {
+          "expected": 625.0,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-047",
+      "textSha256": "2fbe61a523cb515b443234e75435bed11db8fa9fb2f9aafd86663f68edc10f3c",
+      "language": "ar",
+      "family": "salary_credit",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 910.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 910.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "unknown"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-048",
+      "textSha256": "300f1cef0e39d0ea6574081895c46e82c9169b286c71c3f9b664de09fdb8c2b2",
+      "language": "en",
+      "family": "salary_credit",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 910.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        },
+        "amount": {
+          "expected": 910.5,
+          "actual": null
+        },
+        "currency": {
+          "expected": "JOD",
+          "actual": null
+        },
+        "currencyResolution": {
+          "expected": "explicit",
+          "actual": "not_applicable"
+        },
+        "direction": {
+          "expected": "incoming",
+          "actual": "not_applicable"
+        },
+        "transferRelationship": {
+          "expected": "not_transfer",
+          "actual": "not_applicable"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "exclude"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-069",
+      "textSha256": "f26fe041147847177fae7ba4360fd920c732551a1d8a87aa18cdc285c1ab6de1",
+      "language": "ar",
+      "family": "own_account_transfer",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 77.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "trackingDecision": "exclude"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 77.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "own_accounts",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-070",
+      "textSha256": "31f104f885eff9dddcf642e5eccbf5b0c06d5098e927eefd5c423672a3fcb1bd",
+      "language": "en",
+      "family": "own_account_transfer",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 77.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "trackingDecision": "exclude"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 77.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        },
+        "direction": {
+          "expected": "not_applicable",
+          "actual": "uncertain"
+        },
+        "transferRelationship": {
+          "expected": "own_accounts",
+          "actual": "not_transfer"
+        },
+        "trackingDecision": {
+          "expected": "exclude",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-071",
+      "textSha256": "daecb1761169d2353fe877d43974f0b756762b30549ecc605ef4b715d2fed9d5",
+      "language": "ar",
+      "family": "ambiguous_transfer",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 36.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "trackingDecision": "review"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 36.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-073",
+      "textSha256": "ad1595c674760e18cc95398959056906c5f5751922484363290772ceb243afa2",
+      "language": "ar",
+      "family": "bill_payment",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "review"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-completed-ar",
+      "textSha256": "1ed05b0b846ccb0002884ebfc24006391db9b6fa13f5cd9fce4cbe16b7160622",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 34.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-completed-en",
+      "textSha256": "8c1bd723b8908b813e7301794f747e5886017f8be43a321fb9bcdf236307ee42",
+      "language": "en",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 34.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-completed-ar",
+      "textSha256": "8824c704c8595acaad11c51b42bc5d02382ba3d627bab2056e4e951f8f074a07",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-completed-ar",
+      "textSha256": "4ef3e161683585a522229f19f5921910be7c0dbf4e6791cb457e72ead11be74c",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-completed-en",
+      "textSha256": "c27eaaf678662ec4cccf6df75380aec7c9644fdb45770520f5d0c57f961ab7fb",
+      "language": "en",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 600.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-completed-ar",
+      "textSha256": "58a43993d111cdb6985de13d5f64ca8b2256eb7be165acd6e94f733b60b4742d",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "unknown"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-completed-en",
+      "textSha256": "ca32a7ca6663b0a86514682eaaef510405e967409e3b7731a0c0c1e2fc9baf38",
+      "language": "en",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 56.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "other_person"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-completed-ar",
+      "textSha256": "c8d3e64e232e7d6efc71e6c5d0043e681779f04d720fc776ba4a3d48c2a1273e",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 7.6,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-completed-en",
+      "textSha256": "f0b537995a25de4c6cebe0acb09a0bdbac93abf7a72b72bd3dddcbab2ef74c5e",
+      "language": "en",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 7.6,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-completed-ar",
+      "textSha256": "eb860f112ae2e4cc45cb8383221179ae8c6fe70617cdf764019e2e72a1a2f5ed",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-completed-en",
+      "textSha256": "6d76c90cc631529ac0ae825435f22dced864458bce840be03d727da1e86771c8",
+      "language": "en",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "foreign-purchase-ar",
+      "textSha256": "d7a630fded0da193c963a9cdb715d92187460e8e641c0f8eafab2393b48c34a8",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 12.4,
+        "currency": "USD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "missing-amount-ar",
+      "textSha256": "2855f40a332062553a1d73a15cad5dbb157a0c9509a7af8064752c31642ad68c",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "missing-amount-en",
+      "textSha256": "6081a90a8ec44a4e6a72e4e76db4a56bc2da647b141a690af4f0f62260602ebd",
+      "language": "en",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "own-accounts-ar",
+      "textSha256": "e4635c941a0d28b03c6859afefca0d2c9758aab6e992a8a8c0a85192086fc3a4",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 42.0,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "refund-ar",
+      "textSha256": "c09a4dca7d1fbe348ccf3ce0a8d459b928d6bb0900d15ad2e55b7a447fa4c22b",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 11.7,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unknown-transfer-ar",
+      "textSha256": "15fa1231eb0d0ef3ef45f625bdd537432c124fba92aab18ada604a7f9b602828",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": 57.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "unknown"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "withdrawal-ar",
+      "textSha256": "6716fe64a8697bdf3f08211a6f71e4f4cef19bf5dba2b447443816691b3e3da7",
+      "language": "ar",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "withdrawal-en",
+      "textSha256": "2cc07d193ca57700470a34e4c323526eb884f5accdcffdc966e4978d648ba089",
+      "language": "en",
+      "family": "unspecified_prior_diagnostic",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-1-ar",
+      "textSha256": "c52e6066a709bed2efeca5809206ad5a64e845b090a27264c6f18d6c5d228b00",
+      "language": "ar",
+      "family": "illustrative_scope",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-1-ar",
+      "textSha256": "d3e3775019661877c39d14bd32b948220c711c2ac8a5d2c275406b1779973edc",
+      "language": "ar",
+      "family": "personal_claim",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-1-en",
+      "textSha256": "0a97a6c0283710ffa674413064764f12ecffeb136bd7e171c83f9fc276067b46",
+      "language": "en",
+      "family": "personal_claim",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "currencyResolution": "not_applicable",
+        "direction": "not_applicable",
+        "transferRelationship": "not_applicable"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "non_transaction"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-1-ar",
+      "textSha256": "d7e68f5dda88acbd23f95cb7d18eeff54de458060419227f722990b43b0749a9",
+      "language": "ar",
+      "family": "pending_settled",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-ar",
+      "textSha256": "247768197f95c26a3e914ab450f9906443735b2e7259ddddb87455c2994f3d25",
+      "language": "ar",
+      "family": "question_request",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-en",
+      "textSha256": "4ba9d93fa0d707350b4579034e3059d769902f88ec1ad775425f5baf3c19830a",
+      "language": "en",
+      "family": "question_request",
+      "priority": 2,
+      "expected": {
+        "transactionStatus": "completed"
+      },
+      "actual": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "transactionStatus": {
+          "expected": "completed",
+          "actual": "uncertain"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    },
+    {
+      "cohort": "authored74",
+      "recordId": "authored-sms-v1-030",
+      "textSha256": "a03903307df8838a8203daf4e14c1bf525f5e47528119c088d34c9eb604c164f",
+      "language": "en",
+      "family": "refund",
+      "priority": 3,
+      "expected": {
+        "transactionStatus": "completed",
+        "amount": 15.8,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "trackingDecision": "include"
+      },
+      "actual": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": 15.8,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "uncertain",
+        "transferRelationship": "not_transfer"
+      },
+      "mismatches": {
+        "direction": {
+          "expected": "incoming",
+          "actual": "uncertain"
+        },
+        "trackingDecision": {
+          "expected": "include",
+          "actual": "review"
+        }
+      },
+      "reviewState": "pending_failure_triage",
+      "trainingEligible": false
+    }
+  ],
+  "newLabelsAuthored": false,
+  "trainingEligible": false,
+  "modelFittingAllowed": false
+}

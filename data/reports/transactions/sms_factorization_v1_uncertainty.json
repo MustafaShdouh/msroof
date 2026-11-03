@@ -1,0 +1,75 @@
+{
+  "appendixContexts": {
+    "financial_notice": 26,
+    "unknown": 8
+  },
+  "appendixEvents": {
+    "completed": 2,
+    "no_event": 2,
+    "unknown": 30
+  },
+  "appendixHeldIds": [
+    "authored-sms-v1-067",
+    "authored-sms-v1-068"
+  ],
+  "appendixReviewStates": {
+    "hold": 2,
+    "reviewed_weak": 34
+  },
+  "appendixRows": 36,
+  "combinedAnnotatedRows": 1194,
+  "combinedGroupCount": 131,
+  "combinedHeldRows": 17,
+  "combinedNonheldContexts": {
+    "financial_notice": 806,
+    "instruction_or_example": 20,
+    "known_other": 214,
+    "personal_conversation": 65,
+    "question_or_request": 64,
+    "unknown": 8
+  },
+  "combinedNonheldEvents": {
+    "completed": 703,
+    "no_event": 172,
+    "not_completed": 120,
+    "unknown": 182
+  },
+  "combinedNonheldRows": 1177,
+  "inputSha256": {
+    "config/contracts/sms_factorization_annotations.json": "a8c13bde25855671e6176885f4423b1a9a1c37dce45cd34e517674b979508f6f",
+    "data/annotations/sms_factorization_v1/full_annotations.jsonl": "3e4aac5cc4c427598b76d21b54911f9bb78027dd9d76135babe541a29af1b677",
+    "data/annotations/sms_factorization_v1/remaining_queue.json": "9029bddaf0765e81566cfebcdb60fb0ca2d120ae95a20f72620ae95092c6c164",
+    "data/annotations/sms_factorization_v1/source_review_log.jsonl": "1e1a3f9a6d05672f925dcb442d89bc378f10775e47eaf0f7a70c7afa7dd7b9ce",
+    "data/annotations/sms_factorization_v1/uncertainty_reviews.tsv": "0280021aad1332494395db91b944c9af84746181f94d315fc17128090522e93c",
+    "data/reports/transactions/sms_factorization_v1_full.json": "2d659bc99a7fa048b4cf584c114fab4927c2f9c66d600e625ad861be09dab658",
+    "data/training/authored_sms_scope_v1/messages.jsonl": "a1c67be6a114a9936702ebac948c97d2d1a87bd2955ad64290f845d1d2bfaea2",
+    "data/training/authored_sms_v1/messages.jsonl": "18ca9e8b943a484ddab90b0f1536d3fed43d546b2d148a3e484591bdf02d409f",
+    "training/corpus/factorization_full.py": "d395846be1a0e59fb71ddf15af262599f7c18f9207672763046206c09b883238",
+    "training/corpus/factorization_pilot.py": "493342a87dec946bb6afe5af9018ba564ca9cb9368046ad4ea7bd4405b7ef98a",
+    "training/corpus/factorization_uncertainty.py": "6e2d8fc76f01657862ed09e7df40855446dbbb8bed0d4c7395eb729493b7c812"
+  },
+  "limits": [
+    "The 36 rows were already proposed-training source messages with uncertain overall status; no diagnostic/reserved message was selected.",
+    "This appendix does not silently enlarge the frozen 1158-row view or assign it binary targets or training weights.",
+    "Unknown context is reviewed when the source explicitly withholds its frame, unlike a held annotator interpretation of an ambiguous cost fragment.",
+    "Pension-forward excerpts supply no underlying credit clause; no_event describes visible text, not an invented outcome of an unseen message.",
+    "Debit/cancellation conflicts remain held because event focus/chronology cannot be resolved.",
+    "Observed class support is small, same-assistant synthetic evidence, not independent reliability. Future protocol must define weights, class set, hold masks and gates.",
+    "Adding uncertainty rows to existing groups requires recomputing group-normalized weights in a new view; never append them with the old per-row weights."
+  ],
+  "missingObservedContextClasses": [],
+  "modelFitted": false,
+  "modelInference": false,
+  "newTrainingViewAuthorized": false,
+  "original1158CohortChanged": false,
+  "originalCompletionLabelsChanged": false,
+  "reservedInferred": false,
+  "runId": "sms_factorization_v1_uncertainty",
+  "unknownContextSourceGroups": [
+    "scope-v1-pension-demo",
+    "scope-v1-refund-tutorial",
+    "scope-v1-reward-credit",
+    "scope-v1-service-fee-sample"
+  ],
+  "weightsAssigned": false
+}

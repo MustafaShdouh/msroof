@@ -1,0 +1,1686 @@
+{
+  "kind": "Exposed weak development conformance, not independent accuracy",
+  "tag": "core_amount_ownership_v1",
+  "cohorts": {
+    "authored74": {
+      "before": {
+        "cases": 74,
+        "allAssertedFieldsCorrect": 74,
+        "statusCheckedCases": 74,
+        "statusCorrect": 74,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 54,
+        "missedCompletion": 0,
+        "uncertainCases": 4,
+        "wrongCertainty": 0,
+        "endToEndEligible": 48,
+        "endToEndCorrect": 48,
+        "fields": {
+          "transactionStatus": {
+            "checked": 74,
+            "correct": 74
+          },
+          "amount": {
+            "checked": 70,
+            "correct": 70
+          },
+          "currency": {
+            "checked": 70,
+            "correct": 70
+          },
+          "currencyResolution": {
+            "checked": 70,
+            "correct": 70
+          },
+          "direction": {
+            "checked": 70,
+            "correct": 70
+          },
+          "transferRelationship": {
+            "checked": 70,
+            "correct": 70
+          },
+          "trackingDecision": {
+            "checked": 74,
+            "correct": 74
+          }
+        }
+      },
+      "after": {
+        "cases": 74,
+        "allAssertedFieldsCorrect": 74,
+        "statusCheckedCases": 74,
+        "statusCorrect": 74,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 54,
+        "missedCompletion": 0,
+        "uncertainCases": 4,
+        "wrongCertainty": 0,
+        "endToEndEligible": 48,
+        "endToEndCorrect": 48,
+        "fields": {
+          "transactionStatus": {
+            "checked": 74,
+            "correct": 74
+          },
+          "amount": {
+            "checked": 70,
+            "correct": 70
+          },
+          "currency": {
+            "checked": 70,
+            "correct": 70
+          },
+          "currencyResolution": {
+            "checked": 70,
+            "correct": 70
+          },
+          "direction": {
+            "checked": 70,
+            "correct": 70
+          },
+          "transferRelationship": {
+            "checked": 70,
+            "correct": 70
+          },
+          "trackingDecision": {
+            "checked": 74,
+            "correct": 74
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 37,
+            "allAssertedFieldsCorrect": 37,
+            "statusCheckedCases": 37,
+            "statusCorrect": 37,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 27,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 24,
+            "endToEndCorrect": 24,
+            "fields": {
+              "transactionStatus": {
+                "checked": 37,
+                "correct": 37
+              },
+              "amount": {
+                "checked": 35,
+                "correct": 35
+              },
+              "currency": {
+                "checked": 35,
+                "correct": 35
+              },
+              "currencyResolution": {
+                "checked": 35,
+                "correct": 35
+              },
+              "direction": {
+                "checked": 35,
+                "correct": 35
+              },
+              "transferRelationship": {
+                "checked": 35,
+                "correct": 35
+              },
+              "trackingDecision": {
+                "checked": 37,
+                "correct": 37
+              }
+            }
+          },
+          "after": {
+            "cases": 37,
+            "allAssertedFieldsCorrect": 37,
+            "statusCheckedCases": 37,
+            "statusCorrect": 37,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 27,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 24,
+            "endToEndCorrect": 24,
+            "fields": {
+              "transactionStatus": {
+                "checked": 37,
+                "correct": 37
+              },
+              "amount": {
+                "checked": 35,
+                "correct": 35
+              },
+              "currency": {
+                "checked": 35,
+                "correct": 35
+              },
+              "currencyResolution": {
+                "checked": 35,
+                "correct": 35
+              },
+              "direction": {
+                "checked": 35,
+                "correct": 35
+              },
+              "transferRelationship": {
+                "checked": 35,
+                "correct": 35
+              },
+              "trackingDecision": {
+                "checked": 37,
+                "correct": 37
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 37,
+            "allAssertedFieldsCorrect": 37,
+            "statusCheckedCases": 37,
+            "statusCorrect": 37,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 27,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 24,
+            "endToEndCorrect": 24,
+            "fields": {
+              "transactionStatus": {
+                "checked": 37,
+                "correct": 37
+              },
+              "amount": {
+                "checked": 35,
+                "correct": 35
+              },
+              "currency": {
+                "checked": 35,
+                "correct": 35
+              },
+              "currencyResolution": {
+                "checked": 35,
+                "correct": 35
+              },
+              "direction": {
+                "checked": 35,
+                "correct": 35
+              },
+              "transferRelationship": {
+                "checked": 35,
+                "correct": 35
+              },
+              "trackingDecision": {
+                "checked": 37,
+                "correct": 37
+              }
+            }
+          },
+          "after": {
+            "cases": 37,
+            "allAssertedFieldsCorrect": 37,
+            "statusCheckedCases": 37,
+            "statusCorrect": 37,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 27,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 24,
+            "endToEndCorrect": 24,
+            "fields": {
+              "transactionStatus": {
+                "checked": 37,
+                "correct": 37
+              },
+              "amount": {
+                "checked": 35,
+                "correct": 35
+              },
+              "currency": {
+                "checked": 35,
+                "correct": 35
+              },
+              "currencyResolution": {
+                "checked": 35,
+                "correct": 35
+              },
+              "direction": {
+                "checked": 35,
+                "correct": 35
+              },
+              "transferRelationship": {
+                "checked": 35,
+                "correct": 35
+              },
+              "trackingDecision": {
+                "checked": 37,
+                "correct": 37
+              }
+            }
+          }
+        }
+      }
+    },
+    "authoredProbe": {
+      "before": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 24,
+        "statusCheckedCases": 24,
+        "statusCorrect": 24,
+        "nonTransactionCases": 12,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 12,
+        "missedCompletion": 0,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 24
+          }
+        }
+      },
+      "after": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 24,
+        "statusCheckedCases": 24,
+        "statusCorrect": 24,
+        "nonTransactionCases": 12,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 12,
+        "missedCompletion": 0,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 24
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 12,
+            "statusCheckedCases": 12,
+            "statusCorrect": 12,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 6,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 12
+              }
+            }
+          },
+          "after": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 12,
+            "statusCheckedCases": 12,
+            "statusCorrect": 12,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 6,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 12
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 12,
+            "statusCheckedCases": 12,
+            "statusCorrect": 12,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 6,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 12
+              }
+            }
+          },
+          "after": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 12,
+            "statusCheckedCases": 12,
+            "statusCorrect": 12,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 6,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 12
+              }
+            }
+          }
+        }
+      }
+    },
+    "core52": {
+      "before": {
+        "cases": 52,
+        "allAssertedFieldsCorrect": 52,
+        "statusCheckedCases": 51,
+        "statusCorrect": 51,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 32,
+        "missedCompletion": 0,
+        "uncertainCases": 3,
+        "wrongCertainty": 0,
+        "endToEndEligible": 28,
+        "endToEndCorrect": 28,
+        "fields": {
+          "transactionStatus": {
+            "checked": 51,
+            "correct": 51
+          },
+          "trackingDecision": {
+            "checked": 52,
+            "correct": 52
+          },
+          "amount": {
+            "checked": 47,
+            "correct": 47
+          },
+          "currency": {
+            "checked": 44,
+            "correct": 44
+          },
+          "currencyResolution": {
+            "checked": 26,
+            "correct": 26
+          },
+          "direction": {
+            "checked": 46,
+            "correct": 46
+          },
+          "transferRelationship": {
+            "checked": 30,
+            "correct": 30
+          }
+        }
+      },
+      "after": {
+        "cases": 52,
+        "allAssertedFieldsCorrect": 52,
+        "statusCheckedCases": 51,
+        "statusCorrect": 51,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 32,
+        "missedCompletion": 0,
+        "uncertainCases": 3,
+        "wrongCertainty": 0,
+        "endToEndEligible": 28,
+        "endToEndCorrect": 28,
+        "fields": {
+          "transactionStatus": {
+            "checked": 51,
+            "correct": 51
+          },
+          "trackingDecision": {
+            "checked": 52,
+            "correct": 52
+          },
+          "amount": {
+            "checked": 47,
+            "correct": 47
+          },
+          "currency": {
+            "checked": 44,
+            "correct": 44
+          },
+          "currencyResolution": {
+            "checked": 26,
+            "correct": 26
+          },
+          "direction": {
+            "checked": 46,
+            "correct": 46
+          },
+          "transferRelationship": {
+            "checked": 30,
+            "correct": 30
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 19,
+            "allAssertedFieldsCorrect": 19,
+            "statusCheckedCases": 19,
+            "statusCorrect": 19,
+            "nonTransactionCases": 7,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 11,
+            "missedCompletion": 0,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 11,
+            "endToEndCorrect": 11,
+            "fields": {
+              "transactionStatus": {
+                "checked": 19,
+                "correct": 19
+              },
+              "trackingDecision": {
+                "checked": 19,
+                "correct": 19
+              },
+              "amount": {
+                "checked": 18,
+                "correct": 18
+              },
+              "currency": {
+                "checked": 18,
+                "correct": 18
+              },
+              "currencyResolution": {
+                "checked": 10,
+                "correct": 10
+              },
+              "direction": {
+                "checked": 18,
+                "correct": 18
+              },
+              "transferRelationship": {
+                "checked": 11,
+                "correct": 11
+              }
+            }
+          },
+          "after": {
+            "cases": 19,
+            "allAssertedFieldsCorrect": 19,
+            "statusCheckedCases": 19,
+            "statusCorrect": 19,
+            "nonTransactionCases": 7,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 11,
+            "missedCompletion": 0,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 11,
+            "endToEndCorrect": 11,
+            "fields": {
+              "transactionStatus": {
+                "checked": 19,
+                "correct": 19
+              },
+              "trackingDecision": {
+                "checked": 19,
+                "correct": 19
+              },
+              "amount": {
+                "checked": 18,
+                "correct": 18
+              },
+              "currency": {
+                "checked": 18,
+                "correct": 18
+              },
+              "currencyResolution": {
+                "checked": 10,
+                "correct": 10
+              },
+              "direction": {
+                "checked": 18,
+                "correct": 18
+              },
+              "transferRelationship": {
+                "checked": 11,
+                "correct": 11
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 32,
+            "allAssertedFieldsCorrect": 32,
+            "statusCheckedCases": 31,
+            "statusCorrect": 31,
+            "nonTransactionCases": 9,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 20,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 16,
+            "endToEndCorrect": 16,
+            "fields": {
+              "transactionStatus": {
+                "checked": 31,
+                "correct": 31
+              },
+              "trackingDecision": {
+                "checked": 32,
+                "correct": 32
+              },
+              "amount": {
+                "checked": 28,
+                "correct": 28
+              },
+              "currency": {
+                "checked": 25,
+                "correct": 25
+              },
+              "currencyResolution": {
+                "checked": 15,
+                "correct": 15
+              },
+              "direction": {
+                "checked": 27,
+                "correct": 27
+              },
+              "transferRelationship": {
+                "checked": 18,
+                "correct": 18
+              }
+            }
+          },
+          "after": {
+            "cases": 32,
+            "allAssertedFieldsCorrect": 32,
+            "statusCheckedCases": 31,
+            "statusCorrect": 31,
+            "nonTransactionCases": 9,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 20,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 16,
+            "endToEndCorrect": 16,
+            "fields": {
+              "transactionStatus": {
+                "checked": 31,
+                "correct": 31
+              },
+              "trackingDecision": {
+                "checked": 32,
+                "correct": 32
+              },
+              "amount": {
+                "checked": 28,
+                "correct": 28
+              },
+              "currency": {
+                "checked": 25,
+                "correct": 25
+              },
+              "currencyResolution": {
+                "checked": 15,
+                "correct": 15
+              },
+              "direction": {
+                "checked": 27,
+                "correct": 27
+              },
+              "transferRelationship": {
+                "checked": 18,
+                "correct": 18
+              }
+            }
+          }
+        },
+        "mixed": {
+          "before": {
+            "cases": 1,
+            "allAssertedFieldsCorrect": 1,
+            "statusCheckedCases": 1,
+            "statusCorrect": 1,
+            "nonTransactionCases": 0,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 1,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 1,
+            "endToEndCorrect": 1,
+            "fields": {
+              "transactionStatus": {
+                "checked": 1,
+                "correct": 1
+              },
+              "trackingDecision": {
+                "checked": 1,
+                "correct": 1
+              },
+              "amount": {
+                "checked": 1,
+                "correct": 1
+              },
+              "currency": {
+                "checked": 1,
+                "correct": 1
+              },
+              "currencyResolution": {
+                "checked": 1,
+                "correct": 1
+              },
+              "direction": {
+                "checked": 1,
+                "correct": 1
+              },
+              "transferRelationship": {
+                "checked": 1,
+                "correct": 1
+              }
+            }
+          },
+          "after": {
+            "cases": 1,
+            "allAssertedFieldsCorrect": 1,
+            "statusCheckedCases": 1,
+            "statusCorrect": 1,
+            "nonTransactionCases": 0,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 1,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 1,
+            "endToEndCorrect": 1,
+            "fields": {
+              "transactionStatus": {
+                "checked": 1,
+                "correct": 1
+              },
+              "trackingDecision": {
+                "checked": 1,
+                "correct": 1
+              },
+              "amount": {
+                "checked": 1,
+                "correct": 1
+              },
+              "currency": {
+                "checked": 1,
+                "correct": 1
+              },
+              "currencyResolution": {
+                "checked": 1,
+                "correct": 1
+              },
+              "direction": {
+                "checked": 1,
+                "correct": 1
+              },
+              "transferRelationship": {
+                "checked": 1,
+                "correct": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "core_amount_ownership_v1": {
+      "before": {
+        "cases": 798,
+        "allAssertedFieldsCorrect": 798,
+        "statusCheckedCases": 798,
+        "statusCorrect": 798,
+        "nonTransactionCases": 0,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 798,
+        "missedCompletion": 0,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 426,
+        "endToEndCorrect": 426,
+        "fields": {
+          "transactionStatus": {
+            "checked": 798,
+            "correct": 798
+          },
+          "trackingDecision": {
+            "checked": 798,
+            "correct": 798
+          },
+          "amount": {
+            "checked": 762,
+            "correct": 762
+          },
+          "direction": {
+            "checked": 750,
+            "correct": 750
+          },
+          "currency": {
+            "checked": 732,
+            "correct": 732
+          },
+          "currencyResolution": {
+            "checked": 696,
+            "correct": 696
+          },
+          "transferRelationship": {
+            "checked": 684,
+            "correct": 684
+          }
+        }
+      },
+      "after": {
+        "cases": 798,
+        "allAssertedFieldsCorrect": 798,
+        "statusCheckedCases": 798,
+        "statusCorrect": 798,
+        "nonTransactionCases": 0,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 798,
+        "missedCompletion": 0,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 426,
+        "endToEndCorrect": 426,
+        "fields": {
+          "transactionStatus": {
+            "checked": 798,
+            "correct": 798
+          },
+          "trackingDecision": {
+            "checked": 798,
+            "correct": 798
+          },
+          "amount": {
+            "checked": 762,
+            "correct": 762
+          },
+          "direction": {
+            "checked": 750,
+            "correct": 750
+          },
+          "currency": {
+            "checked": 732,
+            "correct": 732
+          },
+          "currencyResolution": {
+            "checked": 696,
+            "correct": 696
+          },
+          "transferRelationship": {
+            "checked": 684,
+            "correct": 684
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 342,
+            "allAssertedFieldsCorrect": 342,
+            "statusCheckedCases": 342,
+            "statusCorrect": 342,
+            "nonTransactionCases": 0,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 342,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 162,
+            "endToEndCorrect": 162,
+            "fields": {
+              "transactionStatus": {
+                "checked": 342,
+                "correct": 342
+              },
+              "trackingDecision": {
+                "checked": 342,
+                "correct": 342
+              },
+              "amount": {
+                "checked": 342,
+                "correct": 342
+              },
+              "currency": {
+                "checked": 342,
+                "correct": 342
+              },
+              "direction": {
+                "checked": 342,
+                "correct": 342
+              },
+              "transferRelationship": {
+                "checked": 342,
+                "correct": 342
+              },
+              "currencyResolution": {
+                "checked": 324,
+                "correct": 324
+              }
+            }
+          },
+          "after": {
+            "cases": 342,
+            "allAssertedFieldsCorrect": 342,
+            "statusCheckedCases": 342,
+            "statusCorrect": 342,
+            "nonTransactionCases": 0,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 342,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 162,
+            "endToEndCorrect": 162,
+            "fields": {
+              "transactionStatus": {
+                "checked": 342,
+                "correct": 342
+              },
+              "trackingDecision": {
+                "checked": 342,
+                "correct": 342
+              },
+              "amount": {
+                "checked": 342,
+                "correct": 342
+              },
+              "currency": {
+                "checked": 342,
+                "correct": 342
+              },
+              "direction": {
+                "checked": 342,
+                "correct": 342
+              },
+              "transferRelationship": {
+                "checked": 342,
+                "correct": 342
+              },
+              "currencyResolution": {
+                "checked": 324,
+                "correct": 324
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 456,
+            "allAssertedFieldsCorrect": 456,
+            "statusCheckedCases": 456,
+            "statusCorrect": 456,
+            "nonTransactionCases": 0,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 456,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 264,
+            "endToEndCorrect": 264,
+            "fields": {
+              "transactionStatus": {
+                "checked": 456,
+                "correct": 456
+              },
+              "trackingDecision": {
+                "checked": 456,
+                "correct": 456
+              },
+              "amount": {
+                "checked": 420,
+                "correct": 420
+              },
+              "direction": {
+                "checked": 408,
+                "correct": 408
+              },
+              "currency": {
+                "checked": 390,
+                "correct": 390
+              },
+              "currencyResolution": {
+                "checked": 372,
+                "correct": 372
+              },
+              "transferRelationship": {
+                "checked": 342,
+                "correct": 342
+              }
+            }
+          },
+          "after": {
+            "cases": 456,
+            "allAssertedFieldsCorrect": 456,
+            "statusCheckedCases": 456,
+            "statusCorrect": 456,
+            "nonTransactionCases": 0,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 456,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 264,
+            "endToEndCorrect": 264,
+            "fields": {
+              "transactionStatus": {
+                "checked": 456,
+                "correct": 456
+              },
+              "trackingDecision": {
+                "checked": 456,
+                "correct": 456
+              },
+              "amount": {
+                "checked": 420,
+                "correct": 420
+              },
+              "direction": {
+                "checked": 408,
+                "correct": 408
+              },
+              "currency": {
+                "checked": 390,
+                "correct": 390
+              },
+              "currencyResolution": {
+                "checked": 372,
+                "correct": 372
+              },
+              "transferRelationship": {
+                "checked": 342,
+                "correct": 342
+              }
+            }
+          }
+        }
+      }
+    },
+    "exposedManual": {
+      "before": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 24,
+        "statusCheckedCases": 24,
+        "statusCorrect": 24,
+        "nonTransactionCases": 10,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 12,
+        "missedCompletion": 0,
+        "uncertainCases": 2,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 24
+          }
+        }
+      },
+      "after": {
+        "cases": 24,
+        "allAssertedFieldsCorrect": 24,
+        "statusCheckedCases": 24,
+        "statusCorrect": 24,
+        "nonTransactionCases": 10,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 12,
+        "missedCompletion": 0,
+        "uncertainCases": 2,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 24,
+            "correct": 24
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 12,
+            "statusCheckedCases": 12,
+            "statusCorrect": 12,
+            "nonTransactionCases": 5,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 6,
+            "missedCompletion": 0,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 12
+              }
+            }
+          },
+          "after": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 12,
+            "statusCheckedCases": 12,
+            "statusCorrect": 12,
+            "nonTransactionCases": 5,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 6,
+            "missedCompletion": 0,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 12
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 12,
+            "statusCheckedCases": 12,
+            "statusCorrect": 12,
+            "nonTransactionCases": 5,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 6,
+            "missedCompletion": 0,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 12
+              }
+            }
+          },
+          "after": {
+            "cases": 12,
+            "allAssertedFieldsCorrect": 12,
+            "statusCheckedCases": 12,
+            "statusCorrect": 12,
+            "nonTransactionCases": 5,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 6,
+            "missedCompletion": 0,
+            "uncertainCases": 1,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 12,
+                "correct": 12
+              }
+            }
+          }
+        }
+      }
+    },
+    "oldExposedValidation": {
+      "before": {
+        "cases": 18,
+        "allAssertedFieldsCorrect": 18,
+        "statusCheckedCases": 18,
+        "statusCorrect": 18,
+        "nonTransactionCases": 14,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 18,
+            "correct": 18
+          }
+        }
+      },
+      "after": {
+        "cases": 18,
+        "allAssertedFieldsCorrect": 18,
+        "statusCheckedCases": 18,
+        "statusCorrect": 18,
+        "nonTransactionCases": 14,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 0,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 18,
+            "correct": 18
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 10,
+            "allAssertedFieldsCorrect": 10,
+            "statusCheckedCases": 10,
+            "statusCorrect": 10,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 10,
+                "correct": 10
+              }
+            }
+          },
+          "after": {
+            "cases": 10,
+            "allAssertedFieldsCorrect": 10,
+            "statusCheckedCases": 10,
+            "statusCorrect": 10,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 10,
+                "correct": 10
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 8,
+            "allAssertedFieldsCorrect": 8,
+            "statusCheckedCases": 8,
+            "statusCorrect": 8,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 8,
+                "correct": 8
+              }
+            }
+          },
+          "after": {
+            "cases": 8,
+            "allAssertedFieldsCorrect": 8,
+            "statusCheckedCases": 8,
+            "statusCorrect": 8,
+            "nonTransactionCases": 6,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 0,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 8,
+                "correct": 8
+              }
+            }
+          }
+        }
+      }
+    },
+    "quoteControls": {
+      "before": {
+        "cases": 14,
+        "allAssertedFieldsCorrect": 14,
+        "statusCheckedCases": 14,
+        "statusCorrect": 14,
+        "nonTransactionCases": 6,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 4,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 14,
+            "correct": 14
+          }
+        }
+      },
+      "after": {
+        "cases": 14,
+        "allAssertedFieldsCorrect": 14,
+        "statusCheckedCases": 14,
+        "statusCorrect": 14,
+        "nonTransactionCases": 6,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 4,
+        "missedCompletion": 0,
+        "uncertainCases": 4,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 14,
+            "correct": 14
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 7,
+            "allAssertedFieldsCorrect": 7,
+            "statusCheckedCases": 7,
+            "statusCorrect": 7,
+            "nonTransactionCases": 3,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 7,
+                "correct": 7
+              }
+            }
+          },
+          "after": {
+            "cases": 7,
+            "allAssertedFieldsCorrect": 7,
+            "statusCheckedCases": 7,
+            "statusCorrect": 7,
+            "nonTransactionCases": 3,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 7,
+                "correct": 7
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 7,
+            "allAssertedFieldsCorrect": 7,
+            "statusCheckedCases": 7,
+            "statusCorrect": 7,
+            "nonTransactionCases": 3,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 7,
+                "correct": 7
+              }
+            }
+          },
+          "after": {
+            "cases": 7,
+            "allAssertedFieldsCorrect": 7,
+            "statusCheckedCases": 7,
+            "statusCorrect": 7,
+            "nonTransactionCases": 3,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 2,
+            "missedCompletion": 0,
+            "uncertainCases": 2,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 7,
+                "correct": 7
+              }
+            }
+          }
+        }
+      }
+    },
+    "scopeDevelopment": {
+      "before": {
+        "cases": 32,
+        "allAssertedFieldsCorrect": 32,
+        "statusCheckedCases": 32,
+        "statusCorrect": 32,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 8,
+        "missedCompletion": 0,
+        "uncertainCases": 8,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 32,
+            "correct": 32
+          }
+        }
+      },
+      "after": {
+        "cases": 32,
+        "allAssertedFieldsCorrect": 32,
+        "statusCheckedCases": 32,
+        "statusCorrect": 32,
+        "nonTransactionCases": 16,
+        "falseIncludes": 0,
+        "falseCompleted": 0,
+        "unnecessaryReview": 0,
+        "completedCases": 8,
+        "missedCompletion": 0,
+        "uncertainCases": 8,
+        "wrongCertainty": 0,
+        "endToEndEligible": 0,
+        "endToEndCorrect": 0,
+        "fields": {
+          "transactionStatus": {
+            "checked": 32,
+            "correct": 32
+          }
+        }
+      },
+      "byLanguage": {
+        "ar": {
+          "before": {
+            "cases": 16,
+            "allAssertedFieldsCorrect": 16,
+            "statusCheckedCases": 16,
+            "statusCorrect": 16,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 4,
+            "missedCompletion": 0,
+            "uncertainCases": 4,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 16,
+                "correct": 16
+              }
+            }
+          },
+          "after": {
+            "cases": 16,
+            "allAssertedFieldsCorrect": 16,
+            "statusCheckedCases": 16,
+            "statusCorrect": 16,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 4,
+            "missedCompletion": 0,
+            "uncertainCases": 4,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 16,
+                "correct": 16
+              }
+            }
+          }
+        },
+        "en": {
+          "before": {
+            "cases": 16,
+            "allAssertedFieldsCorrect": 16,
+            "statusCheckedCases": 16,
+            "statusCorrect": 16,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 4,
+            "missedCompletion": 0,
+            "uncertainCases": 4,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 16,
+                "correct": 16
+              }
+            }
+          },
+          "after": {
+            "cases": 16,
+            "allAssertedFieldsCorrect": 16,
+            "statusCheckedCases": 16,
+            "statusCorrect": 16,
+            "nonTransactionCases": 8,
+            "falseIncludes": 0,
+            "falseCompleted": 0,
+            "unnecessaryReview": 0,
+            "completedCases": 4,
+            "missedCompletion": 0,
+            "uncertainCases": 4,
+            "wrongCertainty": 0,
+            "endToEndEligible": 0,
+            "endToEndCorrect": 0,
+            "fields": {
+              "transactionStatus": {
+                "checked": 16,
+                "correct": 16
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "changedDetailedResults": [],
+  "expectedFieldRegressions": [],
+  "inputEntries": 1036,
+  "fullDetailedParity": true,
+  "legacyResultsUnchanged": true,
+  "unchangedOwnershipRequests": 70,
+  "unchangedModelArtifacts": 23,
+  "training": false,
+  "reservedInferred": false,
+  "newResearchModelInference": false,
+  "artifacts": {
+    "tools/evaluation/core_boundary_check.py": "ce31b43f8232b947c3390681a63845d84ab673157f4d58c9941420abe38d3489",
+    "src/python/money_syntax.py": "d8a37c4f329a247f319370200c84032f5e07fc9d91e4cb16f0ca2ff1ef27c9ac",
+    "src/typescript/MoneySyntax.ts": "344772e1695867d7b5b3a6c223cfb709a74ee5d68732a5ab345896fea259a5f7",
+    "src/python/account_movement.py": "9a2595e2a5478811f18e6d9dde3129ff1936283e6f4ea0cf6d8adcdaf5f07e00",
+    "src/typescript/AccountMovement.ts": "5068854995974fc52f24c98484edc461453a62e5184f65be1ff0ae0182682198",
+    "src/python/direction_policy.py": "725767c650b2a99cc7f61455066b20e45803aaaea83901832d51647943d6dd74",
+    "src/typescript/DirectionPolicy.ts": "a9c6d2ef1b1b1d5e5dd4b4289f17bc076c917c1bc824d311a44e62a55795559a",
+    "src/python/money_candidates.py": "1e1df76d67fb0fa0e2b554c75277510861983258ec18bdbe15cd140073e36632",
+    "src/typescript/MoneyCandidates.ts": "2cbccafea7638c93acea0ec2b64866526e72470a251dc15caa5aa287b0d5b74b",
+    "src/python/detailed_assessment.py": "7e64ac7c2ce3c885cfb0f39685bc8e88ad50ddbff3a3e73d691c30845200cbed",
+    "src/typescript/DetailedAssessment.ts": "7208736339d5543272f00ed065ca27cf7863ddbbbf53e0af3a27981c39770769",
+    "config/contracts/transaction_evidence.json": "77b647e83f80c3dd7dfcddff15f062315ff170346bbf1ef99e608cb0b707b4b0",
+    "tools/browser/tester.html": "3ec7af866eb7108f7909c7f80a5a77da6fac43357601e365d535499103948b3d",
+    "tests/fixtures/core_amount_ownership_v1.json": "1b5fa0fb217138c10c0d4dc0ad0f6a5e687b1a758ffa048f1b00ef9d9b8bc73f"
+  },
+  "limits": [
+    "Variant counts are not independent examples.",
+    "No mobile performance or release-readiness claim."
+  ],
+  "privateSnapshotSha256": {
+    "before": "d068460bd7731afe1c1261ef776247a3adc9f2a35b006797a7b73b8d0835948a",
+    "after": "d068460bd7731afe1c1261ef776247a3adc9f2a35b006797a7b73b8d0835948a"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "runId": "sms_factorization_comparison_v1",
+  "outcome": "infrastructure_failure_before_comparison",
+  "trainingViewAndFrozenInputsVerified": true,
+  "loggedControlOptimizerSteps": 444,
+  "controlTrainingLosses": [
+    0.978986752464963,
+    0.4889115118764543,
+    0.2426015604124946
+  ],
+  "controlCheckpointSha256": "e09532697f40f9e7747ecec62c8b82a84298cca7e73bad5504212f7e8cc137f6",
+  "controlCheckpointBytes": 14204412,
+  "controlCheckpointTrainableParameters": 3550083,
+  "checkpointTensorSetAndFinitenessVerified": true,
+  "checkpointReloadVerified": false,
+  "frozenParameterPostTrainingHashesVerified": false,
+  "factorizedArmStarted": false,
+  "diagnosticEvaluationStarted": false,
+  "reservedInferred": false,
+  "reservedScoredRecordIds": [],
+  "resourcePeaksAndElapsedVerified": false,
+  "comparisonQualityMeasured": false,
+  "productionIntegrated": false,
+  "studentTrained": false,
+  "independentAccuracy": false,
+  "originalEvidencePreserved": true,
+  "retryRefusalVerified": true,
+  "originalMonitorSha256": "bb1aefc0d7a7f83bd7b2aae2c753d0dd63e48f8f2ceda3bedb8d90eb63678145"
+}

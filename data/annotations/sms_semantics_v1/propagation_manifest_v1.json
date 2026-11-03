@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Guarded proposals from existing weak reviews; not annotations, training admission or semantic proof",
+  "inputSha256": {
+    "data/annotations/sms_semantics_v1/drafts.jsonl": "b847772c7cff8336d6059b583195f79f64c40c1b4926751084bb46623f6365fe",
+    "data/annotations/sms_semantics_v1/review_queue.jsonl": "6f8f6260b87a948cd3a76fda678f768bbcde6ce130ed8a329125d239ba963db0",
+    "data/annotations/sms_semantics_v1/manifest.json": "fad819643ab0e629ef1e09675073e72699269795ff5f76214b723b0fc5b01d99",
+    "data/reports/sms_semantics_preparation_v1.json": "2c3fdd7ecbe81356045582c722cd7cef63fd014b188aa36f04444f22635e13a7",
+    "data/annotations/sms_semantics_v1/text_reviews_v1.jsonl": "62a3bf3ea2a811064a246069b9d15aede268c5e76c628e64ee6ef7767edc2e3f",
+    "data/annotations/sms_semantics_v1/text_review_manifest_v2.json": "e4892c43990ce7184e00a68103eccf4c859fe5df39724cc475dc47992275ead9",
+    "data/reports/sms_semantics_text_review_v2.json": "9a3fa52abe9338f60a8fe104c5759c00f5d4e719f035087db33ad5bf5df48d35",
+    "config/contracts/sms_semantics_propagation.json": "d993a7b41788c72d99ad2fa8038efeb1942d5da59fbde7d632b6b94d1f76fd3e",
+    "config/contracts/transaction_evidence.json": "806b2fe67ed517831d9ab087064a19eb643373ec7b06d0bc2374bfd6df61e773",
+    "data/training/splits/transaction_direction_sanitized_v1.json": "512af5213d2c34ab3f6f8a501163e261102e3dbf5e7cf52d0439735b204a4668",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/annotations/businesses_200.jsonl": "81f0b434dc4b2549eedef5a1fc0bfec871bcd32f635ec10916a28fb3e74f8d13",
+    "data/training/splits/category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d",
+    "data/sources/businesses/brand_families.json": "34950f9c65e4982fa0df9af3699a3f2979e8b9d07d13251d5d34efa78ac9c66a",
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+    "tests/fixtures/sanitized_v1/qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+    "tests/fixtures/transaction_behavior_cases.json": "68b8e87d29fcc2513886d26efd37adc26934ba74c396f373acbcf78034476bc5",
+    "tests/fixtures/detailed_assessment_cases.json": "12cfd3fec7a19fe0b291074d5124f30d3e0e18299096a653cab92b48a182b13d",
+    "tests/fixtures/authorization_request_cases.json": "35eccc4e56634a1fbd8229ed175640050c5804203f0be222464ad586bdf04ace",
+    "tests/fixtures/ownership_context_cases.json": "295619af9abf4420030bdb4ec9e934d8ad049f993270a0486b9adeec24a4643d",
+    "tests/fixtures/paired_movement_cases.json": "68c01fb8fc6eb3f9699074e5978ed3fd143570bdacc3491868bc4e42ccaa9010",
+    "tests/fixtures/arabic_message_semantics_cases.json": "89262202327afe5b62c97eb6f37a17fa7d9e605e90ad393b7032acddf463d9ab",
+    "training/corpus/propagation.py": "594769ab32563050cdefdadcd6cea7909a7aa598bc97a3a772d9bef0003ad086",
+    "tests/python/test_sms_semantics_propagation.py": "ecba63db3b6a5ecd029255def853dd20fa1de9b7acaf6ac355382e4a97fb63b9",
+    "src/python/entity_text.py": "688fcf0e4bda7dac395815589464d3f9f88f073d31b58aeadc798c83f3b98948",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1"
+  },
+  "reviewDataSha256": "62a3bf3ea2a811064a246069b9d15aede268c5e76c628e64ee6ef7767edc2e3f",
+  "reviewManifestSha256": "e4892c43990ce7184e00a68103eccf4c859fe5df39724cc475dc47992275ead9",
+  "outputSha256": {
+    "data/annotations/sms_semantics_v1/propagation_proposal_v1.jsonl": "d8a23890e73d29ef662b909e21f7c5fc494a85d64dc12aabcf492229e383b2da",
+    "data/annotations/sms_semantics_v1/validation_review_queue_v1.jsonl": "ec9de409507d5ba2488ac44076131ed8c34d0a026881ae5c8c6ff79c3d35007b"
+  },
+  "admissionGranted": false,
+  "trainingApplied": false
+}

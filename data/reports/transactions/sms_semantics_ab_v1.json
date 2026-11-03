@@ -1,0 +1,1036 @@
+{
+  "runId": "sms_semantics_ab_v1",
+  "scope": "Single exposed synthetic weak-label development comparison; not independent accuracy",
+  "inputSha256": {
+    "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8",
+    "data/annotations/sms_semantics_v1/propagation_manifest_v1.json": "60e44bb3ca335c36c93660a7385607c8f1fdd0d2a0b0e3497e5d861127d82eac",
+    "data/annotations/sms_semantics_v1/propagation_proposal_v1.jsonl": "d8a23890e73d29ef662b909e21f7c5fc494a85d64dc12aabcf492229e383b2da",
+    "data/annotations/sms_semantics_v1/validation_review_manifest_v1.json": "a910150b95c0bbd2dddd99bed3d88338e57e04ca29de4e28d5afe7955ef223a7",
+    "data/annotations/sms_semantics_v1/validation_text_reviews_v1.jsonl": "d359154638c5e07cc570f7c1bbb52311962cf1c963c1de5cd81a19ffe30fb45e",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/reports/transactions/sms_semantics_ab_v1_cohort.json": "c54d7c82273589cc2186dbe780a0accc7f78bd4180fbe758e4806ab2fd1ee321",
+    "tests/fixtures/sms_semantics_feature_cases.json": "010b52177806212b7e124f780ebeb4eaaf513b681814d1cc1799b5ace4a66a6d",
+    "tools/evaluation/probe_sms_semantics.ts": "6abb1ce1787a329a8a8ea0d90202ac26482d817d04cf807bad7631e17bc4b1cc",
+    "src/python/research/sms_semantics.py": "0eab832392fbcf737a6f9d82102310018eaed13734c7aad977c19e177ebd5d4d",
+    "src/typescript/research/SmsSemantics.ts": "a9509ca002cb11954039ed584789ec39affb64f561177d6f85bd82ac73e43a41",
+    "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+    "training/transactions/semantics_ab.py": "194b434283aa7463a35c69a031c519e09f5de1fea3ae7a1e5fc42abf702a967a",
+    "tests/python/test_sms_semantics_model.py": "1d6b9752cd00e4963f9ae98e287733d26672a7ced8d9979f8d8468f416fcdb30",
+    "tools/node_runtime.py": "1cfaa902ac6caec4217373d4b4b7570f22d23e05f0918a3c73a543bdf1dddbb7",
+    "training/corpus_io.py": "ed29cf5682b3eb514ebc0b149e2f9d47c9fb3d3f478f6b0d692982290f7d2738",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "src/python/__init__.py": "173557702be0af8ba18e41311196952b5c4c246dedf79c4a81e97429c6c5e8d7",
+    "src/python/authorization_request.py": "fa8f7a4598e46c3e637e74d4c485029d008a0486bfb25696851e8d024b333814",
+    "src/python/detailed_assessment.py": "75201ba5fe2ea036f0c3a42eafbfe3c19858986e432a03e1f06df08f6b4bb457",
+    "src/python/engine.py": "cf25218f87e2ea48f1e52dafbf9748e920ef8e61169050dc69d5778ce8d6c605",
+    "src/python/entity_text.py": "688fcf0e4bda7dac395815589464d3f9f88f073d31b58aeadc798c83f3b98948",
+    "src/python/legacy_transaction_model.py": "911c45201bc21c1926ec4b03ef6e340376a5b292491225c0a81f7a1f97f32100",
+    "src/python/ownership_context.py": "e143759e8f9f59e0f65a501423e30519285fa2904052f0e37d6947bfd67238c4",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "src/python/service_notice.py": "92cf27f5255e9a37f53f267063ba12913638c4cc1bfbc75652c2931c6f6136d3",
+    "config/contracts/transaction_evidence.json": "806b2fe67ed517831d9ab087064a19eb643373ec7b06d0bc2374bfd6df61e773",
+    "config/contracts/entity_text.json": "a1d19d070521d50590b2ab9b1925507b936d0ffc19d85431198c4166fc1a1637",
+    "config/contracts/service_notice.json": "1d665eaf4ffc67f5324ac230d5d451d9b6e708b6e0d6cb645ae5b1115fc68ab3",
+    "config/contracts/authorization_request.json": "d927714265710faf8f80a1053a1b17bfbe9a0eff56208b820295dd616f7b555b",
+    "config/contracts/transaction_behavior.json": "e06693e71398f60a220488a779902fc2d38d2ba7c19570df395fddf551e2bf4b"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  },
+  "fitCalls": 4,
+  "trainingSupport": {
+    "completion": {
+      "rows": 944,
+      "targetCounts": {
+        "non_transaction": 449,
+        "completed": 495
+      },
+      "expressionCounts": {
+        "non_transaction": 49,
+        "completed": 17
+      }
+    },
+    "direction": {
+      "rows": 321,
+      "targetCounts": {
+        "incoming": 198,
+        "outgoing": 123
+      },
+      "expressionCounts": {
+        "incoming": 7,
+        "outgoing": 6
+      }
+    }
+  },
+  "validationSupport": {
+    "completion": 18,
+    "direction": 4
+  },
+  "exportParity": {
+    "textsPerArm": 967,
+    "arms": 2,
+    "headsPerArm": 2,
+    "typescriptAndBrowser": true,
+    "maximumScoreGap": 0.0,
+    "browserSourceSha256": {
+      "src/typescript/Preprocessing.ts": "da78f44e489aec464635e8b7e3707f1f6dc6446e024f1a20bf12c5d4dab69a54",
+      "src/typescript/research/SmsSemantics.ts": "a9509ca002cb11954039ed584789ec39affb64f561177d6f85bd82ac73e43a41",
+      "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8"
+    },
+    "scope": "Actual stripped browser-compatible source in Node VM; no interactive UI or Hermes claim"
+  },
+  "arms": {
+    "word": {
+      "heads": {
+        "completion": {
+          "raw": {
+            "count": 18,
+            "truePositive": 4,
+            "trueNegative": 14,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "correct": 18
+          },
+          "scriptSlices": {
+            "arabic": {
+              "count": 4,
+              "truePositive": 0,
+              "trueNegative": 4,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 4
+            },
+            "english": {
+              "count": 8,
+              "truePositive": 2,
+              "trueNegative": 6,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 8
+            },
+            "mixed": {
+              "count": 6,
+              "truePositive": 2,
+              "trueNegative": 4,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 6
+            },
+            "arabicContaining": {
+              "count": 10,
+              "truePositive": 2,
+              "trueNegative": 8,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 10
+            }
+          },
+          "byExpression": {
+            "literal-L731-C8": {
+              "recordId": "synthetic-v1-0053",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -1.9296246712557723,
+              "script": "arabic"
+            },
+            "literal-L605-C12": {
+              "recordId": "synthetic-v1-0140",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.345993169448313,
+              "script": "mixed"
+            },
+            "literal-L712-C12": {
+              "recordId": "synthetic-v1-0038",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.3658403200408396,
+              "script": "arabic"
+            },
+            "literal-L286-C15": {
+              "recordId": "synthetic-v1-1554",
+              "target": "completed",
+              "prediction": "completed",
+              "score": 1.4122307852924294,
+              "script": "english"
+            },
+            "literal-L742-C8": {
+              "recordId": "synthetic-v1-0106",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.9270579262287324,
+              "script": "english"
+            },
+            "literal-L683-C12": {
+              "recordId": "synthetic-v1-1398",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -1.7415548660050069,
+              "script": "mixed"
+            },
+            "literal-L448-C15": {
+              "recordId": "synthetic-v1-0750",
+              "target": "completed",
+              "prediction": "completed",
+              "score": 0.9166950951493299,
+              "script": "mixed"
+            },
+            "literal-L599-C12": {
+              "recordId": "synthetic-v1-1107",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -3.6427511126913457,
+              "script": "english"
+            },
+            "literal-L168-C15": {
+              "recordId": "synthetic-v1-1665",
+              "target": "completed",
+              "prediction": "completed",
+              "score": 1.5531822902344716,
+              "script": "english"
+            },
+            "literal-L600-C12": {
+              "recordId": "synthetic-v1-1548",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.7538418973389933,
+              "script": "mixed"
+            },
+            "literal-L337-C15": {
+              "recordId": "synthetic-v1-1302",
+              "target": "completed",
+              "prediction": "completed",
+              "score": 2.330311088003296,
+              "script": "mixed"
+            },
+            "literal-L726-C8": {
+              "recordId": "synthetic-v1-1914",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.4293262447193698,
+              "script": "arabic"
+            },
+            "literal-L679-C12": {
+              "recordId": "synthetic-v1-0334",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.0361760779804374,
+              "script": "english"
+            },
+            "literal-L734-C8": {
+              "recordId": "synthetic-v1-0289",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.906407780862657,
+              "script": "english"
+            },
+            "literal-L738-C8": {
+              "recordId": "synthetic-v1-0184",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.5876531610899045,
+              "script": "english"
+            },
+            "literal-L704-C12": {
+              "recordId": "synthetic-v1-0174",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.3931323965697744,
+              "script": "english"
+            },
+            "literal-L652-C12": {
+              "recordId": "synthetic-v1-1881",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -3.2072104259528342,
+              "script": "mixed"
+            },
+            "literal-L681-C12": {
+              "recordId": "synthetic-v1-0806",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -1.6555990353109142,
+              "script": "arabic"
+            }
+          }
+        },
+        "direction": {
+          "raw": {
+            "count": 4,
+            "truePositive": 2,
+            "trueNegative": 1,
+            "falsePositive": 1,
+            "falseNegative": 0,
+            "correct": 3
+          },
+          "scriptSlices": {
+            "arabic": {
+              "count": 0,
+              "truePositive": 0,
+              "trueNegative": 0,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 0
+            },
+            "english": {
+              "count": 2,
+              "truePositive": 1,
+              "trueNegative": 1,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 2
+            },
+            "mixed": {
+              "count": 2,
+              "truePositive": 1,
+              "trueNegative": 0,
+              "falsePositive": 1,
+              "falseNegative": 0,
+              "correct": 1
+            },
+            "arabicContaining": {
+              "count": 2,
+              "truePositive": 1,
+              "trueNegative": 0,
+              "falsePositive": 1,
+              "falseNegative": 0,
+              "correct": 1
+            }
+          },
+          "byExpression": {
+            "literal-L286-C15": {
+              "recordId": "synthetic-v1-1554",
+              "target": "outgoing",
+              "prediction": "outgoing",
+              "score": -0.7881224030184831,
+              "script": "english"
+            },
+            "literal-L448-C15": {
+              "recordId": "synthetic-v1-0750",
+              "target": "outgoing",
+              "prediction": "incoming",
+              "score": 0.7940544513673802,
+              "script": "mixed"
+            },
+            "literal-L168-C15": {
+              "recordId": "synthetic-v1-1665",
+              "target": "incoming",
+              "prediction": "incoming",
+              "score": 0.259148117102067,
+              "script": "english"
+            },
+            "literal-L337-C15": {
+              "recordId": "synthetic-v1-1302",
+              "target": "incoming",
+              "prediction": "incoming",
+              "score": 0.9507578260381984,
+              "script": "mixed"
+            }
+          }
+        }
+      },
+      "jointCompletedAndCorrectDirection": {
+        "correct": 3,
+        "count": 4
+      },
+      "candidateBytes": 25000,
+      "fitAudit": {
+        "completion": {
+          "iterations": 5,
+          "featureCount": 348,
+          "maximumSklearnExportScoreGap": 3.552713678800501e-15
+        },
+        "direction": {
+          "iterations": 4,
+          "featureCount": 109,
+          "maximumSklearnExportScoreGap": 4.440892098500626e-16
+        }
+      }
+    },
+    "word_char": {
+      "heads": {
+        "completion": {
+          "raw": {
+            "count": 18,
+            "truePositive": 4,
+            "trueNegative": 14,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "correct": 18
+          },
+          "scriptSlices": {
+            "arabic": {
+              "count": 4,
+              "truePositive": 0,
+              "trueNegative": 4,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 4
+            },
+            "english": {
+              "count": 8,
+              "truePositive": 2,
+              "trueNegative": 6,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 8
+            },
+            "mixed": {
+              "count": 6,
+              "truePositive": 2,
+              "trueNegative": 4,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 6
+            },
+            "arabicContaining": {
+              "count": 10,
+              "truePositive": 2,
+              "trueNegative": 8,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 10
+            }
+          },
+          "byExpression": {
+            "literal-L731-C8": {
+              "recordId": "synthetic-v1-0053",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -1.6971951609070313,
+              "script": "arabic"
+            },
+            "literal-L605-C12": {
+              "recordId": "synthetic-v1-0140",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -3.8785445657026574,
+              "script": "mixed"
+            },
+            "literal-L712-C12": {
+              "recordId": "synthetic-v1-0038",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.892252145148439,
+              "script": "arabic"
+            },
+            "literal-L286-C15": {
+              "recordId": "synthetic-v1-1554",
+              "target": "completed",
+              "prediction": "completed",
+              "score": 2.809098329315372,
+              "script": "english"
+            },
+            "literal-L742-C8": {
+              "recordId": "synthetic-v1-0106",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -3.3690495313317737,
+              "script": "english"
+            },
+            "literal-L683-C12": {
+              "recordId": "synthetic-v1-1398",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -3.042428671536359,
+              "script": "mixed"
+            },
+            "literal-L448-C15": {
+              "recordId": "synthetic-v1-0750",
+              "target": "completed",
+              "prediction": "completed",
+              "score": 0.9990390599802772,
+              "script": "mixed"
+            },
+            "literal-L599-C12": {
+              "recordId": "synthetic-v1-1107",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -6.327824724336105,
+              "script": "english"
+            },
+            "literal-L168-C15": {
+              "recordId": "synthetic-v1-1665",
+              "target": "completed",
+              "prediction": "completed",
+              "score": 3.8786327421591835,
+              "script": "english"
+            },
+            "literal-L600-C12": {
+              "recordId": "synthetic-v1-1548",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -3.460511010305242,
+              "script": "mixed"
+            },
+            "literal-L337-C15": {
+              "recordId": "synthetic-v1-1302",
+              "target": "completed",
+              "prediction": "completed",
+              "score": 3.6136021046767453,
+              "script": "mixed"
+            },
+            "literal-L726-C8": {
+              "recordId": "synthetic-v1-1914",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -3.8720768863124397,
+              "script": "arabic"
+            },
+            "literal-L679-C12": {
+              "recordId": "synthetic-v1-0334",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.338309133705469,
+              "script": "english"
+            },
+            "literal-L734-C8": {
+              "recordId": "synthetic-v1-0289",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -3.264919873486395,
+              "script": "english"
+            },
+            "literal-L738-C8": {
+              "recordId": "synthetic-v1-0184",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.713855264432792,
+              "script": "english"
+            },
+            "literal-L704-C12": {
+              "recordId": "synthetic-v1-0174",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -2.978091237532657,
+              "script": "english"
+            },
+            "literal-L652-C12": {
+              "recordId": "synthetic-v1-1881",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -3.9049878873868638,
+              "script": "mixed"
+            },
+            "literal-L681-C12": {
+              "recordId": "synthetic-v1-0806",
+              "target": "non_transaction",
+              "prediction": "non_transaction",
+              "score": -3.489799722041364,
+              "script": "arabic"
+            }
+          }
+        },
+        "direction": {
+          "raw": {
+            "count": 4,
+            "truePositive": 2,
+            "trueNegative": 1,
+            "falsePositive": 1,
+            "falseNegative": 0,
+            "correct": 3
+          },
+          "scriptSlices": {
+            "arabic": {
+              "count": 0,
+              "truePositive": 0,
+              "trueNegative": 0,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 0
+            },
+            "english": {
+              "count": 2,
+              "truePositive": 1,
+              "trueNegative": 1,
+              "falsePositive": 0,
+              "falseNegative": 0,
+              "correct": 2
+            },
+            "mixed": {
+              "count": 2,
+              "truePositive": 1,
+              "trueNegative": 0,
+              "falsePositive": 1,
+              "falseNegative": 0,
+              "correct": 1
+            },
+            "arabicContaining": {
+              "count": 2,
+              "truePositive": 1,
+              "trueNegative": 0,
+              "falsePositive": 1,
+              "falseNegative": 0,
+              "correct": 1
+            }
+          },
+          "byExpression": {
+            "literal-L286-C15": {
+              "recordId": "synthetic-v1-1554",
+              "target": "outgoing",
+              "prediction": "outgoing",
+              "score": -2.4943395347088653,
+              "script": "english"
+            },
+            "literal-L448-C15": {
+              "recordId": "synthetic-v1-0750",
+              "target": "outgoing",
+              "prediction": "incoming",
+              "score": 1.635201510370066,
+              "script": "mixed"
+            },
+            "literal-L168-C15": {
+              "recordId": "synthetic-v1-1665",
+              "target": "incoming",
+              "prediction": "incoming",
+              "score": 1.369094280032263,
+              "script": "english"
+            },
+            "literal-L337-C15": {
+              "recordId": "synthetic-v1-1302",
+              "target": "incoming",
+              "prediction": "incoming",
+              "score": 2.518266306018633,
+              "script": "mixed"
+            }
+          }
+        }
+      },
+      "jointCompletedAndCorrectDirection": {
+        "correct": 3,
+        "count": 4
+      },
+      "candidateBytes": 600105,
+      "fitAudit": {
+        "completion": {
+          "iterations": 7,
+          "featureCount": 8462,
+          "maximumSklearnExportScoreGap": 3.108624468950438e-14
+        },
+        "direction": {
+          "iterations": 6,
+          "featureCount": 3251,
+          "maximumSklearnExportScoreGap": 8.881784197001252e-16
+        }
+      }
+    }
+  },
+  "unchangedStructuralBaseline": {
+    "scope": "Unchanged active detailed assessment, reported separately; candidates are not wired into its guards",
+    "trackingCounts": {
+      "exclude": 12,
+      "review": 4,
+      "include": 2
+    },
+    "fullyMatchingWeakReviews": 13,
+    "rows": [
+      {
+        "recordId": "synthetic-v1-0053",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "balance_only"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0140",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "otp_or_authorization"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0038",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1554",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "reasonCodes": [
+            "completed_transaction",
+            "transfer_ownership_unresolved"
+          ],
+          "amount": 8.396,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "unknown",
+          "merchantOrCounterparty": "Reflect account 7019 to ECJM LGLTEQ BCHHKF",
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "recordId": "synthetic-v1-0106",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1398",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "promotion_or_administration"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0750",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "reasonCodes": [
+            "category_unresolved",
+            "completed_transaction"
+          ],
+          "amount": 27.75,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "outgoing",
+          "transferRelationship": "not_transfer",
+          "merchantOrCounterparty": "صراف آلي بنك القاهرة عمان",
+          "expenseCategory": null,
+          "categoryStatus": "uncertain"
+        },
+        "mismatchFields": [
+          "merchantOrCounterparty",
+          "expenseCategory",
+          "categoryStatus"
+        ]
+      },
+      {
+        "recordId": "synthetic-v1-1107",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1665",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "completed",
+          "trackingDecision": "include",
+          "reasonCodes": [
+            "completed_transaction"
+          ],
+          "amount": 68.821,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "not_transfer",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1548",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "otp_or_authorization"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1302",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "completed",
+          "trackingDecision": "review",
+          "reasonCodes": [
+            "completed_transaction",
+            "transfer_ownership_unresolved"
+          ],
+          "amount": 87.815,
+          "currency": "JOD",
+          "currencyResolution": "explicit",
+          "direction": "incoming",
+          "transferRelationship": "unknown",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": [
+          "merchantOrCounterparty"
+        ]
+      },
+      {
+        "recordId": "synthetic-v1-1914",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0334",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0289",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "reasonCodes": [
+            "amount_unresolved",
+            "completion_unresolved",
+            "direction_unresolved"
+          ],
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "default_missing",
+          "direction": "uncertain",
+          "transferRelationship": "not_transfer",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": [
+          "transactionStatus",
+          "trackingDecision",
+          "currency",
+          "currencyResolution",
+          "direction",
+          "transferRelationship"
+        ]
+      },
+      {
+        "recordId": "synthetic-v1-0184",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "uncertain",
+          "trackingDecision": "review",
+          "reasonCodes": [
+            "amount_unresolved",
+            "completion_unresolved",
+            "direction_unresolved"
+          ],
+          "amount": null,
+          "currency": "JOD",
+          "currencyResolution": "default_missing",
+          "direction": "uncertain",
+          "transferRelationship": "not_transfer",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": [
+          "transactionStatus",
+          "trackingDecision",
+          "currency",
+          "currencyResolution",
+          "direction",
+          "transferRelationship"
+        ]
+      },
+      {
+        "recordId": "synthetic-v1-0174",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "personal_conversation"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-1881",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "declined_or_failed"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      },
+      {
+        "recordId": "synthetic-v1-0806",
+        "assessment": {
+          "contractVersion": "1.0.0",
+          "transactionStatus": "non_transaction",
+          "trackingDecision": "exclude",
+          "reasonCodes": [
+            "promotion_or_administration"
+          ],
+          "amount": null,
+          "currency": null,
+          "currencyResolution": "not_applicable",
+          "direction": "not_applicable",
+          "transferRelationship": "not_applicable",
+          "merchantOrCounterparty": null,
+          "expenseCategory": null,
+          "categoryStatus": "not_applicable"
+        },
+        "mismatchFields": []
+      }
+    ]
+  },
+  "outputSha256": {
+    "data/models/sms_semantics_ab_v1_word_candidate.json": "f4793e23851946cc202c7427502183e02892ff452253095d1a50acdd3a095766",
+    "data/models/sms_semantics_ab_v1_word_char_candidate.json": "00ad8b39744c7ca9e43caf09ddec8c0bd5fb40bbed9ec83275955ab2b3d77802",
+    "data/models/sms_semantics_ab_v1_browser_runtime.js": "c361f9f94e4757ce3518f0b6703f6ab8de26d3c0cd0508d298d8cbfb275b4890"
+  },
+  "productionIntegrated": false,
+  "canonicalAdmissionFlagsChanged": false,
+  "reservedMerchantFinalInferred": false,
+  "limits": [
+    "Only 18 weak validation representatives, four completed; no precise real-world accuracy/recall or calibrated certainty claim.",
+    "Unknown ownership remains a recording review even when completion/direction are known.",
+    "Raw learned heads are separate from the unchanged structural baseline; no new guarded runtime is evaluated.",
+    "Script/expression slices are exposed synthetic development evidence, not an independent test or promotion decision.",
+    "The 226-case frozen active-engine check is run separately; candidates do not replace that caller."
+  ]
+}

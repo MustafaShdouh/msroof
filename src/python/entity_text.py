@@ -1,8 +1,12 @@
 """A normalized matching view that projects names back to exact source text."""
 import re
+import json
+from pathlib import Path
 from .preprocessing import normalize_financial_numbers
 
 MARK = re.compile(r"[\u064b-\u065f\u0670]")
+VIEW_RULES = json.loads((Path(__file__).resolve().parents[2]/'config/contracts/source_text_view.json').read_text(encoding='utf-8'))
+DISPLAY_CONTROL = re.compile(VIEW_RULES['ignoredDisplayControls'])
 JOINED_MASK = re.compile(r"(?:[0-9]{2,4}\*[0-9]{2,4}|xxxx[0-9]{3,4}|\*[0-9]{4})(?=(?:from|to)\s)", re.I)
 
 
@@ -13,6 +17,8 @@ class EntityText:
         while index < len(source):
             start, char = index, source[index]
             index += 1
+            if DISPLAY_CONTROL.fullmatch(char):
+                continue
             if char == "\\" and index < len(source) and source[index] in "nr":
                 escaped = source[index]
                 index += 1

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Versioned weak expectation corrections; original fixtures immutable, no training admission",
+  "reviews": [
+    {
+      "source": "tests/fixtures/transaction_behavior_cases.json",
+      "recordId": "two_masks_unknown_ownership",
+      "textSha256": "c8094b20984c573c596f1f578896bb780ec03106deb538b41ab9701465410625",
+      "previousDirection": "outgoing",
+      "reviewedDirection": "uncertain",
+      "trackingDecision": "review",
+      "reviewer": "assistant",
+      "labelState": "weak",
+      "basis": "Two unowned account masks do not identify which endpoint is the owner; retain review without inventing outgoing direction."
+    },
+    {
+      "source": "tests/fixtures/detailed_assessment_cases.json",
+      "recordId": "unknown_two_masks",
+      "textSha256": "754b36af507a219521b42903c1697d964f72446b79ef587a029ed534f17f9a3e",
+      "previousDirection": "outgoing",
+      "reviewedDirection": "uncertain",
+      "trackingDecision": "review",
+      "reviewer": "assistant",
+      "labelState": "weak",
+      "basis": "Two unowned account masks do not identify which endpoint is the owner; retain review without inventing outgoing direction."
+    }
+  ]
+}

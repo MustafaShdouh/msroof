@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Scored development/control metadata only; no reserved admission, no changed truth or training",
+  "reasonDefinitions": {
+    "unspecified_event_outcome": "A movement is mentioned but posting/settlement outcome is unconfirmed.",
+    "unresolved_governing_context": "It is unresolved whether text is a real notice or an illustrative frame.",
+    "conservative_scope_policy": "Frozen review target reflects conservative mixed/multisentence parser scope policy."
+  },
+  "inSampleControls": {
+    "quoteControls/qualified-en": {
+      "textSha256": "e713b611a520e483b9a7da1b9ba58c5efd9cc446239f8b2eea0593c0454ed9f5",
+      "trainingRecordIds": [
+        "instruction-quote-non_transaction-en"
+      ],
+      "rationale": "Exact training duplicate retained as explicitly in-sample conformance; never an unseen-text success."
+    }
+  },
+  "uncertaintyReasons": {
+    "exposedManual/unsettled-hold-ar": "unspecified_event_outcome",
+    "scopeDevelopment/scope-v1-gift-wallet-4-ar": "unspecified_event_outcome",
+    "scopeDevelopment/scope-v1-wage-receipt-4-ar": "unspecified_event_outcome",
+    "scopeDevelopment/scope-v1-tuition-status-4-ar": "unspecified_event_outcome",
+    "scopeDevelopment/scope-v1-card-alert-lesson-4-ar": "unresolved_governing_context",
+    "quoteControls/multisentence-ar": "conservative_scope_policy",
+    "quoteControls/mixed-ar": "conservative_scope_policy",
+    "exposedManual/unsettled-hold-en": "unspecified_event_outcome",
+    "scopeDevelopment/scope-v1-gift-wallet-4-en": "unspecified_event_outcome",
+    "scopeDevelopment/scope-v1-wage-receipt-4-en": "unspecified_event_outcome",
+    "scopeDevelopment/scope-v1-tuition-status-4-en": "unspecified_event_outcome",
+    "scopeDevelopment/scope-v1-card-alert-lesson-4-en": "unresolved_governing_context",
+    "quoteControls/multisentence-en": "conservative_scope_policy",
+    "quoteControls/mixed-en": "conservative_scope_policy"
+  },
+  "reviewer": "assistant",
+  "reviewState": "weak",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false
+}

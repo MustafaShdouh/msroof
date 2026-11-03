@@ -1,0 +1,2174 @@
+{
+  "schemaVersion": "1.0.0",
+  "records": [
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0053",
+      "textSha256": "6e00010d6697a1ad9b8a9cb192fb51184758e366fb40e2d8254135f67ad2cc22",
+      "normalizedTextSha256": "6e00010d6697a1ad9b8a9cb192fb51184758e366fb40e2d8254135f67ad2cc22",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0140",
+      "textSha256": "17af4671c5c3edbd7e2af4767f341a5e647b367383436998babf346daadf8592",
+      "normalizedTextSha256": "6af4e45667a673a0c9218b0d644e620af0c95a25bdd8180e767733d8c5de08e8",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0038",
+      "textSha256": "983aec1699c4100692ab9e7319d9f5fbe15851bc7bcf8bcd43042009cc87f649",
+      "normalizedTextSha256": "983aec1699c4100692ab9e7319d9f5fbe15851bc7bcf8bcd43042009cc87f649",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1554",
+      "textSha256": "2921b642e5a733b59eb5f39e47808e31b1dc026ff164b529a2fc900848fdc51a",
+      "normalizedTextSha256": "091f415db11167e7be3f71bb350af68d356d09811eb5289b5f7b16641d97f973",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0106",
+      "textSha256": "feabcce8977afbd9096d214649e9247702d10ef0b6e6e67873ffa7dc907219dd",
+      "normalizedTextSha256": "37dc7fa0384210cd41345b5117bdeda7fbce9c0825af7456b566f013821117a8",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1398",
+      "textSha256": "0058feb11b55814071f55b0a8d0d5592474b705a6013ddaf3f2e82c22b919ab1",
+      "normalizedTextSha256": "46fe832e02b2c159610505aa880f8cc92cbabea686a64568af811d715b204cfb",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0750",
+      "textSha256": "00122bf81fd52e72351739b54eea57a533282aa99bc21c797edea56af38602dd",
+      "normalizedTextSha256": "f7e377bcec82de8ff02e6b9c50fbe3ceed3c0e5004a44229470984cbf1966205",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1107",
+      "textSha256": "065b7aa4570a2a690f26e954aede39a480dbdf6f3a333ec5cc823fecb1cf39e8",
+      "normalizedTextSha256": "bd5d7295361cdf0da444f653d5092d3a1d9032f18022ec02145ffa740c591c58",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1665",
+      "textSha256": "019cf05c906c845344c8ac4495fd8a51fee8411a9d4a8773f20b9a2b8e7f6515",
+      "normalizedTextSha256": "d6d1809c773dc29c3ae95c00e5026def665d953ac3d275090cc978c959e668fa",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1548",
+      "textSha256": "0cc825edd6e14677b2bb882f58ca4c9a739cd1b2475fd881af02d03918a07813",
+      "normalizedTextSha256": "4cc9d7a118540499cd8de8ee8681dc418073ced54fe7363cc89258d0bcdbada2",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1302",
+      "textSha256": "0b9e71cad47dd0f2ca1d5e92dbdbf2797ef88696dfe4731a07fd0cf05b1ffbe9",
+      "normalizedTextSha256": "d3a55dbe99ccb1a5f23b95a31edacddfab30141f4b97b6535cabb0b1e90f37e1",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1914",
+      "textSha256": "1591472d609a1b863f83f662978c089e935f0e2e9e4ad38c5c7b34859de2111c",
+      "normalizedTextSha256": "d694410458e63e8e1b47d7aeade12544b1b6697dd58fa330acfee4d81885d1f2",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0334",
+      "textSha256": "17b3f75a2b6d6cd3e65e009517f97dbe0b8bd5691a1094e3b53961bf85a55a70",
+      "normalizedTextSha256": "c5152d6c2be1f07123a35b2df172b34ebeb827e60431bd040afe80cbe4a80926",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0289",
+      "textSha256": "37ed8cbb38b17e0a0a5f16e5be132fbbfa8ee36523fb8774cdabb0ffd9af92d1",
+      "normalizedTextSha256": "37ed8cbb38b17e0a0a5f16e5be132fbbfa8ee36523fb8774cdabb0ffd9af92d1",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0184",
+      "textSha256": "148735a023312c866d735391b3594f29d2902f63069dce0bc4b57c788d78777a",
+      "normalizedTextSha256": "148735a023312c866d735391b3594f29d2902f63069dce0bc4b57c788d78777a",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0174",
+      "textSha256": "1b98cf5f8bfbb916675b467e1b58d9500948d2c1b7dfe6aa6563f37fd07ee20d",
+      "normalizedTextSha256": "297f6b296ab4f4d7b32f3940defad0ac1b539983175e1f4b94c4e43f25ec632d",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-1881",
+      "textSha256": "0abae17202546f4d6f85ecbda5fcdc11b9a8b0b71d211361aca36712dd46899f",
+      "normalizedTextSha256": "e3c0d1c0d8c6f9d34256a36175008599341f987f32bce9edb9ad9f6804751e5d",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "oldExposedValidation",
+      "recordId": "synthetic-v1-0806",
+      "textSha256": "28a506b0e63062447d729e53f541e4f29f7f39d8e70b39696ff766ed644ae6d0",
+      "normalizedTextSha256": "d03fe9d0f7c0166c502706e1d7bc05ca8b4c767541520aca5b8198305fb877f2",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "withdrawal-ar",
+      "textSha256": "6716fe64a8697bdf3f08211a6f71e4f4cef19bf5dba2b447443816691b3e3da7",
+      "normalizedTextSha256": "671f3672773050850dbb171e179ba3daa6090c96e6a60d7c35aca691f53c098b",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "withdrawal-en",
+      "textSha256": "2cc07d193ca57700470a34e4c323526eb884f5accdcffdc966e4978d648ba089",
+      "normalizedTextSha256": "48cd7ce5c4e97baa3ee1db2e3b88459e3813636c6650d36c8f20b125ad7a4759",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "refund-ar",
+      "textSha256": "c09a4dca7d1fbe348ccf3ce0a8d459b928d6bb0900d15ad2e55b7a447fa4c22b",
+      "normalizedTextSha256": "f8488758a527a207d4e15f13d5d0d321b8b44d85b3b990033d211388cc1dcc0d",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "refund-en",
+      "textSha256": "5f9105e45797c07b41934391cf0f1dc461e52d65b3789b8cd020c7bc109ef92c",
+      "normalizedTextSha256": "9ae4014b11daf600c400435c45494960cb74f66bf3381d57f43ca464f8ae25d5",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "foreign-purchase-ar",
+      "textSha256": "d7a630fded0da193c963a9cdb715d92187460e8e641c0f8eafab2393b48c34a8",
+      "normalizedTextSha256": "95a27fd6f9c08c3a089db0e5e6e1546565e05b32302cd1b849f1643d1aab57e0",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "foreign-purchase-en",
+      "textSha256": "9f35dd8aad07ba05e20b314cc2827f7fd4e89a42f1c3a9baa456785a900b7b5d",
+      "normalizedTextSha256": "bbcf55a3b2099425309fcf327671386582f608780c624b55bb1398dbafc81b67",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unknown-transfer-ar",
+      "textSha256": "15fa1231eb0d0ef3ef45f625bdd537432c124fba92aab18ada604a7f9b602828",
+      "normalizedTextSha256": "75266d8fe6e55e504451a6be01ec50d49d5e19d1e81c2e49ec8c9d2b375ef6a7",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unknown-transfer-en",
+      "textSha256": "f4c0d0379306663f54343627e0c38643d403c84a01afc96a124f3af3859ce957",
+      "normalizedTextSha256": "60da30512065c8320a5fa23c778d008dec2f4e18048a3084b350939b50fe4da5",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "own-accounts-ar",
+      "textSha256": "e4635c941a0d28b03c6859afefca0d2c9758aab6e992a8a8c0a85192086fc3a4",
+      "normalizedTextSha256": "64777877e86383b8c5cd575f7faec4ad633cce7132be9a87931145a8adc4877f",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "own-accounts-en",
+      "textSha256": "1b88f64e89b3833f6fcb48620676ddf9b36a926d55e5abbeeee2c6a72fb572f9",
+      "normalizedTextSha256": "aba69b9cb2814133eaba61735789c3b57211c5f1f2b7ca464bc71f4294ef459d",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "missing-amount-ar",
+      "textSha256": "2855f40a332062553a1d73a15cad5dbb157a0c9509a7af8064752c31642ad68c",
+      "normalizedTextSha256": "2855f40a332062553a1d73a15cad5dbb157a0c9509a7af8064752c31642ad68c",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "missing-amount-en",
+      "textSha256": "6081a90a8ec44a4e6a72e4e76db4a56bc2da647b141a690af4f0f62260602ebd",
+      "normalizedTextSha256": "d419773d9c92abbf553db4a677d3a6b5984ea755c68e61dc29c832f3a2d1d35a",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "declined-ar",
+      "textSha256": "b6a63297b54c8d390bb59522efcc763c2276d3e82ff820cd61e7172ba7fab562",
+      "normalizedTextSha256": "e3b74cd58ec440f3b62cfd02c6bdf47ded94164d85d982e94ebc082ce9bc9ebc",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "declined-en",
+      "textSha256": "37c6d8a8061c8ec93903b8999e57a0f12223d03f383dbbcfed7877bd50261e26",
+      "normalizedTextSha256": "69fc53ec6edfd5a657c4ec0e870499757a08a6f185963941a1efb92f21927afb",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "personal-chat-ar",
+      "textSha256": "35b132b584265b6c419ff58dd7f3c912e18b832383003ae4c9608232ed5566d4",
+      "normalizedTextSha256": "02f9c9f862ef004125e21f3ee6b51c9ae6422dd5d15a0e0e940baa592859011d",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "personal-chat-en",
+      "textSha256": "9da36bbcf2780c593bba697438e89dcf250494886f47b27aa6d27f4dbd8a66b1",
+      "normalizedTextSha256": "a0fd06be6aba385fb1a9281068138af2e61dc8d581dc9c27183f9d5d78569c99",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "pending-ar",
+      "textSha256": "6207ed3816aec7e05e52f01211646acd412504ed46fb7b4c9878a276c19cce34",
+      "normalizedTextSha256": "2ada8da0d5d5d88c42b953bf03ac622468dca28727ec32fcfd0e29327387235b",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "pending-en",
+      "textSha256": "b23d1ced14a75aa852576046f635a734c6d4ee01d0bd41a2e79acfd4df54ef05",
+      "normalizedTextSha256": "9a2dfd4defed930f9e487f200483031930f085912b6f69c4da3c8c86b0af0689",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "purchase-otp-ar",
+      "textSha256": "73c32a09105a91f1f7cee9a94fb4ec2291014081eac2fd07e7c89061d74d510c",
+      "normalizedTextSha256": "deefb2b5bc4e1a75009f5e7dd0598ed69c2369286817cb14d8e7210f1c5ab355",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "purchase-otp-en",
+      "textSha256": "4d696842405c13950e1bf38f3cb0cecd4ac16a0d6ccc9c5daa9d102c41061f07",
+      "normalizedTextSha256": "fd493b5e6c1229af8546be720e35a801464deaa887e6fb602968adcef5a0a54b",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "quoted-example-ar",
+      "textSha256": "d33b783ff60c81a541f9c9dc364e026f35d018229c90365822b9c482fcdde5df",
+      "normalizedTextSha256": "77d00341b2cea27d92648a23a6490d40dd04f10d4e3eb16d9d3a906b4f225840",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "quoted-example-en",
+      "textSha256": "7dd21e82d85a1d4eae16b5f0a1f6973524594e82f455bd87cec43b2336dfaefb",
+      "normalizedTextSha256": "6840339f39b59f9e890b7bec6826fe5b36a70a1589a25ee0175a8cf855bc1246",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unsettled-hold-ar",
+      "textSha256": "3568a576be46295b682e10ca7111f1ccdc9e21f5adea93749bd82317626514db",
+      "normalizedTextSha256": "7d1af278c5f978f670f7ffd8b5287f898785ffddf5983220e0d3ba04df60331f",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "unspecified_event_outcome",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "exposedManual",
+      "recordId": "unsettled-hold-en",
+      "textSha256": "81a127fdd2380a168867ce5561f346d930749b943adb5981ea48d031fd2004f3",
+      "normalizedTextSha256": "82d5f64263275c2eb83ea820941804cb671fcc7e26e085be0122e2f88b62cf76",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "unspecified_event_outcome",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-completed-ar",
+      "textSha256": "8824c704c8595acaad11c51b42bc5d02382ba3d627bab2056e4e951f8f074a07",
+      "normalizedTextSha256": "df47bfbe14d40abf043c241e2d052f42bd97c093eb5c0e8a5e2621d7eab42681",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-completed-en",
+      "textSha256": "3d573cf4f0a162c1504c26602fbb8a2c33b161322d0128fff4524ab55fe932d8",
+      "normalizedTextSha256": "cf1557126c3b12134ed2d31daa51ef0e80e7d827f8b695f8cda828660f2acc44",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-non_transaction-ar",
+      "textSha256": "62cd1c02c770254d8bfe969f4a0c785ff069120c1cbde1a4c694a6cde760e10c",
+      "normalizedTextSha256": "62cd1c02c770254d8bfe969f4a0c785ff069120c1cbde1a4c694a6cde760e10c",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-cash-receipt-non_transaction-en",
+      "textSha256": "80a3577889628640040a8f3fc8371f03ca1d31c2a466e03292aec33d178b22fb",
+      "normalizedTextSha256": "507726d0f597711f2f9f2ce7bb15186120f098fe522111e847bad0c137225767",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-completed-ar",
+      "textSha256": "eb860f112ae2e4cc45cb8383221179ae8c6fe70617cdf764019e2e72a1a2f5ed",
+      "normalizedTextSha256": "d8022114e7bb583bab733188c1c2468f7f33044bba51023894d6a02b576fb4af",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-completed-en",
+      "textSha256": "6d76c90cc631529ac0ae825435f22dced864458bce840be03d727da1e86771c8",
+      "normalizedTextSha256": "ff7deace29e1df588965f8f29f826ca0c6c26ba1281305c91785859e22f1780a",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-non_transaction-ar",
+      "textSha256": "2d9afcf6bbcab70b2a9849d38796350f400a645192d0db8935e02d117fff25c9",
+      "normalizedTextSha256": "2d9afcf6bbcab70b2a9849d38796350f400a645192d0db8935e02d117fff25c9",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-unpriced-payment-non_transaction-en",
+      "textSha256": "e180809f289c93e83c44fed73f0259a9da2edb38c1ac3ca74b8cbc4033e2a918",
+      "normalizedTextSha256": "2ce803e44c46267e5cf2882da251c80ea3ac4b67def65cf701454af45d9d22b1",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-completed-ar",
+      "textSha256": "4ef3e161683585a522229f19f5921910be7c0dbf4e6791cb457e72ead11be74c",
+      "normalizedTextSha256": "bcc63622b4ee6d8ccd8cab0d66cde45ea6376963cd7b119689fc89403ee780b7",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-completed-en",
+      "textSha256": "c27eaaf678662ec4cccf6df75380aec7c9644fdb45770520f5d0c57f961ab7fb",
+      "normalizedTextSha256": "aadb8fe35d6131e7f767ed8218586ac681a3faf2e05664ca67c156f715b6c9ef",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-non_transaction-ar",
+      "textSha256": "be94b456f2ebba8314c39ec059251472bc9cbf104333a54a6cbab8e358851a9f",
+      "normalizedTextSha256": "33675957389764bf42a8d58e1428e77e7304cf907983596bab529abb9754d990",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-example-context-non_transaction-en",
+      "textSha256": "c23284ccc1ea87046a251218fce02890ad655191276be15e55cc65a00d0a9141",
+      "normalizedTextSha256": "e7ec242aecadf3d71baa3a56f6faf0ea2eebdf2b57fe8121612b7729bc814c97",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-completed-ar",
+      "textSha256": "1ed05b0b846ccb0002884ebfc24006391db9b6fa13f5cd9fce4cbe16b7160622",
+      "normalizedTextSha256": "10edb4ce90fcdfc4c5693873de73a314df04c5123f87bffc3eb001ce2923f043",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-completed-en",
+      "textSha256": "8c1bd723b8908b813e7301794f747e5886017f8be43a321fb9bcdf236307ee42",
+      "normalizedTextSha256": "c360599380c66619314b1bc46a2d052943128571953f6543bf5a0879ccc78afa",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-non_transaction-ar",
+      "textSha256": "f4533ab89420679a2837914f106ddd2a32248bcc65b3e08273c031b2b88f094f",
+      "normalizedTextSha256": "65a85b645879ddfa05e624e2c596f1b3e2581f65aafd1811f71a1590c2dc6897",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-approval-state-non_transaction-en",
+      "textSha256": "167d7d405427919a1c2879dc86e6d09b00194be255d22945d3cad13713aadf21",
+      "normalizedTextSha256": "965b5df000c95884852a0bb904b22e048b3b60c8d6a64e72ff395f7cb572fef8",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-completed-ar",
+      "textSha256": "58a43993d111cdb6985de13d5f64ca8b2256eb7be165acd6e94f733b60b4742d",
+      "normalizedTextSha256": "49828c5aa3e67eb32dbc257a9f487fe1886eb9fb4bb46c4103f08a71ef717386",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-completed-en",
+      "textSha256": "ca32a7ca6663b0a86514682eaaef510405e967409e3b7731a0c0c1e2fc9baf38",
+      "normalizedTextSha256": "15dbe7f385e2e7309d8b27bf3aaddcbc7cb77db5aadec33168976f344aaea4ba",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-non_transaction-ar",
+      "textSha256": "5e71b2e46fa9a9ba495ef9e2d992738018eeeeedeb78f0123af004b1c3f91316",
+      "normalizedTextSha256": "fd1390340a6758b86c2bf935ba7edf8c0d6bff1bfb5019c804878110a5b871d2",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-message-from-friend-non_transaction-en",
+      "textSha256": "f65be3255256464512230c32ea74eb7d732bba8026882a607ed4f5d990ad2076",
+      "normalizedTextSha256": "f7c3ee6995a1ef9dd3fd838da0245ed112c77304b667d1d2655fe22c7469c653",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-completed-ar",
+      "textSha256": "c8d3e64e232e7d6efc71e6c5d0043e681779f04d720fc776ba4a3d48c2a1273e",
+      "normalizedTextSha256": "dc88b72d235c4de36f61832211539e9fdf17083f6a1c2a9124b224beb4aaba84",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-completed-en",
+      "textSha256": "f0b537995a25de4c6cebe0acb09a0bdbac93abf7a72b72bd3dddcbab2ef74c5e",
+      "normalizedTextSha256": "6e76d7210d1ac0e04b79591176c5d746300a6fcdbb7a69a9d3ff9586aafa5179",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-non_transaction-ar",
+      "textSha256": "5093b73a04e48dd56e17a04b1e2b927010d8d811478b2a0679dd3f8a3c839d65",
+      "normalizedTextSha256": "ae240a220f95635164187281524d54ae324e01f699f791be2434db00e5aa3362",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "authoredProbe",
+      "recordId": "probe-rejected-debit-non_transaction-en",
+      "textSha256": "e8005f35ec7434ab2f8ce4f9a05a7b51b1363ed5495d905d8fb515ff64681612",
+      "normalizedTextSha256": "f0301b7274c20e5077964aa47b48505da89abe4404168bd6d8b958bc4de06ce2",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "manual-ar",
+      "textSha256": "d33b783ff60c81a541f9c9dc364e026f35d018229c90365822b9c482fcdde5df",
+      "normalizedTextSha256": "77d00341b2cea27d92648a23a6490d40dd04f10d4e3eb16d9d3a906b4f225840",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "manual-en",
+      "textSha256": "7dd21e82d85a1d4eae16b5f0a1f6973524594e82f455bd87cec43b2336dfaefb",
+      "normalizedTextSha256": "6840339f39b59f9e890b7bec6826fe5b36a70a1589a25ee0175a8cf855bc1246",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-en",
+      "textSha256": "e713b611a520e483b9a7da1b9ba58c5efd9cc446239f8b2eea0593c0454ed9f5",
+      "normalizedTextSha256": "7a34773ca1f428666bbc8150b350170edeb61993d7e82a8b742f7c1e97064755",
+      "target": "non_transaction",
+      "role": "in_sample_conformance",
+      "exactTrainingRecordIds": [
+        "instruction-quote-non_transaction-en"
+      ],
+      "normalizedTrainingRecordIds": [
+        "instruction-quote-non_transaction-en"
+      ],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-ar",
+      "textSha256": "ae152ae6e782610f9850e884fa0288df5ce16d62208706293bc43a897ebd0fae",
+      "normalizedTextSha256": "b196a5a6b6df01ae8d9d4422d80d5377e6362ef1cad03af5d79365df422ddd7c",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "note-en",
+      "textSha256": "34ee1207b24ef2dce102f90483a8ef4abd861d27ac9b8e0ca6167343d19fa604",
+      "normalizedTextSha256": "c7c7acabdd5a1f64b3626008a2ba0b553cd0f78b5394e9fcf97ac5334d034d69",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "note-ar",
+      "textSha256": "d0cc30511bf78646d5af97e71ed146f5c5cba3cccdb09c632defe5119bede980",
+      "normalizedTextSha256": "e26bdad10ff4a6e3f0fc00432e4907f90cf211d14e50ddd49dcfc5ebde166fae",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "multisentence-en",
+      "textSha256": "2a3905c634e8dd53284f1eb5606b5f5fed2f5ac574767e5f0e08006989a99a84",
+      "normalizedTextSha256": "16e0a8daa9bcab705c68acffdc9a9e132f42a8cc1b022c202242074e8cc9ccdc",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "conservative_scope_policy",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "multisentence-ar",
+      "textSha256": "80b0e30c8e26eedcc1600ddb42a3ecf79a73a737bcd3caa356ade62dead87bb7",
+      "normalizedTextSha256": "d37df685f647fc8f9e50ce5208a22463ff7209be4a06b4c158123cae86093840",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "conservative_scope_policy",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "mixed-en",
+      "textSha256": "fb48b7391ab44158e972ce3539707dcbbe1b8fa37021e4a814a6c5c35db1d0f8",
+      "normalizedTextSha256": "286b718e8441aa664c0fb7b56ab9dece4c73a0266c44eff3a3c02206d09248bb",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "conservative_scope_policy",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "mixed-ar",
+      "textSha256": "a5c255cf81d5a0efc6467fd3b9fc4a34a8e1bb7d169f735627c924fdb82fddf9",
+      "normalizedTextSha256": "71bef8923078ccd3710310fe709c4637da3557efbe4367074baf4eedf8f6eddc",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "conservative_scope_policy",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "merchant-en",
+      "textSha256": "ee8e368482a9bb057de740748b9bee55456698216cb4b48dde024d78975cc5be",
+      "normalizedTextSha256": "6ee25d86c545eea673f4ad7d6a8502b61fbdb485ce5e9035fd40eab7b49b84fc",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "merchant-ar",
+      "textSha256": "f15d9f957c51b3e7e09a09aae4f5a47e9fe97a4b66f7c251435c8b8e83254bf8",
+      "normalizedTextSha256": "5c1a08589d59721e07bb1873ad04ee95ad4815b96ba474a7b26fa5046bcf8816",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-merchant-en",
+      "textSha256": "bf9b211cc6d4b7eb0e6bf0d3d496e85cbd40e2b8c0c6a1be59b0125cb048467a",
+      "normalizedTextSha256": "b9b9eda4bd0b865b65df93aa589e391ac708c63c33930d5b83b2edc789c2d2e1",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "quoteControls",
+      "recordId": "qualified-merchant-ar",
+      "textSha256": "1d06b7f0f0fc76bd6a5f98c86bd9f8155594e552fe88d313f4b89cdc3e97e912",
+      "normalizedTextSha256": "157345006254bec6b8012a1579abf1ea5c76f9dd9fce9d80ec5194504100cfb3",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-1-ar",
+      "textSha256": "d3e3775019661877c39d14bd32b948220c711c2ac8a5d2c275406b1779973edc",
+      "normalizedTextSha256": "d3e3775019661877c39d14bd32b948220c711c2ac8a5d2c275406b1779973edc",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-1-en",
+      "textSha256": "0a97a6c0283710ffa674413064764f12ecffeb136bd7e171c83f9fc276067b46",
+      "normalizedTextSha256": "9dd0a3eb143fae5d26dbb8e70bc6883c9b89087af6a3186c358bf4b94776c9c4",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-2-ar",
+      "textSha256": "a37ba4e156245ad0ab43c7e25709a8fc4d96b5cf30fa76ef24f71313c62db7fa",
+      "normalizedTextSha256": "a37ba4e156245ad0ab43c7e25709a8fc4d96b5cf30fa76ef24f71313c62db7fa",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-2-en",
+      "textSha256": "23d42f7d0b764ccff86420f0ad880c34a18fa05f0e1dfd0ad398b19abfd1c5b6",
+      "normalizedTextSha256": "00dd7f2d5708ae01598e70af1f80ad8bb6674b05b248dcb8efd87c1a7b8af754",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-3-ar",
+      "textSha256": "5a5ed49e82a100533765000e1efa0236a5744a0893b0240a3553c394304898e4",
+      "normalizedTextSha256": "5a5ed49e82a100533765000e1efa0236a5744a0893b0240a3553c394304898e4",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-3-en",
+      "textSha256": "d23aa310e2502b92d3e9230c07fca6f10628de9e72c5b5750149f6f1d1e94920",
+      "normalizedTextSha256": "67ee1d81c0fe5028bfdf36ed7d943c6347f53acfe939c6bc9a74c67f363a58d8",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-ar",
+      "textSha256": "391f6b9e3d0905d50c43c4cd684426f5cc7504a9b189d9391ae189ed2658b8b8",
+      "normalizedTextSha256": "391f6b9e3d0905d50c43c4cd684426f5cc7504a9b189d9391ae189ed2658b8b8",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "unspecified_event_outcome",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-gift-wallet-4-en",
+      "textSha256": "31f2ef21084250ea7c8d3345c60e1f26186a9e969dac67556186fe59325f3556",
+      "normalizedTextSha256": "2e63913a25e434ac9e09020bf88759eb34c68d0104e926458b320f1aed3eced7",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "unspecified_event_outcome",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-ar",
+      "textSha256": "247768197f95c26a3e914ab450f9906443735b2e7259ddddb87455c2994f3d25",
+      "normalizedTextSha256": "446167a76af348f011c3a87ec38e4285f5bce91c4735d953167e926384676de8",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-1-en",
+      "textSha256": "4ba9d93fa0d707350b4579034e3059d769902f88ec1ad775425f5baf3c19830a",
+      "normalizedTextSha256": "0ef5bfb207958e2a387f749d88acaec3ccc54638c9a3256ffab5ba115e47e447",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-2-ar",
+      "textSha256": "112adbe82de7f81c99349aefc38a46d414a4f338bd3a07d5253cf046c4021def",
+      "normalizedTextSha256": "112adbe82de7f81c99349aefc38a46d414a4f338bd3a07d5253cf046c4021def",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-2-en",
+      "textSha256": "bf58a58867e6bbd49740d13f9022388a58969cc3e5e7afbe8d4806d5d9d9914c",
+      "normalizedTextSha256": "f050f638604845f1bb6da4d6db7da74dfb9519e835223749f59ea40623eb3ae7",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-3-ar",
+      "textSha256": "221e00851f2d68dc0cedf7d65420aa5784ecab3ccca362033d5b4fa1163c2199",
+      "normalizedTextSha256": "221e00851f2d68dc0cedf7d65420aa5784ecab3ccca362033d5b4fa1163c2199",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-3-en",
+      "textSha256": "67e1d2099d731d08f3270c2c94d151347a93c3c289cb59556746407fac6e665b",
+      "normalizedTextSha256": "e22879030007600dbe4c5907026247f0cd603f384047a77ac4c080f54f69e6e7",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-ar",
+      "textSha256": "a8854aedeafb81e5f05162e07e8addb7781c847e7e6eaac41e2c8affbee7a940",
+      "normalizedTextSha256": "a8854aedeafb81e5f05162e07e8addb7781c847e7e6eaac41e2c8affbee7a940",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "unspecified_event_outcome",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-wage-receipt-4-en",
+      "textSha256": "8af346cbdc834a02ca0d50f3a9b0537c6adbd8085548934787fd55544a606efb",
+      "normalizedTextSha256": "e002496dcf62641051f0217a3f84398161f2d6d74bb436644b98e6f01083160d",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "unspecified_event_outcome",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-1-ar",
+      "textSha256": "d7e68f5dda88acbd23f95cb7d18eeff54de458060419227f722990b43b0749a9",
+      "normalizedTextSha256": "e043c2b491efb3d1b3aafb533640f90dafb62b75cd0b411067ac76ff2398cb76",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-1-en",
+      "textSha256": "d48f2b2095a2432332100c922a8f6e352cfb73f6bf3eeb56962547aa2bca9656",
+      "normalizedTextSha256": "601bba69fe35d717f18a201f2e5c027ce800ffd7d2fc61c112941de60f4415a5",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-2-ar",
+      "textSha256": "c464d3609c583600ff722d510525d8b0a90b6c96fe48cc35407acb2a1e13698b",
+      "normalizedTextSha256": "c464d3609c583600ff722d510525d8b0a90b6c96fe48cc35407acb2a1e13698b",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-2-en",
+      "textSha256": "ac248399aacb5ed9f9d29260db4cccfca0984c99f07cb39b38affa95eb46ee8b",
+      "normalizedTextSha256": "d82b095a9c5ab34c85fbef51b04a08809f1a7b8266457208bac6496c9b89a094",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-3-ar",
+      "textSha256": "b9675199c603ba66388ff791eeb233c90985768891a7847a40c32fb79f2918e1",
+      "normalizedTextSha256": "b9675199c603ba66388ff791eeb233c90985768891a7847a40c32fb79f2918e1",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-3-en",
+      "textSha256": "7e40597bf3ae30b77a9f3997c2299cfb8b0450728fd94ea2157a1c15d5fb0c6b",
+      "normalizedTextSha256": "ac35ff30970c116aea7984b9a4ddbcadd5be800fc7c3fa49f707c32745c75026",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-4-ar",
+      "textSha256": "c55391407819e2698c3cff6a8836ebeeeee3ba3063b2ffc43c85263aef5fb133",
+      "normalizedTextSha256": "c55391407819e2698c3cff6a8836ebeeeee3ba3063b2ffc43c85263aef5fb133",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "unspecified_event_outcome",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-tuition-status-4-en",
+      "textSha256": "77968b6ae24ef268594ce9c682cb156ab9f7e458797fe2e0797e1041b596e658",
+      "normalizedTextSha256": "60dab0018a1879b174d27dafc6b66710e5f89a3f56c92061937c4a6ca4fdc5ca",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "unspecified_event_outcome",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-1-ar",
+      "textSha256": "c52e6066a709bed2efeca5809206ad5a64e845b090a27264c6f18d6c5d228b00",
+      "normalizedTextSha256": "71c151efa00f8690f9f15b588b5617dc9471edb327c4bce11021e168564d8415",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-1-en",
+      "textSha256": "bc6a164c8e5e1efafed9f3117aaae4b225777a2e1bdf0ad91518b9b00f314a35",
+      "normalizedTextSha256": "c7db4daa7b11823a4e51cb541216fb970907cbaf493df64f5b8881b1efeb0771",
+      "target": "completed",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-ar",
+      "textSha256": "693d3a21784d4fad6298687997972bc40d37e844c568b23dbfd8384cf370e71d",
+      "normalizedTextSha256": "b60e8eb5f000bb6c346ae237953820fba287680195b03d1b10a7785a02ef61db",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-2-en",
+      "textSha256": "6e8b665431318b2dc8cf3d8ae403f397c73e35f0fd98295116ea0acdd0d06f7f",
+      "normalizedTextSha256": "f487e07d04251b9563d07393973d717c14899be3a957103815e007c13397577d",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-3-ar",
+      "textSha256": "ef83adb83c7ae1da73258fecf7318b486b92fc9cd2d5c9f111ba48be2e6785b5",
+      "normalizedTextSha256": "f40f0a4b4bc1f897041e68c8f3cc86a8e697cc1a6ed0de172539289cc45775ba",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-3-en",
+      "textSha256": "a376cc19e350b8aa678c7c6c925e8ad48ecd4dd81374385e92951cbe73a9bb72",
+      "normalizedTextSha256": "1ff9cf6f5011782d1872de8b4d05a8057a4bf042fde50df94363611557bb861f",
+      "target": "non_transaction",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": null,
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-4-ar",
+      "textSha256": "5017853c765d341a64f6ce4e98908b6fd83a486f75148a352e2ca96150d01553",
+      "normalizedTextSha256": "5017853c765d341a64f6ce4e98908b6fd83a486f75148a352e2ca96150d01553",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "unresolved_governing_context",
+      "independentEvaluationEligible": false
+    },
+    {
+      "cohort": "scopeDevelopment",
+      "recordId": "scope-v1-card-alert-lesson-4-en",
+      "textSha256": "cb0b6bc14b6666645e9772a2c770de4fd6e57923addcbb97ea6d754bb3900f5f",
+      "normalizedTextSha256": "63934a17739c01882e968b128e8fb77cc7a1e0112594ad0ccda0a5e4e33aba6b",
+      "target": "uncertain",
+      "role": "text_disjoint_exposed_diagnostic",
+      "exactTrainingRecordIds": [],
+      "normalizedTrainingRecordIds": [],
+      "uncertaintyReason": "unresolved_governing_context",
+      "independentEvaluationEligible": false
+    }
+  ],
+  "savedScoreSlices": {
+    "role": {
+      "in_sample_conformance": {
+        "all": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 1,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              }
+            },
+            "correct": 1,
+            "total": 1,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 0
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 1,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              }
+            },
+            "correct": 1,
+            "total": 1,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 0
+          }
+        },
+        "ar": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 0,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 0
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 0,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 0
+          }
+        },
+        "en": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 1,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              }
+            },
+            "correct": 1,
+            "total": 1,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 0
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 1,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              }
+            },
+            "correct": 1,
+            "total": 1,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 0
+          }
+        }
+      },
+      "text_disjoint_exposed_diagnostic": {
+        "all": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 39,
+                "non_transaction": 1,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 4,
+                "non_transaction": 50,
+                "uncertain": 3
+              },
+              "uncertain": {
+                "completed": 3,
+                "non_transaction": 3,
+                "uncertain": 8
+              }
+            },
+            "correct": 97,
+            "total": 111,
+            "falseCompleted": 4,
+            "unnecessaryUncertain": 3,
+            "missedCompleted": 1,
+            "wrongCertainty": 6
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 39,
+                "non_transaction": 1,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 10,
+                "non_transaction": 47,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 5,
+                "non_transaction": 8,
+                "uncertain": 1
+              }
+            },
+            "correct": 87,
+            "total": 111,
+            "falseCompleted": 10,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 1,
+            "wrongCertainty": 13
+          }
+        },
+        "ar": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 19,
+                "non_transaction": 1,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 1,
+                "non_transaction": 28,
+                "uncertain": 1
+              },
+              "uncertain": {
+                "completed": 1,
+                "non_transaction": 3,
+                "uncertain": 3
+              }
+            },
+            "correct": 50,
+            "total": 57,
+            "falseCompleted": 1,
+            "unnecessaryUncertain": 1,
+            "missedCompleted": 1,
+            "wrongCertainty": 4
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 19,
+                "non_transaction": 1,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 6,
+                "non_transaction": 24,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 3,
+                "non_transaction": 4,
+                "uncertain": 0
+              }
+            },
+            "correct": 43,
+            "total": 57,
+            "falseCompleted": 6,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 1,
+            "wrongCertainty": 7
+          }
+        },
+        "en": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 20,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 3,
+                "non_transaction": 22,
+                "uncertain": 2
+              },
+              "uncertain": {
+                "completed": 2,
+                "non_transaction": 0,
+                "uncertain": 5
+              }
+            },
+            "correct": 47,
+            "total": 54,
+            "falseCompleted": 3,
+            "unnecessaryUncertain": 2,
+            "missedCompleted": 0,
+            "wrongCertainty": 2
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 20,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 4,
+                "non_transaction": 23,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 2,
+                "non_transaction": 4,
+                "uncertain": 1
+              }
+            },
+            "correct": 44,
+            "total": 54,
+            "falseCompleted": 4,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 6
+          }
+        }
+      }
+    },
+    "uncertaintyReason": {
+      "conservative_scope_policy": {
+        "all": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 3,
+                "non_transaction": 1,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 4,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 4
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 4,
+                "non_transaction": 0,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 4,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 4
+          }
+        },
+        "ar": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 1,
+                "non_transaction": 1,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 2,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 2
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 2,
+                "non_transaction": 0,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 2,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 2
+          }
+        },
+        "en": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 2,
+                "non_transaction": 0,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 2,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 2
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 2,
+                "non_transaction": 0,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 2,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 2
+          }
+        }
+      },
+      "unresolved_governing_context": {
+        "all": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 2
+              }
+            },
+            "correct": 2,
+            "total": 2,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 0
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 1,
+                "uncertain": 1
+              }
+            },
+            "correct": 1,
+            "total": 2,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 1
+          }
+        },
+        "ar": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 1
+              }
+            },
+            "correct": 1,
+            "total": 1,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 0
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 1,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 1,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 1
+          }
+        },
+        "en": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 1
+              }
+            },
+            "correct": 1,
+            "total": 1,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 0
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 1
+              }
+            },
+            "correct": 1,
+            "total": 1,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 0
+          }
+        }
+      },
+      "unspecified_event_outcome": {
+        "all": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 2,
+                "uncertain": 6
+              }
+            },
+            "correct": 6,
+            "total": 8,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 2
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 1,
+                "non_transaction": 7,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 8,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 8
+          }
+        },
+        "ar": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 2,
+                "uncertain": 2
+              }
+            },
+            "correct": 2,
+            "total": 4,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 2
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 1,
+                "non_transaction": 3,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 4,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 4
+          }
+        },
+        "en": {
+          "direct_status": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 4
+              }
+            },
+            "correct": 4,
+            "total": 4,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 0
+          },
+          "factorized": {
+            "matrix": {
+              "completed": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "non_transaction": {
+                "completed": 0,
+                "non_transaction": 0,
+                "uncertain": 0
+              },
+              "uncertain": {
+                "completed": 0,
+                "non_transaction": 4,
+                "uncertain": 0
+              }
+            },
+            "correct": 0,
+            "total": 4,
+            "falseCompleted": 0,
+            "unnecessaryUncertain": 0,
+            "missedCompleted": 0,
+            "wrongCertainty": 4
+          }
+        }
+      }
+    }
+  },
+  "rows": 112,
+  "uniqueTexts": 110,
+  "crossCohortDuplicateTexts": {
+    "d33b783ff60c81a541f9c9dc364e026f35d018229c90365822b9c482fcdde5df": 2,
+    "7dd21e82d85a1d4eae16b5f0a1f6973524594e82f455bd87cec43b2336dfaefb": 2
+  },
+  "inputs": {
+    "config/contracts/sms_diagnostic_evaluation_v1.json": "753f16846df29be0175859a03eea0e41f790eedadf2a32ecfe7a9dd62c31c716",
+    "data/reports/transactions/sms_factorization_comparison_v2.json": "c7f24ebe15fb0f425e4bdc432877236d569c35289f9b7c1260e8a66c4b4fedeb",
+    "tools/evaluation/build_sms_evaluation_contract.py": "c414b038294e94903b5b24f78d9a0b4779bd39973bd2f8a11eeb75ae45fd49b6",
+    "training/evaluation/content_preflight.py": "d16de1bfc6a5edaaa8a11d645f1cb3858bf730acf7496a4a89092ac64c477975"
+  },
+  "trainingViewSha256": "e169213308c680ba7e5210ad6922ec6f8dee77f0f14c11d3539f2d22697919a3",
+  "labelsChanged": 0,
+  "fitting": false,
+  "newInference": false,
+  "reservedInferred": false,
+  "historicalMetricsAndGatesUnchanged": true,
+  "independentAccuracy": false,
+  "limitations": [
+    "Slices count cohort entries; two manual/quote duplicate texts are listed, not independent samples.",
+    "Raw/normalized disjointness does not establish template/family or real-world independence.",
+    "Reason metadata are assistant-reviewed weak evaluation descriptions, not human gold or model features.",
+    "This is a new evaluation view; it does not retroactively alter gates or measured historical results."
+  ]
+}

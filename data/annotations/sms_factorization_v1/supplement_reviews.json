@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "reviewer": "assistant",
+  "state": "weak",
+  "reviews": [
+    {"recordId":"scope-v1-pension-demo-1-ar","context":"financial_notice","contextQuote":"حركة معاش:","eventState":"completed","eventQuote":"وصل المعاش وسجل دائناً في حسابك المتاح.","note":"The account activity text asserts completed pension credit; its actual issuer is not authenticated by these labels."},
+    {"recordId":"scope-v1-pension-demo-1-en","context":"financial_notice","contextQuote":"Pension activity:","eventState":"completed","eventQuote":"The pension arrived and was booked as a credit in your available account balance.","note":"An account-style report states that the pension arrived and was booked."},
+    {"recordId":"scope-v1-pension-demo-2-ar","context":"instruction_or_example","contextQuote":"عرض تجريبي لا يرتبط بحسابك:","eventState":"completed","eventQuote":"وصل المعاش وسجل دائناً في حسابك المتاح.","note":"The quoted event describes completed credit inside a demo. The governing demo frame makes the original transaction target nontransaction; it does not change the embedded event's tense/state."},
+    {"recordId":"scope-v1-pension-demo-2-en","context":"instruction_or_example","contextQuote":"Demo display unrelated to your account:","eventState":"completed","eventQuote":"The pension arrived and was booked as a credit in your available account balance.","note":"The same completed credit clause is quoted in a demo unrelated to the account. Context and described event state must be separate."},
+    {"recordId":"scope-v1-reward-credit-1-ar","context":"financial_notice","contextQuote":"مكافأة نقدية:","eventState":"completed","eventQuote":"أضيفت المكافأة بالفعل إلى حسابك.","note":"Cash was actually credited. The later ليست رصيد نقاط negates the points interpretation, not the posted cash credit."},
+    {"recordId":"scope-v1-reward-credit-1-en","context":"financial_notice","contextQuote":"Cash reward:","eventState":"completed","eventQuote":"The reward has actually been added to your account.","note":"Posted money is asserted. The phrase not loyalty points does not negate the credited money."},
+    {"recordId":"scope-v1-reward-credit-2-ar","context":"known_other","contextQuote":"هذه نقاط مكافآت وليست إضافة مالية","eventState":"not_completed","eventQuote":"وليست إضافة مالية؛ لم يتغير رصيد المال.","note":"A noncash loyalty-points update. The selected financial event is the expressly denied cash addition, not an attempt inferred from nowhere. A balance-only statement without that denied credit proposition would instead be no_event."},
+    {"recordId":"scope-v1-reward-credit-2-en","context":"known_other","contextQuote":"These are reward points rather than a cash credit","eventState":"not_completed","eventQuote":"rather than a cash credit; the money balance has not changed.","note":"The governing purpose is a noncash points update, and a monetary credit is explicitly denied. This selects that denied credit proposition, not the points award as a money event."},
+    {"recordId":"scope-v1-bookshop-pending-1-ar","context":"financial_notice","contextQuote":"تسوية مشتريات:","eventState":"completed","eventQuote":"سجل خصم الكتب من «مكتبة انتظار» في كشف حسابك.","note":"انتظار is inside the fictional shop name after من; it is not the posting status. The debit is recorded in the statement."},
+    {"recordId":"scope-v1-bookshop-pending-1-en","context":"financial_notice","contextQuote":"Purchase settlement:","eventState":"completed","eventQuote":"The book purchase debit from Pending Books was recorded in your statement.","note":"Pending belongs to the fictional merchant name, not a pending-payment assertion. Recorded debit governs the event state."},
+    {"recordId":"scope-v1-bookshop-pending-3-ar","context":"financial_notice","contextQuote":"شراء كتب بانتظار التسوية:","eventState":"not_completed","eventQuote":"المبلغ محجوز مؤقتاً فقط ولم يسجل خصم نهائي.","note":"Here pending qualifies the actual settlement state. The message explicitly denies a final debit and reports only a temporary hold."},
+    {"recordId":"scope-v1-bookshop-pending-3-en","context":"financial_notice","contextQuote":"Book purchase pending settlement:","eventState":"not_completed","eventQuote":"The amount is temporarily held only; no final debit was recorded.","note":"This is an actual pending authorization, not a merchant name. No settled debit is recorded."}
+  ],
+  "modelPredictionsUsed": false,
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false
+}

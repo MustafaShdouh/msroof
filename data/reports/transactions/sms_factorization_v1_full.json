@@ -1,0 +1,85 @@
+{
+  "absentNonheldContextClasses": [
+    "unknown"
+  ],
+  "absentNonheldEventClasses": [],
+  "annotatedRecords": 1158,
+  "canonicalLabelsChanged": 0,
+  "completionDescribedInNontransaction": 90,
+  "groupsAllNonheld": 128,
+  "groupsWithHolds": [
+    "literal-L751-C8"
+  ],
+  "heldRecordIds": [
+    "synthetic-v1-0332",
+    "synthetic-v1-0772",
+    "synthetic-v1-0805",
+    "synthetic-v1-0820",
+    "synthetic-v1-0918",
+    "synthetic-v1-0922",
+    "synthetic-v1-0939",
+    "synthetic-v1-1019",
+    "synthetic-v1-1125",
+    "synthetic-v1-1127",
+    "synthetic-v1-1150",
+    "synthetic-v1-1185",
+    "synthetic-v1-1547",
+    "synthetic-v1-1607",
+    "synthetic-v1-1646"
+  ],
+  "heldRecords": 15,
+  "inputSha256": {
+    "config/contracts/sms_factorization_annotations.json": "a8c13bde25855671e6176885f4423b1a9a1c37dce45cd34e517674b979508f6f",
+    "config/experiments/sms_completion_adaptation_v1.json": "aa48190817be42863ee8a1d39b271a0a5bed562e6e67d0207e6613228a1a4b56",
+    "data/annotations/sms_factorization_v1/pilot_annotations.jsonl": "4422969315d5bb4def90f90879fb37b0ad005decd2f0bf45aa9798e90d95abce",
+    "data/annotations/sms_factorization_v1/remaining_queue.json": "9029bddaf0765e81566cfebcdb60fb0ca2d120ae95a20f72620ae95092c6c164",
+    "data/annotations/sms_factorization_v1/source_review_log.jsonl": "1e1a3f9a6d05672f925dcb442d89bc378f10775e47eaf0f7a70c7afa7dd7b9ce",
+    "data/annotations/sms_factorization_v1/supplement_annotations.jsonl": "61b8a7078cecb7bbb37e9e3d377f7819d9244623bff775d3564546b7e373275a",
+    "data/reports/transactions/sms_factorization_v1_readiness.json": "36db686b10d233a8e8672ef716712eb0b5ceb7b383756416cac22acf853ef5ef",
+    "data/reports/transactions/sms_factorization_v1_supplement.json": "bb2d1673ddb3e1120edbba72ee4d687b683b1194747792e0e84ef695156e5896",
+    "training/corpus/factorization_full.py": "d395846be1a0e59fb71ddf15af262599f7c18f9207672763046206c09b883238",
+    "training/corpus/factorization_pilot.py": "493342a87dec946bb6afe5af9018ba564ca9cb9368046ad4ea7bd4405b7ef98a",
+    "training/corpus/factorization_supplement.py": "f40ec7d9766366a87911dc956dcc055e99fc34ee69549eb2065194d7e305a637"
+  },
+  "limits": [
+    "Complete review of the selected 1158-row research cohort, not all repository data or independent received SMS.",
+    "All labels same-assistant weak; coverage does not demonstrate model accuracy or release readiness.",
+    "15 ambiguous cost-fragment holds retain original labels and remain excluded. No unheld unknown-context training examples.",
+    "A future fit protocol must specify supported class set, unknown/hold masks, weighting, reference gates and resource budget before fitting."
+  ],
+  "losslessSourceView": "Base whitespace-preserving tokens plus every record's raw replacements; round-trip checked. Individual IDs and source hashes explicitly bound; no unseen-row/family defaults.",
+  "modelFitted": false,
+  "modelInference": false,
+  "nonheldContextCounts": {
+    "financial_notice": 780,
+    "instruction_or_example": 20,
+    "known_other": 214,
+    "personal_conversation": 65,
+    "question_or_request": 64
+  },
+  "nonheldEventCounts": {
+    "completed": 701,
+    "no_event": 170,
+    "not_completed": 120,
+    "unknown": 152
+  },
+  "nonheldGroupWeight": 128.0,
+  "nonheldLanguages": {
+    "ar": 683,
+    "en": 460
+  },
+  "nonheldOriginalCompletionCounts": {
+    "completed": 611,
+    "non_transaction": 532
+  },
+  "prior36AnnotationsPreserved": true,
+  "reservedInferred": false,
+  "reviewedWeakRecords": 1143,
+  "runId": "sms_factorization_v1_full",
+  "sourcePackets": 128,
+  "trainingGroups": 129,
+  "trainingReady": false,
+  "trainingRecords": 1158,
+  "unknownContextClassTrainable": false,
+  "unreviewedRecords": 0
+}

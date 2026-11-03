@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Core validation preflight, not independent evaluation or automatic admission",
+  "date": "2026-11-02",
+  "intake": {
+    "records": 0,
+    "held": 0,
+    "locallyComplete": 0,
+    "verifiedFamilies": 0,
+    "holdReasons": {},
+    "batchBlockers": [
+      "no_records",
+      "exposure_catalog_partial"
+    ]
+  },
+  "runtime": {
+    "weightArtifactValid": true,
+    "errors": [],
+    "modelSha256": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "initializationExecuted": false,
+    "engineBehaviorChanged": false,
+    "mobileSupportVerified": false,
+    "requirement": "Call MasroofEngine.init(parsed pinned weights) before detailed or ownership assessment that can use fallback scoring."
+  },
+  "catalog": {
+    "referenceTextEntries": 4646,
+    "distinctRawHashes": 3148,
+    "distinctNormalizedHashes": 2613,
+    "distinctNumericProxies": 1922,
+    "coverageStatus": "partial"
+  },
+  "independentEvaluationEligible": false,
+  "trainingEligible": false,
+  "scoringAuthorized": false,
+  "reservedRead": false,
+  "predictionsExecuted": false,
+  "engineBehaviorChanged": false,
+  "startupCharacterization": "Existing no-init fallback and invalid-init behavior are tested separately with toy controls; not new bank-SMS truth.",
+  "sourceSha256": {
+    ".local-backups/core_money_r5a_unmarked/after.json": "68874901b1ef4af25ec7e7c30a48b50255c34b74de86294b05de6d4cc312c109",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/private/historical_corpus_v1/tests/fixtures/test_suite_cases.json": "fc9458ec4f01dbf8a45929c74641ba679d49d0cb3a824b51a91658d6a454ef94",
+    "data/private/historical_corpus_v1/tests/fixtures/qa_adversarial_cases.json": "39f4b14e5dad12ffe77f59127d6f9a1da5eefb3f4b550623f60fa1f628bd9424",
+    "config/contracts/core_validation_preflight_v1.json": "2780938061d6974e1430bc2d52e4dc103a255eb6e787d2476ee05244ef0bc14b",
+    "config/contracts/sms_provenance_record.json": "ba74ef62dff5415b30a2a4a3e86187920dd5cbb6cc0cbf8d6882fe19020f0fa4",
+    "config/contracts/transaction_behavior.json": "e06693e71398f60a220488a779902fc2d38d2ba7c19570df395fddf551e2bf4b",
+    "tools/contracts/core_preflight.py": "7317453309b40e9ca185f756d6c79185534a39aeb3dcc538f24d573fb0e8d244",
+    "tools/evaluation/build_core_validation_preflight.py": "984db9a81cfdcc2cd621d856da4897e1f1449b5e63ba951ae069e864dd6bfb83",
+    "training/corpus/audit.py": "0ac9b49918f5a15b476acf65377b61d7ae36dfb9434ea430ce85c0b073986d13",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "tools/contracts/validate_transaction_behavior.py": "a915648f5132394f522947d4dfba94113a78b37ac0314e8fc3fe06274b8e9af2",
+    "tests/python/test_core_preflight.py": "8883e3c18558ef3306771e402f8bde8e18d630f0484a98a1a79e9a3632012af9",
+    "tests/typescript/test_runtime_initialization.ts": "5c0faa60ca2c876534b25eaf4295bf519f236cb0e7a1fe755494f43e9a2df9b5",
+    "src/python/engine.py": "cf25218f87e2ea48f1e52dafbf9748e920ef8e61169050dc69d5778ce8d6c605",
+    "src/typescript/MasroofEngine.ts": "4eea48841f21c7bb6b75734df65af37878731151e75905ec580abd60b71f5113",
+    "src/typescript/LegacyTransactionModel.ts": "5f060dd375f4a3f568971282339c0c389fdaeb54951ffa80f83642193a7d0f59",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "data/private/core_evaluation_v1/intake.json": "5e7c0080b7c3ef6ed3fe9b1efddaa3a260d44b4a6ad9b82da7338ee756f86f44",
+    "data/private/core_evaluation_v1/known_exposure_v1.json": "e59dc1ce41cacb8b38964caf74afc66cd8d0de409e202ed061bd453dc0a0a885"
+  },
+  "limits": [
+    "Empty intake is preparation, not acquired real-world data.",
+    "Reviews and private source bindings do not authenticate bank origin.",
+    "Partial reference coverage and text/proxy disjointness do not prove family independence.",
+    "Pinned weight validity does not prove caller initialization, model accuracy or actual mobile support.",
+    "No release thresholds, final evaluation approval or runtime failure policy was granted."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Proposed weak training-sidecar semantics only; no model or canonical behavior change",
+  "contextLabels": ["financial_notice", "personal_conversation", "question_or_request", "instruction_or_example", "known_other", "unknown"],
+  "eventStateLabels": ["completed", "not_completed", "no_event", "unknown"],
+  "contextDefinitions": {
+    "financial_notice": "Text functions as an account/wallet/card activity or status report, including balance-only or declined-event notices. This describes wording, not authenticated origin.",
+    "personal_conversation": "Interpersonal discussion or claim, even if a speaker claims that money moved. An accompanying request to check does not turn that claim into a financial notice.",
+    "question_or_request": "Primary function is asking about a movement or requesting information/action; no independently asserted account posting governs the message.",
+    "instruction_or_example": "Primary function is a lesson, illustrative quotation, simulation or procedural instruction; an embedded event is interpreted in that frame.",
+    "known_other": "Clear other purpose, such as promotion or maintenance, without an independently asserted completed movement. Do not use as a catch-all for unclear context.",
+    "unknown": "Context cannot be resolved, is truncated, or contains incompatible frames without a clear governing event. Missing annotation is not this label."
+  },
+  "eventStateDefinitions": {
+    "completed": "Selected event is explicitly described as posted, received, deducted, credited or otherwise complete within its own frame. A personal claim or lesson can describe completion without proving an actual bank transaction.",
+    "not_completed": "Selected event is explicitly refused, cancelled before execution, still pending, or explicitly not yet performed. A later reversal is a separate completed event, not an undone annotation of the original event.",
+    "no_event": "Text contains no identifiable transfer/payment/credit/debit or other financial-movement proposition; e.g. balance-only or a price quotation. A bare amount is not an event.",
+    "unknown": "A movement is mentioned but its outcome is unasserted, questioned, conditional or conflicting; do not force it to not_completed."
+  },
+  "eventScopeRule": "Mark the event clause evaluated. In a lesson evaluate its embedded event; in a question do not assume the proposition is asserted. Context describes the governing frame. In multi-event/mixed-frame text with no clear focus, hold the annotation rather than inventing a priority rule.",
+  "negationRule": "Determine which clause is negated. Not pending and no refusal can accompany completed settlement; a negative word alone does not set event state.",
+  "partyRule": "Control words within a party name are not automatically message-level instructions, examples or refusals. Review their grammatical scope; never use a merchant registry.",
+  "reviewStates": ["reviewed_weak", "hold"],
+  "reviewer": "assistant",
+  "annotationFields": ["messageContext", "describedEventState"],
+  "evidence": "Manually selected unique raw quotes converted to Unicode code-point half-open offsets; whole-message evidence allowed for no_event or context absence. Exact original text only.",
+  "unknownVsUnreviewed": "Unknown is a semantic label supported by the message. Missing/unreviewed annotation is not a negative or unknown target. Hold means unresolved annotator interpretation and is ineligible for fitting.",
+  "composition": "Do not automatically replace the existing completion label with these two fields. Review disagreement; retain original truth. A conversational claim or quoted lesson may have completed describedEventState and legacy non_transaction. Financial notice plus completed is completion-compatible but does not authorize logging, prove ownership, supply amount or authenticate sender.",
+  "trainingBoundary": "Labels are weak sidecars for currently selected training records only. Preserve all existing validation/reserved/final assignments, labels and raw text. No automatic propagation from one pilot record to its whole group.",
+  "automaticLabeling": false,
+  "modelPredictionsUsed": false,
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false
+}

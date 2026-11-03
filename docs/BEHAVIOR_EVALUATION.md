@@ -1,10 +1,42 @@
 # Current behavior and model comparison
 
-This is development evidence. The 31 authored contract probes, 226 exposed
-regression cases, synthetic validation split and exact human category-policy
-snapshots have different roles. None supplies independent real-world accuracy.
-Legacy measurements: `data/reports/behavior/canonical_exact_names_v1.json`/`.md`.
-Current detailed measurement: `data/reports/behavior/cleanup_layout_v1.json`.
+This is exposed development evidence. Authored contract/control examples, frozen
+regression cases and synthetic validation splits have different roles; none
+supplies independent Jordanian SMS accuracy.
+
+Current source-bound measurement:
+`data/reports/behavior/arabic_message_semantics_v1.json`.
+Evidence grammar1.0.5 repairs Arabic failure/conditional completion and definite/
+pronominal monetary-credit direction in both detailed engines.45 authored bilingual
+texts ×3 digit scripts produce135 body and540 ownership-wrapper comparisons with
+complete Python/TypeScript/browser agreement.93 body variants change relative to
+saved1.0.4 source/engine/grammar;18 previously included variants now exclude or
+review. Successful credits, debits, unrelated help text, long conditions,
+negation and account-targeted versus product additions have explicit contrasts.
+
+All four earlier Arabic findings (12 script variants) are resolved: a purely
+conditional movement excludes; contradictory failure or ambiguous debit/credit
+requires review. The prior39-text paired fixture remains byte-identical; explicit
+field revisions are versioned in the new semantic fixture. The current nested
+`retainedMessageOnlyInclusionsAmongUnrecognizedControls` object is empty.
+
+The report also rechecks117 paired body/468 wrapper comparisons,70 ownership
+controls and778 omitted/null-context requests. All389 older detailed AND legacy
+assessments remain identical to their archived baseline.153 Python tests, ten
+TypeScript suites and226 frozen cases pass. Real Edge clicks at1440/390px confirm
+the repaired outcomes, positive credited receipt, reload reset and no overflow/
+clipped controls/page errors. The tester's detailed comparison and ownership panel
+show these results; its current/legacy view has not migrated. No fitting,
+promotion, reserved final inference or actual human ownership labeling occurred.
+
+Historical milestones remain immutable: cleanup_layout_v1, ownership_context_v1/
+v2, ownership_tester_v1 and paired_movement_v1. Earlier reports bind their old
+source and HTML bytes; use their snapshots rather than reproducing with current
+code. The first paired report's12 retained Arabic inclusions are historical
+findings, not a claim about the repaired path. The narrow paired detector still
+requires shared-amount linked endpoint roles, and ownership confirmation cannot
+supply missing completion/amount/direction.37 old-cohort unknown relationships
+still require ownership facts. No independent accuracy/Hermes performance claim.
 
 ## Measured gaps
 

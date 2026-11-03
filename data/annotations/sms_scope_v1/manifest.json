@@ -1,0 +1,218 @@
+{
+  "version": "1.0.0",
+  "sourceSha256": "964439ce1a78604f25ff9b0842fd2b6caf932994ff638b9648ead4240abfc999",
+  "seed": "sms-scope-v1-2026-10-28",
+  "allocation": "Within each theme, sort SHA256(seed+':'+familyId); first quota to development, next quota reserved, rest proposed training",
+  "themeQuotas": {
+    "personal_claim": {
+      "development": 1,
+      "reserved": 1
+    },
+    "question_request": {
+      "development": 1,
+      "reserved": 1
+    },
+    "pending_settled": {
+      "development": 1,
+      "reserved": 0
+    },
+    "negated_failure": {
+      "development": 0,
+      "reserved": 1
+    },
+    "illustrative_scope": {
+      "development": 1,
+      "reserved": 0
+    },
+    "party_scope": {
+      "development": 0,
+      "reserved": 1
+    }
+  },
+  "assignments": {
+    "gift-wallet": "development",
+    "sale-proceeds": "reserved_diagnostic",
+    "shared-ride": "proposed_training",
+    "rent-share": "proposed_training",
+    "wage-receipt": "development",
+    "payment-copy": "reserved_diagnostic",
+    "deposit-check": "proposed_training",
+    "reversal-query": "proposed_training",
+    "tuition-status": "development",
+    "booking-charge": "proposed_training",
+    "utility-order": "proposed_training",
+    "cash-out-status": "proposed_training",
+    "repayment-negation": "reserved_diagnostic",
+    "reward-credit": "proposed_training",
+    "cheque-credit": "proposed_training",
+    "collection-final": "proposed_training",
+    "card-alert-lesson": "development",
+    "pension-demo": "proposed_training",
+    "service-fee-sample": "proposed_training",
+    "refund-tutorial": "proposed_training",
+    "shop-reminder": "reserved_diagnostic",
+    "vendor-cancel": "proposed_training",
+    "bookshop-pending": "proposed_training",
+    "cafe-test": "proposed_training"
+  },
+  "families": [
+    {
+      "id": "rent-share",
+      "theme": "personal_claim",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "gift-wallet",
+      "theme": "personal_claim",
+      "records": 8,
+      "fold": "development"
+    },
+    {
+      "id": "sale-proceeds",
+      "theme": "personal_claim",
+      "records": 8,
+      "fold": "reserved_diagnostic"
+    },
+    {
+      "id": "shared-ride",
+      "theme": "personal_claim",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "payment-copy",
+      "theme": "question_request",
+      "records": 8,
+      "fold": "reserved_diagnostic"
+    },
+    {
+      "id": "deposit-check",
+      "theme": "question_request",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "reversal-query",
+      "theme": "question_request",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "wage-receipt",
+      "theme": "question_request",
+      "records": 8,
+      "fold": "development"
+    },
+    {
+      "id": "tuition-status",
+      "theme": "pending_settled",
+      "records": 8,
+      "fold": "development"
+    },
+    {
+      "id": "utility-order",
+      "theme": "pending_settled",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "cash-out-status",
+      "theme": "pending_settled",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "booking-charge",
+      "theme": "pending_settled",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "repayment-negation",
+      "theme": "negated_failure",
+      "records": 8,
+      "fold": "reserved_diagnostic"
+    },
+    {
+      "id": "cheque-credit",
+      "theme": "negated_failure",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "reward-credit",
+      "theme": "negated_failure",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "collection-final",
+      "theme": "negated_failure",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "service-fee-sample",
+      "theme": "illustrative_scope",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "pension-demo",
+      "theme": "illustrative_scope",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "refund-tutorial",
+      "theme": "illustrative_scope",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "card-alert-lesson",
+      "theme": "illustrative_scope",
+      "records": 8,
+      "fold": "development"
+    },
+    {
+      "id": "shop-reminder",
+      "theme": "party_scope",
+      "records": 8,
+      "fold": "reserved_diagnostic"
+    },
+    {
+      "id": "cafe-test",
+      "theme": "party_scope",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "bookshop-pending",
+      "theme": "party_scope",
+      "records": 8,
+      "fold": "proposed_training"
+    },
+    {
+      "id": "vendor-cancel",
+      "theme": "party_scope",
+      "records": 8,
+      "fold": "proposed_training"
+    }
+  ],
+  "labelReview": "Same assistant reviewed all bilingual states before model inference; not human gold or independent review",
+  "spanOffsets": "Unicode code points, half-open; eventMention does not assert factual completion inside quotes",
+  "uncertainPolicy": "Retain uncertain rows; exclude from binary fitting/scoring; no default negative",
+  "ownershipPolicy": "Not labeled or inferred; completed transfers can still require ownership review",
+  "evaluationPlan": {
+    "unit": "whole authoring family including four states and both languages",
+    "counts": "TP/TN/FP/FN and abstentions per fold/language/theme; paired-state consistency; uncertain cases separate",
+    "reservedUsage": "No inference until a future fixed experiment protocol explicitly authorizes it; never training or tuning",
+    "threshold": "No threshold selection on this data is authorized",
+    "modelFittingAllowed": false
+  },
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false
+}

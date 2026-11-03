@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Guarded proposals from existing weak reviews; not annotations, training admission or semantic proof",
+  "allowedTargets": [
+    "transactionStatus",
+    "direction"
+  ],
+  "statusTargets": [
+    "completed",
+    "non_transaction"
+  ],
+  "directionTargets": [
+    "incoming",
+    "outgoing"
+  ],
+  "excludedTargets": [
+    "trackingDecision",
+    "transferRelationship",
+    "amount",
+    "currency",
+    "currencyResolution",
+    "merchantOrCounterparty",
+    "expenseCategory",
+    "categoryStatus"
+  ],
+  "numericPattern": "x{2,4}[0-9]{3,4}|[0-9]{2,4}\\*[0-9]{2,4}|\\*[0-9]{3,4}|[0-9]+(?:[.,][0-9]+)*",
+  "numericMarker": "<SLOT_NUM>",
+  "partyMarker": "<SLOT_PARTY>",
+  "routingPrefix": "JO\n",
+  "riskPatternsSource": "config/contracts/transaction_evidence.json",
+  "riskPatternKeys": [
+    "financial",
+    "completion",
+    "completionDenied",
+    "declined",
+    "deferred",
+    "own",
+    "otherPerson",
+    "incoming",
+    "outgoing",
+    "directionDenied",
+    "chat",
+    "reportedSpeech",
+    "otp",
+    "promotion"
+  ],
+  "additionalRiskPattern": "\\b(?:not|no|never|if|when|unless|pending|own|your|my|me|mine|myself|yourself|ours|yours|self|another|someone|debit|credit|authorization)\\b|(?<![\\u0621-\\u064A])(?:حساب(?:ي|ك|كم)|محفظت(?:ي|ك|كم)|لم|لن|لا|إذا|اذا|لو|تم|تمت|غير)(?![\\u0621-\\u064A])|[!?;؟\\r\\n]",
+  "literalRule": "After routing/whitespace/case/digit normalization, permit only numeric/mask slots and a uniquely located weak legacy name claim. Every other character must match the reviewed representative.",
+  "slotRiskRule": "Changed name/biller slots containing financial, negation, conditional or ownership wording require manual review; name claims are untrusted locators, not labels.",
+  "primaryAmountRule": "For completed descendants, locate the representative's reviewed amount numeric-slot index and require a positive finite plain-decimal value in that child slot. No amount label is emitted.",
+  "deduplicationRule": "Deduplicate identical normalized training text only; prefer the directly reviewed representative. Conflicting proposed targets hold the duplicate set out. This is not transaction-event deduplication.",
+  "weightRule": "Each source expression has total proposed weight1 per head; weights describe sampling, never certainty.",
+  "admissionRule": "All proposal records remain trainingEligible=false and independentEvaluationEligible=false; validation references have no target labels."
+}

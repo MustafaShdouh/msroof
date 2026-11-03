@@ -56,6 +56,14 @@ button:hover { background: #eaf0e7; border-color: #c6d3c2; }
 .assessment-details summary { flex-wrap: wrap; gap: 8px; }
 .decision-badge { margin-left: auto; background: #edf1e9; color: var(--accent); border-radius: 6px; padding: 4px 9px; font-size: 10px; font-weight: 600; white-space: nowrap; }
 .help-text { color: var(--muted); font-size: 12px; margin: 15px 0; }
+.sms-research-predictions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 15px; margin-bottom: 12px; background: var(--soft); border: 1px solid var(--line); border-radius: 10px; }
+.sms-research-predictions p { font-size: 14px; font-weight: 600; margin: 5px 0 0; overflow-wrap: anywhere; }
+.ownership-choices, .ownership-actions { display: flex; flex-wrap: wrap; gap: 7px; }
+.ownership-choices .is-selected { color: var(--accent); background: #edf1e9; border-color: #9eb29e; }
+.ownership-summary { font-size: 13px; font-weight: 600; margin: 18px 0 0; overflow-wrap: anywhere; }
+.ownership-panel > summary { flex-wrap: wrap; }
+button:disabled { opacity: .5; cursor: default; }
+button:disabled:hover { background: #fafbf9; border-color: var(--line); }
 .result-heading { margin-bottom: 9px; }
 .result-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 12px; }
 .result-table th, .result-table td { padding: 11px 0; border-bottom: 1px solid #edf0eb; vertical-align: top; text-align: start; overflow-wrap: anywhere; }
@@ -63,6 +71,7 @@ button:hover { background: #eaf0e7; border-color: #c6d3c2; }
 .result-table td { font-weight: 500; }
 .result-table .status-row td { font-size: 11px; font-weight: 600; }
 .result-table .amount-row td { font-size: 18px; letter-spacing: -.4px; }
+.assessment-reasons { white-space: pre-line; }
 .result-table tr:last-child th, .result-table tr:last-child td { border-bottom: 0; }
 .json-details { margin-top: 14px; padding-top: 17px; border-top: 1px solid var(--line); }
 pre { background: var(--soft); padding: 16px; border: 1px solid #e9ede5; border-radius: 10px; font: 11px/1.8 Consolas, "Courier New", monospace; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 380px; overflow: auto; margin: 15px 0 0; }
@@ -87,6 +96,7 @@ pre { background: var(--soft); padding: 16px; border: 1px solid #e9ede5; border-
   .assessment-details summary > span:first-of-type { max-width: 160px; }
 }
 @media (max-width: 700px) {
+  .sms-research-predictions { grid-template-columns: 1fr; }
   .page-shell { padding: 0 18px; }
   .topbar { height: 78px; }
   .page-heading { padding: 30px 0 25px; }

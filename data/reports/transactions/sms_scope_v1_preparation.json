@@ -1,0 +1,91 @@
+{
+  "checkedPaths": {
+    ".local-backups/sms_research_manual_v1/cases.json": "b1d582d32af849578565ba5404fad96e1922aad873d344d27ae803457c34d875",
+    "data/training/authored_sms_context_v1/scenarios.json": "2f1b1d2f03a12d3a776d4c3b24dbd743858940b57ac232b9bea7bfbc69297ae7",
+    "data/training/authored_sms_v1/messages.jsonl": "18ca9e8b943a484ddab90b0f1536d3fed43d546b2d148a3e484591bdf02d409f",
+    "data/training/sanitized_v1/bio_training_data.json": "3c315fdac92fdf9b147c2c8c4d38628ed71c3ba2b50c74ff5bfb5b9edd7ea13c",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/training/sanitized_v2/bio_training_data.json": "fe5aa5f0012499f27a7505504c494d734bfc60d1c4546b670b91534c4a770f42",
+    "data/training/snapshots/merchant_category_research_v1/data/annotations/businesses_200.jsonl": "ce221fa6cee2e3bb1feb09edd49633e8d0e3d94313c0f0af5e3317f0dcc26b94",
+    "data/training/snapshots/merchant_category_research_v1/data/annotations/category_annotation_schema.json": "530a0925185d1f514ab32273bba593e53b40f1328ee56fb83268d816b99806c8",
+    "data/training/snapshots/merchant_category_research_v1/data/annotations/merchant_reviews.jsonl": "37f7f4598b6d560c427c32c126c3759b4f46f5f8dcf1b8b15b60dd9124d0b329",
+    "data/training/snapshots/merchant_category_research_v1/data/sources/businesses/brand_families.json": "34950f9c65e4982fa0df9af3699a3f2979e8b9d07d13251d5d34efa78ac9c66a",
+    "data/training/snapshots/merchant_category_research_v1/data/training/splits/category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d",
+    "data/training/snapshots/merchant_category_research_v1/manifest.json": "7341096a56b6a0339e8221e10aa8560eaf9e98e472acb6eba98af3f39639ae26",
+    "data/training/splits/bio_sanitized_v2.json": "4fdc75b9386ba111fb4275b31d091ac2a89a6fbc477285eda681f032f2d73b7c",
+    "data/training/splits/category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d",
+    "data/training/splits/transaction_direction_sanitized_v1.json": "512af5213d2c34ab3f6f8a501163e261102e3dbf5e7cf52d0439735b204a4668",
+    "tests/fixtures/arabic_message_semantics_cases.json": "89262202327afe5b62c97eb6f37a17fa7d9e605e90ad393b7032acddf463d9ab",
+    "tests/fixtures/authorization_request_cases.json": "35eccc4e56634a1fbd8229ed175640050c5804203f0be222464ad586bdf04ace",
+    "tests/fixtures/detailed_assessment_cases.json": "12cfd3fec7a19fe0b291074d5124f30d3e0e18299096a653cab92b48a182b13d",
+    "tests/fixtures/entity_text_cases.json": "30e344f1ab008c13ce15e49970d521c181313cb65cfe74c89cd54452e8204842",
+    "tests/fixtures/financial_number_cases.json": "bfbe9b18d926432bb0af90f4dfb7863e92e47e84b9a5a9286214558cfe1d923f",
+    "tests/fixtures/legacy_model_score_cases.json": "eb60ad6230c7420235aed8499c5b316c7f8b89617394ee72a0b8c58abaef9c92",
+    "tests/fixtures/merchant_category_contract.json": "1cccd4f0bb13949832062a7b52275a000fe23facb57784b88cf5d7bcbf95f06a",
+    "tests/fixtures/ownership_context_cases.json": "295619af9abf4420030bdb4ec9e934d8ad049f993270a0486b9adeec24a4643d",
+    "tests/fixtures/paired_movement_cases.json": "68c01fb8fc6eb3f9699074e5978ed3fd143570bdacc3491868bc4e42ccaa9010",
+    "tests/fixtures/preprocessing_contract.json": "9522a4bcc1830ad10269e079cfca0f8110ce236780a1775eafb164e0380eec41",
+    "tests/fixtures/preprocessing_contract_cases.json": "ee94df3b0017bfc4357700726dc45c01d1a3b87e623b54b0fa41ce2e11b13618",
+    "tests/fixtures/quoted_example_cases.json": "0b51454d63b3d41914bbf4daab7a24b34ffe9ffc4c7199cf524160e1e8539965",
+    "tests/fixtures/sanitized_v1/qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+    "tests/fixtures/sanitized_v1/test_corpus_manifest.json": "456dd0519ed8e2b1ab554b067b1ca88edc8649739f77e83831e466a9c32b61e6",
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+    "tests/fixtures/service_notice_cases.json": "eb12912fe8fe97ecc73e5fc74a856e58834074751b6ee2dc37859ea1603826c2",
+    "tests/fixtures/sms_semantics_feature_cases.json": "010b52177806212b7e124f780ebeb4eaaf513b681814d1cc1799b5ace4a66a6d",
+    "tests/fixtures/transaction_behavior_cases.json": "68b8e87d29fcc2513886d26efd37adc26934ba74c396f373acbcf78034476bc5",
+    "tests/fixtures/transaction_direction_contract.json": "70b7552793d47ff391be1d30e9460a79d806056658868685fa556f0a1ae193c8",
+    "tests/fixtures/transaction_direction_score_cases.json": "d096e572af1ed29324657c87c2b91b64cb2f085418b89b87e7fd2c86593431fb"
+  },
+  "checkedTextOccurrences": 4521,
+  "crossFamilyProxyBlockers": [],
+  "exactNormalizedNumericProxyBlockers": [],
+  "familyCounts": {
+    "development": 4,
+    "proposed_training": 16,
+    "reserved_diagnostic": 4
+  },
+  "foldCounts": {
+    "development": 32,
+    "proposed_training": 128,
+    "reserved_diagnostic": 32
+  },
+  "foldTargetCounts": {
+    "development": {
+      "completed": 8,
+      "non_transaction": 16,
+      "uncertain": 8
+    },
+    "proposed_training": {
+      "completed": 38,
+      "non_transaction": 58,
+      "uncertain": 32
+    },
+    "reserved_diagnostic": {
+      "completed": 10,
+      "non_transaction": 14,
+      "uncertain": 8
+    }
+  },
+  "languageCounts": {
+    "ar": 96,
+    "en": 96
+  },
+  "limits": [
+    "Authored families are provenance groups, not proven semantic independence; broad themes and short financial phrases cross folds.",
+    "Old normalized/punctuation-number proxies are bounded checks, not proof of source/template independence.",
+    "Batch informed by exposed failures and same assistant author/reviewer. Reserved means prospective synthetic diagnostics only.",
+    "Fictional shop-name minimal pairs deliberately test scope within a family; no merchant registry or real-world store evidence."
+  ],
+  "modelFitted": false,
+  "modelInference": false,
+  "producerSha256": "966a91e73ec82bf06657b3e244a14306c6cff3119a83fd7ce2c2cd43cfd367db",
+  "protectedMerchantInference": false,
+  "rows": 192,
+  "runId": "sms_scope_v1_preparation",
+  "sourceSha256": "964439ce1a78604f25ff9b0842fd2b6caf932994ff638b9648ead4240abfc999",
+  "targetCounts": {
+    "completed": 56,
+    "non_transaction": 88,
+    "uncertain": 48
+  }
+}

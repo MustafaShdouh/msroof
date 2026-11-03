@@ -1,9 +1,9 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "reason": "Authorization code requested before transaction completion",
   "scope": "Code requests for completing or authorizing a financial operation; bare authorization/code mentions are insufficient",
   "englishCode": "\\b(?:(?:your|the)\\s+(?:(?:verification|security|authorization|authentication)\\s+)?code|(?:verification|security|authorization|authentication)\\s+code|(?:enter|use|provide)\\s+(?:(?:the|your)\\s+)?(?:(?:verification|security|authorization|authentication)\\s+)?code)\\b",
-  "englishGoal": "(?:complete|completing|authori[sz]e|authori[sz]ing|confirm|confirming|approve|approving)\\s+(?:(?:your|the|this|a|an)\\s+)?(?:(?:card|online)\\s+)?(?:transaction|payment|purchase|transfer|withdrawal)\\b",
+  "englishGoal": "(?:complete|completing|authori[sz]e|authori[sz]ing|confirm|confirming|approve|approving)\\s+(?:(?:your|the|this|a|an)\\s+)?(?:(?:card|online)\\s+)?(?:(?:[A-Z]{3}|[$€£])\\s*[0-9]+(?:[.,][0-9]+)?\\s+)?(?:transaction|payment|purchase|transfer|withdrawal)\\b",
   "arabicCode": "(?:رمز|كود|الرمز|الكود)(?:\\s+(?:التحقق|الت[أا]كيد|التفويض|الأمان|الامان|السري|التوثيق))?(?![\\u0621-\\u064A])",
   "arabicGoal": "(?:ل[إا]تمام|ل[إا]كمال|لت[أا]كيد|لتنفيذ|لاعتماد)\\s+(?:(?:عملية|حركة)\\s+)?(?:الدفع|الشراء|التحويل|السحب|الحوالة|المعاملة|العملية|الحركة|معاملتك|دفعتك|حوالتك)(?![\\u0621-\\u064A])",
   "codeValue": "\\s*:?\\s*(?:(?:is\\s+|هو\\s+)?[0-9]{4,8}\\s+)?",

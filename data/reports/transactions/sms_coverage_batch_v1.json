@@ -1,0 +1,820 @@
+{
+  "version": "1.0.0",
+  "scope": "Training coverage inventory plus assistant-authored weak development examples; no fitting, admission or independent evaluation",
+  "currentTrainingCoverage": {
+    "bank_transfer": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 254,
+          "expressions": 6,
+          "targets": {
+            "completed": 254
+          }
+        },
+        "direction": {
+          "rows": 80,
+          "expressions": 2,
+          "targets": {
+            "incoming": 80
+          }
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 164,
+          "expressions": 7,
+          "targets": {
+            "completed": 164
+          }
+        },
+        "direction": {
+          "rows": 164,
+          "expressions": 7,
+          "targets": {
+            "outgoing": 71,
+            "incoming": 93
+          }
+        }
+      }
+    },
+    "cash_withdrawal": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 2,
+          "expressions": 1,
+          "targets": {
+            "completed": 2
+          }
+        },
+        "direction": {
+          "rows": 2,
+          "expressions": 1,
+          "targets": {
+            "outgoing": 2
+          }
+        }
+      }
+    },
+    "cash_deposit": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 25,
+          "expressions": 1,
+          "targets": {
+            "completed": 25
+          }
+        },
+        "direction": {
+          "rows": 25,
+          "expressions": 1,
+          "targets": {
+            "incoming": 25
+          }
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "card_purchase": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "merchant_payment": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "bill_payment": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 50,
+          "expressions": 2,
+          "targets": {
+            "completed": 50
+          }
+        },
+        "direction": {
+          "rows": 50,
+          "expressions": 2,
+          "targets": {
+            "outgoing": 50
+          }
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "refund": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "cashback": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "fee": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "installment": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "salary_credit": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "own_account_transfer": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "ambiguous_transfer": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "otp": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 33,
+          "expressions": 2,
+          "targets": {
+            "non_transaction": 33
+          }
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 63,
+          "expressions": 4,
+          "targets": {
+            "non_transaction": 63
+          }
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "declined_or_failed": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 69,
+          "expressions": 3,
+          "targets": {
+            "non_transaction": 69
+          }
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "balance_only": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 19,
+          "expressions": 2,
+          "targets": {
+            "non_transaction": 19
+          }
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 35,
+          "expressions": 4,
+          "targets": {
+            "non_transaction": 35
+          }
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "administration": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 14,
+          "expressions": 3,
+          "targets": {
+            "non_transaction": 14
+          }
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 14,
+          "expressions": 2,
+          "targets": {
+            "non_transaction": 14
+          }
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "loyalty": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 25,
+          "expressions": 2,
+          "targets": {
+            "non_transaction": 25
+          }
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "promotion": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 53,
+          "expressions": 5,
+          "targets": {
+            "non_transaction": 53
+          }
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "personal_conversation": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 59,
+          "expressions": 14,
+          "targets": {
+            "non_transaction": 59
+          }
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 65,
+          "expressions": 8,
+          "targets": {
+            "non_transaction": 65
+          }
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "pending_or_requested": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "settlement_uncertain": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    },
+    "uncertain_fragment": {
+      "arabicContaining": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      },
+      "noArabic": {
+        "completion": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        },
+        "direction": {
+          "rows": 0,
+          "expressions": 0,
+          "targets": {}
+        }
+      }
+    }
+  },
+  "authoredBatch": {
+    "records": 74,
+    "authoringGroups": 37,
+    "languageCounts": {
+      "ar": 37,
+      "en": 37
+    },
+    "statusCounts": {
+      "completed": 54,
+      "non_transaction": 16,
+      "uncertain": 4
+    },
+    "trackingCounts": {
+      "include": 48,
+      "exclude": 18,
+      "review": 8
+    },
+    "eventCounts": {
+      "cash_withdrawal": 4,
+      "card_purchase": 4,
+      "merchant_payment": 4,
+      "bill_payment": 6,
+      "bank_transfer": 8,
+      "cash_deposit": 4,
+      "refund": 4,
+      "cashback": 4,
+      "fee": 4,
+      "installment": 4,
+      "salary_credit": 4,
+      "otp": 2,
+      "declined_or_failed": 2,
+      "pending_or_requested": 2,
+      "personal_conversation": 2,
+      "balance_only": 2,
+      "promotion": 2,
+      "administration": 2,
+      "loyalty": 2,
+      "settlement_uncertain": 4,
+      "own_account_transfer": 2,
+      "ambiguous_transfer": 2
+    },
+    "completedDirectionCounts": {
+      "outgoing": 30,
+      "incoming": 20,
+      "not_applicable": 2,
+      "uncertain": 2
+    },
+    "blockersByRecord": {
+      "authored-sms-v1-001": [],
+      "authored-sms-v1-002": [],
+      "authored-sms-v1-003": [],
+      "authored-sms-v1-004": [],
+      "authored-sms-v1-005": [],
+      "authored-sms-v1-006": [],
+      "authored-sms-v1-007": [],
+      "authored-sms-v1-008": [],
+      "authored-sms-v1-009": [],
+      "authored-sms-v1-010": [],
+      "authored-sms-v1-011": [],
+      "authored-sms-v1-012": [],
+      "authored-sms-v1-013": [],
+      "authored-sms-v1-014": [],
+      "authored-sms-v1-015": [],
+      "authored-sms-v1-016": [],
+      "authored-sms-v1-017": [],
+      "authored-sms-v1-018": [],
+      "authored-sms-v1-019": [],
+      "authored-sms-v1-020": [],
+      "authored-sms-v1-021": [],
+      "authored-sms-v1-022": [],
+      "authored-sms-v1-023": [],
+      "authored-sms-v1-024": [],
+      "authored-sms-v1-025": [],
+      "authored-sms-v1-026": [],
+      "authored-sms-v1-027": [],
+      "authored-sms-v1-028": [],
+      "authored-sms-v1-029": [],
+      "authored-sms-v1-030": [],
+      "authored-sms-v1-031": [],
+      "authored-sms-v1-032": [],
+      "authored-sms-v1-033": [],
+      "authored-sms-v1-034": [],
+      "authored-sms-v1-035": [],
+      "authored-sms-v1-036": [],
+      "authored-sms-v1-037": [],
+      "authored-sms-v1-038": [],
+      "authored-sms-v1-039": [],
+      "authored-sms-v1-040": [],
+      "authored-sms-v1-041": [],
+      "authored-sms-v1-042": [],
+      "authored-sms-v1-043": [],
+      "authored-sms-v1-044": [],
+      "authored-sms-v1-045": [],
+      "authored-sms-v1-046": [],
+      "authored-sms-v1-047": [],
+      "authored-sms-v1-048": [],
+      "authored-sms-v1-049": [],
+      "authored-sms-v1-050": [],
+      "authored-sms-v1-051": [],
+      "authored-sms-v1-052": [],
+      "authored-sms-v1-053": [],
+      "authored-sms-v1-054": [],
+      "authored-sms-v1-055": [],
+      "authored-sms-v1-056": [],
+      "authored-sms-v1-057": [],
+      "authored-sms-v1-058": [],
+      "authored-sms-v1-059": [],
+      "authored-sms-v1-060": [],
+      "authored-sms-v1-061": [],
+      "authored-sms-v1-062": [],
+      "authored-sms-v1-063": [],
+      "authored-sms-v1-064": [],
+      "authored-sms-v1-065": [],
+      "authored-sms-v1-066": [],
+      "authored-sms-v1-067": [],
+      "authored-sms-v1-068": [],
+      "authored-sms-v1-069": [],
+      "authored-sms-v1-070": [],
+      "authored-sms-v1-071": [],
+      "authored-sms-v1-072": [],
+      "authored-sms-v1-073": [],
+      "authored-sms-v1-074": []
+    },
+    "blockedRecords": 0,
+    "unblockedButNotAdmittedRecords": 74,
+    "trainingEligibleRecords": 0,
+    "independentEvaluationEligibleRecords": 0
+  },
+  "sourceReviewsCovered": 80,
+  "modelFitted": false,
+  "studentPredictionsUsed": false,
+  "reservedMerchantFinalInferred": false,
+  "canonicalSourceRowsChanged": false,
+  "limits": [
+    "Authored by the same assistant that supplied weak labels. These are not received bank messages, verified bank formats, human gold or independent examples. The earlier exposed validation failure informed broad coverage priorities. No validation text is used as an authoring template; overlap checks cannot prove semantic independence.",
+    "Exact/number-proxy/alias checks are bounded, not proof of template or semantic independence.",
+    "All 74 messages belong to proposed training only, with both eligibility flags false; no new test set is created.",
+    "Thirty-seven bilingual scenarios, not 74 independent real-world families; never split translation counterparts.",
+    "The original A/B trial and old validation remain exposed; no refit or release claim follows from authored coverage."
+  ],
+  "inputSha256": {
+    "config/contracts/sms_coverage_batch.json": "71c55a128b71881bd05a98a13abedf4e42917bb10c4e6ee05a66c7e68ad4a99a",
+    "data/annotations/sms_coverage_v1/source_event_reviews.json": "214aa339a75eb844a16501c1485761c862e1bcfe878fed66f89987948f74bb21",
+    "data/training/authored_sms_v1/messages.jsonl": "18ca9e8b943a484ddab90b0f1536d3fed43d546b2d148a3e484591bdf02d409f",
+    "data/reports/transactions/sms_semantics_ab_v1_cohort.json": "c54d7c82273589cc2186dbe780a0accc7f78bd4180fbe758e4806ab2fd1ee321",
+    "data/reports/transactions/sms_semantics_ab_v1.json": "ad8ceeb72a9cbfa369ee8e46a07e992d0a5745004141d703f9e3ba7cd3ab9706",
+    "data/annotations/sms_semantics_v1/text_reviews_v1.jsonl": "62a3bf3ea2a811064a246069b9d15aede268c5e76c628e64ee6ef7767edc2e3f",
+    "data/annotations/sms_semantics_v1/text_review_manifest_v2.json": "e4892c43990ce7184e00a68103eccf4c859fe5df39724cc475dc47992275ead9",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/annotations/businesses_200.jsonl": "81f0b434dc4b2549eedef5a1fc0bfec871bcd32f635ec10916a28fb3e74f8d13",
+    "data/training/splits/category_brand_split.json": "e2cfb583d1b62b9af72df0b985c6cdc84601bf052dc279dee4d611175c9fe99d",
+    "data/sources/businesses/brand_families.json": "34950f9c65e4982fa0df9af3699a3f2979e8b9d07d13251d5d34efa78ac9c66a",
+    "tests/fixtures/sanitized_v1/test_suite_cases.json": "73aa0cc45d0c7dbedef229ebb9331a9ab249f8703e3ffc15d4dc54b8f4f9d4b7",
+    "tests/fixtures/sanitized_v1/qa_adversarial_cases.json": "c2f1c13b30913f12f2bfd8454faf6d8374d0544e7f4e39e1d43203ea74eee18c",
+    "tests/fixtures/transaction_behavior_cases.json": "68b8e87d29fcc2513886d26efd37adc26934ba74c396f373acbcf78034476bc5",
+    "tests/fixtures/detailed_assessment_cases.json": "12cfd3fec7a19fe0b291074d5124f30d3e0e18299096a653cab92b48a182b13d",
+    "tests/fixtures/authorization_request_cases.json": "35eccc4e56634a1fbd8229ed175640050c5804203f0be222464ad586bdf04ace",
+    "tests/fixtures/ownership_context_cases.json": "295619af9abf4420030bdb4ec9e934d8ad049f993270a0486b9adeec24a4643d",
+    "tests/fixtures/paired_movement_cases.json": "68c01fb8fc6eb3f9699074e5978ed3fd143570bdacc3491868bc4e42ccaa9010",
+    "tests/fixtures/arabic_message_semantics_cases.json": "89262202327afe5b62c97eb6f37a17fa7d9e605e90ad393b7032acddf463d9ab",
+    "training/corpus/coverage.py": "0cba9737e1e8e109eba92431ad3d47d91a919c68aea5b2f869f2c97c1487d5da",
+    "tests/python/test_sms_coverage.py": "8cc5b1f600f1b5296979f4c9574bf25f603de8f67d4333d852abfccb3d6bc92a",
+    "src/python/research/sms_semantics.py": "0eab832392fbcf737a6f9d82102310018eaed13734c7aad977c19e177ebd5d4d",
+    "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8",
+    "src/python/research/merchant_category.py": "195b17c611acccca6f053a344c31347fa8c09940be95f1295cac88bf371beaa5",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "training/corpus/semantics.py": "32c5e50c4ab2506ac59f8b06075593a9bbacc7fdf1ab13ccba7b6dcc37dc85ca",
+    "training/corpus/review_semantics.py": "85ed12b2682f22a42ed9dba2cc741863c5d99665a3f3445c085497ebe37e2ff7",
+    "tools/contracts/validate_sms_semantics.py": "a68d1c2aad74d01e936f17c43859408d5c47408e9a7f76dce5340b18c993710e",
+    "config/contracts/sms_semantics_annotations.json": "843117160a7489d7f1b146dc3c07ed16fcdb853524683cdd212473143b059217",
+    "config/contracts/transaction_behavior.json": "e06693e71398f60a220488a779902fc2d38d2ba7c19570df395fddf551e2bf4b",
+    "training/corpus_io.py": "ed29cf5682b3eb514ebc0b149e2f9d47c9fb3d3f478f6b0d692982290f7d2738"
+  }
+}

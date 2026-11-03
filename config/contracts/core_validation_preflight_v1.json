@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Private intake and current-runtime startup preflight; no training, final evaluation, automatic admission or engine policy changes",
+  "provenanceContract": "config/contracts/sms_provenance_record.json",
+  "behaviorContract": "config/contracts/transaction_behavior.json",
+  "privateDirectory": "data/private/core_evaluation_v1",
+  "coreFields": ["transactionStatus", "trackingDecision", "amount", "currency", "currencyResolution", "direction", "transferRelationship"],
+  "acceptedOrigins": ["user_attested_real_seed", "user_attested_ordinary_message"],
+  "recordTemplate": {
+    "id": null,
+    "sourcePath": null,
+    "sourceSha256": null,
+    "sourceLocator": {"startChar": null, "endChar": null},
+    "text": null,
+    "textSha256": null,
+    "origin": "unresolved",
+    "originVerification": null,
+    "consentReview": null,
+    "sanitizationReviewStatus": "unreviewed",
+    "exposure": "unknown",
+    "exposureReview": null,
+    "verifiedTemplateFamilyId": null,
+    "familyIsolationReview": null,
+    "sender": null,
+    "receivedAt": null,
+    "language": null,
+    "labels": null,
+    "trainingEligible": false,
+    "evaluationEligible": false
+  },
+  "labelFormat": {
+    "state": "unknown, weak or reviewed; reviewed is required for preflight completeness",
+    "value": "Explicit truth, including null or unknown when these describe the message; missing annotation is different",
+    "reviewer": "Reviewer identity or private reference",
+    "reviewerType": "human for independent-truth review; assistant-only labels remain weak evidence",
+    "basis": "source_text, owner_context, policy or not_stated; never model_output",
+    "evidence": "Nonempty rationale/reference supporting this exact field; ownership must not be inferred from a name",
+    "textSha256": "Exact source text hash binding the review; copied or stale labels are held"
+  },
+  "reviewFormat": "reviewer, evidence, textSha256; binds a declaration to exact source text, not proof of authenticity",
+  "intakeLimits": [
+    "All record and batch eligibility flags remain false; preflight completeness never grants admission or permission to score.",
+    "Unknown ownership is valid reviewed truth and must not be relabeled as P2P or own accounts.",
+    "Generated, unknown-origin and development/Gemini-exposed records remain held.",
+    "Content/proxy matches are holds for review, never proof of generation parentage or a verified family.",
+    "Existing reservations must not be opened or repurposed.",
+    "Zero/signed movement and ingestion deduplication policies remain unresolved; no new runtime policy is inferred."
+  ],
+  "runtime": {
+    "modelPath": "data/models/masroof_model.json",
+    "modelSha256": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "typescript": "Call MasroofEngine.init(parsed pinned weights) before detailed or ownership assessment that can use fallback scoring.",
+    "python": "MasroofEngine() loads the pinned weights in its constructor; do not substitute a different model path implicitly.",
+    "currentMissingInit": "TypeScript detailed fallback returns false without weights; strong structural evidence can still return an assessment. This is not proof of complete readiness.",
+    "currentInvalidInit": "The legacy TypeScript init assigns the object without schema validation; a later fallback call can throw.",
+    "proposedBoundary": "Validate pinned bytes and finite model structure before calling init; define explicit caller failure behavior before adding a runtime guard.",
+    "failureBehaviorChanged": false,
+    "mobileSupportVerified": false
+  }
+}

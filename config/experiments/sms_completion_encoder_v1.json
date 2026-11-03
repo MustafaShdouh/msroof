@@ -1,0 +1,141 @@
+{
+  "runId": "sms_completion_encoder_v1",
+  "status": "approved_preflight_pending",
+  "ownerApproval": {
+    "date": "2026-10-28",
+    "instruction": "no i want it, go ahead",
+    "scope": "Isolated local benchmark as proposed; research encoder excluded from tracker"
+  },
+  "fitCallsAuthorized": 1,
+  "proposedFitBudget": 1,
+  "scope": "Python-only research comparator using a frozen multilingual encoder and one completion classifier; not an exportable SMS runtime candidate",
+  "encoder": {
+    "modelId": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "expectedSafetensorsSha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+    "weightBytesVerifiedLocally": false,
+    "license": "Apache-2.0",
+    "backboneTraining": false,
+    "trustRemoteCode": false,
+    "device": "cpu",
+    "dtype": "float32",
+    "evaluationMode": true,
+    "pooling": "attention-mask mean over last hidden states, including unmasked special tokens, matching the published example",
+    "dimensions": 384,
+    "maxTokensIncludingSpecialTokens": 128,
+    "truncation": false,
+    "overflowPolicy": "Before fitting, stop if any frozen training or scored diagnostic input exceeds 128 tokenizer tokens. Report exact cases; do not silently truncate, drop, relabel or change the limit.",
+    "embeddingNormalization": "none; no L2 normalization, scaler, prompt, PCA or feature selection",
+    "preprocessing": "Reuse src.python.research.sms_semantics.normalize exactly; pass identical normalized strings to the pinned tokenizer. Preserve this controlled preprocessing even though the model's own default does not lowercase."
+  },
+  "cohort": {
+    "priorSelection": "data/reports/transactions/sms_semantics_followup_v1_cohort.json",
+    "priorRows": 1014,
+    "additionalSource": "data/training/authored_sms_context_v1/scenarios.json",
+    "additionalFold": "research_training",
+    "additionalRows": 48,
+    "totalTrainingRows": 1062,
+    "targets": {
+      "completed": 573,
+      "non_transaction": 489
+    },
+    "weightGroups": 113,
+    "weighting": "Keep original 1014 row weights/groups. Each new four-member bilingual contrast group totals one unit, weight 0.25 per member. No class rebalance.",
+    "trainingViewSha256": "fcc558ca29634cc5659c7dfb9daca3f371d8dba2c04b532309cc37970373aeb3",
+    "trainingViewEncoding": "Ordered original completion rows, then expanded research_training contrasts. Object keys recordId,text,target,weight,group. Original group=weightGroup; new group='context:'+authoringGroupId. JSON ensure_ascii=false, sort_keys=true, separators=(',',':'), UTF-8, no trailing newline.",
+    "canonicalAdmissionFlagsChanged": false,
+    "newDataAuthoring": false
+  },
+  "classifier": {
+    "implementation": "sklearn.linear_model.LogisticRegression",
+    "inputDtype": "float64, cast from cached float32 mean-pooled vectors",
+    "solver": "liblinear",
+    "C": 1.0,
+    "l1Ratio": 0.0,
+    "dual": false,
+    "fitIntercept": true,
+    "interceptScaling": 1,
+    "tolerance": 0.0001,
+    "maxIterations": 2000,
+    "seed": 20261027,
+    "classWeight": null,
+    "positive": "completed",
+    "negative": "non_transaction",
+    "boundary": "positive iff signed decision score > 0, ties negative",
+    "convergenceFailure": "Stop, retain attempt ledger, no extra fit or automatic solver adjustment",
+    "search": false,
+    "calibration": false
+  },
+  "evaluation": {
+    "status": "All existing diagnostics exposed and assistant-labeled; not independent accuracy or a final test",
+    "cohorts": [
+      "unchanged 18 old validation representatives",
+      "unchanged 24 manual diagnostics, two uncertain excluded from binary truth",
+      "unchanged 24 authored context probes",
+      "14 exposed quote conformance controls, uncertain cases excluded from binary truth and overlapping examples reported separately"
+    ],
+    "baselines": [
+      "sms_semantics_followup_v1 word head",
+      "sms_completion_context_v1 context head"
+    ],
+    "metrics": [
+      "TP/TN/FP/FN per cohort and Arabic/English slice",
+      "identity-level fixes and regressions",
+      "uncertain cases separately, never forced negative",
+      "per-contrast completed/nontransaction outcome pairs",
+      "token lengths, download/asset bytes, peak resident memory and warm CPU latency excluding download/startup"
+    ],
+    "continuationGate": {
+      "purpose": "Proposed gate for considering a student experiment, not release thresholds or deployment approval",
+      "falseCompleted": "Zero on each definite development cohort, including all OTP/declined/pending/example controls",
+      "missedCompleted": "No worse than the context reference in each primary cohort and language slice; report all case swaps",
+      "criticalRegressions": "No new OTP, refusal or ordinary-chat acceptance versus either reference",
+      "ifFailed": "Retain negative result; no student, automatic alternative model, head refit, threshold tuning or promotion"
+    },
+    "releaseThresholds": null
+  },
+  "runtimeBoundary": {
+    "existingPythonTypescriptBrowserBehavior": "unchanged",
+    "teacherInTester": false,
+    "headAloneIsDeployableSmsModel": false,
+    "directionTraining": false,
+    "entityOrCategoryTraining": false,
+    "studentTrainingAuthorized": false,
+    "hermesLatencyMeasured": false,
+    "strictRuntimeParity": "Required for any subsequent shippable student/export; this comparator stays outside all runtime engines"
+  },
+  "implementationOrder": [
+    "Record owner approval for this exact research scope before fitting; proposed status does not authorize a fit",
+    "Create isolated dependency environment, resolve and record package versions without modifying the current engine environment",
+    "Fetch only the pinned model/tokenizer/config/license files into an ignored cache and verify their hashes; record all download sizes; no SMS uploads",
+    "Reconstruct frozen data using checked artifacts/snapshots, not old prepare functions against changed live rule bindings; verify training view SHA and target/group counts",
+    "Preflight all tokenizer lengths without inference, truncation or fitting; stop on overlength inputs",
+    "Verify deterministic frozen eval-mode encoding and cache input/model/vector hashes locally; finite vectors only",
+    "Write immutable input/cohort/environment/start ledger before the sole weighted classifier fit",
+    "Export the 384-weight head with pooling/tokenizer/encoder bindings and check solver versus ordered float64 dot products",
+    "Evaluate fixed cohorts once; report raw learned results separately from structural recording behavior and all regressions",
+    "Stop after the comparison. Do not create a student, migrate the active engine, use reserved final folds or publish"
+  ],
+  "frozenInputs": {
+    "data/reports/transactions/sms_semantics_followup_v1_cohort.json": "9c91de7551e9cb65f04eeba89edef0ddd7308d2e3cd700e9dbf9da1b13a383b8",
+    "data/reports/transactions/sms_semantics_followup_v1.json": "cedd066e3a35a01ceef96b6e527b0de7a3ad673690ae17481ce5ca254c22d080",
+    "data/reports/transactions/sms_completion_context_v1.json": "e1b4127fae4c674a91dfe122d98a85485c384278728e65abd7fa0e2473be9f09",
+    "data/models/sms_semantics_followup_v1_word_candidate.json": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121",
+    "data/models/sms_completion_context_v1_candidate.json": "fad7f42560fae5dfbf55c7c070013e7e95b1eb008c67434219165207891cd73c",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/training/authored_sms_v1/messages.jsonl": "18ca9e8b943a484ddab90b0f1536d3fed43d546b2d148a3e484591bdf02d409f",
+    "data/training/authored_sms_context_v1/scenarios.json": "2f1b1d2f03a12d3a776d4c3b24dbd743858940b57ac232b9bea7bfbc69297ae7",
+    ".local-backups/sms_research_manual_v1/cases.json": "b1d582d32af849578565ba5404fad96e1922aad873d344d27ae803457c34d875",
+    "tests/fixtures/quoted_example_cases.json": "0b51454d63b3d41914bbf4daab7a24b34ffe9ffc4c7199cf524160e1e8539965",
+    "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8",
+    "src/python/research/sms_semantics.py": "0eab832392fbcf737a6f9d82102310018eaed13734c7aad977c19e177ebd5d4d",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1"
+  },
+  "limits": [
+    "Pretrained semantic similarity representations do not establish reliable completion, negation, quotation, settlement, ownership or Jordanian dialect understanding",
+    "113 weighting groups are not 113 independent received-SMS families; no independent Jordan SMS final test exists",
+    "PyTorch/transformers/tokenizer runtimes are not installed in the current project Python environment; dependency installation/download costs are additional to approximately 471 MB of encoder weights",
+    "CPU and future Hermes latency are unknown; the existing under-0.10ms Hermes requirement is unmeasured",
+    "A later compact sequence student needs a separately fixed data/objective/export/parity/latency protocol and approval; successful distillation is not assumed"
+  ]
+}

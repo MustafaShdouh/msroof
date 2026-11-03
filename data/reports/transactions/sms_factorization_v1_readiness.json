@@ -1,0 +1,2094 @@
+{
+  "groupsByProvenance": {
+    "authored_context": 12,
+    "authored_coverage": 35,
+    "authored_scope": 16,
+    "legacy_expression": 66
+  },
+  "inputSha256": {
+    "config/contracts/sms_factorization_annotations.json": "a8c13bde25855671e6176885f4423b1a9a1c37dce45cd34e517674b979508f6f",
+    "config/experiments/sms_completion_adaptation_v1.json": "aa48190817be42863ee8a1d39b271a0a5bed562e6e67d0207e6613228a1a4b56",
+    "data/annotations/sms_factorization_v1/pilot_queue.json": "a89ea0c9423cee4d94dd12a81a1dc4adbba65bf53a862cae95d08e8dba08c134",
+    "data/annotations/sms_factorization_v1/reviews.json": "660c6b45bc42237a92ccc4700c29400595242d90b99c382716b55e5e8b4b746d",
+    "training/corpus/factorization_pilot.py": "493342a87dec946bb6afe5af9018ba564ca9cb9368046ad4ea7bd4405b7ef98a"
+  },
+  "inventory": [
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-admin",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "0cce4874be7d256a611b3eb037b0e9adecb587fa3e262509b2ebcb851602405a"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-balance",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "c12dc98ce26b0a8614a13e71a18b12b034dfa932d9c5443c9ebd2065a9aff523"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-bill-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "72c7a46aab9a2707ff878bb4a1579f26d8f8e65e8096d3e221016e2ceff6a5ae"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-bill-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "2c7a5811470b7f029e2883b15a5d2d32ada726ddffa8d17411d9f8abd409bb39"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [
+        "authored-sms-v1-033"
+      ],
+      "group": "authored-v1-cashback-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 2,
+      "rowIdSetSha256": "d8520392557d0800871b6604d372cb7f4ac259c5dbaf2ea2d8ef653b0a692533"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-cashback-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "5481a49ccc9cff369be73151b8b4f5b101d8a8144b51e55ecc6a6ff4547e2fb7"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-chat",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "d57005c11839bca1f58d80c4f9aa0fc8735f7e531b639b899ecc1f514b3bbf00"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [
+        "authored-sms-v1-052"
+      ],
+      "group": "authored-v1-declined",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 2,
+      "rowIdSetSha256": "99361d7ac7ab7be832357c5965e78a59f74630430e736744d47a5f5f77ba784b"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-deposit-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "460d17bd6f90fb6a6bcb99f8210ea433dfc41fd11f085f8d816f409caf152b74"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-deposit-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "f7580e11dfea1493ed2466c558970653d1e3819294839df01b299cbffb4091ba"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-fee-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "d2d4e7dd3ff6eb408a380438d06b3f44892935b6bff51b1e58695d0772afda79"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-fee-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "412bf404cd6f673c844712d27d197135dc246fefdc7c0b50f150c12a7c4b9986"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-installment-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "bcb8fe89475ff7331678dfd50a1413c7a6f0568525fc74ef79a603c3e7fd6796"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-installment-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "e94e1887a86bd4cafe13255e3aa221d3f2b69c427cf6a156c94c72ce6eab4c37"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-merchant-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "cd6587267a55c87dc497421883c1d63c6f26eec7c4273f5e7fe95ecdab357d17"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [
+        "authored-sms-v1-012"
+      ],
+      "group": "authored-v1-merchant-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 2,
+      "rowIdSetSha256": "b39ad7e1df4929f3088297a921d6e51bf15ec07489ce52780119a2dec8548d07"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [
+        "authored-sms-v1-074"
+      ],
+      "group": "authored-v1-missing-amount",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 2,
+      "rowIdSetSha256": "9456f150d8f37265c8a8171cb4bab77155405e72b162ac03ac00ffff0d4ad0e4"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-otp",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "af0463cd986d7994e52f8883ef04c5814e0a217455a0b87df7b2000ac79fc72b"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [
+        "authored-sms-v1-070"
+      ],
+      "group": "authored-v1-own",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 2,
+      "rowIdSetSha256": "e281bb80d42aae04f68c06f299964806219651f6af37881bf3c4f49fd99b9889"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-pending",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "9653e1a974d38eb5d9f359286c12bb1855b1b17caed5454e551f81843461bb40"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-points",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "d9d89b5a6181c50f2826dc3bd8e9a19e843f5144882355ec9283f39845f7186e"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-promotion",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "e8dd6b8d62bb0da88930dbf1a4cb8a74ba2286ff2e9100629f2ad9e32afce56a"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-purchase-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "f0bb8d851c455990e3fb858ab1823fb2198d776f7398d906968ff8c8f16330ca"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-purchase-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "c8409dbe79f1abc1d2e1d843d2d4da663076d2c41d50f8f3cc7ceae227b0b4fb"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-refund-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "7e9b47443053b58e8653c3901110b17db74a97f75847dbfb2edbb369d1952176"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [
+        "authored-sms-v1-031"
+      ],
+      "group": "authored-v1-refund-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 2,
+      "rowIdSetSha256": "4f242bda16944915a2fc7f01a03056f1dee688c6451be882f96bc84cd2833fb5"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-salary-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "67cb7e65c5165c6a81d8fd27ea44cbce5695503e117a825795af02f2ca9cc878"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-salary-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "c6249f5128c4930005a02c1715839fcadc63f2d88fa04168318b5592fd31340a"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-transfer-in-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "c938b5f8fce9cdce0821ebd96e714b437fb2f22a43723f06f8a58d25e60ee69e"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-transfer-in-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "66fddd2e1f0c133d8007c49d51f555bc2758a54953cf990c200e19cec5fbaf65"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-transfer-out-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "14cd53f4b268f09081b7fccfeb534739d815a89f2f2cf52a10b10c1f805f9762"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-transfer-out-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "90a50f79811ab4ab10525adda18190f605273aa1fdfb957da7995900fc9fa356"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-unknown",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "b9e8d4515d1f53ebe6a973ef41bb9aa1f742892232cfcf5d8ac531f99597c487"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-withdraw-a",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "c7eb4e444383a64cd2bde95098e272c504d0abd720082a408a2a0b5f458a6765"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "prior financial-field annotations, not factorized labels",
+      "factorizedPilotReviewedIds": [],
+      "group": "authored-v1-withdraw-b",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_coverage",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "2beba03eb95405c6e3c739c76c64ac24c54155309d8e55ff10f6e88befbd6eb7"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [
+        "billed-versus-paid-completed-ar"
+      ],
+      "group": "context:billed-versus-paid",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 4,
+      "rowIdSetSha256": "7f0c29f27c3e1985c31351c7cc44dbb05b1ce18ef3d3e9e1cb43c2cb9455912e"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [
+        "cash-disbursement-completed-en"
+      ],
+      "group": "context:cash-disbursement",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 4,
+      "rowIdSetSha256": "36194f67ff148c7f78e3ee0164cb118b9e145b2da42a806616ff94a6c0401fe1"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [],
+      "group": "context:help-quotation",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 4,
+      "rowIdSetSha256": "c6ff55ef76b84ab1b9869ad86c83333b9ae98f2a8c60d2a9600e359e8a0909a6"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [
+        "instruction-quote-completed-en"
+      ],
+      "group": "context:instruction-quote",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 4,
+      "rowIdSetSha256": "90d53e9e9070d32eb540289555fdc6f67662ead4c5017576fddf94e5f5f7d96c"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [],
+      "group": "context:otp-versus-settlement",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 4,
+      "rowIdSetSha256": "a5d6f41772ea930a661aa7a735baba80e0c6886f32d6ef86f5afffde49a4d12c"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [
+        "personal-claim-completed-en"
+      ],
+      "group": "context:personal-claim",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 4,
+      "rowIdSetSha256": "b4237fb4c663d6a5f913cac34b6d9c1e134c3ff1da71f234102ec73b73fd02b0"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [
+        "refund-refusal-completed-en"
+      ],
+      "group": "context:refund-refusal",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 4,
+      "rowIdSetSha256": "56924feb92bcfbebe6b208810a5992f6bc72da6a5b1093471c1b896ee69ccd45"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [],
+      "group": "context:sample-credit",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 4,
+      "rowIdSetSha256": "9d70b1ad8edb6202931435a2c8949273860e96677a5f8bd8007ab98c1614d451"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [],
+      "group": "context:scheduled-versus-executed",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 4,
+      "rowIdSetSha256": "fe3d422d87d79950b52782faf9b0ef1f1abc8c8b4544d28dc50e5c0b682c3a82"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [],
+      "group": "context:settled-payment",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 4,
+      "rowIdSetSha256": "9ef7f6f1450fe0a8f521fb35de2b2ff1e0f32545087ad695df4c248ec08a9728"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [],
+      "group": "context:transfer-refusal",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 4,
+      "rowIdSetSha256": "c8472a5257373a03215d8242fd38d3f70b629f9462f29af75c22bfbbefa886f8"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "bilingual contrast text, no factorized spans",
+      "factorizedPilotReviewedIds": [
+        "wallet-posting-completed-en"
+      ],
+      "group": "context:wallet-posting",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_context",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 4,
+      "rowIdSetSha256": "9c16d302670272d7ad9ad7ad4bb65e74b79f8cd5f5d205240139c1ee5287df2f"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L119-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 35
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 35,
+      "rowIdSetSha256": "de987922a8f5e7503aa23eee5c5cc8676ff459e7838cf3fad41306903846b962"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L135-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 35
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 35,
+      "rowIdSetSha256": "d1e481f92d3877408763e1cc40867c8914794785d3c0d5676330cd8274cef2b6"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L152-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "bb99c57ac0be1ad164335dee4722d017bd12d80357daf1d32e9b332e055db4c8"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L186-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 16
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 16,
+      "rowIdSetSha256": "16de9d4ca3e884b9ef25a04b95a3f0e081d6a2a09f8b08e97c26ea01ec93790a"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L203-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 10
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 10,
+      "rowIdSetSha256": "0075b77f3d4dfa90b19435fe28407ae321ec770927afd2192fbfd3c1b1a14a41"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L236-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 30
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 30,
+      "rowIdSetSha256": "3dc10e43e950155a40c44b2626849f83fc802f928cbe14f67658219de73473a6"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L302-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 35
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 35,
+      "rowIdSetSha256": "77fa94e10e57b1b6f15baf1aef781aed57519d3d79871474175d534007fbb676"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L320-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 49
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 49,
+      "rowIdSetSha256": "13070d269328641f11984a51e3b80f4a4dbb5968e27b169c47d1a596b4691d49"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L369-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 30
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 30,
+      "rowIdSetSha256": "75e697c16d483c533e5c554c1352eb957ff239da38c204c3950fc0e121657d92"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L387-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 50
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 50,
+      "rowIdSetSha256": "70107d2c2028fa886728be8e30b3450b71829e052735e34aca92faf28851f3cc"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L403-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 45
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 45,
+      "rowIdSetSha256": "599c482302a873a4a92edf970469d5dcba74f751889e45ef5b4d6d2228c4ca6e"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [
+        "synthetic-v1-0386"
+      ],
+      "group": "literal-L433-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 25
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 25,
+      "rowIdSetSha256": "348f226c09dae031e2b9fd3f08dd178d6668afcb9d4822002885b4c0ee524200"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [
+        "synthetic-v1-0794"
+      ],
+      "group": "literal-L463-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 20
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 20,
+      "rowIdSetSha256": "2f0ffe0420301491dd3de7a9b602fd89e41936e7564378e2b268be5cb80d4c8c"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L481-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 45
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 45,
+      "rowIdSetSha256": "761fdd3817dff3eded7f8cccefc4eba8f466f9bd16f29c8de1cad0d8c11e9196"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L531-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 20
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 20,
+      "rowIdSetSha256": "7986bf48a1a69f9e6c9a844cce0526cbc70d1e1d335a8c3a9ac4010e7b0d5c90"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L548-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 13
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 13,
+      "rowIdSetSha256": "2972bbc96bd6ee147c9ce1709576f3aa2073a73633fcedd4bcb3fe96221abde0"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L582-C15",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "completed": 35
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 35,
+      "rowIdSetSha256": "d8f28991944ef310d9a6333ffb95ee7eb267763887ca44c9c0b7cfda0bbc5a67"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L601-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 17
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 17,
+      "rowIdSetSha256": "248576a3a1ecf66324dda9aeb390ce826f8e4ea79ffb4c27eb7d775eb2215d3e"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L602-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 15
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 15,
+      "rowIdSetSha256": "0756d46deef2bc48a4bb3df1e6c209250b6d717849b1f294292a348bb03991a5"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L603-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 18
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 18,
+      "rowIdSetSha256": "b051b4187e2f62a565e6c35ebe8c54a6d63d4730f7186a986100dcf679613ef1"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L604-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 17
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 17,
+      "rowIdSetSha256": "ebfbc526a6292c6ed6f2de2c99ddad2f5236d4ab8a0a91da74be38597fa082aa"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L624-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 2,
+      "rowIdSetSha256": "afe6bd3872d5bbe953162004de7c212e18d309a64cd8a4d0c8cffc0772f0a211"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L626-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 27
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 27,
+      "rowIdSetSha256": "04821664d83847c87e85d24f1f95533989d5a54719cac3b31c347feb69879d70"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L647-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 26
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 26,
+      "rowIdSetSha256": "18c5e1ff8f67ee296a9b5b5223323f791fd6b3d121ec132986c38eb8dc77cb5f"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L650-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 20
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 20,
+      "rowIdSetSha256": "dfc1f5a6e63de4771ba7b3b8a05d814b4cda97bea687a08cbd4df73bd28467e1"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L651-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 23
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 23,
+      "rowIdSetSha256": "adf48986307601bebac0e8729a06a399d3f86a8b34a68b53abe00048dbc6e792"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L671-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 5
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 5,
+      "rowIdSetSha256": "ce25a9ba4f808b4f986fd5cdbfb3dc6db3fe562dd5d958247f62b141b0536d89"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [
+        "synthetic-v1-0121"
+      ],
+      "group": "literal-L672-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 8
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 8,
+      "rowIdSetSha256": "791404e6d0b5c7b45855233569a985992b21dee6fb053bffe19dbdb5e2fd9538"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L673-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 10
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 10,
+      "rowIdSetSha256": "5021e6de40f3fc24aefdce29dd1dd298f761deab0b178425678763e959bed609"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L674-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 9
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 9,
+      "rowIdSetSha256": "07b258b7d0c2b940d2b637fa26c809885528850b376025927a3ed70da1a559b7"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L675-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 13
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 13,
+      "rowIdSetSha256": "5880fbc8a9e6ce5e188f8872a3ab6dde70dfea59c1b5248f424f60d11a113593"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L676-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 9
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 9,
+      "rowIdSetSha256": "5cd29bf713302f5de5052220bbf5c68a974f534b0505753865883b13771b65c1"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L678-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 12
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 12,
+      "rowIdSetSha256": "e0ca266270634c3a3d0f734252b22f2eb6b4baf023f23a7c4d204a5e2fe607ab"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L680-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 13
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 13,
+      "rowIdSetSha256": "406f5d4c4a8f099801aad02eda160478989a2a0225214ebff00b45075d0cee2b"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L682-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "0c7c8c6d6a7f5564f7975e38022fabfbc6cba3d2f3c3119181d8fc9828e9d727"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L685-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "47ed50a19e9a8f4bd8ccb4e00b67a3cd441507c0002f87561c50dd1eb403dc8f"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L686-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "f725b95b268cc2934988f5381a4a58dd45f283e2bab2c6f65e49f50beae494e9"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L703-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 11
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 11,
+      "rowIdSetSha256": "da1113fa5e71df18b19e7e978e56c2110cb994a3461ea91c7200131a51d97ebf"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L705-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 14
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 14,
+      "rowIdSetSha256": "e0eb06791b444be9b9b6bfb81ac1aa3f7a0c90f333f314a35855ee5bcda4aadc"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [
+        "synthetic-v1-0536"
+      ],
+      "group": "literal-L706-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 15
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 15,
+      "rowIdSetSha256": "3b2edf55c43d89ab0b299228d989df73b8c2b3eb561be87b17fb5ff1a3ffb6a3"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L707-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 13
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 13,
+      "rowIdSetSha256": "82d1b5fc3ef8b7069d6781ad6b8162483f63cf96cf56ece50542816b0f9a6343"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L708-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "d7a2bf8b2e9b9265e7422aa9fe70b76e66bbaee3b34f7ed1e51b9841e37ab86d"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L709-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 12
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 12,
+      "rowIdSetSha256": "2743180c27b7bba054981ae091922c685a4216ae73c79305b9a02fb9bd01c7e3"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L711-C12",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 12
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 12,
+      "rowIdSetSha256": "a7b736fcf1b1839c9fbe79ad9c782545a395d2e552911b99ac752485a625f657"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L727-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 12
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 12,
+      "rowIdSetSha256": "75814ddec8222b4a266133ce06888d4f3eafc04431606377b9a02e5a6cac80bd"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L728-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "a8b6d80a3e45449e68d82e8f4844621b573633d58fc689015542d9e329010e4c"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L729-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "369eed584e59ea53b18c43cc3028823e9b19f34e615871b72bc8304425aa510d"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L730-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "a6082d62a2b1c6d1eedf876a63439afcf8aabb7baeabac461163aa543889ac45"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L732-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 9
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 9,
+      "rowIdSetSha256": "437c9eb4118abf6fd6128327deac8793c494edfee423de75b6193cf1d62a462c"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L733-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 12
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 12,
+      "rowIdSetSha256": "fc6bf7ed98261937b7fcb7de29c26cdfff1ee64c0ca2f2cafd753a9de1c03012"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L735-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "e818172e58d4f2c7454157188f7ec5ec5c751dddd10612a2ce6799f55c4f1251"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L736-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 13
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 13,
+      "rowIdSetSha256": "19be7b58f54f62634514c1d4071eac73ea0009ddd87e472975a017f6d66d9e81"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L737-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 14
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 14,
+      "rowIdSetSha256": "1cca164281bc17c92b6996208c13b182099e952ac839a1b4aa05830920d8d07d"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [
+        "synthetic-v1-0068"
+      ],
+      "group": "literal-L739-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 1,
+      "rowIdSetSha256": "c2028b867e255e0bf28d636633b45eb4108f7ea4130ea997b8d26e0f6caa43d9"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L740-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 6
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 6,
+      "rowIdSetSha256": "2e22f962d2950695c3e349c1c300fc171db26161d9f09f300ca66b7b7e568762"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L741-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 7
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 7,
+      "rowIdSetSha256": "2ab95132e859549a014583ac940f0bf42843d3efbbce2558635e5e6bce9d6644"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L743-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "9b3efc7f5c4c82022050307cc10543346cc137c8ff3279591b33ac8abd8455c2"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L744-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "665e72b94f4714fea5e243b8f336472d3c79f9af3a7969de00bd4ac8755ee53f"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L745-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 11
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 11,
+      "rowIdSetSha256": "a008a142dc43a302eab4954f9885bc624b1423b9f860de2af12a8552531f3fb3"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L746-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "e08ed8960d72f9a16b135f5d92d89bf94dfc592344b60bc4b2239210b47be4f5"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L747-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 5
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 5,
+      "rowIdSetSha256": "7891a56182c16f7f7e49c89b8263fda3e002c162cdbfeb00f28817dde1e357c0"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L748-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "a760de9d1653a0c1471200a73344327b431b0170395115fd7e98736d00b984f9"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L749-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "cee4ff80714359a3510593b1736d548ebc9e8fa62e3ddf068f6e9bbd722bff39"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [
+        "synthetic-v1-0922"
+      ],
+      "group": "literal-L751-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 15
+      },
+      "originalTargetsMixed": false,
+      "readiness": "partial_single_record_review",
+      "records": 15,
+      "rowIdSetSha256": "9383f34da3a359172e537ca604d0d5938cf85b0d363dc5ffe36fede9fd9e3f58"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L752-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 1
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 1,
+      "rowIdSetSha256": "87213aeff6f12e39b448307b3d4f3f9e79b371700837bbbf4d113701ab5e48f6"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "source text and prior completion review",
+      "factorizedPilotReviewedIds": [],
+      "group": "literal-L753-C8",
+      "needsRecordLevelReview": true,
+      "originStratum": "legacy_expression",
+      "originalTargetCounts": {
+        "non_transaction": 9
+      },
+      "originalTargetsMixed": false,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 9,
+      "rowIdSetSha256": "16b1f067e3b6e7bfd2417595438d6d0b9231cb2b406289c64105e23e49683db7"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [
+        "scope-v1-booking-charge-1-en"
+      ],
+      "group": "scope-v1-booking-charge",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 6,
+      "rowIdSetSha256": "faf17d62ebe0ae93e443489c3a03c53ed62702c746972703c9aec56417558102"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [],
+      "group": "scope-v1-bookshop-pending",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 4,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 6,
+      "rowIdSetSha256": "fdfcd8e96f99186401578eeb10497abff9dc6cb43f641e183258d2a7f64256b5"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [],
+      "group": "scope-v1-cafe-test",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 4,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 6,
+      "rowIdSetSha256": "d690b78a08cbc0a3e03ed43cf66dddfc2c776226242ee08a494281c31757cc6f"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [
+        "scope-v1-cash-out-status-3-ar"
+      ],
+      "group": "scope-v1-cash-out-status",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 6,
+      "rowIdSetSha256": "98a0bd46c250c98ce6da924d749f620767b3d17258f243aa5dd4f72bdb31355e"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [],
+      "group": "scope-v1-cheque-credit",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 6,
+      "rowIdSetSha256": "f4d810dd606c782377e18a7eb22914669eadf74888fd746e69b634cd7ab997ff"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [],
+      "group": "scope-v1-collection-final",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 6,
+      "rowIdSetSha256": "730487b7fe92c74520df8453ebcacfc881cb86c432f796baa1b56dda85fc62cf"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [],
+      "group": "scope-v1-deposit-check",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 6,
+      "rowIdSetSha256": "24667798d9875e6bdb931ccfc5e866e5db190f754cf8fd25c932879160995bd9"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [],
+      "group": "scope-v1-pension-demo",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 6,
+      "rowIdSetSha256": "5757b1e68b6c3306a22a6bb65ecfff9f4b6776060582bd74a642f67af1aeef32"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [],
+      "group": "scope-v1-refund-tutorial",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 6,
+      "rowIdSetSha256": "f07fc696d770a02cc08f6303394c7b60fefc6637e91c031248333c90ff939df6"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [
+        "scope-v1-rent-share-2-en"
+      ],
+      "group": "scope-v1-rent-share",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 6,
+      "rowIdSetSha256": "878543f763de0c1b25468c4f8affa3ec59f53bfca06aeda808b5c42dd03d847f"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [],
+      "group": "scope-v1-reversal-query",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 6,
+      "rowIdSetSha256": "9c813f121ebdb138018877a216a822cf58149e797720523b8bb77a0eb2011e6a"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [],
+      "group": "scope-v1-reward-credit",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 6,
+      "rowIdSetSha256": "3d4e7173fa8d22961f4e6bdbcc9e579ffc3da8f01656ca21c8317c305e2e84c8"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [],
+      "group": "scope-v1-service-fee-sample",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "not_reviewed_for_factorization",
+      "records": 6,
+      "rowIdSetSha256": "ec6f122861579c7e915c60f3fddb76d575237bc947c93663fd617395d6041efd"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [
+        "scope-v1-shared-ride-1-ar"
+      ],
+      "group": "scope-v1-shared-ride",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 6,
+      "rowIdSetSha256": "b7b1cceadcf68c5f847596836e2be8bf17a5fcac01d9a4482caf0cf4b9d6032c"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [
+        "scope-v1-utility-order-1-ar"
+      ],
+      "group": "scope-v1-utility-order",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 2,
+        "non_transaction": 4
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 6,
+      "rowIdSetSha256": "3316caa6b14e37201ebdc02df12e0cd9f76e2d6ca7f7ded968c6ed93b08dd2bd"
+    },
+    {
+      "automaticPropagationAllowed": false,
+      "availableEvidence": "eventMention/context/scope spans, not factorized categories",
+      "factorizedPilotReviewedIds": [
+        "scope-v1-vendor-cancel-3-ar"
+      ],
+      "group": "scope-v1-vendor-cancel",
+      "needsRecordLevelReview": true,
+      "originStratum": "authored_scope",
+      "originalTargetCounts": {
+        "completed": 4,
+        "non_transaction": 2
+      },
+      "originalTargetsMixed": true,
+      "readiness": "partial_single_record_review",
+      "records": 6,
+      "rowIdSetSha256": "77d5e2b04e6db26d4ede0dfd6562687cdba6240711811827e9dee2aff9911577"
+    }
+  ],
+  "limits": [
+    "Inventory is provenance/evidence readiness, not semantic review of all 129 groups or 1158 records.",
+    "One reviewed pilot record does not label the other messages or bilingual counterpart in its group.",
+    "Selection is fixed and prediction/label-blind within provenance strata. Missing themes must remain visible.",
+    "Known-other context and no-event state distinguish clear absence/other purpose from semantic uncertainty.",
+    "No automatic composition, source-authentication claim or canonical admission follows from these weak sidecars."
+  ],
+  "missingPilotContexts": [
+    "instruction_or_example"
+  ],
+  "missingPilotEventStates": [],
+  "missingReviewedContexts": [
+    "instruction_or_example",
+    "unknown"
+  ],
+  "mixedTargetGroups": 28,
+  "modelFitted": false,
+  "modelInference": false,
+  "originalLabelsChanged": 0,
+  "partiallyReviewedGroups": 24,
+  "pilotContextCounts": {
+    "financial_notice": 20,
+    "known_other": 1,
+    "personal_conversation": 1,
+    "question_or_request": 1,
+    "unknown": 1
+  },
+  "pilotEventCounts": {
+    "completed": 17,
+    "no_event": 2,
+    "not_completed": 3,
+    "unknown": 2
+  },
+  "pilotHeldIds": [
+    "synthetic-v1-0922"
+  ],
+  "pilotLabelPairs": {
+    "financial_notice/completed": 16,
+    "financial_notice/no_event": 1,
+    "financial_notice/not_completed": 3,
+    "known_other/unknown": 1,
+    "personal_conversation/completed": 1,
+    "question_or_request/unknown": 1,
+    "unknown/no_event": 1
+  },
+  "pilotRecords": 24,
+  "pilotReviewStateCounts": {
+    "hold": 1,
+    "reviewed_weak": 23
+  },
+  "reservedInferred": false,
+  "rowsByProvenance": {
+    "authored_context": 48,
+    "authored_coverage": 70,
+    "authored_scope": 96,
+    "legacy_expression": 944
+  },
+  "runId": "sms_factorization_v1_readiness",
+  "schemaVersion": "1.0.0",
+  "semanticallyFullyReviewedGroups": 0,
+  "structurallyInventoriedGroups": 129,
+  "trainingGroups": 129,
+  "trainingRecords": 1158,
+  "trainingViewSha256": "ec7fd9f887b9a5bb060284b14891ac0430b0d96a900337665377ec5a1db67e70",
+  "unreviewedTrainingRecords": 1134,
+  "untouchedFactorizationGroups": 105
+}

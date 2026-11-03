@@ -1,0 +1,21 @@
+{
+  "contractVersion": "1.0.0",
+  "scope": "Approved isolated weak-supervision A/B research; never an active runtime model",
+  "arms": ["word", "word_char"],
+  "normalization": "NFC; financial digit/separator normalization; literal backslash-n decoded; CR removed; exact JO-newline routing prefix removed; Arabic U+064B-065F/U+0670 marks removed; ASCII A-Z lowered; numeric runs replaced by spaced num; explicit whitespace collapsed",
+  "numericPattern": "[0-9]+(?:[.,][0-9]+)*",
+  "whitespacePattern": "[ \\t\\n\\r\\f\\v\u0085\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+",
+  "words": "Maximal Unicode letter/number/underscore runs; binary feature w|token",
+  "characters": "word_char only: all contiguous Unicode-code-point substrings of lengths 3,4,5 of the entire normalized text, including spaces/punctuation; binary cN|substring; no padding",
+  "ordering": "Distinct features sorted by Unicode code point; vocabulary built per head from training rows only with document frequency>=2; active vocabulary indices sorted ascending for scoring",
+  "export": "Separate completion/direction heads with sorted vocabulary, aligned flat float64 weights, float64 intercept; no TF-IDF/scaling or hidden features",
+  "score": "Float64 intercept, then one float64 weight addition per sorted active vocabulary index; positive iff score>0; ties negative; scores are not calibrated certainty",
+  "scoreTolerance": 1e-12,
+  "heads": {
+    "completion": {"negative": "non_transaction", "positive": "completed"},
+    "direction": {"negative": "outgoing", "positive": "incoming"}
+  },
+  "fit": {"solver": "liblinear", "C": 1.0, "l1Ratio": 0.0, "dual": false, "fitIntercept": true, "interceptScaling": 1, "tolerance": 0.0001, "maxIterations": 2000, "seed": 20261027, "minimumDocumentFrequency": 2, "classWeight": null, "sampleWeight": "one total per source expression per head", "convergenceFailure": "stop without another trial"},
+  "cohorts": {"proposalManifestSha256": "60e44bb3ca335c36c93660a7385607c8f1fdd0d2a0b0e3497e5d861127d82eac", "validationManifestSha256": "a910150b95c0bbd2dddd99bed3d88338e57e04ca29de4e28d5afe7955ef223a7", "trainingCompletion": 944, "trainingDirection": 321, "validationCompletion": 18, "validationDirection": 4},
+  "constraints": ["Exactly one fit per arm/head; no tuning or validation-derived vocabulary", "No eligibility flag edits, fresh augmentation, ownership/purpose/BIO fitting or active-loader migration", "Only unblocked weak validation representatives; no descendant inheritance or reserved merchant-final inference", "Report raw learned heads separately from unchanged structural baseline; no hybrid model/guard integration", "This development trial cannot authorize release or establish independent accuracy"]
+}

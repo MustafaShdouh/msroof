@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Source-bound assistant weak policy review of a frozen paired control",
+  "sourceFixture": "tests/fixtures/paired_movement_cases.json",
+  "sourceFixtureSha256": "68c01fb8fc6eb3f9699074e5978ed3fd143570bdacc3491868bc4e42ccaa9010",
+  "caseId": "chat",
+  "textSha256": "af138327e6ca4a5cd34b52f70788e09dea0eacbe03ce13ae7ba843eebbd46a9c",
+  "previous": {
+    "contractVersion": "1.0.0",
+    "transactionStatus": "uncertain",
+    "trackingDecision": "review",
+    "reasonCodes": [
+      "completion_unresolved",
+      "direction_unresolved"
+    ],
+    "amount": 7.333,
+    "currency": "JOD",
+    "currencyResolution": "explicit",
+    "direction": "uncertain",
+    "transferRelationship": "not_transfer",
+    "merchantOrCounterparty": null,
+    "expenseCategory": null,
+    "categoryStatus": "not_applicable"
+  },
+  "current": {
+    "contractVersion": "1.0.0",
+    "transactionStatus": "non_transaction",
+    "trackingDecision": "exclude",
+    "reasonCodes": [
+      "personal_conversation"
+    ],
+    "amount": null,
+    "currency": null,
+    "currencyResolution": "not_applicable",
+    "direction": "not_applicable",
+    "transferRelationship": "not_applicable",
+    "merchantOrCounterparty": null,
+    "expenseCategory": null,
+    "categoryStatus": "not_applicable"
+  },
+  "changes": {
+    "transactionStatus": "non_transaction",
+    "trackingDecision": "exclude",
+    "reasonCodes": [
+      "personal_conversation"
+    ],
+    "amount": null,
+    "currency": null,
+    "currencyResolution": "not_applicable",
+    "direction": "not_applicable",
+    "transferRelationship": "not_applicable"
+  },
+  "rationale": "First-person chat framing is not a completed financial notification. Preserve the original fixture and frozen before result; explicitly require nontransaction/exclude for current live conformance and non-promotion by ownership confirmation.",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false
+}

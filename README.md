@@ -1,13 +1,20 @@
 # Masroof
 
-An offline engine for Jordanian bank and wallet SMS, in Arabic and English. It identifies completed transactions, extracts amounts and direction, preserves exact party names, and categorizes spending when the message supplies enough context. Missing or ambiguous currency defaults to JOD with a visible marker.
+An offline engine for Jordanian bank and wallet SMS, in Arabic and English. Current work focuses on transaction recognition, amount/currency and incoming/outgoing direction. Categorization and business-name prediction are deferred; existing category APIs remain for compatibility. Missing or ambiguous currency defaults to JOD with a visible marker.
 
 Person-to-person transfers count. Own-account transfers are excluded. Unclear completion, direction or ownership requires review. The mobile app is maintained separately.
 
 ## Start here
 
+- [Active core-money roadmap](docs/CORE_MONEY_ROADMAP.md): scope, target architecture, ordered milestones, measured test gaps and pending policy decisions. This supersedes older research next-step proposals below.
+- [Core readiness audit](docs/CORE_MONEY_READINESS.md): current label coverage, independent-evidence gaps, tester/API differences and dependencies to preserve before cleanup.
+- [Validation preflight](docs/CORE_VALIDATION_PREFLIGHT.md): private future-data intake, exposure holds and required model initialization; no automatic scoring or admission.
+- [Jordan validation sources](docs/JORDAN_SMS_VALIDATION_SOURCING.md): checked public leads, their limitations and a small collection plan; no qualifying independent public corpus confirmed.
 - [Architecture and file map](docs/ARCHITECTURE.md): where code belongs, active versus research components, and recovery.
-- [Transaction contract](docs/TRANSACTION_BEHAVIOR.md): current rules and the proposed optional ownership API.
+- [ML readiness and experiment results](docs/REFACTOR_REVIEW.md): data limitations, completed preparation and measured candidates.
+- [Training coverage and next milestone](docs/SMS_DATA_COVERAGE.md): missing event types, the74-message authored batch and the next research proposal.
+- [SMS annotations and weak text reviews](data/annotations/sms_semantics_v1/README.md): reference-only drafts,80 reviewed representatives, evidence rules, and admission blockers.
+- [Transaction contract](docs/TRANSACTION_BEHAVIOR.md): current rules and the optional ownership-confirmation API.
 - [Measured behavior](docs/BEHAVIOR_EVALUATION.md): development results, known gaps and rejected candidates.
 - [Entity research](docs/BIO_EVALUATION.md): corrected BIO labels and isolated experiments.
 
@@ -50,8 +57,8 @@ The runner discovers all Python test modules and TypeScript suites, then checks 
 # Validate the transaction contract
 py -X utf8 tools/contracts/validate_transaction_behavior.py
 
-# Reproduce the current source-bound layout/behavior measurement
-py -X utf8 -m training.evaluation.detailed --run-id cleanup_layout_v1 --check
+# Check ownership controls and unchanged no-context behavior
+py -X utf8 -m training.evaluation.arabic_semantics --run-id arabic_message_semantics_v1 --check
 
 # Check transaction candidate inputs without fitting
 py -X utf8 -m training.transactions.train --check-inputs
@@ -62,11 +69,43 @@ py -X utf8 tools/browser/build_tester_ui.py
 
 Open [the tester](tools/browser/tester.html). It uses the canonical TypeScript bundle. Its detailed assessment comparison supports review/uncertainty; the default legacy caller path is retained while compatibility is evaluated.
 
+Expand **Try an ownership confirmation** to test a transfer with an explicit
+**My own accounts**, **Another person**, or **I'm not sure** choice. The panel shows
+the optional assessment separately. Editing the message or sender, changing the
+contact setting, loading a sample, choosing **New message**, or refreshing clears
+the confirmation. It stays in page memory and is never saved as a training label.
+The **Paired debit / credit** sample now supports this panel: confirming own accounts
+excludes the completed movement; confirming another person keeps review when the
+message does not resolve direction.
+The primary **Message-only assessment** shows include/review/exclude, completion,
+amount, visible currency defaults, direction, ownership and reasons from the
+repaired parser. **Legacy comparison** retains the previous caller in a collapsed
+panel. Ownership confirmations remain separate from the message-only result.
+If startup checks fail, the page shows **Engine not ready** and does not analyze
+messages. This is separate from include, review and exclude decisions.
+
 For merchant review, use `py -m training.categories.review --help` and [the labeling workflow](data/annotations/MERCHANT_REVIEW.md). Merchant-name research is separate from transaction-purpose classification; its reserved final identities must remain untouched.
 
 ## Runtime versus research
 
 Python callers import `MasroofEngine` from `src.python.engine`. TypeScript callers use `src/typescript/MasroofEngine.ts`. The active weights remain `data/models/masroof_model.json`. Research models, reports and reservations retain their original paths and bytes so prior results remain auditable; they are not automatically loaded as replacements.
+
+To try the saved transaction/direction candidate, open `tools/browser/tester.html`
+and expand **Try the trained model** in Analysis. This optional local comparison
+shows learned predictions separately from existing extraction and recording
+checks. **Research model** lets you switch between **Word reference** (the default)
+and **Word sequences · experimental**. The latter has known regressions, including
+an OTP false acceptance. Neither replaces the current engine; see
+[tester instructions and measured limits](docs/SMS_DATA_COVERAGE.md#completion-context-experiment-2026-10-27).
+
+The [next completion-model proposal](docs/SMS_DATA_COVERAGE.md#proposed-pretrained-completion-benchmark-2026-10-27)
+compares a frozen pretrained multilingual encoder before investing in a compact
+sequence student. It is a proposed research benchmark; no new model has been
+trained or selected for deployment.
+
+For an explicit human ownership confirmation, use `predict_with_ownership(request)`
+or `analyzeWithOwnership(request)`; see the transaction contract for the message-bound
+request. Existing detailed and legacy entry points keep their behavior.
 
 Historical reports bind their original code hashes. Run historical reproduction from those recorded sources, not by overwriting frozen artifacts to match relocated code. The new cleanup report records the current paths. Training, final evaluation and model promotion remain separate decisions.
 

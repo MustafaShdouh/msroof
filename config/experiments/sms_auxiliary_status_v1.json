@@ -1,0 +1,332 @@
+{
+  "runId": "sms_auxiliary_status_v1",
+  "status": "approved_implementation",
+  "ownerApproval": {
+    "date": "2026-10-28",
+    "instruction": "go",
+    "scope": "Implement, execute and audit the fixed one-run primary-status/auxiliary-context-event experiment; no reserved inference"
+  },
+  "trainingRunsAuthorized": 1,
+  "proposedTrainingRuns": 1,
+  "scope": "One local CPU research run; direct status decision with auxiliary context/event supervision; frozen v2 direct control reused. No automatic deployment or reserved evaluation.",
+  "architecture": {
+    "baseModel": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "baseSafetensorsSha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+    "baseCheckpoint": "Pinned original pretrained encoder only; never initialize from adapted/control weights",
+    "trainableEncoderModules": [
+      "encoder.layer.10",
+      "encoder.layer.11"
+    ],
+    "trainableEncoderParameters": 3548928,
+    "freeze": "Embeddings, encoder layers0..9 and pooler; no backbone architecture changes",
+    "headInitialization": "All head weights and biases exactly zero. Dedicated batch-order RNG is independent of constructor RNG.",
+    "mode": "CPU float32, entire model eval mode/dropout disabled, gradients enabled only for selected encoder tensors and heads",
+    "pooling": "Published attention-mask mean pooling over final hidden states including unmasked specials,384dims; no normalization",
+    "input": "Exactly original research normalize(text), pinned tokenizer, padding longest batch, max128 including specials, truncation=False; stop on overflow",
+    "trustRemoteCode": false,
+    "threads": 2
+  },
+  "cohort": {
+    "path": "data/reports/transactions/sms_factorization_comparison_v1_cohort.json",
+    "trainingViewSha256": "e169213308c680ba7e5210ad6922ec6f8dee77f0f14c11d3539f2d22697919a3",
+    "encoding": "Rows returned by prepare_view(): ordered original full_annotations then uncertainty_annotations, holds excluded; keys recordId,text,group,weight,status,context,event. JSON ensure_ascii=False,sort_keys=True,separators=(',',':'),UTF8,no newline.",
+    "rows": 1177,
+    "groups": 129,
+    "totalWeight": 129,
+    "holdsExcluded": 17,
+    "targets": {
+      "non_transaction": 532,
+      "completed": 611,
+      "uncertain": 34
+    },
+    "weightRule": "Recompute weight=1/nonheld record count in each source group after selecting union; same exact row weights for both arms and heads",
+    "targetRule": "Three heads use unchanged status and reviewed context/event targets on the same rows; status alone decides. No source relabeling.",
+    "metadataInput": false,
+    "evidenceSpansInput": false,
+    "canonicalFlagsChanged": false,
+    "uncertainty": "34 nonheld original-uncertain source rows are valid three-way targets, not negative examples.17 interpretation holds excluded from both arms entirely."
+  },
+  "training": {
+    "seed": 20261028,
+    "epochs": 3,
+    "batchSize": 8,
+    "dropLast": false,
+    "batchesPerEpoch": 148,
+    "shuffle": "Dedicated CPU torch.Generator seed20261028; reproduce all3stored direct-control epoch orders before training",
+    "optimizer": "AdamW",
+    "encoderLearningRate": 2e-05,
+    "headLearningRate": 0.0002,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "weightDecay": 0.01,
+    "decayScope": "All trainable weights and biases including LayerNorm; frozen parameters excluded",
+    "foreach": false,
+    "fused": false,
+    "amsgrad": false,
+    "gradientClipGlobalNorm": 1.0,
+    "minibatchLoss": "1177/(129*b) * sum_i(base_group_weight_i * ((5/6)*statusCE_i+(1/12)*contextCE_i+(1/12)*eventCE_i)); unreduced per-head class-balanced CE, b actual",
+    "classReweighting": {
+      "method": "Fixed training-only inverse group-weighted class frequency per head:alpha_c=W/(K*mass_c); rational masses from1/group_size, W129. Same method for direct control and each factorized head.",
+      "heads": {
+        "status": {
+          "groupWeightedClassMass": {
+            "non_transaction": "277/4",
+            "completed": "219/4",
+            "uncertain": "5"
+          },
+          "factorRationals": {
+            "non_transaction": "172/277",
+            "completed": "172/219",
+            "uncertain": "43/5"
+          },
+          "factors": {
+            "non_transaction": 0.6209386281588448,
+            "completed": 0.7853881278538812,
+            "uncertain": 8.6
+          }
+        },
+        "context": {
+          "groupWeightedClassMass": {
+            "known_other": "91/4",
+            "financial_notice": "155/2",
+            "question_or_request": "15",
+            "personal_conversation": "19/2",
+            "instruction_or_example": "13/4",
+            "unknown": "1"
+          },
+          "factorRationals": {
+            "known_other": "86/91",
+            "financial_notice": "43/155",
+            "question_or_request": "43/30",
+            "personal_conversation": "43/19",
+            "instruction_or_example": "86/13",
+            "unknown": "43/2"
+          },
+          "factors": {
+            "known_other": 0.945054945054945,
+            "financial_notice": 0.27741935483870966,
+            "question_or_request": 1.4333333333333333,
+            "personal_conversation": 2.263157894736842,
+            "instruction_or_example": 6.615384615384615,
+            "unknown": 21.5
+          }
+        },
+        "event": {
+          "groupWeightedClassMass": {
+            "unknown": "105/4",
+            "completed": "267/4",
+            "no_event": "89/4",
+            "not_completed": "55/4"
+          },
+          "factorRationals": {
+            "unknown": "43/35",
+            "completed": "43/89",
+            "no_event": "129/89",
+            "not_completed": "129/55"
+          },
+          "factors": {
+            "unknown": 1.2285714285714286,
+            "completed": 0.48314606741573035,
+            "no_event": 1.449438202247191,
+            "not_completed": 2.3454545454545452
+          }
+        }
+      },
+      "implementation": "Compute each alpha as frozen rational then cast float32 once; cross_entropy(weight=alpha,reduction=none); combine base row weights externally. Never weighted-mean reduction inside minibatch.",
+      "limits": "Base group weights are identical across arms and sum1/group; class balancing intentionally changes effective per-class/per-group loss contributions differently for each task. Unknown context21.5x is supported by only8 related examples; no generalization or probability-calibration claim."
+    },
+    "labelSmoothing": 0.0,
+    "auxiliarySpanLoss": false,
+    "pairwiseLoss": false,
+    "distillation": false,
+    "gradientAccumulation": 1,
+    "mixedPrecision": false,
+    "scheduler": null,
+    "warmup": 0,
+    "earlyStopping": false,
+    "checkpointSelection": "Exactly3epochs; final checkpoint only; training-sentinel reload check before diagnostics",
+    "determinism": "Seed Python/NumPy/Torch; torch.use_deterministic_algorithms(True); abort unsupported operations",
+    "search": false,
+    "maximumOptimizerSteps": 444,
+    "proposedRuns": 1
+  },
+  "heads": {
+    "status": [
+      "uncertain",
+      "non_transaction",
+      "completed"
+    ],
+    "context": [
+      "unknown",
+      "known_other",
+      "question_or_request",
+      "personal_conversation",
+      "instruction_or_example",
+      "financial_notice"
+    ],
+    "event": [
+      "unknown",
+      "no_event",
+      "not_completed",
+      "completed"
+    ]
+  },
+  "parameters": {
+    "encoder": 3548928,
+    "statusHead": 1155,
+    "contextHead": 2310,
+    "eventHead": 1540,
+    "totalTrainable": 3553933
+  },
+  "lossCoefficients": {
+    "status": "5/6",
+    "context": "1/12",
+    "event": "1/12"
+  },
+  "decision": {
+    "rule": "argmax(status head) in declared order; first class wins ties",
+    "auxiliaryOverride": false,
+    "confidenceCalibrated": false,
+    "recordingPolicyChanged": false
+  },
+  "baseline": {
+    "runId": "sms_factorization_comparison_v2",
+    "arm": "direct_status",
+    "refit": false,
+    "initializeCandidateFrom": "Original pinned pretrained encoder only, never direct/adapted weights",
+    "requiredMatches": [
+      "same1177rowIDs/texts/targets/baseweights",
+      "initialEncoderHashes",
+      "all3epochOrders",
+      "zero status head",
+      "same optimizer/settings/environment"
+    ]
+  },
+  "evaluation": {
+    "contract": "config/contracts/sms_diagnostic_evaluation_v1.json",
+    "savedReport": "data/reports/transactions/sms_factorization_comparison_v2.json",
+    "preflight": "Call content_preflight on entire scored development/control set before fitting; exact declared in-sample exception only",
+    "statusMetrics": "Three-way confusion per cohort/language and uncertainty reason; uncertain is neither correct rejection nor completion; deduplicate strict benefit by raw text hash",
+    "componentMetrics": "Context/event confusion and both-field exactness only on existing32componentdev weaklabels; absent known_other/no_event truth unsupported; diagnostic only, no all-exact gate",
+    "auxiliaryDisagreement": "Report status versus old fixed context/event projection per row; never override status or describe auxiliary explanations as reliable without evidence",
+    "references": "Frozen v2 direct control primary, v2 factorized and four binary references saved outputs only; binary uncertainty unsupported",
+    "gates": {
+      "definiteNontransaction": "Every N -> N, including all quote controls; U is unnecessary deferral, not correct rejection",
+      "uncertain": "Every U -> U, separately verify outcome/frame/scope-policy reasons",
+      "completed": "Misses C->N/U no worse than frozen direct control AND best fixed reference in each cohort/language incl quote controls",
+      "regressions": "No frozen-direct-correct status case may become wrong",
+      "benefit": "At least one unique primary direct error fixed; no quote-only/in-sample benefit counts",
+      "inSample": "Known exposed control remains correct; never claim it is unseen",
+      "failure": "Stop, preserve evidence; no retry/refit/threshold tuning or promotion"
+    },
+    "historicalGateUnchanged": true,
+    "reservedInferenceAuthorized": false,
+    "merchantFinalInferenceAuthorized": false,
+    "reserved": "No reserved encoder input, annotation or scoring even if development gates pass. Existing split assembly may read source rows to preserve masks; do not construct reserved evaluation batches.",
+    "independentAccuracy": false
+  },
+  "budget": {
+    "trainingWorkerSeconds": 480,
+    "evaluationWorkerSeconds": 240,
+    "maximumAllWorkerSeconds": 720,
+    "workingSetBytes": 6442450944,
+    "additionalArtifactBytes": 2147483648,
+    "sampleIntervalSeconds": 1,
+    "threads": 2,
+    "sequential": true,
+    "retries": 0,
+    "monitor": "tools/evaluation/worker_supervision.py",
+    "deadline": "Entire actual interpreter from identity handshake, includes preflight/load/train/save/reload",
+    "newDownloads": false,
+    "newDependencies": false,
+    "cuda": false,
+    "failure": "Exclusive attempt and arm ledgers before fitting; any resource/numerical failure consumes attempt; no resume/partial evaluation"
+  },
+  "outputs": {
+    "cache": ".local-backups/sms_auxiliary_status_v1",
+    "publicPrefix": "data/reports/transactions/sms_auxiliary_status_v1",
+    "checkpoint": "Ignored encoder-last2+three-head delta; still requires full471MBbase",
+    "forbidden": [
+      "app/tester integration",
+      "student",
+      "category/entity/direction fitting",
+      "reserved scoring",
+      "new labels/data",
+      "hyperparameter/threshold/model search",
+      "commit/push"
+    ]
+  },
+  "requiredChecks": [
+    "Verify all frozen hashes and original view exactly",
+    "Run content guard and verify metadata-only roles/reasons before first step",
+    "Compare initial encoder hashes and stored epoch orders with frozen direct attempt; abort on mismatch, no refit of baseline",
+    "Zero all head weights/biases; verify selected parameter names/counts",
+    "Finite losses/gradients/weights, no frozen gradients; hash frozen tensors before/after",
+    "Reload base+delta and reproduce exact logits on first8training rows only",
+    "Persist intended diagnostic batch IDs before encoding; no diagnostic checkpoint selection",
+    "Independent metrics/gates/slices/checkpoint/resources audit; no reserved IDs journaled"
+  ],
+  "frozenInputs": {
+    "data/reports/transactions/sms_semantics_followup_v1_cohort.json": "9c91de7551e9cb65f04eeba89edef0ddd7308d2e3cd700e9dbf9da1b13a383b8",
+    "data/reports/transactions/sms_semantics_followup_v1.json": "cedd066e3a35a01ceef96b6e527b0de7a3ad673690ae17481ce5ca254c22d080",
+    "data/reports/transactions/sms_completion_context_v1.json": "e1b4127fae4c674a91dfe122d98a85485c384278728e65abd7fa0e2473be9f09",
+    "data/models/sms_semantics_followup_v1_word_candidate.json": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121",
+    "data/models/sms_completion_context_v1_candidate.json": "fad7f42560fae5dfbf55c7c070013e7e95b1eb008c67434219165207891cd73c",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/training/authored_sms_v1/messages.jsonl": "18ca9e8b943a484ddab90b0f1536d3fed43d546b2d148a3e484591bdf02d409f",
+    "data/training/authored_sms_context_v1/scenarios.json": "2f1b1d2f03a12d3a776d4c3b24dbd743858940b57ac232b9bea7bfbc69297ae7",
+    ".local-backups/sms_research_manual_v1/cases.json": "b1d582d32af849578565ba5404fad96e1922aad873d344d27ae803457c34d875",
+    "tests/fixtures/quoted_example_cases.json": "0b51454d63b3d41914bbf4daab7a24b34ffe9ffc4c7199cf524160e1e8539965",
+    "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8",
+    "src/python/research/sms_semantics.py": "0eab832392fbcf737a6f9d82102310018eaed13734c7aad977c19e177ebd5d4d",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "config/experiments/sms_completion_encoder_v1.json": "30d9eae6350b5d42be638b5571c2c12045a67459a8c6a75e4527b205086b0b12",
+    "training/transactions/completion_encoder.py": "5855214afeba920074409da9621355f54e2092e4718d198fa122987325d4c99a",
+    "data/models/sms_completion_encoder_v1_candidate.json": "8080e66ef95ff87d8f8d5d461b7dd825c7fc7467ed397c4ecf92d11896700889",
+    "data/reports/transactions/sms_completion_encoder_v1.json": "6b6233a56430224f6983a7ea5f64bee2f6f251baee26021c36b0932f77f60e45",
+    "data/annotations/sms_scope_v1/scenarios.txt": "964439ce1a78604f25ff9b0842fd2b6caf932994ff638b9648ead4240abfc999",
+    "data/annotations/sms_scope_v1/manifest.json": "e9cd9beb688bc0f418e466c57f3c344e34c8fe49c9add6df63445435d66a550a",
+    "data/training/authored_sms_scope_v1/messages.jsonl": "a1c67be6a114a9936702ebac948c97d2d1a87bd2955ad64290f845d1d2bfaea2",
+    "data/reports/transactions/sms_scope_v1_preparation.json": "8382903448404c97739935cb49d71f9439031d99ad03a4f8b429bed37965255e",
+    "training/corpus/scope_contrasts.py": "966a91e73ec82bf06657b3e244a14306c6cff3119a83fd7ce2c2cd43cfd367db",
+    ".local-backups/sms_completion_encoder_v1/requirements.lock.txt": "bb9298d873ca20862ea37956b71361f72a511ae3fd0460ea996f6fd13f242c85",
+    "config/experiments/sms_completion_adaptation_v1.json": "aa48190817be42863ee8a1d39b271a0a5bed562e6e67d0207e6613228a1a4b56",
+    "training/transactions/completion_adaptation.py": "3e434f9bc9b546d85cfee5302b20f4e7c0cc48f99c50cf2c1b60f1af31195261",
+    "data/reports/transactions/sms_completion_adaptation_v1.json": "b3a886e2ad503511c5abac0afbc63a973ce78d02dce890b39ca3341f489096b7",
+    "data/reports/transactions/sms_completion_adaptation_v1_resource_audit.json": "a7ffc61ec6918e1740f40fa086bdca3fbc2a51c8ef21d6aba478bb87373e38c6",
+    "tools/evaluation/python_worker_monitor.py": "bb1aefc0d7a7f83bd7b2aae2c753d0dd63e48f8f2ceda3bedb8d90eb63678145",
+    "training/transactions/factorization_protocol.py": "d21828372cec9773296682c57fc24ba2cbc0fc1f3c2738a36bf3c61587991cf6",
+    "config/contracts/sms_factorization_annotations.json": "a8c13bde25855671e6176885f4423b1a9a1c37dce45cd34e517674b979508f6f",
+    "data/annotations/sms_factorization_v1/full_annotations.jsonl": "3e4aac5cc4c427598b76d21b54911f9bb78027dd9d76135babe541a29af1b677",
+    "data/annotations/sms_factorization_v1/uncertainty_annotations.jsonl": "8ef6cd3bfa7f119891317043b6ec3d998b47aa449657dd2f7ef39ccf759600a1",
+    "data/reports/transactions/sms_factorization_v1_full.json": "2d659bc99a7fa048b4cf584c114fab4927c2f9c66d600e625ad861be09dab658",
+    "data/reports/transactions/sms_factorization_v1_uncertainty.json": "150e1814354e835f79f9952c7d113d0293d8b86a16127bae35545c86b8f60372",
+    "training/corpus/factorization_full.py": "d395846be1a0e59fb71ddf15af262599f7c18f9207672763046206c09b883238",
+    "training/corpus/factorization_uncertainty.py": "6e2d8fc76f01657862ed09e7df40855446dbbb8bed0d4c7395eb729493b7c812",
+    "training/corpus/factorization_pilot.py": "493342a87dec946bb6afe5af9018ba564ca9cb9368046ad4ea7bd4405b7ef98a",
+    "training/corpus/factorization_supplement.py": "f40ec7d9766366a87911dc956dcc055e99fc34ee69549eb2065194d7e305a637",
+    "data/reports/transactions/sms_factorization_comparison_v1_cohort.json": "ba54cf0bdb45851aaf1b71e7dcb205bc95c6108c7d17b9a2430c9499058af180",
+    "data/annotations/sms_factorization_eval_v1/development_annotations.jsonl": "92799a5c97bde714a4d985f8c141c2c3c9a38145cf8ed9f24d9e2214d2e29c8c",
+    "data/annotations/sms_factorization_eval_v1/development_reviews.tsv": "2a26a10b6374a048aefc089d4a9dfe3d016f06229080812fcf9e078fbe124e2e",
+    ".local-backups/sms_completion_adaptation_v1/final.safetensors": "fdb0869f7f5cc33ad406835ceefa4b14c71ece8a4d2da4b5e1599aad87cc0fd1",
+    "tools/evaluation/worker_supervision.py": "221433b5b6d77e9e22bd1dc672e7096af723fe67a5297a7a8ffb2bd2fe64dda0",
+    "training/transactions/factorization_comparison.py": "e00e5fc818222573b3e5708c06f6ee5bddc7fb7e36db6ea4045d8bc11b5eb262",
+    "config/experiments/sms_factorization_comparison_v1.json": "f9894b73e0d620ef6f3e1366801b21ae56b548c1117c26b13d5c2e23de188234",
+    "config/experiments/sms_factorization_comparison_v2.json": "329305d4620e34ceb133f458722175196f302e1ca957078843f9fdb5d1509638",
+    "training/transactions/factorization_comparison_v2.py": "06f419ffa517d09450cd09398373307cafa5fbc75a4b5c31f221e59d3223e297",
+    "data/reports/transactions/sms_factorization_comparison_v2.json": "c7f24ebe15fb0f425e4bdc432877236d569c35289f9b7c1260e8a66c4b4fedeb",
+    "config/contracts/sms_diagnostic_evaluation_v1.json": "753f16846df29be0175859a03eea0e41f790eedadf2a32ecfe7a9dd62c31c716",
+    "data/reports/transactions/sms_diagnostic_evaluation_v1.json": "61563ceef183f7e9f71a560a45ad49f801093412b3049348065543f4ec35e318",
+    "training/evaluation/content_preflight.py": "d16de1bfc6a5edaaa8a11d645f1cb3858bf730acf7496a4a89092ac64c477975",
+    "tools/evaluation/build_sms_evaluation_contract.py": "c414b038294e94903b5b24f78d9a0b4779bd39973bd2f8a11eeb75ae45fd49b6",
+    ".local-backups/sms_factorization_comparison_v2/direct_status/attempt.json": "9f46b8937bd5d559990b283b7be701cd34f572e08619cc3e9c1a7881fd31b38a",
+    ".local-backups/sms_factorization_comparison_v2/direct_status/result.json": "a0a56e03e4aefaa4f50ed9768ddc7aa9bc0e752ddb0b677dd248bf0730db7c9e",
+    ".local-backups/sms_factorization_comparison_v2/direct_status/final.safetensors": "ca83908ed1cc879c7527f0fd0d13e6e4b786ea4e11dc0fadc4080c7b7c847a42",
+    "training/transactions/auxiliary_status_protocol.py": "c3340261cde1a4cc26a7363d75b0f8160fa23e41cf79f211567cdd6c11dc2009",
+    "data/reports/transactions/sms_auxiliary_status_v1_design_preflight.json": "01dd38aaa2a2580958f7ba3fe5008987fba20ad65eef65d0293050f4f9cef8a3"
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "dataKind": "assistant_authored_development_controls",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "cases": [
+    {
+      "id": "english_shared_amount",
+      "text": "JOD 7.333 has been debited from 8452*834 and has been credited to 1741*349 on 09/05/2001. Balance JOD 43.353",
+      "recognized": true,
+      "expect": {}
+    },
+    {
+      "id": "english_account_abbreviations",
+      "text": "JOD 7.333 debited from Acc. *1111 and credited to Acc. *2222.",
+      "recognized": true,
+      "expect": {}
+    },
+    {
+      "id": "english_account_labels",
+      "text": "JOD 7.333 debited from account *1111 and credited to account *2222.",
+      "recognized": true,
+      "expect": {}
+    },
+    {
+      "id": "english_x_masks",
+      "text": "JOD 7.333 debited from xxxx1111 and credited to xxxx2222.",
+      "recognized": true,
+      "expect": {}
+    },
+    {
+      "id": "foreign_currency",
+      "text": "USD 7.333 debited from *1111 and credited to *2222.",
+      "recognized": true,
+      "expect": {
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "arabic_added_amount",
+      "text": "تم خصم مبلغ 7.333 دينار من حساب *1111 وتم إضافة المبلغ إلى حساب *2222. الرصيد 43.353 دينار",
+      "recognized": true,
+      "expect": {}
+    },
+    {
+      "id": "arabic_pronoun",
+      "text": "تم خصم 7.333 دينار من الحساب *1111 وإضافته إلى الحساب *2222.",
+      "recognized": true,
+      "expect": {}
+    },
+    {
+      "id": "arabic_posted",
+      "text": "تم خصم مبلغ JOD 7.333 من حساب *1111 وتم قيد نفس المبلغ إلى حساب *2222.",
+      "recognized": true,
+      "expect": {}
+    },
+    {
+      "id": "arabic_diacritics",
+      "text": "تَمَّ خَصْمُ مَبْلَغِ 7.333 د.أ مِنْ حِسَابِ *1111 وَتَمَّ إِضَافَةُ الْمَبْلَغِ إِلَى حِسَابِ *2222.",
+      "recognized": true,
+      "expect": {}
+    },
+    {
+      "id": "explicit_own_text",
+      "text": "تم خصم مبلغ 7.333 دينار من حسابك *1111 وتم إضافته إلى حسابك *2222.",
+      "recognized": true,
+      "expect": {
+        "transferRelationship": "own_accounts",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "same_identifier",
+      "text": "JOD 7.333 debited from *1111 and credited to *1111.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "separate_sentences",
+      "text": "JOD 7.333 debited from *1111. Credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "unlinked_clauses",
+      "text": "JOD 7.333 debited from *1111; later credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "different_amounts",
+      "text": "JOD 7.333 debited from *1111 and JOD 8.333 credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "repeated_amount",
+      "text": "JOD 7.333 debited from *1111 and JOD 7.333 credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "missing_destination",
+      "text": "JOD 7.333 debited from *1111 and credited to LOCAL PERSON.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "wrong_endpoint_roles",
+      "text": "JOD 7.333 debited to *1111 and credited from *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "card_endpoints",
+      "text": "JOD 7.333 debited from card *1111 and credited to card *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "reference_endpoints",
+      "text": "JOD 7.333 debited from reference 1111 and credited to reference 2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "bare_ids",
+      "text": "JOD 7.333 debited from 1111 and credited to 2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "amount_only_in_balance",
+      "text": "Balance JOD 7.333. Debited from *1111 and credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "missing_amount",
+      "text": "Debited from *1111 and credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "extra_amount",
+      "text": "JOD 7.333 debited from *1111 and credited to *2222. Fee JOD 1.000.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "extra_event",
+      "text": "JOD 7.333 debited from *1111 and credited to *2222. A purchase completed.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "purchase_prefix",
+      "text": "Card purchase completed. JOD 7.333 debited from *1111 and credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "requested",
+      "text": "Please approve: JOD 7.333 has been debited from *1111 and has been credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "failed",
+      "text": "JOD 7.333 has been debited from *1111 and has been credited to *2222, but the operation failed.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "conditional",
+      "text": "If JOD 7.333 has been debited from *1111 and has been credited to *2222, check later.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "future",
+      "text": "JOD 7.333 will be debited from *1111 and will be credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "chat",
+      "text": "I just sent this: JOD 7.333 has been debited from *1111 and has been credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "otp",
+      "text": "Use OTP 481763 to authorize: JOD 7.333 has been debited from *1111 and has been credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "arabic_requested",
+      "text": "يرجى دفع المبلغ: تم خصم مبلغ 7.333 دينار من حساب *1111 وتم إضافة المبلغ إلى حساب *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "arabic_failed",
+      "text": "تم خصم مبلغ 7.333 دينار من حساب *1111 وتم إضافة المبلغ إلى حساب *2222، لكن فشلت العملية.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "arabic_separate",
+      "text": "تم خصم مبلغ 7.333 دينار من حساب *1111. تم إضافة المبلغ إلى حساب *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "arabic_competing_amount",
+      "text": "تم خصم مبلغ 7.333 دينار من حساب *1111 وتم إضافة مبلغ 8.333 دينار إلى حساب *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "arabic_same_identifier",
+      "text": "تم خصم مبلغ 7.333 دينار من حساب *1111 وتم إضافة المبلغ إلى حساب *1111.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "arabic_conditional",
+      "text": "إذا تم خصم مبلغ 7.333 دينار من حساب *1111 وتم إضافة المبلغ إلى حساب *2222، انتظر الإشعار.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "arabic_example",
+      "text": "مثال: تم خصم مبلغ 7.333 دينار من حساب *1111 وتم إضافة المبلغ إلى حساب *2222.",
+      "recognized": false,
+      "expect": {}
+    },
+    {
+      "id": "reported_speech",
+      "text": "He said: JOD 7.333 debited from *1111 and credited to *2222.",
+      "recognized": false,
+      "expect": {}
+    }
+  ],
+  "ownershipControlOverrides": {
+    "paired_unrecognized": {
+      "contextStatus": "applied",
+      "contextReason": "confirmed_relationship",
+      "sameAsBody": false,
+      "expect": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "other_person",
+        "categoryStatus": "not_applicable",
+        "amount": 20
+      }
+    }
+  },
+  "evidenceVersion": "1.0.4"
+}

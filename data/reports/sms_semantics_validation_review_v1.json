@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "scope": "Separate source-text weak validation review; no predictions, legacy-label import, fitting or admission",
+  "reviewedValidationRepresentatives": 22,
+  "weakFieldAnnotations": 212,
+  "blockedRepresentatives": 4,
+  "unblockedRepresentatives": 18,
+  "statusCounts": {
+    "non_transaction": 16,
+    "completed": 5,
+    "uncertain": 1
+  },
+  "trackingCounts": {
+    "exclude": 16,
+    "review": 3,
+    "include": 3
+  },
+  "unblockedStatusCounts": {
+    "non_transaction": 14,
+    "completed": 4
+  },
+  "unblockedTrackingCounts": {
+    "exclude": 14,
+    "review": 2,
+    "include": 2
+  },
+  "unblockedCompletedDirectionCounts": {
+    "outgoing": 2,
+    "incoming": 2
+  },
+  "unknownOwnershipRepresentatives": 2,
+  "unannotatedValidationDescendants": 396,
+  "trainingEligibleRecords": 0,
+  "independentEvaluationEligibleRecords": 0,
+  "studentPredictionsUsed": false,
+  "modelFitted": false,
+  "reservedMerchantFinalInferred": false,
+  "limits": [
+    "Assistant judgments are weak labels, not independent human gold or accuracy estimates.",
+    "Only 22 source-bound representatives reviewed; no descendant inheritance or fitting.",
+    "Protected/control blocks are retained even where source text was reviewed.",
+    "Uncertain completion leaves other fields unannotated; names do not resolve transfer ownership.",
+    "Both label classes and directions are represented, but four unblocked completed families cannot support precise accuracy claims."
+  ],
+  "inputSha256": {
+    "data/annotations/sms_semantics_v1/propagation_proposal_v1.jsonl": "d8a23890e73d29ef662b909e21f7c5fc494a85d64dc12aabcf492229e383b2da",
+    "data/annotations/sms_semantics_v1/validation_review_queue_v1.jsonl": "ec9de409507d5ba2488ac44076131ed8c34d0a026881ae5c8c6ff79c3d35007b",
+    "data/annotations/sms_semantics_v1/propagation_manifest_v1.json": "60e44bb3ca335c36c93660a7385607c8f1fdd0d2a0b0e3497e5d861127d82eac",
+    "data/reports/sms_semantics_propagation_v1.json": "fa5ff63f9880ae72e541b79a72f7389c5c9f8be2136bdc780ad9162cb4c51cd8",
+    "data/annotations/sms_semantics_v1/validation_review_decisions_v1.json": "0114dc1e8ccd0ebf3ee068fc8ca74c60512839ac879a2d971cf08a41f02419a0",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/training/splits/transaction_direction_sanitized_v1.json": "512af5213d2c34ab3f6f8a501163e261102e3dbf5e7cf52d0439735b204a4668",
+    "training/corpus/validation_semantics.py": "24897c787b3f044f9de311ba3eb73468c764118ae3b01ad3f48826b7858dbd3d",
+    "tests/python/test_sms_validation_review.py": "5e75ad42cad51bd80ad6c58c33ed34384d35c6c19eb9178748ff2f90ca5dacf4",
+    "training/corpus/review_semantics.py": "85ed12b2682f22a42ed9dba2cc741863c5d99665a3f3445c085497ebe37e2ff7",
+    "tools/contracts/validate_sms_semantics.py": "a68d1c2aad74d01e936f17c43859408d5c47408e9a7f76dce5340b18c993710e",
+    "tools/contracts/validate_transaction_behavior.py": "a915648f5132394f522947d4dfba94113a78b37ac0314e8fc3fe06274b8e9af2",
+    "config/contracts/transaction_behavior.json": "e06693e71398f60a220488a779902fc2d38d2ba7c19570df395fddf551e2bf4b",
+    "training/corpus_io.py": "ed29cf5682b3eb514ebc0b149e2f9d47c9fb3d3f478f6b0d692982290f7d2738"
+  }
+}

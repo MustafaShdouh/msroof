@@ -1,8 +1,11 @@
 /** Canonical contract assessment; metadata and classifier scores cannot prove settlement. */
 import rules from '../../config/contracts/transaction_evidence.json' with { type: 'json' };
 import { EntityText } from './EntityText.ts';
+import { MONEY, maskBalances, amounts } from './MoneyCandidates.ts';
+import { initialDirection, resolveRelationship, recordingDecision } from './DirectionPolicy.ts';
 import { isAuthorizationRequest } from './AuthorizationRequest.ts';
 import { isServiceNotice } from './ServiceNotice.ts';
+import { hasAccountDebit, hasAccountCredit } from './AccountMovement.ts';
 
 export interface DetailedInput { text: string; sender?: string | null; isContact?: boolean; receivedAt?: string | null; }
 export interface DetailedResult {
@@ -15,67 +18,22 @@ export interface DetailedResult {
   merchantOrCounterparty: string | null; expenseCategory: string | null;
   categoryStatus: 'assigned' | 'uncertain' | 'not_applicable';
 }
+export interface OwnershipOverride {
+  relationship: 'own_accounts' | 'other_person' | 'unknown'; uncertainDirection: boolean;
+}
 interface Extracted {
   amount: number | null; currency: string; merchantOrParty: string | null;
   originalAmount?: number | null; originalCurrency?: string | null;
 }
 const RX: Record<string, RegExp> = Object.fromEntries(Object.entries(rules.patterns).map(([key, value]) => [key, new RegExp(value, 'i')]));
+const NONCASH_POSTING = new RegExp(rules.patterns.nonCashPosting, 'gi');
+const RESOLVED_PENDING = new RegExp(rules.patterns.resolvedPending, 'gi');
 const PURPOSE = Object.entries(rules.purpose).map(([label, value]) => ({ label, pattern: new RegExp(value, 'i') }));
-const ALIASES: Record<string, string> = Object.fromEntries(Object.entries(rules.currencyAliases).map(([key, value]) => [key.toUpperCase(), value]));
-function escape(value: string) { return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
-const currency = '(?<![A-Za-z\\u0621-\\u064A])(?:' + Object.keys(ALIASES).sort((a, b) => b.length - a.length).map(escape).join('|') + ')(?![A-Za-z\\u0621-\\u064A])';
-const number = "(?<![0-9*.,'’])" + rules.number + '(?![0-9]|[.,][0-9])';
-const MONEY = new RegExp('(' + currency + ')\\s*(' + number + ')|(' + number + ')\\s*(' + currency + ')', 'gi');
-const CURRENCY = new RegExp(currency, 'gi');
-const balanceValue = '(?:' + currency + '\\s*)?[+-]?' + number + '(?:\\s*' + currency + ')?';
-const BALANCE = new RegExp('(?:' + rules.patterns.balance + ')' + rules.patterns.balanceJoin + balanceValue, 'gi');
-const BALANCE_SUFFIX = new RegExp(balanceValue + rules.patterns.balanceSuffix, 'gi');
-const UNMARKED = new RegExp('(?:' + rules.patterns.amountAnchor + ')(' + number + ')', 'gi');
-
-function maskBalances(text: string): string {
-  // Prefixes win: in "20 JOD الرصيد 100 JOD", only 100 is a balance.
-  return text.replace(BALANCE, match => ' '.repeat(match.length))
-    .replace(BALANCE_SUFFIX, match => ' '.repeat(match.length));
-}
-
 function nonTransaction(reasons: string[]): DetailedResult {
   return { contractVersion: '1.0.0', transactionStatus: 'non_transaction', trackingDecision: 'exclude',
     reasonCodes: [...new Set(reasons)].sort(), amount: null, currency: null, currencyResolution: 'not_applicable',
     direction: 'not_applicable', transferRelationship: 'not_applicable', merchantOrCounterparty: null,
     expenseCategory: null, categoryStatus: 'not_applicable' };
-}
-
-function amounts(text: string, extracted: Extracted, parseNumber: (value: string) => number | null): [number | null, string, DetailedResult['currencyResolution']] {
-  let working = maskBalances(text);
-  for (const key of ['date', 'identifier']) working = working.replace(new RegExp(rules.patterns[key], 'gi'), match => ' '.repeat(match.length));
-  const pairs: [number, string][] = [];
-  for (const match of working.matchAll(MONEY)) {
-    const value = parseNumber(match[2] || match[3]);
-    const unit = ALIASES[(match[1] || match[4]).toUpperCase()];
-    if (value !== null && Number.isFinite(value) && value > 0) pairs.push([value, unit]);
-  }
-  const units = new Set(pairs.map(pair => pair[1]));
-  if (!units.size) for (const match of working.matchAll(CURRENCY)) units.add(ALIASES[match[0].toUpperCase()]);
-  const explicit = units.size === 1;
-  const resolution = explicit ? 'explicit' : (units.size || RX.ambiguousCurrency.test(working) ? 'default_ambiguous' : 'default_missing');
-  const unit = explicit ? [...units][0] : 'JOD';
-  if (RX.amountAlternatives.test(working)) return [null, unit, resolution];
-  if (pairs.length === 1) return [pairs[0][0], unit, resolution];
-  if (pairs.length > 1) {
-    const expected = [[extracted.amount, extracted.currency], [extracted.originalAmount, extracted.originalCurrency]];
-    if (pairs.length === 2 && extracted.originalAmount && RX.fx.test(text) &&
-        pairs.every(pair => expected.some(value => value[0] === pair[0] && value[1] === pair[1])) &&
-        expected.every(value => pairs.some(pair => value[0] === pair[0] && value[1] === pair[1]))) {
-      return [extracted.amount, extracted.currency, 'explicit'];
-    }
-    return [null, unit, resolution];
-  }
-  const candidates: number[] = [];
-  for (const match of working.matchAll(UNMARKED)) {
-    const value = parseNumber(match[1]);
-    if (value !== null && Number.isFinite(value) && value > 0) candidates.push(value);
-  }
-  return [candidates.length === 1 ? candidates[0] : null, unit, resolution];
 }
 
 function exactParty(raw: string): string | null {
@@ -94,61 +52,100 @@ function exactParty(raw: string): string | null {
   return null;
 }
 
+function completionEvidence(clause: string): boolean {
+  return RX.completion.test(clause) || RX.postedDebit.test(clause) || RX.postedCredit.test(clause) ||
+    hasAccountDebit(clause) || hasAccountCredit(clause);
+}
+
+function conditionalClause(clause: string): boolean {
+  return RX.conditionalStart.test(clause) && completionEvidence(clause);
+}
+
+
+function personalContext(clause: string): boolean {
+  return RX.chat.test(clause) || RX.personalFrame.test(clause) || RX.reportedSpeech.test(clause) || RX.evidenceInquiry.test(clause);
+}
+
+function pendingClause(clause: string): boolean {
+  return RX.deferred.test(clause.replace(RESOLVED_PENDING, ''));
+}
+
 function completedClause(clause: string, allowPurchase: boolean): boolean {
-  if (RX.completionDenied.test(clause) || RX.reportedSpeech.test(clause)) return false;
+  if (conditionalClause(clause) || RX.completionDenied.test(clause) || personalContext(clause) || RX.outcomeUnknown.test(clause)) return false;
+  // Strip only the noncash posting phrase; keep independent cash evidence.
+  if (RX.nonCashPosting.test(clause)) clause = clause.replace(NONCASH_POSTING, '');
+  if (RX.resolvedPending.test(clause)) clause = clause.replace(RESOLVED_PENDING, '');
   const purchase = allowPurchase && RX.purchaseEvidence.test(clause) && !RX.purchaseUnsettled.test(clause) &&
     !RX.purchaseConditional.test(clause) && !RX.deferred.test(clause) && !RX.declined.test(clause) && !RX.chat.test(clause);
-  return RX.completion.test(clause) || purchase;
+  return completionEvidence(clause) || purchase;
+}
+
+
+function unresolvedCompletion(clauses: string[]): boolean {
+  let noncashSeen = false, financialContext = false, unknown = false, finalUnknown = false;
+  for (let clause of clauses) {
+    if (personalContext(clause) || RX.otpRequest.test(clause) || RX.promotion.test(clause) || isAuthorizationRequest(clause)) continue;
+    if (RX.nonCashPosting.test(clause)) {
+      noncashSeen = true;
+      clause = clause.replace(NONCASH_POSTING, '');
+    }
+    financialContext = financialContext || RX.financialOutcomeContext.test(clause) ||
+      RX.postedDebit.test(clause) || RX.postedCredit.test(clause) || hasAccountDebit(clause) || hasAccountCredit(clause);
+    unknown = unknown || RX.outcomeUnknown.test(clause) || RX.contextUnknown.test(clause);
+    finalUnknown = finalUnknown || RX.finalOutcomeUnknown.test(clause);
+  }
+  if (noncashSeen && !financialContext) return false;
+  return unknown || (financialContext && finalUnknown);
 }
 
 export function assess(input: DetailedInput, extract: (body: string, type: 'INCOME' | 'EXPENSE') => Extracted,
-  parseNumber: (value: string) => number | null, financialCandidate: (text: string) => boolean): DetailedResult {
+  parseNumber: (value: string) => number | null, financialCandidate: (text: string) => boolean,
+  ownershipOverride?: OwnershipOverride): DetailedResult {
   const raw = input?.text;
   if (typeof raw !== 'string' || !raw.trim()) return nonTransaction(['empty_or_malformed']);
-  const text = new EntityText(raw).text;
-  const clauses = text.split(RX.sentence).filter(part => part.trim());
+  const source = new EntityText(raw);
+  const text = source.text;
+  if (!text) return nonTransaction(['empty_or_malformed']);
+  // A trailing conditional must not erase a preceding factual receipt.
+  const clauses = text.split(RX.sentence).flatMap(sentence => sentence.split(RX.conditionalBoundary)).filter(part => part.trim());
   const allowPurchase = !RX.purchaseQualification.test(text);
+  const unresolved = unresolvedCompletion(clauses);
   const hasCompletion = clauses.some(clause => completedClause(clause, allowPurchase));
   const completed: string[] = [], negative: string[] = [], relevant: string[] = [];
   for (const clause of clauses) {
     const complete = completedClause(clause, allowPurchase);
     const reasons: string[] = [];
-    if (RX.chat.test(clause) || RX.reportedSpeech.test(clause)) reasons.push('personal_conversation');
+    if (personalContext(clause)) reasons.push('personal_conversation');
     if (isAuthorizationRequest(clause) || RX.otpRequest.test(clause) || (RX.otp.test(clause) && !hasCompletion)) reasons.push('otp_or_authorization');
     if (RX.declined.test(clause)) reasons.push('declined_or_failed');
-    if (RX.deferred.test(clause) || RX.completionDenied.test(clause) || RX.purchaseConditional.test(clause)) reasons.push('pending_or_requested');
-    if (RX.promotion.test(clause) || (RX.serviceScope.test(clause) && isServiceNotice(clause))) reasons.push('promotion_or_administration');
+    if (conditionalClause(clause) || pendingClause(clause) || RX.completionDenied.test(clause) || RX.purchaseConditional.test(clause)) reasons.push('pending_or_requested');
+    if (((RX.nonCashPosting.test(clause) || RX.administration.test(clause)) && !complete) || RX.promotion.test(clause) || (RX.serviceScope.test(clause) && isServiceNotice(clause))) reasons.push('promotion_or_administration');
     if (complete) completed.push(clause);
     negative.push(...reasons);
     if (!reasons.length) relevant.push(clause);
   }
   const conflicts = !!completed.length && negative.some(reason => reason !== 'promotion_or_administration');
-  if (!completed.length && negative.length) return nonTransaction(negative);
-  if (!completed.length && RX.balanceInquiry.test(text)) return nonTransaction(['balance_only']);
-  if (!completed.length && !RX.financial.test(text)) {
+  if (!completed.length && negative.length && !unresolved) {
+    if (negative.every(reason => reason === 'personal_conversation') && RX.evidenceInquiry.test(text) &&
+        !RX.chat.test(text) && !RX.personalFrame.test(text) && RX.balance.test(text) &&
+        !RX.financial.test(text) && !clauses.some(part => completionEvidence(part))) return nonTransaction(['balance_only']);
+    return nonTransaction(negative);
+  }
+  if (!completed.length && !unresolved && RX.balanceInquiry.test(text)) return nonTransaction(['balance_only']);
+  if (!completed.length && !unresolved && !RX.financial.test(maskBalances(text))) {
     if (RX.balance.test(text)) return nonTransaction(['balance_only']);
     if (!financialCandidate(text)) return nonTransaction(['personal_conversation']);
   }
-  let status: DetailedResult['transactionStatus'] = completed.length && !conflicts ? 'completed' : 'uncertain';
+  let status: DetailedResult['transactionStatus'] = completed.length && !conflicts && !unresolved && !RX.outcomeUnknown.test(text) ? 'completed' : 'uncertain';
   const semantic = relevant.join(' ');
-  const incoming = relevant.some(part => RX.incoming.test(part) ||
-    (RX.transfer.test(part) && RX.transferOwnerRecipient.test(part)));
-  const outgoing = relevant.some(part => (RX.outgoing.test(part) ||
-    (RX.transfer.test(part) && RX.transferOwnerSource.test(part))) && !RX.returnMovement.test(part));
-  let direction: DetailedResult['direction'] = incoming === outgoing || RX.directionDenied.test(text) ? 'uncertain' : (incoming ? 'incoming' : 'outgoing');
-  let relation: DetailedResult['transferRelationship'] = 'not_transfer';
-  if (RX.transfer.test(semantic)) relation = RX.own.test(semantic) ? 'own_accounts' : (RX.otherPerson.test(semantic) ? 'other_person' : 'unknown');
-  if (relation === 'own_accounts') direction = 'not_applicable';
+  let [direction,relation]=initialDirection(text,relevant);
   const extracted = extract(raw, direction === 'incoming' ? 'INCOME' : 'EXPENSE');
-  let [amount, unit, resolution] = amounts(text, extracted, parseNumber);
+  let [amount, unit, resolution] = amounts(text, extracted, parseNumber, source,status==='completed');
   if (completed.filter(part => [...maskBalances(part).matchAll(MONEY)].length > 0).length > 1) {
     status = 'uncertain'; amount = null;
   }
-  let decision: DetailedResult['trackingDecision'] = 'review';
-  if (status === 'completed') {
-    if (relation === 'own_accounts') decision = 'exclude';
-    else if (amount !== null && direction !== 'uncertain' && relation !== 'unknown') decision = 'include';
-  }
+  [direction,relation]=resolveRelationship(text,semantic,amount,negative,direction,relation,ownershipOverride);
+  const decision=recordingDecision(status,amount,direction,relation);
   const purpose = decision === 'include' && direction === 'outgoing' ? PURPOSE.filter(item => item.pattern.test(semantic)).map(item => item.label) : [];
   const label = purpose.length === 1 ? purpose[0] : null;
   const categoryStatus = decision === 'include' && direction === 'outgoing' ? (label ? 'assigned' : 'uncertain') : 'not_applicable';

@@ -1,0 +1,417 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Assistant-authored exposed development contrasts; not independent evidence",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false,
+  "cases": [
+    {
+      "id": "points-ar",
+      "language": "ar",
+      "boundary": "noncash_posting",
+      "input": {
+        "text": "تمت إضافة 150 نقطة مكافآت إلى ملفك؛ هذه النقاط ليست مبلغاً نقدياً."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "points-added-ar",
+      "language": "ar",
+      "boundary": "noncash_posting",
+      "input": {
+        "text": "تم إضافة 27 نقطة إلى رصيد المكافآت."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "points-passive-ar",
+      "language": "ar",
+      "boundary": "noncash_posting",
+      "input": {
+        "text": "أُضيفت 40 نقطة مكافآت إلى ملفك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "points-credited-en",
+      "language": "en",
+      "boundary": "noncash_posting",
+      "input": {
+        "text": "150 reward points were credited to your loyalty profile."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "points-posted-en",
+      "language": "en",
+      "boundary": "noncash_posting",
+      "input": {
+        "text": "27 loyalty points have been posted to your profile."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "points-added-en",
+      "language": "en",
+      "boundary": "noncash_posting",
+      "input": {
+        "text": "40 bonus points were added to your profile."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "cash-added-ar",
+      "language": "ar",
+      "boundary": "cash_contrast",
+      "input": {
+        "text": "تمت إضافة مبلغ 150 دينار إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 150.0,
+        "currency": "JOD",
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "cash-deposited-ar",
+      "language": "ar",
+      "boundary": "cash_contrast",
+      "input": {
+        "text": "تم إيداع 27 JOD في حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 27.0,
+        "currency": "JOD",
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "cashback-en",
+      "language": "en",
+      "boundary": "cash_contrast",
+      "input": {
+        "text": "Your cashback of JOD 40 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 40.0,
+        "currency": "JOD",
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "refund-at-points-shop",
+      "language": "en",
+      "boundary": "cash_contrast",
+      "input": {
+        "text": "Refund of JOD 27 was credited to your account from Reward Points Shop."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 27.0,
+        "currency": "JOD",
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "points-plus-cash-ar",
+      "language": "ar",
+      "boundary": "cash_contrast",
+      "input": {
+        "text": "تمت إضافة 150 نقطة مكافآت إلى ملفك وتم إيداع 3 JOD في حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 3.0,
+        "currency": "JOD",
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "points-plus-cash-en",
+      "language": "en",
+      "boundary": "cash_contrast",
+      "input": {
+        "text": "150 reward points were credited to your profile and JOD 3 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 3.0,
+        "currency": "JOD",
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "points-separate-cash-ar",
+      "language": "ar",
+      "boundary": "cash_contrast",
+      "input": {
+        "text": "تمت إضافة 150 نقطة مكافآت إلى ملفك. تم إيداع 3 JOD في حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 3.0,
+        "currency": "JOD",
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "points-separate-cash-en",
+      "language": "en",
+      "boundary": "cash_contrast",
+      "input": {
+        "text": "150 reward points were credited to your profile. JOD 3 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 3.0,
+        "currency": "JOD",
+        "direction": "incoming"
+      }
+    },
+    {
+      "id": "lesson-en",
+      "language": "en",
+      "boundary": "instructional_frame",
+      "input": {
+        "text": "Language comprehension exercise, read this sentence only: \"JOD 17 was debited from your account.\""
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "lesson-ar",
+      "language": "ar",
+      "boundary": "instructional_frame",
+      "input": {
+        "text": "اختبار فهم لغوي، اقرأ العبارة فقط: «تم خصم 17 JOD من حسابك.»"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "translation-en",
+      "language": "en",
+      "boundary": "instructional_frame",
+      "input": {
+        "text": "Translation exercise: \"JOD 17 was debited from your account.\""
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "translation-ar",
+      "language": "ar",
+      "boundary": "instructional_frame",
+      "input": {
+        "text": "تمرين ترجمة: «تم خصم 17 JOD من حسابك.»"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "grammar-en",
+      "language": "en",
+      "boundary": "instructional_frame",
+      "input": {
+        "text": "Grammar test: \"JOD 17 was debited from your account.\""
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "grammar-ar",
+      "language": "ar",
+      "boundary": "instructional_frame",
+      "input": {
+        "text": "اختبار قواعد: «تم خصم 17 JOD من حسابك.»"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      }
+    },
+    {
+      "id": "receipt-en",
+      "language": "en",
+      "boundary": "receipt_contrast",
+      "input": {
+        "text": "JOD 17 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "receipt-ar",
+      "language": "ar",
+      "boundary": "receipt_contrast",
+      "input": {
+        "text": "تم خصم 17 JOD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "lesson-merchant",
+      "language": "en",
+      "boundary": "receipt_contrast",
+      "input": {
+        "text": "JOD 17 was debited from your account at Grammar Exercise Shop."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "lesson-merchant-ar",
+      "language": "ar",
+      "boundary": "receipt_contrast",
+      "input": {
+        "text": "تم خصم 17 JOD من حسابك لدى مكتبة تمرين ترجمة."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17,
+        "currency": "JOD",
+        "direction": "outgoing"
+      }
+    },
+    {
+      "id": "mixed-lesson-en",
+      "language": "en",
+      "boundary": "mixed_frame",
+      "input": {
+        "text": "Translation exercise: \"JOD 17 was debited. The payment completed.\""
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "mixed-lesson-ar",
+      "language": "ar",
+      "boundary": "mixed_frame",
+      "input": {
+        "text": "تمرين ترجمة: «تم خصم 17 JOD من حسابك. تمت عملية الشراء بنجاح.»"
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown-en",
+      "language": "en",
+      "boundary": "unknown_outcome_control",
+      "input": {
+        "text": "Whether JOD 17 was debited from your account is not confirmed."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown-ar",
+      "language": "ar",
+      "boundary": "unknown_outcome_control",
+      "input": {
+        "text": "نتيجة الخصم بقيمة 17 JOD غير مؤكدة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    }
+  ]
+}

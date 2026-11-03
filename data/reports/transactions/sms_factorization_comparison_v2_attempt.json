@@ -1,0 +1,20 @@
+{
+  "runId": "sms_factorization_comparison_v2",
+  "ownerApproval": {
+    "date": "2026-10-28",
+    "instruction": "go",
+    "scope": "Fresh matched two-arm comparison with corrected supervisor; unchanged data, initialization, training settings, evaluation gates and resource budget. Preserve consumed v1."
+  },
+  "trainingRunsAuthorized": 2,
+  "binding": {
+    "protocolSha256": "329305d4620e34ceb133f458722175196f302e1ca957078843f9fdb5d1509638",
+    "producerSha256": "06f419ffa517d09450cd09398373307cafa5fbc75a4b5c31f221e59d3223e297",
+    "viewProducerSha256": "d21828372cec9773296682c57fc24ba2cbc0fc1f3c2738a36bf3c61587991cf6",
+    "environment": {
+      "torch": "2.14.1+cpu",
+      "transformers": "5.21.0",
+      "numpy": "2.5.4",
+      "safetensors": "0.8.0"
+    }
+  }
+}

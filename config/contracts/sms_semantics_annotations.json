@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Synthetic training-fold annotation drafts; no admission, human gold or independent evaluation",
+  "semanticsSource": "config/contracts/transaction_behavior.json",
+  "provenanceConventionSource": "config/contracts/sms_provenance_record.json",
+  "annotationStates": ["unannotated", "weak"],
+  "annotationOrigins": ["assistant_reviewed_text", "derived_policy"],
+  "legacyClaimOrigin": "legacy_generator_not_human_gold",
+  "recordFields": ["recordId", "sourceIndex", "textSha256", "sourceExpressionId", "leakageGroupId", "fold", "legacyClaims", "annotations", "admissionBlockers", "trainingEligible", "independentEvaluationEligible"],
+  "legacyFields": {
+    "class": "label",
+    "type": "type",
+    "amount": "expected_amount",
+    "currency": "expected_currency",
+    "merchant": "expected_merchant"
+  },
+  "annotationFields": ["transactionStatus", "trackingDecision", "amount", "currency", "currencyResolution", "direction", "transferRelationship", "merchantOrCounterparty", "expenseCategory", "categoryStatus"],
+  "annotationEntryFields": ["state", "value", "origin", "reviewer", "evidence", "note"],
+  "missingAnnotation": "An omitted annotation field is unannotated, not semantic uncertainty or confirmed absence",
+  "spanConvention": "Zero-based Unicode code-point offsets in the exact original synthetic SMS; end exclusive; exact text required",
+  "legacyEvidenceConvention": "Legacy claims are weak source-column claims, located by sourceIndex and legacyFields within the hash-bound source artifact; null is not confirmed absence",
+  "decisionRule": "trackingDecision is derived only from annotated canonical facts, never directly from a legacy class/type",
+  "queueRule": "One hash-minimum existing training record per source expression; no model scoring or label-dependent ranking",
+  "reservationRule": "Conservative lexical protected-identity/related-brand candidates block the entire frozen SMS group; no repartition or final inference",
+  "admissionRule": "Every draft remains trainingEligible=false and independentEvaluationEligible=false, including reviewed weak drafts"
+}

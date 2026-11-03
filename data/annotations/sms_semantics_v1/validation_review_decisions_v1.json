@@ -1,0 +1,220 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Separate source-text weak validation review; no predictions, legacy-label import, fitting or admission",
+  "reviewer": "assistant",
+  "sourceQueueSha256": "ec9de409507d5ba2488ac44076131ed8c34d0a026881ae5c8c6ff79c3d35007b",
+  "sourceManifestSha256": "60e44bb3ca335c36c93660a7385607c8f1fdd0d2a0b0e3497e5d861127d82eac",
+  "reviews": [
+    {
+      "recordId": "synthetic-v1-0053",
+      "textSha256": "6e00010d6697a1ad9b8a9cb192fb51184758e366fb40e2d8254135f67ad2cc22",
+      "queueIndex": 0,
+      "status": "non_transaction",
+      "statusCue": "كم رصيدك",
+      "reviewNote": "Conversational question about a wallet balance; no completed notification."
+    },
+    {
+      "recordId": "synthetic-v1-0140",
+      "textSha256": "17af4671c5c3edbd7e2af4767f341a5e647b367383436998babf346daadf8592",
+      "queueIndex": 1,
+      "status": "non_transaction",
+      "statusCue": "رمز التحقق لمرة واحدة (OTP) لتسجيل الدخول",
+      "reviewNote": "Login OTP, not a completed financial event."
+    },
+    {
+      "recordId": "synthetic-v1-0038",
+      "textSha256": "983aec1699c4100692ab9e7319d9f5fbe15851bc7bcf8bcd43042009cc87f649",
+      "queueIndex": 2,
+      "status": "non_transaction",
+      "statusCue": "تقدم بطلب الحصول على البطاقة الائتمانية",
+      "reviewNote": "Card application promotion, not a posted fee or payment."
+    },
+    {
+      "recordId": "synthetic-v1-1554",
+      "textSha256": "2921b642e5a733b59eb5f39e47808e31b1dc026ff164b529a2fc900848fdc51a",
+      "queueIndex": 3,
+      "status": "completed",
+      "statusCue": "Outward CliQ",
+      "reviewNote": "Outward transfer explicitly debited; physical direction is outgoing, but a named recipient does not establish external versus own-account ownership.",
+      "amountText": "8.396",
+      "currencyText": "JOD",
+      "direction": "outgoing",
+      "relationship": "unknown",
+      "partyText": "ECJM LGLTEQ BCHHKF",
+      "purpose": null,
+      "purposeCue": null
+    },
+    {
+      "recordId": "synthetic-v1-0106",
+      "textSha256": "feabcce8977afbd9096d214649e9247702d10ef0b6e6e67873ffa7dc907219dd",
+      "queueIndex": 4,
+      "status": "non_transaction",
+      "statusCue": "I transferred you the money",
+      "reviewNote": "Personal conversational claim about dinner money; not a financial-service receipt."
+    },
+    {
+      "recordId": "synthetic-v1-1398",
+      "textSha256": "0058feb11b55814071f55b0a8d0d5592474b705a6013ddaf3f2e82c22b919ab1",
+      "queueIndex": 5,
+      "status": "non_transaction",
+      "statusCue": "خدمة كليك ستكون غير متاحة مؤقتاً",
+      "reviewNote": "Scheduled service outage, not a completed transaction."
+    },
+    {
+      "recordId": "synthetic-v1-0016",
+      "textSha256": "f3ac0da00849bbb63dc997f567deca53cf843c4e675bd01fe8060c61285dfb7a",
+      "queueIndex": 6,
+      "status": "non_transaction",
+      "statusCue": "تم تفعيل بطاقتك بنجاح على Apple Pay",
+      "reviewNote": "Successful card activation is administration, not a financial movement."
+    },
+    {
+      "recordId": "synthetic-v1-0750",
+      "textSha256": "00122bf81fd52e72351739b54eea57a533282aa99bc21c797edea56af38602dd",
+      "queueIndex": 7,
+      "status": "completed",
+      "statusCue": "تم سحب مبلغ",
+      "reviewNote": "Explicit completed cash withdrawal using the recipient wallet; outgoing cash, not an inter-account transfer.",
+      "amountText": "27.75",
+      "currencyText": "JOD",
+      "direction": "outgoing",
+      "relationship": "not_transfer",
+      "partyText": "بنك القاهرة عمان",
+      "purpose": "Cash Withdrawals",
+      "purposeCue": "سحب مبلغ 27.75 JOD نقداً من صراف آلي"
+    },
+    {
+      "recordId": "synthetic-v1-1107",
+      "textSha256": "065b7aa4570a2a690f26e954aede39a480dbdf6f3a333ec5cc823fecb1cf39e8",
+      "queueIndex": 8,
+      "status": "non_transaction",
+      "statusCue": "account login process, enter the code",
+      "reviewNote": "Login code instruction, not a completed financial event."
+    },
+    {
+      "recordId": "synthetic-v1-1665",
+      "textSha256": "019cf05c906c845344c8ac4495fd8a51fee8411a9d4a8773f20b9a2b8e7f6515",
+      "queueIndex": 9,
+      "status": "completed",
+      "statusCue": "has been credited",
+      "reviewNote": "An explicit credited Online ATM Deposit establishes incoming cash, not an unspecified inter-account transfer.",
+      "amountText": "68.821",
+      "currencyText": "JOD",
+      "direction": "incoming",
+      "relationship": "not_transfer",
+      "partyText": null,
+      "purpose": null,
+      "purposeCue": null
+    },
+    {
+      "recordId": "synthetic-v1-1548",
+      "textSha256": "0cc825edd6e14677b2bb882f58ca4c9a739cd1b2475fd881af02d03918a07813",
+      "queueIndex": 10,
+      "status": "non_transaction",
+      "statusCue": "رمز المرور لمرة واحدة (OTP) لتسجيل الدخول",
+      "reviewNote": "Login OTP, not a posted payment."
+    },
+    {
+      "recordId": "synthetic-v1-1302",
+      "textSha256": "0b9e71cad47dd0f2ca1d5e92dbdbf2797ef88696dfe4731a07fd0cf05b1ffbe9",
+      "queueIndex": 11,
+      "status": "completed",
+      "statusCue": "تم استلام مبلغ",
+      "reviewNote": "Explicit receipt into the recipient wallet from a displayed party; physical incoming direction, but ownership relationship is not established by name or phone.",
+      "amountText": "87.815",
+      "currencyText": "JOD",
+      "direction": "incoming",
+      "relationship": "unknown",
+      "partyText": "BQIXR IHNKAPA HOREIW",
+      "purpose": null,
+      "purposeCue": null
+    },
+    {
+      "recordId": "synthetic-v1-1914",
+      "textSha256": "1591472d609a1b863f83f662978c089e935f0e2e9e4ad38c5c7b34859de2111c",
+      "queueIndex": 12,
+      "status": "non_transaction",
+      "statusCue": "حولتلك",
+      "reviewNote": "Jordanian conversational claim asking the recipient to check a transfer; not a financial notification."
+    },
+    {
+      "recordId": "synthetic-v1-0334",
+      "textSha256": "17b3f75a2b6d6cd3e65e009517f97dbe0b8bd5691a1094e3b53961bf85a55a70",
+      "queueIndex": 13,
+      "status": "non_transaction",
+      "statusCue": "Your eStatement has been issued",
+      "reviewNote": "Statement availability administration; no posted financial movement."
+    },
+    {
+      "recordId": "synthetic-v1-0289",
+      "textSha256": "37ed8cbb38b17e0a0a5f16e5be132fbbfa8ee36523fb8774cdabb0ffd9af92d1",
+      "queueIndex": 14,
+      "status": "non_transaction",
+      "statusCue": "did you finish the transaction?",
+      "reviewNote": "Question about a transaction, not a completed financial notification."
+    },
+    {
+      "recordId": "synthetic-v1-1856",
+      "textSha256": "0a02befc3c1260b8499d933843dc2c494b003a6514dd5035ec346491355d866f",
+      "queueIndex": 15,
+      "status": "completed",
+      "statusCue": "تمت حركة شراء",
+      "reviewNote": "Completed card-purchase wording establishes outgoing spending. The station identity alone cannot establish a unique expense purpose.",
+      "amountText": "99.494",
+      "currencyText": "دينار",
+      "direction": "outgoing",
+      "relationship": "not_transfer",
+      "partyText": "JOBPETROL 8TH CIRCLE",
+      "purpose": null,
+      "purposeCue": null
+    },
+    {
+      "recordId": "synthetic-v1-0184",
+      "textSha256": "148735a023312c866d735391b3594f29d2902f63069dce0bc4b57c788d78777a",
+      "queueIndex": 16,
+      "status": "non_transaction",
+      "statusCue": "send me the transaction receipt or screenshot",
+      "reviewNote": "Request for evidence, not the evidence of a completed financial event."
+    },
+    {
+      "recordId": "synthetic-v1-1991",
+      "textSha256": "07814e783a030fcd84f0a845e6afc9b24f1735c486339df16fd4ae524736b39e",
+      "queueIndex": 17,
+      "status": "uncertain",
+      "statusCue": "You have a purchase transaction",
+      "reviewNote": "Purchase-event noun and available balance do not prove settled deduction. No posted/debited/completed wording or record-specific human confirmation; leave completion uncertain, without inventing other financial facts."
+    },
+    {
+      "recordId": "synthetic-v1-0164",
+      "textSha256": "74c2b9d39eb919f9008a2fff0cda1ccd2c42cf5bd1bfb59339f1e8f305d68801",
+      "queueIndex": 18,
+      "status": "non_transaction",
+      "statusCue": "do you want anything?",
+      "reviewNote": "Conversation mentioning a shop; no completed financial movement."
+    },
+    {
+      "recordId": "synthetic-v1-0174",
+      "textSha256": "1b98cf5f8bfbb916675b467e1b58d9500948d2c1b7dfe6aa6563f37fd07ee20d",
+      "queueIndex": 19,
+      "status": "non_transaction",
+      "statusCue": "Points from your Arabi Points were redeemed",
+      "reviewNote": "Loyalty-points voucher redemption, not an explicit money debit/credit. Do not mistake points or voucher digits for a posted amount."
+    },
+    {
+      "recordId": "synthetic-v1-1881",
+      "textSha256": "0abae17202546f4d6f85ecbda5fcdc11b9a8b0b71d211361aca36712dd46899f",
+      "queueIndex": 20,
+      "status": "non_transaction",
+      "statusCue": "حركة شراء مرفوضة",
+      "reviewNote": "Explicitly rejected purchase; mentioned amount is an attempted charge, not posted spending."
+    },
+    {
+      "recordId": "synthetic-v1-0806",
+      "textSha256": "28a506b0e63062447d729e53f541e4f29f7f39d8e70b39696ff766ed644ae6d0",
+      "queueIndex": 21,
+      "status": "non_transaction",
+      "statusCue": "ستتوقف خدمات التحويل والدفع",
+      "reviewNote": "Future service interruption, not a completed transfer or payment."
+    }
+  ]
+}

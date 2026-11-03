@@ -1,0 +1,13 @@
+{
+  "contractVersion": "1.0.0",
+  "scope": "Research completion candidate, with unchanged word-only direction reference",
+  "normalization": "Reuse sms_semantics_model.json normalization exactly",
+  "features": "Binary Unicode word unigrams w|, contiguous word bigrams b| and trigrams t|, joined with ASCII spaces; punctuation is a separator, not a scope parser",
+  "lengths": [1, 2, 3],
+  "prefixes": ["w|", "b|", "t|"],
+  "minimumDocumentFrequency": 2,
+  "ordering": "Unique code-point-sorted features; training-only vocabulary; ascending active-index float64 accumulation",
+  "boundary": "completed iff score > 0, ties non_transaction; uncalibrated signed decision values",
+  "direction": "Exact frozen sms_semantics_followup_v1 direction head; original word-only features",
+  "limits": "Short word sequences do not implement general negation scope, quotation parsing, ownership or uncertainty"
+}

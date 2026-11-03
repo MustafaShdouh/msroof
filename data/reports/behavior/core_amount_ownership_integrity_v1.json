@@ -1,0 +1,52 @@
+{
+  "kind": "Exposed existing-data conformance; NOT independent accuracy",
+  "baseContrasts": 133,
+  "sourceEntries": 43,
+  "byBoundary": {
+    "amount_clause_order": 18,
+    "equal_competing_primaries": 1,
+    "ownership_identity": 38,
+    "balance_before_transfer": 38,
+    "balance_after_transfer": 38
+  },
+  "bySourceLanguage": {
+    "en": 76,
+    "ar": 57
+  },
+  "variantEntries": 798,
+  "allAssertedFieldsCorrect": 798,
+  "fullDetailedParity": true,
+  "runtimeEdits": false,
+  "unchangedOriginalDetailedAndLegacyEntries": 2302,
+  "unchangedOwnershipRequests": 70,
+  "unchangedModelArtifacts": 23,
+  "originalSnapshotSha256": "68874901b1ef4af25ec7e7c30a48b50255c34b74de86294b05de6d4cc312c109",
+  "originalSnapshotBindingReport": "data/reports/behavior/core_money_r5a_unmarked_comparison.json",
+  "sourceSha256": {
+    "tests/fixtures/core_amount_ownership_v1.json": "1b5fa0fb217138c10c0d4dc0ad0f6a5e687b1a758ffa048f1b00ef9d9b8bc73f",
+    "tests/python/test_core_amount_ownership.py": "07dcd848882ebd9cfa1c62ca3076dc672112106feafe62496991b5dd78647ce1",
+    "tools/evaluation/core_boundary_check.py": "ce31b43f8232b947c3390681a63845d84ab673157f4d58c9941420abe38d3489",
+    "data/reports/behavior/core_amount_ownership_v1_comparison.json": "275f72054a3864be07f63b5680dc60c59c50851e3f427e866cf27a1e9679376e",
+    "src/python/money_syntax.py": "d8a37c4f329a247f319370200c84032f5e07fc9d91e4cb16f0ca2ff1ef27c9ac",
+    "src/typescript/MoneySyntax.ts": "344772e1695867d7b5b3a6c223cfb709a74ee5d68732a5ab345896fea259a5f7",
+    "src/python/account_movement.py": "9a2595e2a5478811f18e6d9dde3129ff1936283e6f4ea0cf6d8adcdaf5f07e00",
+    "src/typescript/AccountMovement.ts": "5068854995974fc52f24c98484edc461453a62e5184f65be1ff0ae0182682198",
+    "src/python/direction_policy.py": "725767c650b2a99cc7f61455066b20e45803aaaea83901832d51647943d6dd74",
+    "src/typescript/DirectionPolicy.ts": "a9c6d2ef1b1b1d5e5dd4b4289f17bc076c917c1bc824d311a44e62a55795559a",
+    "src/python/money_candidates.py": "1e1df76d67fb0fa0e2b554c75277510861983258ec18bdbe15cd140073e36632",
+    "src/typescript/MoneyCandidates.ts": "2cbccafea7638c93acea0ec2b64866526e72470a251dc15caa5aa287b0d5b74b",
+    "src/python/detailed_assessment.py": "7e64ac7c2ce3c885cfb0f39685bc8e88ad50ddbff3a3e73d691c30845200cbed",
+    "src/typescript/DetailedAssessment.ts": "7208736339d5543272f00ed065ca27cf7863ddbbbf53e0af3a27981c39770769",
+    "config/contracts/transaction_evidence.json": "77b647e83f80c3dd7dfcddff15f062315ff170346bbf1ef99e608cb0b707b4b0",
+    "tools/browser/tester.html": "3ec7af866eb7108f7909c7f80a5a77da6fac43357601e365d535499103948b3d"
+  },
+  "training": false,
+  "reservedInferred": false,
+  "independentEvaluationEligible": false,
+  "limits": [
+    "Clause permutations and numeric/contact variants are related exposed checks, not independent SMS.",
+    "Expected fields inherited only from source labels; optional party/category fields not asserted.",
+    "Language labels describe source messages; English balance fragment makes Arabic combinations mixed-language.",
+    "No calibrated confidence or release/mobile performance claim."
+  ]
+}

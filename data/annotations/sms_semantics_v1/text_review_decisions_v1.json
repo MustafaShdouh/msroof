@@ -1,0 +1,817 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Source-bound assistant weak text reviews of the80 prepared training representatives; no admission or human gold",
+  "sourceManifestSha256": "fad819643ab0e629ef1e09675073e72699269795ff5f76214b723b0fc5b01d99",
+  "reviewer": "assistant",
+  "reviewOrder": "unblocked queue entries first, then blocked entries; stable original queue indices",
+  "reviews": [
+    {
+      "queueIndex": 1,
+      "recordId": "synthetic-v1-0621",
+      "textSha256": "070bfa482f6fde39fc526ef42525134363f8eef497179de08a43b86935318efa",
+      "status": "completed",
+      "statusCue": "has been debited",
+      "direction": "outgoing",
+      "relationship": "unknown",
+      "amountText": "64.030",
+      "currencyText": "JOD",
+      "partyText": "EULN BXUPQW RJDZQU",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 2,
+      "recordId": "synthetic-v1-1347",
+      "textSha256": "01e09990bc7b67f10f465d181f70708219110c1c9fd113e0b7ddd41b8a04957e",
+      "status": "completed",
+      "statusCue": "has been credited",
+      "direction": "incoming",
+      "relationship": "unknown",
+      "amountText": "80.904",
+      "currencyText": "JOD",
+      "partyText": "HNWB SDDZIU DL-RYXOI",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 3,
+      "recordId": "synthetic-v1-0946",
+      "textSha256": "1da71a1a48b6df655cdaf59c81332fa48659421384299f3887e167446620ed55",
+      "status": "completed",
+      "statusCue": "has been debited",
+      "direction": "outgoing",
+      "relationship": "not_transfer",
+      "amountText": "62",
+      "currencyText": "JOD",
+      "partyText": null,
+      "partyReviewed": true,
+      "purpose": "Cash Withdrawals",
+      "reviewNote": "ATM withdrawal establishes cash-withdrawal purpose. Aqaba Branch is a location/branch, not a named merchant/counterparty."
+    },
+    {
+      "queueIndex": 4,
+      "recordId": "synthetic-v1-1068",
+      "textSha256": "064522e262ae4ead1e186130e8d883befb65f5b2abf4d7dfee0364821370b528",
+      "status": "completed",
+      "statusCue": "debited",
+      "direction": "outgoing",
+      "relationship": "unknown",
+      "amountText": "77.667",
+      "currencyText": "JOD",
+      "partyText": "QAWW GJEKXI FEDCZH",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 5,
+      "recordId": "synthetic-v1-1658",
+      "textSha256": "0058f7e5debd076cc5ba3cebb438c90d4f53385c8fb32c418a1e64bb8dbd58a3",
+      "status": "completed",
+      "statusCue": "credited",
+      "direction": "incoming",
+      "relationship": "unknown",
+      "amountText": "10.473",
+      "currencyText": "JOD",
+      "partyText": "DZAX QNAFI WCENKTPV",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 7,
+      "recordId": "synthetic-v1-0018",
+      "textSha256": "0811e49ccc8b1532797697bef5f6dd2670430c6d31947399481c9d49b9bd59af",
+      "status": "completed",
+      "statusCue": "تم قيد دفعة كليك",
+      "direction": "uncertain",
+      "relationship": "unknown",
+      "amountText": "67.088",
+      "currencyText": "JOD",
+      "partyText": null,
+      "partyReviewed": false,
+      "purpose": null,
+      "reviewNote": "Posting to a masked destination and from a named source account does not identify the owner side; leave the party slot unannotated rather than guessing its role."
+    },
+    {
+      "queueIndex": 9,
+      "recordId": "synthetic-v1-0162",
+      "textSha256": "127b891ea525df76848ac789cd127884e0539f390e912672a389774a12a7a850",
+      "status": "completed",
+      "statusCue": "credited",
+      "direction": "incoming",
+      "relationship": "unknown",
+      "amountText": "71.818",
+      "currencyText": "JOD",
+      "partyText": "OCM JBUQGUFC TO-JVOOCP",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 10,
+      "recordId": "synthetic-v1-0512",
+      "textSha256": "055ee89d5024f56c56226d617eb975ffe4a6c538ff808cf232f90c9e18d67078",
+      "status": "completed",
+      "statusCue": "تم تحويل مبلغ",
+      "direction": "uncertain",
+      "relationship": "unknown",
+      "amountText": "9.383",
+      "currencyText": "JOD",
+      "partyText": "OGGIC COLYB JOHFDI CIWPCHD",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 12,
+      "recordId": "synthetic-v1-0720",
+      "textSha256": "0ed8cb94279239f538384938149948b1f16bbe082c5b7607019d027711aa1700",
+      "status": "completed",
+      "statusCue": "تم دفع فاتورة",
+      "direction": "outgoing",
+      "relationship": "not_transfer",
+      "amountText": "75.830",
+      "currencyText": "JOD",
+      "partyText": "المؤسسة العامة للضمان الاجتماعي",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Review the stated financial event only; named merchant/biller alone does not establish a unique expense purpose. Preserve the exact displayed party phrase."
+    },
+    {
+      "queueIndex": 13,
+      "recordId": "synthetic-v1-1730",
+      "textSha256": "026c2ad5d2472aa443a00aa555dbe6a0f27e3c756b3e56902a2bcb5eca9fe212",
+      "status": "completed",
+      "statusCue": "تم تحويل مبلغ",
+      "direction": "uncertain",
+      "relationship": "unknown",
+      "amountText": "78.30",
+      "currencyText": "JOD",
+      "partyText": "GSDV MHHNHA BFOGEX",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 14,
+      "recordId": "synthetic-v1-1001",
+      "textSha256": "10334408a564a82dfb8eabac6528a7c4d916c6fb9487d2e23de81b57bad5dc44",
+      "status": "completed",
+      "statusCue": "تم استلام مبلغ",
+      "direction": "incoming",
+      "relationship": "unknown",
+      "amountText": "90.75",
+      "currencyText": "JOD",
+      "partyText": "SSWZ POICL LGGVRBU",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 16,
+      "recordId": "synthetic-v1-0141",
+      "textSha256": "067af89ade9a1a43d1ca9a7f9c7aff6139a51025978e59aa7a556053705809b8",
+      "status": "completed",
+      "statusCue": "تم إيداع مبلغ",
+      "direction": "incoming",
+      "relationship": "not_transfer",
+      "amountText": "68.98",
+      "currencyText": "JOD",
+      "partyText": null,
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Cash was deposited into the wallet; no second owned account is established. Generic agent wording supplies no proper party name."
+    },
+    {
+      "queueIndex": 17,
+      "recordId": "synthetic-v1-0394",
+      "textSha256": "15176f28990c2f854e9cc2d461af2cd209fda363fd21cc3b986d8405925a7f20",
+      "status": "completed",
+      "statusCue": "تم دفع فاتورة",
+      "direction": "outgoing",
+      "relationship": "not_transfer",
+      "amountText": "6.109",
+      "currencyText": "JOD",
+      "partyText": "جامعة العلوم والتكنولوجيا",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Review the stated financial event only; named merchant/biller alone does not establish a unique expense purpose. Preserve the exact displayed party phrase."
+    },
+    {
+      "queueIndex": 18,
+      "recordId": "synthetic-v1-1862",
+      "textSha256": "10b20a46d29cfcce41fa8dd006d058c557c8621cb5e6f831ca3ddb84cb1f70ab",
+      "status": "completed",
+      "statusCue": "تم تحويل مبلغ",
+      "direction": "uncertain",
+      "relationship": "unknown",
+      "amountText": "50.196",
+      "currencyText": "JOD",
+      "partyText": "USLS TZBOZK XWTPGI",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 21,
+      "recordId": "synthetic-v1-0762",
+      "textSha256": "06e80c1aece9796cb8b6e48e3781fdce3089b7dd90b4b0b813f9cedce8fb3c4e",
+      "status": "completed",
+      "statusCue": "debited",
+      "direction": "outgoing",
+      "relationship": "unknown",
+      "amountText": "59.544",
+      "currencyText": "JOD",
+      "partyText": "CSIONG JOSBEVT PV-KIW",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 22,
+      "recordId": "synthetic-v1-1811",
+      "textSha256": "0087ebaa89e9a0b5e3a88642ec5afc8a56316bb27f715b2891b82ee7f5ebdbc2",
+      "status": "completed",
+      "statusCue": "credited",
+      "direction": "incoming",
+      "relationship": "unknown",
+      "amountText": "82.148",
+      "currencyText": "JOD",
+      "partyText": "MNSVY RGAF CS-DY'XC",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 23,
+      "recordId": "synthetic-v1-0446",
+      "textSha256": "0a16c3298139ef3db39fc93f6d58c2a8ff62ab7cf340f1e44d042a2658a9c8d3",
+      "status": "completed",
+      "statusCue": "تم قيد حوالة كليك",
+      "direction": "incoming",
+      "relationship": "unknown",
+      "amountText": "27.259",
+      "currencyText": "د.أ",
+      "partyText": "PLOGC LACZIWV DNYXZX",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Transfer completion is asserted, but text does not establish own-account versus another-person ownership. A name/phone/mask is insufficient."
+    },
+    {
+      "queueIndex": 24,
+      "recordId": "synthetic-v1-1943",
+      "textSha256": "04937011057b64eaca9fc31976190d9efa34c4585b09284dac70950c3ec24722",
+      "status": "non_transaction",
+      "statusCue": "verification code",
+      "reviewNote": "otp: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 25,
+      "recordId": "synthetic-v1-0343",
+      "textSha256": "46ace4d409b62f02ac53a6244904a3802a4b4c255bf64e4d826c5de7a91e6d2b",
+      "status": "non_transaction",
+      "statusCue": "رمز التحقق",
+      "reviewNote": "otp: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 26,
+      "recordId": "synthetic-v1-0449",
+      "textSha256": "06ef22c17e8388c6462c7c875755edda4f416bc9b7ae654b026b83144c6a6b14",
+      "status": "non_transaction",
+      "statusCue": "رمز التحقق",
+      "reviewNote": "otp: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 27,
+      "recordId": "synthetic-v1-1426",
+      "textSha256": "0c0e76eadb03f095efcb23253fc396382c43426d3c45d17516fc2c75d944cb73",
+      "status": "non_transaction",
+      "statusCue": "verification code",
+      "reviewNote": "otp: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 28,
+      "recordId": "synthetic-v1-0925",
+      "textSha256": "0c7132ee53843ebc3c8640526239cd268a0c4068f4a365b482cd5f461bc43bc9",
+      "status": "non_transaction",
+      "statusCue": "One Time Password",
+      "reviewNote": "otp: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 30,
+      "recordId": "synthetic-v1-1117",
+      "textSha256": "17d06c2e167e1319b7a9cd9d2df7f15348b1e023fda5e773fdd406274283ad2a",
+      "status": "non_transaction",
+      "statusCue": "OTP",
+      "reviewNote": "otp: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 33,
+      "recordId": "synthetic-v1-0859",
+      "textSha256": "07d4ccca08fe32cf1bea9366ef5e2d5d2e33e6c9546f1a6f7b7d4d490078986d",
+      "status": "non_transaction",
+      "statusCue": "حركة مرفوضة",
+      "reviewNote": "declined: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 36,
+      "recordId": "synthetic-v1-1480",
+      "textSha256": "1d794e7e7759788e8415051beeaa44c98885248171fb71fe4cec81982dfe1f72",
+      "status": "non_transaction",
+      "statusCue": "فشلت عملية الدفع",
+      "reviewNote": "declined: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 37,
+      "recordId": "synthetic-v1-1724",
+      "textSha256": "11c9eb737a1a22e106b47de9537a5d8102dc724af7bc15f7b3a3bdc12bc1b345",
+      "status": "non_transaction",
+      "statusCue": "تم رفض عملية التحويل",
+      "reviewNote": "declined: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 38,
+      "recordId": "synthetic-v1-1733",
+      "textSha256": "3af779b017923be881181ba6ecb92628b8ea99f6141f0d8e04cb76aee4e6878f",
+      "status": "non_transaction",
+      "statusCue": "available balance",
+      "reviewNote": "balance_only: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 39,
+      "recordId": "synthetic-v1-1264",
+      "textSha256": "138afb4c1d8d2590b65de093eb8a6529c04ae494478be07a67119e34cb329de3",
+      "status": "non_transaction",
+      "statusCue": "Balance",
+      "reviewNote": "balance_only: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 40,
+      "recordId": "synthetic-v1-0546",
+      "textSha256": "0666c389a88dcb79f5fd68d86806e3ab54236e5e88286a57fed4fdf7966cf493",
+      "status": "non_transaction",
+      "statusCue": "رصيد حسابك الحالي",
+      "reviewNote": "balance_only: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 41,
+      "recordId": "synthetic-v1-1024",
+      "textSha256": "10d00f842394cada9ae2f8a2396df219bbeaa133caa2ad1cfb0c91477f1584a4",
+      "status": "non_transaction",
+      "statusCue": "رصيدك المتوفر",
+      "reviewNote": "balance_only: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 42,
+      "recordId": "synthetic-v1-1591",
+      "textSha256": "3faf71e70d62efd7951addeffb7ad866a97dc7d25bc6db7b82de853c8a142e8d",
+      "status": "non_transaction",
+      "statusCue": "current balance",
+      "reviewNote": "balance_only: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 43,
+      "recordId": "synthetic-v1-1075",
+      "textSha256": "46190e056495d22c3a92a2ce4b53649471dab92167da8163f0cadc2a45f87503",
+      "status": "non_transaction",
+      "statusCue": "Balance inquiry",
+      "reviewNote": "balance_only: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 44,
+      "recordId": "synthetic-v1-1925",
+      "textSha256": "08657dcaa76392b71a0988c636335ef3224d8b8264adcce20ed379e97c49ad75",
+      "status": "uncertain",
+      "statusCue": "JOdson",
+      "reviewNote": "Truncated/uninterpretable prefix with a date and balance; insufficient context to establish the event. This is a reviewed uncertainty judgment, not imported ANNOUNCEMENT truth. Other financial fields remain unannotated."
+    },
+    {
+      "queueIndex": 45,
+      "recordId": "synthetic-v1-0951",
+      "textSha256": "010696e8f344ae2a61db475020632d6e92b3070b5df97a560c486559478f43b0",
+      "status": "non_transaction",
+      "statusCue": "ستتوقف مؤقتاً",
+      "reviewNote": "administration: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 46,
+      "recordId": "synthetic-v1-0616",
+      "textSha256": "171b479da9beacfe3b2e7afa9117b53b87d8207abcf69835cf7a6ba165ed327e",
+      "status": "non_transaction",
+      "statusCue": "scheduled system maintenance",
+      "reviewNote": "administration: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 47,
+      "recordId": "synthetic-v1-0349",
+      "textSha256": "4a332e734f75f58d6c7fd4ba817ee7564a3bd9190bbcf5ed8138c7d1a92695d6",
+      "status": "non_transaction",
+      "statusCue": "successfully added to Apple Pay",
+      "reviewNote": "administration: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 48,
+      "recordId": "synthetic-v1-0405",
+      "textSha256": "540c40b8a726c56aa5061d8df9ac75c0d3d01b3b2832bb8d8cedeef96c44ebc1",
+      "status": "non_transaction",
+      "statusCue": "تم تفعيل بطاقتك",
+      "reviewNote": "administration: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 49,
+      "recordId": "synthetic-v1-0035",
+      "textSha256": "d0653395eda0da21b7c07dfe76cf4d6fd5325ad2853f2dddb203cb36ba0d0aad",
+      "status": "non_transaction",
+      "statusCue": "تم إصدار بطاقتك",
+      "reviewNote": "administration: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 50,
+      "recordId": "synthetic-v1-0181",
+      "textSha256": "35233bb12a166cb9d7edfc3bfe268e5c16a01efad88e783007c14aeeb4cf4d54",
+      "status": "non_transaction",
+      "statusCue": "Points were redeemed",
+      "reviewNote": "nonmonetary_reward: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 51,
+      "recordId": "synthetic-v1-1100",
+      "textSha256": "1a40022805851e096f2ad0bdd35f034f2accb4ab872034a72bde582bf3b6f988",
+      "status": "non_transaction",
+      "statusCue": "bonus Reflect Coins",
+      "reviewNote": "nonmonetary_reward: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 52,
+      "recordId": "synthetic-v1-0963",
+      "textSha256": "0191f9f63db23eb12196ec78526eff68b4ea0da1c9d8c3327b80ffe8fdefb099",
+      "status": "non_transaction",
+      "statusCue": "رصيد مجاني",
+      "reviewNote": "promotion: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 53,
+      "recordId": "synthetic-v1-0758",
+      "textSha256": "0502853ba67da40e86504318bbd51bf5f16b77784cb49b026214c83bf75065e1",
+      "status": "non_transaction",
+      "statusCue": "خصم فوري",
+      "reviewNote": "promotion: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 54,
+      "recordId": "synthetic-v1-0002",
+      "textSha256": "1502d4d72c3af01977fe8762541e2a01b96b2968ee19a3f6e4e6e10b62a15195",
+      "status": "non_transaction",
+      "statusCue": "جوائز أسبوعية",
+      "reviewNote": "promotion: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 55,
+      "recordId": "synthetic-v1-0215",
+      "textSha256": "014324d9ecf5b7cb006d27600f0c39955111355b65ae0cfa618f861b68804c5a",
+      "status": "non_transaction",
+      "statusCue": "قدم طلبك الآن",
+      "reviewNote": "promotion: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 57,
+      "recordId": "synthetic-v1-0014",
+      "textSha256": "0bb552bfd3bc311e98fabda18b07602f8a35be109bd3e7485736fcc6751b1936",
+      "status": "non_transaction",
+      "statusCue": "عرض خاص",
+      "reviewNote": "promotion: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 58,
+      "recordId": "synthetic-v1-1081",
+      "textSha256": "19756bbadb2f8709ecb96d79f5dc0f8afb371df4ab0f14b93207aa52081788d2",
+      "status": "non_transaction",
+      "statusCue": "حولتلك",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 59,
+      "recordId": "synthetic-v1-0479",
+      "textSha256": "592d7d97f6fe85582e61ba843baaaca48e54545d7318a9aceb66e61c16d4c5e1",
+      "status": "non_transaction",
+      "statusCue": "وصلتك الحوالة",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 60,
+      "recordId": "synthetic-v1-0187",
+      "textSha256": "3b31ae90261d4172049f4d1b025dd020ddf518bd7369c527ae38069ebf76c81b",
+      "status": "non_transaction",
+      "statusCue": "ابعثلي",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 61,
+      "recordId": "synthetic-v1-0047",
+      "textSha256": "7d6882c6744c280dddb043a6a167c458ecff67982132ee64d7e3f8c4c9fd512e",
+      "status": "non_transaction",
+      "statusCue": "ابعثلي",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 62,
+      "recordId": "synthetic-v1-2083",
+      "textSha256": "11fc4cb659d7e6a82cf92186e2025f73b943622005fffb51b766c5452496580e",
+      "status": "non_transaction",
+      "statusCue": "اشتريت",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 63,
+      "recordId": "synthetic-v1-1522",
+      "textSha256": "1218b9d9907a6b4ae614d47676b9bdc22471088d1c870887bd7134780cba8067",
+      "status": "non_transaction",
+      "statusCue": "رحت",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 64,
+      "recordId": "synthetic-v1-0010",
+      "textSha256": "6d1b0e597f7c3783f2822db46dd8f219cd85c78a277ecbd0682bc984c1c397ea",
+      "status": "non_transaction",
+      "statusCue": "did the cliq transfer go through?",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 65,
+      "recordId": "synthetic-v1-0365",
+      "textSha256": "006455f7c0f66c116f7bec4602da9ee7bf1e5b373be3bc760667ddc908adc807",
+      "status": "non_transaction",
+      "statusCue": "can you send me",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 66,
+      "recordId": "synthetic-v1-1823",
+      "textSha256": "0ba3101581962b20f82fbdab5e4ecaa9b81e71aa046d7a533a8e6eacd4137ccc",
+      "status": "non_transaction",
+      "statusCue": "can you transfer",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 67,
+      "recordId": "synthetic-v1-0068",
+      "textSha256": "472c8e3fce88f7f34c9c5718550077d23dd9226b2f07948dd27296cef856e19e",
+      "status": "non_transaction",
+      "statusCue": "ولا ادفع انا",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 68,
+      "recordId": "synthetic-v1-2045",
+      "textSha256": "19acb0ca410d16c6247d49729401ab73eb1c43974e0730534223b14845f9c517",
+      "status": "non_transaction",
+      "statusCue": "مين بده كليك",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 69,
+      "recordId": "synthetic-v1-0929",
+      "textSha256": "0927d6a9f9457fc37c144a3a40d1bf68401f675912aa0e32bcf03ea0f8323ff5",
+      "status": "non_transaction",
+      "statusCue": "رجعلي اياهم",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 70,
+      "recordId": "synthetic-v1-0244",
+      "textSha256": "fd80cbd5959792d9315d8bc07aae5a45a5931e7647e0b0ef9dd9e4c76625b431",
+      "status": "non_transaction",
+      "statusCue": "did you receive",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 71,
+      "recordId": "synthetic-v1-0088",
+      "textSha256": "086bc9db317069fe5d01baec399d2ef058071bdd455e76881b56166e79b63159",
+      "status": "non_transaction",
+      "statusCue": "شو رقم محفظتك",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 72,
+      "recordId": "synthetic-v1-0025",
+      "textSha256": "67b42ecf6bd743018a1a95e91b7f8016fe411a002fdd029bd2efe2bc23e149e5",
+      "status": "non_transaction",
+      "statusCue": "I just sent",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 73,
+      "recordId": "synthetic-v1-0430",
+      "textSha256": "931431bbf19b53eb5a60cb6c93b5d26ff5b74ec4a92346d76a3ab04a2fc35a1a",
+      "status": "non_transaction",
+      "statusCue": "وما طلع مصاري",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 74,
+      "recordId": "synthetic-v1-0711",
+      "textSha256": "41ec58d55cd3bd8278ec291f7391be6bc1aae52c80365e515bcb61334fa08649",
+      "status": "non_transaction",
+      "statusCue": "مين يحولي",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 75,
+      "recordId": "synthetic-v1-0371",
+      "textSha256": "15635acfbf86709f92e511204ac8d5ba1230951670054d3462c028c7200f78d2",
+      "status": "non_transaction",
+      "statusCue": "وخصموا مرتين",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 76,
+      "recordId": "synthetic-v1-0109",
+      "textSha256": "b8bef79df6848e51f85cda3827409e7c662cf16c17960866fc897b0e9e4e3c66",
+      "status": "non_transaction",
+      "statusCue": "كم خصموا",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 77,
+      "recordId": "synthetic-v1-0820",
+      "textSha256": "09cea50e88152cf082c273a15be01c0c2f1277f94054654ecc828986a6a11271",
+      "status": "non_transaction",
+      "statusCue": "the bill was",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 78,
+      "recordId": "synthetic-v1-0021",
+      "textSha256": "58066da632d53f0b1ee413da8ec29dfcf44d9403da071fb71f61b3dca8138b32",
+      "status": "non_transaction",
+      "statusCue": "hey bro",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 79,
+      "recordId": "synthetic-v1-0887",
+      "textSha256": "193cc056fd90f367506972c276e4fa74f5c2841e4de39a3f25230d4ad771882a",
+      "status": "non_transaction",
+      "statusCue": "transfer me",
+      "reviewNote": "personal_conversation: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 0,
+      "recordId": "synthetic-v1-1944",
+      "textSha256": "0caaa5f5dcb759d967df24f43a4eceac4bd170d98f061bd4c897507803727b75",
+      "status": "completed",
+      "statusCue": "You have a purchase transaction",
+      "direction": "outgoing",
+      "relationship": "not_transfer",
+      "amountText": "70.239",
+      "currencyText": "JOD",
+      "partyText": "CINNABON",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Review the stated financial event only; named merchant/biller alone does not establish a unique expense purpose. Preserve the exact displayed party phrase."
+    },
+    {
+      "queueIndex": 6,
+      "recordId": "synthetic-v1-1989",
+      "textSha256": "025ad0f7929523ac2921485082825cf9772b1beec6ba532c40d386c96110bc27",
+      "status": "completed",
+      "statusCue": "debited",
+      "direction": "outgoing",
+      "relationship": "not_transfer",
+      "amountText": "94.821",
+      "currencyText": "JOD",
+      "partyText": "CARREFOUR EXPRESS",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Review the stated financial event only; named merchant/biller alone does not establish a unique expense purpose. Preserve the exact displayed party phrase."
+    },
+    {
+      "queueIndex": 8,
+      "recordId": "synthetic-v1-1751",
+      "textSha256": "01b474bc31625bdf13d1d4cec24059e4f489279ad63fe3fe1274dff8cfba0eac",
+      "status": "completed",
+      "statusCue": "has been processed",
+      "direction": "incoming",
+      "relationship": "not_transfer",
+      "amountText": "84.057",
+      "currencyText": "JOD",
+      "partyText": "H&M CITY MALL",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Review the stated financial event only; named merchant/biller alone does not establish a unique expense purpose. Preserve the exact displayed party phrase."
+    },
+    {
+      "queueIndex": 11,
+      "recordId": "synthetic-v1-0108",
+      "textSha256": "0021be0cc535356acd1d5fc044a493c1015a52c37b8de0df8408ce8a4089901b",
+      "status": "completed",
+      "statusCue": "تم دفع مبلغ",
+      "direction": "outgoing",
+      "relationship": "not_transfer",
+      "amountText": "59.756",
+      "currencyText": "JOD",
+      "partyText": "تاجر SIR ALDAWAA PH -12 IRBID",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Review the stated financial event only; named merchant/biller alone does not establish a unique expense purpose. Preserve the exact displayed party phrase."
+    },
+    {
+      "queueIndex": 15,
+      "recordId": "synthetic-v1-2093",
+      "textSha256": "0509ffe0883252dc13e97b469e1163f5252284f854bb9da41498a6d8efc02eca",
+      "status": "completed",
+      "statusCue": "تمت عملية الشراء بنجاح",
+      "direction": "outgoing",
+      "relationship": "not_transfer",
+      "amountText": "54.91",
+      "currencyText": "JOD",
+      "partyText": "تاجر KHALAF PHARMACY",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Review the stated financial event only; named merchant/biller alone does not establish a unique expense purpose. Preserve the exact displayed party phrase."
+    },
+    {
+      "queueIndex": 19,
+      "recordId": "synthetic-v1-1374",
+      "textSha256": "036d57af33c735e7bffaf0897c522383ddd88ac7a5d4f74520a7232ea4c79eb1",
+      "status": "completed",
+      "statusCue": "You have completed a purchase",
+      "direction": "outgoing",
+      "relationship": "not_transfer",
+      "amountText": "54.834",
+      "currencyText": "JOD",
+      "partyText": "TOTAL SEVENTH CIRCLE",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Review the stated financial event only; named merchant/biller alone does not establish a unique expense purpose. Preserve the exact displayed party phrase."
+    },
+    {
+      "queueIndex": 20,
+      "recordId": "synthetic-v1-0838",
+      "textSha256": "00e7f4fcabb33f3af5f3220622fac12528b39da811852d113cc6cf562a5d2258",
+      "status": "completed",
+      "statusCue": "You have made a purchase",
+      "direction": "outgoing",
+      "relationship": "not_transfer",
+      "amountText": "54.692",
+      "currencyText": "JOD",
+      "partyText": "COZMO SUPERMARKET",
+      "partyReviewed": true,
+      "purpose": null,
+      "reviewNote": "Review the stated financial event only; named merchant/biller alone does not establish a unique expense purpose. Preserve the exact displayed party phrase."
+    },
+    {
+      "queueIndex": 29,
+      "recordId": "synthetic-v1-1835",
+      "textSha256": "0b96b930717fccbb5438b9610cdf4c95ee6a110bc1c3d7eb4573a00786df330f",
+      "status": "non_transaction",
+      "statusCue": "One-Time Password",
+      "reviewNote": "otp: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 31,
+      "recordId": "synthetic-v1-0472",
+      "textSha256": "1607013b377bdb06eaafb28643c8fe1f96140d7afde954afe5f354e8e5e17a5e",
+      "status": "non_transaction",
+      "statusCue": "رمز التأكيد",
+      "reviewNote": "otp: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 32,
+      "recordId": "synthetic-v1-1059",
+      "textSha256": "033f0ca08b3d6e9a323934ca77ef696ec804805869328fb04742cab28ab8c17e",
+      "status": "non_transaction",
+      "statusCue": "One Time Password",
+      "reviewNote": "otp: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 34,
+      "recordId": "synthetic-v1-0151",
+      "textSha256": "008df2617805f4dfa828d59c84e3931aede1a7f194926256d50ab19b9beefa90",
+      "status": "non_transaction",
+      "statusCue": "Transaction declined",
+      "reviewNote": "declined: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 35,
+      "recordId": "synthetic-v1-0037",
+      "textSha256": "0ec7eb4d49ed2e3d57bbdd86f4afb3ecacf629542c9ed8d13789357b1733724e",
+      "status": "non_transaction",
+      "statusCue": "Transaction declined",
+      "reviewNote": "declined: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    },
+    {
+      "queueIndex": 56,
+      "recordId": "synthetic-v1-0022",
+      "textSha256": "68c773c192e1200aa3f1d7863ed4b46bc9a737936c50e4f1bab8495b3cffdd21",
+      "status": "non_transaction",
+      "statusCue": "تمويل مرابحة السيارات",
+      "reviewNote": "promotion: this text is not a completed monetary receipt; quoted amounts, balances, purchase authorizations and conversational claims are not primary transaction fields."
+    }
+  ]
+}

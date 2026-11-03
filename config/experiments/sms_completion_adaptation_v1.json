@@ -1,0 +1,196 @@
+{
+  "runId": "sms_completion_adaptation_v1",
+  "status": "approved_implementation",
+  "ownerApproval": {
+    "date": "2026-10-28",
+    "instruction": "go",
+    "scope": "Implement and execute the fixed one-run adaptation experiment, including conditional reserved evaluation"
+  },
+  "trainingRunsAuthorized": 1,
+  "proposedTrainingRuns": 1,
+  "scope": "Local Python completion research; last two encoder layers plus existing linear head; no product integration or student",
+  "architecture": {
+    "baseModel": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "baseSafetensorsSha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+    "trainableModules": [
+      "encoder.layer.10",
+      "encoder.layer.11",
+      "completion_head"
+    ],
+    "frozenModules": "embeddings, encoder.layer.0 through .9, pooler; no new architecture",
+    "encoderParameters": 117653760,
+    "trainableEncoderParameters": 3548928,
+    "headParameters": 385,
+    "trainableTotal": 3549313,
+    "pooling": "attention-mask mean over last hidden states, including unmasked special tokens, matching the published example",
+    "dimensions": 384,
+    "headInitialization": "Cast frozen sms_completion_encoder_v1_candidate weights/bias to float32; no random head restart",
+    "dtype": "float32",
+    "device": "cpu",
+    "threads": 2,
+    "mode": "All modules eval() throughout training and inference; gradients enabled only for final two layers and head. Dropout disabled.",
+    "trustRemoteCode": false
+  },
+  "inputs": {
+    "normalizer": "src.python.research.sms_semantics.normalize unchanged",
+    "maxTokensIncludingSpecials": 128,
+    "truncation": false,
+    "padding": "longest in batch; published tokenizer unchanged",
+    "embeddingNormalization": "none",
+    "preflightOverflow": "Stop before training; no dropping/truncation/limit change"
+  },
+  "cohort": {
+    "oldRows": 1062,
+    "additionalDefiniteRows": 96,
+    "totalTrainingRows": 1158,
+    "targets": {
+      "completed": 611,
+      "non_transaction": 547
+    },
+    "weightGroups": 129,
+    "totalWeight": 129,
+    "trainingViewSha256": "ec7fd9f887b9a5bb060284b14891ac0430b0d96a900337665377ec5a1db67e70",
+    "trainingViewEncoding": "Original encoder prepare() ordered training view, then scope JSONL proposed_training rows with target!=uncertain; keys recordId,text,target,weight,group. New group=authoringGroupId, new weight=1/6. JSON ensure_ascii=False,sort_keys=True,separators=(',',':'), UTF-8,no newline.",
+    "priorGroupWeighting": "Preserve all original row weights; each old/new authoring group totals one",
+    "uncertainTrainingRowsExcluded": 32,
+    "development": {
+      "total": 32,
+      "completed": 8,
+      "non_transaction": 16,
+      "uncertain": 8
+    },
+    "reserved": {
+      "total": 32,
+      "completed": 10,
+      "non_transaction": 14,
+      "uncertain": 8
+    },
+    "canonicalFlagsChanged": false,
+    "researchViewAdmission": "Only this explicit protocol when approved may select weak training rows. Dataset canonical admission/modelFittingAllowed flags remain false.",
+    "evidenceSpans": "Review/audit only; never model input or auxiliary training targets",
+    "validationUsage": "No gradient, feature fitting, batch selection, scheduler, stopping or checkpoint selection"
+  },
+  "training": {
+    "seed": 20261028,
+    "epochs": 3,
+    "batchSize": 8,
+    "dropLast": false,
+    "batchesPerEpoch": 145,
+    "maximumOptimizerSteps": 435,
+    "shuffle": "New torch.randperm(N) each epoch using one dedicated CPU Generator seeded once; both languages remain in fixed data folds, can be separate minibatches",
+    "optimizer": "torch.optim.AdamW",
+    "backboneLearningRate": 2e-05,
+    "headLearningRate": 0.0002,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "weightDecay": 0.01,
+    "decayScope": "All trainable weights and biases including LayerNorm; frozen parameters excluded",
+    "foreach": false,
+    "fused": false,
+    "amsgrad": false,
+    "loss": "BCEWithLogits(reduction=none); minibatch loss=N/(W*b)*sum_i(weight_i*loss_i), N=1158,W=129,b=actual minibatch size; no pos_weight",
+    "clipGlobalGradientNorm": 1.0,
+    "scheduler": null,
+    "warmupSteps": 0,
+    "mixedPrecision": false,
+    "gradientAccumulationSteps": 1,
+    "classRebalancing": false,
+    "pairwiseOrAuxiliaryLoss": false,
+    "checkpointSelection": "Final state after exactly three full epochs only; no best-development checkpoint",
+    "decision": "completed iff signed logit > 0; tie non_transaction; no calibration or confidence percentage",
+    "determinism": "Seed Python/NumPy/Torch; torch.use_deterministic_algorithms(True); record environment. Error if unsupported deterministic operation."
+  },
+  "budget": {
+    "trainingWallClockSeconds": 1200,
+    "wallClockBoundary": "Parent watchdog starts before first training forward; kills worker at deadline, no resume or partial candidate evaluation",
+    "processWorkingSetLimitBytes": 6442450944,
+    "memoryEnforcement": "Supervisor samples Windows process working set once per second; stops on breach. This is a monitored limit, not a hard instantaneous OS reservation.",
+    "additionalArtifactLimitBytes": 2147483648,
+    "newDownloadsAuthorized": false,
+    "cudaInstallationAuthorized": false,
+    "retries": 0,
+    "onFailure": "Retain immutable attempt/failure details; no restart, smaller batch, extra epoch, alternate seed/device/model or automatic new run"
+  },
+  "preflight": [
+    "Verify all frozen file hashes, old immutable trial ledger and pinned base weight checksum; reproduce scope data check",
+    "Reconstruct training view hash/counts/groups; assert no scope dev/reserved or uncertain IDs in training",
+    "Check all token lengths without encoder inference or truncation, including reserved token lengths only",
+    "Assert trainable parameter names/counts exactly; optimizer has only those tensors; clone/hash frozen tensors for post-run check",
+    "Before first optimizer step verify copied float32 head agrees with existing frozen score within 2e-5 with identical decisions on old exposed diagnostics; stop on discrepancy, never adjust labels/boundary",
+    "Write exclusive immutable start ledger with protocol/producer/environment/batch order and initial weights before first training forward. Preserve failure ledger on any error"
+  ],
+  "evaluation": {
+    "primaryCohorts": [
+      "old 18 validation",
+      "old 24 manual (22 definite)",
+      "old 24 context probes",
+      "new 32 development (24 definite)"
+    ],
+    "separateControls": "14 quote controls (10 definite), flag two duplicate manual texts",
+    "references": [
+      "frozen word head",
+      "frozen context head",
+      "frozen encoder plus linear head"
+    ],
+    "metrics": [
+      "TP/TN/FP/FN by cohort and Arabic/English",
+      "case fixes/regressions with IDs; theme and matched-state consistency",
+      "uncertain outputs separately with no forced binary truth",
+      "actual elapsed time, peak sampled working set, checkpoint bytes, warm CPU inference timings"
+    ],
+    "scoreUncertainAsNegative": false,
+    "preReservedGate": {
+      "falseCompleted": "Zero per definite primary cohort/language and quote controls",
+      "missedCompleted": "No more misses than the best of the three fixed references per primary cohort/language; quote controls no more than best reference",
+      "criticalRegressions": "No new OTP/declined/ordinary-chat/example false acceptance; list all case swaps",
+      "ifFailed": "Record failed run. Do not infer reserved rows, fit student or tune anything."
+    },
+    "reservedAccess": "Only if all pre-reserved gates pass: score all three unchanged references and final candidate once on reserved fold. No adjustment after observation.",
+    "reservedGate": "Zero FP and no more FN than best fixed reference on definite reserved rows, per language and overall; uncertain separate",
+    "candidateCachePolicy": "Only final candidate and references on listed folds; no intermediate validation/inference for checkpoint selection",
+    "releaseThresholds": null,
+    "independence": "All authored/weak; old diagnostic exposure and semantic theme overlap remain. No real-world accuracy or release claim."
+  },
+  "outputs": {
+    "checkpoint": "Ignored local safetensors of final two encoder layers and head, with pinned base hash and exact replacement tensor names; not standalone or TypeScript model",
+    "audit": "Immutable attempt/failure/report plus trainable/frozen tensor hashes and exact head binding",
+    "forbidden": [
+      "student/distillation",
+      "tracker/tester integration",
+      "direction/entity/category training",
+      "merchant final inference",
+      "model/threshold search",
+      "cloud SMS inference",
+      "push/publication"
+    ]
+  },
+  "frozenInputs": {
+    "data/reports/transactions/sms_semantics_followup_v1_cohort.json": "9c91de7551e9cb65f04eeba89edef0ddd7308d2e3cd700e9dbf9da1b13a383b8",
+    "data/reports/transactions/sms_semantics_followup_v1.json": "cedd066e3a35a01ceef96b6e527b0de7a3ad673690ae17481ce5ca254c22d080",
+    "data/reports/transactions/sms_completion_context_v1.json": "e1b4127fae4c674a91dfe122d98a85485c384278728e65abd7fa0e2473be9f09",
+    "data/models/sms_semantics_followup_v1_word_candidate.json": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121",
+    "data/models/sms_completion_context_v1_candidate.json": "fad7f42560fae5dfbf55c7c070013e7e95b1eb008c67434219165207891cd73c",
+    "data/training/sanitized_v1/transactions.json": "cf79a491e165c0dee446811b74da6b0e4d018cf20c328a3bf7e1d9468ee59ca3",
+    "data/training/authored_sms_v1/messages.jsonl": "18ca9e8b943a484ddab90b0f1536d3fed43d546b2d148a3e484591bdf02d409f",
+    "data/training/authored_sms_context_v1/scenarios.json": "2f1b1d2f03a12d3a776d4c3b24dbd743858940b57ac232b9bea7bfbc69297ae7",
+    ".local-backups/sms_research_manual_v1/cases.json": "b1d582d32af849578565ba5404fad96e1922aad873d344d27ae803457c34d875",
+    "tests/fixtures/quoted_example_cases.json": "0b51454d63b3d41914bbf4daab7a24b34ffe9ffc4c7199cf524160e1e8539965",
+    "config/contracts/sms_semantics_model.json": "2e8355c1ea059f0139bd563f2fe9b5ed5181e49b87fe10be9715d702ed4251b8",
+    "src/python/research/sms_semantics.py": "0eab832392fbcf737a6f9d82102310018eaed13734c7aad977c19e177ebd5d4d",
+    "src/python/preprocessing.py": "27c4eed3b21d781f06cdce86f26f767946c84a4d590178ae13117946fff443a1",
+    "config/experiments/sms_completion_encoder_v1.json": "30d9eae6350b5d42be638b5571c2c12045a67459a8c6a75e4527b205086b0b12",
+    "training/transactions/completion_encoder.py": "5855214afeba920074409da9621355f54e2092e4718d198fa122987325d4c99a",
+    "data/models/sms_completion_encoder_v1_candidate.json": "8080e66ef95ff87d8f8d5d461b7dd825c7fc7467ed397c4ecf92d11896700889",
+    "data/reports/transactions/sms_completion_encoder_v1.json": "6b6233a56430224f6983a7ea5f64bee2f6f251baee26021c36b0932f77f60e45",
+    "data/annotations/sms_scope_v1/scenarios.txt": "964439ce1a78604f25ff9b0842fd2b6caf932994ff638b9648ead4240abfc999",
+    "data/annotations/sms_scope_v1/manifest.json": "e9cd9beb688bc0f418e466c57f3c344e34c8fe49c9add6df63445435d66a550a",
+    "data/training/authored_sms_scope_v1/messages.jsonl": "a1c67be6a114a9936702ebac948c97d2d1a87bd2955ad64290f845d1d2bfaea2",
+    "data/reports/transactions/sms_scope_v1_preparation.json": "8382903448404c97739935cb49d71f9439031d99ad03a4f8b429bed37965255e",
+    "training/corpus/scope_contrasts.py": "966a91e73ec82bf06657b3e244a14306c6cff3119a83fd7ce2c2cd43cfd367db",
+    ".local-backups/sms_completion_encoder_v1/requirements.lock.txt": "bb9298d873ca20862ea37956b71361f72a511ae3fd0460ea996f6fd13f242c85"
+  }
+}

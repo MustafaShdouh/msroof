@@ -1,0 +1,22 @@
+{
+  "dataKind": "assistant-authored structural conformance controls, not independent accuracy",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "evidenceVersion": "1.0.6",
+  "cases": [
+    {"id":"manual-ar","text":"هذا مثال توضيحي وليس إشعاراً مالياً: «تم خصم ٣٠ دينار من حسابك بعد اكتمال الشراء».","decision":"exclude","status":"non_transaction"},
+    {"id":"manual-en","text":"This is an example, not a financial notification: \"JOD 30 was debited from your account after the purchase completed.\"","decision":"exclude","status":"non_transaction"},
+    {"id":"qualified-en","text":"Teaching example, not a financial notification: 'JOD 13 was debited from your account for a completed purchase.'","decision":"exclude","status":"non_transaction"},
+    {"id":"qualified-ar","text":"هذا نموذج تعليمي: «تم خصم ١٣ دينار من حسابك مقابل شراء مكتمل».","decision":"exclude","status":"non_transaction"},
+    {"id":"note-en","text":"NOTE: This is an illustrative sample: JOD 9 was credited to your account.","decision":"exclude","status":"non_transaction"},
+    {"id":"note-ar","text":"ملاحظة: هذا مثال توضيحي: تم خصم ٩ دينار من حسابك.","decision":"exclude","status":"non_transaction"},
+    {"id":"multisentence-en","text":"This is an example: \"JOD 30 was debited. Your payment completed.\"","decision":"review","status":"uncertain"},
+    {"id":"multisentence-ar","text":"هذا مثال توضيحي: «تم خصم ٣٠ دينار. تمت عملية الشراء بنجاح».","decision":"review","status":"uncertain"},
+    {"id":"mixed-en","text":"JOD 7.50 was debited from your account at LOCAL SHOP. This is an example: \"JOD 30 was debited.\"","decision":"review","status":"uncertain"},
+    {"id":"mixed-ar","text":"تم خصم ٧٫٥٠ دينار من حسابك لدى المتجر. هذا مثال توضيحي: «تم خصم ٣٠ دينار».","decision":"review","status":"uncertain"},
+    {"id":"merchant-en","text":"JOD 14 was debited from your account at \"Example Shop\".","decision":"include","status":"completed","amount":14},
+    {"id":"merchant-ar","text":"تم خصم ١٤ دينار من حسابك لدى «متجر مثال».","decision":"include","status":"completed","amount":14},
+    {"id":"qualified-merchant-en","text":"JOD 14 was debited from your account at \"Teaching Example\".","decision":"include","status":"completed","amount":14},
+    {"id":"qualified-merchant-ar","text":"تم خصم ١٤ دينار من حسابك لدى «متجر نموذج تعليمي».","decision":"include","status":"completed","amount":14}
+  ]
+}

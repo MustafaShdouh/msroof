@@ -1,6 +1,8 @@
 /** Normalize for matching while keeping source offsets for exact name output. */
 import { normalizeFinancialNumbers } from './Preprocessing.ts';
+import viewRules from '../../config/contracts/source_text_view.json' with { type: 'json' };
 const MARK = /[\u064b-\u065f\u0670]/;
+const DISPLAY_CONTROL = new RegExp(viewRules.ignoredDisplayControls);
 const JOINED_MASK = /(?:[0-9]{2,4}\*[0-9]{2,4}|xxxx[0-9]{3,4}|\*[0-9]{4})(?=(?:from|to)\s)/gi;
 
 export class EntityText {
@@ -15,6 +17,7 @@ export class EntityText {
     while (index < source.length) {
       const start = index;
       let char = source[index++];
+      if (DISPLAY_CONTROL.test(char)) continue;
       if (char === '\\' && index < source.length && (source[index] === 'n' || source[index] === 'r')) {
         const escaped = source[index++];
         if (escaped === 'r') continue;

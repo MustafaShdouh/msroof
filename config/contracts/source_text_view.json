@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Source-aligned matching view only; raw message text, raw ownership binding and learned preprocessing/export contracts are unchanged",
+  "ignoredDisplayControls": "[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069\ufeff]",
+  "controlMeaning": "Arabic letter mark, left/right marks, directional embeddings/overrides/isolates and BOM are omitted from logical matching, not from the original source",
+  "projection": "Do not attach a removed display control to the previous character. Controls inside a selected source span remain in its exact raw substring; prefixes/suffixes outside the selected token are not invented into the span.",
+  "emptyView": "A message with no logical text is empty_or_malformed, not a scored financial candidate.",
+  "exclusions": "This does not remove joiners or arbitrary zero-width characters, reorder letters, alter numbers or infer ownership."
+}

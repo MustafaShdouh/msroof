@@ -1,0 +1,57 @@
+{
+  "kind": "Tester primary-view wiring; exposed development compatibility, not independent accuracy",
+  "inputEntries": 2302,
+  "fullDetailedAndLegacyOutputsEqual": true,
+  "threeRuntimeParity": true,
+  "ownershipRequests": 70,
+  "unchangedModelArtifacts": 23,
+  "mainApi": "analyzeDetailed",
+  "mainScope": "message_only",
+  "legacyComparisonCollapsed": true,
+  "ownershipConfirmationSeparate": true,
+  "apiChanges": false,
+  "engineBehaviorChanges": false,
+  "training": false,
+  "reservedInferred": false,
+  "primaryUiContrasts": 13,
+  "baselineSnapshot": {
+    "path": ".local-backups/core_money_r5a_unmarked/after.json",
+    "sha256": "68874901b1ef4af25ec7e7c30a48b50255c34b74de86294b05de6d4cc312c109"
+  },
+  "sourceSha256": {
+    "tools/browser/assessment_view.js": "61145cdc0a6e85e11f097e8cf7f46c83c9868d769a76ed702476d35da381643e",
+    "tools/browser/build_tester_ui.py": "ce975ce760aeabd9cd2a6986156d679d72b59bc855f7c9ad5cc38777962c8fa6",
+    "tools/browser/tester.css": "440abd1b1e5ccc908896bdfc2ff4983c99095cfda9d8908016d336457a049653",
+    "tools/browser/tester.html": "bd130921f6e3ad7a32bc99e49e4a1998ae8468f7b6f5058f7e623cf0df917a11",
+    "tests/typescript/test_primary_tester.ts": "334414a7b5b315deac5e72aa0b7a2dfd14c9dd65d8e6c499a94c6c882008ae8a"
+  },
+  "models": {
+    "data/models/bio_context_labels_v2_context_v1_candidate.json": "cd8811c078961a501da4b569953a6bda0fe1d7d04ba6fa54998e5730111f20fb",
+    "data/models/bio_labels_v2_word_v1_candidate.json": "1e662b7a54f9caebddae148d53040c19eb8fbc26433614d1667ed1e1578448c5",
+    "data/models/masroof_model.json": "6ebb57882035be2103fa61e160013f32846912e70c5066a30af0c390009d15c8",
+    "data/models/masroof_sequence_tagger.json": "7244dd5be424267d929d1cf8669dc6b9177ada93709313d9d3503322285d8b21",
+    "data/models/masroof_transaction_direction_v2.json": "79a91780a3289169fd9de8f4fbfa8fb7d3636e8c2ce483a019ba67934e40e835",
+    "data/models/merchant_category_research_aliases.json": "4aaa7b4d3d44647660bd8a6e3fd4ba3d5642cf93bb542e83d16d7573a7c82be7",
+    "data/models/merchant_category_research_augmented.json": "bbd416815106314ff9956b3c4d499b09866099729603ad8ea0b652332731bce1",
+    "data/models/merchant_category_research_baseline.json": "a5eaa1c49cb4c93411083cfd6767f4c80aec14be5501975d55644576e3c91aed",
+    "data/models/merchant_category_research_jordan_data_v3_aliases.json": "628d6d18e031c016269c0702178c3240273c1f0f6e424fbe67ee47855ed41203",
+    "data/models/merchant_category_research_jordan_data_v3_augmented.json": "29d968fc133f4000c08b978ef6a262390cf8b4531f0f3622c38c5da2abdc34ed",
+    "data/models/merchant_category_research_jordan_data_v3_baseline.json": "b42842ebd013fc6d1a0a171a4aa27f020ef8ac4f3152b5c5282d24183d5b3ede",
+    "data/models/merchant_category_research_jordan_expansion_v2_aliases.json": "ce3dd67df2bd15f51f993fccdfdaa03a3c66a9cf77a969e99bbf0ac0fef6f144",
+    "data/models/merchant_category_research_jordan_expansion_v2_augmented.json": "a88666b309400684ebccfe345c4435dedc83af0fc91c8119d238f0d7f10f47aa",
+    "data/models/merchant_category_research_jordan_expansion_v2_baseline.json": "93f1cfbcc53114a7bfc221bd1d67b7d98a7dd23e7fba941ab7af97eccc6c0adb",
+    "data/models/sms_completion_context_v1_browser_runtime.js": "56a07ac40f55309645df2ef5d4047e7ca1a2b0a3e0baa658eaeca5f08cb552e9",
+    "data/models/sms_completion_context_v1_candidate.json": "fad7f42560fae5dfbf55c7c070013e7e95b1eb008c67434219165207891cd73c",
+    "data/models/sms_completion_encoder_v1_candidate.json": "8080e66ef95ff87d8f8d5d461b7dd825c7fc7467ed397c4ecf92d11896700889",
+    "data/models/sms_semantics_ab_v1_browser_runtime.js": "c361f9f94e4757ce3518f0b6703f6ab8de26d3c0cd0508d298d8cbfb275b4890",
+    "data/models/sms_semantics_ab_v1_word_candidate.json": "f4793e23851946cc202c7427502183e02892ff452253095d1a50acdd3a095766",
+    "data/models/sms_semantics_ab_v1_word_char_candidate.json": "00ad8b39744c7ca9e43caf09ddec8c0bd5fb40bbed9ec83275955ab2b3d77802",
+    "data/models/sms_semantics_followup_v1_word_candidate.json": "626311e3c6da92689b444b2574e0c7e31bb5ea708332e0bf92ee333b98f19121",
+    "data/models/transaction_direction_jordan_sanitized_liblinear_v1_candidate.json": "50aee39b74e5c4cad0be6151ea9117c309a249577ae7a7d5d0aaebfb6bad463d",
+    "data/models/transaction_direction_jordan_sanitized_v1_candidate.json": "921cff48769fdacca2925801d0a8d856758ec5f3df52e4260ad0c4d2e6c2a0f7"
+  },
+  "limits": [
+    "UI checks are development conformance, not independent SMS accuracy.",
+    "No app migration or mobile performance measurement."
+  ]
+}

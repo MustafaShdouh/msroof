@@ -1,4 +1,5 @@
 import json
+import hashlib
 import subprocess
 import sys
 from pathlib import Path
@@ -6,12 +7,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 from tools.browser.merchant_lab import build_merchant_lab
+from tools.browser.sms_research import build_sms_research
 from tools.node_runtime import node_executable
 
 def build():
     root = Path(__file__).resolve().parents[2]
-    with (root / "data" / "models" / "masroof_model.json").open("r", encoding="utf-8") as f:
-        model_json_str = f.read()
+    model_bytes = (root / "data" / "models" / "masroof_model.json").read_bytes()
+    policy = json.loads((root / "config/contracts/core_validation_preflight_v1.json").read_text(encoding="utf-8"))
+    if hashlib.sha256(model_bytes).hexdigest() != policy["runtime"]["modelSha256"]:
+        raise ValueError("Tester weights differ from the pinned model; review the model/version before rebuilding")
+    model_json_str = model_bytes.decode("utf-8")
 
     html_content = r'''<!DOCTYPE html>
 <html lang="en">
@@ -62,7 +67,7 @@ def build():
     <button onclick="loadPreset('farm_to_table')">Merchant name</button>
     <button onclick="loadPreset('balance_inquiry')">Balance inquiry</button>
     <button onclick="loadPreset('incomplete_tx')">Missing amount</button>
-    <button onclick="loadPreset('internal_transfer')">Own-account transfer</button>
+    <button onclick="loadPreset('internal_transfer')">Paired debit / credit</button>
     <button onclick="loadPreset('trap_otp')">Verification code</button>
     <button onclick="loadPreset('declined')">Declined</button>
     <button onclick="loadPreset('chat_noise')">Personal message</button>
@@ -73,16 +78,45 @@ def build():
 
     <section class="panel analysis-panel" aria-labelledby="analysisHeading">
       <div class="panel-heading"><h2 id="analysisHeading">Analysis</h2><span class="quiet-label">Engine output</span></div>
-  <details class="assessment-details">
-    <summary><span>Detailed assessment comparison</span><span class="decision-badge" id="detailedDecision">Ready</span></summary>
-    <p class="help-text">Include is eligible for recording. Review requires inspection. This view compares the new assessment with the current engine below.</p>
-    <pre id="detailedOutput">{}</pre>
+  <p class="help-text" id="startupStatus" role="status">Engine not ready. Waiting for startup checks; no message has been analyzed.</p>
+  <div class="result-heading"><h3>Message-only assessment</h3><span class="decision-badge" id="detailedDecision" role="status" aria-live="polite">Ready</span></div>
+  <table class="result-table" id="primaryAssessment" aria-label="Primary message assessment">
+    <tbody>
+    <tr class="status-row"><th scope="row">Completion</th><td id="primaryStatus">—</td></tr>
+    <tr class="amount-row"><th scope="row">Amount</th><td id="primaryAmount">—</td></tr>
+    <tr><th scope="row">Currency</th><td id="primaryCurrency">—</td></tr>
+    <tr><th scope="row">Direction</th><td id="primaryDirection">—</td></tr>
+    <tr><th scope="row">Ownership</th><td id="primaryOwnership">—</td></tr>
+    <tr><th scope="row">Why</th><td id="primaryReasons" class="assessment-reasons">Add a message to analyze.</td></tr>
+    <tr><th scope="row">Local analysis time</th><td id="primaryLatency">—</td></tr>
+    </tbody>
+  </table>
+  <p class="help-text">Include is eligible for recording. Review needs inspection. Exclude is not recorded. Ownership confirmations are shown separately below.</p>
+  <details class="json-details"><summary>Assessment response <span class="quiet-label">JSON</span></summary><pre id="detailedOutput">{}</pre></details>
+  <details class="assessment-details ownership-panel" id="ownershipPanel">
+    <summary>Try an ownership confirmation <span class="quiet-label">Optional</span></summary>
+    <p class="help-text">For this transfer, who owns the other account? Choose only what you know. A name alone does not establish ownership.</p>
+    <div class="ownership-choices" role="group" aria-label="Confirm transfer ownership">
+      <button type="button" id="ownershipOwn" aria-pressed="false" onclick="confirmOwnership('own_accounts')">My own accounts</button>
+      <button type="button" id="ownershipOther" aria-pressed="false" onclick="confirmOwnership('other_person')">Another person</button>
+      <button type="button" id="ownershipUnknown" aria-pressed="false" onclick="confirmOwnership('unknown')">I'm not sure</button>
+    </div>
+    <p class="ownership-summary" id="ownershipSummary" role="status" aria-live="polite">Add a message to try a confirmation.</p>
+    <p class="help-text" id="ownershipStatus">No confirmation</p>
+    <div class="ownership-actions">
+      <button type="button" id="ownershipClear" onclick="clearOwnershipConfirmation()" disabled>Clear confirmation</button>
+      <button type="button" id="ownershipNewMessage" onclick="startNewOwnershipMessage()">New message</button>
+    </div>
+    <p class="help-text">Saved only until you edit the message or sender, load a sample, start a new message, or refresh this page. The message-only result above and legacy comparison stay unchanged.</p>
+    <details class="json-details"><summary>Confirmation response <span class="quiet-label">JSON</span></summary><pre id="ownershipOutput">{}</pre></details>
   </details>
-  <div class="result-heading"><h3>Current output</h3><span class="quiet-label">Legacy caller</span></div>
-  <table class="result-table" aria-label="Current engine result">
+  <details class="assessment-details" id="legacyPanel">
+    <summary>Legacy comparison <span class="quiet-label">Previous API</span></summary>
+    <p class="help-text">Compatibility output from the previous API. Its decisions can differ from the message-only assessment above. Model scores are uncalibrated.</p>
+  <table class="result-table" aria-label="Legacy engine comparison">
     <tbody>
     <tr class="status-row"><th scope="row">Status</th><td id="decisionTitle">Ready</td></tr>
-    <tr><th scope="row">Model score</th><td id="confidenceVal">--</td></tr>
+    <tr><th scope="row">Raw model score</th><td id="confidenceVal">--</td></tr>
     <tr><th scope="row">Category</th><td id="fieldCategory">--</td></tr>
     <tr><th scope="row">Direction</th><td id="fieldDirection">--</td></tr>
     <tr class="amount-row"><th scope="row">Amount</th><td id="fieldAmount">--</td></tr>
@@ -94,7 +128,9 @@ def build():
     <tr><th scope="row">Processing time</th><td id="latencyBadge">--</td></tr>
     </tbody>
   </table>
-  <details class="json-details"><summary>Raw response <span class="quiet-label">JSON</span></summary><pre id="jsonOutput">{}</pre></details>
+  <details class="json-details"><summary>Legacy response <span class="quiet-label">JSON</span></summary><pre id="jsonOutput">{}</pre></details>
+  </details>
+  __SMS_RESEARCH_MARKUP__
     </section>
     </div>
   __MERCHANT_LAB_MARKUP__
@@ -103,10 +139,14 @@ def build():
   </div>
   <script>
     const MODEL = __MODEL_DATA__;
-    __ENGINE_BUNDLE__
-    MasroofRuntime.MasroofEngine.init(MODEL);
+    __STARTUP_SCRIPT__
+    var MasroofRuntime = initializeTesterRuntime(__ENGINE_BUNDLE__, MODEL);
 
     const PRESETS = __TESTER_PRESETS__;
+    __ASSESSMENT_SCRIPT__
+    __OWNERSHIP_SCRIPT__
+    if (!testerStartup.ready) renderTesterNotReady();
+    __SMS_RESEARCH_SCRIPT__
 
     function loadPreset(key) {
       var p = PRESETS[key];
@@ -114,7 +154,7 @@ def build():
         document.getElementById('senderInput').value = p.sender;
         document.getElementById('bodyInput').value = p.body;
         document.getElementById('isContactInput').checked = false;
-        runAnalysis();
+        startNewOwnershipMessage();
       }
     }
 
@@ -130,88 +170,44 @@ def build():
     function applyCorrection(merchant, category) { return MasroofRuntime.MasroofEngine.applyCorrection(merchant, category); }
     function classifyCategory(merchant, text) { return MasroofRuntime.MasroofEngine.classifyCategory(merchant, text); }
     function analyze(sender, body, isContact) {
+      requireTesterReady();
       var started = performance.now();
       var result = MasroofRuntime.MasroofEngine.analyze({ sender: sender, body: body, isContact: isContact });
       return { result: result, latency: performance.now() - started };
     }
 
     function analyzeDetailed(input) {
+      requireTesterReady();
       return MasroofRuntime.MasroofEngine.analyzeDetailed(input);
     }
 
     function runAnalysis() {
+      if (!testerStartup.ready) { renderTesterNotReady(); return; }
+      document.getElementById('startupStatus').hidden = true;
       var sender = document.getElementById('senderInput').value;
       var body = document.getElementById('bodyInput').value;
       var isContact = document.getElementById('isContactInput').checked;
-
+      renderOwnership(sender, body, isContact);
       if (!body.trim()) {
-        document.getElementById('detailedDecision').innerText = 'Ready';
-        document.getElementById('detailedDecision').style.color = '#68716a';
-        document.getElementById('detailedDecision').style.backgroundColor = '#f3f5f1';
-        document.getElementById('detailedOutput').innerText = '{}';
+        renderPrimaryAssessment(null);
+        renderLegacyComparison(null);
+        renderSmsResearch(body, null);
         updateMerchantSms(null);
-        document.getElementById('decisionTitle').innerText = "Ready (Type text or click preset)";
-        document.getElementById('decisionTitle').style.color = "#626b65";
-        document.getElementById('confidenceVal').innerText = "--";
-        document.getElementById('fieldCategory').innerText = "--";
-        document.getElementById('fieldDirection').innerText = "--";
-        document.getElementById('fieldAmount').innerText = "--";
-        document.getElementById('fieldOrigAmount').innerText = "--";
-        document.getElementById('fieldRate').innerText = "--";
-        document.getElementById('fieldParty').innerText = "--";
-        document.getElementById('fieldAccount').innerText = "--";
-        document.getElementById('fieldBalance').innerText = "--";
-        document.getElementById('jsonOutput').innerText = "{}";
-        document.getElementById('latencyBadge').innerText = "0 ms";
         return;
       }
-
+      var started = performance.now();
       var detailed = analyzeDetailed({ sender: sender, text: body, isContact: isContact });
-      document.getElementById('detailedDecision').innerText = detailed.trackingDecision === 'review' ? 'Review required' :
-        (detailed.trackingDecision === 'include' ? 'Include' : 'Exclude');
-      document.getElementById('detailedDecision').style.color = detailed.trackingDecision === 'review' ? '#846434' :
-        (detailed.trackingDecision === 'include' ? '#35634c' : '#68716a');
-      document.getElementById('detailedDecision').style.backgroundColor = detailed.trackingDecision === 'review' ? '#f5efe3' :
-        (detailed.trackingDecision === 'include' ? '#edf1e9' : '#f3f5f1');
-      document.getElementById('detailedOutput').innerText = JSON.stringify(detailed, null, 2);
-      var analysis = analyze(sender, body, isContact);
-      var result = analysis.result;
-      updateMerchantSms(result);
-      var latency = analysis.latency;
-
-      document.getElementById('latencyBadge').innerText = latency.toFixed(3) + " ms";
-      document.getElementById('confidenceVal').innerText = result.confidence;
-
-      var title = document.getElementById('decisionTitle');
-
-      if (result.isValidTransaction) {
-        title.innerText = "VALID TRANSACTION";
-        title.style.color = "#35634c";
-
-        var d = result.data;
-        document.getElementById('fieldCategory').innerText = d.category ? (d.category + " (" + Math.round(d.categoryConfidence * 100) + "%)") : "--";
-        document.getElementById('fieldDirection').innerText = d.type + " (" + d.direction + ")";
-        document.getElementById('fieldAmount').innerText = d.amount + " " + d.currency;
-        document.getElementById('fieldOrigAmount').innerText = (d.originalAmount && d.originalCurrency) ? (d.originalAmount + " " + d.originalCurrency) : "None (Single Currency)";
-        document.getElementById('fieldRate').innerText = d.exchangeRate ? ("1 " + d.originalCurrency + " = " + d.exchangeRate + " " + d.currency) : "None";
-        document.getElementById('fieldParty').innerText = d.merchantOrParty || "None";
-        document.getElementById('fieldAccount').innerText = d.accountMask || "None";
-        document.getElementById('fieldBalance').innerText = d.balance !== null ? (d.balance + " " + d.currency) : "None";
-      } else {
-        title.innerText = "REJECTED (" + (result.reason || "Invalid") + ")";
-        title.style.color = "#984b47";
-
-        document.getElementById('fieldCategory').innerText = "--";
-        document.getElementById('fieldDirection').innerText = "--";
-        document.getElementById('fieldAmount').innerText = "--";
-        document.getElementById('fieldOrigAmount').innerText = "--";
-        document.getElementById('fieldRate').innerText = "--";
-        document.getElementById('fieldParty').innerText = "--";
-        document.getElementById('fieldAccount').innerText = "--";
-        document.getElementById('fieldBalance').innerText = "--";
+      renderPrimaryAssessment(detailed, performance.now() - started);
+      renderSmsResearch(body, detailed);
+      // A compatibility failure cannot suppress the primary assessment.
+      try {
+        var analysis = analyze(sender, body, isContact);
+        renderLegacyComparison(analysis);
+        updateMerchantSms(analysis.result);
+      } catch (error) {
+        renderLegacyComparison(null, String(error.message || error));
+        updateMerchantSms(null);
       }
-
-      document.getElementById('jsonOutput').innerText = JSON.stringify(result, null, 2);
     }
 
     __MERCHANT_LAB_SCRIPT__
@@ -228,11 +224,20 @@ def build():
     final_html = final_html.replace("__TESTER_PRESETS__", json.dumps(presets, ensure_ascii=False))
     bundle = subprocess.run([node_executable(), str(root / "tools/browser/bundle_engine.mjs")],
                             capture_output=True, text=True, encoding="utf-8", check=True)
-    final_html = final_html.replace("__ENGINE_BUNDLE__", bundle.stdout)
+    # Keep core syntax inside a string until the startup capability checks pass.
+    safe_bundle = json.dumps(bundle.stdout, ensure_ascii=False).replace("<", "\\u003c").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
+    final_html = final_html.replace("__ENGINE_BUNDLE__", safe_bundle)
+    final_html = final_html.replace("__STARTUP_SCRIPT__", (root / "tools/browser/startup_guard.js").read_text(encoding="utf-8"))
+    final_html = final_html.replace("__ASSESSMENT_SCRIPT__", (root / "tools/browser/assessment_view.js").read_text(encoding="utf-8"))
+    final_html = final_html.replace("__OWNERSHIP_SCRIPT__", (root / "tools/browser/ownership_tester.js").read_text(encoding="utf-8"))
+    research_markup, research_script = build_sms_research(root)
+    final_html = final_html.replace("__SMS_RESEARCH_MARKUP__", research_markup).replace("__SMS_RESEARCH_SCRIPT__", research_script)
     markup, script = build_merchant_lab(root)
     final_html = final_html.replace("__MERCHANT_LAB_MARKUP__", markup).replace("__MERCHANT_LAB_SCRIPT__", script)
 
-    final_html = "\n".join(line.rstrip() for line in final_html.splitlines()) + "\n"
+    # Unicode separators can occur inside embedded JSON/JS strings. Only split
+    # actual file newlines; splitlines() would turn those characters into syntax.
+    final_html = "\n".join(line.rstrip() for line in final_html.split("\n")) + "\n"
 
     workspace_path = Path(__file__).resolve().with_name("tester.html")
     with workspace_path.open("w", encoding="utf-8") as f:

@@ -1,0 +1,1003 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "core detection/amount/currency/direction/ownership; categories deferred",
+  "kind": "assistant-authored exposed development conformance, NOT real bank SMS or independent accuracy",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "cases": [
+    {
+      "id": "purchase-en",
+      "family": "purchase",
+      "language": "en",
+      "input": {
+        "text": "Your account was debited JOD 12.750 for a completed purchase at Cedar Bakery."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "purchase-ar",
+      "family": "purchase",
+      "language": "ar",
+      "input": {
+        "text": "تم خصم ١٢٫٧٥٠ دينار من حسابك مقابل شراء مكتمل لدى مخبز الأرز."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "persian-digits",
+      "family": "digit_scripts",
+      "language": "ar",
+      "input": {
+        "text": "تم خصم ۱۲٫۷۵۰ دينار من حسابك مقابل شراء مكتمل."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 12.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "whole-number",
+      "family": "digit_scripts",
+      "language": "en",
+      "input": {
+        "text": "JOD 7 was debited from your account after the payment completed."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "micro-payment",
+      "family": "digit_scripts",
+      "language": "ar",
+      "input": {
+        "text": "تم خصم ٠٫٠٥٠ دينار من حسابك بعد اكتمال السداد."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 0.05,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "grouped-number",
+      "family": "separators",
+      "language": "en",
+      "input": {
+        "text": "JOD 1,250.375 was debited from your account for a completed purchase."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 1250.375,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "arabic-grouping",
+      "family": "separators",
+      "language": "ar",
+      "input": {
+        "text": "تم خصم ١٬٢٥٠٫٣٧٥ دينار من حسابك بعد اكتمال السداد."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 1250.375,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "decimal-comma",
+      "family": "separators",
+      "language": "en",
+      "input": {
+        "text": "EUR 17,50 was debited from your account for a completed purchase."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "currency": "EUR",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "balance-after",
+      "family": "amount_roles",
+      "language": "en",
+      "input": {
+        "text": "JOD 8.250 was debited from account *4321. Available balance JOD 630.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 8.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "balance-before",
+      "family": "amount_roles",
+      "language": "en",
+      "input": {
+        "text": "Available balance JOD 630.500. A completed purchase debited JOD 8.250 from account *4321."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 8.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "balance-ar",
+      "family": "amount_roles",
+      "language": "ar",
+      "input": {
+        "text": "تم خصم ٨٫٢٥٠ دينار من حسابك. الرصيد المتاح ٦٣٠٫٥٠٠ دينار."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 8.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "identifier-date",
+      "family": "identifiers",
+      "language": "en",
+      "input": {
+        "text": "JOD 16.250 was debited from account *7812 for a completed purchase. Ref 981122; date 2026-10-29."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 16.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "salary-en",
+      "family": "salary",
+      "language": "en",
+      "input": {
+        "text": "Your salary of JOD 620.000 has been credited to your account and is now available."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 620,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "salary-ar",
+      "family": "salary",
+      "language": "ar",
+      "input": {
+        "text": "تم إيداع راتبك بقيمة ٦٢٠ دينار في حسابك وأصبح الرصيد متاحاً."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 620,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "refund-en",
+      "family": "refund",
+      "language": "en",
+      "input": {
+        "text": "A refund of JOD 14.500 was credited to your account after the purchase was returned."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 14.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "refund-ar",
+      "family": "refund",
+      "language": "ar",
+      "input": {
+        "text": "تمت إضافة مبلغ الاسترداد ١٤٫٥٠٠ دينار إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 14.5,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "withdrawal-en",
+      "family": "cash",
+      "language": "en",
+      "input": {
+        "text": "Cash withdrawal completed. JOD 40.000 was debited from your account at ATM."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 40,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "withdrawal-ar",
+      "family": "cash",
+      "language": "ar",
+      "input": {
+        "text": "تم سحب ٤٠ دينار نقداً من حسابك عبر الصراف الآلي بنجاح."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 40,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "deposit-en",
+      "family": "cash",
+      "language": "en",
+      "input": {
+        "text": "Your cash deposit of JOD 85.000 was credited to your account at the ATM."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 85,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "deposit-ar",
+      "family": "cash",
+      "language": "ar",
+      "input": {
+        "text": "تم إيداع مبلغ ٨٥ دينار نقداً في حسابك عبر الصراف الآلي."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 85,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "bill-en",
+      "family": "bill",
+      "language": "en",
+      "input": {
+        "text": "Your electricity bill payment completed. JOD 28.375 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 28.375,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "bill-ar",
+      "family": "bill",
+      "language": "ar",
+      "input": {
+        "text": "تم سداد فاتورة المياه وخصم ١٩٫٢٥٠ دينار من حسابك بنجاح."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 19.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "fee-only",
+      "family": "fee",
+      "language": "en",
+      "input": {
+        "text": "A service fee of JOD 0.750 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 0.75,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "missing-currency",
+      "family": "currency",
+      "language": "en",
+      "input": {
+        "text": "An amount of 18.250 was debited from your account after the payment completed."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 18.25,
+        "currency": "JOD",
+        "currencyResolution": "default_missing",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "foreign-balance",
+      "family": "currency",
+      "language": "en",
+      "input": {
+        "text": "USD 23.00 was debited from your account for a completed purchase. Available balance JOD 80.000."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 23,
+        "currency": "USD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "mixed-script",
+      "family": "mixed_language",
+      "language": "mixed",
+      "input": {
+        "text": "تم خصم JOD ٦٫٢٥٠ من حسابك. Payment completed."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 6.25,
+        "currency": "JOD",
+        "currencyResolution": "explicit",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "p2p-out",
+      "family": "transfer",
+      "language": "en",
+      "input": {
+        "text": "Outward transfer of JOD 25 completed from your account to another person, Ali."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 25,
+        "currency": "JOD",
+        "direction": "outgoing",
+        "transferRelationship": "other_person"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "p2p-in",
+      "family": "transfer",
+      "language": "ar",
+      "input": {
+        "text": "تم تحويل ٢٥ دينار من شخص آخر إلى حسابك وإضافتها إلى رصيدك بنجاح."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 25,
+        "currency": "JOD",
+        "direction": "incoming",
+        "transferRelationship": "other_person"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "own-transfer",
+      "family": "ownership",
+      "language": "en",
+      "input": {
+        "text": "Transfer of JOD 45 between your own accounts completed."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "transferRelationship": "own_accounts"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "named-unknown-transfer",
+      "family": "ownership",
+      "language": "en",
+      "input": {
+        "text": "Outward transfer of JOD 25 completed from account *4321 to SAMER."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "transferRelationship": "unknown"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "chat-en",
+      "family": "chat",
+      "language": "en",
+      "input": {
+        "text": "I sent you 15 dinars, check your wallet when you can."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "chat-ar",
+      "family": "chat",
+      "language": "ar",
+      "input": {
+        "text": "حولتلك ١٥ دينار ع المحفظة شيك عليهم بالله"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "otp-en",
+      "family": "authorization",
+      "language": "en",
+      "input": {
+        "text": "Use code 853192 to authorize a JOD 80 purchase. Do not share the code."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "otp-ar",
+      "family": "authorization",
+      "language": "ar",
+      "input": {
+        "text": "رمز التحقق ٨٥٣١٩٢ لإتمام شراء بقيمة ٨٠ دينار."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "declined-en",
+      "family": "declined",
+      "language": "en",
+      "input": {
+        "text": "Your JOD 12 purchase was declined due to insufficient funds. No amount was debited."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "declined-ar",
+      "family": "declined",
+      "language": "ar",
+      "input": {
+        "text": "تم رفض عملية الشراء بقيمة ١٢ دينار لعدم كفاية الرصيد ولم يتم الخصم."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "pending-en",
+      "family": "pending",
+      "language": "en",
+      "input": {
+        "text": "Your payment of JOD 20 is pending approval and has not been debited."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "pending-ar",
+      "family": "pending",
+      "language": "ar",
+      "input": {
+        "text": "طلب سداد ٢٠ دينار بانتظار موافقتك ولم يخصم من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "balance-only",
+      "family": "balance_only",
+      "language": "en",
+      "input": {
+        "text": "Your available account balance is JOD 725.000."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "balance-question",
+      "family": "balance_only",
+      "language": "ar",
+      "input": {
+        "text": "كم رصيدك هسا في المحفظة؟"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "promo",
+      "family": "administration",
+      "language": "en",
+      "input": {
+        "text": "Pay with your card and earn up to JOD 50 cashback next month."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "maintenance",
+      "family": "administration",
+      "language": "ar",
+      "input": {
+        "text": "خدمة التحويل غير متاحة مؤقتاً بسبب الصيانة."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "example-en",
+      "family": "example",
+      "language": "en",
+      "input": {
+        "text": "This is a teaching example: \"JOD 13 was debited from your account.\""
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "example-ar",
+      "family": "example",
+      "language": "ar",
+      "input": {
+        "text": "هذا نموذج تعليمي: «تم خصم ١٣ دينار من حسابك»."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "empty",
+      "family": "malformed",
+      "language": "en",
+      "input": {
+        "text": ""
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "null",
+      "family": "malformed",
+      "language": "en",
+      "input": {
+        "text": null
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null,
+        "direction": "not_applicable"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "unknown-outcome",
+      "family": "outcome_uncertainty",
+      "language": "en",
+      "input": {
+        "text": "Payment request for JOD 22 is closed, but whether funds were debited is not specified."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "missing-amount",
+      "family": "incomplete",
+      "language": "en",
+      "input": {
+        "text": "Your purchase completed and your account was debited."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "unknown-direction",
+      "family": "incomplete",
+      "language": "en",
+      "input": {
+        "text": "Account transaction completed for JOD 25."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": 25,
+        "direction": "uncertain"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "two-events",
+      "family": "multiple_events",
+      "language": "en",
+      "input": {
+        "text": "JOD 10 was debited from your account for a purchase. JOD 5 was credited to your account as a refund."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "conflicting-outcome",
+      "family": "outcome_uncertainty",
+      "language": "ar",
+      "input": {
+        "text": "تم خصم ٣٠ دينار من حسابك لكن حالة العملية متناقضة بين ناجحة ومرفوضة."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    },
+    {
+      "id": "two-unresolved-amounts",
+      "family": "multiple_events",
+      "language": "en",
+      "input": {
+        "text": "Your purchase completed and was debited. Transaction amounts shown: JOD 10 and JOD 12; no final total is specified."
+      },
+      "expected": {
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "provenance": "assistant_authored_development",
+      "trainingEligible": false,
+      "independentEvaluationEligible": false
+    }
+  ],
+  "pendingPolicyCases": [
+    {
+      "id": "fee-total",
+      "text": "Purchase JOD 10; fee JOD 0.500; total debit JOD 10.500.",
+      "question": "Choose posted total debit versus purchase-only amount and whether a separate fee event is ever emitted."
+    },
+    {
+      "id": "fx-dual",
+      "text": "Purchase USD 10; your JOD account was charged JOD 7.090.",
+      "question": "Choose account-currency posted amount versus original purchase amount; keep original pair separately if later contracted."
+    },
+    {
+      "id": "zero-signed",
+      "text": "An alert reports a zero amount or signed negative adjustment.",
+      "question": "Define zero-amount movement and signed-amount semantics before assigning truth."
+    },
+    {
+      "id": "duplicate-delivery",
+      "text": "The same bank SMS arrives twice.",
+      "question": "Define event identity and deduplication at ingestion; text alone cannot distinguish identical genuine events."
+    }
+  ]
+}

@@ -1,0 +1,724 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Assistant-authored exposed development contrasts, not independent evidence",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false,
+  "cases": [
+    {
+      "id": "salary-landed-en",
+      "language": "en",
+      "boundary": "income",
+      "input": {
+        "text": "Your JOD 17 salary has landed in the account and the funds are available."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "salary-arrived-ar",
+      "language": "ar",
+      "boundary": "income",
+      "input": {
+        "text": "نزل راتبك في الحساب بقيمة 17 JOD وأصبح الرصيد متاحا."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "salary-added-en",
+      "language": "en",
+      "boundary": "income",
+      "input": {
+        "text": "Salary of JOD 17 has been added to your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "payroll-received-en",
+      "language": "en",
+      "boundary": "income",
+      "input": {
+        "text": "Payroll received: 17 JOD posted as an increase to your account balance."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "account-received-en",
+      "language": "en",
+      "boundary": "person_transfer",
+      "input": {
+        "text": "Your account received JOD 17 by a transfer from another person."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "account-received-ar",
+      "language": "ar",
+      "boundary": "person_transfer",
+      "input": {
+        "text": "استلم حسابك 17 JOD من حوالة مرسلة من شخص آخر."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "wallet-increased-en",
+      "language": "en",
+      "boundary": "person_transfer",
+      "input": {
+        "text": "Another person's CliQ payment has arrived; your wallet increased by 17 JOD."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "wallet-increased-ar",
+      "language": "ar",
+      "boundary": "person_transfer",
+      "input": {
+        "text": "اكتمل وصول دفعة شخص آخر عبر كليك؛ زاد رصيد محفظتك 17 JOD."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "cashback-increase-ar",
+      "language": "ar",
+      "boundary": "income",
+      "input": {
+        "text": "زاد رصيد محفظتك بمكافأة نقدية مقيدة مقدارها 17 JOD؛ ليست نقاطا."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "wage-booked-en",
+      "language": "en",
+      "boundary": "income",
+      "input": {
+        "text": "Your work payment was booked to your account and is now withdrawable."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "wage-booked-ar",
+      "language": "ar",
+      "boundary": "income",
+      "input": {
+        "text": "قيد أجر العمل في حسابك وبات قابلا للسحب."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "wallet-cashin-en",
+      "language": "en",
+      "boundary": "income",
+      "input": {
+        "text": "Your wallet cash-in is complete: 17 JOD added as a posted credit."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "transfer-complete-en",
+      "language": "en",
+      "boundary": "person_transfer",
+      "input": {
+        "text": "Your transfer to another person is complete. JOD 17 was removed from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "transfer-executed-ar",
+      "language": "ar",
+      "boundary": "person_transfer",
+      "input": {
+        "text": "نفذت حوالتك إلى حساب شخص آخر. تم تنزيل 17 JOD من رصيد حسابك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "transfer-unknown-en",
+      "language": "en",
+      "boundary": "unknown_owner",
+      "input": {
+        "text": "Your transfer is complete: JOD 17 was removed from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "outgoing",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "transfer-unknown-ar",
+      "language": "ar",
+      "boundary": "unknown_owner",
+      "input": {
+        "text": "أُنجزت حوالة بقيمة 17 JOD بين الحساب *1111 والحساب *2222."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "own-accounts-en",
+      "language": "en",
+      "boundary": "own_transfer",
+      "input": {
+        "text": "Internal movement completed: JOD 17 from your current account to your own savings account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "own-accounts-ar",
+      "language": "ar",
+      "boundary": "own_transfer",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "own-masked-ar",
+      "language": "ar",
+      "boundary": "own_transfer",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري *1111 إلى حساب التوفير الخاص بك *2222."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "exclude",
+        "direction": "not_applicable",
+        "transferRelationship": "own_accounts",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "internal-person-en",
+      "language": "en",
+      "boundary": "person_transfer",
+      "input": {
+        "text": "Internal transfer to another person completed. JOD 17 was removed from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "other_person",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "internal-unknown-en",
+      "language": "en",
+      "boundary": "unknown_owner",
+      "input": {
+        "text": "Internal movement completed: JOD 17 between account *1111 and account *2222."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "uncertain",
+        "transferRelationship": "unknown",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "salary-missing-en",
+      "language": "en",
+      "boundary": "missing_amount",
+      "input": {
+        "text": "Your salary has arrived in your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "salary-missing-ar",
+      "language": "ar",
+      "boundary": "missing_amount",
+      "input": {
+        "text": "نزل راتبك في حسابك وأصبح متاحا."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "direction": "incoming",
+        "transferRelationship": "not_transfer",
+        "amount": null,
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      }
+    },
+    {
+      "id": "not-added-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "Salary of JOD 17 has not been added to your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "not-arrived-ar",
+      "language": "ar",
+      "boundary": "denial",
+      "input": {
+        "text": "لم ينزل راتبك في الحساب بعد."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "not-increased-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "Your wallet has not increased by JOD 17."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "not-executed-ar",
+      "language": "ar",
+      "boundary": "denial",
+      "input": {
+        "text": "لم تنفذ حوالتك بقيمة 17 JOD بعد."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "not-complete-en",
+      "language": "en",
+      "boundary": "denial",
+      "input": {
+        "text": "Your transfer is not complete. No funds moved."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "future-ar",
+      "language": "ar",
+      "boundary": "request",
+      "input": {
+        "text": "سيتم تنفيذ حوالة بقيمة 17 JOD إلى حساب شخص آخر."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "future-en",
+      "language": "en",
+      "boundary": "request",
+      "input": {
+        "text": "Your transfer will be complete after your approval."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "question-en",
+      "language": "en",
+      "boundary": "question",
+      "input": {
+        "text": "Can you confirm that your JOD 17 salary has arrived in the account?"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "question-ar",
+      "language": "ar",
+      "boundary": "question",
+      "input": {
+        "text": "هل نزل راتبك في الحساب بقيمة 17 JOD؟"
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "personal-en",
+      "language": "en",
+      "boundary": "personal",
+      "input": {
+        "text": "Personal message: Your JOD 17 salary has landed in the account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "personal-ar",
+      "language": "ar",
+      "boundary": "personal",
+      "input": {
+        "text": "رسالة شخصية: نزل راتبك في الحساب بقيمة 17 JOD."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "claim-en",
+      "language": "en",
+      "boundary": "personal",
+      "input": {
+        "text": "I completed your JOD 17 transfer."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "claim-ar",
+      "language": "ar",
+      "boundary": "personal",
+      "input": {
+        "text": "أنا نفذت حوالة بقيمة 17 JOD لحسابك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "quote-en",
+      "language": "en",
+      "boundary": "quoted",
+      "input": {
+        "text": "Translation exercise: \"Your transfer to another person is complete.\""
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "quote-ar",
+      "language": "ar",
+      "boundary": "quoted",
+      "input": {
+        "text": "هذا مثال: «نفذت حوالتك وأضيفت 17 JOD إلى حسابك»."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "unknown-en",
+      "language": "en",
+      "boundary": "unknown",
+      "input": {
+        "text": "Whether your salary has arrived in the account is not confirmed."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "unknown-ar",
+      "language": "ar",
+      "boundary": "unknown",
+      "input": {
+        "text": "نتيجة القيد غير مؤكدة؛ ورد تنفيذ حوالة بقيمة 17 JOD."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review"
+      }
+    },
+    {
+      "id": "profile-added-en",
+      "language": "en",
+      "boundary": "administration",
+      "input": {
+        "text": "An address has been added to your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "removed-file-en",
+      "language": "en",
+      "boundary": "administration",
+      "input": {
+        "text": "The uploaded file was removed from your account."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "balance-only-en",
+      "language": "en",
+      "boundary": "balance",
+      "input": {
+        "text": "Your available balance is JOD 17."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "points-only-ar",
+      "language": "ar",
+      "boundary": "noncash",
+      "input": {
+        "text": "أضيفت 150 نقطة مكافآت إلى ملفك."
+      },
+      "expected": {
+        "transactionStatus": "non_transaction",
+        "trackingDecision": "exclude",
+        "amount": null,
+        "currency": null
+      }
+    },
+    {
+      "id": "deducted-en",
+      "language": "en",
+      "boundary": "account_debit",
+      "input": {
+        "text": "A service fee of JOD 17 was deducted from your account and posted."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    },
+    {
+      "id": "taken-en",
+      "language": "en",
+      "boundary": "account_debit",
+      "input": {
+        "text": "ATM cash payout successful: JOD 17 taken from your account."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "transferRelationship": "not_transfer",
+        "amount": 17,
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      }
+    }
+  ]
+}
