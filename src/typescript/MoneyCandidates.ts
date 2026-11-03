@@ -85,6 +85,19 @@ export function collectCandidates(source: EntityText, parseNumber: (text: string
   return {working,monetary,anchored,primary,exclusions};
 }
 
+export function hasMovementAmount(clause: string, parseNumber: (value: string) => number | null): boolean {
+  // A standalone inclusive total summarizes a movement, not another movement.
+  const clean=clause.trim().replace(/[.!?؟;]+$/u,'').trim();
+  if(RX.amountSummaryPrefix.test(clean)) {
+    for(const pattern of [PRIMARY,BARE_PRIMARY]) {
+      for(const match of clean.matchAll(pattern))if(match.index===0 && match[0].length===clean.length)return false;
+    }
+  }
+  if([...maskBalances(clause).matchAll(MONEY)].length)return true;
+  const evidence=collectCandidates(new EntityText(clause),parseNumber);
+  return evidence.primary.length>0 || evidence.anchored.some(c=>c.role==='account_amount');
+}
+
 export function amounts(text: string, extracted: Extracted, parseNumber: (value: string) => number | null , source?: EntityText, allowUnmarked=true): [number | null, string, Resolution] {
   const evidence=collectCandidates(source ?? new EntityText(text),parseNumber);
   const working=evidence.working;

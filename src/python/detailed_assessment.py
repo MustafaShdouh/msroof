@@ -5,7 +5,7 @@ from pathlib import Path
 
 from .authorization_request import is_authorization_request
 from .entity_text import EntityText
-from .money_candidates import MONEY, mask_balances, amounts
+from .money_candidates import mask_balances, amounts, has_movement_amount
 from .direction_policy import initial_direction, resolve_relationship, recording_decision
 from .service_notice import is_service_notice
 from .account_movement import has_account_debit, has_account_credit
@@ -132,7 +132,7 @@ def assess(input_value, extract, parse_number, financial_candidate, ownership_ov
     direction, relation = initial_direction(text, relevant)
     extracted = extract(raw, "INCOME" if direction == "incoming" else "EXPENSE")
     amount, unit, resolution = amounts(text, extracted, parse_number, source, allow_unmarked=status=='completed')
-    if sum(bool(MONEY.search(mask_balances(part))) for part in completed) > 1:
+    if len(completed) > 1 and sum(has_movement_amount(part, parse_number) for part in completed) > 1:
         status, amount = "uncertain", None
     direction, relation = resolve_relationship(text, semantic, amount, negative, direction, relation, ownership_override)
     decision = recording_decision(status, amount, direction, relation)

@@ -86,6 +86,19 @@ def collect_candidates(source, parse_number):
     return dict(working=working,monetary=monetary,anchored=anchored,primary=primary,exclusions=exclusions)
 
 
+def has_movement_amount(clause, parse_number):
+    """A standalone inclusive total describes a movement, not another movement."""
+    clean = clause.strip().rstrip('.!?؟;').strip()
+    if RX['amountSummaryPrefix'].search(clean) and (PRIMARY.fullmatch(clean) or BARE_PRIMARY.fullmatch(clean)):
+        return False
+    # Keep existing explicit-money safeguards; bare amounts use the same ID/date
+    # masks and guarded account/primary roles as canonical amount selection.
+    if MONEY.search(mask_balances(clause)):
+        return True
+    evidence = collect_candidates(EntityText(clause), parse_number)
+    return bool(evidence['primary'] or any(c['role'] == 'account_amount' for c in evidence['anchored']))
+
+
 def amounts(text, extracted, parse_number, source=None, allow_unmarked=True):
     # Mask balances before looking for monetary mentions. Bare identifiers/dates
     # never become amounts: a currency or a financial amount introducer is needed.

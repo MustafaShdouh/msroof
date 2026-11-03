@@ -1,0 +1,1784 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "Exposed source-derived one-event conformance contrasts, NOT independent evidence",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "modelFittingAllowed": false,
+  "sourceSnapshot": ".local-backups/core_money_r5a_unmarked/after.json",
+  "sourceSnapshotSha256": "68874901b1ef4af25ec7e7c30a48b50255c34b74de86294b05de6d4cc312c109",
+  "policyReference": "docs/TRANSACTION_BEHAVIOR.md: one event; conflicting or several inseparable events stay unresolved, no summing or convenient amount selection",
+  "cases": [
+    {
+      "id": "multiple-1",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-2",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. Separately, 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-3",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was credited to your account. 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-4",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was credited to your account. Separately, 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-5",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. Your account was debited 17.250."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-after-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-6",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. Separately, Your account was debited 17.250."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-after-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-7",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "Your account was debited 17.250. 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-after-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-8",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "Your account was debited 17.250. Separately, 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-after-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-9",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خُصم 17.250 من حسابك. أُضيف 17.250 إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-10",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خُصم 17.250 من حسابك. وفي عملية أخرى، أُضيف 17.250 إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "separator": ". وفي عملية أخرى، ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-11",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك. خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-12",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك. وفي عملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "separator": ". وفي عملية أخرى، ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-13",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خُصم 17.250 من حسابك. خُصم من بطاقتك 17.250."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-14",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خُصم 17.250 من حسابك. وفي عملية أخرى، خُصم من بطاقتك 17.250."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        }
+      ],
+      "separator": ". وفي عملية أخرى، ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-15",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خُصم من بطاقتك 17.250. خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-16",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خُصم من بطاقتك 17.250. وفي عملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-owner-first-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "separator": ". وفي عملية أخرى، ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-17",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500. 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-18",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500. Separately, 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-19",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-20",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. Separately, 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-21",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500. 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-22",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500. Separately, 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-23",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was credited to your account. 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-24",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was credited to your account. Separately, 17 was debited from your account; fee 0.500; total debited 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-25",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500. 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-26",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500. Separately, 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-27",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-28",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. Separately, 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-29",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500. 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-30",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500. Separately, 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-31",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was credited to your account. 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-32",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was credited to your account. Separately, 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-33",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090. 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-34",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090. Separately, 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-35",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. Purchase USD 10; your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-36",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. Separately, Purchase USD 10; your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-37",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090. 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-38",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090. Separately, 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-39",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was credited to your account. Purchase USD 10; your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-40",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was credited to your account. Separately, Purchase USD 10; your account was charged 7.090."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-41",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "USD 17.250 was debited from your account. 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-42",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "USD 17.250 was debited from your account. Separately, 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-43",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. USD 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-44",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. Separately, USD 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-45",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "USD 17.250 was debited from your account. 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-46",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "USD 17.250 was debited from your account. Separately, 17.250 was credited to your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-47",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was credited to your account. USD 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-48",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was credited to your account. Separately, USD 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-before-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-49",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك. خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-50",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك. وفي عملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "separator": ". وفي عملية أخرى، ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-51",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خُصم 17.250 من حسابك. خصم 17.250 USD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-52",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خُصم 17.250 من حسابك. وفي عملية أخرى، خصم 17.250 USD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "separator": ". وفي عملية أخرى، ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-53",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك. أُضيف 17.250 إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-54",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خصم 17.250 USD من حسابك. وفي عملية أخرى، أُضيف 17.250 إلى حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "separator": ". وفي عملية أخرى، ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-55",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك. خصم 17.250 USD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-56",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك. وفي عملية أخرى، خصم 17.250 USD من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-usd-ar:0:False"
+        }
+      ],
+      "separator": ". وفي عملية أخرى، ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-57",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "Internal movement completed: JOD 17 from your current account to your own savings account. 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-58",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "Internal movement completed: JOD 17 from your current account to your own savings account. Separately, 17.250 was debited from your account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-en:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-59",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. Internal movement completed: JOD 17 from your current account to your own savings account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-en:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-60",
+      "language": "en",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "17.250 was debited from your account. Separately, Internal movement completed: JOD 17 from your current account to your own savings account."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-before-en:0:False"
+        },
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-en:0:False"
+        }
+      ],
+      "separator": ". Separately, ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-61",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك. خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-62",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك. وفي عملية أخرى، خُصم 17.250 من حسابك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        },
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "separator": ". وفي عملية أخرى، ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-63",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خُصم 17.250 من حسابك. اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        }
+      ],
+      "separator": ". ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "multiple-64",
+      "language": "ar",
+      "boundary": "separate_completed_movements",
+      "input": {
+        "text": "خُصم 17.250 من حسابك. وفي عملية أخرى، اكتمل نقل 17 JOD من حسابك الجاري إلى حساب التوفير المملوك لك."
+      },
+      "expected": {
+        "transactionStatus": "uncertain",
+        "trackingDecision": "review",
+        "amount": null
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        },
+        {
+          "cohort": "completion_income_transfers_v1",
+          "recordId": "own-accounts-ar:0:False"
+        }
+      ],
+      "separator": ". وفي عملية أخرى، ",
+      "evidence": "Two source-complete movements, each with its own amount/account effect. One-event result must not choose either or sum them."
+    },
+    {
+      "id": "control-bare-total-en",
+      "language": "en",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "17 was debited from your account; fee 0.500; total debited 17.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-total-en:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "control-explicit-total-en",
+      "language": "en",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "17 was debited from your account; fee JOD 0.500; total debited JOD 17.500.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "control-bare-primary-en",
+      "language": "en",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "Purchase USD 10; your account was charged 7.090.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 7.09,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "bare-primary-en:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "control-two-primary-en",
+      "language": "en",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "Your account was charged 17; total debited 19.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "review",
+        "amount": null,
+        "direction": "outgoing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "two-primary-en:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "control-debit-ar",
+      "language": "ar",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "خُصم 17.250 من حسابك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "debit-ar:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "control-credit-ar",
+      "language": "ar",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "أُضيف 17.250 إلى حسابك.",
+        "sender": "",
+        "isContact": false
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.25,
+        "direction": "incoming",
+        "currency": "JOD",
+        "currencyResolution": "default_missing"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "credit-ar:0:False"
+        }
+      ],
+      "transform": "identity"
+    },
+    {
+      "id": "control-explicit-principal-total",
+      "language": "en",
+      "boundary": "single_event_control",
+      "input": {
+        "text": "JOD 17 was debited from your account; fee JOD 0.500; total debited JOD 17.500."
+      },
+      "expected": {
+        "transactionStatus": "completed",
+        "trackingDecision": "include",
+        "amount": 17.5,
+        "direction": "outgoing",
+        "currency": "JOD",
+        "currencyResolution": "explicit"
+      },
+      "sources": [
+        {
+          "cohort": "core_unmarked_amounts_v1",
+          "recordId": "explicit-total-en:0:False"
+        }
+      ],
+      "transform": "explicit_same_currency_principal",
+      "evidence": "Existing stated inclusive total remains primary; adding its explicit currency to the principal creates no second event."
+    }
+  ]
+}

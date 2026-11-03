@@ -1,7 +1,7 @@
 /** Canonical contract assessment; metadata and classifier scores cannot prove settlement. */
 import rules from '../../config/contracts/transaction_evidence.json' with { type: 'json' };
 import { EntityText } from './EntityText.ts';
-import { MONEY, maskBalances, amounts } from './MoneyCandidates.ts';
+import { maskBalances, amounts, hasMovementAmount } from './MoneyCandidates.ts';
 import { initialDirection, resolveRelationship, recordingDecision } from './DirectionPolicy.ts';
 import { isAuthorizationRequest } from './AuthorizationRequest.ts';
 import { isServiceNotice } from './ServiceNotice.ts';
@@ -141,7 +141,7 @@ export function assess(input: DetailedInput, extract: (body: string, type: 'INCO
   let [direction,relation]=initialDirection(text,relevant);
   const extracted = extract(raw, direction === 'incoming' ? 'INCOME' : 'EXPENSE');
   let [amount, unit, resolution] = amounts(text, extracted, parseNumber, source,status==='completed');
-  if (completed.filter(part => [...maskBalances(part).matchAll(MONEY)].length > 0).length > 1) {
+  if (completed.length > 1 && completed.filter(part => hasMovementAmount(part,parseNumber)).length > 1) {
     status = 'uncertain'; amount = null;
   }
   [direction,relation]=resolveRelationship(text,semantic,amount,negative,direction,relation,ownershipOverride);
