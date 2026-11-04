@@ -1,5 +1,7 @@
 # Core money roadmap — 2026-10-30
 
+Development suspended on 2026-11-04. See [teammate handover](TEAMMATE_HANDOFF.md) for the delivery status. The record below preserves prior work and open questions.
+
 This is the active implementation plan. It supersedes older category-first and
 encoder-experiment next steps in project notes. Update the checklist here and
 the current STATE/HANDOFF summary after each material result. Historical models,

@@ -1,0 +1,37 @@
+{
+  "dataKind": "assistant_authored_development_controls",
+  "trainingEligible": false,
+  "independentEvaluationEligible": false,
+  "cases": [
+    {
+      "id": "category_zamzam_water",
+      "input": {
+        "sender": "ArabiBank",
+        "text": "JO\nYou have a purchase transaction on account 1234*567 from ZAMZAM WATER amount JOD 1.200 on 02/11/2026 12:05 . Balance JOD 50.000 ."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 1.2,
+        "currency": "JOD",
+        "expenseCategory": "Water and Electricity",
+        "categoryStatus": "assigned"
+      }
+    },
+    {
+      "id": "category_local_water_shop",
+      "input": {
+        "sender": "ArabiBank",
+        "text": "JO\nYou have a purchase transaction on account 1234*567 from LOCAL WATER SHOP amount JOD 1.200 on 02/11/2026 12:05 . Balance JOD 50.000 ."
+      },
+      "expect": {
+        "trackingDecision": "include",
+        "direction": "outgoing",
+        "amount": 1.2,
+        "currency": "JOD",
+        "expenseCategory": null,
+        "categoryStatus": "uncertain"
+      }
+    }
+  ]
+}

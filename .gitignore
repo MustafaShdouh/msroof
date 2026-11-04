@@ -30,3 +30,6 @@ node_modules/
 /tools/generators/build_qa_adversarial_cases.py
 /tests/legacy/run_test_suite.py
 /data/reports/arabic_support_probe_inputs.json
+
+# Generated teammate delivery
+/dist/

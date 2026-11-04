@@ -4,7 +4,7 @@ The owner approved the refactoring plan on 2026-10-25. This is task 1: a target 
 
 The 31 authored scenarios and 18 exact saved category policies validate separately
 from model measurements. Current runtime evidence and gaps are in
-`docs/BEHAVIOR_EVALUATION.md`; current work status is in `STATE.md`. Neither the
+`docs/BEHAVIOR_EVALUATION.md`; delivery status is in [the teammate handover](TEAMMATE_HANDOFF.md). Neither the
 specification checks nor exposed regression results establish independent accuracy.
 
 ## Inputs and scope

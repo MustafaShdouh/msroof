@@ -1,4 +1,5 @@
 """Discover all engine safeguards and run the frozen compatibility gate."""
+import importlib.metadata
 from pathlib import Path
 import subprocess
 import sys
@@ -26,6 +27,18 @@ def run_node(node, script, *arguments):
 
 
 def main():
+    required = ("numpy", "scipy", "scikit-learn", "torch", "transformers", "safetensors")
+    missing = []
+    for package in required:
+        try:
+            importlib.metadata.version(package)
+        except importlib.metadata.PackageNotFoundError:
+            missing.append(package)
+    if missing:
+        print("Full test dependencies missing: " + ", ".join(missing))
+        print("Install them using the same Python interpreter:")
+        print(f'& "{sys.executable}" -m pip install -r config/requirements-dev.txt')
+        return 1
     errors = validate_baseline()
     if errors:
         print("Frozen corpus validation failed:\n" + "\n".join(errors))

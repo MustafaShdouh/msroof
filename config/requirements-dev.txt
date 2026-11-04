@@ -3,3 +3,9 @@
 numpy==2.5.4
 scipy==1.18.1
 scikit-learn==1.9.1
+
+# CPU research safeguards and frozen experiment environment.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1+cpu
+transformers==5.21.0
+safetensors==0.8.0

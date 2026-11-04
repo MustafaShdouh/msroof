@@ -1,5 +1,7 @@
 # Core money readiness — 2026-11-03
 
+Development suspended on 2026-11-04. See [teammate handover](TEAMMATE_HANDOFF.md) for the delivery status. The record below preserves prior work and open questions.
+
 The current parser is ready for optional developer testing of Jordan Arabic/English messages. Independent accuracy and production/mobile readiness remain unestablished. R0–R5 finite development conformance is complete; R6’s independent release gate stays open. The owner chose existing-data testing and deferred collection.
 
 Start with the [compact tester checklist](CORE_TESTER_CHECKLIST.md). It uses 14 existing authored messages plus three hypothetical ownership confirmations. They pass their declared assertions in Python, TypeScript and the generated browser bundle. No tester design, engine behavior, model, label or admission policy changed in this readiness refresh.

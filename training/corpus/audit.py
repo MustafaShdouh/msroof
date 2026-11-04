@@ -227,7 +227,17 @@ def build_audit(root=ROOT):
             "data/training/splits/transaction_direction_split.json",
         }
         path = historical_path(relative, root) if relative in archived else root / relative
-        raw = path.read_bytes()
+        if not path.exists():
+            # Cleanup retired the duplicate raw files. Use the original only
+            # when its exact bytes match the source manifest's recorded copy.
+            source = next((row for row in manifest["sources"] if row["rawCopy"] == relative), None)
+            if source is None:
+                raise FileNotFoundError(path)
+            raw = (root / source["path"]).read_bytes()
+            if digest(raw) != source["sha256"]:
+                raise ValueError("Original no longer matches retired raw copy: " + relative)
+        else:
+            raw = path.read_bytes()
         inputs[relative] = digest(raw)
         return raw.decode("utf-8-sig")
 

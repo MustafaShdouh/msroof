@@ -49,7 +49,7 @@ class DetailedAssessmentTests(unittest.TestCase):
         self.assertEqual(disagreements, [("completed_missing_amount", "currencyResolution")])
 
     def test_contextual_controls_and_browser_review_display(self):
-        cases = load("detailed_assessment_cases.json")["cases"]
+        cases = load("detailed_assessment_cases.json")["cases"] + load("category_purchase_cases.json")["cases"]
         ui_case = next(case for case in cases if case["id"] == "atm_activity")
         outputs = probe(cases, ui_case["input"])
         self.assertEqual(outputs["ui"]["title"], "Review required")
