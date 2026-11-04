@@ -1,4 +1,4 @@
-# Masroof
+# Msroof
 
 Offline Arabic/English transaction parsing for Jordanian bank and wallet messages. Development is suspended as of 2026-11-04. This prototype is prepared for teammate evaluation.
 
